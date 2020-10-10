@@ -1,6 +1,6 @@
 ///******MARINE VENDOR******///
 
-/obj/machinery/vending/marine
+/obj/machinery/vending/marine  // fuck me, this was VERY bad form
 	name = "\improper Automated Weapons Rack"
 	desc = "A automated weapon rack hooked up to a colossal storage of standard-issue weapons."
 	icon_state = "marinearmory"
@@ -9,53 +9,61 @@
 	wrenchable = FALSE
 	tokensupport = TOKEN_MARINE
 
-	product_ads = "If it moves, it's hostile!;How many enemies have you killed today?;Shoot first, perform autopsy later!;Your ammo is right here.;Guns!;Die, scumbag!;Don't shoot me bro!;Shoot them, bro.;Why not have a donut?"
+	product_ads = "I need a weapon.;Try shooting your way out, mix things up a little.;They're not called civilians, they're acceptable casualties.;Guns!;Far Isle? What's that?"
 	products = list(
-					/obj/item/weapon/gun/pistol/standard_pistol = 25,
-					/obj/item/ammo_magazine/pistol/standard_pistol = 30,
-					/obj/item/weapon/gun/pistol/standard_heavypistol = 10,
-					/obj/item/ammo_magazine/pistol/standard_heavypistol = 25,
-					/obj/item/weapon/gun/revolver/standard_revolver = 15,
-					/obj/item/ammo_magazine/revolver/standard_revolver = 25,
-					/obj/item/weapon/gun/smg/standard_machinepistol = 20,
-					/obj/item/ammo_magazine/smg/standard_machinepistol = 30,
-					/obj/item/weapon/gun/pistol/standard_pocketpistol = 25,
-					/obj/item/ammo_magazine/pistol/standard_pocketpistol = 50,
-					/obj/item/weapon/gun/smg/standard_smg = 20,
-					/obj/item/ammo_magazine/smg/standard_smg = 30,
-					/obj/item/weapon/gun/rifle/standard_carbine = 25,
-					/obj/item/ammo_magazine/rifle/standard_carbine = 25,
-					/obj/item/weapon/gun/rifle/standard_assaultrifle = 25,
-					/obj/item/ammo_magazine/rifle/standard_assaultrifle = 25,
-					/obj/item/weapon/gun/rifle/standard_lmg = 15,
-					/obj/item/ammo_magazine/standard_lmg = 30,
-					/obj/item/weapon/gun/rifle/standard_gpmg = 15,
-					/obj/item/ammo_magazine/standard_gpmg = 30,
-					/obj/item/weapon/gun/rifle/standard_dmr = 10,
-					/obj/item/ammo_magazine/rifle/standard_dmr = 25,
-					/obj/item/weapon/gun/rifle/standard_br = 10,
-					/obj/item/ammo_magazine/rifle/standard_br = 25,
-					/obj/item/weapon/gun/rifle/chambered = 20,
-					/obj/item/ammo_magazine/rifle/chamberedrifle = 20,
-					/obj/item/weapon/gun/energy/lasgun/lasrifle = 10,
-					/obj/item/cell/lasgun/lasrifle = 20,
-					/obj/item/weapon/gun/shotgun/pump/t35 = 10,
-					/obj/item/weapon/gun/shotgun/combat/standardmarine = 10,
-					/obj/item/ammo_magazine/shotgun = 10,
-					/obj/item/ammo_magazine/shotgun/buckshot = 10,
-					/obj/item/ammo_magazine/shotgun/flechette = 10,
-					/obj/item/weapon/gun/rifle/standard_autoshotgun = 10,
-					/obj/item/ammo_magazine/rifle/tx15_slug = 25,
-					/obj/item/ammo_magazine/rifle/tx15_flechette = 25,
-					/obj/item/weapon/gun/launcher/m92/standardmarine = 10,
-					/obj/item/explosive/grenade/frag = 30,
-					/obj/item/attachable/bayonetknife = 20,
-					/obj/item/weapon/throwing_knife = 5,
-					/obj/item/storage/box/m94 = 5,
-					/obj/item/attachable/flashlight = 10,
-					/obj/item/explosive/grenade/mirage = 5,
+					/obj/item/weapon/gun/rifle/ma37 = 25,
+					/obj/item/ammo_magazine/rifle/ma37 = 100,
+					/obj/item/weapon/gun/rifle/m392 = 15,
+					/obj/item/ammo_magazine/rifle/m392 = 60,
+					/obj/item/weapon/gun/rifle/br55 = 15,
+					/obj/item/ammo_magazine/rifle/br55 = 60,
+					/obj/item/weapon/gun/shotgun/pump/m90 = 10,
+					/obj/item/ammo_magazine/shotgun/eightGauge = 60,
+					/obj/item/ammo_magazine/shotgun/eightGauge/slug = 60,
+					/obj/item/weapon/gun/smg/m7 = 15,
+					/obj/item/ammo_magazine/smg/m7 = 60,
+					/obj/item/weapon/gun/pistol/m6 = 15,
+					/obj/item/ammo_magazine/pistol/m6 = 60,
+
 					)
+
 	prices = list()
+
+
+/obj/machinery/vending/marine/unscGuns
+	req_one_access = list(ACCESS_UNSC_MARINE, ACCESS_UNSC_LEADER)
+
+///******INNIE VENDOR******///
+
+
+/obj/machinery/vending/innieGuns
+	name = "\improper Stolen Automated Weapons Rack"
+	desc = "A stolen UNSC weapons rack."
+	icon_state = "marinearmory"
+	icon_vend = "marinearmory-vend"
+	icon_deny = "marinearmory"
+	wrenchable = FALSE
+	req_one_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_LEADER)
+
+
+	product_ads = "Death to the UNSC!;Do it for Reno!;Remember, it's only a warcrime if you get caught!;Don't forget the Organ Crusher Grenades!"
+
+	products = list(
+						/obj/item/weapon/gun/rifle/ma3 = 50,
+						/obj/item/ammo_magazine/rifle/ma3 = 200,
+						/obj/item/weapon/gun/shotgun/pump/m45 = 30,
+						/obj/item/ammo_magazine/shotgun/eightGauge = 60,
+						/obj/item/ammo_magazine/shotgun/eightGauge/slug = 60,
+						/obj/item/weapon/gun/rifle/kv32 = 30,
+						/obj/item/ammo_magazine/rifle/kv32 = 120,
+						/obj/item/weapon/gun/smg/m7 = 40,
+						/obj/item/ammo_magazine/smg/m7 = 100,
+						/obj/item/weapon/gun/pistol/m6/m6b_security = 80,
+						/obj/item/ammo_magazine/pistol/m6 = 90,
+						//handgonne gone for now....
+
+
+		)
 
 /obj/machinery/vending/marine/select_gamemode_equipment(gamemode)
 	var/products2[]
