@@ -1,1022 +1,400 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"am" = (
-/obj/structure/table/reinforced/prison,
-/turf/open/floor/prison/kitchen,
+"aa" = (
+/obj/machinery/door/window/brigdoor/mainship/cell_2,
+/turf/open/floor/mainship,
 /area/space)
-"as" = (
-/mob/living/simple_animal/crab,
-/turf/open/ground/desertdam/river/clean/deep_water_clean,
+"ad" = (
+/obj/effect/decal/cleanable/molten_item,
+/turf/open/space/basic,
 /area/space)
-"aF" = (
-/obj/machinery/door/airlock/mainship/secure/free_access{
-	dir = 1;
-	name = "\improper Janitor's Closet"
-	},
-/turf/open/floor/tile/damaged,
-/area/space)
-"aI" = (
-/obj/structure/bed/chair/dropship/passenger{
+"af" = (
+/obj/effect/decal/warning_stripes/thin{
 	dir = 8
+	},
+/obj/machinery/landinglight/ds1/delaythree{
+	dir = 8
+	},
+/turf/open/floor/mainship/cargo/arrow{
+	dir = 8
+	},
+/area/space)
+"ag" = (
+/obj/structure/shuttle/engine/propulsion/burst/left{
+	dir = 4
 	},
 /turf/open/floor/plating,
 /area/shuttle/dropship/alamo)
-"aU" = (
-/obj/machinery/vending/marineFood,
-/turf/open/floor/tile/dark/green2{
-	dir = 4
-	},
+"ah" = (
+/obj/machinery/computer/shuttle/marine_dropship/one,
+/turf/open/floor/tile/dark,
 /area/space)
-"aZ" = (
-/obj/machinery/vending/coffee,
-/turf/open/floor/tile/dark/green2{
+"ai" = (
+/obj/machinery/door_control/mainship/brigarmory{
+	pixel_x = 32
+	},
+/obj/machinery/camera/autoname/mainship{
+	dir = 8
+	},
+/turf/open/floor/mainship,
+/area/space)
+"ak" = (
+/obj/effect/landmark/start/job/unsc_medic,
+/obj/effect/landmark/start/job/unsc_medic,
+/obj/effect/landmark/start/latejoin_unsc,
+/turf/open/floor/freezer,
+/area/space)
+"ax" = (
+/obj/effect/decal/warning_stripes/thin{
 	dir = 4
 	},
+/obj/machinery/landinglight/ds1/delayone{
+	dir = 4
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"ay" = (
+/obj/structure/window/framed/mainship/white,
+/turf/open/floor/mainship/sterile/dark,
+/area/space)
+"az" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/camera/autoname/mainship{
+	dir = 8
+	},
+/turf/open/floor/mainship,
+/area/space)
+"aD" = (
+/obj/machinery/power/terminal,
+/obj/structure/cable,
+/turf/open/floor/mainship,
+/area/space)
+"aI" = (
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer/on{
+	dir = 4
+	},
+/turf/open/floor/freezer,
+/area/space)
+"aJ" = (
+/obj/structure/closet/secure_closet/engineering_electrical{
+	locked = 0
+	},
+/turf/open/floor/mainship,
+/area/space)
+"aL" = (
+/obj/structure/closet/secure_closet/guncabinet/riot_control,
+/turf/open/floor/mainship,
+/area/space)
+"aV" = (
+/obj/machinery/power/smes/magical,
+/obj/effect/decal/warning_stripes,
+/obj/structure/cable,
+/turf/open/floor/mainship,
+/area/space)
+"aW" = (
+/obj/structure/window/framed/prison/reinforced/hull,
+/turf/open/floor/plating,
+/area/shuttle/dropship/alamo)
+"aZ" = (
+/obj/effect/decal/warning_stripes/thick{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroidfloor,
 /area/space)
 "bb" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/freezer,
+/area/space)
+"be" = (
+/obj/structure/table/mainship,
+/obj/structure/paper_bin,
+/obj/item/tool/pen,
+/turf/open/floor/mainship,
+/area/space)
+"bh" = (
+/obj/machinery/marine_selector/clothes/unscMarine/leader,
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"bk" = (
+/obj/structure/table/mainship,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/mainship,
+/area/space)
+"bo" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/window{
+	dir = 1
+	},
+/turf/open/floor/mainship/sterile,
+/area/space)
+"bq" = (
+/obj/machinery/bodyscanner,
+/turf/open/floor/mainship/sterile/dark,
+/area/space)
+"by" = (
+/obj/structure/closet/secure_closet/guncabinet/mp_armory,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/mainship,
+/area/space)
+"bC" = (
+/obj/machinery/door/airlock/mainship/security/glass/office{
+	dir = 2
+	},
+/turf/open/floor/mainship,
+/area/space)
+"bG" = (
+/obj/machinery/power/apc/mainship{
+	pixel_y = 16
+	},
+/turf/open/floor/freezer,
+/area/space)
+"bH" = (
+/turf/open/floor/mainship/orange{
+	dir = 10
+	},
+/area/space)
+"bI" = (
+/obj/structure/closet/secure_closet/engineering_welding{
+	locked = 0
+	},
+/turf/open/floor/mainship,
+/area/space)
+"bM" = (
+/obj/machinery/cryopod/right,
+/turf/open/floor/mainship/green{
+	dir = 10
+	},
+/area/space)
+"bP" = (
+/obj/structure/reagent_dispensers/wallmounted/peppertank,
+/turf/open/floor/mainship,
+/area/space)
+"bU" = (
+/turf/open/floor/mainship/sterile/side{
+	dir = 8
+	},
+/area/space)
+"bX" = (
+/obj/structure/cable,
+/turf/open/floor/freezer,
+/area/space)
+"cb" = (
+/obj/machinery/door/airlock/mainship/security/glass/office,
+/obj/structure/cable,
+/turf/open/floor/mainship,
+/area/space)
+"cd" = (
+/obj/structure/table/mainship,
+/obj/item/storage/pouch/explosive/detpack,
+/turf/open/floor/mainship,
+/area/space)
+"ck" = (
+/obj/structure/closet/secure_closet/medical2,
+/turf/open/floor/mainship/sterile/dark,
+/area/space)
+"cp" = (
+/obj/structure/dropship_equipment/electronics/spotlights,
+/obj/machinery/camera/autoname/mainship,
+/turf/open/floor/mainship/mono,
+/area/space)
+"cA" = (
+/obj/machinery/power/apc/mainship{
+	dir = 1;
+	pixel_y = -50
+	},
+/obj/structure/cable,
+/turf/open/floor/mainship/cargo/arrow{
+	dir = 4
+	},
+/area/space)
+"cB" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/machinery/camera/autoname/mainship{
+	dir = 8
+	},
+/obj/item/lightreplacer,
+/turf/open/floor/mainship,
+/area/space)
+"cC" = (
+/obj/effect/attach_point/weapon/dropship1{
+	dir = 8;
+	icon_state = "equip_base_l_wing"
+	},
+/turf/open/floor/plating,
+/area/space)
+"cF" = (
+/turf/open/floor/freezer,
+/area/space)
+"cG" = (
+/obj/structure/closet/secure_closet/brig/cell,
+/turf/open/floor/mainship,
+/area/space)
+"cK" = (
+/obj/machinery/computer/security/telescreen/entertainment,
+/turf/open/floor/mainship,
+/area/space)
+"cM" = (
+/obj/machinery/computer/cryopod,
+/turf/open/floor/freezer,
+/area/space)
+"cP" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 4
+	},
+/obj/machinery/landinglight/ds1{
+	dir = 4
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"cW" = (
+/obj/machinery/chem_dispenser,
+/turf/open/floor/mainship/sterile/side,
+/area/space)
+"cX" = (
+/obj/structure/largecrate/supply/supplies/flares,
+/turf/open/floor/tile/damaged,
+/area/space)
+"dj" = (
+/obj/structure/cable,
+/turf/open/floor/mainship/sterile/side{
+	dir = 5
+	},
+/area/space)
+"dl" = (
+/obj/structure/girder/displaced,
+/turf/open/floor/tile/damaged,
+/area/space)
+"do" = (
+/obj/structure/closet/crate,
+/obj/item/target/syndicate,
+/obj/item/target/syndicate,
+/obj/item/target/syndicate,
+/obj/item/target/syndicate,
+/obj/item/target/syndicate,
+/turf/open/floor/mainship,
+/area/space)
+"dr" = (
+/obj/structure/cable,
+/turf/open/floor/mainship/mono,
+/area/space)
+"dz" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 4
+	},
+/obj/machinery/landinglight/ds1/delaythree{
+	dir = 4
+	},
+/turf/open/floor/mainship/cargo/arrow{
+	dir = 4
+	},
+/area/space)
+"dC" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/table/mainship,
+/obj/machinery/computer/camera_advanced,
+/turf/open/floor/mainship,
+/area/space)
+"dQ" = (
 /obj/effect/decal/cleanable/generic,
 /obj/item/tool/crowbar,
 /turf/open/space/basic,
 /area/space)
-"bG" = (
-/obj/effect/landmark/start/job/urf_engineer,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"co" = (
-/obj/structure/platform{
-	dir = 4
-	},
-/turf/open/ground/desertdam/river/clean/deep_water_clean,
-/area/space)
-"cr" = (
-/obj/machinery/power/apc/mainship{
-	dir = 4;
-	pixel_x = -48
-	},
-/turf/open/floor/tile/damaged,
-/area/space)
-"cv" = (
-/obj/structure/table/mainship,
-/obj/item/facepaint/brown,
-/turf/open/floor/tile/dark,
-/area/space)
-"cF" = (
-/obj/structure/largecrate/supply/supplies/flares,
-/turf/open/space/basic,
-/area/space)
-"df" = (
-/turf/open/floor/tile/dark/green2/corner{
-	dir = 4
-	},
-/area/space)
-"dS" = (
-/obj/effect/decal/cleanable/generic,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/tile/damaged,
-/area/space)
-"fa" = (
-/obj/machinery/light/spot{
-	dir = 1
-	},
-/turf/open/floor/tile/dark/brown2{
-	dir = 5
-	},
-/area/space)
-"ff" = (
-/obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/tile/damaged,
-/area/space)
-"fn" = (
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
-	name = "Cryogenics"
-	},
-/turf/open/floor/tile/dark,
-/area/space)
-"ft" = (
-/turf/open/space/basic,
-/area/space)
-"fF" = (
-/obj/structure/platform,
-/obj/structure/platform{
-	dir = 8
-	},
-/obj/structure/platform_decoration{
-	dir = 10
-	},
-/obj/machinery/light,
-/turf/open/ground/desertdam/river/clean/deep_water_clean,
-/area/space)
-"fL" = (
-/obj/structure/flora/rock/beachrocks,
-/obj/structure/platform{
-	dir = 1
-	},
-/turf/open/beach/sand,
-/area/space)
-"fV" = (
-/obj/item/reagent_containers/glass/bucket/janibucket,
+"dV" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/open/floor/tile/damaged,
+/turf/open/floor/mainship,
 /area/space)
-"ga" = (
-/obj/effect/decal/warning_stripes/thick{
-	dir = 1
-	},
-/turf/open/floor/tile/dark/brown2{
-	dir = 8
-	},
-/area/space)
-"gc" = (
-/obj/structure/kitchenspike,
-/turf/open/floor/freezer,
-/area/space)
-"gk" = (
-/obj/effect/decal/warning_stripes/thick,
-/obj/effect/decal/warning_stripes/thick{
-	dir = 1
-	},
-/turf/open/floor/tile/dark,
-/area/space)
-"gl" = (
-/obj/effect/decal/cleanable/flour,
-/turf/open/floor/prison/kitchen,
-/area/space)
-"gu" = (
-/obj/structure/table/reinforced,
-/obj/item/clothing/head/chefhat,
-/obj/item/tool/kitchen/rollingpin,
-/turf/open/floor/prison/kitchen,
-/area/space)
-"gW" = (
-/turf/open/floor/freezer,
-/area/space)
-"gX" = (
-/obj/machinery/power/apc/mainship{
-	pixel_y = 16
-	},
-/turf/open/floor/tile/dark/green2{
-	dir = 1
-	},
-/area/space)
-"hk" = (
-/obj/structure/largecrate/random/barrel/blue,
-/turf/open/floor/tile/damaged,
-/area/space)
-"hn" = (
+"ee" = (
 /obj/effect/decal/warning_stripes/thin{
-	dir = 4
+	dir = 1
 	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/start/job/unsc_marine,
-/turf/open/floor/tile/dark/blue2{
-	dir = 4
+/obj/machinery/landinglight/ds1/delaytwo{
+	dir = 1
 	},
-/area/space)
-"hD" = (
-/obj/machinery/microwave,
-/obj/structure/table/mainship,
-/turf/open/floor/tile/dark/green2{
-	dir = 4
+/turf/open/floor/mainship/cargo/arrow{
+	dir = 1
 	},
 /area/space)
-"hK" = (
-/obj/machinery/computer/shuttle/marine_dropship/two,
-/turf/open/floor/plating,
-/area/shuttle/dropship/alamo)
-"hQ" = (
-/obj/structure/platform,
-/obj/structure/platform{
-	dir = 4
-	},
-/obj/structure/platform_decoration{
-	dir = 6
-	},
-/obj/machinery/light,
-/turf/open/ground/desertdam/river/clean/deep_water_clean,
-/area/space)
-"hR" = (
-/obj/machinery/marine_selector/clothes/unscMarine/medic,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"hZ" = (
-/obj/machinery/vending/marine/unscGuns,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"ie" = (
-/mob/living/simple_animal/crab/kreb,
-/turf/open/ground/desertdam/river/clean/deep_water_clean,
-/area/space)
-"ir" = (
-/turf/open/floor/tile/dark/green2{
-	dir = 4
-	},
-/area/space)
-"it" = (
-/obj/effect/overlay/coconut,
-/obj/structure/platform{
+"eh" = (
+/obj/machinery/computer/shuttle/shuttle_control/dropship1,
+/obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/open/beach/sand,
+/obj/structure/table/mainship,
+/turf/open/floor/mainship,
 /area/space)
-"ix" = (
-/obj/effect/landmark/start/job/urf_medic,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"iz" = (
+"er" = (
 /obj/structure/largecrate/supply/supplies/sandbags,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/tile/damaged,
 /area/space)
-"iE" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/structure/platform{
-	dir = 8
-	},
-/obj/structure/platform_decoration{
-	dir = 5
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/open/beach/sand,
-/area/space)
-"iP" = (
-/obj/item/stack/sheet/wood,
-/turf/open/space/basic,
-/area/space)
-"iU" = (
-/obj/effect/landmark/start/job/urf_engineer,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"ja" = (
-/obj/effect/decal/warning_stripes/thick{
-	dir = 1
-	},
-/turf/open/floor/tile/dark,
-/area/space)
-"jl" = (
-/turf/open/floor/tile/dark/brown2/corner{
-	dir = 8
-	},
-/area/space)
-"jo" = (
-/obj/machinery/power/apc/mainship{
-	pixel_y = 16
-	},
-/turf/open/floor/freezer,
-/area/space)
-"js" = (
-/obj/item/facepaint/brown,
-/obj/structure/table/mainship,
-/turf/open/floor/tile/dark,
-/area/space)
-"jR" = (
-/obj/structure/table/mainship,
-/obj/item/storage/box/MRE,
-/turf/open/floor/tile/dark,
-/area/space)
-"jV" = (
-/obj/structure/table/reinforced,
-/obj/machinery/reagentgrinder,
-/turf/open/floor/prison/kitchen,
-/area/space)
-"jW" = (
-/obj/structure/largecrate/supply/supplies/flares,
-/turf/open/floor/tile/damaged,
-/area/space)
-"kf" = (
-/turf/open/beach/sand,
-/area/space)
-"kt" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/turf/open/beach/sand,
-/area/space)
-"kw" = (
-/obj/structure/closet/crate/ammo,
-/turf/open/space/basic,
-/area/space)
-"kz" = (
-/obj/structure/platform{
-	dir = 4
-	},
-/turf/open/beach/sand,
-/area/space)
-"kB" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/tile/dark/brown2{
+"ex" = (
+/turf/open/floor/mainship/orange{
 	dir = 4
 	},
 /area/space)
-"kV" = (
-/turf/open/floor/tile/dark/brown2{
-	dir = 8
-	},
-/area/space)
-"kY" = (
-/obj/structure/table/holotable/wood,
-/obj/item/storage/bible/koran,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"kZ" = (
-/obj/machinery/computer/shuttle/marine_dropship/one,
-/turf/open/floor/tile/dark,
-/area/space)
-"lb" = (
-/turf/open/floor/plating,
-/area/shuttle/dropship/alamo)
-"lo" = (
-/obj/structure/closet/l3closet/janitor,
-/turf/open/floor/tile/damaged,
-/area/space)
-"lL" = (
-/obj/effect/decal/warning_stripes/thick{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"lQ" = (
-/turf/open/floor/tile/dark/green2/corner{
-	dir = 1
-	},
-/area/space)
-"me" = (
-/obj/structure/largecrate/cow,
-/turf/open/space/basic,
-/area/space)
-"mA" = (
-/obj/effect/decal/warning_stripes/thick,
-/obj/effect/decal/warning_stripes/thick,
-/turf/open/floor/tile/dark,
-/area/space)
-"mV" = (
-/obj/effect/decal/cleanable/blood/oil,
-/turf/open/space/basic,
-/area/space)
-"nC" = (
-/obj/structure/table/mainship,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"nW" = (
-/obj/effect/decal/warning_stripes/thick{
-	dir = 8
-	},
-/turf/open/floor/tile/dark,
-/area/space)
-"nY" = (
-/obj/machinery/light/spot{
-	dir = 1
-	},
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"om" = (
-/obj/effect/decal/warning_stripes/thick{
-	dir = 8
-	},
-/obj/machinery/light/spot,
-/turf/open/floor/tile/dark/brown2,
-/area/space)
-"or" = (
-/mob/living/simple_animal/cow,
-/turf/open/floor/tile/damaged,
-/area/space)
-"ox" = (
-/obj/effect/decal/warning_stripes/thin{
-	dir = 4
-	},
-/obj/effect/landmark/start/job/unsc_leader,
-/turf/open/floor/tile/dark/blue2{
-	dir = 4
-	},
-/area/space)
-"oB" = (
-/obj/structure/window/framed/prison/reinforced/hull,
-/turf/open/floor/plating,
-/area/space)
-"oE" = (
-/obj/machinery/marine_selector/clothes/unscMarine/leader,
-/obj/machinery/light/spot{
-	dir = 1
-	},
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"oV" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/ground/desertdam/river/clean/deep_water_clean,
-/area/space)
-"oY" = (
-/obj/structure/inflatable/popped,
-/turf/open/space/basic,
-/area/space)
-"pt" = (
-/obj/machinery/light/spot{
-	dir = 4
-	},
-/turf/open/floor/tile/dark/brown2{
-	dir = 4
-	},
-/area/space)
-"pz" = (
-/obj/machinery/vending/marineFood,
-/turf/open/floor/tile/dark/green2{
-	dir = 5
-	},
-/area/space)
-"pK" = (
-/obj/item/tool/candle,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"pL" = (
-/obj/machinery/vending/cigarette,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"pU" = (
-/obj/structure/closet/secure_closet/freezer/kitchen,
-/turf/open/floor/freezer,
-/area/space)
-"qb" = (
-/obj/structure/janitorialcart,
-/turf/open/floor/tile/damaged,
-/area/space)
-"qc" = (
-/obj/structure/table/reinforced/prison,
-/obj/item/reagent_containers/food/snacks/monkeysdelight,
-/turf/open/floor/prison/kitchen,
-/area/space)
-"qi" = (
-/obj/item/stack/sheet/wood,
-/obj/structure/girder/displaced,
-/turf/open/space/basic,
-/area/space)
-"qw" = (
-/obj/machinery/marine_selector/clothes/unscMarine/engineer,
-/turf/open/floor/tile/dark,
-/area/space)
-"qG" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/tile/dark/green2{
-	dir = 1
-	},
-/area/space)
-"qX" = (
-/obj/structure/closet/secure_closet/freezer/meat,
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/prison/kitchen,
-/area/space)
-"qY" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 1
-	},
-/turf/open/floor/plating,
-/area/shuttle/dropship/alamo)
-"rR" = (
-/obj/machinery/vending/marine/unscGuns,
-/turf/open/floor/tile/dark/brown2{
-	dir = 4
-	},
-/area/space)
-"rS" = (
-/obj/effect/decal/warning_stripes/thick{
-	dir = 1
-	},
-/obj/machinery/light/spot{
-	dir = 8
-	},
-/turf/open/floor/tile/dark,
-/area/space)
-"sv" = (
-/turf/open/floor/tile/dark/brown2,
-/area/space)
-"sw" = (
-/obj/structure/shuttle/engine/propulsion/burst/left{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/shuttle/dropship/alamo)
-"sQ" = (
-/turf/closed/wall/r_wall/prison,
-/area/shuttle/dropship/alamo)
-"tp" = (
-/turf/open/floor/carpet,
-/area/space)
-"tS" = (
-/obj/structure/table/mainship,
-/obj/item/reagent_containers/food/snacks/human/burger,
-/turf/open/floor/tile/dark,
-/area/space)
-"up" = (
-/turf/open/floor/tile/dark/green2/corner{
-	dir = 8
-	},
-/area/space)
-"uq" = (
-/obj/structure/flora/rock/beachrocks,
-/obj/structure/platform,
-/turf/open/beach/sand,
-/area/space)
-"uz" = (
-/obj/structure/largecrate/random/barrel/red,
-/turf/open/floor/tile/damaged,
-/area/space)
-"uD" = (
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"uF" = (
-/turf/open/ground/desertdam/river/clean/deep_water_clean,
-/area/space)
-"uJ" = (
-/turf/open/floor/tile/dark/brown2{
-	dir = 10
-	},
-/area/space)
-"uV" = (
+"eB" = (
 /obj/effect/decal/warning_stripes/thin{
 	dir = 8
 	},
-/obj/effect/landmark/start/job/unsc_marine,
-/turf/open/floor/tile/dark/blue2{
+/obj/effect/decal/warning_stripes/thin{
+	dir = 1
+	},
+/obj/machinery/landinglight/ds1/delaythree{
 	dir = 8
 	},
+/turf/open/floor/mainship/mono,
 /area/space)
-"vb" = (
-/turf/open/floor/prison/kitchen,
+"eC" = (
+/obj/machinery/door/airlock/mainship/command/cic,
+/turf/open/floor/mainship,
 /area/space)
-"vo" = (
-/obj/machinery/door/airlock/multi_tile/glass{
-	name = "Cafeteria"
-	},
-/turf/open/floor/tile/dark/green2{
-	dir = 8
-	},
-/area/space)
-"vz" = (
-/obj/effect/landmark/start/job/urf_insurrectionist,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"vD" = (
-/obj/effect/decal/warning_stripes/thin{
-	dir = 4
-	},
-/obj/effect/landmark/start/job/unsc_engineer,
-/turf/open/floor/tile/dark/blue2{
-	dir = 4
-	},
-/area/space)
-"vE" = (
-/turf/open/floor/tile/dark/brown2{
-	dir = 6
-	},
-/area/space)
-"vH" = (
-/obj/structure/girder/reinforced,
-/turf/open/space/basic,
-/area/space)
-"vO" = (
-/obj/structure/table/mainship,
-/obj/item/tool/lighter/zippo,
-/obj/item/clothing/mask/cigarette/cigar{
-	pixel_y = -1
-	},
-/turf/open/floor/tile/dark/brown2{
-	dir = 10
-	},
-/area/space)
-"vQ" = (
-/obj/effect/decal/warning_stripes/thin{
-	dir = 4
-	},
-/obj/effect/landmark/start/job/unsc_marine,
-/turf/open/floor/tile/dark/blue2{
-	dir = 4
-	},
-/area/space)
-"vX" = (
-/obj/machinery/cryopod/right,
-/turf/open/floor/tile/dark,
-/area/space)
-"vZ" = (
-/obj/structure/window/framed/prison/reinforced/hull,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"wu" = (
+"eE" = (
 /obj/structure/bed/chair{
-	dir = 1
+	dir = 8;
+	name = "XOs Chair"
 	},
-/turf/open/floor/tile/dark/green2{
-	dir = 1
-	},
-/area/space)
-"wy" = (
-/turf/open/floor/tile/dark/brown2/corner{
-	dir = 1
-	},
-/area/space)
-"wL" = (
-/obj/effect/decal/warning_stripes/thick,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/tile/dark,
-/area/space)
-"wP" = (
-/obj/item/tool/mop,
-/turf/open/floor/tile/damaged,
-/area/space)
-"xc" = (
-/turf/open/floor/tile/dark/green2{
-	dir = 1
-	},
-/area/space)
-"xT" = (
-/obj/structure/shuttle/engine/propulsion/burst/right{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/shuttle/dropship/alamo)
-"yu" = (
-/obj/structure/closet/crate,
-/turf/open/floor/tile/damaged,
-/area/space)
-"yT" = (
-/obj/structure/girder/displaced,
-/turf/open/floor/tile/damaged,
-/area/space)
-"ze" = (
-/obj/effect/decal/cleanable/flour,
-/obj/machinery/power/apc/mainship{
-	dir = 4;
-	pixel_x = -48
-	},
-/turf/open/floor/prison/kitchen,
-/area/space)
-"zl" = (
-/obj/structure/flora/rock/beachrocks,
-/turf/open/beach/sand,
-/area/space)
-"zw" = (
-/obj/structure/rack,
-/obj/item/tool/kitchen/knife/butcher,
-/turf/open/floor/freezer,
-/area/space)
-"zG" = (
-/obj/effect/decal/warning_stripes/thick,
-/turf/open/floor/tile/dark,
-/area/space)
-"zZ" = (
-/obj/machinery/marine_selector/clothes/unscMarine/leader,
-/obj/machinery/light/spot{
-	dir = 1
-	},
-/turf/open/floor/tile/dark/brown2{
-	dir = 8
-	},
-/area/space)
-"Ab" = (
-/obj/structure/bed/chair/janicart,
-/obj/machinery/light/small,
-/turf/open/floor/tile/damaged,
-/area/space)
-"AH" = (
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/prison/kitchen,
-/area/space)
-"AO" = (
-/mob/living/simple_animal/cow,
-/turf/open/space/basic,
-/area/space)
-"AU" = (
-/mob/living/carbon/monkey,
-/turf/open/floor/freezer,
-/area/space)
-"AV" = (
-/obj/effect/overlay/coconut,
-/obj/structure/platform{
+/turf/open/floor/mainship/sterile/side{
 	dir = 4
 	},
-/turf/open/beach/sand,
 /area/space)
-"AX" = (
-/obj/structure/table/mainship,
-/obj/item/tool/lighter/zippo,
-/obj/item/clothing/mask/cigarette/cigar{
+"eM" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/box/gloves{
+	pixel_x = -5;
 	pixel_y = -1
 	},
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"Bi" = (
-/obj/machinery/vending/cola,
-/turf/open/floor/tile/dark/green2{
-	dir = 9
+/obj/item/storage/box/masks{
+	pixel_x = 5;
+	pixel_y = 9
 	},
+/obj/item/reagent_containers/spray/surgery,
+/turf/open/floor/mainship/sterile/dark,
 /area/space)
-"Bn" = (
-/obj/structure/ship_ammo/minirocket,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"Bp" = (
-/turf/open/floor/plating/asteroidfloor,
-/area/shuttle/dropship/alamo)
-"Bw" = (
-/obj/structure/window/framed/mainship,
-/turf/open/floor/tile/dark,
-/area/space)
-"BF" = (
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/tile/damaged,
-/area/space)
-"BV" = (
-/obj/effect/decal/warning_stripes/thick{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/tile/dark,
-/area/space)
-"Cr" = (
-/obj/machinery/door/airlock/mainship/marine/general{
-	dir = 1
-	},
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"Cy" = (
-/obj/machinery/vending/cigarette,
-/turf/open/floor/tile/dark,
-/area/space)
-"CK" = (
-/obj/structure/ship_ammo/rocket/napalm,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"CQ" = (
-/obj/structure/bed/chair/comfy{
-	dir = 1
-	},
-/turf/open/floor/tile/dark/green2{
-	dir = 1
-	},
-/area/space)
-"CS" = (
-/obj/machinery/light/spot{
-	dir = 8
-	},
-/turf/open/floor/tile/dark,
-/area/space)
-"CY" = (
-/obj/effect/decal/cleanable/generic,
-/turf/open/space/basic,
-/area/space)
-"Di" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/structure/platform{
-	dir = 4
-	},
-/obj/structure/platform_decoration{
-	dir = 9
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/open/ground/desertdam/river/clean/deep_water_clean,
-/area/space)
-"Dk" = (
-/obj/structure/bed/fancy,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"Dp" = (
-/obj/effect/decal/warning_stripes/thick,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"Ds" = (
-/obj/structure/platform{
-	dir = 8
-	},
-/turf/open/ground/desertdam/river/clean/deep_water_clean,
-/area/space)
-"DE" = (
-/obj/effect/decal/warning_stripes/thick{
-	dir = 4
-	},
-/obj/machinery/light/spot,
-/turf/open/floor/tile/dark/brown2,
-/area/space)
-"DT" = (
-/turf/closed/wall/mainship/outer/reinforced,
-/area/space)
-"DW" = (
-/obj/machinery/door/airlock/mainship/marine/general,
-/turf/open/floor/tile/dark,
-/area/space)
-"DY" = (
-/obj/machinery/cryopod,
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/tile/dark,
-/area/space)
-"Ea" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"Eg" = (
-/obj/structure/rack,
-/obj/item/binoculars,
-/obj/effect/decal/warning_stripes/thick{
-	dir = 8
-	},
-/turf/open/floor/tile/dark/brown2{
-	dir = 5
-	},
-/area/space)
-"Eq" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/open/floor/prison/kitchen,
-/area/space)
-"Et" = (
-/obj/structure/table/mainship,
-/obj/item/facepaint/brown,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"Ev" = (
-/obj/structure/largecrate/random/barrel/yellow,
-/turf/open/floor/tile/damaged,
-/area/space)
-"EE" = (
-/obj/machinery/door/airlock/mainship/marine/general{
-	dir = 1
-	},
-/turf/open/floor/tile/dark,
-/area/space)
-"ER" = (
-/obj/machinery/door/airlock/freezer,
-/turf/open/floor/prison/kitchen,
-/area/space)
-"EU" = (
-/obj/structure/bed/fancy,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"Fd" = (
-/obj/effect/decal/warning_stripes/thin{
-	dir = 9
-	},
-/obj/effect/landmark/start/latejoin_unsc,
-/turf/open/floor/tile/dark,
-/area/space)
-"Ge" = (
-/obj/structure/window/framed/prison/reinforced/hull,
-/turf/open/space/basic,
-/area/shuttle/dropship/alamo)
-"Gn" = (
-/mob/living/simple_animal/crab,
-/turf/open/beach/sand,
-/area/space)
-"GA" = (
-/obj/structure/girder,
-/turf/open/space/basic,
-/area/space)
-"GY" = (
-/obj/structure/table/mainship,
-/obj/item/storage/box/donkpockets,
-/turf/open/floor/tile/dark/green2{
-	dir = 4
-	},
-/area/space)
-"Hg" = (
-/obj/structure/flora/rock/beachrocks,
-/obj/effect/overlay/coconut,
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/effect/overlay/palmtree_l,
-/turf/open/beach/sand,
-/area/space)
-"Hp" = (
-/obj/effect/landmark/corpsespawner/clown,
-/turf/open/floor/tile/damaged,
-/area/space)
-"HF" = (
-/obj/structure/rack,
-/obj/item/storage/box/monkeycubes,
-/obj/item/storage/box/monkeycubes,
-/turf/open/floor/freezer,
-/area/space)
-"HH" = (
-/obj/effect/decal/warning_stripes/thick,
-/obj/effect/decal/warning_stripes/thick,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"HO" = (
-/obj/structure/platform,
-/turf/open/ground/desertdam/river/clean/deep_water_clean,
-/area/space)
-"HU" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/machinery/vending/marineFood,
-/turf/open/floor/tile/dark/green2{
-	dir = 4
-	},
-/area/space)
-"HY" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 1
-	},
-/turf/open/space/basic,
-/area/space)
-"HZ" = (
-/obj/machinery/light,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"Id" = (
-/turf/open/floor/tile/damaged,
-/area/space)
-"IG" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/machinery/vending/cola,
-/turf/open/floor/tile/dark/green2{
-	dir = 4
-	},
-/area/space)
-"IO" = (
-/obj/machinery/marine_selector/clothes/unscMarine,
-/turf/open/floor/tile/dark/brown2{
-	dir = 8
-	},
-/area/space)
-"IR" = (
-/obj/effect/decal/warning_stripes/thin{
-	dir = 1
-	},
-/obj/effect/landmark/start/latejoin_unsc,
-/turf/open/floor/tile/dark,
-/area/space)
-"IS" = (
-/obj/structure/mopbucket,
-/turf/open/floor/tile/damaged,
-/area/space)
-"IU" = (
-/obj/structure/bed/chair/dropship/passenger,
-/turf/open/floor/plating,
-/area/shuttle/dropship/alamo)
-"Jg" = (
-/obj/machinery/disposal,
-/turf/open/floor/prison/kitchen,
-/area/space)
-"Ji" = (
-/obj/effect/decal/warning_stripes/thin{
-	dir = 5
-	},
-/obj/effect/landmark/start/latejoin_unsc,
-/turf/open/floor/tile/dark,
-/area/space)
-"Jo" = (
-/turf/open/floor/tile/dark,
-/area/space)
-"Ju" = (
-/obj/structure/window/framed/mainship/hull/canterbury,
-/turf/open/floor/tile/dark,
-/area/space)
-"JM" = (
-/turf/open/floor/tile/dark/green2,
-/area/space)
-"JQ" = (
-/obj/structure/closet/crate/ammo,
-/turf/open/floor/tile/damaged,
-/area/space)
-"JW" = (
-/obj/machinery/vending/dinnerware,
-/turf/open/floor/prison/kitchen,
-/area/space)
-"JZ" = (
-/obj/machinery/gibber,
-/turf/open/floor/freezer,
-/area/space)
-"Kh" = (
-/obj/structure/shuttle/engine/propulsion/burst/left{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/space)
-"Ki" = (
+"eT" = (
 /obj/effect/decal/warning_stripes/thick,
 /obj/effect/decal/warning_stripes/thick{
 	dir = 1
@@ -1028,19 +406,1433 @@
 /obj/item/weapon/gun/rifle/m739,
 /turf/open/floor/tile/dark,
 /area/space)
-"Ku" = (
-/obj/machinery/light/spot{
+"eV" = (
+/obj/machinery/vending/coffee,
+/turf/open/floor/mainship,
+/area/space)
+"fa" = (
+/obj/machinery/door/airlock/freezer,
+/turf/open/floor/prison/kitchen,
+/area/space)
+"ff" = (
+/turf/open/floor/prison/kitchen,
+/area/space)
+"fg" = (
+/obj/structure/bed/chair/dropship/passenger{
 	dir = 1
 	},
-/turf/open/floor/tile/dark/brown2{
-	dir = 9
+/turf/open/floor/plating,
+/area/shuttle/dropship/alamo)
+"fi" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 10
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"fj" = (
+/obj/item/lightreplacer,
+/obj/structure/table/mainship,
+/turf/open/floor/mainship,
+/area/space)
+"fn" = (
+/obj/structure/closet/secure_closet/freezer/meat,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/prison/kitchen,
+/area/space)
+"ft" = (
+/turf/open/space/basic,
+/area/space)
+"fz" = (
+/obj/machinery/r_n_d/server/core,
+/turf/open/floor/mainship/tcomms,
+/area/space)
+"fB" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/mainship,
+/area/space)
+"fC" = (
+/turf/open/floor/mainship/green{
+	dir = 8
 	},
 /area/space)
-"KA" = (
-/obj/structure/window/framed/prison/reinforced/hull,
+"fH" = (
+/obj/effect/decal/warning_stripes/thin,
+/obj/effect/decal/warning_stripes/thin{
+	dir = 8
+	},
+/obj/machinery/landinglight/ds1/delaythree{
+	dir = 8
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"fN" = (
+/obj/machinery/door/airlock/multi_tile/glass{
+	name = "Cafeteria"
+	},
+/obj/structure/cable,
+/turf/open/floor/mainship/green{
+	dir = 8
+	},
+/area/space)
+"fP" = (
+/obj/machinery/vending/medical,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/mainship/sterile/side{
+	dir = 1
+	},
+/area/space)
+"fT" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/machinery/camera/autoname/mainship{
+	dir = 4
+	},
+/turf/open/floor/mainship/sterile/side{
+	dir = 8
+	},
+/area/space)
+"fU" = (
+/obj/machinery/computer/med_data,
+/turf/open/floor/mainship/sterile/corner{
+	dir = 1
+	},
+/area/space)
+"gf" = (
+/obj/machinery/door/airlock/mainship/security/glass/office,
+/turf/open/floor/mainship,
+/area/space)
+"gk" = (
+/obj/machinery/vending/dinnerware,
+/turf/open/floor/prison/kitchen,
+/area/space)
+"go" = (
+/turf/open/floor/mainship/green,
+/area/space)
+"gB" = (
+/turf/closed/wall/mainship,
+/area/space)
+"gF" = (
+/obj/structure/cable,
+/obj/machinery/door/poddoor/shutters/mainship{
+	density = 0;
+	icon_state = "shutter0";
+	id = "Medbay";
+	name = "\improper Medbay lockdown shutters";
+	opacity = 0
+	},
+/turf/open/floor/mainship,
+/area/space)
+"gP" = (
+/obj/structure/largecrate/random/case/small,
+/turf/open/floor/mainship/mono,
+/area/space)
+"gQ" = (
+/obj/structure/flora/rock/beachrocks,
+/obj/structure/platform,
+/turf/open/beach/sand,
+/area/space)
+"gU" = (
+/obj/machinery/marine_selector/clothes/unscMarine/leader,
+/turf/open/floor/mainship,
+/area/space)
+"hc" = (
+/obj/structure/bed/chair/e_chair,
+/obj/item/clothing/suit/straight_jacket,
+/obj/item/clothing/glasses/sunglasses/blindfold,
+/turf/open/floor/mainship,
+/area/space)
+"hg" = (
+/obj/machinery/door/poddoor/shutters/mainship/cic{
+	density = 0;
+	dir = 2;
+	icon_state = "shutter0";
+	id = "cic_lockdown";
+	opacity = 0
+	},
+/turf/open/floor/mainship,
+/area/space)
+"hk" = (
+/obj/machinery/disposal,
+/turf/open/floor/prison/kitchen,
+/area/space)
+"hm" = (
+/obj/structure/closet/secure_closet/warrant_officer,
+/turf/open/floor/mainship,
+/area/space)
+"hn" = (
+/obj/structure/closet/l3closet/janitor,
 /turf/open/floor/tile/damaged,
 /area/space)
-"KO" = (
+"hq" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/table/mainship,
+/turf/open/floor/mainship,
+/area/space)
+"hu" = (
+/obj/structure/table/mainship,
+/obj/item/ammo_magazine/rifle/m739,
+/obj/item/ammo_magazine/rifle/m739,
+/obj/item/ammo_magazine/rifle/m739,
+/obj/item/weapon/gun/rifle/m739,
+/turf/open/floor/mainship,
+/area/space)
+"hv" = (
+/obj/machinery/cryopod/right,
+/obj/machinery/light,
+/turf/open/floor/freezer,
+/area/space)
+"hw" = (
+/obj/structure/closet/walllocker/medical_wall/full,
+/turf/open/floor/mainship,
+/area/space)
+"hD" = (
+/obj/structure/table/mainship,
+/obj/item/tool/lighter/zippo,
+/obj/item/clothing/mask/cigarette/cigar{
+	pixel_y = -1
+	},
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"hE" = (
+/obj/machinery/computer/forensic_scanning,
+/turf/open/floor/mainship,
+/area/space)
+"hG" = (
+/obj/effect/decal/warning_stripes/thick,
+/obj/effect/decal/warning_stripes/thick{
+	dir = 1
+	},
+/turf/open/floor/tile/dark,
+/area/space)
+"hI" = (
+/obj/machinery/camera/autoname/mainship{
+	dir = 1
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"hK" = (
+/turf/open/floor/tile/damaged,
+/area/space)
+"hM" = (
+/obj/docking_port/stationary/marine_dropship/hangar/one,
+/obj/docking_port/stationary/marine_dropship/crash_target,
+/turf/open/floor/plating,
+/area/space)
+"hR" = (
+/obj/item/reagent_containers/glass/bucket/janibucket,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/tile/damaged,
+/area/space)
+"hT" = (
+/obj/structure/table/mainship,
+/turf/open/floor/mainship/green/corner,
+/area/space)
+"hZ" = (
+/obj/machinery/cryopod/right,
+/turf/open/floor/tile/dark,
+/area/space)
+"ig" = (
+/obj/machinery/light,
+/obj/structure/ship_ammo/rocket/napalm,
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"ij" = (
+/obj/machinery/door/poddoor/shutters/mainship/hangar{
+	density = 0;
+	icon_state = "shutter0";
+	opacity = 0
+	},
+/turf/open/floor/mainship,
+/area/space)
+"im" = (
+/obj/machinery/marine_selector/clothes/unscMarine/engineer,
+/turf/open/floor/mainship,
+/area/space)
+"iq" = (
+/turf/open/floor/mainship/green{
+	dir = 1
+	},
+/area/space)
+"ix" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 8
+	},
+/turf/open/floor/tile/dark/blue2{
+	dir = 8
+	},
+/area/space)
+"iz" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 4
+	},
+/turf/open/floor/tile/dark/blue2{
+	dir = 4
+	},
+/area/space)
+"iB" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 4
+	},
+/obj/machinery/landinglight/ds1/delaytwo{
+	dir = 4
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"iC" = (
+/obj/machinery/computer/shuttle/shuttle_control/dropship1,
+/obj/structure/table/mainship,
+/obj/machinery/light/spot,
+/turf/open/floor/mainship/mono,
+/area/space)
+"iD" = (
+/turf/open/floor/tile/dark/brown2/corner{
+	dir = 1
+	},
+/area/space)
+"iP" = (
+/obj/machinery/cryopod,
+/turf/open/floor/tile/dark,
+/area/space)
+"iU" = (
+/obj/structure/bed/fancy,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"iV" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 8
+	},
+/obj/machinery/landinglight/ds1/delaythree{
+	dir = 8
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"jb" = (
+/obj/structure/cable,
+/obj/machinery/camera/autoname/mainship{
+	dir = 4
+	},
+/turf/open/floor/mainship,
+/area/space)
+"je" = (
+/obj/machinery/flasher/cell1{
+	pixel_y = 30
+	},
+/turf/open/floor/mainship,
+/area/space)
+"jl" = (
+/obj/effect/landmark/start/job/urf_insurrectionist,
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"jm" = (
+/obj/machinery/cryopod,
+/obj/machinery/light,
+/turf/open/floor/freezer,
+/area/space)
+"jn" = (
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/floor/mainship,
+/area/space)
+"jo" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/tile/dark/brown2{
+	dir = 4
+	},
+/area/space)
+"js" = (
+/obj/structure/bed/fancy,
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"jv" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/box/pillbottles,
+/obj/item/storage/box/pillbottles,
+/obj/item/storage/box/beakers,
+/obj/item/storage/box/beakers,
+/obj/item/reagent_containers/glass/beaker/bluespace,
+/obj/item/reagent_containers/glass/beaker/bluespace,
+/turf/open/floor/mainship/sterile,
+/area/space)
+"jy" = (
+/obj/structure/platform,
+/obj/structure/platform{
+	dir = 8
+	},
+/obj/structure/platform_decoration{
+	dir = 10
+	},
+/obj/machinery/light,
+/turf/open/ground/desertdam/river/clean/deep_water_clean,
+/area/space)
+"jz" = (
+/obj/structure/rack,
+/obj/item/weapon/shield/riot,
+/obj/item/clothing/suit/armor/riot,
+/obj/item/clothing/head/helmet/riot,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/mainship,
+/area/space)
+"jG" = (
+/obj/machinery/door/airlock/multi_tile/mainship/medidoor/medbay/free_access{
+	dir = 1;
+	icon_state = "door_closed"
+	},
+/obj/machinery/door/poddoor/shutters/mainship{
+	density = 0;
+	icon_state = "shutter0";
+	id = "Medbay";
+	name = "\improper Medbay lockdown shutters";
+	opacity = 0
+	},
+/turf/open/floor/mainship,
+/area/space)
+"jP" = (
+/turf/open/floor/mainship/sterile/dark,
+/area/space)
+"jV" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12
+	},
+/turf/open/floor/freezer,
+/area/space)
+"jW" = (
+/mob/living/carbon/monkey,
+/turf/open/floor/freezer,
+/area/space)
+"kc" = (
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/turf/open/floor/mainship,
+/area/space)
+"ki" = (
+/obj/structure/cable,
+/turf/open/floor/mainship/sterile/side{
+	dir = 10
+	},
+/area/space)
+"kk" = (
+/obj/effect/decal/warning_stripes/thick{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"km" = (
+/turf/open/floor/mainship/green/corner,
+/area/space)
+"kr" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/mainship,
+/area/space)
+"kw" = (
+/obj/structure/closet/crate/freezer/rations,
+/turf/open/floor/freezer,
+/area/space)
+"kA" = (
+/obj/structure/cable,
+/turf/open/floor/mainship/green{
+	dir = 5
+	},
+/area/space)
+"kB" = (
+/obj/effect/decal/cleanable/flour,
+/obj/machinery/power/apc/mainship{
+	dir = 4;
+	pixel_x = -48
+	},
+/turf/open/floor/prison/kitchen,
+/area/space)
+"kI" = (
+/obj/structure/closet/crate,
+/obj/item/target,
+/obj/item/target,
+/obj/item/target,
+/obj/item/target,
+/obj/item/target,
+/turf/open/floor/mainship,
+/area/space)
+"kK" = (
+/obj/machinery/vending/cigarette/colony,
+/obj/machinery/light/spot{
+	dir = 8
+	},
+/turf/open/floor/tile/dark/green2{
+	dir = 10
+	},
+/area/space)
+"kM" = (
+/obj/effect/landmark/start/job/unsc_engineer,
+/obj/effect/landmark/start/latejoin_unsc,
+/obj/structure/cable,
+/turf/open/floor/freezer,
+/area/space)
+"kN" = (
+/obj/structure/bed/chair,
+/turf/open/floor/mainship/green{
+	dir = 2
+	},
+/area/space)
+"kP" = (
+/obj/machinery/door/airlock/mainship/secure/tcomms{
+	name = "Telecommunications"
+	},
+/obj/structure/cable,
+/turf/open/floor/mainship,
+/area/space)
+"kT" = (
+/obj/effect/landmark/start/job/unsc_marine,
+/obj/effect/landmark/start/latejoin_unsc,
+/turf/open/floor/freezer,
+/area/space)
+"kV" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/prison/kitchen,
+/area/space)
+"lb" = (
+/obj/machinery/power/apc/mainship{
+	dir = 4;
+	pixel_x = -48
+	},
+/turf/open/floor/tile/damaged,
+/area/space)
+"ln" = (
+/obj/structure/table/mainship,
+/obj/machinery/door_control/mainship/brigarmory,
+/turf/open/floor/mainship,
+/area/space)
+"lq" = (
+/obj/structure/window/framed/mainship/white,
+/turf/open/floor/mainship,
+/area/space)
+"lr" = (
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/spray/cleaner{
+	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
+	name = "Surgery Cleaner"
+	},
+/turf/open/floor/mainship/sterile/dark,
+/area/space)
+"lw" = (
+/obj/effect/decal/cleanable/generic,
+/turf/open/space/basic,
+/area/space)
+"ly" = (
+/obj/effect/decal/warning_stripes/thin,
+/obj/machinery/landinglight/ds1,
+/turf/open/floor/mainship/mono,
+/area/space)
+"lD" = (
+/obj/structure/table/mainship,
+/obj/item/fuelCell/full,
+/obj/item/fuelCell/full,
+/turf/open/floor/mainship,
+/area/space)
+"lG" = (
+/obj/machinery/cryopod,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/freezer,
+/area/space)
+"lI" = (
+/obj/structure/table/mainship,
+/obj/item/ammo_magazine/pistol/m6,
+/obj/item/ammo_magazine/pistol/m6,
+/obj/item/ammo_magazine/pistol/m6,
+/obj/item/ammo_magazine/pistol/m6,
+/obj/item/ammo_magazine/pistol/m6,
+/obj/item/weapon/gun/pistol/m6,
+/turf/open/floor/mainship,
+/area/space)
+"lL" = (
+/obj/item/tool/mop,
+/turf/open/floor/tile/damaged,
+/area/space)
+"lM" = (
+/obj/machinery/light{
+	dir = 8;
+	pixel_x = -6
+	},
+/turf/open/floor/mainship,
+/area/space)
+"ma" = (
+/obj/machinery/door/airlock/mainship/security{
+	dir = 2
+	},
+/turf/open/floor/mainship,
+/area/space)
+"mc" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 8
+	},
+/obj/machinery/landinglight/ds1/delayone{
+	dir = 8
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"me" = (
+/obj/machinery/cryopod/right,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/tile/dark,
+/area/space)
+"mh" = (
+/obj/structure/rack,
+/obj/item/weapon/shield/riot,
+/obj/item/clothing/suit/armor/riot,
+/obj/item/clothing/head/helmet/riot,
+/turf/open/floor/mainship,
+/area/space)
+"mo" = (
+/obj/structure/table/mainship,
+/obj/structure/cable,
+/turf/open/floor/mainship,
+/area/space)
+"ms" = (
+/obj/machinery/vending/tool,
+/turf/open/floor/mainship,
+/area/space)
+"mx" = (
+/obj/structure/table/mainship,
+/obj/item/tool/lighter/zippo,
+/obj/item/clothing/mask/cigarette/cigar,
+/turf/open/floor/mainship,
+/area/space)
+"mM" = (
+/obj/machinery/shower{
+	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/mainship,
+/area/space)
+"mQ" = (
+/obj/structure/table/mainship,
+/turf/open/floor/freezer,
+/area/space)
+"mU" = (
+/turf/open/floor/tile/dark/green2/corner{
+	dir = 4
+	},
+/area/space)
+"mX" = (
+/obj/structure/cable,
+/turf/open/floor/mainship/sterile/corner{
+	dir = 1
+	},
+/area/space)
+"nc" = (
+/turf/open/floor/mainship/green{
+	dir = 10
+	},
+/area/space)
+"ni" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 6
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"np" = (
+/obj/machinery/vending/snack,
+/turf/open/floor/mainship,
+/area/space)
+"ns" = (
+/obj/structure/bed,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/mainship,
+/area/space)
+"nt" = (
+/obj/structure/bed/chair,
+/obj/structure/cable,
+/obj/structure/sign/double/map/left{
+	desc = "A map of the area of operation.";
+	name = "map"
+	},
+/turf/open/floor/mainship,
+/area/space)
+"nv" = (
+/turf/open/floor/mainship/green/corner{
+	dir = 1
+	},
+/area/space)
+"nz" = (
+/obj/structure/bed/chair,
+/obj/structure/sign/double/map/right{
+	desc = "A map of the area of operation.";
+	name = "map"
+	},
+/turf/open/floor/mainship,
+/area/space)
+"nC" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/tile/dark/blue2{
+	dir = 8
+	},
+/area/space)
+"nF" = (
+/obj/structure/closet/secure_closet/security,
+/turf/open/floor/mainship,
+/area/space)
+"nQ" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 8
+	},
+/obj/machinery/landinglight/ds1{
+	dir = 8
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"nR" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/mainship,
+/area/space)
+"nW" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/tile/dark/blue2{
+	dir = 4
+	},
+/area/space)
+"nY" = (
+/obj/machinery/cryopod,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/tile/dark,
+/area/space)
+"ob" = (
+/obj/machinery/marine_selector/clothes/unscMarine/medic,
+/turf/open/floor/mainship,
+/area/space)
+"of" = (
+/obj/machinery/optable,
+/obj/item/tank/anesthetic,
+/turf/open/floor/mainship/sterile/dark,
+/area/space)
+"oi" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 4
+	},
+/obj/machinery/landinglight/ds1{
+	dir = 4
+	},
+/turf/open/floor/mainship/cargo/arrow{
+	dir = 4
+	},
+/area/space)
+"oj" = (
+/obj/machinery/light/small,
+/turf/open/floor/mainship/tcomms,
+/area/space)
+"ok" = (
+/obj/effect/decal/warning_stripes/thick,
+/obj/effect/decal/warning_stripes/thick{
+	dir = 1
+	},
+/obj/structure/table/mainship,
+/turf/open/floor/tile/dark,
+/area/space)
+"om" = (
+/obj/structure/rack,
+/obj/item/tool/kitchen/knife/butcher,
+/turf/open/floor/freezer,
+/area/space)
+"on" = (
+/obj/structure/table/mainship,
+/obj/machinery/computer/camera_advanced,
+/turf/open/floor/mainship,
+/area/space)
+"op" = (
+/obj/structure/largecrate/random/case,
+/turf/open/floor/mainship/mono,
+/area/space)
+"or" = (
+/obj/structure/closet/secure_closet/freezer/kitchen,
+/turf/open/floor/freezer,
+/area/space)
+"os" = (
+/obj/structure/window/reinforced/toughened{
+	dir = 4
+	},
+/obj/machinery/door_timer/cell_2,
+/turf/open/floor/mainship,
+/area/space)
+"ou" = (
+/obj/structure/curtain/shower,
+/turf/open/floor/mainship,
+/area/space)
+"ov" = (
+/obj/effect/decal/warning_stripes/thick{
+	dir = 4
+	},
+/obj/machinery/light/spot,
+/turf/open/floor/tile/dark/brown2,
+/area/space)
+"ox" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/prison/kitchen,
+/area/space)
+"oB" = (
+/obj/structure/table/reinforced,
+/obj/machinery/reagentgrinder,
+/turf/open/floor/prison/kitchen,
+/area/space)
+"oE" = (
+/obj/structure/table/reinforced,
+/obj/item/clothing/head/chefhat,
+/obj/item/tool/kitchen/rollingpin,
+/turf/open/floor/prison/kitchen,
+/area/space)
+"oH" = (
+/obj/structure/girder,
+/turf/open/space/basic,
+/area/space)
+"oM" = (
+/obj/structure/largecrate/random/barrel/green,
+/turf/open/space/basic,
+/area/space)
+"oN" = (
+/obj/machinery/light{
+	dir = 8;
+	pixel_x = -6
+	},
+/obj/machinery/camera/autoname/mainship{
+	dir = 4
+	},
+/turf/open/floor/mainship/sterile/side{
+	dir = 8
+	},
+/area/space)
+"oQ" = (
+/obj/structure/closet/wardrobe/chemistry_white,
+/turf/open/floor/mainship/sterile/corner{
+	dir = 1
+	},
+/area/space)
+"oR" = (
+/obj/machinery/camera/autoname/mainship{
+	dir = 4
+	},
+/turf/open/floor/mainship/tcomms,
+/area/space)
+"oT" = (
+/obj/machinery/computer/shuttle/marine_dropship/two,
+/turf/open/floor/plating,
+/area/shuttle/dropship/alamo)
+"oV" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/turf/open/floor/tile/damaged,
+/area/space)
+"oW" = (
+/obj/machinery/power/apc/mainship{
+	dir = 4
+	},
+/obj/structure/cable,
+/turf/open/floor/mainship,
+/area/space)
+"oY" = (
+/mob/living/simple_animal/lizard,
+/turf/open/floor/tile/damaged,
+/area/space)
+"pc" = (
+/obj/machinery/sleeper,
+/turf/open/floor/mainship/sterile/dark,
+/area/space)
+"pm" = (
+/obj/machinery/door/airlock/mainship/generic{
+	dir = 2;
+	name = "\improper Showers"
+	},
+/turf/open/floor/mainship,
+/area/space)
+"po" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 4
+	},
+/obj/machinery/landinglight/ds1/delaythree{
+	dir = 4
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"pt" = (
+/obj/structure/mopbucket,
+/turf/open/floor/tile/damaged,
+/area/space)
+"pu" = (
+/obj/machinery/door/airlock/mainship/research/glass/free_access{
+	name = "Operating Room"
+	},
+/obj/machinery/holosign/surgery{
+	id = "surgery1"
+	},
+/obj/structure/cable,
+/turf/open/floor/mainship/sterile/dark,
+/area/space)
+"pB" = (
+/mob/living/simple_animal/crab{
+	desc = "Leading the local marine corps battalion with an iron claw ever since he escaped the kitchen, stabbed 3 people and scrambled into a vent.";
+	name = "colonel crab"
+	},
+/turf/open/floor/mainship,
+/area/space)
+"pI" = (
+/obj/machinery/vending/MarineMed/Blood,
+/turf/open/floor/mainship/sterile/corner,
+/area/space)
+"pJ" = (
+/turf/open/floor/mainship/cargo/arrow{
+	dir = 4
+	},
+/area/space)
+"pL" = (
+/obj/effect/landmark/start/job/urf_insurrectionist,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"pQ" = (
+/turf/open/floor/tile/dark/green2,
+/area/space)
+"pU" = (
+/obj/machinery/door/airlock/multi_tile/glass{
+	dir = 1;
+	name = "Cryogenics"
+	},
+/turf/open/floor/tile/dark,
+/area/space)
+"pX" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/surgical_tray,
+/turf/open/floor/mainship/sterile/dark,
+/area/space)
+"qg" = (
+/obj/structure/closet/crate,
+/obj/item/target/alien,
+/obj/item/target/alien,
+/obj/item/target/alien,
+/obj/item/target/alien,
+/obj/item/target/alien,
+/turf/open/floor/mainship,
+/area/space)
+"qh" = (
+/turf/open/floor/mainship/sterile/corner{
+	dir = 8
+	},
+/area/space)
+"qi" = (
+/obj/effect/landmark/start/job/urf_leader,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"ql" = (
+/obj/structure/closet/secure_closet/security,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/mainship,
+/area/space)
+"qm" = (
+/obj/structure/closet/toolcloset,
+/turf/open/floor/mainship,
+/area/space)
+"qs" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/mainship,
+/area/space)
+"qz" = (
+/obj/effect/decal/warning_stripes/thin,
+/obj/machinery/landinglight/ds1/delaytwo,
+/turf/open/floor/mainship/mono,
+/area/space)
+"qB" = (
+/obj/machinery/computer3/server/rack,
+/turf/open/floor/mainship,
+/area/space)
+"qE" = (
+/obj/item/tool/crowbar,
+/turf/open/space/basic,
+/area/space)
+"qP" = (
+/turf/open/floor/mainship/sterile/side{
+	dir = 4
+	},
+/area/space)
+"qX" = (
+/obj/structure/rack,
+/obj/item/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
+/turf/open/floor/freezer,
+/area/space)
+"qY" = (
+/obj/structure/kitchenspike,
+/turf/open/floor/freezer,
+/area/space)
+"ra" = (
+/turf/open/floor/mainship/orange,
+/area/space)
+"rc" = (
+/obj/structure/window/framed/prison/reinforced/hull,
+/turf/open/space/basic,
+/area/shuttle/dropship/alamo)
+"rk" = (
+/turf/open/floor/tile/dark/brown2{
+	dir = 10
+	},
+/area/space)
+"rl" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 9
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"rm" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 5
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"rn" = (
+/obj/item/stack/sheet/wood,
+/obj/structure/girder/displaced,
+/turf/open/space/basic,
+/area/space)
+"ro" = (
+/obj/machinery/door/airlock/mainship/research/glass/free_access,
+/obj/structure/cable,
+/turf/open/floor/mainship/sterile/dark,
+/area/space)
+"rs" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes/thin,
+/obj/machinery/landinglight/ds1/delayone{
+	dir = 8
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"ry" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/mainship,
+/area/space)
+"rA" = (
+/turf/open/floor/mainship/green{
+	dir = 4
+	},
+/area/space)
+"rL" = (
+/obj/structure/target_stake,
+/obj/item/target/syndicate,
+/turf/open/floor/mainship,
+/area/space)
+"rS" = (
+/obj/machinery/marine_selector/clothes/unscMarine/medic,
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"rU" = (
+/obj/structure/largecrate/random/barrel/red,
+/turf/open/floor/tile/damaged,
+/area/space)
+"sa" = (
+/obj/machinery/light,
+/turf/open/floor/mainship,
+/area/space)
+"sn" = (
+/obj/machinery/vending/coffee,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/mainship,
+/area/space)
+"sq" = (
+/obj/machinery/vending/security,
+/turf/open/floor/mainship,
+/area/space)
+"sr" = (
+/obj/structure/table/mainship,
+/obj/machinery/chem_dispenser/soda{
+	dir = 4
+	},
+/turf/open/floor/tile/dark/green2{
+	dir = 8
+	},
+/area/space)
+"sw" = (
+/obj/machinery/gibber,
+/turf/open/floor/freezer,
+/area/space)
+"sB" = (
+/obj/effect/landmark/start/job/unsc_engineer,
+/obj/effect/landmark/start/latejoin_unsc,
+/obj/effect/landmark/start/latejoin_unsc,
+/obj/structure/cable,
+/obj/machinery/power/apc/mainship{
+	dir = 1
+	},
+/turf/open/floor/freezer,
+/area/space)
+"sG" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 1
+	},
+/obj/machinery/landinglight/ds1/delayone{
+	dir = 1
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"sL" = (
+/obj/machinery/light/spot{
+	dir = 8
+	},
+/turf/open/floor/tile/dark/brown2{
+	dir = 8
+	},
+/area/space)
+"sO" = (
+/obj/machinery/landinglight/ds1/delayone{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes/thin{
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes/thin{
+	dir = 8
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"sQ" = (
+/obj/effect/decal/cleanable/flour,
+/turf/open/floor/prison/kitchen,
+/area/space)
+"sT" = (
+/obj/machinery/computer/prisoner,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/mainship,
+/area/space)
+"sU" = (
+/obj/structure/table/mainship,
+/obj/item/book/manual/marine_law,
+/turf/open/floor/mainship,
+/area/space)
+"sX" = (
+/obj/machinery/computer/secure_data/detective_computer,
+/obj/machinery/camera/autoname/mainship{
+	dir = 1
+	},
+/turf/open/floor/mainship,
+/area/space)
+"sZ" = (
+/turf/open/floor/mainship/orange{
+	dir = 6
+	},
+/area/space)
+"ta" = (
+/turf/open/floor/mainship/orange{
+	dir = 1
+	},
+/area/space)
+"tc" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/closet/walllocker/hydrant/full,
+/turf/open/floor/mainship,
+/area/space)
+"tq" = (
+/obj/structure/sink/bathroom{
+	dir = 8;
+	pixel_x = 15
+	},
+/turf/open/floor/mainship,
+/area/space)
+"ts" = (
+/obj/structure/closet/crate/ammo,
+/turf/open/space/basic,
+/area/space)
+"tu" = (
+/obj/structure/largecrate/supply/supplies/flares,
+/turf/open/space/basic,
+/area/space)
+"tw" = (
+/obj/structure/flora/rock/beachrocks,
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/beach/sand,
+/area/space)
+"tH" = (
+/obj/machinery/power/apc/mainship{
+	dir = 4
+	},
+/obj/structure/cable,
+/turf/open/floor/mainship/sterile/side{
+	dir = 8
+	},
+/area/space)
+"tL" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/mainship,
+/area/space)
+"tM" = (
+/obj/machinery/iv_drip,
+/turf/open/floor/mainship/sterile/side{
+	dir = 2
+	},
+/area/space)
+"tS" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"tW" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 1
+	},
+/obj/machinery/landinglight/ds1/delayone{
+	dir = 1
+	},
+/turf/open/floor/mainship/cargo/arrow{
+	dir = 1
+	},
+/area/space)
+"tX" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/space/basic,
+/area/space)
+"tY" = (
+/obj/structure/bed/chair,
+/turf/open/floor/mainship/green,
+/area/space)
+"ud" = (
+/obj/structure/inflatable/popped,
+/turf/open/space/basic,
+/area/space)
+"uk" = (
+/obj/structure/table/mainship,
+/obj/item/storage/box/cups,
+/obj/structure/cable,
+/turf/open/floor/mainship/green{
+	dir = 10
+	},
+/area/space)
+"uq" = (
+/obj/structure/bed/chair/janicart,
+/obj/machinery/light/small,
+/turf/open/floor/tile/damaged,
+/area/space)
+"ur" = (
+/obj/machinery/vending/marine/unscGuns,
+/turf/open/floor/mainship,
+/area/space)
+"ut" = (
+/obj/item/bedsheet/captain,
+/obj/structure/bed/fancy,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/mainship,
+/area/space)
+"uw" = (
+/obj/structure/table/mainship,
+/obj/machinery/recharger,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/glass/beaker/cryomix,
+/obj/item/reagent_containers/glass/beaker/cryomix,
+/turf/open/floor/mainship/sterile/corner{
+	dir = 1
+	},
+/area/space)
+"uy" = (
+/obj/structure/table/reinforced,
+/obj/machinery/reagentgrinder,
+/obj/item/stack/sheet/mineral/phoron/medium_stack,
+/obj/item/explosive/grenade/chem_grenade,
+/obj/item/explosive/grenade/chem_grenade,
+/obj/item/explosive/grenade/chem_grenade,
+/obj/item/explosive/grenade/chem_grenade,
+/obj/item/explosive/grenade/chem_grenade,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/mainship/sterile/side{
+	dir = 1
+	},
+/area/space)
+"uA" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/cable,
+/turf/open/floor/mainship/sterile/side{
+	dir = 1
+	},
+/area/space)
+"uB" = (
+/obj/structure/largecrate/random/barrel/yellow,
+/turf/open/floor/tile/damaged,
+/area/space)
+"uJ" = (
+/obj/structure/janitorialcart,
+/turf/open/floor/tile/damaged,
+/area/space)
+"uK" = (
+/obj/structure/cable,
+/turf/open/floor/mainship/green,
+/area/space)
+"uV" = (
+/obj/item/facepaint/brown,
+/obj/structure/table/mainship,
+/turf/open/floor/tile/dark,
+/area/space)
+"vf" = (
+/obj/machinery/cryopod,
+/turf/open/floor/freezer,
+/area/space)
+"vh" = (
+/obj/effect/decal/warning_stripes/thin,
+/obj/machinery/landinglight/ds1/delayone,
+/turf/open/floor/mainship/mono,
+/area/space)
+"vi" = (
+/obj/machinery/camera/autoname/mainship{
+	dir = 8
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"vj" = (
+/obj/effect/decal/warning_stripes/thick{
+	dir = 1
+	},
+/turf/open/floor/tile/dark,
+/area/space)
+"vk" = (
+/obj/structure/table/mainship,
+/obj/item/storage/firstaid/toxin,
+/obj/item/storage/firstaid/toxin,
+/obj/item/storage/firstaid/toxin,
+/obj/item/storage/firstaid/toxin,
+/obj/item/storage/firstaid/toxin,
+/turf/open/floor/mainship/sterile/side{
+	dir = 1
+	},
+/area/space)
+"vm" = (
+/obj/structure/table/mainship,
+/obj/structure/closet/walllocker/hydrant/full,
+/turf/open/floor/mainship,
+/area/space)
+"vn" = (
+/obj/machinery/door/airlock/mainship/marine/general{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"vp" = (
+/turf/open/floor/mainship/orange{
+	dir = 8
+	},
+/area/space)
+"vz" = (
+/obj/effect/landmark/start/job/urf_medic,
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"vA" = (
+/obj/structure/table/mainship,
+/obj/item/ashtray/plastic,
+/obj/item/storage/fancy/cigarettes,
+/obj/item/tool/lighter,
+/turf/open/floor/mainship,
+/area/space)
+"vB" = (
+/obj/structure/platform,
+/obj/structure/platform{
+	dir = 4
+	},
+/obj/structure/platform_decoration{
+	dir = 6
+	},
+/obj/machinery/light,
+/turf/open/ground/desertdam/river/clean/deep_water_clean,
+/area/space)
+"vD" = (
+/obj/effect/landmark/start/job/urf_engineer,
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"vE" = (
+/obj/machinery/door/window/southright,
+/turf/open/floor/prison/kitchen,
+/area/space)
+"vF" = (
+/obj/machinery/camera/autoname/mainship{
+	dir = 4
+	},
+/turf/open/floor/mainship,
+/area/space)
+"vH" = (
+/obj/structure/table/reinforced/prison,
+/obj/item/reagent_containers/food/snacks/bigbiteburger,
+/turf/open/floor/prison/kitchen,
+/area/space)
+"vJ" = (
+/obj/structure/closet/walllocker/emerglocker/full,
+/turf/open/floor/mainship/sterile/corner{
+	dir = 1
+	},
+/area/space)
+"vQ" = (
 /obj/structure/table/reinforced/prison,
 /obj/item/reagent_containers/food/condiment/saltshaker{
 	pixel_x = 4;
@@ -1052,35 +1844,935 @@
 	},
 /turf/open/floor/prison/kitchen,
 /area/space)
-"Ly" = (
-/obj/structure/rack,
-/obj/item/binoculars,
-/obj/effect/decal/warning_stripes/thick{
+"vV" = (
+/obj/machinery/door/airlock/mainship/research/glass/free_access{
+	name = "Operating Room"
+	},
+/obj/structure/sign/safety/autodoc,
+/turf/open/floor/mainship/sterile/dark,
+/area/space)
+"vX" = (
+/obj/structure/table/reinforced/prison,
+/obj/item/reagent_containers/food/snacks/monkeysdelight,
+/turf/open/floor/prison/kitchen,
+/area/space)
+"wd" = (
+/obj/structure/dropship_equipment/weapon/heavygun,
+/turf/open/floor/mainship/mono,
+/area/space)
+"wj" = (
+/obj/machinery/door/airlock/mainship/marine{
+	name = "\improper Medic Preperations"
+	},
+/turf/open/floor/mainship,
+/area/space)
+"wo" = (
+/obj/effect/decal/cleanable/generic,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/tile/damaged,
+/area/space)
+"wy" = (
+/obj/structure/table/reinforced/prison,
+/turf/open/floor/prison/kitchen,
+/area/space)
+"wz" = (
+/obj/machinery/door/airlock/multi_tile/glass,
+/obj/structure/cable,
+/turf/open/floor/mainship,
+/area/space)
+"wC" = (
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/tile/damaged,
+/area/space)
+"wF" = (
+/obj/machinery/door/airlock/mainship/marine/general,
+/turf/open/floor/tile/dark,
+/area/space)
+"wN" = (
+/obj/structure/table/mainship,
+/obj/item/megaphone,
+/obj/structure/cable,
+/turf/open/floor/mainship,
+/area/space)
+"wQ" = (
+/obj/machinery/computer/secure_data,
+/obj/structure/table/mainship,
+/turf/open/floor/mainship,
+/area/space)
+"wV" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/mainship/security{
+	dir = 2
+	},
+/turf/open/floor/mainship,
+/area/space)
+"wW" = (
+/obj/structure/table/mainship,
+/turf/open/floor/mainship,
+/area/space)
+"wZ" = (
+/obj/structure/cable,
+/turf/open/floor/mainship/sterile/side{
 	dir = 8
 	},
-/turf/open/floor/plating/asteroidfloor,
 /area/space)
-"LV" = (
-/obj/machinery/light,
-/turf/open/floor/tile/dark/green2,
+"xe" = (
+/obj/effect/decal/warning_stripes/thick,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/tile/dark,
 /area/space)
-"Mb" = (
+"xf" = (
+/obj/effect/landmark/start/job/unsc_marine,
+/obj/effect/landmark/start/latejoin_unsc,
+/turf/open/floor/mainship/green{
+	dir = 10
+	},
+/area/space)
+"xi" = (
+/obj/machinery/holopad,
+/turf/open/floor/mainship,
+/area/space)
+"xp" = (
 /obj/structure/bed/chair,
-/turf/open/floor/tile/dark/green2,
+/turf/open/floor/mainship,
 /area/space)
-"Mr" = (
-/obj/structure/table/holotable/wood,
-/turf/open/floor/plating/asteroidfloor,
+"xr" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 8
+	},
+/obj/machinery/landinglight/ds1/delaytwo{
+	dir = 8
+	},
+/turf/open/floor/mainship/mono,
 /area/space)
-"MB" = (
-/obj/structure/girder/displaced,
+"xA" = (
+/obj/machinery/vending/engineering,
+/turf/open/floor/mainship,
+/area/space)
+"xE" = (
+/obj/machinery/cryopod/right,
+/turf/open/floor/freezer,
+/area/space)
+"xT" = (
+/obj/machinery/door/airlock/mainship/secure/free_access{
+	dir = 1;
+	name = "\improper Janitor's Closet"
+	},
+/turf/open/floor/tile/damaged,
+/area/space)
+"ya" = (
+/obj/machinery/light/spot{
+	dir = 4
+	},
+/turf/open/floor/tile/dark/brown2{
+	dir = 4
+	},
+/area/space)
+"yd" = (
+/obj/structure/closet/secure_closet/brig{
+	id = "Cell 2";
+	name = "Cell 2"
+	},
+/turf/open/floor/mainship,
+/area/space)
+"yi" = (
+/obj/machinery/iv_drip,
+/turf/open/floor/mainship/sterile/corner{
+	dir = 4
+	},
+/area/space)
+"yj" = (
+/turf/open/floor/mainship/sterile,
+/area/space)
+"yq" = (
+/obj/machinery/power/apc/mainship{
+	dir = 1
+	},
+/obj/structure/cable,
+/turf/open/floor/mainship,
+/area/space)
+"yu" = (
+/obj/machinery/vending/cigarette,
+/turf/open/floor/tile/dark,
+/area/space)
+"yF" = (
+/obj/structure/largecrate/cow,
 /turf/open/space/basic,
 /area/space)
-"MI" = (
+"yG" = (
+/obj/structure/closet/crate,
+/turf/open/floor/tile/damaged,
+/area/space)
+"yK" = (
+/obj/structure/largecrate/cow,
+/turf/open/floor/tile/damaged,
+/area/space)
+"yT" = (
+/obj/machinery/vending/cola,
+/turf/open/floor/tile/dark/green2{
+	dir = 9
+	},
+/area/space)
+"za" = (
+/obj/structure/cable,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/closet/walllocker/medical_wall/full,
+/turf/open/floor/mainship,
+/area/space)
+"zh" = (
+/obj/structure/window/reinforced/toughened{
+	dir = 4
+	},
+/obj/machinery/door_timer/cell_1,
+/turf/open/floor/mainship,
+/area/space)
+"zm" = (
+/obj/structure/table/mainship,
+/obj/item/facepaint/green{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/facepaint/green,
+/obj/item/facepaint/green{
+	pixel_x = -3;
+	pixel_y = -3
+	},
+/turf/open/floor/mainship/green{
+	dir = 10
+	},
+/area/space)
+"zp" = (
+/obj/structure/ship_ammo/heavygun,
+/turf/open/floor/mainship/mono,
+/area/space)
+"zs" = (
+/turf/open/floor/mainship/sterile/corner,
+/area/space)
+"zz" = (
+/obj/effect/landmark/start/job/unsc_engineer,
+/obj/effect/landmark/start/latejoin_unsc,
+/obj/effect/landmark/start/latejoin_unsc,
+/obj/structure/cable,
+/turf/open/floor/freezer,
+/area/space)
+"zI" = (
+/obj/structure/girder/reinforced,
+/turf/open/space/basic,
+/area/space)
+"zM" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/mainship,
+/area/space)
+"zO" = (
+/obj/machinery/light/spot,
+/turf/open/floor/mainship/mono,
+/area/space)
+"zS" = (
+/obj/structure/cable,
+/turf/open/floor/mainship/green{
+	dir = 6
+	},
+/area/space)
+"zU" = (
+/turf/open/floor/mainship/orange{
+	dir = 9
+	},
+/area/space)
+"zX" = (
+/obj/effect/decal/warning_stripes/thick,
 /obj/effect/decal/warning_stripes/thick,
 /turf/open/floor/plating/asteroidfloor,
 /area/space)
-"Ni" = (
+"zY" = (
+/obj/machinery/computer/marine_card,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/table/mainship,
+/turf/open/floor/mainship,
+/area/space)
+"Ao" = (
+/obj/machinery/vending/cigarette,
+/turf/open/floor/mainship,
+/area/space)
+"Ap" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/turf/open/floor/mainship,
+/area/space)
+"At" = (
+/obj/machinery/cryopod/right,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/freezer,
+/area/space)
+"Av" = (
+/obj/machinery/landinglight/ds1/delaythree{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes/thin{
+	dir = 8
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"Az" = (
+/obj/machinery/marine_selector/clothes/unscMarine,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/open/floor/mainship,
+/area/space)
+"AO" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/tile/dark/green2{
+	dir = 1
+	},
+/area/space)
+"AT" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/shuttle/dropship/alamo)
+"AW" = (
+/obj/machinery/power/apc/mainship{
+	dir = 1
+	},
+/obj/structure/cable,
+/turf/open/floor/mainship/mono,
+/area/space)
+"AX" = (
+/turf/open/floor/tile/dark/green2{
+	dir = 1
+	},
+/area/space)
+"AY" = (
+/obj/structure/table/mainship,
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/o2,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/mainship/sterile/side{
+	dir = 1
+	},
+/area/space)
+"Bb" = (
+/obj/machinery/vending/MarineMed,
+/turf/open/floor/mainship/sterile/side{
+	dir = 1
+	},
+/area/space)
+"Bd" = (
+/obj/structure/rack,
+/obj/item/storage/box/flashbangs,
+/obj/item/storage/box/flashbangs,
+/obj/item/storage/box/flashbangs,
+/turf/open/floor/mainship,
+/area/space)
+"Be" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/mainship/tcomms,
+/area/space)
+"Bh" = (
+/obj/item/toy/beach_ball/basketball,
+/obj/machinery/flasher{
+	id = "Permabrig Flash";
+	name = "Permabrig Flash";
+	range = 3
+	},
+/turf/open/floor/mainship,
+/area/space)
+"Bk" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/closet/secure_closet/evidence,
+/turf/open/floor/mainship,
+/area/space)
+"Bl" = (
+/obj/effect/landmark/start/job/unsc_leader,
+/obj/effect/landmark/start/latejoin_unsc,
+/turf/open/floor/freezer,
+/area/space)
+"Bm" = (
+/obj/effect/landmark/corpsespawner/clown,
+/turf/open/floor/tile/damaged,
+/area/space)
+"Bn" = (
+/obj/structure/bed/chair/comfy{
+	dir = 1
+	},
+/turf/open/floor/tile/dark/green2{
+	dir = 1
+	},
+/area/space)
+"Bp" = (
+/obj/machinery/power/apc/mainship{
+	pixel_y = 16
+	},
+/turf/open/floor/tile/dark/green2{
+	dir = 1
+	},
+/area/space)
+"Bt" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/open/floor/mainship,
+/area/space)
+"Bu" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/tile/damaged,
+/area/space)
+"Bv" = (
+/obj/structure/cable,
+/turf/open/floor/mainship/sterile/dark,
+/area/space)
+"Bw" = (
+/turf/open/floor/tile/dark/brown2{
+	dir = 4
+	},
+/area/space)
+"BB" = (
+/obj/machinery/camera/autoname/mainship{
+	dir = 4
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"BF" = (
+/obj/machinery/vending/marineFood,
+/turf/open/floor/tile/dark/green2{
+	dir = 5
+	},
+/area/space)
+"BJ" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/closet/walllocker/medical_wall/full,
+/turf/open/floor/mainship,
+/area/space)
+"BY" = (
+/obj/machinery/camera/autoname/mainship{
+	dir = 1
+	},
+/turf/open/floor/mainship,
+/area/space)
+"BZ" = (
+/obj/machinery/light/spot,
+/turf/open/floor/mainship,
+/area/space)
+"Cc" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/tile/dark,
+/area/space)
+"Cg" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/mainship{
+	dir = 4
+	},
+/turf/open/floor/mainship/green{
+	dir = 4
+	},
+/area/space)
+"Ch" = (
+/obj/machinery/power/fusion_engine/preset,
+/obj/structure/cable,
+/turf/open/floor/mainship,
+/area/space)
+"Cr" = (
+/obj/effect/landmark/start/job/urf_engineer,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"Ct" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/mainship/tcomms,
+/area/space)
+"Cw" = (
+/obj/structure/cable,
+/turf/open/floor/mainship,
+/area/space)
+"Cy" = (
+/obj/machinery/light/spot{
+	dir = 8
+	},
+/turf/open/floor/tile/dark/green2{
+	dir = 8
+	},
+/area/space)
+"CA" = (
+/obj/machinery/landinglight/ds1{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes/thin{
+	dir = 8
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"CD" = (
+/obj/machinery/power/apc/mainship{
+	dir = 1
+	},
+/obj/structure/cable,
+/turf/open/floor/mainship/sterile/side{
+	dir = 2
+	},
+/area/space)
+"CF" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 8
+	},
+/obj/machinery/landinglight/ds1/delaytwo{
+	dir = 8
+	},
+/turf/open/floor/mainship/cargo/arrow{
+	dir = 8
+	},
+/area/space)
+"CK" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/vending/cola,
+/turf/open/floor/tile/dark/green2{
+	dir = 4
+	},
+/area/space)
+"CR" = (
+/obj/structure/cable,
+/turf/open/floor/mainship/green/corner{
+	dir = 4
+	},
+/area/space)
+"CS" = (
+/obj/structure/table/mainship,
+/turf/open/floor/tile/dark,
+/area/space)
+"CV" = (
+/obj/machinery/keycard_auth{
+	pixel_y = 25
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/table/mainship,
+/turf/open/floor/mainship,
+/area/space)
+"CX" = (
+/obj/machinery/vending/security,
+/obj/machinery/camera/autoname/mainship{
+	dir = 1
+	},
+/turf/open/floor/mainship,
+/area/space)
+"Df" = (
+/obj/structure/table/mainship,
+/obj/item/ashtray/plastic,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/freezer,
+/area/space)
+"Di" = (
+/obj/effect/decal/warning_stripes/thick{
+	dir = 8
+	},
+/turf/open/floor/tile/dark,
+/area/space)
+"Dk" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 1
+	},
+/turf/open/floor/tile/dark,
+/area/space)
+"Dp" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 9
+	},
+/turf/open/floor/tile/dark,
+/area/space)
+"DC" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/floor/mainship,
+/area/space)
+"DE" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 5
+	},
+/turf/open/floor/tile/dark,
+/area/space)
+"DF" = (
+/obj/machinery/vending/medical,
+/turf/open/floor/mainship/sterile/corner,
+/area/space)
+"DJ" = (
+/turf/open/floor/plating,
+/area/space)
+"DP" = (
+/obj/effect/decal/cleanable/molten_item,
+/obj/structure/closet/crate,
+/turf/open/floor/tile/damaged,
+/area/space)
+"DT" = (
+/turf/closed/wall/mainship/outer/reinforced,
+/area/space)
+"DU" = (
+/obj/machinery/door/window/brigdoor/mainship/cell_1,
+/turf/open/floor/mainship,
+/area/space)
+"DW" = (
+/obj/effect/landmark/start/latejoin_innie,
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"DY" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/platform{
+	dir = 8
+	},
+/obj/structure/platform_decoration{
+	dir = 5
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/beach/sand,
+/area/space)
+"Eb" = (
+/obj/structure/table/mainship,
+/obj/item/storage/belt/utility/full,
+/turf/open/floor/mainship,
+/area/space)
+"Eg" = (
+/obj/structure/flora/rock/beachrocks,
+/obj/effect/overlay/coconut,
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/effect/overlay/palmtree_l,
+/turf/open/beach/sand,
+/area/space)
+"El" = (
+/obj/effect/landmark/start/job/unsc_medic,
+/obj/effect/landmark/start/latejoin_unsc,
+/turf/open/floor/freezer,
+/area/space)
+"Es" = (
+/obj/machinery/door/airlock/mainship/security/free_access,
+/turf/open/floor/mainship,
+/area/space)
+"Et" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/turf/open/beach/sand,
+/area/space)
+"Ev" = (
+/obj/structure/flora/rock/beachrocks,
+/obj/structure/platform{
+	dir = 1
+	},
+/turf/open/beach/sand,
+/area/space)
+"EF" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 1
+	},
+/obj/machinery/landinglight/ds1/delaythree{
+	dir = 1
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"EG" = (
+/obj/structure/sink{
+	pixel_y = 32
+	},
+/turf/open/floor/mainship,
+/area/space)
+"EH" = (
+/obj/structure/table/mainship,
+/obj/machinery/door/window/eastright,
+/turf/open/floor/mainship,
+/area/space)
+"EJ" = (
+/obj/structure/table/mainship,
+/obj/machinery/recharger,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/mainship,
+/area/space)
+"ER" = (
+/obj/machinery/light/spot{
+	dir = 8
+	},
+/turf/open/floor/tile/dark,
+/area/space)
+"ES" = (
+/obj/structure/girder/displaced,
+/turf/open/space/basic,
+/area/space)
+"ET" = (
+/obj/structure/table/mainship,
+/obj/machinery/flasher_button{
+	id = "Permabrig Flash";
+	name = "Permabrig Flash"
+	},
+/turf/open/floor/mainship,
+/area/space)
+"EU" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/platform{
+	dir = 4
+	},
+/obj/structure/platform_decoration{
+	dir = 9
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/ground/desertdam/river/clean/deep_water_clean,
+/area/space)
+"Fd" = (
+/obj/structure/window/framed/mainship,
+/turf/open/floor/tile/dark,
+/area/space)
+"Ff" = (
+/obj/structure/cable,
+/turf/open/floor/mainship/sterile/side{
+	dir = 9
+	},
+/area/space)
+"Fy" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/window/brigdoor,
+/obj/machinery/door/window/brigdoor/westright,
+/turf/open/floor/mainship,
+/area/space)
+"FH" = (
+/obj/structure/table/mainship,
+/obj/item/facepaint/black{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/facepaint/black,
+/obj/item/facepaint/black{
+	pixel_x = -3;
+	pixel_y = -3
+	},
+/turf/open/floor/freezer,
+/area/space)
+"FK" = (
+/obj/machinery/door/airlock/mainship/security/glass/free_access{
+	name = "\improper Firing Range"
+	},
+/turf/open/floor/mainship,
+/area/space)
+"FO" = (
+/obj/machinery/camera/autoname/mainship,
+/turf/open/floor/mainship,
+/area/space)
+"FP" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/floor/mainship,
+/area/space)
+"FQ" = (
+/obj/structure/cable,
+/obj/structure/closet/walllocker/medical_wall/full,
+/turf/open/floor/mainship,
+/area/space)
+"FT" = (
+/obj/structure/bed/chair{
+	dir = 8;
+	name = "XOs Chair"
+	},
+/turf/open/floor/mainship/sterile/corner{
+	dir = 4
+	},
+/area/space)
+"Ge" = (
+/turf/open/floor/tile/dark/green2{
+	dir = 8
+	},
+/area/space)
+"Gf" = (
+/obj/structure/bed/chair/dropship/passenger,
+/turf/open/floor/plating,
+/area/shuttle/dropship/alamo)
+"Gi" = (
+/obj/structure/cable,
+/turf/open/floor/mainship/sterile/side{
+	dir = 1
+	},
+/area/space)
+"Gk" = (
+/obj/machinery/door/airlock/mainship/security/checkpoint,
+/obj/structure/cable,
+/turf/open/floor/mainship,
+/area/space)
+"Gl" = (
+/obj/machinery/power/apc/mainship,
+/obj/structure/cable,
+/turf/open/floor/mainship/sterile/dark,
+/area/space)
+"Gp" = (
+/obj/machinery/light/small,
+/obj/structure/table/mainship,
+/obj/item/cell/high,
+/obj/item/cell/high,
+/obj/item/cell/high,
+/turf/open/floor/mainship,
+/area/space)
+"Gu" = (
+/obj/machinery/power/apc/mainship,
+/obj/structure/cable,
+/turf/open/floor/mainship,
+/area/space)
+"Gv" = (
+/obj/structure/table/mainship,
+/obj/item/reagent_containers/food/snacks/mre_pack/meal5,
+/obj/structure/cable,
+/turf/open/floor/mainship/green/corner,
+/area/space)
+"GA" = (
+/obj/machinery/vending/coffee,
+/turf/open/floor/tile/dark/green2{
+	dir = 4
+	},
+/area/space)
+"GP" = (
+/obj/structure/table/mainship,
+/obj/item/storage/fancy/cigarettes,
+/obj/item/tool/lighter/random,
+/obj/machinery/camera/autoname/mainship,
+/turf/open/floor/freezer,
+/area/space)
+"GW" = (
+/obj/structure/hoop{
+	dir = 4;
+	id = "basketball";
+	side = "left"
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/mainship/orange{
+	dir = 8
+	},
+/area/space)
+"GY" = (
+/obj/structure/window/framed/prison/reinforced/hull,
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"GZ" = (
+/obj/machinery/flasher/cell2{
+	pixel_y = 30
+	},
+/turf/open/floor/mainship,
+/area/space)
+"He" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 1
+	},
+/obj/machinery/landinglight/ds1/delaytwo{
+	dir = 1
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"Hg" = (
+/obj/effect/decal/warning_stripes/thick{
+	dir = 4
+	},
+/turf/open/floor/tile/dark,
+/area/space)
+"Hh" = (
+/obj/structure/cable,
+/turf/open/floor/mainship/green{
+	dir = 10
+	},
+/area/space)
+"Hi" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/camera/autoname/mainship,
+/turf/open/floor/mainship,
+/area/space)
+"Hp" = (
+/obj/structure/table/mainship,
+/obj/item/facepaint/black,
+/turf/open/floor/tile/dark,
+/area/space)
+"Hq" = (
+/obj/structure/rack,
+/obj/item/weapon/gun/launcher/m81/riot,
+/obj/item/weapon/gun/launcher/m81/riot,
+/obj/item/weapon/gun/launcher/m81/riot,
+/obj/machinery/light/small,
+/turf/open/floor/mainship,
+/area/space)
+"Hs" = (
+/obj/structure/target_stake,
+/obj/item/target,
+/turf/open/floor/mainship,
+/area/space)
+"Hw" = (
+/obj/item/reagent_containers/glass/bucket/janibucket,
+/obj/structure/curtain/shower,
+/turf/open/floor/mainship,
+/area/space)
+"Hz" = (
+/obj/structure/closet/secure_closet/guncabinet/riot_control,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/mainship,
+/area/space)
+"HB" = (
+/obj/machinery/door/poddoor/shutters/mainship/brigarmory,
+/turf/open/floor/mainship,
+/area/space)
+"HC" = (
+/obj/machinery/autodoc_console,
+/turf/open/floor/mainship/sterile/dark,
+/area/space)
+"HD" = (
+/turf/open/floor/mainship/green{
+	dir = 9
+	},
+/area/space)
+"HF" = (
 /obj/effect/decal/warning_stripes/thick,
 /obj/effect/decal/warning_stripes/thick{
 	dir = 1
@@ -1089,36 +2781,445 @@
 /obj/item/storage/belt/sparepouch,
 /turf/open/floor/tile/dark,
 /area/space)
-"Nq" = (
-/obj/structure/table/reinforced/prison,
-/obj/item/reagent_containers/food/snacks/bigbiteburger,
-/turf/open/floor/prison/kitchen,
+"HH" = (
+/obj/structure/window/framed/mainship/hull,
+/turf/open/floor/mainship,
 /area/space)
-"NQ" = (
-/obj/effect/decal/warning_stripes/thick{
-	dir = 1
+"HJ" = (
+/turf/open/floor/tile/dark/brown2/corner{
+	dir = 8
 	},
+/area/space)
+"HP" = (
 /turf/open/floor/tile/dark/brown2{
 	dir = 1
 	},
 /area/space)
-"Oi" = (
-/obj/structure/closet/crate/freezer/rations,
-/turf/open/floor/freezer,
-/area/space)
-"Oq" = (
-/obj/machinery/cryopod,
-/turf/open/floor/tile/dark,
-/area/space)
-"Os" = (
-/obj/structure/table/holotable/wood,
-/obj/item/tool/lighter{
-	pixel_x = 10
+"HY" = (
+/obj/effect/overlay/coconut,
+/obj/structure/platform{
+	dir = 8
 	},
-/obj/item/storage/fancy/candle_box,
+/turf/open/beach/sand,
+/area/space)
+"HZ" = (
+/mob/living/simple_animal/crab,
+/turf/open/beach/sand,
+/area/space)
+"If" = (
+/obj/structure/shuttle/engine/propulsion/burst/right{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/shuttle/dropship/alamo)
+"Ig" = (
+/obj/machinery/door/airlock/mainship/engineering/free_access,
+/obj/structure/sign/electricshock,
+/obj/structure/cable,
+/turf/open/floor/mainship,
+/area/space)
+"Ii" = (
+/obj/structure/window/framed/mainship,
+/turf/open/floor/mainship,
+/area/space)
+"Ij" = (
+/obj/structure/bed/chair/wheelchair,
+/turf/open/floor/mainship/sterile/side{
+	dir = 2
+	},
+/area/space)
+"Il" = (
+/obj/machinery/door/airlock/multi_tile/mainship/generic{
+	dir = 2
+	},
+/obj/structure/cable,
+/obj/machinery/door/poddoor/shutters/mainship/hangar{
+	density = 0;
+	icon_state = "shutter0";
+	opacity = 0
+	},
+/turf/open/floor/mainship,
+/area/space)
+"Im" = (
+/obj/structure/table/mainship,
+/obj/machinery/door/window/eastleft,
+/turf/open/floor/mainship,
+/area/space)
+"Io" = (
+/obj/structure/closet/fireaxecabinet{
+	pixel_y = -36
+	},
+/turf/open/floor/mainship,
+/area/space)
+"Ip" = (
+/obj/structure/cable,
+/obj/machinery/camera/autoname/mainship{
+	dir = 1
+	},
+/turf/open/floor/mainship,
+/area/space)
+"Iu" = (
+/obj/machinery/door/airlock/mainship/generic/bathroom/toilet,
+/turf/open/floor/mainship,
+/area/space)
+"Iz" = (
+/obj/structure/largecrate/random/case/double,
+/turf/open/floor/mainship/mono,
+/area/space)
+"IC" = (
+/obj/structure/closet/walllocker/hydrant/full,
+/turf/open/floor/mainship,
+/area/space)
+"IE" = (
+/obj/machinery/vending/marineFood,
+/turf/open/floor/tile/dark/green2{
+	dir = 4
+	},
+/area/space)
+"IG" = (
+/obj/machinery/vending/marine/unscGuns,
 /turf/open/floor/plating/asteroidfloor,
 /area/space)
-"OU" = (
+"IH" = (
+/obj/machinery/telecomms/server/presets/unsc,
+/turf/open/floor/mainship/tcomms,
+/area/space)
+"IL" = (
+/obj/machinery/light,
+/turf/open/floor/tile/dark/brown2,
+/area/space)
+"IO" = (
+/obj/structure/flora/rock/beachrocks,
+/turf/open/beach/sand,
+/area/space)
+"IR" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/ground/desertdam/river/clean/deep_water_clean,
+/area/space)
+"IU" = (
+/mob/living/simple_animal/crab,
+/turf/open/ground/desertdam/river/clean/deep_water_clean,
+/area/space)
+"IZ" = (
+/obj/machinery/door/airlock/multi_tile/glass{
+	dir = 8;
+	name = "Cryogenics"
+	},
+/obj/structure/cable,
+/turf/open/floor/mainship/green{
+	dir = 6
+	},
+/area/space)
+"Ja" = (
+/obj/machinery/dropship_part_fabricator,
+/turf/open/floor/mainship/mono,
+/area/space)
+"Ji" = (
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/ground/desertdam/river/clean/deep_water_clean,
+/area/space)
+"Jm" = (
+/obj/machinery/sleep_console,
+/turf/open/floor/mainship/sterile/dark,
+/area/space)
+"Jo" = (
+/obj/structure/window/framed/prison/reinforced/hull,
+/turf/open/floor/tile/damaged,
+/area/space)
+"Ju" = (
+/obj/structure/ship_ammo/minirocket,
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"Jz" = (
+/obj/machinery/light/small,
+/turf/open/floor/mainship,
+/area/space)
+"JD" = (
+/obj/machinery/landinglight/ds1/delaytwo{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes/thin{
+	dir = 8
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"JP" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/table/mainship,
+/obj/machinery/door_control/mainship/medbay{
+	id = "Medbay";
+	pixel_y = 5
+	},
+/obj/machinery/door_control/mainship/hangar{
+	pixel_y = 11
+	},
+/obj/machinery/door_control/mainship/cic{
+	pixel_y = -1
+	},
+/turf/open/floor/mainship,
+/area/space)
+"JQ" = (
+/turf/open/floor/tile/dark/green2/corner,
+/area/space)
+"JZ" = (
+/obj/structure/bed/chair,
+/turf/open/floor/tile/dark/green2,
+/area/space)
+"Kh" = (
+/turf/open/floor/tile/dark/green2/corner{
+	dir = 8
+	},
+/area/space)
+"Ki" = (
+/obj/machinery/microwave,
+/obj/structure/table/mainship,
+/turf/open/floor/tile/dark/green2{
+	dir = 4
+	},
+/area/space)
+"Kj" = (
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/turf/open/floor/tile/dark/brown2{
+	dir = 5
+	},
+/area/space)
+"Ku" = (
+/obj/machinery/marine_selector/clothes/unscMarine/leader,
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/turf/open/floor/tile/dark/brown2{
+	dir = 8
+	},
+/area/space)
+"Kv" = (
+/obj/machinery/light/spot{
+	dir = 8
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"KA" = (
+/obj/structure/rack,
+/obj/item/binoculars,
+/obj/effect/decal/warning_stripes/thick{
+	dir = 8
+	},
+/turf/open/floor/tile/dark/brown2{
+	dir = 5
+	},
+/area/space)
+"KF" = (
+/obj/structure/table/mainship,
+/obj/item/storage/firstaid/fire,
+/obj/item/storage/firstaid/fire,
+/obj/item/storage/firstaid/fire,
+/obj/item/storage/firstaid/fire,
+/obj/item/storage/firstaid/fire,
+/turf/open/floor/mainship/sterile/side{
+	dir = 1
+	},
+/area/space)
+"KP" = (
+/obj/machinery/light{
+	dir = 8;
+	pixel_x = -6
+	},
+/turf/open/floor/mainship/sterile/dark,
+/area/space)
+"KQ" = (
+/obj/structure/cable,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/mainship,
+/area/space)
+"KT" = (
+/turf/open/floor/mainship/sterile/side{
+	dir = 2
+	},
+/area/space)
+"KV" = (
+/obj/machinery/door/airlock/multi_tile/command,
+/obj/machinery/door/poddoor/shutters/mainship/cic{
+	density = 0;
+	dir = 2;
+	icon_state = "shutter0";
+	id = "cic_lockdown";
+	opacity = 0
+	},
+/obj/structure/cable,
+/turf/open/floor/mainship,
+/area/space)
+"KY" = (
+/turf/open/floor/mainship/sterile/side,
+/area/space)
+"Lc" = (
+/obj/structure/rack,
+/obj/item/binoculars,
+/obj/effect/decal/warning_stripes/thick{
+	dir = 8
+	},
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"Le" = (
+/obj/machinery/door/airlock/mainship/marine{
+	name = "\improper Squadleader Preperations"
+	},
+/turf/open/floor/mainship,
+/area/space)
+"Lh" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/cable,
+/turf/open/floor/mainship,
+/area/space)
+"Lo" = (
+/obj/machinery/light,
+/obj/machinery/camera/autoname/mainship{
+	dir = 1
+	},
+/turf/open/floor/mainship/sterile/side,
+/area/space)
+"Lu" = (
+/obj/machinery/light,
+/turf/open/floor/mainship/sterile/side{
+	dir = 2
+	},
+/area/space)
+"Lv" = (
+/mob/living/simple_animal/cow,
+/turf/open/floor/tile/damaged,
+/area/space)
+"Lw" = (
+/obj/machinery/smartfridge,
+/turf/open/floor/mainship/sterile/corner{
+	dir = 8
+	},
+/area/space)
+"Lx" = (
+/obj/machinery/bioprinter,
+/turf/open/floor/mainship/sterile/dark,
+/area/space)
+"Ly" = (
+/turf/open/floor/mainship,
+/area/space)
+"LH" = (
+/turf/open/floor/mainship/tcomms,
+/area/space)
+"LJ" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes/thin{
+	dir = 4
+	},
+/obj/machinery/landinglight/ds1/delayone{
+	dir = 4
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"LK" = (
+/obj/structure/prop/mainship/mapping_computer,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/open/floor/mainship,
+/area/space)
+"LN" = (
+/obj/structure/largecrate/random/barrel/yellow,
+/turf/open/space/basic,
+/area/space)
+"LS" = (
+/obj/structure/table/mainship,
+/turf/open/floor/mainship/green{
+	dir = 9
+	},
+/area/space)
+"LU" = (
+/obj/structure/window/framed/mainship/requisitions,
+/turf/open/floor/mainship,
+/area/space)
+"LX" = (
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"LY" = (
+/obj/structure/table/mainship,
+/obj/item/detective_scanner,
+/obj/item/storage/box/evidence,
+/turf/open/floor/mainship,
+/area/space)
+"Mg" = (
+/obj/structure/ship_ammo/laser_battery,
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"Mk" = (
+/mob/living/simple_animal/cow,
+/turf/open/space/basic,
+/area/space)
+"Mp" = (
+/obj/machinery/door/airlock/mainship/generic/bathroom/toilet{
+	dir = 2;
+	name = "\improper Toilets"
+	},
+/turf/open/floor/mainship,
+/area/space)
+"MB" = (
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/beach/sand,
+/area/space)
+"MI" = (
+/turf/open/ground/desertdam/river/clean/deep_water_clean,
+/area/space)
+"MN" = (
+/obj/structure/closet/secure_closet/walllocker/medical/full,
+/turf/open/floor/mainship/sterile/corner,
+/area/space)
+"MP" = (
+/obj/machinery/light,
+/turf/open/floor/tile/dark/green2,
+/area/space)
+"Nh" = (
+/obj/effect/landmark/start/job/unsc_leader,
+/obj/effect/landmark/start/latejoin_unsc,
+/obj/structure/cable,
+/turf/open/floor/freezer,
+/area/space)
+"Ni" = (
+/obj/effect/overlay/coconut,
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/beach/sand,
+/area/space)
+"Nn" = (
+/obj/machinery/door/airlock/multi_tile/mainship/generic{
+	dir = 2
+	},
+/turf/open/floor/mainship,
+/area/space)
+"Nx" = (
+/obj/structure/closet/walllocker/emerglocker/full,
+/obj/machinery/camera/autoname/mainship{
+	dir = 4
+	},
+/turf/open/floor/mainship,
+/area/space)
+"NQ" = (
 /obj/structure/table/mainship,
 /obj/machinery/chem_dispenser/beer{
 	dir = 4
@@ -1127,150 +3228,457 @@
 	dir = 8
 	},
 /area/space)
+"NR" = (
+/obj/effect/attach_point/weapon/dropship1{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/space)
+"NT" = (
+/obj/machinery/cryopod,
+/turf/open/floor/mainship/green{
+	dir = 10
+	},
+/area/space)
+"NV" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/closet/walllocker/hydrant/full,
+/turf/open/floor/mainship/sterile/side{
+	dir = 1
+	},
+/area/space)
+"Od" = (
+/obj/machinery/computer/security/telescreen/entertainment,
+/obj/structure/bed/chair/office/dark{
+	dir = 8
+	},
+/turf/open/floor/mainship,
+/area/space)
+"Of" = (
+/obj/structure/closet/walllocker/emerglocker/full,
+/turf/open/floor/mainship,
+/area/space)
+"Ok" = (
+/obj/machinery/vending/MarineMed,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/mainship/sterile/side{
+	dir = 1
+	},
+/area/space)
+"Oq" = (
+/turf/open/floor/tile/dark/green2{
+	dir = 4
+	},
+/area/space)
+"Os" = (
+/turf/open/floor/mainship/mono,
+/area/space)
+"Ou" = (
+/obj/structure/reagent_dispensers/water_cooler,
+/turf/open/floor/mainship,
+/area/space)
+"Ow" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/structure/cable,
+/turf/open/floor/mainship,
+/area/space)
 "OX" = (
+/obj/structure/table/mainship,
+/obj/item/facepaint/green,
+/turf/open/floor/tile/dark,
+/area/space)
+"OY" = (
 /obj/structure/inflatable/popped,
 /turf/open/floor/tile/damaged,
 /area/space)
+"Pe" = (
+/obj/effect/decal/warning_stripes/thick,
+/obj/effect/decal/warning_stripes/thick,
+/turf/open/floor/tile/dark,
+/area/space)
 "Pk" = (
-/obj/effect/decal/warning_stripes/thick{
-	dir = 1
-	},
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"Pn" = (
-/obj/structure/largecrate/random/barrel/yellow,
-/turf/open/space/basic,
-/area/space)
-"Pq" = (
-/obj/item/tool/crowbar,
-/turf/open/space/basic,
-/area/space)
-"Pv" = (
-/obj/effect/decal/warning_stripes/thick{
+/obj/structure/table/mainship,
+/obj/item/storage/box/donkpockets,
+/turf/open/floor/tile/dark/green2{
 	dir = 4
 	},
-/turf/open/floor/tile/dark,
 /area/space)
-"PH" = (
-/obj/effect/decal/cleanable/molten_item,
-/obj/structure/closet/crate,
-/turf/open/floor/tile/damaged,
-/area/space)
-"PZ" = (
-/obj/structure/largecrate/random/barrel/red,
-/turf/open/space/basic,
-/area/space)
-"Qj" = (
-/obj/structure/window/framed/prison/reinforced/hull,
-/turf/open/floor/plating,
-/area/shuttle/dropship/alamo)
-"Qy" = (
-/obj/effect/decal/warning_stripes/thick,
-/obj/effect/decal/warning_stripes/thick{
-	dir = 1
-	},
-/obj/structure/table/mainship,
-/turf/open/floor/tile/dark,
-/area/space)
-"QB" = (
-/turf/open/floor/tile/dark/brown2{
-	dir = 1
-	},
-/area/space)
-"QD" = (
-/obj/structure/table/mainship,
-/obj/item/facepaint/black,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"QK" = (
-/obj/structure/platform{
-	dir = 8
-	},
-/turf/open/beach/sand,
-/area/space)
-"Rb" = (
-/obj/structure/table/mainship,
-/turf/open/floor/tile/dark,
-/area/space)
-"Rj" = (
-/obj/structure/largecrate/random/barrel/green,
-/turf/open/space/basic,
-/area/space)
-"Rp" = (
-/obj/structure/ship_ammo/laser_battery,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"Rv" = (
-/obj/effect/decal/warning_stripes/thin{
-	dir = 8
-	},
-/obj/effect/landmark/start/job/unsc_medic,
-/turf/open/floor/tile/dark/blue2{
-	dir = 8
-	},
-/area/space)
-"RH" = (
-/obj/effect/landmark/start/job/urf_insurrectionist,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"Sm" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/tile/dark,
-/area/space)
-"SF" = (
-/obj/machinery/marine_selector/clothes/unscMarine/engineer,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"SU" = (
+"Pm" = (
 /obj/effect/overlay/palmtree_r,
 /turf/open/beach/sand,
 /area/space)
-"Ta" = (
+"Pn" = (
+/obj/effect/decal/warning_stripes/thick{
+	dir = 1
+	},
 /turf/open/floor/tile/dark/brown2{
-	dir = 4
+	dir = 8
 	},
 /area/space)
-"Td" = (
-/obj/effect/landmark/start/job/urf_leader,
+"Pq" = (
+/obj/effect/decal/warning_stripes/thick{
+	dir = 1
+	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/asteroidfloor,
+/turf/open/floor/tile/dark,
 /area/space)
-"Tl" = (
-/turf/open/floor/tile/dark/green2/corner,
+"Pr" = (
+/turf/open/floor/mainship/green{
+	dir = 6
+	},
 /area/space)
-"Tp" = (
+"Ps" = (
+/obj/machinery/light/spot{
+	dir = 4
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"Pv" = (
 /obj/machinery/light/spot{
 	dir = 8
 	},
+/turf/open/floor/mainship,
+/area/space)
+"PG" = (
+/obj/machinery/marine_selector/gear/unscEquipment,
+/turf/open/floor/mainship,
+/area/space)
+"PH" = (
+/obj/structure/platform_decoration,
+/turf/open/floor/mainship,
+/area/space)
+"PK" = (
+/obj/machinery/light,
+/obj/machinery/camera/autoname/mainship{
+	dir = 1
+	},
+/turf/open/floor/mainship,
+/area/space)
+"PL" = (
+/obj/structure/table/mainship,
+/obj/item/trash/mre,
+/turf/open/floor/mainship/green{
+	dir = 9
+	},
+/area/space)
+"PN" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 8
+	},
+/turf/open/floor/mainship,
+/area/space)
+"PO" = (
+/obj/item/storage/belt/utility/full,
+/obj/structure/table/mainship,
+/turf/open/floor/mainship/sterile/side{
+	dir = 1
+	},
+/area/space)
+"PW" = (
+/obj/machinery/camera/autoname/mainship{
+	dir = 8
+	},
+/turf/open/floor/mainship,
+/area/space)
+"PZ" = (
+/obj/structure/platform,
+/turf/open/floor/mainship,
+/area/space)
+"Qg" = (
+/obj/machinery/autodoc,
+/turf/open/floor/mainship/sterile/dark,
+/area/space)
+"Qi" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/camera/autoname/mainship{
+	dir = 4
+	},
+/turf/open/floor/mainship,
+/area/space)
+"Qj" = (
+/obj/structure/platform_decoration{
+	dir = 1
+	},
+/turf/open/floor/mainship,
+/area/space)
+"Qy" = (
+/obj/machinery/light/spot{
+	dir = 4
+	},
+/turf/open/floor/mainship,
+/area/space)
+"QD" = (
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/ground/desertdam/river/clean/deep_water_clean,
+/area/space)
+"QK" = (
 /turf/open/floor/tile/dark/brown2{
 	dir = 8
 	},
 /area/space)
-"TA" = (
+"QQ" = (
+/obj/structure/table/mainship,
+/obj/machinery/door_control/mainship/hangar,
+/turf/open/floor/mainship,
+/area/space)
+"QW" = (
+/turf/open/floor/mainship/orange{
+	dir = 5
+	},
+/area/space)
+"QY" = (
+/obj/structure/bed/chair/office/light,
+/turf/open/floor/mainship/sterile/side{
+	dir = 2
+	},
+/area/space)
+"QZ" = (
+/obj/machinery/vending/marine/unscGuns,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/open/floor/mainship,
+/area/space)
+"Rd" = (
+/obj/structure/closet/crate/ammo,
+/turf/open/floor/tile/damaged,
+/area/space)
+"Ri" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/open/floor/mainship,
+/area/space)
+"Rj" = (
+/mob/living/simple_animal/crab/kreb,
+/turf/open/ground/desertdam/river/clean/deep_water_clean,
+/area/space)
+"Rp" = (
+/turf/open/beach/sand,
+/area/space)
+"Rv" = (
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/beach/sand,
+/area/space)
+"Rx" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/floor/mainship/green{
+	dir = 1
+	},
+/area/space)
+"RD" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/mainship,
+/area/space)
+"RE" = (
+/obj/structure/table/mainship,
+/obj/structure/cable,
+/turf/open/floor/mainship/green{
+	dir = 5
+	},
+/area/space)
+"RF" = (
+/obj/machinery/computer/telecomms/server,
+/turf/open/floor/mainship,
+/area/space)
+"RH" = (
+/obj/structure/table/mainship,
+/obj/item/storage/box/drinkingglasses,
 /turf/open/floor/tile/dark/green2{
 	dir = 8
 	},
 /area/space)
-"TH" = (
-/obj/machinery/door/window/southright,
-/turf/open/floor/prison/kitchen,
+"RN" = (
+/obj/structure/table/mainship,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/turf/open/floor/mainship/sterile/side{
+	dir = 1
+	},
 /area/space)
-"TM" = (
+"RY" = (
+/obj/item/bedsheet/hop,
+/obj/structure/bed/fancy,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/mainship,
+/area/space)
+"Sb" = (
+/obj/machinery/body_scanconsole,
+/turf/open/floor/mainship/sterile/dark,
+/area/space)
+"Sg" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/turf/open/floor/mainship,
+/area/space)
+"Sk" = (
+/obj/machinery/vending/marineFood,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/mainship,
+/area/space)
+"Sm" = (
+/obj/structure/table/mainship,
+/obj/item/facepaint/brown,
+/turf/open/floor/tile/dark,
+/area/space)
+"So" = (
+/turf/closed/wall/mainship/white,
+/area/space)
+"Sq" = (
+/obj/machinery/flasher_button{
+	id = "Permabrig Flash";
+	name = "Permabrig Flash";
+	pixel_x = 32
+	},
+/turf/open/floor/mainship,
+/area/space)
+"Su" = (
 /obj/effect/decal/warning_stripes/thin{
-	dir = 8
+	dir = 1
 	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/start/job/unsc_marine,
-/turf/open/floor/tile/dark/blue2{
+/obj/machinery/landinglight/ds1{
+	dir = 1
+	},
+/turf/open/floor/mainship/cargo/arrow{
+	dir = 1
+	},
+/area/space)
+"Sw" = (
+/obj/structure/table/mainship,
+/obj/item/tool/taperoll/police,
+/turf/open/floor/mainship,
+/area/space)
+"SB" = (
+/obj/structure/cable,
+/turf/open/floor/mainship/green/corner{
 	dir = 8
 	},
 /area/space)
-"TN" = (
+"SD" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/floor/tile/dark/green2{
+	dir = 1
+	},
+/area/space)
+"SF" = (
+/obj/structure/table/mainship,
+/obj/item/storage/box/MRE,
+/turf/open/floor/tile/dark,
+/area/space)
+"ST" = (
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/turf/open/floor/tile/dark/brown2{
+	dir = 9
+	},
+/area/space)
+"SU" = (
+/obj/machinery/vending/marine/unscGuns,
+/turf/open/floor/tile/dark/brown2{
+	dir = 4
+	},
+/area/space)
+"Ta" = (
+/obj/structure/table/mainship,
+/obj/item/reagent_containers/food/snacks/human/burger,
+/turf/open/floor/tile/dark,
+/area/space)
+"Td" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/vending/marineFood,
+/turf/open/floor/tile/dark/green2{
+	dir = 4
+	},
+/area/space)
+"Ti" = (
+/obj/structure/cable,
+/turf/open/floor/mainship/cargo/arrow{
+	dir = 4
+	},
+/area/space)
+"Tl" = (
 /obj/structure/ship_ammo/heavygun{
 	name = "ammo pile"
 	},
 /turf/open/floor/plating/asteroidfloor,
+/area/space)
+"Tp" = (
+/obj/structure/table/mainship,
+/obj/item/tool/lighter/zippo,
+/obj/item/clothing/mask/cigarette/cigar{
+	pixel_y = -1
+	},
+/turf/open/floor/tile/dark/brown2{
+	dir = 10
+	},
+/area/space)
+"Tt" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/open/floor/mainship,
+/area/space)
+"TG" = (
+/obj/structure/closet/secure_closet/security,
+/obj/machinery/light/small,
+/turf/open/floor/mainship,
+/area/space)
+"TL" = (
+/obj/machinery/keycard_auth{
+	pixel_y = 25
+	},
+/turf/open/floor/mainship,
+/area/space)
+"TM" = (
+/turf/open/floor/tile/dark/brown2,
+/area/space)
+"TN" = (
+/turf/open/floor/tile/dark/brown2{
+	dir = 6
+	},
+/area/space)
+"TR" = (
+/obj/structure/closet/secure_closet/brig{
+	id = "Cell 1";
+	name = "Cell 1"
+	},
+/turf/open/floor/mainship,
+/area/space)
+"TW" = (
+/obj/machinery/door/airlock/mainship/marine{
+	name = "\improper Engineer Preperations"
+	},
+/turf/open/floor/mainship,
 /area/space)
 "TZ" = (
 /obj/machinery/marine_selector/gear/unscEquipment,
@@ -1278,122 +3686,461 @@
 	dir = 4
 	},
 /area/space)
-"Uq" = (
-/obj/machinery/light/spot{
+"Uh" = (
+/obj/structure/cable,
+/obj/machinery/door_control/mainship/medbay{
+	id = "Medbay";
+	pixel_x = -31
+	},
+/turf/open/floor/mainship/sterile/side{
 	dir = 8
 	},
-/turf/open/floor/tile/dark/green2{
-	dir = 8
-	},
+/area/space)
+"Uk" = (
+/obj/machinery/computer3/server,
+/turf/open/floor/mainship,
 /area/space)
 "Uv" = (
-/turf/closed/wall/r_wall/prison,
+/turf/closed/wall/mainship/outer,
+/area/space)
+"UN" = (
+/obj/vehicle/powerloader,
+/turf/open/floor/mainship/mono,
+/area/space)
+"UO" = (
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/turf/open/floor/mainship,
+/area/space)
+"UQ" = (
+/obj/structure/cable,
+/turf/open/floor/mainship/green{
+	dir = 4
+	},
+/area/space)
+"UU" = (
+/obj/structure/largecrate/random/barrel/blue,
+/turf/open/floor/tile/damaged,
+/area/space)
+"Vg" = (
+/obj/machinery/vending/engivend,
+/turf/open/floor/mainship,
+/area/space)
+"Vk" = (
+/obj/structure/window/framed/mainship/hull/canterbury,
+/turf/open/floor/mainship,
+/area/space)
+"Vm" = (
+/turf/open/floor/mainship/sterile/corner{
+	dir = 4
+	},
+/area/space)
+"Vo" = (
+/obj/machinery/vending/marineFood,
+/turf/open/floor/mainship,
 /area/space)
 "Vp" = (
-/obj/effect/decal/cleanable/molten_item,
-/turf/open/space/basic,
-/area/space)
-"Wi" = (
-/obj/machinery/cryopod/right,
-/obj/machinery/light{
-	dir = 8
+/obj/structure/platform{
+	dir = 4
 	},
-/turf/open/floor/tile/dark,
+/turf/open/floor/mainship,
 /area/space)
-"Wj" = (
-/obj/structure/largecrate/cow,
-/turf/open/floor/tile/damaged,
+"Vr" = (
+/obj/effect/decal/warning_stripes/thin,
+/obj/machinery/landinglight/ds1/delaythree,
+/turf/open/floor/mainship/mono,
 /area/space)
-"Wm" = (
-/obj/structure/table/mainship,
-/obj/item/storage/box/drinkingglasses,
-/turf/open/floor/tile/dark/green2{
-	dir = 8
+"Vy" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/floor/mainship,
+/area/space)
+"Vz" = (
+/obj/effect/decal/warning_stripes/thick{
+	dir = 1
+	},
+/turf/open/floor/tile/dark/brown2{
+	dir = 1
 	},
 /area/space)
-"Ws" = (
-/obj/structure/sink{
-	dir = 8;
-	pixel_x = -12
-	},
-/turf/open/floor/freezer,
-/area/space)
-"WD" = (
-/obj/structure/table/mainship,
-/obj/item/facepaint/green,
-/turf/open/floor/tile/dark,
-/area/space)
-"WL" = (
-/obj/structure/table/mainship,
-/obj/item/facepaint/black,
-/turf/open/floor/tile/dark,
-/area/space)
-"WS" = (
-/obj/effect/landmark/start/latejoin_innie,
-/turf/open/floor/plating/asteroidfloor,
-/area/space)
-"WT" = (
-/mob/living/simple_animal/lizard,
-/turf/open/floor/tile/damaged,
-/area/space)
-"Xm" = (
-/obj/machinery/marine_selector/clothes/unscMarine/medic,
-/turf/open/floor/tile/dark,
-/area/space)
-"Xn" = (
+"VC" = (
 /obj/machinery/light,
-/turf/open/floor/tile/dark/brown2,
+/obj/structure/cable,
+/turf/open/floor/mainship,
 /area/space)
-"Xu" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
-	dir = 8
+"VD" = (
+/obj/structure/rack,
+/obj/item/ammo_magazine/shotgun/beanbag,
+/obj/item/ammo_magazine/shotgun/beanbag,
+/obj/item/ammo_magazine/shotgun/beanbag,
+/turf/open/floor/mainship,
+/area/space)
+"VK" = (
+/obj/machinery/door/airlock/mainship/research/glass/free_access{
+	name = "Operating Room"
+	},
+/turf/open/floor/mainship/sterile/dark,
+/area/space)
+"VR" = (
+/obj/structure/table/mainship,
+/obj/item/facepaint/brown{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/facepaint/brown,
+/obj/item/facepaint/brown{
+	pixel_x = -3;
+	pixel_y = -3
 	},
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/open/floor/freezer,
 /area/space)
-"Yo" = (
-/obj/machinery/light/spot,
-/turf/open/floor/plating/asteroidfloor,
+"VV" = (
+/obj/machinery/door/airlock/mainship/marine/general{
+	dir = 1
+	},
+/turf/open/floor/tile/dark,
 /area/space)
-"ZF" = (
-/obj/machinery/atmospherics/components/unary/thermomachine/freezer/on{
+"VX" = (
+/obj/machinery/computer/security/nuclear,
+/turf/open/floor/mainship,
+/area/space)
+"We" = (
+/obj/machinery/cryopod,
+/turf/open/floor/mainship,
+/area/space)
+"Wg" = (
+/obj/structure/table/mainship,
+/obj/machinery/recharger,
+/turf/open/floor/mainship,
+/area/space)
+"Wi" = (
+/obj/machinery/prop/mainship/CICmap,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/open/floor/mainship,
+/area/space)
+"Wk" = (
+/turf/open/floor/plating,
+/area/shuttle/dropship/alamo)
+"Wn" = (
+/obj/machinery/atmospherics/components/unary/cryo_cell,
+/turf/open/floor/mainship/sterile/side{
+	dir = 1
+	},
+/area/space)
+"Wp" = (
+/obj/structure/closet/secure_closet/guncabinet/mp_armory,
+/turf/open/floor/mainship,
+/area/space)
+"Ws" = (
+/obj/machinery/marine_selector/clothes/unscMarine,
+/turf/open/floor/tile/dark/brown2{
+	dir = 8
+	},
+/area/space)
+"Wu" = (
+/obj/machinery/door/airlock/mainship/security/glass/free_access{
+	name = "\improper Firing Range"
+	},
+/obj/structure/cable,
+/obj/structure/sign/securearea/firingrange,
+/turf/open/floor/mainship,
+/area/space)
+"Wy" = (
+/obj/item/stack/sheet/wood,
+/turf/open/space/basic,
+/area/space)
+"WN" = (
+/obj/machinery/marine_selector/clothes/unscMarine,
+/obj/structure/window/reinforced{
 	dir = 4
 	},
+/turf/open/floor/mainship,
+/area/space)
+"WS" = (
+/obj/machinery/computer/camera_advanced/overwatch/main,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/open/floor/mainship,
+/area/space)
+"Xa" = (
+/obj/machinery/cryopod,
+/obj/machinery/cryopod,
 /turf/open/floor/freezer,
 /area/space)
-"ZH" = (
-/obj/structure/flora/rock/beachrocks,
-/obj/structure/platform{
+"Xb" = (
+/obj/machinery/light{
 	dir = 4
 	},
-/turf/open/beach/sand,
+/turf/open/floor/mainship/sterile/side{
+	dir = 4
+	},
+/area/space)
+"Xh" = (
+/obj/effect/attach_point/electronics/dropship1{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/space)
+"Xm" = (
+/obj/effect/decal/warning_stripes/thick,
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"Xn" = (
+/turf/closed/wall/r_wall/prison,
+/area/space)
+"Xo" = (
+/obj/structure/platform,
+/turf/open/ground/desertdam/river/clean/deep_water_clean,
+/area/space)
+"Xs" = (
+/turf/open/floor/mainship/green{
+	dir = 2
+	},
+/area/space)
+"Xu" = (
+/turf/open/floor/tile/dark,
+/area/space)
+"Xz" = (
+/obj/machinery/holosign_switch{
+	id = "surgery1";
+	pixel_x = 21;
+	pixel_y = 5
+	},
+/turf/open/floor/mainship/sterile/dark,
+/area/space)
+"XD" = (
+/obj/structure/cable,
+/obj/structure/closet/walllocker/hydrant/full,
+/turf/open/floor/mainship,
+/area/space)
+"XG" = (
+/obj/machinery/marine_selector/clothes/unscMarine/engineer,
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"XI" = (
+/obj/machinery/vending/cigarette,
+/turf/open/floor/freezer,
+/area/space)
+"XL" = (
+/obj/structure/table/mainship,
+/obj/item/folder/red,
+/turf/open/floor/mainship,
+/area/space)
+"XY" = (
+/obj/effect/decal/warning_stripes/thick,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"Yb" = (
+/obj/machinery/fuelcell_recycler,
+/turf/open/floor/mainship,
+/area/space)
+"Yc" = (
+/obj/machinery/chem_master,
+/turf/open/floor/mainship/sterile/corner{
+	dir = 8
+	},
+/area/space)
+"Yg" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 1
+	},
+/obj/machinery/landinglight/ds1{
+	dir = 1
+	},
+/turf/open/floor/mainship/mono,
+/area/space)
+"Yi" = (
+/obj/machinery/door/airlock/mainship/security/glass/free_access,
+/obj/structure/cable,
+/turf/open/floor/mainship,
+/area/space)
+"Yn" = (
+/obj/machinery/vending/marine/unscGuns,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/mainship,
+/area/space)
+"Yo" = (
+/obj/machinery/computer/communications,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/table/mainship,
+/turf/open/floor/mainship,
+/area/space)
+"Yp" = (
+/obj/machinery/door/airlock/multi_tile/glass{
+	name = "Cafeteria"
+	},
+/turf/open/floor/tile/dark/green2{
+	dir = 8
+	},
+/area/space)
+"Yr" = (
+/obj/structure/table/mainship,
+/obj/item/storage/box/cups,
+/turf/open/floor/mainship/green{
+	dir = 6
+	},
+/area/space)
+"Yv" = (
+/obj/machinery/door/airlock/mainship/security/checkpoint,
+/turf/open/floor/mainship,
+/area/space)
+"Yy" = (
+/obj/structure/window/framed/mainship/requisitions,
+/obj/machinery/door/poddoor/shutters/mainship/corporate{
+	density = 0;
+	icon_state = "shutter0";
+	opacity = 0
+	},
+/turf/open/floor/mainship,
+/area/space)
+"Yz" = (
+/obj/machinery/computer/crew,
+/turf/open/floor/mainship/sterile/side{
+	dir = 1
+	},
+/area/space)
+"YB" = (
+/obj/machinery/marine_selector/clothes/unscMarine/engineer,
+/turf/open/floor/tile/dark,
+/area/space)
+"YI" = (
+/obj/structure/closet/secure_closet/personal/cabinet,
+/turf/open/floor/mainship,
+/area/space)
+"YN" = (
+/obj/structure/table/mainship,
+/obj/item/ammo_magazine/rifle/ma37,
+/obj/item/ammo_magazine/rifle/ma37,
+/obj/item/ammo_magazine/rifle/ma37,
+/obj/item/ammo_magazine/rifle/ma37,
+/obj/item/ammo_magazine/rifle/ma37,
+/obj/item/weapon/gun/rifle/ma37,
+/turf/open/floor/mainship,
+/area/space)
+"YO" = (
+/obj/structure/bed/chair{
+	dir = 8;
+	name = "XOs Chair"
+	},
+/turf/open/floor/mainship/sterile/side{
+	dir = 4
+	},
+/area/space)
+"YV" = (
+/obj/structure/table/mainship,
+/obj/item/storage/donut_box,
+/turf/open/floor/mainship,
+/area/space)
+"Zc" = (
+/obj/structure/hoop{
+	dir = 8;
+	id = "basketball";
+	side = "right"
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/mainship/orange{
+	dir = 4
+	},
+/area/space)
+"Zd" = (
+/obj/machinery/vending/medical,
+/turf/open/floor/mainship/sterile/side{
+	dir = 1
+	},
+/area/space)
+"Zi" = (
+/obj/structure/sign/directions/engineering{
+	dir = 8
+	},
+/turf/open/floor/mainship,
+/area/space)
+"Zk" = (
+/obj/machinery/iv_drip,
+/obj/machinery/light,
+/obj/machinery/camera/autoname/mainship{
+	dir = 1
+	},
+/turf/open/floor/mainship/sterile/side{
+	dir = 2
+	},
+/area/space)
+"Zn" = (
+/obj/machinery/power/apc/mainship{
+	dir = 8
+	},
+/obj/structure/cable,
+/turf/open/floor/mainship/tcomms,
+/area/space)
+"ZF" = (
+/obj/effect/decal/warning_stripes/thick,
+/turf/open/floor/tile/dark,
+/area/space)
+"ZH" = (
+/obj/effect/decal/warning_stripes/thick{
+	dir = 8
+	},
+/obj/machinery/light/spot,
+/turf/open/floor/tile/dark/brown2,
+/area/space)
+"ZI" = (
+/turf/open/floor/prison/rampbottom,
 /area/space)
 "ZN" = (
-/obj/machinery/vending/cigarette/colony,
+/obj/structure/largecrate/random/barrel/red,
+/turf/open/space/basic,
+/area/space)
+"ZP" = (
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"ZR" = (
+/obj/effect/decal/warning_stripes/thick{
+	dir = 1
+	},
 /obj/machinery/light/spot{
 	dir = 8
 	},
-/turf/open/floor/tile/dark/green2{
-	dir = 10
-	},
+/turf/open/floor/tile/dark,
 /area/space)
-"ZP" = (
-/obj/structure/sink{
-	dir = 8;
-	pixel_x = -12;
-	pixel_y = 2
-	},
-/turf/open/floor/tile/damaged,
-/area/space)
+"ZT" = (
+/turf/closed/wall/r_wall/prison,
+/area/shuttle/dropship/alamo)
 "ZU" = (
-/obj/structure/table/mainship,
-/obj/machinery/chem_dispenser/soda{
-	dir = 4
-	},
-/turf/open/floor/tile/dark/green2{
-	dir = 8
+/obj/structure/window/framed/mainship/hull/canterbury,
+/turf/open/floor/tile/dark,
+/area/space)
+"ZV" = (
+/obj/machinery/marine_selector/clothes/unscMarine/medic,
+/turf/open/floor/tile/dark,
+/area/space)
+"ZX" = (
+/obj/structure/dropship_equipment/electronics/spotlights,
+/turf/open/floor/mainship/mono,
+/area/space)
+"ZY" = (
+/obj/machinery/camera/autoname/mainship,
+/turf/open/floor/mainship/mono,
+/area/space)
+"ZZ" = (
+/turf/open/floor/tile/dark/green2/corner{
+	dir = 1
 	},
 /area/space)
 
@@ -1405,14 +4152,14 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+DT
+DT
+DT
+DT
+DT
+DT
+DT
+DT
 ft
 ft
 ft
@@ -1519,14 +4266,14 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+DT
+DY
+HY
+MB
+QD
+QD
+jy
+DT
 ft
 ft
 ft
@@ -1633,30 +4380,30 @@ ft
 ft
 ft
 ft
+DT
+Eg
+HZ
+MI
+MI
+IU
+Xo
+DT
 ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+DT
+DT
+DT
+DT
+DT
+DT
+DT
+DT
+DT
+DT
+DT
+DT
 ft
 ft
 ft
@@ -1747,30 +4494,30 @@ ft
 ft
 ft
 ft
+DT
+Et
+IO
+MI
+Rj
+IO
+Xo
+DT
 ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+DT
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+DT
 ft
 ft
 ft
@@ -1854,37 +4601,37 @@ ft
 ft
 "}
 (5,1,1) = {"
+DT
+DT
+DT
+DT
+DT
+DT
+ft
+DT
+Et
+IR
+MI
+MI
+HZ
+gQ
+DT
 ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+DT
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+DT
 ft
 ft
 ft
@@ -1968,37 +4715,37 @@ ft
 ft
 "}
 (6,1,1) = {"
+DT
+aI
+jV
+om
+qX
+DT
+ft
+DT
+Ev
+IU
+MI
+Rp
+Pm
+Xo
+DT
 ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+DT
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+DT
 ft
 ft
 ft
@@ -2082,37 +4829,37 @@ ft
 ft
 "}
 (7,1,1) = {"
+DT
+bb
+jW
+cF
+cF
+DT
+ft
+DT
+EU
+Ji
+Ni
+Rv
+tw
+vB
+DT
 ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+DT
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+DT
 ft
 ft
 ft
@@ -2196,41 +4943,41 @@ ft
 ft
 "}
 (8,1,1) = {"
+DT
+bG
+cF
+cF
+qY
+DT
+DT
+DT
+Fd
+Fd
+Fd
+Fd
+Fd
+Fd
+DT
+DT
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+DT
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+DT
+DT
+DT
+DT
+DT
 ft
 ft
 ft
@@ -2310,41 +5057,41 @@ ft
 ft
 "}
 (9,1,1) = {"
+DT
+cF
+kw
+or
+sw
+DT
+yT
+Cy
+Ge
+Ge
+NQ
+RH
+sr
+Ge
+kK
+DT
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+DT
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+DT
 ft
 ft
 ft
@@ -2424,41 +5171,41 @@ ft
 ft
 "}
 (10,1,1) = {"
+DT
+fa
+DT
+DT
+DT
+DT
+AO
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+pQ
+DT
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+DT
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+DT
 ft
 ft
 ft
@@ -2538,41 +5285,41 @@ ft
 ft
 "}
 (11,1,1) = {"
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+DT
+ff
+kB
+ox
+ff
+vE
+AX
+Xu
+Xu
+JQ
+Oq
+Oq
+mU
+Xu
+MP
+DT
+DT
+DT
+DT
+DT
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+DT
 ft
 ft
 ft
@@ -2652,41 +5399,41 @@ ft
 ft
 "}
 (12,1,1) = {"
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+DT
+ff
+ff
+oB
+ff
+vH
+Bn
+Xu
+Xu
+JZ
+CS
+Sm
+SD
+Xu
+Kh
+Yp
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+ah
+Xu
+Xu
+Xu
+Xu
+Xu
+DT
 ft
 ft
 ft
@@ -2766,41 +5513,41 @@ ft
 ft
 "}
 (13,1,1) = {"
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+DT
+fn
+ff
+ff
+ff
+vQ
+Bn
+Xu
+Xu
+JZ
+Hp
+CS
+SD
+Xu
+JQ
+Oq
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+DT
 ft
 ft
 ft
@@ -2880,41 +5627,41 @@ ft
 ft
 "}
 (14,1,1) = {"
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+DT
+gk
+ff
+oE
+ff
+vX
+Bn
+Xu
+Xu
+JZ
+CS
+CS
+SD
+Xu
+pQ
+DT
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+DT
 ft
 ft
 ft
@@ -2994,41 +5741,41 @@ ft
 ft
 "}
 (15,1,1) = {"
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+DT
+hk
+kV
+ff
+sQ
+wy
+Bn
+Xu
+Xu
+JZ
+CS
+SF
+SD
+Xu
+Kh
+Yp
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+DT
+DT
+DT
+DT
+DT
 ft
 ft
 ft
@@ -3108,57 +5855,57 @@ ft
 ft
 "}
 (16,1,1) = {"
+DT
+DT
+DT
+DT
+DT
+DT
+AO
+Xu
+Xu
+JZ
+OX
+Ta
+SD
+Xu
+JQ
+Oq
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+DT
 ft
 ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
 ft
 ft
 ft
@@ -3222,57 +5969,57 @@ ft
 ft
 "}
 (17,1,1) = {"
+DT
+hn
+lb
+oV
+uq
+DT
+Bp
+Xu
+Xu
+Kh
+Ge
+Ge
+ZZ
+Xu
+MP
+DT
+DT
+DT
+DT
+DT
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+DT
+yK
+rU
+er
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Xn
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+Xn
 ft
 ft
 ft
@@ -3336,57 +6083,57 @@ ft
 ft
 "}
 (18,1,1) = {"
+DT
+hK
+hK
+oY
+hK
+xT
+AX
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+pQ
+DT
 ft
 ft
 ft
+DT
+Xu
+Xu
+Xu
+Xu
+Xu
+DT
+ZU
+ZU
+ZU
+ZU
+DT
+tX
+wo
+Rd
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Xn
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+Xn
 ft
 ft
 ft
@@ -3450,57 +6197,57 @@ ft
 ft
 "}
 (19,1,1) = {"
+DT
+hR
+lL
+pt
+uJ
+DT
+BF
+CK
+GA
+Ki
+Pk
+Td
+IE
+mU
+pQ
+DT
+ft
+ft
+ft
+DT
+Xu
+Xu
+Xu
+Xu
+Xu
+DT
+ft
+lw
 ft
 ft
 ft
 ft
 ft
+yG
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+lw
+Xn
+ZP
+ZP
+ZP
+ZP
+aW
+aW
+rc
+aW
+aW
+ZP
+ZP
+ZP
+ZP
+Xn
 ft
 ft
 ft
@@ -3564,57 +6311,57 @@ ft
 ft
 "}
 (20,1,1) = {"
+DT
+DT
+DT
+DT
+DT
+DT
+DT
+DT
+DT
+DT
+DT
+DT
+DT
+HP
+TM
+DT
+DT
+DT
+DT
+DT
+DT
+DT
+DT
+DT
+DT
+DT
+ft
+ft
+ft
+ft
+lw
 ft
 ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+GY
+ZP
+ZP
+ZP
+ZT
+aW
+oT
+Wk
+oT
+aW
+ZT
+ZP
+ZP
+ZP
+Xn
 ft
 ft
 ft
@@ -3686,49 +6433,49 @@ ft
 ft
 ft
 ft
+DT
+SU
+Pn
+Tp
+Fd
+HP
+TM
+DT
+ZV
+ZR
+xe
+ZV
+DT
+YB
+ZR
+Pe
+YB
+DT
+lw
+LN
+ES
 ft
 ft
+hK
+wC
 ft
+lw
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+GY
+ZP
+ZP
+ZP
+ZT
+Wk
+AT
+Wk
+AT
+Wk
+ZT
+ZP
+ZP
+ZP
+Xn
 ft
 ft
 ft
@@ -3800,49 +6547,49 @@ ft
 ft
 ft
 ft
+DT
+Ku
+Pq
+TM
+VV
+HP
+IL
+DT
+SU
+vj
+ZF
+SU
+DT
+SU
+vj
+ZF
+SU
+DT
+ft
+hK
+hK
 ft
 ft
 ft
+rU
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+GY
+ZP
+ZP
+ZP
+ZT
+ZT
+Wk
+Wk
+Wk
+ZT
+ZT
+ZP
+ZP
+ZP
+Xn
 ft
 ft
 ft
@@ -3914,49 +6661,49 @@ ft
 ft
 ft
 ft
+DT
+KA
+Bw
+TN
+Fd
+HP
+TM
+DT
+ZV
+vj
+ZF
+ZV
+DT
+YB
+Pq
+ZF
+YB
+DT
+oH
+ft
+ZN
+ft
+cX
+ft
+hK
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+GY
+ZP
+ZP
+ZT
+ZT
+Wk
+Wk
+Wk
+Wk
+Wk
+ZT
+ZT
+ZP
+ZP
+Xn
 ft
 ft
 ft
@@ -4028,49 +6775,49 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
 DT
 DT
 DT
 DT
 DT
+HP
+TM
+DT
+DT
+wF
+Fd
 DT
 DT
 DT
+wF
+Fd
+DT
+DT
+DT
+oH
 ft
+uB
+oH
 ft
+lw
+hK
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+lw
+GY
+ZP
+ZP
+ZT
+Gf
+Wk
+fg
+ZT
+Gf
+Wk
+fg
+ZT
+ZP
+ZP
+Xn
 ft
 ft
 ft
@@ -4137,54 +6884,54 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
 DT
-iE
-it
+DT
+DT
+DT
+DT
+DT
+DT
+DT
+DT
+ST
+iD
+HJ
 QK
-Ds
-Ds
-fF
-DT
+QK
+QK
+QK
+sL
+QK
+QK
+QK
+QK
+QK
+rk
+ZU
+yF
+ad
 ft
 ft
+wC
 ft
+oM
+hK
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+GY
+ZP
+ZP
+ZT
+Gf
+Wk
+fg
+aW
+Gf
+Wk
+fg
+ZT
+ZP
+ZP
+Xn
 ft
 ft
 ft
@@ -4251,54 +6998,54 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
 DT
+uV
+yu
+DT
+CS
+Hp
+DT
+DT
+TZ
+Vz
+Cc
+Xu
 Hg
-Gn
-uF
-uF
-as
-HO
-DT
+Hg
+Xu
+Hg
+Hg
+Xu
+Hg
+Hg
+Xu
+Hg
+ov
+ZU
 ft
+Mk
+Bm
+hK
+Wy
 ft
+dQ
+oH
 ft
-ft
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+GY
+ZP
+ZP
+ZT
+Gf
+Wk
+fg
+aW
+Gf
+Wk
+fg
+ZT
+ZP
+ZP
+Xn
 ft
 ft
 ft
@@ -4365,54 +7112,54 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
 DT
-kt
-zl
-uF
-ie
-zl
-HO
+Xu
+Xu
+Xu
+Xu
+Xu
 DT
-ft
-ft
-ft
-ft
 DT
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-DT
+TZ
+Vz
+Xu
+ZF
+Ws
+SU
+ok
+Ws
+SU
+hG
+Ws
+SU
+eT
+Ws
+SU
+ZU
+lw
 ft
+wo
+hK
+hK
+hK
 ft
+ud
 ft
-ft
-ft
-ft
-ft
+GY
+ZP
+ZP
+ZT
+Gf
+Wk
+fg
+aW
+Gf
+Wk
+fg
+ZT
+ZP
+ZP
+Xn
 ft
 ft
 ft
@@ -4479,54 +7226,54 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+DT
+Xu
+Xu
+Xu
+Xu
+Xu
+DT
+DT
+TZ
+Vz
+Xu
+Xu
+DT
+DT
+Fd
+DT
+DT
+Xu
+DT
+DT
+Fd
 DT
 DT
 DT
-DT
-DT
-DT
+zI
+oH
 ft
-DT
-kt
-oV
-uF
-uF
-Gn
-uq
-DT
-ft
-ft
-ft
-ft
-DT
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-DT
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+qE
+ES
+Bu
+Bu
+lw
+oH
+GY
+ZP
+ZP
+ZT
+Gf
+Wk
+fg
+aW
+Gf
+Wk
+fg
+ZT
+ZP
+ZP
+Xn
 ft
 ft
 ft
@@ -4593,54 +7340,54 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
 DT
+Xu
+Xu
+Xu
+Xu
+Xu
+DT
+DT
+TZ
+Vz
+Xu
 ZF
 Ws
-zw
-HF
-DT
-ft
-DT
-fL
-as
-uF
-kf
 SU
-HO
-DT
+HF
+Ws
+SU
+hG
+Ws
+SU
+eT
+Ws
+SU
+ZU
+rn
+ft
+lw
+ft
+OY
 ft
 ft
+DP
 ft
-ft
-DT
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-DT
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+GY
+ZP
+ZP
+ZT
+Gf
+Wk
+fg
+aW
+Gf
+Wk
+fg
+ZT
+ZP
+ZP
+Xn
 ft
 ft
 ft
@@ -4704,57 +7451,57 @@ ft
 ft
 "}
 (30,1,1) = {"
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+DT
+DT
+DT
+DT
+DT
+DT
+DT
 DT
 Xu
-AU
-gW
-gW
 DT
-ft
 DT
+TZ
+Vz
+Xu
+Xu
 Di
-co
-AV
-kz
+Di
+Xu
+Di
+Di
+Xu
+Di
+Di
+Xu
+Di
 ZH
-hQ
-DT
+ZU
+hK
+ts
+yF
+dl
+hK
 ft
+tu
 ft
-ft
-ft
-DT
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-DT
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+lw
+GY
+ZP
+ZP
+ZT
+Gf
+Wk
+fg
+ZT
+Gf
+Wk
+fg
+ZT
+ZP
+ZP
+Xn
 ft
 ft
 ft
@@ -4818,57 +7565,57 @@ ft
 ft
 "}
 (31,1,1) = {"
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
 DT
+hZ
+me
+hZ
+hZ
+me
+hZ
+Dk
+Xu
+DT
+DT
+DT
+Kj
+Bw
 jo
-gW
-gW
-gc
-DT
-DT
-DT
+Bw
+Bw
+Bw
+ya
 Bw
 Bw
 Bw
 Bw
 Bw
 Bw
-DT
-DT
+TN
+ZU
 ft
+oH
 ft
+qE
+Wy
+Lv
 ft
-DT
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-DT
-DT
-DT
-DT
-DT
-ft
-ft
-ft
+UU
+oH
+Xn
+ZP
+ZT
+ZT
+Gf
+Wk
+Wk
+Wk
+Wk
+Wk
+fg
+ZT
+ZT
+ZP
+Xn
 ft
 ft
 ft
@@ -4932,57 +7679,57 @@ ft
 ft
 "}
 (32,1,1) = {"
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
 DT
-gW
-Oi
+ix
+nC
+nC
+ix
+ix
+ix
+Dp
+Xu
+DT
+DT
+DT
+Xu
 pU
-JZ
 DT
-Bi
-Uq
-TA
-TA
-OU
-Wm
+Xu
+pU
+DT
+DT
 ZU
-TA
+ZU
+ZU
+ZU
+ZU
+ZU
+ZU
+DT
 ZN
-DT
+lw
 ft
 ft
 ft
-DT
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-DT
+oH
+hK
+lw
 ft
-ft
-ft
+Xn
+ZP
+ZT
+ZT
+ZT
+Wk
+Wk
+Wk
+Wk
+Wk
+ZT
+ZT
+ZT
+ZP
+Xn
 ft
 ft
 ft
@@ -5046,26 +7793,25 @@ ft
 ft
 "}
 (33,1,1) = {"
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
 DT
+iz
+nW
+iz
+iz
+iz
+iz
+DE
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
 ER
+Xu
+Xu
 DT
-DT
-DT
-DT
-qG
+Xn
 Jo
 Jo
 Jo
@@ -5073,30 +7819,31 @@ Jo
 Jo
 Jo
 Jo
-JM
-DT
-ft
-ft
-ft
-DT
+Xn
+Xn
 Jo
 Jo
 Jo
 Jo
 Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-DT
-ft
-ft
-ft
+GY
+GY
+Xn
+Xn
+ZP
+ZT
+ZT
+ZT
+ZP
+ZP
+ZP
+ZP
+ZP
+ZT
+ZT
+ZT
+ZP
+Xn
 ft
 ft
 ft
@@ -5160,57 +7907,57 @@ ft
 ft
 "}
 (34,1,1) = {"
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
 DT
-vb
-ze
-Eq
-vb
-TH
-xc
-Jo
-Jo
+iP
+nY
+iP
+iP
+nY
+iP
+Dk
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+Xu
+DT
+Xn
+ZP
+ZP
+ZP
 Tl
-ir
-ir
-df
-Jo
-LV
-DT
-DT
-DT
-DT
-DT
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-DT
-ft
-ft
-ft
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+If
+ZT
+ag
+ZP
+ZP
+ZP
+ZP
+ZP
+If
+ZT
+ag
+ZP
+Xn
 ft
 ft
 ft
@@ -5274,57 +8021,57 @@ ft
 ft
 "}
 (35,1,1) = {"
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
 DT
-vb
-vb
-jV
-vb
-Nq
-CQ
-Jo
-Jo
-Mb
-Rb
-cv
-wu
-Jo
-up
-vo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-kZ
-Jo
-Jo
-Jo
-Jo
-Jo
+ZU
+ZU
+ZU
+ZU
+ZU
+ZU
+ZU
+ZU
 DT
-ft
-ft
-ft
+DT
+DT
+DT
+DT
+DT
+DT
+DT
+DT
+Xn
+Tl
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+Xn
 ft
 ft
 ft
@@ -5401,44 +8148,44 @@ ft
 ft
 ft
 ft
-DT
-qX
-vb
-vb
-vb
-KO
-CQ
-Jo
-Jo
-Mb
-WL
-Rb
-wu
-Jo
-Tl
-ir
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-DT
 ft
 ft
 ft
+ft
+ft
+Xn
+Mg
+ZP
+ZP
+ZP
+ZP
+ZP
+tS
+ZP
+ZP
+ZP
+ZP
+ZP
+tS
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+Xn
 ft
 ft
 ft
@@ -5502,35 +8249,7 @@ ft
 ft
 "}
 (37,1,1) = {"
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-DT
-JW
-vb
-gu
-vb
-qc
-CQ
-Jo
-Jo
-Mb
-Rb
-Rb
-wu
-Jo
-JM
-DT
+Xn
 Jo
 Jo
 Jo
@@ -5539,20 +8258,48 @@ Jo
 Jo
 Jo
 Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-DT
-ft
-ft
-ft
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+ZP
+ZP
+ZP
+tS
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+Xn
 ft
 ft
 ft
@@ -5616,57 +8363,57 @@ ft
 ft
 "}
 (38,1,1) = {"
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-DT
-Jg
-AH
-vb
-gl
-am
-CQ
-Jo
-Jo
-Mb
-Rb
-jR
-wu
-Jo
-up
-vo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-DT
-DT
-DT
-DT
-DT
-ft
-ft
-ft
+Xn
+iU
+js
+js
+iU
+js
+js
+DW
+ZP
+ZP
+ZP
+ZP
+tS
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+tS
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+Xn
+Xn
+Xn
+Xn
+ZP
+ZP
+ZP
+ZP
+ZP
+Tl
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
 ft
 ft
 ft
@@ -5730,70 +8477,70 @@ ft
 ft
 "}
 (39,1,1) = {"
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-DT
-DT
-DT
-DT
-DT
-DT
-qG
-Jo
-Jo
-Mb
-WD
+Xn
+jl
+jl
+pL
+vz
+vz
+vz
+DW
 tS
-wu
-Jo
+ZP
+ZP
+ZP
+ZP
+ZP
+tS
+ZP
+ZP
+tS
+tS
+ZP
+tS
+ZP
+ZP
+ZP
+tS
+ZP
+ZP
+ZP
+ZP
+tS
+ZP
+ZP
+ZP
+ZP
+tS
+Xn
+ft
+ft
+Xn
 Tl
-ir
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-DT
+ZP
+ZP
+ZP
+ZP
+ZP
+Xn
 ft
 ft
 ft
 ft
 ft
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
 ft
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -5844,70 +8591,70 @@ ft
 ft
 "}
 (40,1,1) = {"
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-DT
-lo
-cr
+Xn
+jl
+jl
+qi
+vD
+vD
+Cr
+DW
+tS
 ZP
-Ab
-DT
-gX
-Jo
-Jo
-up
-TA
-TA
-lQ
-Jo
-LV
-DT
-DT
-DT
-DT
-DT
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-DT
-Wj
-uz
-iz
+ZP
+ZP
+ZP
+ZP
+ZP
+tS
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+tS
+ZP
+ZP
+ZP
+ZP
+ZP
+Xn
 ft
 ft
-Uv
-uD
-uD
-uD
-uD
-uD
-uD
+Xn
+ZP
+ZP
+ZP
+ZP
+ZP
+ZP
+Xn
 ft
-uD
-uD
-uD
-uD
-uD
-uD
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -5958,70 +8705,70 @@ ft
 ft
 "}
 (41,1,1) = {"
+Xn
+js
+iU
+js
+js
+js
+js
+DW
+ZP
+ZP
+ZP
+ZP
+tS
+ZP
+ZP
+ZP
+ZP
+ZP
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+ZP
+ZP
+Xn
+Xn
+ZP
+ZP
+Xn
+Xn
+Xn
+ZP
+ZP
+Xn
+Xn
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-DT
-Id
-Id
-WT
-Id
-aF
-xc
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-JM
-DT
-ft
-ft
-ft
-DT
-Jo
-Jo
-Jo
-Jo
-Jo
-DT
+Xn
 Ju
-Ju
-Ju
-Ju
-DT
-mV
-dS
-JQ
+ZP
+ZP
+ZP
+ZP
+Tl
+Xn
 ft
 ft
-Uv
-uD
-uD
-uD
-uD
-uD
-uD
 ft
-uD
-uD
-uD
-uD
-uD
-uD
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -6072,70 +8819,70 @@ ft
 ft
 "}
 (42,1,1) = {"
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-DT
-fV
-wP
-IS
-qb
-DT
-pz
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
 IG
 aZ
 hD
 GY
-HU
-aU
-df
-JM
-DT
+ZP
+ZP
+Xn
+rS
+aZ
+XY
+rS
+Xn
+XG
+aZ
+zX
+XG
+Xn
+ft
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
 ft
 ft
 ft
-DT
-Jo
-Jo
-Jo
-Jo
-Jo
-DT
-ft
-CY
 ft
 ft
 ft
 ft
 ft
-yu
 ft
-CY
-Uv
-uD
-uD
-uD
-uD
-Qj
-Qj
-Ge
-Qj
-oB
-uD
-uD
-uD
-uD
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -6199,57 +8946,57 @@ ft
 ft
 ft
 ft
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-QB
-sv
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-ft
-ft
-ft
-ft
-CY
 ft
 ft
 ft
 ft
 ft
-vZ
-uD
-uD
-uD
-sQ
-Qj
-hK
-lb
-hK
-Qj
-Uv
-uD
-uD
-uD
-Uv
+ft
+Xn
+bh
+kk
+ZP
+vn
+ZP
+ig
+Xn
+IG
+aZ
+Xm
+IG
+Xn
+IG
+aZ
+Xm
+IG
+Xn
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -6319,51 +9066,51 @@ ft
 ft
 ft
 ft
-ft
-ft
-DT
-rR
-ga
-vO
-Bw
-QB
-sv
-DT
+Xn
+Lc
+ZP
+ZP
+GY
+ZP
+ZP
+Xn
+rS
+aZ
 Xm
 rS
-wL
+Xn
+XG
+kk
 Xm
-DT
-qw
-rS
-mA
-qw
-DT
-CY
-Pn
-MB
+XG
+Xn
 ft
 ft
-Id
-BF
 ft
-CY
 ft
-vZ
-uD
-uD
-uD
-sQ
-lb
-aI
-lb
-aI
-lb
-Uv
-uD
-uD
-uD
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -6433,51 +9180,51 @@ ft
 ft
 ft
 ft
-ft
-ft
-DT
-zZ
-BV
-sv
-EE
-QB
 Xn
-DT
-rR
-ja
-zG
-rR
-DT
-rR
-ja
-zG
-rR
-DT
-ft
-Id
-Id
-ft
-ft
-ft
-uz
-ft
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
+Xn
 ft
 ft
-vZ
-uD
-uD
-uD
-sQ
-sQ
-lb
-lb
-lb
-sQ
-Uv
-uD
-uD
-uD
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -6549,49 +9296,49 @@ ft
 ft
 ft
 ft
-DT
-Eg
-Ta
-vE
-Bw
-QB
-sv
-DT
-Xm
-ja
-zG
-Xm
-DT
-qw
-BV
-zG
-qw
-DT
-GA
-ft
-PZ
-ft
-jW
-ft
-Id
 ft
 ft
 ft
-vZ
-uD
-uD
-sQ
-sQ
-lb
-lb
-lb
-lb
-lb
-sQ
-Uv
-uD
-uD
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -6663,49 +9410,49 @@ ft
 ft
 ft
 ft
-DT
-DT
-DT
-DT
-DT
-QB
-sv
-DT
-DT
-DW
-Bw
-DT
-DT
-DT
-DW
-Bw
-DT
-DT
-DT
-GA
 ft
-Ev
-GA
 ft
-CY
-Id
 ft
-CY
-vZ
-uD
-uD
-sQ
-IU
-lb
-qY
-sQ
-IU
-lb
-qY
-Uv
-uD
-uD
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -6772,54 +9519,54 @@ ft
 ft
 ft
 ft
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-Ku
-wy
-jl
-kV
-kV
-kV
-kV
-Tp
-kV
-kV
-kV
-kV
-kV
-uJ
-Ju
-me
-Vp
 ft
 ft
-BF
 ft
-Rj
-Id
 ft
-vZ
-uD
-uD
-sQ
-IU
-lb
-qY
-Qj
-IU
-lb
-qY
-Uv
-uD
-uD
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -6886,54 +9633,54 @@ ft
 ft
 ft
 ft
-DT
-js
-Cy
-DT
-Rb
-WL
-DT
-DT
-TZ
-NQ
-Sm
-Jo
-Pv
-Pv
-Jo
-Pv
-Pv
-Jo
-Pv
-Pv
-Jo
-Pv
-DE
-Ju
 ft
-AO
-Hp
-Id
-iP
 ft
-bb
-GA
 ft
-vZ
-uD
-uD
-sQ
-IU
-lb
-qY
-Qj
-IU
-lb
-qY
-Uv
-uD
-uD
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -7000,54 +9747,54 @@ ft
 ft
 ft
 ft
-DT
-Jo
-Jo
-Jo
-Jo
-Jo
-DT
-DT
-TZ
-NQ
-Jo
-zG
-IO
-rR
-Qy
-IO
-rR
-gk
-IO
-rR
-Ki
-IO
-rR
-Ju
-CY
 ft
-dS
-Id
-Id
-Id
 ft
-oY
 ft
-vZ
-uD
-uD
-sQ
-IU
-lb
-qY
-Qj
-IU
-lb
-qY
-Uv
-uD
-uD
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -7114,54 +9861,54 @@ ft
 ft
 ft
 ft
-DT
-Jo
-Jo
-Jo
-Jo
-Jo
-DT
-DT
-TZ
-NQ
-Jo
-Jo
-DT
-DT
-Bw
-DT
-DT
-Jo
-DT
-DT
-Bw
-DT
-DT
-DT
-vH
-GA
 ft
-Pq
-MB
-ff
-ff
-CY
-GA
-vZ
-uD
-uD
-sQ
-IU
-lb
-qY
-Qj
-IU
-lb
-qY
-Uv
-uD
-uD
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -7228,54 +9975,54 @@ ft
 ft
 ft
 ft
-DT
-Jo
-Jo
-Jo
-Jo
-Jo
-DT
-DT
-TZ
-NQ
-Jo
-zG
-IO
-rR
-Ni
-IO
-rR
-gk
-IO
-rR
-Ki
-IO
-rR
-Ju
-qi
-ft
-CY
-ft
-OX
 ft
 ft
-PH
 ft
-vZ
-uD
-uD
-sQ
-IU
-lb
-qY
-Qj
-IU
-lb
-qY
-Uv
-uD
-uD
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -7339,57 +10086,57 @@ ft
 ft
 ft
 ft
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-Jo
-DT
-DT
-TZ
-NQ
-Jo
-Jo
-nW
-nW
-Jo
-nW
-nW
-Jo
-nW
-nW
-Jo
-nW
-om
-Ju
-Id
-kw
-me
-yT
-Id
 ft
-cF
 ft
-CY
-vZ
-uD
-uD
-sQ
-IU
-lb
-qY
-sQ
-IU
-lb
-qY
-Uv
-uD
-uD
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -7453,57 +10200,57 @@ ft
 ft
 ft
 ft
-DT
-vX
-Wi
-vX
-vX
-Wi
-vX
-IR
-Jo
-DT
-DT
-DT
-fa
-Ta
-kB
-Ta
-Ta
-Ta
-pt
-Ta
-Ta
-Ta
-Ta
-Ta
-Ta
-vE
-Ju
 ft
-GA
 ft
-Pq
-iP
-or
 ft
-hk
-GA
-Uv
-uD
-sQ
-sQ
-IU
-lb
-lb
-lb
-lb
-lb
-qY
-sQ
-Uv
-uD
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -7567,57 +10314,57 @@ ft
 ft
 ft
 ft
-DT
-uV
-TM
-TM
-Rv
-Rv
-Rv
-Fd
-Jo
-DT
-DT
-DT
-Jo
-fn
-DT
-Jo
-fn
-DT
-DT
-Ju
-Ju
-Ju
-Ju
-Ju
-Ju
-Ju
-DT
-PZ
-CY
 ft
 ft
 ft
-GA
-Id
-CY
 ft
-Uv
-uD
-sQ
-sQ
-sQ
-lb
-lb
-lb
-lb
-lb
-sQ
-sQ
-Uv
-uD
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -7681,57 +10428,57 @@ ft
 ft
 ft
 ft
-DT
-vQ
-hn
-ox
-vD
-vD
-vD
-Ji
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-CS
-Jo
-Jo
-DT
-Uv
-KA
-KA
-KA
-KA
-KA
-KA
-KA
-Uv
-Uv
-KA
-KA
-KA
-KA
-KA
-vZ
-vZ
-Uv
-Uv
-uD
-sQ
-sQ
-sQ
-uD
-uD
-uD
-uD
-Bp
-sQ
-sQ
-Uv
-uD
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -7795,57 +10542,57 @@ ft
 ft
 ft
 ft
-DT
-Oq
-DY
-Oq
-Oq
-DY
-Oq
-IR
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-Jo
-DT
-Uv
-uD
-uD
-uD
-TN
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-xT
-sQ
-sw
-uD
-uD
-uD
-uD
-Bp
-xT
-sQ
-Kh
-uD
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -7909,57 +10656,57 @@ ft
 ft
 ft
 ft
-DT
-Ju
-Ju
-Ju
-Ju
-Ju
-Ju
-Ju
-Ju
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-DT
-Uv
-TN
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -8041,39 +10788,39 @@ ft
 ft
 ft
 ft
-Uv
-Rp
-uD
-uD
-uD
-uD
-uD
-Ea
-uD
-uD
-uD
-uD
-uD
-Ea
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -8137,57 +10884,57 @@ ft
 ft
 ft
 ft
-Uv
-KA
-KA
-KA
-KA
-KA
-KA
-KA
-KA
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-uD
-uD
-uD
-Ea
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -8251,57 +10998,57 @@ ft
 ft
 ft
 ft
-Uv
-Dk
-EU
-EU
-Dk
-EU
-EU
-WS
-uD
-uD
-uD
-uD
-Ea
-uD
-uD
-uD
-uD
-uD
-uD
-Ea
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-Uv
-Uv
-Uv
-Uv
-uD
-uD
-uD
-uD
-uD
-TN
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -8365,52 +11112,52 @@ ft
 ft
 ft
 ft
-Uv
-vz
-vz
-RH
-ix
-ix
-ix
-WS
-Ea
-uD
-uD
-uD
-uD
-uD
-Ea
-uD
-uD
-Ea
-Ea
-uD
-Ea
-uD
-uD
-uD
-Ea
-uD
-uD
-uD
-uD
-Ea
-uD
-uD
-uD
-uD
-Ea
-Uv
 ft
 ft
-Uv
-TN
-uD
-uD
-uD
-uD
-uD
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -8479,52 +11226,52 @@ ft
 ft
 ft
 ft
-Uv
-vz
-vz
-Td
-bG
-bG
-iU
-WS
-Ea
-uD
-uD
-uD
-uD
-uD
-uD
-Ea
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-uD
-Ea
-uD
-uD
-uD
-uD
-uD
-Uv
 ft
 ft
-Uv
-uD
-uD
-uD
-uD
-uD
-uD
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -8593,52 +11340,52 @@ ft
 ft
 ft
 ft
-Uv
-EU
-Dk
-EU
-EU
-EU
-EU
-WS
-uD
-uD
-uD
-uD
-Ea
-uD
-uD
-uD
-uD
-uD
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-uD
-uD
-Uv
-Uv
-uD
-uD
-Uv
-Uv
-Uv
-uD
-uD
-Uv
-Uv
 ft
-Uv
-Bn
-uD
-uD
-uD
-uD
-TN
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -8707,52 +11454,52 @@ ft
 ft
 ft
 ft
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-uD
-Uv
-Uv
-Uv
-Uv
-uD
-uD
-Ea
-Uv
-Uv
-Uv
-Uv
-hZ
-Pk
-AX
-vZ
-uD
-uD
-Uv
-hR
-Pk
-Dp
-hR
-Uv
-SF
-Pk
-HH
-SF
-Uv
 ft
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -8824,40 +11571,6 @@ ft
 ft
 ft
 ft
-Uv
-uD
-Ea
-uD
-uD
-uD
-Uv
-Uv
-tp
-pK
-tp
-uD
-tp
-pK
-tp
-Uv
-Uv
-oE
-lL
-uD
-Cr
-uD
-HZ
-Uv
-hZ
-Pk
-MI
-hZ
-Uv
-hZ
-Pk
-MI
-hZ
-Uv
 ft
 ft
 ft
@@ -8875,7 +11588,41 @@ ft
 ft
 ft
 ft
-HY
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -8938,40 +11685,40 @@ ft
 ft
 ft
 ft
-Uv
-uD
-uD
-uD
-uD
-uD
-Uv
-Uv
-nY
-uD
-Ea
-uD
-Ea
-uD
-Yo
-Uv
-Uv
-Ly
-uD
-uD
-vZ
-CK
-uD
-Uv
-hR
-Pk
-MI
-hR
-Uv
-SF
-lL
-MI
-SF
-Uv
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 ft
 ft
 ft
@@ -9052,44 +11799,44 @@ ft
 ft
 ft
 ft
-Uv
-uD
-uD
-Ea
-Ea
-uD
-Uv
-Uv
-tp
-uD
-tp
-uD
-tp
-Ea
-tp
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-uD
-uD
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
 ft
 ft
 ft
 ft
+ft
+ft
+ft
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
 ft
 ft
 ft
@@ -9166,36 +11913,6 @@ ft
 ft
 ft
 ft
-Uv
-uD
-uD
-uD
-uD
-uD
-Uv
-Uv
-pK
-Ea
-uD
-uD
-uD
-Ea
-pK
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
 ft
 ft
 ft
@@ -9203,7 +11920,37 @@ ft
 ft
 ft
 ft
-ft
+Uv
+Os
+Os
+Os
+Os
+Os
+Kv
+Os
+BB
+Os
+Os
+Os
+Os
+Os
+Os
+Kv
+BB
+Os
+Os
+Os
+Os
+Os
+Os
+BB
+Kv
+Os
+Os
+Os
+gP
+Iz
+Uv
 ft
 ft
 ft
@@ -9280,44 +12027,44 @@ ft
 ft
 ft
 ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 Uv
-Et
-pL
-Uv
-nC
-QD
-Uv
-Uv
-uD
-uD
 Os
-kY
-Mr
-uD
-Ea
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+op
 Uv
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
 ft
 ft
 ft
@@ -9394,44 +12141,44 @@ ft
 ft
 ft
 ft
+ft
+ft
+ft
+ft
+ft
+ft
+ft
 Uv
+Os
+Os
+Os
+ni
+cP
+cP
+ax
+iB
+po
+cP
+ax
+iB
+dz
+oi
+ax
+iB
+po
+cP
+ax
+iB
+po
+cP
+LJ
+po
+po
+rm
+Os
+Os
+gP
 Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-Uv
-pK
-uD
-uD
-uD
-pK
-Uv
-Uv
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
 ft
 ft
 ft
@@ -9515,37 +12262,37 @@ ft
 ft
 ft
 ft
-ft
 Uv
-vZ
-vZ
-vZ
-vZ
-vZ
+Os
+Os
+Os
+qz
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+cC
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+Yg
+Os
+Os
+zO
 Uv
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
 ft
 ft
 ft
@@ -9629,37 +12376,37 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+Os
+Os
+Os
+vh
+DJ
+DJ
+DJ
+NR
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+sG
+Os
+gP
+op
+Uv
 ft
 ft
 ft
@@ -9743,6 +12490,37 @@ ft
 ft
 ft
 ft
+Uv
+ZY
+Os
+Os
+ly
+DJ
+DJ
+DJ
+Xh
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+He
+Os
+gP
+Iz
+Uv
 ft
 ft
 ft
@@ -9767,46 +12545,15 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
 ft
 ft
 ft
@@ -9857,6 +12604,37 @@ ft
 ft
 ft
 ft
+Uv
+Os
+Os
+Os
+Vr
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+EF
+Os
+Os
+Os
+Uv
 ft
 ft
 ft
@@ -9881,46 +12659,15 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+PG
+Qi
+PG
+gB
+PG
+Qi
+PG
+Uv
 ft
 ft
 ft
@@ -9971,6 +12718,37 @@ ft
 ft
 ft
 ft
+Uv
+Os
+Os
+Os
+qz
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+Su
+Os
+Os
+hI
+Uv
 ft
 ft
 ft
@@ -9995,46 +12773,15 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+ur
+Ly
+ur
+gB
+ur
+Ly
+ur
+Uv
 ft
 ft
 ft
@@ -10079,76 +12826,76 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+LX
+Os
+Os
+vh
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+hM
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+tW
+Os
+Os
+iC
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+im
+Ly
+im
+gB
+ob
+Ly
+ob
+Uv
 ft
 ft
 ft
@@ -10193,76 +12940,76 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+LH
+IH
+Be
+oR
+fz
+gB
+Ja
+Os
+Os
+ly
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+ee
+Os
+dr
+AW
+gB
+Ly
+Ly
+Ly
+lM
+vF
+Ly
+Ly
+Cw
+lM
+Ly
+vF
+Ly
+lM
+Ly
+Ly
+Ly
+gB
+Ly
+Ly
+Yb
+kr
+Ly
+Ly
+Ly
+gB
+gB
+TW
+gB
+gB
+gB
+wj
+gB
+Uv
 ft
 ft
 ft
@@ -10307,76 +13054,76 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+qB
+LH
+LH
+LH
+oj
+gB
+Os
+Os
+Os
+Vr
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+EF
+Os
+dr
+Os
+gB
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Cw
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+gB
+Ly
+Ch
+Cw
+Ch
+aD
+aV
+Ly
+gB
+Ly
+Ly
+Ly
+oW
+vF
+Ly
+Ly
+Uv
 ft
 ft
 ft
@@ -10421,89 +13168,89 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+Uk
+Ly
+Ly
+LH
+LH
+gB
+ZX
+Os
+Os
+qz
+DJ
+DJ
+DJ
+Xh
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+Yg
+Os
+dr
+Os
+gB
+Ly
+Ly
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Ly
+Ly
+gB
+FO
+Ch
+Ly
+Ch
+aD
+aV
+Ly
+gB
+ry
+Ly
+Ly
+Cw
+Ly
+Ly
+sa
+Uv
+ft
+ft
+ft
+ft
+ft
+ft
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
 ft
 ft
 ft
@@ -10535,89 +13282,89 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+RF
+Zn
+Cw
+Ct
+LH
+gB
+cp
+Os
+Os
+vh
+DJ
+DJ
+DJ
+NR
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+sG
+Os
+dr
+Os
+gB
+Hi
+Ly
+Cw
+Ly
+Ly
+Ly
+Ly
+Cw
+Ly
+Ly
+Ly
+Ly
+Ly
+Cw
+Ly
+BY
+gB
+Gu
+lD
+Ly
+lD
+Ly
+Cw
+Eb
+gB
+Az
+Ri
+Ly
+Cw
+Ly
+Ri
+Az
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+qs
+gB
+qs
+gB
+qs
+Uv
 ft
 ft
 ft
@@ -10641,97 +13388,97 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+Uv
+HH
+HH
+HH
+HH
+HH
+Uv
+Uv
+gB
+gB
+kP
+gB
+gB
+gB
+zp
+zp
+Os
+ly
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+DJ
+He
+Os
+dr
+Os
+gB
+hw
+Ly
+Cw
+Ly
+gB
+gB
+Ii
+Cw
+Nn
+Ii
+gB
+gB
+Ly
+Cw
+Ly
+sa
+gB
+KQ
+Ly
+Ly
+Ly
+Ly
+Cw
+Gp
+gB
+PG
+Ly
+Ly
+Cw
+Ly
+Ly
+PG
+gB
+Vo
+Ly
+RD
+Cg
+vF
+Ly
+gB
+Iu
+gB
+Iu
+gB
+Iu
+Uv
 ft
 ft
 ft
@@ -10754,98 +13501,98 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+Uv
+Pv
+Ly
+Ly
+Ly
+Ly
+Ly
+vF
+Ly
+RD
+Ly
+Cw
+Ly
+Ly
+gB
+zp
+zp
+Os
+fi
+eB
+xr
+rs
+nQ
+iV
+xr
+mc
+nQ
+af
+CF
+mc
+nQ
+iV
+JD
+mc
+CA
+Av
+xr
+sO
+CA
+fH
+rl
+Os
+dr
+zO
+gB
+Of
+Ly
+Cw
+sa
+gB
+Ly
+Ly
+Cw
+Ly
+Ly
+Ly
+gB
+ry
+Cw
+Ly
+Ly
+gB
+FQ
+Ly
+Ly
+Ly
+Ly
+Cw
+fj
+gB
+Yn
+nR
+Ly
+UQ
+Ly
+nR
+Yn
+gB
+Vo
+Ly
+tY
+RE
+Rx
+Ly
+Mp
+Ly
+tq
+zM
+tq
+Ly
+Uv
 ft
 ft
 ft
@@ -10868,100 +13615,100 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+HH
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Cw
+Ly
+Ly
+gB
+Os
+wd
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+dr
+Os
+gB
+IC
+Ly
+Cw
+Ly
+Ii
+Ly
+Ly
+Ow
+Bt
+Ly
+Ly
+Ii
+Ly
+Cw
+Ly
+Ly
+gB
+XD
+Cw
+Cw
+Cw
+Cw
+Cw
+Ly
+gB
+Az
+Ri
+go
+Hh
+iq
+Ri
+Az
+gB
+Ou
+Ly
+kN
+uk
+Rx
+Ly
+gB
+gB
+gB
+gB
+gB
+gB
+Uv
+Uv
+Uv
 ft
 ft
 ft
@@ -10982,100 +13729,100 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+HH
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Bt
+Cw
+Cw
+sa
+gB
+Os
+wd
+Os
+UN
+Os
+Ps
+Os
+vi
+Os
+Os
+Os
+Os
+Os
+Os
+Os
+Ps
+vi
+Os
+Os
+Os
+Os
+Os
+vi
+Ps
+Os
+Os
+Os
+dr
+Os
+gB
+Ly
+Ly
+Cw
+Ly
+Ii
+Ly
+xp
+mo
+wW
+Vy
+Ly
+Ii
+Ly
+Cw
+Ly
+Ly
+gB
+aJ
+qm
+bI
+Cw
+xA
+Vg
+ms
+gB
+PG
+Ly
+go
+SB
+iq
+Ly
+PG
+gB
+Vo
+Ly
+kN
+Gv
+Rx
+Ly
+gB
+mQ
+XI
+xE
+xE
+At
+xE
+xE
+Uv
 ft
 ft
 ft
@@ -11096,100 +13843,100 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+HH
+Ly
+PH
+Vp
+Vp
+Vp
+Vp
+UO
+Ly
+Ly
+xp
+wW
+Vy
+Cw
+yq
+gB
+gB
+gB
+gB
+gB
+gB
+gB
+gB
+gB
+gB
+gB
+gB
+Yv
+LU
+LU
+Yy
+gB
+gB
+gB
+gB
+gB
+gB
+gB
+gB
+gB
+gB
+gB
+ij
+Il
+gB
+gB
+Ly
+Ly
+Cw
+Ly
+Ii
+Ly
+xp
+wN
+wW
+Vy
+Ly
+Ii
+Ly
+Cw
+Ly
+Ly
+gB
+gB
+gB
+gB
+Ig
+gB
+gB
+gB
+gB
+Yn
+nR
+go
+kA
+iq
+nR
+Yn
+gB
+Sk
+Ly
+kN
+RE
+Rx
+sa
+gB
+Df
+cF
+Bl
+El
+El
+El
+ak
+Uv
 ft
 ft
 ft
@@ -11210,100 +13957,100 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+HH
+Ly
+PZ
+Wi
+dC
+eh
+Ap
+FP
+Ly
+Ly
+xp
+wW
+Vy
+Cw
+Ly
+gB
+ry
+Ly
+Ly
+Ly
+vF
+RD
+Ly
+Ly
+Ly
+Ly
+gB
+IC
+hm
+QQ
+sX
+gB
+IC
+Ly
+vF
+Ly
+lM
+Ly
+Ly
+Ly
+vF
+Ly
+Ly
+Cw
+Ly
+Ly
+Ly
+Ly
+Cw
+Ly
+Ii
+Ly
+xp
+mo
+wW
+Vy
+Ly
+Ii
+Ly
+Cw
+Ly
+Ly
+Ly
+lM
+Ly
+Zi
+Cw
+Ly
+lM
+Ly
+gB
+BJ
+Ly
+go
+Hh
+iq
+Ly
+PK
+gB
+hw
+Ly
+Xs
+Hh
+iq
+Ly
+gB
+GP
+bX
+Nh
+kM
+zz
+zz
+sB
+Uv
 ft
 ft
 ft
@@ -11324,100 +14071,100 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+HH
+Ly
+PZ
+WS
+xi
+Ly
+pB
+ZI
+Ly
+Ly
+xp
+wW
+Vy
+Cw
+Cw
+KV
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Ly
+gB
+za
+Cw
+Cw
+yq
+gB
+FQ
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Ly
+gB
+Gu
+nt
+mo
+wW
+Vy
+BZ
+gB
+Of
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+wz
+Cw
+Cw
+uK
+CR
+kA
+UQ
+zS
+fN
+kA
+UQ
+zS
+CR
+kA
+UQ
+IZ
+bX
+bX
+NT
+vf
+vf
+vf
+jm
+Uv
 ft
 ft
 ft
@@ -11438,100 +14185,100 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+HH
+Ly
+PZ
+Yo
+PN
+Ly
+Ly
+ZI
+Ly
+Ly
+xp
+wW
+Vy
+Ly
+Ly
+hg
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Cw
+Ly
+Vk
+Cw
+Ly
+Ly
+Ly
+Vk
+Cw
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Cw
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+gB
+FO
+nz
+wW
+vm
+Vy
+BZ
+gB
+IC
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Cw
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+go
+nv
+HD
+fC
+nc
+rA
+HD
+fC
+nc
+nv
+HD
+fC
+nc
+cF
+cF
+bM
+xE
+xE
+xE
+hv
+Uv
 ft
 ft
 ft
@@ -11552,100 +14299,100 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+HH
+Ly
+PZ
+LK
+zY
+JP
+Sg
+DC
+Ly
+Ly
+xp
+wW
+Vy
+Ly
+Ly
+gB
+ry
+Ly
+Ly
+Ly
+Ly
+zM
+Ly
+Ly
+Cw
+Ly
+Vk
+Cw
+on
+Ly
+wQ
+Vk
+Cw
+Ly
+Ly
+Ly
+zM
+Ly
+Ly
+Ly
+Ly
+Ly
+zM
+Cw
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ii
+Ly
+xp
+wW
+wW
+Vy
+Ly
+Ii
+Ly
+Ly
+Ly
+Ly
+Ly
+zM
+Ly
+Ly
+Cw
+Ly
+zM
+Ly
+gB
+BJ
+Ly
+go
+Pr
+iq
+Ly
+sa
+gB
+hw
+Ly
+Xs
+Pr
+iq
+Ly
+gB
+zm
+nc
+xf
+kT
+kT
+kT
+kT
+Uv
 ft
 ft
 ft
@@ -11666,100 +14413,100 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+HH
+Ly
+Qj
+jn
+jn
+jn
+jn
+kc
+Ly
+Ly
+xp
+wW
+Vy
+Ly
+Ly
+gB
+gB
+gB
+gB
+gB
+gB
+gB
+gB
+gB
+Yi
+Vk
+gB
+Gk
+LU
+Fy
+LU
+gB
+Yi
+Vk
+So
+So
+So
+So
+So
+So
+So
+So
+So
+gF
+jG
+So
+Ly
+Ly
+Ly
+Ly
+Ii
+Ly
+xp
+wW
+wW
+Vy
+Ly
+Ii
+Ly
+Ly
+Ly
+Ly
+gB
+gB
+gB
+gB
+Wu
+gB
+gB
+gB
+gB
+QZ
+Ri
+go
+HD
+iq
+Ri
+QZ
+gB
+Vo
+Ly
+kN
+PL
+Rx
+sa
+gB
+VR
+nc
+kT
+kT
+kT
+kT
+kT
+Uv
 ft
 ft
 ft
@@ -11780,100 +14527,100 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+HH
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Tt
+Ly
+Ly
+Io
+gB
+Ly
+zU
+vp
+GW
+vp
+bH
+np
+gB
+Cw
+Ly
+Ly
+Cw
+Ly
+Ly
+Ly
+Ly
+Cw
+Ly
+So
+ck
+KP
+pX
+So
+oQ
+tH
+Yc
+ay
+mX
+qh
+So
+Ly
+Ly
+Ly
+Ly
+Ii
+Ly
+xp
+wW
+wW
+Vy
+Ly
+Ii
+Ly
+Ly
+Ly
+Ly
+gB
+kI
+qg
+do
+Cw
+YN
+lI
+ur
+gB
+PG
+Ly
+go
+km
+iq
+Ly
+PG
+gB
+Sk
+Ly
+kN
+hT
+Rx
+Ly
+gB
+FH
+cM
+Xa
+vf
+lG
+vf
+vf
+Uv
 ft
 ft
 ft
@@ -11894,100 +14641,100 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+HH
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+sa
+gB
+Hw
+ta
+Ly
+Ly
+Ly
+ra
+eV
+gB
+Lh
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+Cw
+sa
+So
+eM
+jP
+of
+So
+jv
+Bv
+QY
+bo
+Gi
+KY
+So
+IC
+Ly
+Ly
+Ly
+Ii
+Ly
+Ly
+Tt
+Tt
+Ly
+Ly
+Ii
+Ly
+Ly
+Ly
+Ly
+gB
+BJ
+pJ
+pJ
+jb
+Ti
+cA
+VC
+gB
+WN
+nR
+go
+Pr
+iq
+nR
+WN
+gB
+Ou
+Ly
+kN
+Yr
+Rx
+Ly
+gB
+gB
+gB
+gB
+gB
+gB
+Uv
+Uv
+Uv
 ft
 ft
 ft
@@ -12008,98 +14755,98 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+Uv
+Qy
+Ly
+Ly
+Ly
+Ly
+Ly
+PW
+Ly
+zM
+Ly
+Ly
+Ly
+Ly
+gB
+EG
+ta
+Ly
+ex
+Ly
+ra
+Ly
+gB
+Ly
+Ly
+Ly
+Cw
+cB
+fB
+Tt
+Ly
+Ly
+Ly
+So
+Lx
+jP
+lr
+So
+uy
+Bv
+cW
+ay
+Gi
+Lo
+So
+Of
+Ly
+Ly
+sa
+gB
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+gB
+ry
+Ly
+Ly
+Ly
+gB
+FK
+Im
+EH
+gB
+Im
+EH
+FK
+gB
+QZ
+Ri
+Ly
+fC
+Ly
+Ri
+QZ
+gB
+Vo
+Ly
+tY
+LS
+Rx
+Ly
+pm
+Ly
+Ly
+RD
+Ly
+Ly
+Uv
 ft
 ft
 ft
@@ -12123,97 +14870,97 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+Uv
+HH
+HH
+HH
+HH
+HH
+Uv
+Uv
+gB
+eC
+gB
+eC
+gB
+gB
+ry
+ta
+ra
+Bh
+ta
+ra
+sa
+gB
+LU
+LU
+gB
+cb
+gB
+gB
+gB
+gB
+gB
+gB
+So
+Gl
+Bv
+Xz
+So
+DF
+dj
+ki
+Lw
+Gi
+KY
+So
+hw
+Ly
+Ly
+Ly
+gB
+gB
+Ii
+Ly
+Nn
+Ii
+gB
+gB
+Ly
+Ly
+Ly
+sa
+gB
+Ly
+Ly
+Ly
+kr
+Ly
+Ly
+Ly
+gB
+PG
+Ly
+Ly
+Ly
+Ly
+Ly
+PG
+gB
+Vo
+Ly
+zM
+fC
+PW
+Ly
+gB
+ou
+gB
+ou
+gB
+ou
+Uv
 ft
 ft
 ft
@@ -12245,89 +14992,89 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+CV
+Ly
+gB
+TL
+hq
+gB
+FO
+ta
+Ly
+vp
+Ly
+ra
+Ly
+gB
+bP
+Ly
+oW
+Cw
+gB
+LY
+hE
+sT
+wQ
+VX
+So
+So
+pu
+So
+So
+So
+lq
+ro
+So
+uA
+KY
+So
+Hi
+Ly
+Ly
+Ly
+Ly
+lM
+Ly
+Ly
+Ly
+Ly
+lM
+Ly
+Ly
+Ly
+Ly
+BY
+gB
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+gB
+WN
+nR
+Ly
+Ly
+Ly
+nR
+WN
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+mM
+gB
+mM
+gB
+mM
+Uv
 ft
 ft
 ft
@@ -12359,89 +15106,89 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+Od
+Ly
+gB
+cK
+PN
+gB
+We
+ta
+Ly
+Ly
+Ly
+ra
+Ly
+LU
+Bt
+Bt
+Bt
+Cw
+gB
+Ly
+Ly
+Ly
+Ly
+Ly
+So
+vJ
+Bv
+wZ
+wZ
+fT
+wZ
+Bv
+Uh
+Ff
+CD
+So
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+gB
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+gB
+ry
+Ly
+Ly
+Ly
+Ly
+Ly
+sa
+Uv
+ft
+ft
+ft
+ft
+ft
+ft
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
 ft
 ft
 ft
@@ -12473,76 +15220,76 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+Ly
+Ly
+gB
+Ly
+Ly
+gB
+We
+QW
+ex
+Zc
+ex
+sZ
+Bt
+LU
+sU
+YV
+Sw
+VC
+gB
+Bk
+Ly
+Ly
+Ly
+Ly
+So
+NV
+jP
+jP
+jP
+jP
+jP
+jP
+jP
+jP
+KT
+So
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+gB
+dV
+Hs
+Ly
+Ly
+Ly
+rL
+Jz
+gB
+Ly
+Ly
+Ly
+PW
+Ly
+Ly
+Ly
+Uv
 ft
 ft
 ft
@@ -12587,76 +15334,76 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+ut
+YI
+gB
+RY
+YI
+gB
+gB
+gB
+gB
+gB
+Ly
+xp
+vA
+LU
+be
+ET
+XL
+Cw
+ma
+Ly
+Ly
+Ly
+Ly
+sa
+So
+MN
+jP
+qP
+qP
+qP
+jP
+qP
+eE
+YO
+FT
+So
+Ly
+Ly
+Ly
+zM
+Ly
+PW
+Ly
+Ly
+zM
+Ly
+PW
+Ly
+zM
+Ly
+Ly
+Ly
+gB
+Ly
+Ly
+Ly
+tL
+Ly
+Ly
+Ly
+gB
+gB
+Le
+gB
+gB
+Ly
+Ly
+Ly
+Uv
 ft
 ft
 ft
@@ -12701,76 +15448,76 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+cG
+cG
+cG
+gB
+ry
+xp
+wW
+LU
+Tt
+Tt
+Tt
+Ip
+gB
+ry
+Ly
+Ly
+Ly
+BY
+So
+So
+VK
+ay
+So
+ay
+vV
+So
+So
+So
+So
+So
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+wW
+Ly
+mx
+gB
+hu
+Ly
+hu
+Uv
 ft
 ft
 ft
@@ -12821,6 +15568,37 @@ ft
 ft
 ft
 ft
+Uv
+az
+Ly
+Sq
+bC
+Ly
+Ly
+Tt
+gB
+hw
+Ly
+Ly
+Cw
+gB
+wW
+Ly
+Ly
+Ly
+ln
+So
+fU
+jP
+qh
+So
+uw
+jP
+bU
+oN
+bU
+qh
+So
 ft
 ft
 ft
@@ -12845,46 +15623,15 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+ry
+Ly
+BY
+gB
+cd
+Ly
+cd
+Uv
 ft
 ft
 ft
@@ -12935,6 +15682,37 @@ ft
 ft
 ft
 ft
+Uv
+gB
+gf
+gB
+gB
+gB
+gB
+gB
+gB
+sn
+Ly
+Ly
+VC
+gB
+bk
+Ly
+Ly
+Ly
+EJ
+So
+Yz
+jP
+KT
+So
+Bb
+jP
+bq
+jP
+pc
+KT
+So
 ft
 ft
 ft
@@ -12959,46 +15737,15 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+gU
+PG
+ur
+gB
+cd
+zM
+cd
+Uv
 ft
 ft
 ft
@@ -13049,6 +15796,37 @@ ft
 ft
 ft
 ft
+Uv
+Nx
+Ly
+Ly
+oW
+RD
+Ly
+Ly
+gB
+Ao
+Ly
+Ly
+Cw
+gB
+gB
+HB
+HB
+HB
+gB
+So
+RN
+jP
+Ij
+So
+Ok
+jP
+Sb
+yj
+Jm
+Lu
+So
 ft
 ft
 ft
@@ -13073,46 +15851,15 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
 ft
 ft
 ft
@@ -13163,37 +15910,37 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+tc
+Ly
+Ly
+Cw
+Cw
+Cw
+Cw
+wV
+Cw
+Cw
+Cw
+Cw
+gB
+Hz
+Ly
+Ly
+Ly
+by
+So
+KF
+jP
+Ij
+So
+Wn
+jP
+yj
+yj
+yj
+KT
+So
 ft
 ft
 ft
@@ -13277,37 +16024,37 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+hw
+Ly
+Ly
+Ly
+Ly
+Ly
+Ly
+gB
+gB
+LU
+cb
+gB
+gB
+mh
+Ly
+Ly
+Ly
+Bd
+So
+AY
+jP
+Zk
+So
+Wn
+jP
+jP
+yj
+jP
+KT
+So
 ft
 ft
 ft
@@ -13391,37 +16138,37 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+DU
+zh
+gB
+aa
+os
+gB
+Es
+gB
+sq
+Wg
+Cw
+CX
+gB
+jz
+Ly
+Ly
+Ly
+Hq
+So
+vk
+jP
+tM
+So
+fP
+jP
+Qg
+jP
+Qg
+Lu
+So
 ft
 ft
 ft
@@ -13505,37 +16252,37 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+GZ
+Ly
+gB
+je
+Ly
+gB
+dV
+gB
+bP
+Ly
+Cw
+yq
+gB
+mh
+Ly
+Ly
+Ly
+VD
+So
+PO
+jP
+tM
+So
+Zd
+jP
+HC
+jP
+HC
+KT
+So
 ft
 ft
 ft
@@ -13619,37 +16366,37 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+ns
+TR
+gB
+ns
+yd
+gB
+hc
+gB
+ql
+nF
+nF
+TG
+gB
+aL
+tL
+ai
+tL
+Wp
+So
+zs
+Xb
+yi
+So
+pI
+qP
+qP
+Xb
+qP
+Vm
+So
 ft
 ft
 ft
@@ -13733,37 +16480,37 @@ ft
 ft
 ft
 ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
-ft
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+So
+So
+So
+So
+So
+So
+So
+So
+So
+So
+So
+So
 ft
 ft
 ft
