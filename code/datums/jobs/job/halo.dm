@@ -483,6 +483,12 @@
 	title = "Colony Doctor"
 	skills_type = /datum/skills/civilian/survivor/doctor
 	outfit = /datum/outfit/job/civ/doctor
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS)
+	minimal_access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS)
+	display_order = JOB_DISPLAY_ORDER_COLONIST
+	faction = FACTION_TERRAGOV
+	job_flags = JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_PROVIDES_BANK_ACCOUNT
+
 
 /datum/outfit/job/civ/doctor
 	name = "Colony Doctor"
@@ -500,6 +506,11 @@
 	title = "Colony Chef"
 	skills_type = /datum/skills/civilian/survivor/chef
 	outfit = /datum/outfit/job/civ/chef
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS)
+	minimal_access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS)
+	display_order = JOB_DISPLAY_ORDER_COLONIST
+	faction = FACTION_TERRAGOV
+	job_flags = JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_PROVIDES_BANK_ACCOUNT
 
 
 /datum/outfit/job/civ/chef
@@ -517,6 +528,12 @@
 /datum/job/civ/chaplain
 	title = "Colony Chaplain"
 	outfit = /datum/outfit/job/civ/chaplain
+	skills_type = /datum/skills/civilian
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS)
+	minimal_access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS)
+	display_order = JOB_DISPLAY_ORDER_COLONIST
+	faction = FACTION_TERRAGOV
+	job_flags = JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_PROVIDES_BANK_ACCOUNT
 
 
 /datum/outfit/job/civ/chaplain
@@ -533,12 +550,19 @@
 /datum/job/civ/farmer
 	title = "Colony Farmer"
 	outfit = /datum/outfit/job/civ/farmer
+	skills_type = /datum/skills/civilian/survivor
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS)
+	minimal_access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS)
+	display_order = JOB_DISPLAY_ORDER_COLONIST
+	faction = FACTION_TERRAGOV
+	job_flags = JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_PROVIDES_BANK_ACCOUNT
 
 
 /datum/outfit/job/civ/farmer
 	name = "Colony Farmer"
-	jobtype = /datum/job/civ/chaplain
+	jobtype = /datum/job/civ/farmer
 
+	head = /obj/item/clothing/head/boonie
 	ears = /obj/item/radio/headset
 	w_uniform = /obj/item/clothing/under/overalls
 	shoes = /obj/item/clothing/shoes/leather
@@ -547,10 +571,16 @@
 //Janitor
 /datum/job/civ/janitor
 	title = "Colony Janitor"
-	outfit = /datum/outfit/job/civ/farmer
+	outfit = /datum/outfit/job/civ/janitor
+	skills_type = /datum/skills/civilian/survivor
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS)
+	minimal_access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS)
+	display_order = JOB_DISPLAY_ORDER_COLONIST
+	faction = FACTION_TERRAGOV
+	job_flags = JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_PROVIDES_BANK_ACCOUNT
 
 
-/datum/outfit/job/civ/farmer
+/datum/outfit/job/civ/janitor
 	name = "Colony Janitor"
 	jobtype = /datum/job/civ/janitor
 
