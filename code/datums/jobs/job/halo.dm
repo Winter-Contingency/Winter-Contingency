@@ -457,6 +457,7 @@
 	job_category = JOB_CAT_COLONIST
 	faction = FACTION_COLONIST
 
+//Colonist
 /datum/job/civ/colonist
 	title = "Colonist"
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS)
@@ -471,9 +472,92 @@
 	name = "Colonist"
 	jobtype = /datum/job/civ/colonist
 
+	ears = /obj/item/radio/headset
 	w_uniform = /obj/item/clothing/under/serviceoveralls
 	shoes = /obj/item/clothing/shoes/black
+	back = /obj/item/storage/backpack/satchel/norm
 
+
+//Doctor
+/datum/job/civ/doctor
+	title = "Colony Doctor"
+	skills_type = /datum/skills/civilian/survivor/doctor
+	outfit = /datum/outfit/job/civ/doctor
+
+/datum/outfit/job/civ/doctor
+	name = "Colony Doctor"
+	jobtype = /datum/job/civ/doctor
+
+	ears = /obj/item/radio/headset
+	w_uniform = /obj/item/clothing/under/rank/medical
+	shoes = /obj/item/clothing/shoes/black
+	back = /obj/item/storage/backpack/satchel/med
+	l_store = /obj/item/storage/pouch/firstaid/full
+
+
+//Chef
+/datum/job/civ/chef
+	title = "Colony Chef"
+	skills_type = /datum/skills/civilian/survivor/chef
+	outfit = /datum/outfit/job/civ/chef
+
+
+/datum/outfit/job/civ/chef
+	name = "Colony Chef"
+	jobtype = /datum/job/civ/chef
+
+	head = /obj/item/clothing/head/chefhat
+	ears = /obj/item/radio/headset
+	w_uniform = /obj/item/clothing/under/rank/chef
+	shoes = /obj/item/clothing/shoes/black
+	back = /obj/item/storage/backpack/satchel/norm
+
+
+//Chaplain
+/datum/job/civ/chaplain
+	title = "Colony Chaplain"
+	outfit = /datum/outfit/job/civ/chaplain
+
+
+/datum/outfit/job/civ/chaplain
+	name = "Colony Chaplain"
+	jobtype = /datum/job/civ/chaplain
+
+	ears = /obj/item/radio/headset
+	w_uniform = /obj/item/clothing/under/rank/chaplain
+	shoes = /obj/item/clothing/shoes/black
+	back = /obj/item/storage/backpack/satchel/norm
+
+
+//Farmer
+/datum/job/civ/farmer
+	title = "Colony Farmer"
+	outfit = /datum/outfit/job/civ/farmer
+
+
+/datum/outfit/job/civ/farmer
+	name = "Colony Farmer"
+	jobtype = /datum/job/civ/chaplain
+
+	ears = /obj/item/radio/headset
+	w_uniform = /obj/item/clothing/under/overalls
+	shoes = /obj/item/clothing/shoes/leather
+	back = /obj/item/storage/backpack/satchel/norm
+
+//Janitor
+/datum/job/civ/janitor
+	title = "Colony Janitor"
+	outfit = /datum/outfit/job/civ/farmer
+
+
+/datum/outfit/job/civ/farmer
+	name = "Colony Janitor"
+	jobtype = /datum/job/civ/janitor
+
+	head = /obj/item/clothing/head/soft/purple
+	ears = /obj/item/radio/headset
+	w_uniform = /obj/item/clothing/under/rank/janitor
+	shoes = /obj/item/clothing/shoes/galoshes
 	back = /obj/item/storage/backpack/satchel/norm
 
 
