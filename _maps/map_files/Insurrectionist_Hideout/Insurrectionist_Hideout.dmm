@@ -63,6 +63,10 @@
 /obj/effect/landmark/start/job/urf_medic,
 /turf/open/floor/plating/asteroidplating,
 /area/swordbase/ground/inniecave)
+"cb" = (
+/obj/machinery/telecomms/relay/preset/telecomms,
+/turf/open/floor,
+/area/swordbase/ground/outdoors)
 "co" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -694,10 +698,8 @@
 /turf/open/floor/plating/asteroidfloor,
 /area/swordbase/ground/inniecave)
 "GL" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/telecomms/relay,
-/turf/open/floor/plating/ground/mars/random/cave,
-/area/swordbase/ground/inniecave)
+/turf/closed/wall,
+/area/swordbase/ground/outdoors)
 "GP" = (
 /obj/structure/ladder{
 	height = 1;
@@ -796,6 +798,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidplating,
 /area/swordbase/ground/inniecave)
+"MM" = (
+/turf/open/floor,
+/area/swordbase/ground/outdoors)
 "Oa" = (
 /obj/structure/rack,
 /obj/item/explosive/grenade/frag/m9,
@@ -1105,11 +1110,11 @@ lm
 lm
 lm
 lm
-lm
-lm
-lm
-lm
-lm
+GL
+GL
+GL
+GL
+GL
 "}
 (2,1,1) = {"
 lm
@@ -1157,11 +1162,11 @@ lm
 lm
 lm
 lm
-lm
-lm
-lm
-lm
-lm
+GL
+MM
+MM
+MM
+GL
 "}
 (3,1,1) = {"
 lm
@@ -1209,11 +1214,11 @@ lm
 lm
 lm
 lm
-lm
-lm
-lm
-lm
-lm
+GL
+MM
+cb
+MM
+GL
 "}
 (4,1,1) = {"
 lm
@@ -1261,11 +1266,11 @@ lm
 lm
 lm
 lm
-lm
-lm
-lm
-lm
-lm
+GL
+MM
+MM
+MM
+GL
 "}
 (5,1,1) = {"
 lm
@@ -1313,11 +1318,11 @@ lm
 lm
 lm
 lm
-lm
-lm
-lm
-lm
-lm
+GL
+GL
+GL
+GL
+GL
 "}
 (6,1,1) = {"
 lm
@@ -2224,7 +2229,7 @@ nF
 aA
 aA
 aA
-GL
+re
 fD
 cz
 re
