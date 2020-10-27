@@ -14,12 +14,22 @@
 		/datum/job/insurrectionist/medic = 6,
 		/datum/job/insurrectionist/engineer = 6,
 		/datum/job/insurrectionist/leader = 1,
+		/datum/job/gcpd/chief = 1,
+		/datum/job/gcpd/cop = 3,
+		/datum/job/civ/colonist = 4,
+		/datum/job/civ/doctor = 1,
+		/datum/job/civ/chef = 1,
+		/datum/job/civ/chaplain = 1,
+		/datum/job/civ/farmer = 1,
+		/datum/job/civ/janitor = 1
+		/*
 		/datum/job/covenant/sangheili/minor = -1,
 		/datum/job/covenant/sangheili/ranger = -1,
 		/datum/job/covenant/sangheili/officer = -1,
 		/datum/job/covenant/sangheili/specops = -1,
 		/datum/job/covenant/sangheili/ultra = -1,
 		/datum/job/covenant/sangheili/general = -1
+		*/
 	)
 
 /datum/game_mode/extended/announce()
@@ -42,3 +52,5 @@
 
 	announce_medal_awards()
 	announce_round_stats()
+
+

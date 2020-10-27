@@ -79,3 +79,51 @@
 	icon_state = "IO"
 	job = /datum/job/insurrectionist/basic
 	jobspawn_override = TRUE
+
+//GCPD//
+
+/obj/effect/landmark/start/job/gcpd_chief
+	icon_state = "CL"
+	job = /datum/job/gcpd/chief
+	jobspawn_override = TRUE
+
+/obj/effect/landmark/start/job/gcpd_cop
+	icon_state = "CL"
+	job = /datum/job/gcpd/chief
+	jobspawn_override = TRUE
+
+//COLONIST//
+
+/obj/effect/landmark/start/job/halo_civ_colonist
+	icon_state = "CL"
+	job = /datum/job/civ/colonist
+	jobspawn_override = TRUE
+
+/obj/effect/landmark/start/job/halo_civ_doctor
+	icon_state = "CL"
+	job = /datum/job/civ/doctor
+	jobspawn_override = TRUE
+
+
+/obj/effect/landmark/start/job/halo_civ_chaplain
+	icon_state = "CL"
+	job = /datum/job/civ/chaplain
+	jobspawn_override = TRUE
+
+
+/obj/effect/landmark/start/job/halo_civ_chef
+	icon_state = "CL"
+	job = /datum/job/civ/chef
+	jobspawn_override = TRUE
+
+/obj/effect/landmark/start/job/halo_civ_farmer
+	icon_state = "CL"
+	job = /datum/job/civ/farmer
+	jobspawn_override = TRUE
+
+/obj/effect/landmark/start/job/halo_civ_janitor
+	icon_state = "CL"
+	job = /datum/job/civ/janitor
+	jobspawn_override = TRUE
+
+
