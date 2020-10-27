@@ -776,7 +776,7 @@
 	item_state = "gcpd_m"
 	slowdown = SLOWDOWN_ARMOR_MEDIUM
 	flags_armor_protection = CHEST|GROIN|ARMS|LEGS|HANDS|FEET
-	soft_armor = list("melee" = 55, "bullet" = 40, "laser" = 30, "energy" = 45, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 50)
+	soft_armor = list("melee" = 55, "bullet" = 45, "laser" = 30, "energy" = 45, "bomb" = 60, "bio" = 30, "rad" = 30, "fire" = 30, "acid" = 30)
 	flags_item_map_variant = NONE
 
 /obj/item/clothing/suit/storage/marine/gcpd_h
@@ -786,7 +786,7 @@
 	item_state = "gcpd_h"
 	slowdown = SLOWDOWN_ARMOR_HEAVY
 	flags_armor_protection = CHEST|GROIN|ARMS|LEGS|HANDS|FEET
-	soft_armor = list("melee" = 65, "bullet" = 70, "laser" = 70, "energy" = 40, "bomb" = 30, "bio" = 10, "rad" = 10, "fire" = 40, "acid" = 60)
+	soft_armor = list("melee" = 65, "bullet" = 53, "laser" = 35, "energy" = 50, "bomb" = 60, "bio" = 30, "rad" = 30, "fire" = 30, "acid" = 30)
 	flags_item_map_variant = NONE
 
 /obj/item/clothing/suit/storage/marine/gcpd_l

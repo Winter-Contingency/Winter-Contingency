@@ -126,4 +126,9 @@
 	job = /datum/job/civ/janitor
 	jobspawn_override = TRUE
 
+/obj/effect/landmark/start/job/halo_civ_mayor
+	icon_state = "CL"
+	job = /datum/job/civ/mayor
+	jobspawn_override = TRUE
+
 

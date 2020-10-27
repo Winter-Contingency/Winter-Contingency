@@ -478,6 +478,32 @@
 	back = /obj/item/storage/backpack/satchel/norm
 
 
+//Mayor
+/datum/job/civ/mayor
+	title = "Colony Mayor"
+	skills_type = /datum/skills/civilian/survivor
+	outfit = /datum/outfit/job/civ/mayor
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS, ACCESS_MARINE_BRIG)
+	minimal_access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS, ACCESS_MARINE_BRIG)
+	display_order = JOB_DISPLAY_ORDER_COLONIST
+	faction = FACTION_TERRAGOV
+	job_flags = JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_PROVIDES_BANK_ACCOUNT
+
+/datum/outfit/job/civ/mayor
+	name = "Colony Mayor"
+	jobtype = /datum/job/civ/mayor
+
+	ears = /obj/item/radio/headset/gcpd
+	w_uniform = /obj/item/clothing/under/suit_jacket/checkered
+	shoes = /obj/item/clothing/shoes/laceup
+	back = /obj/item/storage/backpack/satchel
+	r_store = /obj/item/flash
+
+/datum/outfit/job/civ/mayor/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	. = ..()
+	H.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m6/m6b_security, SLOT_IN_BACKPACK)
+
+
 //Doctor
 /datum/job/civ/doctor
 	title = "Colony Doctor"

@@ -16,6 +16,7 @@
 		/datum/job/insurrectionist/leader = 1,
 		/datum/job/gcpd/chief = 1,
 		/datum/job/gcpd/cop = 3,
+		/datum/job/civ/mayor = 1,
 		/datum/job/civ/colonist = 4,
 		/datum/job/civ/doctor = 1,
 		/datum/job/civ/chef = 1,

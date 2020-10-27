@@ -267,8 +267,7 @@
 	icon_state = "ert_medical"
 
 
-//==========================// MARINE BACKPACKS\\================================\\
-//=======================================================================\\
+//MARINE BACKPACKS
 
 /obj/item/storage/backpack/marine
 	name = "\improper lightweight IMP backpack"
