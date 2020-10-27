@@ -338,8 +338,10 @@
 /turf/open/floor/tile/red/yellowfull,
 /area/tdome/tdomeadmin)
 "bq" = (
-/turf/closed/wall/indestructible/mineral,
-/area/space)
+/turf/open/floor/mainship/cargo/arrow{
+	dir = 1
+	},
+/area/centcom/supply)
 "br" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -356,10 +358,10 @@
 /turf/open/floor/tile/red/yellowfull,
 /area/tdome/tdomeadmin)
 "bu" = (
-/turf/closed/wall/mainship/outer{
-	name = "reinforced hull"
+/turf/open/floor/mainship/cargo/arrow{
+	dir = 8
 	},
-/area/space)
+/area/centcom/supply)
 "bv" = (
 /obj/item/tool/wrench,
 /turf/open/floor/tile/red/yellowfull,
@@ -661,38 +663,36 @@
 	},
 /area/deathmatch)
 "cy" = (
-/turf/open/space/basic,
-/area/centcom)
+/obj/docking_port/stationary/supply,
+/turf/open/floor/plating{
+	icon_state = "test_floor5"
+	},
+/area/centcom/supply)
 "cz" = (
 /obj/structure/table,
 /obj/effect/landmark/weapon_spawn/tier3_weapon_spawn,
 /turf/open/floor/wood,
 /area/deathmatch)
 "cA" = (
-/turf/open/floor/plating/plating_catwalk,
-/area/centcom)
-"cB" = (
-/turf/closed/wall/mainship/outer{
-	name = "reinforced hull"
+/turf/open/floor/mainship/cargo/arrow{
+	dir = 4
 	},
 /area/centcom/supply)
+"cB" = (
+/turf/open/floor/plating/plating_catwalk,
+/area/centcom/supply)
 "cC" = (
-/turf/open/floor/mainship/stripesquare,
-/area/centcom)
+/obj/machinery/computer/supplycomp,
+/turf/open/floor/plating/plating_catwalk,
+/area/centcom/supply)
 "cD" = (
-/turf/open/floor/mainship/cargo/arrow{
-	dir = 8
-	},
-/area/centcom)
+/turf/open/floor/mainship/cargo/arrow,
+/area/centcom/supply)
 "cE" = (
 /turf/closed/shuttle/dropship1{
 	icon_state = "52"
 	},
 /area/deathmatch)
-"cF" = (
-/obj/machinery/computer/supplycomp,
-/turf/open/floor/plating/plating_catwalk,
-/area/centcom)
 "cG" = (
 /obj/structure/lattice,
 /turf/open/ground/coast/corner{
@@ -1701,14 +1701,6 @@
 "in" = (
 /turf/open/floor/mainship/stripesquare,
 /area/centcom/supply)
-"ir" = (
-/turf/open/floor/plating/plating_catwalk,
-/area/centcom/supply)
-"iv" = (
-/turf/open/floor/mainship/cargo/arrow{
-	dir = 1
-	},
-/area/centcom/supply)
 "ji" = (
 /obj/effect/landmark/newplayer_start,
 /turf/open/floor,
@@ -1716,14 +1708,6 @@
 "kx" = (
 /turf/closed/wall/indestructible/splashscreen,
 /area/start)
-"nq" = (
-/turf/open/floor/mainship/cargo/arrow{
-	dir = 4
-	},
-/area/centcom/supply)
-"nK" = (
-/turf/open/floor/mainship/cargo/arrow,
-/area/centcom/supply)
 "pt" = (
 /turf/open/ground/grass,
 /area/deathmatch)
@@ -1854,12 +1838,6 @@
 "OG" = (
 /turf/open/ai_visible,
 /area/ai_multicam_room)
-"TC" = (
-/obj/docking_port/stationary/supply,
-/turf/open/floor/plating{
-	icon_state = "test_floor5"
-	},
-/area/centcom/supply)
 "VE" = (
 /obj/effect/landmark/ai_multicam_room,
 /turf/open/ai_visible,
@@ -3638,15 +3616,15 @@ aa
 aa
 aa
 aa
-bu
-bu
-bu
-bu
-bu
-bu
-bu
-bu
-bu
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -3691,13 +3669,13 @@ aa
 aa
 aa
 dX
-cA
-cC
-cC
-cD
-cC
-cC
-cF
+dX
+dX
+dX
+dX
+dX
+dX
+dX
 dX
 aa
 aa
@@ -3743,13 +3721,13 @@ aa
 aa
 aa
 dX
+cB
 in
-ej
-ej
-ej
-ej
-ej
 in
+bu
+in
+in
+cC
 dX
 aa
 aa
@@ -3847,13 +3825,13 @@ aa
 aa
 aa
 dX
-iv
+in
 ej
 ej
-TC
 ej
 ej
-nK
+ej
+in
 dX
 aa
 aa
@@ -3899,13 +3877,13 @@ aa
 aa
 aa
 dX
-in
+bq
 ej
 ej
+cy
 ej
 ej
-ej
-in
+cD
 dX
 aa
 aa
@@ -4003,13 +3981,13 @@ aa
 aa
 aa
 dX
-ir
 in
+ej
+ej
+ej
+ej
+ej
 in
-nq
-in
-in
-ir
 dX
 aa
 aa
@@ -4056,11 +4034,11 @@ aa
 aa
 dX
 cB
-cB
-cB
-cB
-cB
-cB
+in
+in
+cA
+in
+in
 cB
 dX
 aa
@@ -4106,15 +4084,15 @@ aa
 aa
 aa
 aa
-cy
-cy
-cy
-cy
-cy
-cy
-cy
-cy
-cy
+dX
+dX
+dX
+dX
+dX
+dX
+dX
+dX
+dX
 aa
 aa
 aa
@@ -4174,52 +4152,52 @@ aa
 (45,1,1) = {"
 aa
 aa
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
-bq
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
 aa
 aa
 "}

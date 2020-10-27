@@ -1950,6 +1950,7 @@
 	dir = 4;
 	pixel_x = -48
 	},
+/obj/effect/landmark/start/job/halo_civ_janitor,
 /turf/open/floor/plating,
 /area/swordbase/ground/janitor_closet)
 "tD" = (
@@ -3283,6 +3284,11 @@
 	},
 /turf/open/floor/freezer,
 /area/swordbase/ground/bathroom)
+"DM" = (
+/obj/machinery/light,
+/obj/effect/landmark/start/job/halo_civ_doctor,
+/turf/open/floor/mainship/sterile/side,
+/area/swordbase/ground/medbaysouth)
 "DN" = (
 /obj/structure/largecrate/random/case,
 /turf/open/floor/plating,
@@ -3806,6 +3812,10 @@
 	},
 /turf/open/floor/tile/dark,
 /area/swordbase/ground/armory)
+"HJ" = (
+/obj/effect/landmark/start/job/halo_civ_colonist,
+/turf/open/floor/plating/ground/mars/random/cave,
+/area/swordbase/ground/outdoors)
 "HP" = (
 /turf/open/floor/plating/ground/mars/random/cave/rock{
 	dir = 8
@@ -4258,6 +4268,10 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/swordbase/ground/mainhall)
+"Ln" = (
+/obj/effect/landmark/start/job/halo_civ_farmer,
+/turf/open/floor/plating/ground/mars/random/cave,
+/area/swordbase/ground/outdoors)
 "Lo" = (
 /obj/vehicle/train/cargo/trolley,
 /obj/effect/decal/cleanable/dirt,
@@ -4782,6 +4796,10 @@
 /area/swordbase/ground/checkpoint)
 "PS" = (
 /turf/open/floor/plating,
+/area/swordbase/ground/outdoors)
+"PT" = (
+/obj/effect/landmark/start/job/halo_civ_chaplain,
+/turf/open/floor/plating/ground/mars/random/cave,
 /area/swordbase/ground/outdoors)
 "PU" = (
 /obj/structure/flora/desert/grass,
@@ -5427,6 +5445,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/swordbase/ground/outdoors)
+"Wa" = (
+/obj/effect/landmark/start/job/halo_civ_chef,
+/turf/open/floor/freezer,
+/area/swordbase/ground/kitchen)
 "Wd" = (
 /obj/machinery/door/airlock/multi_tile/medical{
 	dir = 1;
@@ -6516,7 +6538,7 @@ nw
 nw
 nw
 nw
-MR
+nw
 nw
 nw
 nw
@@ -7488,7 +7510,7 @@ nw
 nw
 nw
 nw
-MR
+Ln
 MR
 MR
 MR
@@ -7610,9 +7632,9 @@ MR
 nw
 nw
 nw
+HJ
 MR
-MR
-MR
+PT
 MR
 MR
 nw
@@ -7733,9 +7755,9 @@ nw
 nw
 nw
 nw
-MR
-MR
-MR
+HJ
+HJ
+HJ
 nw
 nw
 nw
@@ -9639,7 +9661,7 @@ Mt
 po
 sY
 Ti
-Ti
+Wa
 Mt
 GF
 yp
@@ -13936,7 +13958,7 @@ qy
 qy
 qy
 mL
-iy
+DM
 Ui
 nw
 nw
