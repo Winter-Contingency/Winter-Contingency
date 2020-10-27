@@ -217,6 +217,10 @@
 	back = /obj/item/storage/backpack/lightpack
 	l_hand = /obj/item/storage/bible/koran
 
+
+/*
+
+//temporarily disabled for now
 //Covenant
 
 /datum/job/covenant
@@ -358,3 +362,232 @@
 	id = /obj/item/card/id/dogtag
 	ears = /obj/item/radio/headset/unsc
 	back = /obj/item/storage/backpack/marine/satchel
+
+*/
+
+//GCPD
+
+/datum/job/gcpd
+	selection_color = "#d9d9d9"
+	job_category = JOB_CAT_GCPD
+	faction = FACTION_GCPD
+
+/datum/job/gcpd/chief
+	title = "Colonial Police Chief"
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS, ACCESS_MARINE_BRIG)
+	minimal_access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS, ACCESS_MARINE_BRIG)
+	display_order = JOB_DISPLAY_ORDER_GCPD_CHIEF
+	skills_type = /datum/skills/civilian/survivor/gcpd
+	faction = FACTION_GCPD
+	job_flags = JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_PROVIDES_BANK_ACCOUNT
+	outfit = /datum/outfit/job/gcpd/chief
+
+/datum/job/gcpd/cop
+	title = "Colonial Police Officer"
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS, ACCESS_MARINE_BRIG)
+	minimal_access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS, ACCESS_MARINE_BRIG)
+	display_order = JOB_DISPLAY_ORDER_GCPD_CHIEF
+	skills_type = /datum/skills/civilian/survivor/gcpd
+	faction = FACTION_GCPD
+	job_flags = JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_PROVIDES_BANK_ACCOUNT
+	outfit = /datum/outfit/job/gcpd/cop
+
+/datum/outfit/job/gcpd/cop
+	name = "Colonial Police Officer"
+	jobtype = /datum/job/gcpd/cop
+
+	w_uniform = /obj/item/clothing/under/marine/gcpd
+	wear_suit = /obj/item/clothing/suit/storage/marine/gcpd_l
+	glasses = /obj/item/clothing/glasses/hud/security/gcpd
+	ears = /obj/item/radio/headset/gcpd
+	shoes = /obj/item/clothing/shoes/marine/gcpd
+	head = /obj/item/clothing/head/soft/gcpd
+	gloves = /obj/item/clothing/gloves/marine/gcpd
+	back = /obj/item/storage/backpack/satchel/sec
+	belt = /obj/item/storage/belt/security
+	l_store = /obj/item/storage/pouch/firstaid/full
+	r_store = /obj/item/flash
+
+/datum/outfit/job/gcpd/cop/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	. = ..()
+	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/flashbang, SLOT_IN_SUIT)
+	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/flashbang, SLOT_IN_SUIT)
+
+	H.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m6/m6b_security, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/taser, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/weapon/baton, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/restraints/handcuffs, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/m6, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/m6, SLOT_IN_BELT)
+
+/datum/outfit/job/gcpd/chief
+	name = "Colonial Police Chief"
+	jobtype = /datum/job/gcpd/chief
+
+	w_uniform = /obj/item/clothing/under/marine/gcpd
+	wear_suit = /obj/item/clothing/suit/storage/marine/gcpd
+	glasses = /obj/item/clothing/glasses/hud/security/gcpd
+	ears = /obj/item/radio/headset/gcpd
+	shoes = /obj/item/clothing/shoes/marine/gcpd
+	head = /obj/item/clothing/head/helmet/marine/gcpd
+	gloves = /obj/item/clothing/gloves/marine/gcpd
+	back = /obj/item/storage/backpack/satchel/sec
+	belt = /obj/item/storage/belt/security
+	l_store = /obj/item/storage/pouch/firstaid/full
+	r_store = /obj/item/flash
+
+/datum/outfit/job/gcpd/chief/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	. = ..()
+	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/flashbang, SLOT_IN_SUIT)
+	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/flashbang, SLOT_IN_SUIT)
+
+	H.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m6/m6b_security, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/taser, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/weapon/baton, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/restraints/handcuffs, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/m6, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/m6, SLOT_IN_BELT)
+
+
+
+//colonists
+
+/datum/job/civ
+	selection_color = "#d9d9d9"
+	job_category = JOB_CAT_COLONIST
+	faction = FACTION_COLONIST
+
+//Colonist
+/datum/job/civ/colonist
+	title = "Colonist"
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS)
+	minimal_access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS)
+	display_order = JOB_DISPLAY_ORDER_COLONIST
+	skills_type = /datum/skills/civilian
+	faction = FACTION_TERRAGOV
+	job_flags = JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_PROVIDES_BANK_ACCOUNT
+	outfit = /datum/outfit/job/civ/colonist
+
+/datum/outfit/job/civ/colonist
+	name = "Colonist"
+	jobtype = /datum/job/civ/colonist
+
+	ears = /obj/item/radio/headset
+	w_uniform = /obj/item/clothing/under/serviceoveralls
+	shoes = /obj/item/clothing/shoes/black
+	back = /obj/item/storage/backpack/satchel/norm
+
+
+//Doctor
+/datum/job/civ/doctor
+	title = "Colony Doctor"
+	skills_type = /datum/skills/civilian/survivor/doctor
+	outfit = /datum/outfit/job/civ/doctor
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS)
+	minimal_access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS)
+	display_order = JOB_DISPLAY_ORDER_COLONIST
+	faction = FACTION_TERRAGOV
+	job_flags = JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_PROVIDES_BANK_ACCOUNT
+
+
+/datum/outfit/job/civ/doctor
+	name = "Colony Doctor"
+	jobtype = /datum/job/civ/doctor
+
+	ears = /obj/item/radio/headset
+	w_uniform = /obj/item/clothing/under/rank/medical
+	shoes = /obj/item/clothing/shoes/black
+	back = /obj/item/storage/backpack/satchel/med
+	l_store = /obj/item/storage/pouch/firstaid/full
+
+
+//Chef
+/datum/job/civ/chef
+	title = "Colony Chef"
+	skills_type = /datum/skills/civilian/survivor/chef
+	outfit = /datum/outfit/job/civ/chef
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS)
+	minimal_access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS)
+	display_order = JOB_DISPLAY_ORDER_COLONIST
+	faction = FACTION_TERRAGOV
+	job_flags = JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_PROVIDES_BANK_ACCOUNT
+
+
+/datum/outfit/job/civ/chef
+	name = "Colony Chef"
+	jobtype = /datum/job/civ/chef
+
+	head = /obj/item/clothing/head/chefhat
+	ears = /obj/item/radio/headset
+	w_uniform = /obj/item/clothing/under/rank/chef
+	shoes = /obj/item/clothing/shoes/black
+	back = /obj/item/storage/backpack/satchel/norm
+
+
+//Chaplain
+/datum/job/civ/chaplain
+	title = "Colony Chaplain"
+	outfit = /datum/outfit/job/civ/chaplain
+	skills_type = /datum/skills/civilian
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS)
+	minimal_access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS)
+	display_order = JOB_DISPLAY_ORDER_COLONIST
+	faction = FACTION_TERRAGOV
+	job_flags = JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_PROVIDES_BANK_ACCOUNT
+
+
+/datum/outfit/job/civ/chaplain
+	name = "Colony Chaplain"
+	jobtype = /datum/job/civ/chaplain
+
+	ears = /obj/item/radio/headset
+	w_uniform = /obj/item/clothing/under/rank/chaplain
+	shoes = /obj/item/clothing/shoes/black
+	back = /obj/item/storage/backpack/satchel/norm
+
+
+//Farmer
+/datum/job/civ/farmer
+	title = "Colony Farmer"
+	outfit = /datum/outfit/job/civ/farmer
+	skills_type = /datum/skills/civilian/survivor
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS)
+	minimal_access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS)
+	display_order = JOB_DISPLAY_ORDER_COLONIST
+	faction = FACTION_TERRAGOV
+	job_flags = JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_PROVIDES_BANK_ACCOUNT
+
+
+/datum/outfit/job/civ/farmer
+	name = "Colony Farmer"
+	jobtype = /datum/job/civ/farmer
+
+	head = /obj/item/clothing/head/boonie
+	ears = /obj/item/radio/headset
+	w_uniform = /obj/item/clothing/under/overalls
+	shoes = /obj/item/clothing/shoes/leather
+	back = /obj/item/storage/backpack/satchel/norm
+
+//Janitor
+/datum/job/civ/janitor
+	title = "Colony Janitor"
+	outfit = /datum/outfit/job/civ/janitor
+	skills_type = /datum/skills/civilian/survivor
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS)
+	minimal_access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS)
+	display_order = JOB_DISPLAY_ORDER_COLONIST
+	faction = FACTION_TERRAGOV
+	job_flags = JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_PROVIDES_BANK_ACCOUNT
+
+
+/datum/outfit/job/civ/janitor
+	name = "Colony Janitor"
+	jobtype = /datum/job/civ/janitor
+
+	head = /obj/item/clothing/head/soft/purple
+	ears = /obj/item/radio/headset
+	w_uniform = /obj/item/clothing/under/rank/janitor
+	shoes = /obj/item/clothing/shoes/galoshes
+	back = /obj/item/storage/backpack/satchel/norm
+
+

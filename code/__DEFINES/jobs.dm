@@ -40,6 +40,9 @@
 #define JOB_DISPLAY_ORDER_COVENANT_SANG_SPECOPS		37
 #define JOB_DISPLAY_ORDER_COVENANT_SANG_ULTRA		38
 #define JOB_DISPLAY_ORDER_COVENANT_SANG_GENERAL		39
+#define JOB_DISPLAY_ORDER_GCPD_CHIEF				40
+#define JOB_DISPLAY_ORDER_GCPD_COP					41
+#define JOB_DISPLAY_ORDER_COLONIST					42
 
 
 
@@ -83,6 +86,9 @@
 #define UNSC_MEDIC "UNSC Combat Medic"
 #define UNSC_ENGINEER "UNSC Combat Engineer"
 #define UNSC_LEADER "UNSC Squad Leader"
+#define GCPD_CHIEF "Colonial Police Chief"
+#define GCPD_COP "Colonial Police Officer"
+#define CIV_COLONIST "Colonist"
 #define INSURRECTIONIST "Insurrectionist"
 #define INSURRECTIONIST_MEDIC "Insurrectionist Bonesetter"
 #define INSURRECTIONIST_ENGINEER "Insurrectionist Sapper"
@@ -106,6 +112,8 @@
 #define JOB_CAT_UNASSIGNED "Unassigned"
 #define JOB_CAT_UNSC "UNSC"
 #define JOB_CAT_INSURRECTION "Insurrection"
+#define JOB_CAT_GCPD "Colonial Police"
+#define JOB_CAT_COLONIST "Colonist"
 #define JOB_CAT_COVENANT "Covenant"
 
 GLOBAL_LIST_EMPTY(jobs_command)
@@ -172,3 +180,5 @@ GLOBAL_LIST_INIT(jobs_covenant, list(COVENANT_SANG_MINOR,COVENANT_SANG_RANGER,CO
 #define SMARTIE_POINTS_HIGH 3
 
 #define SQUAD_MAX_POSITIONS(total_positions) CEILING(total_positions / length(SSjob.active_squads), 1)
+
+

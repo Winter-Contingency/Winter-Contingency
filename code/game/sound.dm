@@ -132,7 +132,7 @@
 
 		chatOutput.sendMusic(web_sound_url,music_extra_data)
 
-/client/proc/play_title_music_legacy(vol = 55)
+/client/proc/play_title_music_legacy(vol = 30)
     var/songs = list(
     'sound/music/loopingsteps.ogg',
     'sound/music/pogo.ogg',
@@ -148,6 +148,7 @@
     'sound/music/PAINKILLER.ogg',
     'sound/music/brother.ogg',
     'sound/music/delune.ogg',
+    'sound/music/sunday.ogg',
     )
     if(!SSticker?.login_music)
         return FALSE

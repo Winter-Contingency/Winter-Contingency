@@ -43,6 +43,9 @@
 			to_chat(M, "<span class='notice'>Through a miracle you managed to survive the attack. But are you truly safe now?</span>")
 
 
+
+//CM Survivors
+
 //Assistant
 /datum/job/survivor/assistant
 	title = "Assistant Survivor"
@@ -91,6 +94,7 @@
 	wear_suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/black
 	back = /obj/item/storage/backpack/satchel/med
+
 
 
 //Liaison
@@ -273,3 +277,6 @@
 	shoes = /obj/item/clothing/shoes/ruggedboot
 	back = /obj/item/storage/backpack/satchel/rugged
 	gloves = /obj/item/clothing/gloves/ruggedgloves
+
+
+
