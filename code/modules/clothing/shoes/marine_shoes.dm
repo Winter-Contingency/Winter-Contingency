@@ -141,6 +141,8 @@
 	soft_armor = list("melee" = 25, "bullet" = 20, "laser" = 20, "energy" = 20, "bomb" = 30, "bio" = 20, "rad" = 20, "fire" = 20, "acid" = 25)
 	flags_inventory = NOSLIPPING
 
+//Halo
+
 /obj/item/clothing/shoes/marine/unscmarine
 	name = "UNSC marine combat boots"
 	desc = "Standard issue combat boots for combat scenarios or combat situations."
@@ -188,6 +190,15 @@
 	desc = "A pair of traditional combat boots that provides minor protection. May protect against toe stubs."
 	icon_state = "innie_warlord"
 	item_state = "innie_warlord"
+
+//ODST
+
+/obj/item/clothing/shoes/marine/odst
+	name = "ODST armored combat boots"
+	desc = "Standard issue ODST armored combat boots for combat scenarios or combat situations."
+	soft_armor = list("melee" = 50, "bullet" = 55, "laser" = 55, "energy" = 55, "bomb" = 55, "bio" = 10, "rad" = 0, "fire" = 10, "acid" = 25)
+	icon_state = "odst_boots"
+	item_state = "odst_boots"
 
 //gcpd
 

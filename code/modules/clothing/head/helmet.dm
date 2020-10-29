@@ -685,8 +685,89 @@
 	icon_state = "innie_warlord"
 	item_state = "innie_warlord"
 
-//gcpd
+//ODST//
 
+/obj/item/clothing/head/helmet/marine/odst
+	name = "ODST helmet (standard)"
+	desc = "A general purpose ODST helmet."
+	icon_state = "odst_helmet"
+	item_state = "odst_helmet"
+	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+
+
+/obj/item/clothing/head/helmet/marine/odst/sl
+	name = "ODST helmet (squad leader)"
+	desc = "A general purpose ODST SL helmet."
+	icon_state = "odst_sl_helmet"
+	item_state = "odst_sl_helmet"
+	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+
+
+/obj/item/clothing/head/helmet/marine/odst/engi
+	name = "ODST helmet (engineer)"
+	desc = "A general purpose ODST Engineer helmet."
+	icon_state = "odst_engi_helmet"
+	item_state = "odst_engi_helmet"
+	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+
+
+/obj/item/clothing/head/helmet/marine/odst/gungnir
+	name = "ODST helmet (GUNGNIR)"
+	desc = "A general purpose ODST GUNGNIR helmet."
+	icon_state = "odst_gungnir_helmet"
+	item_state = "odst_gungnir_helmet"
+	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+
+
+/obj/item/clothing/head/helmet/marine/odst/recon
+	name = "ODST helmet (recon)"
+	desc = "A general purpose ODST Recon helmet."
+	icon_state = "odst_recon_helmet"
+	item_state = "odst_recon_helmet"
+	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+
+
+/obj/item/clothing/head/helmet/marine/odst/medic
+	name = "ODST helmet (medic)"
+	desc = "A general purpose ODST Medic helmet."
+	icon_state = "odst_medic_helmet"
+	item_state = "odst_medic_helmet"
+	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+
+
+/obj/item/clothing/head/helmet/marine/odst/sniper
+	name = "ODST helmet (sniper)"
+	desc = "A general purpose ODST Sniper helmet."
+	icon_state = "odst_sniper_helmet"
+	item_state = "odst_sniper_helmet"
+	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+
+
+/obj/item/clothing/head/helmet/marine/odst/cqc
+	name = "ODST helmet (cqc)"
+	desc = "A general purpose ODST CQC helmet."
+	icon_state = "odst_cqc_helmet"
+	item_state = "odst_cqc_helmet"
+	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+
+
+//GCPD//
 
 /obj/item/clothing/head/helmet/marine/gcpd
 	name = "PD-M combat helmet"
@@ -701,6 +782,8 @@
 	icon_state = "gcpd_helmet_visor"
 	item_state = "gcpd_helmet_visor"
 	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+
 
 /obj/item/clothing/head/helmet/marine/gcpd/goggles
 	name = "PD-V combat helmet"
@@ -708,4 +791,6 @@
 	icon_state = "gcpd_helmet_g"
 	item_state = "gcpd_helmet_g"
 	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
+
+
 

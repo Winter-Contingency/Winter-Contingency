@@ -724,8 +724,10 @@
 	flags_armor_protection = CHEST|GROIN|ARMS|LEGS|HANDS|FEET
 	soft_armor = list("melee" = 55, "bullet" = 50, "laser" = 40, "energy" = 50, "bomb" = 40, "bio" = 15, "rad" = 15, "fire" = 50, "acid" = 60)
 
-//halo
+//HALO
 
+
+//URF
 /obj/item/clothing/suit/storage/marine/urf
 	name = "P2-M Body Armor (brown)"
 	desc = "A set of United Rebel Front pattern two medium body armor. Provides decent protection against small arms and bladed objects."
@@ -767,7 +769,71 @@
 	icon_state = "innie_warlord"
 	item_state = "innie_warlord"
 
-//gcpd
+
+//ODST
+
+/obj/item/clothing/suit/storage/marine/odst
+	name = "ODST Body Armor (standard)"
+	desc = "A set of Orbital Drop Shock Trooper standard body armor. Provides decent protection against small arms and bladed objects."
+	icon_state = "odst_armor"
+	item_state = "odst_armor"
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
+	flags_armor_protection = CHEST|GROIN|ARMS|LEGS|HANDS|FEET
+	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 50)
+	flags_item_map_variant = NONE
+
+/obj/item/clothing/suit/storage/marine/odst/sl
+	name = "ODST Body Armor (squad leader)"
+	desc = "A set of Orbital Drop Shock Trooper SL body armor. Provides decent protection against small arms and bladed objects."
+	icon_state = "odst_armor_sl"
+	item_state = "odst_armor_sl"
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
+	flags_armor_protection = CHEST|GROIN|ARMS|LEGS|HANDS|FEET
+	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 50)
+	flags_item_map_variant = NONE
+
+/obj/item/clothing/suit/storage/marine/odst/cqc
+	name = "ODST Body Armor (cqc)"
+	desc = "A set of Orbital Drop Shock Trooper CQC body armor. Provides decent protection against small arms and bladed objects."
+	icon_state = "odst_armor_cqc"
+	item_state = "odst_armor_cqc"
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
+	flags_armor_protection = CHEST|GROIN|ARMS|LEGS|HANDS|FEET
+	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 50)
+	flags_item_map_variant = NONE
+
+/obj/item/clothing/suit/storage/marine/odst/engi
+	name = "ODST Body Armor (engineer)"
+	desc = "A set of Orbital Drop Shock Trooper Engineer body armor. Provides decent protection against small arms and bladed objects."
+	icon_state = "odst_armor_engi"
+	item_state = "odst_armor_engi"
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
+	flags_armor_protection = CHEST|GROIN|ARMS|LEGS|HANDS|FEET
+	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 50)
+	flags_item_map_variant = NONE
+
+/obj/item/clothing/suit/storage/marine/odst/sniper
+	name = "ODST Body Armor (engineer)"
+	desc = "A set of Orbital Drop Shock Trooper Sniper body armor. Provides decent protection against small arms and bladed objects."
+	icon_state = "odst_armor_sniper"
+	item_state = "odst_armor_sniper"
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
+	flags_armor_protection = CHEST|GROIN|ARMS|LEGS|HANDS|FEET
+	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 50)
+	flags_item_map_variant = NONE
+
+/obj/item/clothing/suit/storage/marine/odst/medic
+	name = "ODST Body Armor (medic)"
+	desc = "A set of Orbital Drop Shock Trooper Medic body armor. Provides decent protection against small arms and bladed objects."
+	icon_state = "odst_armor_medic"
+	item_state = "odst_armor_medic"
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
+	flags_armor_protection = CHEST|GROIN|ARMS|LEGS|HANDS|FEET
+	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 50)
+	flags_item_map_variant = NONE
+
+
+//GCPD
 
 /obj/item/clothing/suit/storage/marine/gcpd
 	name = "PD-M Body Armor"
