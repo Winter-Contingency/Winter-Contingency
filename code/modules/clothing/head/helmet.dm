@@ -766,6 +766,15 @@
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
 
+/obj/item/clothing/head/helmet/marine/odst/loafe
+	name = "ODST helmet (loafe)"
+	desc = "A general purpose ODST Loafe helmet."
+	icon_state = "odst_helmet_loafe"
+	item_state = "odst_helmet_loafe"
+	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+
 
 //GCPD//
 

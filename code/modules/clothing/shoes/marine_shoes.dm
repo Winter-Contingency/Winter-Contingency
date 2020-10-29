@@ -200,6 +200,13 @@
 	icon_state = "odst_boots"
 	item_state = "odst_boots"
 
+/obj/item/clothing/shoes/marine/odst/loafe
+	name = "ODST (loafe) armored combat boots"
+	desc = "Standard issue ODST (loafe) armored combat boots for combat scenarios or combat situations."
+	soft_armor = list("melee" = 50, "bullet" = 55, "laser" = 55, "energy" = 55, "bomb" = 55, "bio" = 10, "rad" = 0, "fire" = 10, "acid" = 25)
+	icon_state = "odst_boots_loafe"
+	item_state = "odst_boots_loafe"
+
 //gcpd
 
 /obj/item/clothing/shoes/marine/gcpd
