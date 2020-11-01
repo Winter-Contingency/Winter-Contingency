@@ -1259,6 +1259,7 @@ GLOBAL_LIST_INIT(available_specialist_sets, list("Scout Set", "Sniper Set", "Dem
 	listed_products = list(
 		/obj/effect/essentials_set/halo/innie/sl = list (CAT_ESS, "Traditional Officer Armor Set", 0, "white"),
 		/obj/effect/essentials_set/halo/innie/sl/blue = list (CAT_ESS, "Officer Armor Set", 0, "white"),
+		/obj/effect/essentials_set/halo/innie/sl/reno = list (CAT_ESS, "Western 'Reno' Armor Set", 0, "white"),
 		/obj/effect/essentials_set/modular/haloinnie/armorPieces/heavy = list(CAT_AMR, "URF Modular Armor Pieces", 0, "white"),
 		/obj/item/clothing/tie/storage/webbing = list(CAT_WEB, "Tactical webbing", 0, "black"),
 		/obj/item/clothing/tie/holster = list(CAT_WEB, "Shoulder handgun holster", 0, "black"),
@@ -1276,7 +1277,8 @@ GLOBAL_LIST_INIT(available_specialist_sets, list("Scout Set", "Sniper Set", "Dem
 		/obj/item/storage/belt/marine = list(CAT_BEL, "Standard ammo belt", 0, "white"),
 		/obj/item/storage/belt/shotgun = list(CAT_BEL, "Shotgun ammo belt", 0, "black"),
 		/obj/item/storage/belt/medical = list(CAT_BEL, "Medical belt", 0, "black"),
-		/obj/item/storage/belt/gun/pistol/standard_pistol = list(CAT_BEL, "Pistol belt", 0, "black"))
+		/obj/item/storage/belt/gun/pistol/standard_pistol = list(CAT_BEL, "Pistol belt", 0, "black"),
+		/obj/item/storage/belt/gun/revolver/cowboy_holster = list(CAT_BEL, "Western gunbelt", 0, "black"))
 
 
 
@@ -1616,6 +1618,16 @@ GLOBAL_LIST_INIT(available_specialist_sets, list("Scout Set", "Sniper Set", "Dem
 						/obj/item/clothing/suit/modular/innie,
 						/obj/item/clothing/gloves/marine/urf/black,
 						/obj/item/clothing/head/helmet/marine/urf/black/sl)
+
+/obj/effect/essentials_set/halo/innie/sl/reno
+	spawned_gear_list = list(
+						/obj/item/clothing/under/marine/urf/reno,
+						/obj/item/attachable/bayonetknife,
+						/obj/item/clothing/shoes/marine/urf/blue/reno,
+						/obj/item/clothing/suit/storage/marine/urf/blue/reno,
+						/obj/item/clothing/gloves/marine/urf/black,
+						/obj/item/clothing/head/reno,
+						/obj/item/clothing/glasses/eyepatch)
 
 /obj/effect/essentials_set/halo/innie/medic
 	spawned_gear_list = list(

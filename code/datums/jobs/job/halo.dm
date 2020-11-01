@@ -403,7 +403,7 @@
 	shoes = /obj/item/clothing/shoes/marine/gcpd
 	head = /obj/item/clothing/head/soft/gcpd
 	gloves = /obj/item/clothing/gloves/marine/gcpd
-	back = /obj/item/storage/backpack/satchel/sec
+	back = /obj/item/storage/backpack/satchel/gcpd
 	belt = /obj/item/storage/belt/security
 	l_store = /obj/item/storage/pouch/firstaid/full
 	r_store = /obj/item/flash
@@ -431,7 +431,7 @@
 	shoes = /obj/item/clothing/shoes/marine/gcpd
 	head = /obj/item/clothing/head/helmet/marine/gcpd
 	gloves = /obj/item/clothing/gloves/marine/gcpd
-	back = /obj/item/storage/backpack/satchel/sec
+	back = /obj/item/storage/backpack/satchel/gcpd
 	belt = /obj/item/storage/belt/security
 	l_store = /obj/item/storage/pouch/firstaid/full
 	r_store = /obj/item/flash

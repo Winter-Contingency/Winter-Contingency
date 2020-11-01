@@ -386,6 +386,14 @@
 	item_state = "unsc_odst"
 	rollable_sleeves = FALSE
 
+//URFC//
+/obj/item/clothing/under/marine/urfc
+	name = "URF Commando undersuit"
+	desc = "A standard-issuse URFC undersuit."
+	icon_state = "urf_commando"
+	item_state = "urf_commando"
+	rollable_sleeves = FALSE
+
 //URF//
 /obj/item/clothing/under/marine/urf
 	name = "combat fatigues"
@@ -413,6 +421,13 @@
 	desc = "A robust set of traditonal combat fatigues that has seen use by insurrectionist warlords."
 	icon_state = "innie_warlord"
 	item_state = "innie_warlord"
+	rollable_sleeves = FALSE
+
+/obj/item/clothing/under/marine/urf/reno
+	name = "Western ensemble"
+	desc = "A classic western outfit that resembles what the legendary URF leader 'Johnny Reno' wore."
+	icon_state = "detective"
+	item_state = "detective"
 	rollable_sleeves = FALSE
 
 //GCPD//

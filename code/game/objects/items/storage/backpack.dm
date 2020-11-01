@@ -806,3 +806,94 @@
 	desc = "A rucksack with origins dating back to the mining colonies."
 	icon_state = "som_lightpack"
 	item_state = "som_lightpack"
+
+//Halo
+
+//GCPD
+/obj/item/storage/backpack/satchel/gcpd
+	name = "Colonial Police satchel"
+	desc = "A tough satchel with extra pockets, designed for the Colonial Police."
+	icon_state = "satchel-gcpd"
+
+//ODST
+/obj/item/storage/backpack/odst
+	name = "ODST Rucksack"
+	desc = "A heavy-duty bag carried by ODSTs."
+	icon_state = "odst_pack"
+	storage_slots = null
+	max_storage_space = 30
+	worn_accessible = TRUE
+
+/obj/item/storage/backpack/odst/sl
+	name = "ODST Rucksack (sl)"
+	desc = "A heavy-duty bag carried by ODST squad leaders."
+	icon_state = "odst_pack_sl"
+	storage_slots = null
+	max_storage_space = 30
+	worn_accessible = TRUE
+
+/obj/item/storage/backpack/odst/engi
+	name = "ODST Rucksack (engi)"
+	desc = "A heavy-duty bag carried by ODST engineers."
+	icon_state = "odst_pack_engi"
+	storage_slots = null
+	max_storage_space = 30
+	worn_accessible = TRUE
+
+/obj/item/storage/backpack/odst/medic
+	name = "ODST Rucksack (medic)"
+	desc = "A heavy-duty bag carried by ODST medics."
+	icon_state = "odst_pack_medic"
+	storage_slots = null
+	max_storage_space = 30
+	worn_accessible = TRUE
+
+/obj/item/storage/backpack/odst/sniper
+	name = "ODST Rucksack (sniper)"
+	desc = "A heavy-duty bag carried by ODST snipers."
+	icon_state = "odst_pack_sniper"
+	storage_slots = null
+	max_storage_space = 30
+	worn_accessible = TRUE
+
+/obj/item/storage/backpack/odst/engi
+	name = "ODST Rucksack (cqc)"
+	desc = "A heavy-duty bag carried by ODST CQC specialists."
+	icon_state = "odst_pack_cqc"
+	storage_slots = null
+	max_storage_space = 30
+	worn_accessible = TRUE
+
+//URFC
+/obj/item/storage/backpack/urfc_rifleman
+	name = "URFC Rifleman bag"
+	desc = "A heavy-duty bag carried by URF commando riflemen."
+	icon_state = "urfc_pack_rifleman"
+	storage_slots = null
+	max_storage_space = 30
+	worn_accessible = TRUE
+
+/obj/item/storage/backpack/urfc_medic
+	name = "URFC Medic bag"
+	desc = "A heavy-duty bag carried by URF commando medics."
+	icon_state = "urfc_pack_medic"
+	storage_slots = null
+	max_storage_space = 30
+	worn_accessible = TRUE
+
+/obj/item/storage/backpack/urfc_engi
+	name = "URFC Engineer bag"
+	desc = "A heavy-duty bag carried by URF commando engineers."
+	icon_state = "urfc_pack_engi"
+	storage_slots = null
+	max_storage_space = 30
+	worn_accessible = TRUE
+
+/obj/item/storage/backpack/urfc_pantas
+	name = "URFC Pantas bag"
+	desc = "A heavy-duty bag carried by a URF commando known as Pantas."
+	icon_state = "urfc_pack_pantas"
+	storage_slots = null
+	max_storage_space = 30
+	worn_accessible = TRUE
+

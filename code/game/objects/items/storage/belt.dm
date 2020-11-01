@@ -42,7 +42,7 @@
 
 
 //============================//MARINE BELTS\\==================================\\
-//=======================================================================\\
+//=======================================================================
 
 
 /obj/item/storage/belt/utility
@@ -651,6 +651,16 @@
 	desc = "The T457 is the standard load-bearing equipment of the TGMC. It consists of a modular belt with various clips."
 	icon_state = "tp44_holster"
 	item_state = "tp44_holster"
+	can_hold = list(
+		/obj/item/weapon/gun/revolver,
+		/obj/item/ammo_magazine/revolver
+		)
+
+/obj/item/storage/belt/gun/revolver/cowboy_holster
+	name = "\improper Classic western gunbelt"
+	desc = "A nice western cowboy gunbelt, looks like it can hold a revolver and some ammo."
+	icon_state = "cowboy_holster"
+	item_state = "cowboy_holster"
 	can_hold = list(
 		/obj/item/weapon/gun/revolver,
 		/obj/item/ammo_magazine/revolver
