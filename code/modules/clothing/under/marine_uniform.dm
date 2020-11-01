@@ -426,8 +426,8 @@
 /obj/item/clothing/under/marine/urf/reno
 	name = "Western ensemble"
 	desc = "A classic western outfit that resembles what the legendary URF leader 'Johnny Reno' wore."
-	icon_state = "detective"
-	item_state = "detective"
+	icon_state = "innie_reno"
+	item_state = "innie_reno"
 	rollable_sleeves = FALSE
 
 //GCPD//
