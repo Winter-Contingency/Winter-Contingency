@@ -78,6 +78,7 @@
 	. = ..()
 	to_chat(M, {"\nYou are an NCO in the UNSC, charged with leading a squad of marines. Keep your unit cohesive, and make sure everyone escapes with their lives."})
 
+//UNSC Marine outfits
 
 /datum/outfit/job/unsc
 	name = "UNSC Marine"
@@ -106,6 +107,161 @@
 	id = /obj/item/card/id/dogtag
 	ears = /obj/item/radio/headset/unsc
 	back = /obj/item/storage/backpack/marine/satchel
+
+//ODST
+
+/datum/job/unsc/odst/
+	selection_color = "#3e6e38"
+	job_category = JOB_CAT_ODST
+
+/datum/job/unsc/odst/rifleman
+	title = "ODST Rifleman"
+	paygrade = "E2"
+	comm_title = "ODST-RFL"
+	access = list(ACCESS_UNSC_MARINE, ACCESS_ODST, ACCESS_ODST_RIFLEMAN, ACCESS_MARINE_DROPSHIP)
+	minimal_access = list(ACCESS_UNSC_MARINE, ACCESS_ODST, ACCESS_ODST_RIFLEMAN, ACCESS_MARINE_DROPSHIP)
+	faction = FACTION_UNSC
+	max_positions = 1
+	supervisors = "ODST Squad Leader"
+	outfit = /datum/outfit/job/odst/rifleman
+	display_order = JOB_DISPLAY_ORDER_ODST_RIFLEMAN
+	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST|JOB_FLAG_PROVIDES_SQUAD_HUD
+
+/datum/job/unsc/odst/rifleman/radio_help_message(mob/M)
+	. = ..()
+	to_chat(M, {"\nYou are a ODST Medic in the esteemed United Nations Space Command. You enforce order and maintain peace across the galaxy."})
+
+/datum/job/unsc/odst/engineer
+	title = "ODST Engineer"
+	paygrade = "E3"
+	comm_title = "ODST-ENGI"
+	access = list(ACCESS_UNSC_MARINE, ACCESS_ODST, ACCESS_ODST_ENGINEER, ACCESS_MARINE_DROPSHIP)
+	minimal_access = list(ACCESS_UNSC_MARINE, ACCESS_ODST, ACCESS_ODST_ENGINEER, ACCESS_MARINE_DROPSHIP)
+	faction = FACTION_UNSC
+	max_positions = 1
+	supervisors = "ODST Squad Leader"
+	outfit = /datum/outfit/job/odst/engineer
+	display_order = JOB_DISPLAY_ORDER_ODST_ENGINEER
+	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST|JOB_FLAG_PROVIDES_SQUAD_HUD
+
+/datum/job/unsc/odst/engineer/radio_help_message(mob/M)
+	. = ..()
+	to_chat(M, {"\nYou are a ODST Engineer in the esteemed United Nations Space Command. You enforce order and maintain peace across the galaxy."})
+
+/datum/job/unsc/odst/medic
+	title = "ODST Medic"
+	paygrade = "E3"
+	comm_title = "ODST-MED"
+	access = list(ACCESS_UNSC_MARINE, ACCESS_ODST, ACCESS_ODST_MEDIC, ACCESS_MARINE_DROPSHIP)
+	minimal_access = list(ACCESS_UNSC_MARINE, ACCESS_ODST, ACCESS_ODST_MEDIC, ACCESS_MARINE_DROPSHIP)
+	faction = FACTION_UNSC
+	max_positions = 1
+	supervisors = "ODST Squad Leader"
+	outfit = /datum/outfit/job/odst/medic
+	display_order = JOB_DISPLAY_ORDER_ODST_MEDIC
+	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST|JOB_FLAG_PROVIDES_SQUAD_HUD
+
+/datum/job/unsc/odst/medic/radio_help_message(mob/M)
+	. = ..()
+	to_chat(M, {"\nYou are a ODST Medic in the esteemed United Nations Space Command. You enforce order and maintain peace across the galaxy."})
+
+
+/datum/job/unsc/odst/cqc
+	title = "ODST CQC Specialist"
+	paygrade = "E2"
+	comm_title = "ODST-CQC"
+	access = list(ACCESS_UNSC_MARINE, ACCESS_ODST, ACCESS_ODST_CQC, ACCESS_MARINE_DROPSHIP)
+	minimal_access = list(ACCESS_UNSC_MARINE, ACCESS_ODST, ACCESS_ODST_CQC, ACCESS_MARINE_DROPSHIP)
+	faction = FACTION_UNSC
+	max_positions = 1
+	supervisors = "ODST Squad Leader"
+	outfit = /datum/outfit/job/odst/cqc
+	display_order = JOB_DISPLAY_ORDER_ODST_CQC
+	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST|JOB_FLAG_PROVIDES_SQUAD_HUD
+
+/datum/job/unsc/odst/cqc/radio_help_message(mob/M)
+	. = ..()
+	to_chat(M, {"\nYou are a ODST CQC Specialist in the esteemed United Nations Space Command. You enforce order and maintain peace across the galaxy."})
+
+/datum/job/unsc/odst/sniper
+	title = "ODST Sniper"
+	paygrade = "E2"
+	comm_title = "ODST-SNPR"
+	access = list(ACCESS_UNSC_MARINE, ACCESS_ODST, ACCESS_ODST_SNIPER, ACCESS_MARINE_DROPSHIP)
+	minimal_access = list(ACCESS_UNSC_MARINE, ACCESS_ODST, ACCESS_ODST_SNIPER, ACCESS_MARINE_DROPSHIP)
+	faction = FACTION_UNSC
+	max_positions = 1
+	supervisors = "ODST Squad Leader"
+	outfit = /datum/outfit/job/odst/sniper
+	display_order = JOB_DISPLAY_ORDER_ODST_SNIPER
+	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST|JOB_FLAG_PROVIDES_SQUAD_HUD
+
+/datum/job/unsc/odst/sniper/radio_help_message(mob/M)
+	. = ..()
+	to_chat(M, {"\nYou are a ODST Sniper in the esteemed United Nations Space Command. You enforce order and maintain peace across the galaxy."})
+
+/datum/job/unsc/odst/sl
+	title = "ODST Squad Leader"
+	paygrade = "E6"
+	comm_title = "ODST-SL"
+	access = list(ACCESS_UNSC_MARINE, ACCESS_ODST, ACCESS_ODST_SQUADLEADER, ACCESS_MARINE_DROPSHIP)
+	minimal_access = list(ACCESS_UNSC_MARINE, ACCESS_ODST, ACCESS_ODST_SQUADLEADER, ACCESS_MARINE_DROPSHIP)
+	faction = FACTION_UNSC
+	max_positions = 1
+	supervisors = "ODST Squad Leader"
+	outfit = /datum/outfit/job/odst/sl
+	display_order = JOB_DISPLAY_ORDER_ODST_SQUADLEADER
+	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST|JOB_FLAG_PROVIDES_SQUAD_HUD
+
+/datum/job/unsc/odst/sl/radio_help_message(mob/M)
+	. = ..()
+	to_chat(M, {"\nYou are a ODST Squad Leader in the esteemed United Nations Space Command. You command the rest of the ODSTs."})
+
+
+
+//ODST outfits
+
+/datum/outfit/job/odst/rifleman
+	name = "ODST Rifleman"
+	jobtype = /datum/job/unsc/odst/rifleman
+	id = /obj/item/card/id/dogtag
+	ears = /obj/item/radio/headset/odst
+	back = /obj/item/storage/backpack/odst
+
+/datum/outfit/job/odst/sniper
+	name = "ODST Sniper"
+	jobtype = /datum/job/unsc/odst/sniper
+	id = /obj/item/card/id/dogtag
+	ears = /obj/item/radio/headset/odst
+	back = /obj/item/storage/backpack/odst/sniper
+
+/datum/outfit/job/odst/cqc
+	name = "ODST CQC Specialist"
+	jobtype = /datum/job/unsc/odst/sniper
+	id = /obj/item/card/id/dogtag
+	ears = /obj/item/radio/headset/odst
+	back = /obj/item/storage/backpack/odst/cqc
+
+/datum/outfit/job/odst/medic
+	name = "ODST Medic"
+	jobtype = /datum/job/unsc/odst/medic
+	id = /obj/item/card/id/dogtag
+	ears = /obj/item/radio/headset/odst
+	back = /obj/item/storage/backpack/odst/medic
+
+/datum/outfit/job/odst/engineer
+	name = "ODST Engineer"
+	jobtype = /datum/job/unsc/odst/engineer
+	id = /obj/item/card/id/dogtag
+	ears = /obj/item/radio/headset/odst
+	back = /obj/item/storage/backpack/odst/engi
+
+/datum/outfit/job/odst/sl
+	name = "ODST Squad Leader"
+	jobtype = /datum/job/unsc/odst/sl
+	id = /obj/item/card/id/dogtag
+	ears = /obj/item/radio/headset/odst
+	back = /obj/item/storage/backpack/odst/sl
 
 //Innies
 
@@ -186,87 +342,7 @@
 	. = ..()
 	to_chat(M, {"\nYou are an insurrectionist warlord. Lead your squad against the UNSC, and maintain unit cohesion."})
 
-/datum/job/insurrectionist/commando
-	title = "URF Commando Rifleman"
-	paygrade = "URFC"
-	comm_title = "URFC Rifleman"
-	access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
-	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
-	max_positions = 2
-	supervisors = "URFC Commander"
-	outfit = /datum/outfit/job/insurrection/commando
-	display_order = JOB_DISPLAY_ORDER_INSURRECTIONIST_COMMANDO
-	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST
-
-/datum/job/insurrectionist/engineer/radio_help_message(mob/M)
-	. = ..()
-	to_chat(M, {"\nYou are a United Rebel Front Commando rifleman. An elite soldier of the URF, do what your commander says."})
-
-/datum/job/insurrectionist/commando/medic
-	title = "URF Commando Medic"
-	paygrade = "URFC"
-	comm_title = "URFC Medic"
-	access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
-	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
-	max_positions = 2
-	supervisors = "URFC Commander"
-	outfit = /datum/outfit/job/insurrection/commando/medic
-	display_order = JOB_DISPLAY_ORDER_INSURRECTIONIST_COMMANDO
-	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST
-
-/datum/job/insurrectionist/engineer/radio_help_message(mob/M)
-	. = ..()
-	to_chat(M, {"\nYou are a United Rebel Front Commando medic. An elite soldier of the URF, do what your commander says."})
-
-/datum/job/insurrectionist/commando/cqb
-	title = "URF Commando CQB"
-	paygrade = "URFC"
-	comm_title = "URFC CQB"
-	access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
-	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
-	max_positions = 2
-	supervisors = "URFC Commander"
-	outfit = /datum/outfit/job/insurrection/commando/cqb
-	display_order = JOB_DISPLAY_ORDER_INSURRECTIONIST_COMMANDO
-	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST
-
-/datum/job/insurrectionist/engineer/radio_help_message(mob/M)
-	. = ..()
-	to_chat(M, {"\nYou are a United Rebel Front Commando CQB specalist. An elite soldier of the URF, do what your commander says."})
-
-/datum/job/insurrectionist/commando/sniper
-	title = "URF Commando Sniper"
-	paygrade = "URFC"
-	comm_title = "URFC Sniper"
-	access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
-	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
-	max_positions = 2
-	supervisors = "URFC Commander"
-	outfit = /datum/outfit/job/insurrection/commando/sniper
-	display_order = JOB_DISPLAY_ORDER_INSURRECTIONIST_COMMANDO
-	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST
-
-/datum/job/insurrectionist/engineer/radio_help_message(mob/M)
-	. = ..()
-	to_chat(M, {"\nYou are a United Rebel Front Commando sniper. An elite soldier of the URF, do what your commander says."})
-
-/datum/job/insurrectionist/commando/sniper
-	title = "URF Commando Sniper"
-	paygrade = "URFC"
-	comm_title = "URFC Sniper"
-	access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
-	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
-	max_positions = 2
-	supervisors = "URFC Commander"
-	outfit = /datum/outfit/job/insurrection/commando/sniper
-	display_order = JOB_DISPLAY_ORDER_INSURRECTIONIST_COMMANDO
-	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST
-
-/datum/job/insurrectionist/engineer/radio_help_message(mob/M)
-	. = ..()
-	to_chat(M, {"\nYou are a United Rebel Front Commando sniper. An elite soldier of the URF, do what your commander says."})
-
-//outfits
+//Innie outfits
 
 /datum/outfit/job/insurrection
 	name = "Insurrectionist"
@@ -297,6 +373,177 @@
 	back = /obj/item/storage/backpack/lightpack
 	l_hand = /obj/item/storage/bible/koran
 
+
+//URFC
+
+/datum/job/insurrectionist/commando/
+	selection_color = "#ba3838"
+	job_category = JOB_CAT_URFC
+
+/datum/job/insurrectionist/commando/rifleman
+	title = "URF Commando Commader"
+	paygrade = "URFC"
+	comm_title = "URFC-RFL"
+	access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER, ACCESS_URFC_RIFLEMAN)
+	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER, ACCESS_URFC_RIFLEMAN)
+	max_positions = 2
+	supervisors = "URFC Commander"
+	outfit = /datum/outfit/job/insurrection/commando
+	display_order = JOB_DISPLAY_ORDER_URFC_RIFLEMAN
+	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST
+
+/datum/job/insurrectionist/engineer/radio_help_message(mob/M)
+	. = ..()
+	to_chat(M, {"\nYou are a United Rebel Front Commando rifleman. An elite soldier of the URF, do what your commander says."})
+
+/datum/job/insurrectionist/commando/commander
+	title = "URF Commando Commader"
+	paygrade = "URFC-C"
+	comm_title = "URFC-CDR"
+	access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER, ACCESS_URFC, ACCESS_URFC_COMMANDER)
+	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER, ACCESS_URFC, ACCESS_URFC_COMMANDER)
+	max_positions = 2
+	supervisors = "URFC Commander"
+	outfit = /datum/outfit/job/insurrection/commando/commander
+	display_order = JOB_DISPLAY_ORDER_URFC_COMMANDER
+	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST
+
+/datum/job/insurrectionist/commando/commander/radio_help_message(mob/M)
+	. = ..()
+	to_chat(M, {"\nYou are the United Rebel Front Commando Commander. You command the entire URFC force, give your men direction."})
+
+/datum/job/insurrectionist/commando/medic
+	title = "URF Commando Medic"
+	paygrade = "URFC"
+	comm_title = "URFC-MED"
+	access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER, ACCESS_URFC, ACCESS_URFC_MEDIC)
+	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER, ACCESS_URFC, ACCESS_URFC_MEDIC)
+	max_positions = 2
+	supervisors = "URFC Commander"
+	outfit = /datum/outfit/job/insurrection/commando/medic
+	display_order = JOB_DISPLAY_ORDER_URFC_MEDIC
+	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST
+
+/datum/job/insurrectionist/commando/medic/radio_help_message(mob/M)
+	. = ..()
+	to_chat(M, {"\nYou are a United Rebel Front Commando medic. An elite soldier of the URF, do what your commander says."})
+
+
+/datum/job/insurrectionist/commando/engineer
+	title = "URF Commando Engineer"
+	paygrade = "URFC"
+	comm_title = "URFC-ENGI"
+	access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER, ACCESS_URFC, ACCESS_URFC_ENGINEER)
+	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER, ACCESS_URFC, ACCESS_URFC_ENGINEER)
+	max_positions = 2
+	supervisors = "URFC Commander"
+	outfit = /datum/outfit/job/insurrection/commando/enigneer
+	display_order = JOB_DISPLAY_ORDER_URFC_MEDIC
+	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST
+
+/datum/job/insurrectionist/commando/engineer/radio_help_message(mob/M)
+	. = ..()
+	to_chat(M, {"\nYou are a United Rebel Front Commando engineer. An elite soldier of the URF, do what your commander says."})
+
+
+/datum/job/insurrectionist/commando/cqb
+	title = "URF Commando CQB"
+	paygrade = "URFC"
+	comm_title = "URFC-CQB"
+	access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER, ACCESS_URFC, ACCESS_URFC_CQB)
+	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER, ACCESS_URFC, ACCESS_URFC_CQB)
+	max_positions = 2
+	supervisors = "URFC Commander"
+	outfit = /datum/outfit/job/insurrection/commando/cqb
+	display_order = JOB_DISPLAY_ORDER_URFC_CQB
+	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST
+
+/datum/job/insurrectionist/commando/cqb/radio_help_message(mob/M)
+	. = ..()
+	to_chat(M, {"\nYou are a United Rebel Front Commando CQB specalist. An elite soldier of the URF, do what your commander says."})
+
+/datum/job/insurrectionist/commando/sniper
+	title = "URF Commando Sniper"
+	paygrade = "URFC"
+	comm_title = "URFC-SNPR"
+	access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER, ACCESS_URFC, ACCESS_URFC_SNIPER)
+	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER, ACCESS_URFC, ACCESS_URFC_SNIPER)
+	max_positions = 2
+	supervisors = "URFC Commander"
+	outfit = /datum/outfit/job/insurrection/commando/sniper
+	display_order = JOB_DISPLAY_ORDER_URFC_SNIPER
+	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST
+
+/datum/job/insurrectionist/commando/sniper/radio_help_message(mob/M)
+	. = ..()
+	to_chat(M, {"\nYou are a United Rebel Front Commando sniper. An elite soldier of the URF, do what your commander says."})
+
+/datum/job/insurrectionist/commando/sl
+	title = "URF Commando Squad Leader"
+	paygrade = "URFC-SL"
+	comm_title = "URFC-SL"
+	access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER, ACCESS_URFC, ACCESS_URFC_SQUADLEADER)
+	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER, ACCESS_URFC, ACCESS_URFC_SQUADLEADER)
+	max_positions = 2
+	supervisors = "URFC Commander"
+	outfit = /datum/outfit/job/insurrection/commando/sniper
+	display_order = JOB_DISPLAY_ORDER_URFC_SQUADLEADER
+	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST
+
+/datum/job/insurrectionist/commando/sl/radio_help_message(mob/M)
+	. = ..()
+	to_chat(M, {"\nYou are a United Rebel Front Commando squad leader. An elite soldier of the URF, do what your commander says."})
+
+//URFC Outfits
+
+/datum/outfit/job/insurrection/commando/rifleman
+	name = "URFC Rifleman"
+	jobtype = /datum/job/insurrectionist/commando/rifleman
+	id = /obj/item/card/id/dogtag
+	ears = /obj/item/radio/headset/urfc
+	back = /obj/item/storage/backpack/urfc_rifleman
+
+/datum/outfit/job/insurrection/commando/enigneer
+	name = "URFC Engineer"
+	jobtype = /datum/job/insurrectionist/commando/engineer
+	id = /obj/item/card/id/dogtag
+	ears = /obj/item/radio/headset/urfc
+	back = /obj/item/storage/backpack/urfc_engi
+
+/datum/outfit/job/insurrection/commando/medic
+	name = "URFC Medic"
+	jobtype = /datum/job/insurrectionist/commando/medic
+	id = /obj/item/card/id/dogtag
+	ears = /obj/item/radio/headset/urfc
+	back = /obj/item/storage/backpack/urfc_medic
+
+/datum/outfit/job/insurrection/commando/sniper
+	name = "URFC Sniper"
+	jobtype = /datum/job/insurrectionist/commando/sniper
+	id = /obj/item/card/id/dogtag
+	ears = /obj/item/radio/headset/urfc
+	back = /obj/item/storage/backpack/urfc_rifleman
+
+/datum/outfit/job/insurrection/commando/cqb
+	name = "URFC CQB Specalist"
+	jobtype = /datum/job/insurrectionist/commando/cqb
+	id = /obj/item/card/id/dogtag
+	ears = /obj/item/radio/headset/urfc
+	back = /obj/item/storage/backpack/urfc_rifleman
+
+/datum/outfit/job/insurrection/commando/sl
+	name = "URFC Squad Leader"
+	jobtype = /datum/job/insurrectionist/commando/sl
+	id = /obj/item/card/id/dogtag
+	ears = /obj/item/radio/headset/urfc
+	back = /obj/item/storage/backpack/urfc_rifleman
+
+/datum/outfit/job/insurrection/commando/commander
+	name = "URFC Commander"
+	jobtype = /datum/job/insurrectionist/commando/commander
+	id = /obj/item/card/id/dogtag
+	ears = /obj/item/radio/headset/urfc
+	back = /obj/item/storage/backpack/urfc_rifleman
 
 /*
 

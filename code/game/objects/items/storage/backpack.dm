@@ -856,9 +856,9 @@
 	max_storage_space = 30
 	worn_accessible = TRUE
 
-/obj/item/storage/backpack/odst/engi
+/obj/item/storage/backpack/odst/cqc
 	name = "ODST Rucksack (cqc)"
-	desc = "A heavy-duty bag carried by ODST CQC specialists."
+	desc = "A heavy-duty bag carried by ODST CQC Specialists."
 	icon_state = "odst_pack_cqc"
 	storage_slots = null
 	max_storage_space = 30

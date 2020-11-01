@@ -45,9 +45,17 @@
 #define RADIO_KEY_UNSC "u"
 #define RADIO_TOKEN_UNSC ":u"
 
+#define RADIO_CHANNEL_ODST "ODSTCOMM"
+#define RADIO_KEY_ODST "z"
+#define RADIO_TOKEN_ODST ":z"
+
 #define RADIO_CHANNEL_INNIE "INNIECOMM"
 #define RADIO_KEY_INNIE "i"
 #define RADIO_TOKEN_INNIE ":i"
+
+#define RADIO_CHANNEL_URFC "URFCCOMM"
+#define RADIO_KEY_URFC "x"
+#define RADIO_TOKEN_URFC ":x"
 
 
 #define RADIO_CHANNEL_COLONIST "Colonist"
