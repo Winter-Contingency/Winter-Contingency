@@ -186,6 +186,86 @@
 	. = ..()
 	to_chat(M, {"\nYou are an insurrectionist warlord. Lead your squad against the UNSC, and maintain unit cohesion."})
 
+/datum/job/insurrectionist/commando
+	title = "URF Commando Rifleman"
+	paygrade = "URFC"
+	comm_title = "URFC Rifleman"
+	access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
+	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
+	max_positions = 2
+	supervisors = "URFC Commander"
+	outfit = /datum/outfit/job/insurrection/commando
+	display_order = JOB_DISPLAY_ORDER_INSURRECTIONIST_COMMANDO
+	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST
+
+/datum/job/insurrectionist/engineer/radio_help_message(mob/M)
+	. = ..()
+	to_chat(M, {"\nYou are a United Rebel Front Commando rifleman. An elite soldier of the URF, do what your commander says."})
+
+/datum/job/insurrectionist/commando/medic
+	title = "URF Commando Medic"
+	paygrade = "URFC"
+	comm_title = "URFC Medic"
+	access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
+	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
+	max_positions = 2
+	supervisors = "URFC Commander"
+	outfit = /datum/outfit/job/insurrection/commando/medic
+	display_order = JOB_DISPLAY_ORDER_INSURRECTIONIST_COMMANDO
+	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST
+
+/datum/job/insurrectionist/engineer/radio_help_message(mob/M)
+	. = ..()
+	to_chat(M, {"\nYou are a United Rebel Front Commando medic. An elite soldier of the URF, do what your commander says."})
+
+/datum/job/insurrectionist/commando/cqb
+	title = "URF Commando CQB"
+	paygrade = "URFC"
+	comm_title = "URFC CQB"
+	access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
+	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
+	max_positions = 2
+	supervisors = "URFC Commander"
+	outfit = /datum/outfit/job/insurrection/commando/cqb
+	display_order = JOB_DISPLAY_ORDER_INSURRECTIONIST_COMMANDO
+	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST
+
+/datum/job/insurrectionist/engineer/radio_help_message(mob/M)
+	. = ..()
+	to_chat(M, {"\nYou are a United Rebel Front Commando CQB specalist. An elite soldier of the URF, do what your commander says."})
+
+/datum/job/insurrectionist/commando/sniper
+	title = "URF Commando Sniper"
+	paygrade = "URFC"
+	comm_title = "URFC Sniper"
+	access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
+	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
+	max_positions = 2
+	supervisors = "URFC Commander"
+	outfit = /datum/outfit/job/insurrection/commando/sniper
+	display_order = JOB_DISPLAY_ORDER_INSURRECTIONIST_COMMANDO
+	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST
+
+/datum/job/insurrectionist/engineer/radio_help_message(mob/M)
+	. = ..()
+	to_chat(M, {"\nYou are a United Rebel Front Commando sniper. An elite soldier of the URF, do what your commander says."})
+
+/datum/job/insurrectionist/commando/sniper
+	title = "URF Commando Sniper"
+	paygrade = "URFC"
+	comm_title = "URFC Sniper"
+	access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
+	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
+	max_positions = 2
+	supervisors = "URFC Commander"
+	outfit = /datum/outfit/job/insurrection/commando/sniper
+	display_order = JOB_DISPLAY_ORDER_INSURRECTIONIST_COMMANDO
+	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST
+
+/datum/job/insurrectionist/engineer/radio_help_message(mob/M)
+	. = ..()
+	to_chat(M, {"\nYou are a United Rebel Front Commando sniper. An elite soldier of the URF, do what your commander says."})
+
 //outfits
 
 /datum/outfit/job/insurrection

@@ -818,7 +818,7 @@
 	flags_item_map_variant = NONE
 
 /obj/item/clothing/suit/storage/marine/odst/sniper
-	name = "ODST Body Armor (engineer)"
+	name = "ODST Body Armor (sniper)"
 	desc = "A set of Orbital Drop Shock Trooper Sniper body armor. Provides decent protection against small arms and bladed objects."
 	icon_state = "odst_armor_sniper"
 	item_state = "odst_armor_sniper"

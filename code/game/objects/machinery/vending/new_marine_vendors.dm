@@ -1279,7 +1279,27 @@ GLOBAL_LIST_INIT(available_specialist_sets, list("Scout Set", "Sniper Set", "Dem
 		/obj/item/storage/belt/medical = list(CAT_BEL, "Medical belt", 0, "black"),
 		/obj/item/storage/belt/gun/pistol/standard_pistol = list(CAT_BEL, "Pistol belt", 0, "black"))
 
-
+/obj/machinery/marine_selector/clothes/insurrection/urfc
+	name = "URFC Equipment Locker"
+	desc = "An automated closet hooked up to a colossal storage unit of standard-issue uniform and armor."
+	icon_state = "marineuniform"
+	req_access = list(ACCESS_INSURRECTIONIST_COMMANDO)
+	vendor_role = /datum/job/insurrectionist/commando
+	lock_flags = JOB_LOCK
+	listed_products = list(
+		/obj/effect/essentials_set/halo/innie = list (CAT_ESS, "Insurrection Essentials Set", 0, "white"),
+		/obj/effect/essentials_set/modular/haloinnie/armorPieces = list(CAT_AMR, "URF Modular Armor Pieces", 0, "white"),
+		/obj/item/clothing/tie/storage/webbing = list(CAT_WEB, "Tactical webbing", 0, "black"),
+		/obj/item/clothing/tie/holster = list(CAT_WEB, "Shoulder handgun holster", 0, "black"),
+		/obj/item/storage/belt/marine = list(CAT_BEL, "Standard ammo belt", 0, "white"),
+		/obj/item/storage/belt/shotgun = list(CAT_BEL, "Shotgun ammo belt", 0, "black"),
+		/obj/item/storage/pouch/magazine/large = list(CAT_POU, "Large magazine pouch", 0, "black"),
+		/obj/item/storage/pouch/general/medium = list(CAT_POU, "Medium general pouch", 0, "white"),
+		/obj/item/storage/pouch/firstaid/injectors/full = list(CAT_POU, "Injector pouch", 0,"black"),
+		/obj/item/storage/pouch/firstaid/full = list(CAT_POU, "Firstaid pouch", 0, "white"),
+		/obj/item/storage/pouch/magazine/pistol = list(CAT_POU, "Pistol magazine pouch", 0,"black"),
+		/obj/item/storage/pouch/pistol = list(CAT_POU, "Sidearm pouch", 0,"black"),
+		/obj/item/clothing/mask/gas = list(CAT_MAS, "Gas mask", 0,"black"))
 
 
 

@@ -74,6 +74,7 @@ GLOBAL_LIST_EMPTY(all_req_one_access)
 #define ACCESS_INSURRECTIONIST_ENGINEER		151
 #define ACCESS_INSURRECTIONIST_MEDIC		152
 #define ACCESS_INSURRECTIONIST_LEADER		153
+#define ACCESS_INSURRECTIONIST_COMMANDO		154
 
 //Temporary until I turn these into defines/bitflags and develop proper IF tagging.
 #define ACCESS_IFF_MARINE			998
@@ -82,6 +83,7 @@ GLOBAL_LIST_EMPTY(all_req_one_access)
 
 #define PAYGRADES_MARINE list("C","CMN","E1","E2","E3","E4","E5","E6","E7","E8","E8E","E9","E9E","O1","O2","O3","O4","O5","O6","WO","CWO","PO","CPO","MAJ")
 #define PAYGRADES_INSURRECTION list("INS", "INSL")
+#define PAYGRADES_INSURRECTION_COMMANDO list("URFC")
 #define PAYGRADES_COVENANT list("MINOR", "RANGER","MAJOR","SPECOPS","ULTRA","GENERAL","ZEALOT","FIELDMARSHALL")
 #define PAYGRADES_OFFICER list("O1","O2","O3","O4","O5","O6","WO","CWO","CPO","MAJ")
 #define PAYGRADES_ENLISTED list("C","CMN","E1","E2","E3","E4","E5","E6","E7","E8","E9","PO")
