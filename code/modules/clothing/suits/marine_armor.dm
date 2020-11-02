@@ -839,7 +839,7 @@
 
 /obj/item/clothing/suit/storage/marine/odst/loafe
 	name = "ODST Body Armor (loafe)"
-	desc = "A set of Orbital Drop Shock Trooper Loafe body armor. Provides decent protection against small arms and bladed objects."
+	desc = "A set of Orbital Drop Shock Trooper body armor, worn by the ODST 'Loafe'. Provides decent protection against small arms and bladed objects."
 	icon_state = "odst_armor_loafe"
 	item_state = "odst_armor_loafe"
 	slowdown = SLOWDOWN_ARMOR_MEDIUM
@@ -885,6 +885,16 @@
 	desc = "A set of URF Commando medic body armor. Provides decent protection against small arms and bladed objects."
 	icon_state = "urfc_medic"
 	item_state = "urfc_medic"
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
+	flags_armor_protection = CHEST|GROIN|ARMS|LEGS|HANDS|FEET
+	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 50)
+	flags_item_map_variant = NONE
+
+/obj/item/clothing/suit/storage/marine/urfc/engineer
+	name = "URFC Body Armor (engineer)"
+	desc = "A set of URF Commando Engineer body armor. Provides decent protection against small arms and bladed objects."
+	icon_state = "urfc_engi"
+	item_state = "urfc_engi"
 	slowdown = SLOWDOWN_ARMOR_MEDIUM
 	flags_armor_protection = CHEST|GROIN|ARMS|LEGS|HANDS|FEET
 	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 50)

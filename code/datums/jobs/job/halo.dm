@@ -381,14 +381,14 @@
 	job_category = JOB_CAT_URFC
 
 /datum/job/insurrectionist/commando/rifleman
-	title = "URF Commando Commader"
+	title = "URF Commando Rifleman"
 	paygrade = "URFC"
 	comm_title = "URFC-RFL"
 	access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER, ACCESS_URFC_RIFLEMAN)
 	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER, ACCESS_URFC_RIFLEMAN)
 	max_positions = 2
 	supervisors = "URFC Commander"
-	outfit = /datum/outfit/job/insurrection/commando
+	outfit = /datum/outfit/job/insurrection/commando/rifleman
 	display_order = JOB_DISPLAY_ORDER_URFC_RIFLEMAN
 	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST
 
@@ -486,7 +486,7 @@
 	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER, ACCESS_URFC, ACCESS_URFC_SQUADLEADER)
 	max_positions = 2
 	supervisors = "URFC Commander"
-	outfit = /datum/outfit/job/insurrection/commando/sniper
+	outfit = /datum/outfit/job/insurrection/commando/sl
 	display_order = JOB_DISPLAY_ORDER_URFC_SQUADLEADER
 	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST
 

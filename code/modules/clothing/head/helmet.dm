@@ -768,7 +768,7 @@
 
 /obj/item/clothing/head/helmet/marine/odst/loafe
 	name = "ODST helmet (loafe)"
-	desc = "A general purpose ODST Loafe helmet."
+	desc = "A general purpose ODST helmet, worn by the ODST 'Loafe'."
 	icon_state = "odst_helmet_loafe"
 	item_state = "odst_helmet_loafe"
 	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
@@ -802,6 +802,16 @@
 	desc = "A general purpose URFC medic helmet."
 	icon_state = "urfc_medic_helmet"
 	item_state = "urfc_medic_helmet"
+	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+
+
+/obj/item/clothing/head/helmet/marine/urfc/engineer
+	name = "URFC helmet (engineer)"
+	desc = "A general purpose URFC Engineer helmet."
+	icon_state = "urfc_engi_helmet"
+	item_state = "urfc_engi_helmet"
 	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
