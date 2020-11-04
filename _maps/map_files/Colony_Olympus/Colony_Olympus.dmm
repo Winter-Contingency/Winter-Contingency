@@ -1,0 +1,672 @@
+"ab" = (/obj/structure/mineral_door/wood/open,/turf/open/floor/asteroid,/area/space)
+"ad" = (/obj/effect/decal/cleanable/cobweb,/turf/open/floor/asteroid,/area/space)
+"ae" = (/obj/structure/bed/chair/sofa{dir = 8},/turf/open/floor/wood,/area/space)
+"ag" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/generic,/turf/open/floor/asteroid,/area/space)
+"ar" = (/obj/machinery/door/window{dir = 8},/turf/open/floor/wood,/area/space)
+"aw" = (/obj/machinery/light/spot{dir = 1},/turf/open/floor/mainship/sterile/dark,/area/space)
+"ax" = (/obj/effect/decal/warning_stripes/thin{dir = 10},/turf/open/ground/grass,/area/space)
+"aD" = (/obj/structure/rack,/obj/item/tool/mop{pixel_x = -7},/obj/structure/mopbucket{pixel_x = 7},/obj/item/reagent_containers/spray/cleaner,/turf/open/floor/wood,/area/space)
+"aP" = (/obj/structure/rack,/obj/item/ammo_magazine/rifle/m16,/obj/item/ammo_magazine/rifle/m16,/obj/item/ammo_magazine/rifle/m16,/obj/item/ammo_magazine/rifle/m16,/obj/effect/decal/cleanable/dirt,/turf/open/floor/asteroid,/area/space)
+"aQ" = (/obj/structure/rack,/obj/item/weapon/gun/pistol/b92fs/M9,/obj/item/ammo_magazine/pistol/b92fstranq,/obj/item/ammo_magazine/pistol/b92fs,/obj/effect/decal/cleanable/dirt,/turf/open/floor/asteroid,/area/space)
+"aR" = (/obj/structure/reagent_dispensers/beerkeg,/turf/open/floor/plating/ground/dirt2,/area/space)
+"aT" = (/obj/machinery/power/smes/buildable/empty,/turf/open/floor/plating/asteroidfloor,/area/space)
+"aY" = (/obj/structure/table,/obj/item/storage/box/cups,/turf/open/floor/mainship/sterile/dark,/area/space)
+"bq" = (/obj/structure/rack,/obj/item/tool/pickaxe/drill,/turf/open/floor/asteroid,/area/space)
+"bz" = (/obj/structure/bed/chair/wood/wings{dir = 8},/turf/open/floor/wood,/area/space)
+"bE" = (/obj/docking_port/stationary/marine_dropship/hangar/one,/turf/open/floor/plating,/area/space)
+"bG" = (/obj/structure/table/mainship,/obj/item/storage/surgical_tray,/obj/item/reagent_containers/spray/cleaner,/obj/item/reagent_containers/spray/surgery,/turf/open/floor/mainship/sterile/dark,/area/space)
+"bI" = (/obj/machinery/light{dir = 4},/turf/open/floor/mainship/tcomms,/area/space)
+"bR" = (/obj/structure/closet,/obj/item/clothing/head/helmet/marine/veteran/dutch{pixel_y = 7},/obj/item/clothing/suit/storage/marine/veteran/dutch,/obj/item/clothing/under/gimmick/dutch,/turf/open/floor/asteroid,/area/space)
+"bT" = (/obj/structure/rack,/obj/item/storage/firstaid/adv,/turf/open/floor/mainship/sterile/dark,/area/space)
+"bU" = (/obj/machinery/portable_atmospherics/hydroponics/soil,/turf/open/floor/plating/ground/dirt2,/area/space)
+"ca" = (/obj/structure/closet/secure_closet/freezer/meat,/turf/open/floor/freezer,/area/space)
+"cf" = (/obj/structure/bed/stool,/turf/open/floor/mainship/sterile/dark,/area/space)
+"cr" = (/obj/structure/filingcabinet/chestdrawer,/turf/open/floor/mainship/sterile/dark,/area/space)
+"cv" = (/obj/structure/table/woodentable,/obj/item/paper/hydroponics,/turf/open/floor/wood,/area/space)
+"cA" = (/turf/open/floor/tile/dark2,/area/space)
+"cC" = (/obj/structure/closet/crate/trashcart,/obj/item/trash/syndi_cakes,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating/asteroidplating,/area/space)
+"cQ" = (/obj/structure/rack,/obj/item/clothing/head/welding,/obj/item/tool/weldingtool,/turf/open/floor/asteroidfloor,/area/space)
+"cZ" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/remains/human,/obj/item/reagent_containers/food/drinks/cans/beer{pixel_x = 11},/obj/item/reagent_containers/syringe/drugs{pixel_y = -10},/turf/open/floor/asteroid,/area/space)
+"df" = (/obj/structure/rack,/obj/item/stack/sheet/mineral/mhydrogen,/obj/item/stack/sheet/mineral/mhydrogen,/obj/item/stack/sheet/mineral/mhydrogen,/turf/open/floor/plating/asteroidfloor,/area/space)
+"di" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating/ground/dirt2,/area/space)
+"dj" = (/obj/structure/table/mainship,/obj/structure/paper_bin,/obj/item/tool/pen,/turf/open/floor/tile/dark,/area/space)
+"dl" = (/obj/effect/decal/warning_stripes/thin{dir = 8},/obj/machinery/landinglight/ds1{dir = 8},/turf/open/ground/grass,/area/space)
+"dm" = (/obj/machinery/computer/telecomms/monitor,/turf/open/floor/mainship/mono,/area/space)
+"dt" = (/turf/closed/wall/r_wall,/area/space)
+"du" = (/obj/structure/table/woodentable,/obj/item/book/manual/engineering_singularity_safety,/turf/open/floor/wood,/area/space)
+"dv" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/cobweb2,/turf/open/floor/asteroid,/area/space)
+"dw" = (/obj/machinery/vending/coffee,/turf/open/floor/wood,/area/space)
+"dx" = (/obj/structure/rack,/obj/item/weapon/gun/rifle/m16,/obj/item/attachable/stock/m16,/obj/item/attachable/m16sight,/obj/effect/decal/cleanable/cobweb,/turf/open/floor/asteroid,/area/space)
+"dF" = (/obj/machinery/light{dir = 4},/turf/open/floor/asteroidfloor,/area/space)
+"dV" = (/obj/structure/closet/secure_closet/military_police,/turf/open/floor/tile/dark,/area/space)
+"ea" = (/turf/open/floor/marking/asteroidwarning{dir = 8},/area/space)
+"eg" = (/obj/structure/bed/chair/office/light{dir = 8},/turf/open/floor/tile/dark,/area/space)
+"ei" = (/obj/structure/table/woodentable,/obj/item/storage/box/donkpockets,/turf/open/floor/wood,/area/space)
+"es" = (/obj/structure/table/woodentable,/obj/machinery/microwave,/turf/open/floor/wood,/area/space)
+"ex" = (/obj/structure/table/holotable/wood,/obj/item/ashtray/glass,/turf/open/floor/wood,/area/space)
+"eC" = (/obj/structure/reagent_dispensers/beerkeg,/obj/item/reagent_containers/food/drinks/drinkingglass,/obj/effect/decal/cleanable/dirt,/turf/open/floor/asteroid,/area/space)
+"eV" = (/obj/machinery/telecomms/server/presets/unsc,/turf/open/floor/mainship/tcomms,/area/space)
+"eY" = (/obj/structure/table,/obj/item/storage/firstaid/adv,/turf/open/floor/asteroid,/area/space)
+"fj" = (/obj/structure/rack,/obj/item/binoculars,/obj/effect/decal/cleanable/dirt,/turf/open/floor/asteroid,/area/space)
+"fm" = (/obj/structure/bed/chair/office/light{dir = 4},/turf/open/floor/tile/dark,/area/space)
+"fv" = (/mob/living/simple_animal/chick,/turf/open/floor/plating/ground/dirt2,/area/space)
+"fy" = (/obj/structure/closet/crate/hydroponics/prespawned,/turf/open/floor/asteroidfloor,/area/space)
+"fE" = (/obj/machinery/landinglight/ds1/delayone{dir = 8},/obj/effect/decal/warning_stripes/thin{dir = 1},/obj/effect/decal/warning_stripes/thin{dir = 8},/turf/open/ground/grass,/area/space)
+"fG" = (/obj/structure/catwalk,/turf/open/ground/river,/area/space)
+"fH" = (/obj/item/moneybag,/turf/open/floor/plating/ground/dirt2,/area/space)
+"fI" = (/obj/effect/decal/cleanable/cobweb2,/obj/item/trash/cigbutt/cigarbutt,/turf/open/floor/asteroid,/area/space)
+"fN" = (/turf/open/ground/river,/area/space)
+"fP" = (/obj/structure/rack,/obj/item/storage/belt,/obj/machinery/computer/atmos_alert{pixel_y = 20},/turf/open/floor/asteroidfloor,/area/space)
+"ga" = (/obj/structure/table/woodentable,/obj/item/storage/box/matches,/turf/open/floor/wood,/area/space)
+"gc" = (/obj/structure/jungle/vines/heavy,/turf/open/floor/asteroid,/area/space)
+"gl" = (/obj/structure/table/woodentable,/obj/item/book/manual/hydroponics_beekeeping,/turf/open/floor/wood,/area/space)
+"gq" = (/obj/structure/largecrate,/obj/item/reagent_containers/food/drinks/bottle/davenport{pixel_x = 1; pixel_y = 9},/turf/open/floor/plating/asteroidfloor,/area/space)
+"gw" = (/obj/effect/decal/cleanable/dirt,/obj/structure/jungle/vines/heavy,/turf/open/floor/asteroid,/area/space)
+"gz" = (/turf/closed/wall/mainship/white,/area/space)
+"gL" = (/turf/open/floor/plating,/area/space)
+"gT" = (/obj/machinery/telecomms/relay,/turf/open/floor/mainship/tcomms,/area/space)
+"gU" = (/obj/item/trash/barcardine,/turf/open/floor/plating/asteroidplating,/area/space)
+"gX" = (/obj/machinery/door/airlock/prison{dir = 2},/turf/open/floor/tile/dark,/area/space)
+"gY" = (/turf/open/floor/mainship/tcomms,/area/space)
+"gZ" = (/obj/structure/bed/stool,/turf/open/floor/plating/ground/dirt2,/area/space)
+"hc" = (/obj/structure/jungle/vines,/turf/open/floor/asteroid,/area/space)
+"hs" = (/obj/structure/bed/fancy,/obj/item/bedsheet/brown,/turf/open/floor/wood,/area/space)
+"hx" = (/obj/structure/jungle/vines/heavy,/turf/open/ground/grass,/area/space)
+"hz" = (/obj/structure/bed/stool,/turf/open/floor/wood,/area/space)
+"hA" = (/obj/structure/rack,/obj/item/storage/belt/combatLifesaver,/turf/open/floor/mainship/sterile/dark,/area/space)
+"hF" = (/obj/effect/decal/warning_stripes/thin,/obj/effect/decal/warning_stripes/thin{dir = 8},/obj/machinery/landinglight/ds1/delaythree{dir = 8},/turf/open/ground/grass,/area/space)
+"hQ" = (/obj/structure/table/reinforced,/obj/item/storage/box/donkpockets,/turf/open/floor/wood,/area/space)
+"ie" = (/obj/structure/closet/crate,/obj/item/stack/sheet/mineral/diamond,/obj/item/stack/sheet/mineral/diamond,/obj/item/stack/sheet/mineral/diamond,/obj/effect/decal/cleanable/dirt,/turf/open/floor/asteroidfloor,/area/space)
+"ig" = (/obj/structure/jungle/vines,/turf/open/ground/grass,/area/space)
+"ik" = (/turf/closed/wall/prison,/area/space)
+"il" = (/obj/structure/bed,/obj/item/bedsheet/captain,/turf/open/floor/wood,/area/space)
+"im" = (/obj/structure/closet/secure_closet/freezer/kitchen,/turf/open/floor/freezer,/area/space)
+"in" = (/obj/structure/rack,/obj/item/stack/sheet/mineral/diamond,/obj/item/stack/sheet/mineral/diamond,/obj/item/stack/sheet/mineral/diamond,/turf/open/floor/asteroidfloor,/area/space)
+"ip" = (/obj/effect/landmark/start/job/halo_civ_colonist,/turf/open/floor/asteroidfloor,/area/space)
+"iq" = (/obj/structure/jungle/vines/heavy,/obj/structure/jungle/vines/heavy,/turf/open/ground/grass,/area/space)
+"iw" = (/obj/structure/table/reinforced,/obj/machinery/door/window{dir = 8},/obj/item/folder,/turf/open/floor/tile/dark,/area/space)
+"iB" = (/obj/structure/disposalpipe/trunk{dir = 4},/turf/open/ground/river,/area/space)
+"iE" = (/obj/structure/jungle/vines,/obj/structure/jungle/vines,/obj/structure/jungle/vines,/turf/open/ground/grass,/area/space)
+"iI" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/wood,/area/space)
+"iK" = (/obj/structure/jungle/vines,/obj/structure/jungle/vines/heavy,/turf/open/ground/grass,/area/space)
+"iV" = (/obj/structure/table/reinforced,/obj/item/reagent_containers/food/snacks/monkeysdelight,/turf/open/floor/prison/kitchen,/area/space)
+"jm" = (/obj/machinery/power/geothermal,/obj/structure/rack,/turf/open/floor/asteroidfloor,/area/space)
+"jv" = (/obj/structure/table/holotable/wood,/obj/item/folder/blue,/turf/open/floor/wood,/area/space)
+"jw" = (/turf/open/ground,/area/space)
+"jz" = (/obj/machinery/vending/cigarette,/turf/open/floor/wood,/area/space)
+"jD" = (/obj/structure/table/woodentable,/obj/item/tool/kitchen/knife,/turf/open/floor/wood,/area/space)
+"jG" = (/turf/open/ground/coast{dir = 4},/area/space)
+"jO" = (/obj/machinery/conveyor{dir = 8},/turf/open/floor/asteroidfloor,/area/space)
+"jP" = (/obj/machinery/telecomms/relay/preset/telecomms,/turf/open/floor/mainship/tcomms,/area/space)
+"jV" = (/obj/structure/filingcabinet/chestdrawer,/turf/open/floor/tile/dark,/area/space)
+"ka" = (/obj/structure/catwalk,/obj/structure/disposalpipe/junction/yjunc,/turf/open/ground/river,/area/space)
+"ke" = (/turf/open/ground/coast/corner2{dir = 8},/area/space)
+"kg" = (/obj/machinery/vending/hydroseeds,/turf/open/floor/asteroidfloor,/area/space)
+"km" = (/turf/open/ground/coast/corner{dir = 4},/area/space)
+"kn" = (/obj/structure/table/reinforced,/obj/structure/paper_bin,/obj/item/tool/pen,/turf/open/floor/mainship/sterile/dark,/area/space)
+"kq" = (/obj/machinery/telecomms/server/presets/delta,/turf/open/floor/mainship/tcomms,/area/space)
+"kv" = (/obj/structure/catwalk,/obj/structure/disposalpipe/segment,/turf/open/ground/river,/area/space)
+"kx" = (/obj/structure/rack,/obj/item/tool/pickaxe,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating/asteroidfloor,/area/space)
+"ky" = (/obj/structure/flora/tree/jungle/small,/turf/open/ground/grass/grass2,/area/space)
+"kH" = (/obj/machinery/telecomms/bus/preset_four,/turf/open/floor/mainship/tcomms,/area/space)
+"kM" = (/obj/structure/table,/obj/item/storage/box/cups,/turf/open/floor/wood,/area/space)
+"kU" = (/obj/structure/table/holotable/wood,/obj/item/storage/fancy/cigar,/turf/open/floor/wood,/area/space)
+"la" = (/turf/open/ground/coast/corner{dir = 1},/area/space)
+"lf" = (/obj/structure/bed/chair{dir = 4},/turf/open/floor/mainship/sterile/dark,/area/space)
+"lj" = (/mob/living/simple_animal/corgi/pug{name = "thog"},/turf/open/floor/wood,/area/space)
+"lt" = (/obj/machinery/computer/communications,/obj/structure/table/woodentable,/turf/open/floor/wood,/area/space)
+"lC" = (/obj/structure/table/reinforced,/obj/structure/window/reinforced{dir = 8},/turf/open/floor/tile/dark,/area/space)
+"lF" = (/obj/structure/platform,/obj/structure/platform{dir = 8},/obj/structure/platform_decoration{dir = 10},/turf/open/floor/plating/ground/desertdam/asphault,/area/space)
+"lH" = (/obj/structure/window/framed/wood,/turf/open/floor/mainship/sterile/dark,/area/space)
+"lR" = (/turf/open/ground/coast/corner,/area/space)
+"lU" = (/turf/open/ground/coast/corner2,/area/space)
+"lV" = (/turf/open/ground/coast{dir = 8},/area/space)
+"ma" = (/obj/machinery/light{dir = 4},/turf/open/floor/marking/asteroidwarning{dir = 8},/area/space)
+"mc" = (/turf/open/ground/coast/corner2{dir = 4},/area/space)
+"mf" = (/obj/machinery/door/airlock/mainship/security/glass/cells,/turf/open/floor/tile/dark,/area/space)
+"mg" = (/obj/effect/landmark/weapon_spawn/halo_colony_weapon_spawn,/turf/open/floor/asteroid,/area/space)
+"mk" = (/turf/open/ground/coast/corner2{dir = 1},/area/space)
+"ml" = (/turf/open/floor/plating/ground/dirtgrassborder2/corner{dir = 1},/area/space)
+"mn" = (/obj/machinery/door/airlock/mainship/medical/glass/free_access{dir = 1; name = "\improper Clinic Office"},/turf/open/floor/mainship/sterile/dark,/area/space)
+"mt" = (/obj/structure/rack,/obj/item/weapon/baseballbat/metal{name = "cow beater"},/turf/open/floor/asteroidfloor,/area/space)
+"mA" = (/obj/structure/flora/ausbushes/grassybush,/turf/open/ground,/area/space)
+"mB" = (/obj/machinery/door/window,/turf/open/floor/wood,/area/space)
+"mD" = (/obj/structure/table/gamblingtable,/obj/item/toy/deck,/turf/open/floor/wood,/area/space)
+"mE" = (/turf/open/ground/coast/corner{dir = 8},/area/space)
+"mJ" = (/obj/structure/rack,/obj/item/tool/pickaxe/diamond,/turf/open/floor/plating/asteroidfloor,/area/space)
+"mQ" = (/obj/structure/closet/crate/trashcart,/obj/item/trash/candy,/turf/open/floor/plating/asteroidplating,/area/space)
+"mS" = (/obj/machinery/telecomms/server/presets/requisitions,/turf/open/floor/mainship/tcomms,/area/space)
+"mZ" = (/obj/structure/table/reinforced,/obj/item/folder,/turf/open/floor/tile/dark,/area/space)
+"na" = (/obj/structure/table/woodentable,/obj/item/tool/kitchen/tray,/turf/open/floor/wood,/area/space)
+"nh" = (/turf/open/floor/plating/ground/dirtgrassborder/corner{dir = 4},/area/space)
+"no" = (/turf/open/floor/plating/ground/dirtgrassborder2/corner{dir = 8},/area/space)
+"nq" = (/obj/structure/table/woodentable,/obj/machinery/computer/crew,/turf/open/floor/wood,/area/space)
+"ns" = (/turf/open/floor/asteroid,/area/space)
+"nB" = (/obj/effect/decal/warning_stripes/thin,/obj/machinery/landinglight/ds1/delaythree,/turf/open/ground/grass,/area/space)
+"nD" = (/obj/structure/catwalk,/obj/structure/disposalpipe/segment{dir = 4},/turf/open/ground/river,/area/space)
+"nF" = (/obj/item/reagent_containers/food/drinks/bottle/whiskey,/turf/open/ground/grass,/area/space)
+"nH" = (/turf/open/floor/plating/asteroidplating,/area/space)
+"nN" = (/turf/open/floor/plating/ground/dirtgrassborder{dir = 4},/area/space)
+"nP" = (/obj/structure/table/mainship,/obj/item/folder/blue,/turf/open/floor/tile/dark,/area/space)
+"nR" = (/turf/open/ground/coast,/area/space)
+"nW" = (/obj/structure/table/woodentable,/obj/item/book/manual/engineering_guide,/turf/open/floor/wood,/area/space)
+"nZ" = (/obj/machinery/mineral/stacking_machine,/obj/effect/decal/cleanable/dirt,/turf/open/floor/asteroidfloor,/area/space)
+"on" = (/turf/closed/gm,/area/space)
+"oy" = (/obj/effect/landmark/start/job/halo_civ_colonist,/turf/open/floor/tile/dark,/area/space)
+"oz" = (/obj/effect/decal/cleanable/dirt,/obj/effect/landmark/weapon_spawn/halo_colony_weapon_spawn,/turf/open/floor/asteroid,/area/space)
+"oI" = (/turf/open/floor/plating/ground/dirtgrassborder/corner{dir = 8},/area/space)
+"oS" = (/turf/open/floor/plating/ground/dirtgrassborder{dir = 1},/area/space)
+"oT" = (/turf/open/ground/coast{dir = 1},/area/space)
+"oW" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating/asteroidplating,/area/space)
+"pf" = (/obj/effect/decal/warning_stripes/thin{dir = 1},/obj/machinery/landinglight/ds1/delaythree{dir = 1},/turf/open/ground/grass,/area/space)
+"pj" = (/obj/structure/catwalk,/obj/structure/disposalpipe/segment,/turf/open/ground/coast/corner2{dir = 8},/area/space)
+"pq" = (/obj/structure/mineral_door/wood,/turf/open/ground/grass,/area/space)
+"pr" = (/obj/machinery/door/airlock/mainship/maint{dir = 2},/turf/open/floor/plating/asteroidfloor,/area/space)
+"pL" = (/obj/structure/catwalk,/obj/machinery/atmospherics/components/unary/tank/air,/obj/structure/window/reinforced,/obj/structure/disposalpipe/segment{dir = 4},/turf/open/ground/coast/corner2{dir = 8},/area/space)
+"pS" = (/turf/open/floor/plating/ground/desertdam/asphault,/area/space)
+"pV" = (/obj/structure/bed/chair/sofa/left{dir = 1},/turf/open/floor/wood,/area/space)
+"pX" = (/obj/structure/platform{dir = 4},/obj/structure/table/mainship,/obj/item/storage/box/drinkingglasses,/turf/open/floor/plating/ground/desertdam/asphault,/area/space)
+"pZ" = (/obj/effect/overlay/palmtree_r,/turf/open/ground,/area/space)
+"qa" = (/obj/effect/landmark/start/job/halo_civ_colonist,/obj/effect/decal/cleanable/dirt,/turf/open/floor/wood,/area/space)
+"qf" = (/obj/machinery/door/airlock/mainship/security,/turf/open/floor/tile/dark,/area/space)
+"qq" = (/obj/structure/table/reinforced,/obj/item/folder,/turf/open/floor/mainship/sterile/dark,/area/space)
+"qr" = (/obj/structure/rack,/obj/item/storage/belt,/turf/open/floor/plating/asteroidfloor,/area/space)
+"qy" = (/obj/structure/filingcabinet/filingcabinet,/turf/open/floor/tile/dark,/area/space)
+"qB" = (/obj/structure/rack,/obj/item/clothing/head/welding,/turf/open/floor/plating/asteroidfloor,/area/space)
+"qF" = (/turf/closed/mineral,/area/space)
+"qJ" = (/turf/open/ground/coast/corner2{dir = 2},/area/space)
+"qM" = (/obj/structure/filingcabinet/medical,/turf/open/floor/mainship/sterile/dark,/area/space)
+"qN" = (/obj/machinery/telecomms/server/presets/command,/turf/open/floor/mainship/tcomms,/area/space)
+"qR" = (/obj/structure/closet/crate/trashcart,/obj/item/trash/chunk,/turf/open/floor/plating/asteroidplating,/area/space)
+"rc" = (/obj/machinery/mineral/stacking_unit_console,/obj/effect/decal/cleanable/dirt,/turf/closed/wall/r_wall,/area/space)
+"rh" = (/obj/effect/decal/warning_stripes/thin{dir = 8},/obj/machinery/landinglight/ds1/delayone{dir = 8},/turf/open/ground/grass,/area/space)
+"rn" = (/obj/structure/table/woodentable,/obj/item/reagent_containers/food/snacks/cheeseburger,/turf/open/floor/wood,/area/space)
+"rq" = (/obj/effect/decal/warning_stripes/thin{dir = 8},/obj/effect/decal/warning_stripes/thin{dir = 1},/obj/machinery/landinglight/ds1/delaythree{dir = 8},/turf/open/ground/grass,/area/space)
+"rr" = (/obj/structure/bed/chair{dir = 1},/turf/open/floor/mainship/sterile/dark,/area/space)
+"rM" = (/obj/structure/table/mainship,/turf/open/floor/plating/ground/desertdam/asphault,/area/space)
+"rU" = (/obj/structure/table/mainship,/obj/machinery/chem_dispenser/soda,/turf/open/floor/plating/ground/desertdam/asphault,/area/space)
+"se" = (/obj/effect/decal/warning_stripes/thin{dir = 9},/turf/open/ground/grass,/area/space)
+"sg" = (/obj/effect/landmark/start/job/halo_civ_doctor,/turf/open/floor/mainship/sterile/dark,/area/space)
+"sk" = (/obj/structure/flora/ausbushes/grassybush,/obj/structure/jungle/vines/heavy,/turf/open/ground/grass,/area/space)
+"sq" = (/obj/effect/decal/warning_stripes/thin,/obj/machinery/landinglight/ds1/delayone,/turf/open/ground/grass,/area/space)
+"su" = (/obj/machinery/portable_atmospherics/hydroponics,/turf/open/floor/grass,/area/space)
+"sx" = (/obj/structure/table/reinforced,/obj/structure/paper_bin{pixel_x = -3; pixel_y = 7},/obj/item/tool/pen{pixel_x = 4; pixel_y = 4},/turf/open/floor/mainship/sterile/dark,/area/space)
+"sC" = (/obj/structure/bed/chair/office/light{dir = 8},/turf/open/floor/mainship/sterile/dark,/area/space)
+"sE" = (/obj/structure/rack,/obj/item/storage/box/beakers,/turf/open/floor/asteroidfloor,/area/space)
+"sS" = (/obj/machinery/computer/mech_bay_power_console,/turf/open/floor/asteroidfloor,/area/space)
+"sW" = (/obj/machinery/light{dir = 8},/turf/open/floor/mainship/tcomms,/area/space)
+"sX" = (/obj/machinery/door/airlock/multi_tile/mainship/generic,/turf/open/floor/tile/dark,/area/space)
+"tc" = (/obj/machinery/door/airlock/multi_tile/mainship/generic,/turf/open/floor/tile/dark2,/area/space)
+"te" = (/obj/machinery/telecomms/bus/preset_three,/turf/open/floor/mainship/tcomms,/area/space)
+"tr" = (/obj/structure/reagent_dispensers/watertank,/turf/open/floor/wood,/area/space)
+"ty" = (/obj/structure/flora/ausbushes,/obj/machinery/portable_atmospherics/hydroponics/soil,/turf/open/floor/plating/ground/dirt2,/area/space)
+"tH" = (/obj/structure/toilet{dir = 4},/turf/open/floor/tile/dark,/area/space)
+"tI" = (/obj/structure/table/woodentable,/obj/item/reagent_containers/food/condiment/peppermill{pixel_x = -5; pixel_y = 6},/obj/item/reagent_containers/food/condiment/saltshaker{pixel_x = 4; pixel_y = 4},/turf/open/floor/wood,/area/space)
+"tJ" = (/obj/structure/catwalk,/obj/machinery/atmospherics/components/unary/tank/air,/obj/structure/window/reinforced,/obj/structure/disposalpipe/segment{dir = 4},/turf/open/ground/coast/corner{dir = 4},/area/space)
+"tQ" = (/obj/structure/sink{pixel_x = 1; pixel_y = 22},/turf/open/floor/tile/dark,/area/space)
+"tV" = (/mob/living/carbon/monkey,/turf/open/floor/freezer,/area/space)
+"tW" = (/obj/structure/catwalk,/turf/open/ground,/area/space)
+"ua" = (/obj/machinery/door_timer/cell_1{pixel_y = 33},/turf/open/floor/tile/dark,/area/space)
+"uj" = (/obj/structure/table/reinforced,/obj/structure/paper_bin,/obj/item/tool/pen,/obj/machinery/door/window,/turf/open/floor/tile/dark,/area/space)
+"uq" = (/obj/structure/fence,/turf/open/ground/grass,/area/space)
+"uF" = (/obj/machinery/landinglight/ds1{dir = 8},/obj/effect/decal/warning_stripes/thin{dir = 8},/turf/open/ground/grass,/area/space)
+"uJ" = (/obj/machinery/door_timer/cell_2{pixel_y = 32},/turf/open/floor/tile/dark,/area/space)
+"uT" = (/obj/structure/catwalk,/obj/machinery/atmospherics/components/unary/tank/oxygen,/obj/structure/window/reinforced,/obj/structure/disposalpipe/segment/corner{dir = 4},/turf/open/ground/river,/area/space)
+"uX" = (/obj/structure/table/woodentable,/obj/item/reagent_containers/food/drinks/bottle/absinthe{pixel_x = 11},/obj/item/reagent_containers/food/drinks/bottle/bluecuracao{pixel_x = 5; pixel_y = 3},/obj/item/reagent_containers/food/drinks/bottle/cognac{pixel_x = -2},/obj/item/reagent_containers/food/drinks/bottle/davenport{pixel_x = -11},/turf/open/floor/wood,/area/space)
+"vd" = (/obj/structure/toilet{dir = 8},/turf/open/floor/tile/dark,/area/space)
+"vm" = (/obj/item/ammo_magazine/shotgun/buckshot,/obj/item/ammo_magazine/shotgun,/obj/item/ammo_magazine/shotgun/beanbag,/obj/item/ammo_magazine/shotgun/flechette,/obj/structure/closet,/turf/open/floor/tile/dark,/area/space)
+"vs" = (/obj/structure/bed/stool{pixel_x = -15; pixel_y = 11},/turf/open/floor/asteroidfloor,/area/space)
+"vK" = (/obj/structure/reagent_dispensers/water_cooler,/turf/open/floor/wood,/area/space)
+"vN" = (/obj/machinery/door/airlock/mainship/secure/tcomms{name = "Telecommunications"},/turf/open/floor/mainship/mono,/area/space)
+"vU" = (/turf/open/floor/marking/asteroidwarning{dir = 4},/area/space)
+"vX" = (/obj/structure/bed/chair/office/dark,/turf/open/floor/mainship/sterile/dark,/area/space)
+"vY" = (/obj/structure/reagent_dispensers/beerkeg,/turf/open/floor/wood,/area/space)
+"wf" = (/obj/structure/bed/chair/sofa/left{dir = 8},/turf/open/floor/wood,/area/space)
+"wk" = (/obj/structure/table/reinforced,/obj/item/reagent_containers/food/snacks/bigbiteburger,/turf/open/floor/prison/kitchen,/area/space)
+"wq" = (/obj/structure/rack,/obj/item/weapon/stunprod/improved,/turf/open/floor/asteroidfloor,/area/space)
+"wt" = (/obj/machinery/power/geothermal,/turf/open/floor/plating/asteroidfloor,/area/space)
+"wu" = (/obj/structure/table,/obj/item/storage/box/cups,/obj/machinery/light/spot{dir = 1},/turf/open/floor/wood,/area/space)
+"wv" = (/obj/machinery/light/spot{dir = 1},/turf/open/floor/wood,/area/space)
+"wz" = (/obj/machinery/chem_dispenser,/turf/open/floor/asteroidfloor,/area/space)
+"wG" = (/obj/structure/table/woodentable,/obj/machinery/faxmachine,/turf/open/floor/wood,/area/space)
+"wH" = (/obj/structure/table/mainship,/obj/item/storage/box/drinkingglasses,/obj/machinery/light/spot{dir = 8},/turf/open/floor/wood,/area/space)
+"wW" = (/obj/structure/table/reinforced,/turf/open/floor/mainship/sterile/dark,/area/space)
+"wY" = (/obj/structure/safe,/turf/open/floor/wood,/area/space)
+"wZ" = (/obj/structure/table/reinforced,/obj/machinery/chem_dispenser/soda,/turf/open/floor/wood,/area/space)
+"xa" = (/obj/effect/landmark/start/job/halo_civ_chef,/turf/open/floor/freezer,/area/space)
+"xg" = (/turf/open/floor/carpet,/area/space)
+"xi" = (/obj/structure/bed/chair/office/light,/turf/open/floor/carpet,/area/space)
+"xj" = (/obj/machinery/telecomms/receiver/preset_left,/turf/open/floor/mainship/tcomms,/area/space)
+"xp" = (/obj/structure/bed/fancy,/obj/item/bedsheet/brown,/turf/open/floor/tile/dark,/area/space)
+"xr" = (/obj/structure/table/reinforced,/obj/item/reagent_containers/food/condiment/saltshaker{pixel_x = 4; pixel_y = 4},/obj/item/reagent_containers/food/condiment/peppermill{pixel_x = -5; pixel_y = 6},/turf/open/floor/prison/kitchen,/area/space)
+"xG" = (/obj/structure/bed/fancy,/obj/item/bedsheet/hos,/turf/open/floor/tile/dark,/area/space)
+"xH" = (/obj/effect/decal/warning_stripes/thin{dir = 1},/obj/effect/decal/warning_stripes/thin{dir = 4},/obj/machinery/landinglight/ds1/delayone{dir = 4},/turf/open/ground/grass,/area/space)
+"xO" = (/obj/structure/closet/crate,/obj/item/stack/sheet/mineral/phoron/small_stack,/obj/item/stack/sheet/mineral/phoron/small_stack,/obj/effect/decal/cleanable/dirt,/turf/open/floor/asteroidfloor,/area/space)
+"xW" = (/obj/structure/closet/secure_closet/brig/cell/cell2,/turf/open/floor/tile/dark,/area/space)
+"xX" = (/obj/machinery/mineral/unloading_machine,/turf/open/floor/asteroidfloor,/area/space)
+"xY" = (/obj/structure/table/woodentable,/turf/open/floor/tile/dark,/area/space)
+"yf" = (/obj/structure/rack,/obj/item/clothing/head/helmet/marine/gcpd/goggles{pixel_x = 8},/obj/item/clothing/head/helmet/marine/gcpd/visor{pixel_x = -8},/turf/open/floor/tile/dark,/area/space)
+"yg" = (/obj/structure/bed/chair/office/dark{dir = 8},/obj/effect/landmark/start/job/gcpd_chief,/turf/open/floor/tile/dark,/area/space)
+"yk" = (/obj/structure/bed/chair/office/light{dir = 4},/turf/open/floor/carpet,/area/space)
+"ym" = (/obj/structure/table/woodentable,/obj/item/reagent_containers/food/drinks/coffee,/turf/open/floor/carpet,/area/space)
+"yo" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating/asteroidfloor,/area/space)
+"yq" = (/obj/structure/table/reinforced,/obj/item/tool/kitchen/tray,/turf/open/floor/wood,/area/space)
+"yr" = (/obj/effect/decal/warning_stripes/thin{dir = 4},/obj/machinery/landinglight/ds1{dir = 4},/turf/open/ground/grass,/area/space)
+"yt" = (/obj/machinery/door/airlock/multi_tile/mainship/generic{dir = 2},/turf/open/floor/asteroidfloor,/area/space)
+"yu" = (/obj/structure/bed/chair/wood/wings{dir = 4},/turf/open/floor/wood,/area/space)
+"yz" = (/obj/structure/table/woodentable,/turf/open/floor/carpet,/area/space)
+"yA" = (/obj/structure/table/woodentable,/obj/item/reagent_containers/food/drinks/coffee/cafe_latte,/turf/open/floor/carpet,/area/space)
+"yO" = (/obj/structure/bed/chair/office/light{dir = 8},/turf/open/floor/carpet,/area/space)
+"yU" = (/obj/structure/table/reinforced,/obj/machinery/chem_dispenser/beer,/turf/open/floor/wood,/area/space)
+"yX" = (/obj/machinery/telecomms/server/presets/bravo,/turf/open/floor/mainship/tcomms,/area/space)
+"zf" = (/obj/machinery/conveyor{dir = 10; id = "anomalybelt"},/turf/open/floor/asteroidfloor,/area/space)
+"zh" = (/obj/structure/closet/secure_closet/freezer/kitchen,/turf/open/floor/wood,/area/space)
+"zj" = (/obj/structure/bed/chair{dir = 8},/turf/open/floor/plating/ground/desertdam/asphault,/area/space)
+"zo" = (/obj/structure/bed/chair/sofa/right{dir = 8},/turf/open/floor/wood,/area/space)
+"zy" = (/obj/structure/sink/kitchen{dir = 4; pixel_x = 45; pixel_y = 5},/turf/open/floor/wood,/area/space)
+"zC" = (/obj/structure/flora/ausbushes/fullgrass,/turf/open/floor/plating/ground/dirt,/area/space)
+"zG" = (/obj/structure/filingcabinet,/turf/open/floor/wood,/area/space)
+"zI" = (/obj/machinery/power/smes/buildable,/turf/open/floor/asteroidfloor,/area/space)
+"zJ" = (/obj/effect/attach_point/electronics/dropship1{dir = 1},/turf/open/floor/plating,/area/space)
+"zU" = (/obj/structure/table/woodentable,/obj/item/reagent_containers/food/drinks/britcup,/turf/open/floor/carpet,/area/space)
+"An" = (/obj/structure/closet/secure_closet/brig/cell/cell1,/turf/open/floor/tile/dark,/area/space)
+"Aw" = (/obj/machinery/power/geothermal,/turf/open/floor/asteroidfloor,/area/space)
+"Ay" = (/obj/structure/table/woodentable,/obj/item/storage/donut_box,/turf/open/floor/carpet,/area/space)
+"AN" = (/obj/effect/landmark/start/job/halo_civ_farmer,/turf/open/floor/wood,/area/space)
+"AP" = (/obj/structure/filingcabinet/filingcabinet,/turf/open/floor/wood,/area/space)
+"AQ" = (/obj/structure/flora/ausbushes/fullgrass,/turf/open/floor/plating/ground/dirt2,/area/space)
+"AR" = (/obj/machinery/door/window{dir = 8},/turf/open/floor/tile/dark,/area/space)
+"AV" = (/obj/machinery/door/airlock/mainship/security/glass,/turf/open/floor/tile/dark,/area/space)
+"AY" = (/turf/open/floor/mainship/mono,/area/space)
+"Bd" = (/turf/closed/wall/wood,/area/space)
+"Be" = (/obj/machinery/vending/coffee,/turf/open/floor/tile/dark,/area/space)
+"Bq" = (/obj/structure/bed/chair/wood/wings{dir = 1},/turf/open/floor/wood,/area/space)
+"Bu" = (/obj/structure/bookcase/manuals,/turf/open/floor/wood,/area/space)
+"BF" = (/obj/structure/table/woodentable,/obj/item/reagent_containers/food/drinks/tea,/turf/open/floor/carpet,/area/space)
+"BR" = (/obj/structure/closet/secure_closet/freezer/fridge,/turf/open/floor/wood,/area/space)
+"BS" = (/turf/open/floor/wood,/area/space)
+"BT" = (/obj/machinery/atmospherics/components/unary/vent_scrubber/on{dir = 8},/obj/machinery/light/spot{dir = 1},/turf/open/floor/freezer,/area/space)
+"Cc" = (/obj/structure/bed/stool,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating/asteroidfloor,/area/space)
+"Co" = (/obj/structure/bed/chair{dir = 4},/turf/open/floor/plating/ground/desertdam/asphault,/area/space)
+"Ct" = (/obj/machinery/door/airlock/prison,/turf/open/floor/tile/dark,/area/space)
+"Cx" = (/mob/living/simple_animal/chicken,/obj/item/reagent_containers/food/snacks/grown/corn,/turf/open/floor/plating/ground/dirt2,/area/space)
+"CN" = (/obj/structure/table/reinforced,/obj/item/folder/black,/obj/structure/window/reinforced{dir = 8},/turf/open/floor/tile/dark,/area/space)
+"CZ" = (/obj/structure/disposalpipe/segment{dir = 8; name = "water pipe"},/turf/open/ground/river,/area/space)
+"De" = (/obj/structure/platform{dir = 8},/turf/open/floor/plating/ground/desertdam/asphault,/area/space)
+"Dn" = (/obj/structure/table/reinforced,/obj/machinery/microwave,/turf/open/floor/wood,/area/space)
+"Dp" = (/obj/structure/rack,/obj/item/tool/kitchen/knife/butcher,/turf/open/floor/freezer,/area/space)
+"Dv" = (/obj/structure/table/reinforced,/obj/machinery/reagentgrinder,/turf/open/floor/tile/dark,/area/space)
+"DD" = (/obj/structure/bed/chair/office/light{dir = 1},/turf/open/floor/carpet,/area/space)
+"DG" = (/obj/effect/decal/warning_stripes/thin{dir = 4},/obj/machinery/landinglight/ds1/delaythree{dir = 4},/turf/open/ground/grass,/area/space)
+"DK" = (/obj/machinery/telecomms/server/presets/common,/turf/open/floor/mainship/tcomms,/area/space)
+"DN" = (/obj/machinery/botany/extractor,/turf/open/floor/asteroidfloor,/area/space)
+"DO" = (/obj/structure/table/reinforced,/obj/machinery/door/window{dir = 8},/turf/open/floor/tile/dark,/area/space)
+"DY" = (/obj/effect/attach_point/weapon/dropship1{dir = 1},/turf/open/floor/plating,/area/space)
+"DZ" = (/obj/effect/decal/warning_stripes/thin{dir = 1},/obj/machinery/landinglight/ds1/delayone{dir = 1},/turf/open/ground/grass,/area/space)
+"Ea" = (/obj/structure/rack,/obj/item/stack/sheet/mineral/gold,/obj/item/stack/sheet/mineral/gold,/obj/item/stack/sheet/mineral/gold,/turf/open/floor/plating/asteroidfloor,/area/space)
+"El" = (/obj/structure/rack,/obj/item/stack/sheet/mineral/osmium,/obj/item/stack/sheet/mineral/osmium,/obj/item/stack/sheet/mineral/osmium,/turf/open/floor/plating/asteroidfloor,/area/space)
+"Et" = (/obj/structure/table/reinforced,/obj/item/reagent_containers/food/drinks/coffee/cafe_latte{pixel_x = -4},/obj/item/folder/red{pixel_x = 6; pixel_y = 3},/turf/open/floor/mainship/sterile/dark,/area/space)
+"EM" = (/obj/structure/rack,/turf/open/floor/tile/dark,/area/space)
+"ES" = (/obj/structure/table,/obj/machinery/microwave,/turf/open/floor/tile/dark,/area/space)
+"Fa" = (/obj/structure/bed/chair/office/light{dir = 8},/turf/open/floor/wood,/area/space)
+"Fs" = (/obj/structure/flora/ausbushes/grassybush,/turf/open/ground/grass,/area/space)
+"FL" = (/obj/structure/table/reinforced,/obj/item/tool/kitchen/knife,/turf/open/floor/tile/dark,/area/space)
+"FU" = (/obj/machinery/light/spot,/turf/open/floor/wood,/area/space)
+"Gf" = (/obj/structure/table/reinforced,/obj/item/folder/red,/obj/machinery/door/window{dir = 8},/turf/open/floor/tile/dark,/area/space)
+"Gj" = (/obj/structure/bed/chair/office/dark{dir = 8},/turf/open/floor/tile/dark,/area/space)
+"Gm" = (/obj/structure/flora/ausbushes/fernybush,/turf/open/ground/grass,/area/space)
+"Go" = (/obj/structure/closet/secure_closet/freezer/kitchen,/turf/open/floor/tile/dark,/area/space)
+"Gt" = (/obj/structure/flora/ausbushes/grassybush,/turf/open/floor/plating/ground/dirt2,/area/space)
+"Gv" = (/obj/machinery/camera/autoname/mainship{dir = 4},/turf/open/floor/mainship/tcomms,/area/space)
+"Gz" = (/mob/living/simple_animal/chick,/obj/item/reagent_containers/food/snacks/grown/corn,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating/ground/dirt2,/area/space)
+"GB" = (/obj/machinery/door/airlock/multi_tile/glass{name = "Cafeteria"},/turf/open/floor/wood,/area/space)
+"GM" = (/obj/structure/closet/secure_closet/freezer/fridge,/turf/open/floor/tile/dark,/area/space)
+"GP" = (/obj/machinery/door/airlock/multi_tile/mainship/secdoor,/turf/open/floor/tile/dark,/area/space)
+"GR" = (/obj/item/reagent_containers/food/snacks/grown/corn,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating/ground/dirt2,/area/space)
+"GT" = (/obj/machinery/telecomms/processor/preset_two,/turf/open/floor/mainship/tcomms,/area/space)
+"GW" = (/obj/structure/rack,/obj/item/weapon/gun/pistol/m6/m6b_security,/obj/item/weapon/gun/pistol/m6/m6b_security,/turf/open/floor/tile/dark,/area/space)
+"GY" = (/obj/machinery/door/airlock/multi_tile/mainship/generic{dir = 8},/turf/open/floor/asteroidfloor,/area/space)
+"He" = (/obj/structure/table/reinforced,/obj/machinery/reagentgrinder,/turf/open/floor/prison/kitchen,/area/space)
+"HE" = (/obj/structure/table/reinforced,/obj/structure/paper_bin,/obj/item/tool/pen,/obj/machinery/door/window{dir = 8},/turf/open/floor/tile/dark,/area/space)
+"HI" = (/obj/structure/rack,/obj/item/ammo_magazine/pistol/m6,/obj/item/ammo_magazine/pistol/m6,/obj/item/ammo_magazine/pistol/m6,/obj/item/ammo_magazine/pistol/m6,/obj/item/ammo_magazine/pistol/m6,/obj/item/ammo_magazine/pistol/m6,/turf/open/floor/tile/dark,/area/space)
+"HN" = (/obj/structure/closet/secure_closet/freezer/fridge,/turf/open/floor/prison/kitchen,/area/space)
+"HP" = (/obj/machinery/telecomms/server/presets/engineering,/turf/open/floor/mainship/tcomms,/area/space)
+"HQ" = (/obj/machinery/telecomms/broadcaster/preset_left,/turf/open/floor/mainship/tcomms,/area/space)
+"Ij" = (/obj/structure/bookcase,/turf/open/floor/wood,/area/space)
+"Il" = (/turf/open/space/basic,/area/space)
+"In" = (/turf/open/floor/plating/asteroidfloor,/area/space)
+"Ip" = (/obj/structure/rack,/obj/item/ammo_magazine/shotgun/eightGauge{pixel_x = -9; pixel_y = 9},/obj/item/ammo_magazine/shotgun/eightGauge/slug{pixel_x = 9; pixel_y = -8},/turf/open/floor/tile/dark,/area/space)
+"Ir" = (/obj/machinery/mining/brace{dir = 4},/turf/open/floor/asteroid,/area/space)
+"Iu" = (/mob/living/simple_animal/chicken{gender = "male"; name = "chungus"},/turf/open/floor/plating/ground/dirt2,/area/space)
+"IG" = (/obj/machinery/deployable/barrier,/turf/open/floor/tile/dark,/area/space)
+"IO" = (/obj/machinery/light/spot{dir = 4},/turf/open/floor/wood,/area/space)
+"IP" = (/obj/machinery/landinglight/ds1/delaytwo{dir = 8},/obj/effect/decal/warning_stripes/thin{dir = 8},/turf/open/ground/grass,/area/space)
+"IT" = (/obj/machinery/light/spot{dir = 8},/turf/open/floor/wood,/area/space)
+"IU" = (/obj/structure/reagent_dispensers/water_cooler,/turf/open/floor/mainship/sterile/dark,/area/space)
+"IY" = (/obj/structure/sink/kitchen{dir = 4; pixel_x = 45; pixel_y = 5},/turf/open/floor/freezer,/area/space)
+"Jg" = (/obj/structure/rack,/obj/item/tool/pickaxe/drill,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating/asteroidfloor,/area/space)
+"Jn" = (/obj/effect/decal/warning_stripes/thin{dir = 6},/turf/open/ground/grass,/area/space)
+"Js" = (/obj/structure/flora/ausbushes/grassybush,/turf/open/floor/plating/ground/dirt,/area/space)
+"Jx" = (/obj/structure/table/reinforced,/obj/machinery/door/window,/turf/open/floor/tile/dark,/area/space)
+"JA" = (/obj/machinery/door/airlock/multi_tile/mainship/generic,/turf/open/floor/asteroidfloor,/area/space)
+"JN" = (/obj/machinery/mining/brace{dir = 8},/turf/open/floor/asteroid,/area/space)
+"JR" = (/obj/machinery/conveyor{dir = 4; id = "anomalybelt"},/turf/open/floor/asteroidfloor,/area/space)
+"JU" = (/obj/structure/window/framed/colony,/turf/open/floor/tile/dark,/area/space)
+"JX" = (/obj/machinery/vending/security,/turf/open/floor/tile/dark,/area/space)
+"Ka" = (/obj/structure/table/mainship,/obj/machinery/chem_dispenser/beer{dir = 4},/turf/open/floor/wood,/area/space)
+"Kb" = (/mob/living/simple_animal/chicken,/turf/open/floor/plating/ground/dirt2,/area/space)
+"Kd" = (/obj/structure/bed/stool,/turf/open/floor/plating/asteroidfloor,/area/space)
+"Kf" = (/obj/machinery/flasher/portable,/turf/open/floor/tile/dark,/area/space)
+"Kj" = (/obj/effect/attach_point/weapon/dropship1{dir = 8; icon_state = "equip_base_l_wing"},/turf/open/floor/plating,/area/space)
+"Km" = (/obj/machinery/conveyor{dir = 9; icon_state = "conveyor0"; id = "anomalybelt"},/turf/open/floor/asteroidfloor,/area/space)
+"Kr" = (/obj/structure/window/framed/colony/reinforced,/turf/open/floor/wood,/area/space)
+"Ks" = (/obj/effect/decal/warning_stripes/thin,/obj/machinery/landinglight/ds1/delaytwo,/turf/open/ground/grass,/area/space)
+"Kt" = (/obj/structure/table/reinforced,/obj/item/storage/firstaid/adv,/turf/open/floor/tile/dark,/area/space)
+"Kx" = (/obj/machinery/optable,/obj/item/tank/anesthetic,/obj/item/clothing/mask/breath/medical,/turf/open/floor/mainship/sterile/dark,/area/space)
+"KI" = (/obj/structure/table/mainship,/turf/open/floor/tile/dark,/area/space)
+"KO" = (/obj/effect/landmark/start/job/gcpd_cop,/turf/open/floor/tile/dark,/area/space)
+"KW" = (/obj/structure/window/framed/wood,/turf/open/floor/wood,/area/space)
+"La" = (/obj/effect/overlay/palmtree_l,/turf/open/ground,/area/space)
+"Lc" = (/obj/structure/table/holotable/wood,/obj/structure/paper_bin,/obj/item/tool/pen,/turf/open/floor/wood,/area/space)
+"Lf" = (/obj/structure/table/gamblingtable,/obj/item/toy/deck/kotahi,/turf/open/floor/wood,/area/space)
+"Ll" = (/obj/machinery/door/airlock/multi_tile/glass{dir = 1; name = "Cafeteria"},/turf/open/floor/wood,/area/space)
+"Lm" = (/obj/machinery/botany/editor,/turf/open/floor/asteroidfloor,/area/space)
+"Lq" = (/obj/structure/table/holotable/wood,/obj/item/storage/box/matches,/turf/open/floor/wood,/area/space)
+"Lr" = (/obj/structure/flora/ausbushes/genericbush,/turf/open/ground/grass,/area/space)
+"Ls" = (/obj/structure/catwalk,/turf/open/ground/coast/corner{dir = 4},/area/space)
+"Lt" = (/obj/structure/flora/ausbushes/fullgrass,/turf/open/ground/grass,/area/space)
+"LD" = (/obj/structure/rack,/obj/item/tool/pickaxe,/turf/open/floor/asteroid,/area/space)
+"LI" = (/mob/living/simple_animal/chick,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating/ground/dirt2,/area/space)
+"LL" = (/turf/open/floor/plating/ground/dirt,/area/space)
+"LO" = (/obj/structure/catwalk,/obj/machinery/atmospherics/components/unary/tank/oxygen,/obj/structure/window/reinforced,/obj/structure/disposalpipe/segment{dir = 4},/turf/open/ground/river,/area/space)
+"LY" = (/obj/structure/bed/chair/office/dark{dir = 4},/turf/open/floor/tile/dark,/area/space)
+"Mf" = (/obj/structure/bed/alien,/turf/open/floor/mainship/sterile/dark,/area/space)
+"Mi" = (/obj/structure/table/reinforced,/obj/item/folder/red,/turf/open/floor/tile/dark,/area/space)
+"Mj" = (/obj/machinery/telecomms/processor/preset_three,/turf/open/floor/mainship/tcomms,/area/space)
+"Mm" = (/obj/structure/table/reinforced,/obj/item/weapon/shield/riot,/obj/machinery/door/window{dir = 8},/turf/open/floor/tile/dark,/area/space)
+"Mu" = (/obj/structure/filingcabinet,/turf/open/floor/tile/dark,/area/space)
+"MB" = (/obj/structure/bed/chair/comfy,/turf/open/floor/wood,/area/space)
+"MJ" = (/obj/structure/rack,/obj/item/storage/toolbox/syndicate,/turf/open/floor/tile/dark,/area/space)
+"MP" = (/obj/structure/bed/chair{dir = 1},/turf/open/floor/wood,/area/space)
+"MQ" = (/obj/structure/mineral_door/wood,/turf/open/floor/plating/ground/dirt2,/area/space)
+"MR" = (/obj/effect/landmark/corpsespawner/pmc,/turf/open/ground,/area/space)
+"MV" = (/turf/open/floor/asteroidfloor,/area/space)
+"Ne" = (/turf/open/floor/prison/kitchen,/area/space)
+"Ni" = (/obj/structure/rack,/obj/item/storage/bag/ore,/obj/item/storage/bag/ore,/turf/open/floor/plating/asteroidfloor,/area/space)
+"Nv" = (/obj/structure/curtain/medical,/turf/open/floor/mainship/sterile/dark,/area/space)
+"NB" = (/obj/structure/closet/secure_closet/military_officer_spare,/turf/open/floor/tile/dark,/area/space)
+"NF" = (/obj/structure/table/reinforced,/obj/item/storage/box/flashbangs,/turf/open/floor/tile/dark,/area/space)
+"NH" = (/obj/structure/rack,/obj/item/weapon/gun/energy/taser,/turf/open/floor/tile/dark,/area/space)
+"NQ" = (/obj/structure/bed/chair/comfy{dir = 4},/turf/open/floor/wood,/area/space)
+"NU" = (/obj/structure/table/mainship,/obj/item/folder,/turf/open/floor/tile/dark,/area/space)
+"NX" = (/turf/open/floor/marking/asteroidwarning{dir = 1},/area/space)
+"Oa" = (/obj/structure/table/reinforced,/obj/structure/window/reinforced{dir = 4},/turf/open/floor/tile/dark,/area/space)
+"Oc" = (/obj/machinery/vending/hydronutrients,/turf/open/floor/asteroidfloor,/area/space)
+"Oe" = (/obj/structure/catwalk,/turf/open/ground/coast{dir = 1},/area/space)
+"Oh" = (/obj/structure/bed,/obj/item/bedsheet/brown,/turf/open/floor/wood,/area/space)
+"Om" = (/obj/structure/table/woodentable,/obj/item/moneybag,/turf/open/floor/plating/ground/dirt2,/area/space)
+"Or" = (/obj/machinery/vending/boozeomat,/turf/open/floor/wood,/area/space)
+"Ot" = (/obj/structure/bed/stool,/turf/open/ground/grass,/area/space)
+"Ow" = (/obj/machinery/telecomms/server/presets/medical,/turf/open/floor/mainship/tcomms,/area/space)
+"Oz" = (/turf/closed/wall,/area/space)
+"OD" = (/obj/structure/platform{dir = 4},/turf/open/floor/plating/ground/desertdam/asphault,/area/space)
+"OE" = (/obj/structure/table/woodentable,/obj/item/storage/fancy/cigar,/turf/open/floor/wood,/area/space)
+"OO" = (/obj/machinery/telecomms/processor/preset_one,/turf/open/floor/mainship/tcomms,/area/space)
+"OR" = (/obj/structure/closet/secure_closet/freezer/fridge,/turf/open/floor/freezer,/area/space)
+"OS" = (/obj/machinery/iv_drip,/obj/item/reagent_containers/blood/OMinus,/turf/open/floor/mainship/sterile/dark,/area/space)
+"OX" = (/obj/structure/mineral_door/wood,/turf/open/floor/wood,/area/space)
+"OZ" = (/obj/structure/bed/chair/comfy{dir = 8},/turf/open/floor/wood,/area/space)
+"Pd" = (/obj/structure/bed/chair/office/light{dir = 4},/turf/open/floor/wood,/area/space)
+"Pl" = (/obj/machinery/telecomms/server/presets/innie,/turf/open/floor/mainship/tcomms,/area/space)
+"Pm" = (/obj/effect/decal/remains/xeno,/turf/open/ground,/area/space)
+"Po" = (/mob/living/simple_animal/chicken{name = "grob"},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating/ground/dirt2,/area/space)
+"Pw" = (/obj/structure/table/holotable/wood,/turf/open/floor/wood,/area/space)
+"Pz" = (/obj/structure/table/woodentable,/obj/item/weapon/gun/shotgun/double{pixel_y = -19},/obj/item/shotgunbox/buckshot,/turf/open/floor/wood,/area/space)
+"PG" = (/obj/structure/rack,/obj/item/tool/pickaxe,/turf/open/floor/plating/asteroidfloor,/area/space)
+"PK" = (/obj/effect/decal/warning_stripes/thin{dir = 8},/obj/machinery/landinglight/ds1/delaythree{dir = 8},/turf/open/ground/grass,/area/space)
+"PU" = (/obj/structure/table/reinforced,/obj/structure/window/reinforced{dir = 4},/obj/machinery/door/window{dir = 2},/obj/item/weapon/gun/shotgun/double,/turf/open/floor/tile/dark,/area/space)
+"PV" = (/obj/effect/decal/remains/human,/turf/open/ground,/area/space)
+"PZ" = (/obj/structure/reagent_dispensers/wallmounted/peppertank,/turf/closed/wall,/area/space)
+"Qk" = (/obj/structure/bed/chair/sofa/right{dir = 1},/turf/open/floor/wood,/area/space)
+"Qt" = (/mob/living/simple_animal/crab/evil{name = "satan crab"},/turf/open/ground,/area/space)
+"Qv" = (/obj/machinery/landinglight/ds1/delaythree{dir = 8},/obj/effect/decal/warning_stripes/thin{dir = 8},/turf/open/ground/grass,/area/space)
+"QC" = (/obj/machinery/colony_floodlight,/turf/open/ground/grass,/area/space)
+"QD" = (/obj/structure/table/reinforced,/obj/item/clothing/head/chefhat,/obj/item/tool/kitchen/rollingpin,/turf/open/floor/prison/kitchen,/area/space)
+"QG" = (/obj/effect/decal/warning_stripes/thin{dir = 4},/obj/machinery/landinglight/ds1/delaytwo{dir = 4},/turf/open/ground/grass,/area/space)
+"QH" = (/obj/effect/decal/warning_stripes/thin{dir = 8},/obj/machinery/landinglight/ds1/delaytwo{dir = 8},/turf/open/ground/grass,/area/space)
+"QO" = (/obj/structure/bed,/obj/item/bedsheet/brown,/turf/open/floor/tile/dark,/area/space)
+"Ri" = (/obj/structure/table/holotable/wood,/obj/machinery/computer3/laptop/secure_data,/turf/open/floor/wood,/area/space)
+"Rm" = (/obj/effect/decal/cleanable/blood,/turf/open/ground,/area/space)
+"Ro" = (/obj/structure/platform,/obj/structure/platform_decoration{dir = 6},/obj/structure/platform{dir = 4},/turf/open/floor/plating/ground/desertdam/asphault,/area/space)
+"Rt" = (/obj/structure/rack,/obj/item/storage/box/monkeycubes,/obj/item/storage/box/monkeycubes,/turf/open/floor/freezer,/area/space)
+"RE" = (/obj/effect/landmark/start/job/halo_civ_mayor,/turf/open/floor/wood,/area/space)
+"RK" = (/turf/open/floor/mainship/sterile/dark,/area/space)
+"RQ" = (/obj/structure/table/mainship,/obj/machinery/chem_dispenser/soda{dir = 4},/turf/open/floor/wood,/area/space)
+"RT" = (/obj/machinery/telecomms/server/presets/charlie,/turf/open/floor/mainship/tcomms,/area/space)
+"Sc" = (/obj/structure/bed/stool,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating/ground/dirt2,/area/space)
+"Se" = (/turf/open/floor/grass,/area/space)
+"Sf" = (/obj/effect/decal/warning_stripes/thin{dir = 5},/turf/open/ground/grass,/area/space)
+"Sk" = (/obj/effect/landmark/weapon_spawn/halo_colony_weapon_spawn,/turf/open/ground,/area/space)
+"Sq" = (/obj/structure/closet/crate/miningcar,/obj/item/stack/sheet/mineral/iron{pixel_y = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/asteroid,/area/space)
+"Sw" = (/obj/structure/table/reinforced,/turf/open/floor/wood,/area/space)
+"SE" = (/obj/structure/jungle/vines,/turf/open/ground,/area/space)
+"SF" = (/obj/item/reagent_containers/food/drinks/cans/beer,/turf/open/floor/plating/ground/dirt2,/area/space)
+"SJ" = (/obj/structure/rack,/obj/item/stack/sheet/mineral/silver,/obj/item/stack/sheet/mineral/silver,/obj/item/stack/sheet/mineral/silver,/turf/open/floor/plating/asteroidfloor,/area/space)
+"SL" = (/turf/open/ground/grass/grass2,/area/space)
+"SM" = (/obj/structure/jungle/vines,/turf/open/ground/river,/area/space)
+"SU" = (/obj/machinery/mineral/processing_unit_console,/turf/closed/wall/r_wall,/area/space)
+"Tl" = (/obj/effect/decal/cleanable/blood,/turf/open/floor/plating/ground/dirt2,/area/space)
+"Ts" = (/obj/structure/catwalk,/obj/structure/disposalpipe/segment/corner{dir = 8},/turf/open/ground/coast/corner2{dir = 8},/area/space)
+"Tv" = (/turf/open/floor/freezer,/area/space)
+"Tw" = (/obj/structure/flora/ausbushes/sparsegrass,/turf/open/ground/grass,/area/space)
+"Ty" = (/obj/machinery/door/airlock/multi_tile/mainship/generic{name = "Hydroelectric Dam"},/turf/open/floor/asteroidfloor,/area/space)
+"Tz" = (/obj/machinery/telecomms/receiver/preset_right,/turf/open/floor/mainship/tcomms,/area/space)
+"TE" = (/obj/machinery/atmospherics/components/unary/thermomachine/freezer{dir = 4},/turf/open/floor/freezer,/area/space)
+"TI" = (/obj/structure/window/framed/mainship,/turf/open/floor/mainship/mono,/area/space)
+"TL" = (/obj/structure/table/woodentable,/obj/item/reagent_containers/food/drinks/bottle/whiskey,/turf/open/floor/plating/ground/dirt2,/area/space)
+"TN" = (/obj/structure/bed/chair/comfy{dir = 1},/turf/open/floor/wood,/area/space)
+"TS" = (/obj/machinery/vending/cigarette/colony,/turf/open/floor/wood,/area/space)
+"TT" = (/obj/machinery/vending/dinnerware,/turf/open/floor/wood,/area/space)
+"TX" = (/obj/structure/jungle/vines,/obj/structure/jungle/vines/heavy,/turf/open/ground/river,/area/space)
+"Ua" = (/obj/structure/rack,/obj/item/tool/pickaxe/drill,/turf/open/floor/plating/asteroidfloor,/area/space)
+"Ue" = (/obj/structure/platform,/turf/open/floor/plating/ground/desertdam/asphault,/area/space)
+"Uy" = (/obj/structure/table/woodentable,/obj/item/reagent_containers/food/drinks/bottle/gin{pixel_x = 8},/obj/item/reagent_containers/food/drinks/bottle/kahlua{pixel_x = 14},/obj/item/reagent_containers/food/drinks/bottle/melonliquor{pixel_x = 2},/obj/item/reagent_containers/food/drinks/bottle/rum{pixel_x = -3},/obj/item/reagent_containers/food/drinks/bottle/sake{pixel_x = -10},/turf/open/floor/wood,/area/space)
+"UG" = (/turf/open/floor/plating/ground/dirtgrassborder/corner,/area/space)
+"UI" = (/obj/structure/flora/ausbushes/sparsegrass,/turf/open/floor/plating/ground/dirt,/area/space)
+"UM" = (/turf/open/floor/plating/ground/dirtgrassborder,/area/space)
+"UP" = (/obj/machinery/light{dir = 8},/turf/open/floor/asteroidfloor,/area/space)
+"UX" = (/obj/structure/rack,/obj/item/storage/donut_box,/turf/open/floor/mainship/sterile/dark,/area/space)
+"UZ" = (/obj/structure/flora/tree/jungle/small,/turf/open/ground/grass,/area/space)
+"Vc" = (/obj/structure/flora/ausbushes/reedbush,/obj/machinery/portable_atmospherics/hydroponics/soil,/turf/open/floor/plating/ground/dirt2,/area/space)
+"Vd" = (/obj/structure/bed/chair/wood/wings,/turf/open/floor/wood,/area/space)
+"Vk" = (/turf/open/floor/plating/ground/dirtgrassborder/corner{dir = 1},/area/space)
+"Vq" = (/obj/structure/jungle/vines,/obj/structure/jungle/vines/heavy,/turf/open/ground/coast/corner2{dir = 8},/area/space)
+"Vs" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/asteroidfloor,/area/space)
+"Vu" = (/obj/structure/catwalk,/obj/structure/disposalpipe/segment/corner{dir = 8},/turf/open/ground/river,/area/space)
+"Vv" = (/obj/structure/jungle/vines,/turf/open/ground/coast/corner{dir = 4},/area/space)
+"Vy" = (/obj/machinery/telecomms/hub/preset,/turf/open/floor/mainship/tcomms,/area/space)
+"VB" = (/obj/structure/kitchenspike,/turf/open/floor/freezer,/area/space)
+"VC" = (/obj/machinery/computer/station_alert,/obj/structure/table/reinforced,/turf/open/floor/asteroidfloor,/area/space)
+"VG" = (/obj/structure/jungle/vines,/turf/open/floor/plating/ground/dirtgrassborder{dir = 8},/area/space)
+"VH" = (/obj/structure/flora/ausbushes/fullgrass,/turf/open/ground,/area/space)
+"VK" = (/obj/machinery/door/airlock/freezer,/turf/open/floor/freezer,/area/space)
+"VQ" = (/turf/open/floor/tile/dark,/area/space)
+"VU" = (/turf/open/floor/plating/ground/dirtgrassborder{dir = 8},/area/space)
+"Wd" = (/obj/machinery/telecomms/bus/preset_one,/turf/open/floor/mainship/tcomms,/area/space)
+"Wj" = (/obj/machinery/vending/dinnerware,/turf/open/floor/prison/kitchen,/area/space)
+"Wk" = (/obj/structure/closet/secure_closet/hydroponics,/turf/open/floor/asteroidfloor,/area/space)
+"Wl" = (/obj/structure/table/mainship,/obj/item/folder/black{pixel_x = 6},/obj/item/folder/red{pixel_x = -7},/turf/open/floor/tile/dark,/area/space)
+"WG" = (/obj/machinery/gibber,/turf/open/floor/freezer,/area/space)
+"WN" = (/turf/open/floor/plating/ground/dirtgrassborder2/corner,/area/space)
+"WR" = (/obj/structure/table/woodentable,/turf/open/floor/wood,/area/space)
+"WS" = (/obj/machinery/door/airlock/mainship/security{dir = 2},/turf/open/floor/tile/dark,/area/space)
+"WV" = (/obj/structure/closet/secure_closet/freezer/kitchen,/turf/open/floor/prison/kitchen,/area/space)
+"WX" = (/obj/machinery/telecomms/server/presets/security,/turf/open/floor/mainship/tcomms,/area/space)
+"Xb" = (/obj/machinery/telecomms/processor/preset_four,/turf/open/floor/mainship/tcomms,/area/space)
+"Xj" = (/obj/effect/decal/warning_stripes/thin{dir = 4},/obj/machinery/landinglight/ds1/delayone{dir = 4},/turf/open/ground/grass,/area/space)
+"Xm" = (/turf/open/floor/plating/ground/dirtgrassborder2/corner{dir = 4},/area/space)
+"Xn" = (/obj/machinery/power/smes/buildable/empty/backup,/turf/open/floor/plating/asteroidfloor,/area/space)
+"Xp" = (/obj/item/reagent_containers/food/drinks/cans/beer,/turf/open/ground/grass,/area/space)
+"Xx" = (/obj/structure/rack,/obj/item/weapon/gun/shotgun/pump/m45,/turf/open/floor/tile/dark,/area/space)
+"XB" = (/obj/structure/flora/ausbushes/fullgrass,/turf/open/ground/grass/grass2,/area/space)
+"XL" = (/obj/structure/flora/ausbushes/fullgrass{pixel_y = -15},/turf/open/ground/coast{dir = 1},/area/space)
+"XP" = (/obj/item/tool/kitchen/knife/butcher,/obj/structure/table/reinforced,/turf/open/floor/prison/kitchen,/area/space)
+"XZ" = (/obj/effect/decal/warning_stripes/thin{dir = 1},/obj/machinery/landinglight/ds1{dir = 1},/turf/open/ground/grass,/area/space)
+"Ye" = (/obj/structure/rack,/obj/item/trash/tray,/turf/open/floor/tile/dark,/area/space)
+"Yn" = (/obj/machinery/light{dir = 8},/turf/open/floor/plating/asteroidfloor,/area/space)
+"Yr" = (/obj/machinery/mineral/processing_unit,/turf/open/floor/asteroidfloor,/area/space)
+"Yt" = (/obj/structure/flora/ausbushes/fullgrass,/obj/structure/jungle/vines,/turf/open/ground/grass,/area/space)
+"Yx" = (/obj/structure/table/reinforced,/turf/open/floor/prison/kitchen,/area/space)
+"Yz" = (/obj/effect/landmark/start/job/halo_civ_colonist,/turf/open/floor/plating/asteroidfloor,/area/space)
+"YI" = (/mob/living/simple_animal/cow,/turf/open/floor/grass,/area/space)
+"YJ" = (/obj/structure/rack,/obj/item/storage/box/botanydisk,/turf/open/floor/asteroidfloor,/area/space)
+"YQ" = (/obj/machinery/door/window{dir = 8},/turf/open/floor/mainship/sterile/dark,/area/space)
+"YY" = (/obj/structure/closet/crate/trashcart,/obj/item/trash/popcorn,/turf/open/floor/plating/asteroidplating,/area/space)
+"Za" = (/obj/effect/decal/warning_stripes/thin,/obj/machinery/landinglight/ds1,/turf/open/ground/grass,/area/space)
+"Zg" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/asteroid,/area/space)
+"Zm" = (/obj/effect/decal/warning_stripes/thin{dir = 8},/obj/effect/decal/warning_stripes/thin,/obj/machinery/landinglight/ds1/delayone{dir = 8},/turf/open/ground/grass,/area/space)
+"Zo" = (/turf/open/ground/grass,/area/space)
+"Zr" = (/obj/machinery/miner{desc = "Top-of-the-line UNSC research drill with it's own packaging module, used to extract phoron in vast quantities. Selling the phoron mined by these would net a nice profit..."; name = "\improper UNSC Mining Well"},/turf/open/floor/asteroid,/area/space)
+"Zv" = (/mob/living/simple_animal/crab/kreb,/turf/open/ground/river,/area/space)
+"ZA" = (/obj/machinery/door/airlock/mainship/medical/glass/free_access{dir = 1; name = "\improper Clinic"},/turf/open/floor/mainship/sterile/dark,/area/space)
+"ZD" = (/obj/structure/window/framed/prison/reinforced/hull/tyson/reinforced,/turf/open/floor/asteroidfloor,/area/space)
+"ZH" = (/obj/machinery/telecomms/server/presets/alpha,/turf/open/floor/mainship/tcomms,/area/space)
+"ZO" = (/obj/machinery/door/airlock/multi_tile/mainship/generic{dir = 1},/turf/open/floor/asteroidfloor,/area/space)
+"ZP" = (/obj/effect/decal/warning_stripes/thin{dir = 1},/obj/machinery/landinglight/ds1/delaytwo{dir = 1},/turf/open/ground/grass,/area/space)
+"ZS" = (/obj/structure/table/reinforced,/obj/item/tool/pen,/turf/open/floor/tile/dark,/area/space)
+"ZT" = (/obj/machinery/telecomms/bus/preset_two,/turf/open/floor/mainship/tcomms,/area/space)
+"ZW" = (/obj/structure/flora/tree/jungle,/turf/open/ground/grass,/area/space)
+"ZX" = (/turf/open/floor/plating/ground/dirt2,/area/space)
+
+(1,1,1) = {"
+qFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFonononononononononononononononononqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFononZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFonZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFononZoZoZoZoZoJnKssqZanBKssqZanBKssqZaaxZoZoononqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFonZoZoZoZoZoZoyrgLgLgLgLgLgLgLgLgLgLgLrqZoZoZoononqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFononZoZoZoZoZoZoyrgLgLgLgLgLgLgLgLgLgLgLQHZoZoZoZoononqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFonZoZoZoZoZoZoZoXjgLgLgLgLgLgLgLgLgLgLgLZmZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFonZoZoZoZoZoZoZoQGgLDYzJgLgLgLgLgLzJDYgLdlZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFonZoZoZoZoZoZoZoDGgLgLgLgLgLgLgLgLgLgLgLPKZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFononZoZoZoZoZoZoZoyrgLgLgLgLgLgLgLgLgLgLgLQHZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFonZoZoZoZoZoZoZoZoXjgLgLgLgLgLgLgLgLgLgLgLrhZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFonZoZoZoZoZoZoZXZoQGKjgLgLgLgLgLgLgLgLgLgLdlZoZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFadagmgaPaQbRqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFonZoZoZoZoZoZoZXZoDGgLgLgLgLgLgLgLgLgLgLgLPKZXZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFnsagnscZnsnsnsdvqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFonZoZoZoZoZoZXZoZoyrgLgLgLgLgLgLgLgLgLgLgLQHZXZXZXZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFnsZgqFdxeCeYnsoznsqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFonZoZoZoZoZoZXZoZoXjgLgLgLgLgLbEgLgLgLgLgLrhZXZoZXZXZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFnsnsnsqFqFqFfjnsagqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFonZoZoZoZoZoZXZoZoQGgLgLgLgLgLgLgLgLgLgLgLdlZoZXZoZXZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFnsagnsfIqFqFnsqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFonZoZoZoZoZXZoZoZoDGgLgLgLgLgLgLgLgLgLgLgLPKZoZXZoZXZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFnsnsnsnsnsagqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFMRjwPmqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFononZoZoZoZXZoZoZoyrgLgLgLgLgLgLgLgLgLgLgLIPZoZXZXZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFZgZgZgnsqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFjwPVQtjwqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFonZoZoZoZXZoZoZoXjgLgLgLgLgLgLgLgLgLgLgLrhZoZXZXZoZoZoononqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFnsgcqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFjwjwRmjwqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFonZoZoZoZXZoZoZoQGgLgLgLgLgLgLgLgLgLgLgLuFZoZXZoZoZoononqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFonononononononongwhconqFonqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFjwQtjwSkqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFononZoZoZXZoZoZoDGgLgLgLgLgLgLgLgLgLgLgLQvZoZXZoZoonqFqFqFqFqFqFqFqFqFqFfNfNqFqFqFqFqFqFqFqFqFqFqFonZoZoZohxZohxigiqhxiqhxZoigigononononononononononononqFqFqFqFSEPVRmqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFonZoZoZXZoZoZoyrgLgLgLgLgLgLgLgLgLgLgLQHZoZXZoononqFqFqFqFqFqFqFqFqFqFfNfNfNqFqFqFqFqFqFonononononZoZoZoqFqFZoqFighxhxononZoonhxSLSLSLZoZoZoZoZoZoZoZoononqFSMqFTXSEqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFononZoZoZXZoZoxHgLgLgLgLgLgLgLgLgLgLgLfEZoZXZoonqFqFqFqFqFqFqFqFqFqFqFfNfNfNqFqFonononononZoZoZoZoSLSLZoZohxhxigigigigigiEZoiKZoZoZoZohxigighxZoZoUGUMUMUMqFTXSMTXqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFonZoZoZXZoZoDGgLgLgLgLgLgLgLgLgLgLgLuFZoZXZoZoonqFqFqFqFqFqFqFqFqFqFqFfNfNfNqFonUMUMUMVkZoLtZoZoZoZoZoZoZohxZoqFZohxigZohxZoZoZoigigigqFigqFZoZonNjwjwjwjGSMVqVvSEVGiKqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFonZoZoZXZoZoDGgLgLgLgLgLgLgLgLgLgLgLhFZoZXZoZoonqFqFqFqFqFqFqFqFqFqFqFonfNfNfNlaVHjwjwVUZoSLSLZoZoZoZoZoZoZohxqFqFigZoqFZoqFZoigigqFhxhxhxigigUGWNjwjwlRlUfNlVjwSEVGigZoZoqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFonZoZoZXZoSfXZDZZPpfXZDZZPpfXZDZZPseZoZoZXZoZoonononqFqFqFqFqFqFqFqFqFfNfNfNlVjwjwjwXmVkZoZoZoZoZoZoZoqFZoZoZoqFqFqFqFqFZoZoigqFhxhxZoZoZoUGWNjwjwlRlUfNkekmVHjwVUZoSLZoZoZoZoZoqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFononZoZoZXZXZoZoZoZoZoZoZoZoZoZoZoZoZoZoZXZoZoZoZoonononqFqFqFqFqFqFonjwmcfNmklajwjwjwXmVkZoSLZoZoZoqFqFqFZoZoZoqFqFqFZoZoZoigighxigZoZoUGWNVHjwlRlUfNfNlVjwjwjwVUZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFononZoZoZXZXZXZoZoZXZoZoZoZoZoZoZoZoZoZXZoZoZoZoZoZoonononqFqFqFononjwmEmcfNmklajwVHjwXmVkZoXBZoZoZoqFqFqFZoSLZoqFqFqFZoZoZoUGUMUMUMUMWNjwjwlRlUfNfNkekmjwjwjwVUSLSLZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFononqFonZoZoZoZXZoZoZXZoZoZoZoZoZoZoZoZoZXZXZXZXZoZoZoZoZoononqFononZonojwmEmcfNmklajwjwjwXmUMVkZoZoZoZoqFqFqFZoZoqFqFZoZoUGUMWNjwjwjwjwjwjwlRlUZvfNkekmjwjwVHmlnhSLZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFonqFqFonZoZoZoZoZXZXZXZoZoZoZoZoZoZXZXZXZoZXZXZXZXZoZoZoZoZoonononZoZonNjwmAjGfNfNmklajwjwjwjwXmVkZoZoqFqFqFqFZoSLZoZoLtUGWNVHjwlRnRnRnRnRnRlUfNfNkekmjwjwmloSnhZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFonZoZoZoZoZoZoZXZoZoZoZoZXZXZXZoZoZoZXZXZXZXZoZoZoZoZoZoZoonZoSLoInojwmEmcfNZvmknRnRlajwVHXmVkZoZoZoqFqFqFZoZoLtUGWNjwjwlRlUfNfNfNfNdtdtdtdtkmjwjwmlnhZoSLZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoononononZoqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFonZoZoZoZoZoZoZoZXZoZoZXZXZoZoZoZoZoZoZoZXZXZXZoZoZoZoZoZoonZoZoZonNjwpZmEmcfNfNfNfNmklajwjwVUZoXBSLZoZoZoZoZoUGWNjwpZlRlUfNfNfNdtdtuTLOpLtJdtdtmlnhZoZoSLZoBdBdBdZoZoZoZoZoZoZoZoZoBdBdBdZoZoZoZoZoZoZoZoZoZoonononononqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFononZoZoZoZoZoZoZXZXZXZoZoZoZoonZoZoZoZoZoZXZXZXZoZoZoZoZoZoZoZoZooInojwjwmEmcfNfNfNfNlVVHjwXmVkZoSLZoZoZoZoUGWNmAjwlRlUfNfNfNdtdtfGkvfGVCsSfPdtdtZoZoZoZoBdBdduBdBdZoZoZoZoZoZoZoBdBdnWBdBdZoZoZoZoZoZoZoZoZoZoZoononqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFononZoZoZoZoZoZXZXZoZoZoZoZoononZoZoZoZoZoZXZXZoZoSLZoZoZoZoSLZoZonNjwjwjwmEmcfNfNfNlVjwjwjwXmUMVkZoZoUGUMWNjwjwlRlUfNfNiBCZdtkanDTsLsMVvsMVAwdtZoZoZoBdWResBqBShsBdZoZoZoZoZoBdWResBqBShsBdZoZoZoZoZoZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFonZoZoZoZoZoZXZXZoZoZoZoonqFqFonZoZoZoZoZoZXZXZoUZZoZoZoZoSLZoZooIoSnopZjwmEmcfNfNmklajwVHjwjwXmUMUMWNjwjwjwlRlUfNfNfNfNfNZDpjOeLsMVMVMVMVjmdtZoZoZoKWjDiIBSBSBSKWZoZoZoZoZoKWnaBSiIBSBSKWZoZoZoZoZoZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFonZoZoZoZoZoZXZXZoZoZoonqFqFqFonZoZoZoZoZoZXZXZXZoZoZoSLZoZoZoSLZoZooIoSnojwmEmcfNfNmklajwpZjwjwjwjwmAjwjwlRlUfNfNfNfNiBCZdtVutWMVMVipMVMVcQdtZoZoZoBdzhBSqaBShsBdZoZoZoZoZoBdzhBSiIBShsBdZoZodtdtdtZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFqFonZoZoZoZoZXZXZoZoZoZoonqFqFqFonZoZoUZZoZoZXZXZoZoZokyZoZoZoZoZoZoZoZonNmAjwjGfNfNfNmknRlajwjwjwpZjwjwlRlUfNfNfNfNfNfNkedtzIMVMVMVMVMVMVAwdtZoZoZoZoBdBSiIBSBdZoZoZoZoLtLtZoBdBSBSBSBdZoZodtwtInaTdtZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFqFonZoZoZoZoZoZXZXZoZoZoZoonqFqFonZoZoZoZoZoZXZXZXZoZoZoZoZoSLZoZoSLZoZonNjwjwmEmcZvfNfNfNmklajwjwjwjwlRlUfNfNfNfNfNfNkekmdtzIMVMVMVMVMVMVAwdtFsZoZoZoBdBSBSiIBdZoZoZoZoLtZoZoBdBSBSBSBdZoZodtwtInXndtZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFqFonZoZoZoZoZoZXZXZoZoZoZoonqFqFqFonZoZoZoZoZoZXZXZXZoZoZoZoSLZoZoZoZoZooIoSoSnomEmcfNfNfNfNmknRnRnRnRlUfNfNZvfNfNfNkekmjwdtdtMVMVMVMVMVMVdtdtZoZoLtZoZoBdOXBdZoLtLtZoLtZoZoZoZoBdOXBdZoZoZodtqrInqBdtZoZoZoZoZoononqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFqFqFZoZoZoZoZoZoZXZXZoZoZoZoonqFqFonZoZoZoZoZoZoZXZXZXZoZoZoZoZoSLZoZoSLZoZoZonNjwmEmcfNfNfNfNfNfNfNfNfNfNfNfNfNfNkekmjwjwjwdtdtZDTyMVZDdtdtZoZoZoLtZoZoZoZXZoLtZoZoZoZoZoZoZoZoZXZXZoZoZoZodtdtprdtdtZoZoZoZoZoononqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFqFonqFonZoZoZoZoZXZXZoZoZoZoZoonqFqFonZoZoZoZoZoZXZXZXZXZoZoZoUZSLSLFsZoZoZoUZoInojwmEmcfNfNfNkeoTXLoTmcfNfNfNfNkekmjwjwjwmAjwmlnhZXZXSLZoZoZoZoZoLtZoZoZXZXZXZoZoZoZoZoZoZXZXZXZXZoZoZoZoZoZXZXZXZXZXZoZoZouquqKbonqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFqFqFqFqFonZoZoZoZoZoZXZXZXZoZoZoonqFqFonZoZoFsZoZoZXZXZXZXZoZoZoZoZoFsZoZoZoSLZooInoVHmEmcfNfNmknRnRnRqJfNfNfNkekmjwLajwjwjwmlnhSLZoZXZXZoZoZoZoZoZoLtZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZoZoZouqCxZXGRfvonqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFqFonqFqFqFononZoZoZoZXZXZXZoZoZoZoononqFonZoZoZoZoZoZXZXZXZXZoZoZoZoZoSLZoZoZoZoZonNjwjwmEmcfNfNfNfNfNfNfNfNkekmjwjwjwjwmloSnhZoZoZoZXZXZXZoZoZoZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZoZoZouqZXGzdiuqonqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFqFonqFqFqFqFqFonZoZoZoZXZXZXZXZoZoZoZoonononZoZoZoZoZoZXZXZXZXZoZoZoZoZoZoZoZoZoZooInojwjwmEoToToToToToToToTkmjwjwjwmloSnhLtLtZoZoSLZXZXZXZoZoZXZXZXZXZXZoZXZoZoZoZoZoZoZoZXZXZXZXZXZXZoZoZoZXZoZoZoZoOtOtuqLIdiKbuqonqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFononononononononZoZoZoZoZoZXZXZXZoZoZoZoZoFsZoZoZoZoZXZXZXZXZXZXZXZXZXZXZoZoZoZoZoSLnNjwLajwjwjwjwjwjwjwVHjwjwjwjwmlnhZoZoZoSLZoZoZXZXZoZXZXZXZXZXZXZoZoBdOXBdZoZoZoZoZoZoZoZoZoBdOXBdZoLtZoZXZoZoZoZouququqMQuquqZoZXSFaRqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFonZoZoZoZoZoZoZoZoZoZoZoZoZoZXZXZXZoFsZoZoZoZoZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZoZooIoSoSoSoSoSoSoSoSoSoSoSoSoSoSnhZoSLSLZoZoZoZXZXZoZoZXZXZXZXZXLtZoBdBSBSBSBdZoLtZoZoZoZoZoBdBSiIBSBdLtLtZoZXZoOtuqAQTlZXdiGRZXuqgZZXZXaRqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFonZoBdBdBdBdBdBdBdBdBdBdBdZoZoZXZXZoZoZoZoZXZXZXZXZXZXZXZoZoZoZoZoZXZXZXZXZXZXZXZXGtZXZXZXZXZoSLZoZoZoZoZoZoZoZoSLFsZoZoZoZoZoZXZXZoZoZoZoZXZXZXZoLtZoBdBSiIiIBdZoLtZoZoZoZoLtBdBSiIBSBdZoZoZoZXZoOtuqZXPoGRdiZXZXuqgZSFZoZXqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFonZoBdOhBSANBSOXBSBResWRBdqFZoZXZXZXZXZoGtZXZXZXZXZoZoZoZoZoZoZoZoZoZoZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZoZoZoSLZoZoZoZoZoZoZoZXZXZoZoZoZoZXZXZXZoZoZoBdhsBSqaiIBSBdZoZoZoZoLtBdhsBSiIiIBSBdZoZoZXZXZopqZXdidifHdiZXpqZXdidiTLqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFonZoBdBSBSBSPzBdBSBSzySwBdZoZoZoZXZXZXZXZXZXZXZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZXZXZXZXZXZXZXZXZXZXZXZXZXZoZoZoZoZoZoZWZoZoZXZXZXZoZWZoZoZXZXZXZoZoLtKWBSiIBSBSnaKWZoZoZoZoLtKWBSiIiIiInWKWGmZoZoZXZXpqZXdiZXdiTlZXpqZXdiZXOmqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFonZoBdzGBSPdglBdBSBSBSyqBdZoZoZoZXZXZXZXZXZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZXZXZXZoZoZXZXZXZXZXZXZXZXZXZXZoZoZoZoZoZoZoZXZXZoZoZoZoZXZXZXZXZoZoZoBdhsiIVdesrnBdZoZoZoZoZoBdhsBSVdesnaBdZoZoZoZogZuqZXZXGRdiIuAQuqScZXZXTLqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFononZoBdBdBdBdBdBdBdBSBSBdBdZoZoZoZXZXZXZXZoBdBdBdBdBdBdBdBdBdBdBdBdZoZoZoZoZoZoZXZXZoZoZoZXZXZXZoZoZXZXZXZXZXZXZXZXZoZoZoZoZXZoZoZoZoZoZXZXZXZoZoZoZoZoBdBdglBdBdZoZoZoZoZoZoZoBdBdWRBdBdZoZoZonFZXgZuqZXZXZXZXZXZXuqgZZXZXZXqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFonZoZoBdBSBSBSBSBSBSBSBSzoBdZoZoZoZoZXZXGtZoBdawlfsxcrBdbThAMfcfKxBdZoZoZoZoZoZXZXZoZoZoZXZXZXZoZoZoZoZoZoZXZXZXZXZXZXZXZXZXZXZoZoZoZXZXZXZXZoZoZoZoZoZoZoBdBdBdZoZoZoZoZoZoGmZoZoBdBdBdZoZoZoZoZoZXZXZouquqpqpququqXpZXZXZoqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFonZoZoBdyucvWRbzBSBSBSWRaeBdZoZoZoZoZXZXZXZoBdRKlfEtsCBdlfsgRKRKbGBdZoZWZoZoZoZXZXZoZWZoZXZXZoZoZoZoZoZoZoZXZoZoZXZXZXZXZXZXZXZXZXZoZXZXZXZXZoZoZWZoZoZoZoZoZoZoZoZoUZZoZoGmZoZoZoZoZoZoZoZoZoZoZoZXZoZXgZgZZXZXgZgZZXZXZXqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFonZoZoBdBSBSBSBSBSBSBSWRwfBdZoZoZoZXZXZXZXZoBdRKRKRKRKNvRKRKRKOSBdBdZoZoZoZoZXZXZXZoZoZXZXZoZoZoZoZWZoZoZXZXZoZoZXZoZoZoZXZXZXZXZXZXZXZXZXZXZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoonononZoZoZoZoZoZoUZZoZoZoZXZXZXZXZXZoZoZoZXZXonqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFonZoZoBdBdBdBdOXBdOXBdBdBdBdZoZoZXZXZXZXZXBdBdmnBdBdBdBdBdBdBdBdBdZoZoZoZoZoZXZXZoZoZXZXZXZoZoZoZoZoZoZoZXZXZoZXZXZoZoZoZoZoZoZoZXZXZXZXZXZXZXZXZoZoZoZoZoZoUZZoZoZoZoononqFqFqFonhxhxhxhxZoZoZoZoZoZXZXZXZXZoZXZXZXZXZXonqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFonZoikikikikZXZXZXZXZXZXZXZXZoZXZoZoZXZXZXBdaYRKYQRKqMBdZoZoZoZoZoZoZoZoZoZXZXZoZoZXZXZoZoZXZoZoZoZoZoZoZXZoZoBdOXBdZoZoZoZoZoZoBdOXBdZoZoZXZXZXZXZoZoZoZoZoZoZoZoZoonqFqFqFqFqFqFonhxhxhxZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFikikikikDNLmikZoZXZXZXZXZXZXZoZXZXZXZXZXZXZXBdIURKqqvXUXBdZoUILLzCzCZoFsZoZoZXZXZoZXZXZoZoZoZoZXZoZoZoZoZXZXZoBdBSBSBSBdZoZoZoZoBdBSBSBSBdZoZXZXZXZXZXZXZoZoZoZoZoZoZoZoonqFqFqFqFonhxhxhxononZoGmZoZoZoZoZoZoZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFikWkfyYJMVMVMVikZXZXZXZoUZZoZXZXZXZXZXZoZXZXZXlHlfRKwWknwWBdZoZoZoJsLLLLZoZoZXZXZXZXZXZoZoZoZoZoZXZXZoZoZXZXZXZoBdBSBSBSBdZoZoZoZoBdBSBSBSBdZoZoZoZXZXZXZXZXZoZoZoZoZoZoGmZoonqFqFonZohxhxonqFqFonZoZoZoZoZoZoZoZoZoZoZoZWZoonqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFikMVMVMVMVMVMVMVZXZXZXZXZXZXZXZXZXZXZXZXGtZXZXlHlfRKRKRKRKBdZoUILLUZLLzCZoZoZXZXZXZXZoZoigqFigqFZoZXZoZoZXZXZoBdhsBSBSBSBSBdZoZoBdhsBSBSBSBSBdZoZoZoZoZXZXZXZXZXZXZoZoZoGmZoZoononZoZoZohxonqFqFqFononZoUZZoZoZoZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFikkgOcwzsEMVMVytZXZXZXZXZXZXZXZXZoZXZXZXZXZXZXlHlfRKRKrrrrBdZoZoLLJsZoZoZoZXZXZXZXZXZXZoqFhxhxighxZXZoZoZXZXZoKWBSBSBSBSWRKWZoZoKWBSBSBSBSWRKWZoZoZoZoZoZXZXZXZXZXZXZoZoZoZoZoZoZoZoZoZoZoZoononqFqFqFonZoZoZoZoZoZWZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFonikikikGYIlikuqGYMVuquqikuququqikZXZXZXZXZXBdBdBdZABdBdBdZozCZoZoZoZXGtZXZXZoZoZXZXighxigqFhxigZoZXZoZXZoZoBdhsBSVdesWRBdZoZoBdhsBSVdesnaBdZoZoZoZoZXZoZoZXZXZXZXZXZXZoZoZoZoZoZoZoZoZoZoZoZoonqFqFqFonZoZoGmZoZoZoZoZoZohxonqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFonZouqSeSeSeSeSeSeSeSeSeSeSeSeSeuqZXZoZXZXZXZoZoZoZoZoZoZoZoZoZoZoGtZXZXZXZoZoZoZXZXZXigqFhxigqFZoZXZXZXZoZoZoBdBdWRBdBdZoZoZoZoBdBdWRBdBdZoZoZoZoZoZXZXZXZXZoZXZXZXZXZXZXZXZXZXZoZoZoZWZoZoZoZoonqFqFqFonZoZoZoZoZoZoZoigigonqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFonZouqSesusususuSeSeVcSeVcSeVcSeuqZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZoZoZoZoZoZXZXigigqFhxigZoZoZXZXZoZoZoZoBdBdBdZoZoZoZoZoZoBdBdBdZoZoZoZoZoZXZXZXZoZoZoZoZXZXZXZXZXZXZXZXZXZXZoZoZoGmZoZoZoonononZohxhxhxhxononhxhxigskonqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFonZouqSeSeSeSeSeSeSeVcSeVcSeVcSeuqZoZoZXZXZXZXGtZXZXZXZXZXZXZXZXZXZXZoZoZoZoZWZoZoZoZXZXZoigigZoZXZXZoZXZXZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZXZoZoZoZoZoZoZoZoZoZoZXZXZXZXZXZXZXZoZoZoZoZoZoZoZoononhxhxhxonqFqFonigqFigonqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFonZouqSesusususuSeSeVcSeVcSeVcSeuqZoZoZXZXZoZoZoZoZoZoZoZoOzOzgXJUgXOzOzZoZoZoZoZoZoZXZXZXZoZodtJUsXVQJUdtdtdtdtdtdtdtdtdtdtdtdtdtdtdtdtdtdtdtdtZoZXBdBdBdBdBdBdBdBdBdBdBdBdZoZXZXZXZXZXZoZoZoZoZoZoZoZohxhxhxonqFqFononhxYthxonqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFononZouqSeSeSeSeSeSeSeVcSeVcSeVcSeuqZoZoZXZXZoZoZoZoZoZoOzOzVQVQVQVQVQVQVQOzOzZoZoZoZoZoZXZXZoZXdtVQVQVQVQOztHtQVQmfuaYeOzYeuJmfVQtQvdOzPUvmVQxGdtZXZXBdvKwuBSBSBSBSBSBSwvBSBdZoZoZoZXZXZXGmZoZoZWZoZoZoZohxZoonqFqFononhxYthxonqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFonZoZouqbUbUbUbUbUSeSeVcSeVcSeVcSeuqZoZXZXZXZoZWZoZoOzOzOzVQVQVQVQVQVQVQVQVQOzOzOzZoZoZoZXZXZXZXdtVQVQVQVQOzVQVQVQJUVQVQVQVQVQJUVQVQVQOzVQVQVQVQdtZXZXBdBSBSxgxixixixixgBSBSBdZoZoZoZoZXZXZoZoZoZoZoZoZoZoZoZoZoononZoZoZoighxonqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFonZoZouqSeSeSeSeSeSeSeVcSeVcSeVcSeuqZoZXZXZXZoZoZoOzMuMuOzVQVQVQVQOzVQVQVQVQOzdjKIOzZoZoZXZXZXZodtVQVQVQVQOzVQxpOzAnVQVQVQVQVQxWOzQOVQOzVQVQxYygdtZXZXBdBSxgykymyzyzyAyOxgBSBdZoZoZoZoZXZXZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFonZoZouqtySetytySetySeVcSeVcSeVcSeuqZoZXZXZXZoOzOzjVVQVQJUVQVQVQVQVQVQVQVQVQJUKIegjVOzOzZoZXZXZXdtOzVQVQOzOzOzOzOzOzOzWSJUWSOzOzOzOzOzOzVQVQxYMudtZXZXBdBSykzUAyyzyzAyymyOBSBdZoZoZoZoZXZXZoZoZoZoGmZoZWZoZoUZZoZoZoZoZoGmZoZoonqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFonZoZouqtySetytySetySeVcSeVcSeVcSeuqZoZXZXZoOzWlnPVQVQVQOzgXOzVQVQVQVQVQOzgXOzVQVQVQKIKIOzZXZXZXdtVQVQVQVQARVQqfVQVQVQVQVQVQVQVQAVVQBeOzWSJUdtdtdtnHoWBdBSxgykyzyzBFyzyOxgBSBdZoZoZoZoZoZXZXZoZoZoZoZoZoZoGmZoZoZoZoUZZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFonZoZouqtySetytySetySeVcSeVcSeVcSeuqZXZXZoZoOzNUVQVQVQVQVQVQOzVQVQVQVQVQOzVQVQVQVQVQVQKIOzZXZXZoCtVQVQVQVQCNVQOzVQVQVQVQVQVQVQVQOzVQVQVQVQDvdtmQcCnHnHBdBSBSxgDDDDDDDDxgBSBSBdZoZoZoZoZoZoZXZXZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFonZoZouqtySetytySetyikuquququququqikZXZXZoZoOzqyVQdjOzMuVQfmujVQVQOzVQVQHEegVQMuOzdjVQqyOzZXZoZoJUVQVQVQVQDOVQOzVQVQOzEMVQVQVQVQJUESVQVQVQFLdtoWnHgUnHBdBSBSBSFUBSBSFUBSBSBSBdZoZoZoZoZoZoZXZXZXZoZoZoZoZoZoZoZoZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFonZoZouqtySetytySetyuqZoZoZoZoZoZoZoZXZXZoZoOzVQVQKIOzqyVQZSOaVQVQVQVQVQlCmZoyqyOzKIVQVQOzZXZXZoJUVQVQVQVQGfGjOzVQVQOzEMVQVQVQVQOzVQVQVQVQGodtoWoWnHnHBdBdKWKWKWBdGBBSBdKWKWKWBdBdZoZWZoZoZoZXZXZoZoZoZoZoZoZoZoZoZoGmZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFonZoZouqtySetytySetyuqZoZoZoZoZoZoZoZXZXZoZoOzqyVQdjOzMuVQfmJxVQVQOzVQVQiwegVQMuOzdjVQqyOzZXZXZoCtVQVQVQVQlCVQOzVQVQVQVQVQVQVQVQAVVQVQVQVQGMdtYYqRoWnHBdBSBSBSBSwvBSBSwvBSBSBSBSBdZoZoZoZoZoZoZXZXZoZoZoZoZoZoZoononZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFonZoZouqtySeSeSeSetyuqZoZoZoZoZoZoZXZXZXZoZoOzKIVQVQVQVQVQVQOzVQVQVQVQVQOzVQVQVQVQVQVQNUOzZXZXZXdtVQVQVQVQARVQqfVQVQVQVQVQOzGPVQOzOzOzOzOzOzdtdtdtnHnHBdBSBSBSBSBSBSBSBSBSBSBSBSBdZoZoZoZoZoZoZXZXZXZoZoZWZoZoonqFonZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFZoikuquqJAMVuquqikZoZoZWZoZoZoZXZXZXZoZoOzKIKIVQVQVQOzgXOzVQVQVQVQVQOzgXOzVQVQVQWlnPOzMVMVMVdtOzVQVQOzOzWSOzOzOzOzPZOzPZVQVQOzGWHIyfJXXxIpNHdtZXZXBdBSIOBdKWBSBSBSBSKWBdITBSBSZoZoZoZoZoZoZoZXZXZoZoZoZoZoonqFonZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFonZoZoZoZoZXZXZoZoZoZoZoZoZoZoZoZXZXZXZoZoZoOzOzMufmdjJUVQVQVQVQVQVQVQVQVQJUVQVQjVOzOzOzJAMVOzdtVQVQVQVQOzVQjVMumZOzdVKtdVVQVQAVKOVQVQKOVQVQKOdtZXZXBdBSBSKWBSBSBSBSBSBSKWBSBSLlZoZoZoZoZoZoZoZXZXZXZoZoZoonqFqFonZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFZoZoZoZoZXZXZXZXZoZoZoZoZoZoZXZXZXZXZoZoZoZoZoOzKIKIOzVQVQVQVQOzVQVQVQVQOzMuMuOzigZoLrMVMVLtdtVQVQVQVQOzVQVQLYMiJUVQVQVQVQVQMmVQVQVQVQVQVQVQdtZXZXBdBSBSBSBSMBMBMBMBBSBSBSBSBdZoZoZoZoZoZoZoZoZXZXZoZoZoZoononZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFikJAMVikZoZXZXZXZoZXZXZXZXZXZXZXZXZXZXZXZoZoZoZoZoOzOzOzVQVQVQVQVQVQVQVQVQOzOzOzhxigigZoMVMVLtdtVQVQVQVQOzVQVQVQZSOzMJVQVQNBNBOzVQVQNFKfKfIGIGdtZXZXBdBSBSBSNQWRWRWRWROZBSBSBSBdZoZoZoZoZoZoZoZoZXZXZoZoZoZoZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFwqMVMVMVMVZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZoZoZoZoZoZoZoOzOzVQVQVQVQVQVQVQOzOzigigighxqFQCMVMVZodtJUsXVQJUdtdtdtdtdtdtdtdtdtdtdtdtdtdtdtdtdtdtdtdtZXZoBdBSBSBSNQWRWRWRWROZBSBSBSBdZoZoZoZoZoZoZoZoZXZXZXZoZoZoZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFmtMVMVMVZOZXZXZXZXZXZXZoZoZoZoZoZoZXZXZXZXZoZoZoZoZoZoZoZoQCOzOzgXJUgXOzOzighxigigqFighxZoMVMVZoZoTwMVMVOzQCZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZXZXZXZoBdBSBSBSBSTNTNTNTNBSBSBSBSBdBdBdBdBdZoZoZoZoZXZXZXZoZoZoZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFikJAMVikuquququququququququqikZoZoZXZXZXZXZXZoUZZoZoZoZoZoZoLtOzMVLtMVZoLtQCigqFhxhxigUZZoMVMVTwZoZoMVMVOzZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZXZXZXZoZoBdBSBSKWBSBSBSBSBSBSKWBSBSBSBSBSBSKWZoZoZoZoZXZXZXZoZoZoZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFYISeSeSeSeYISeSeSeSeSeSeSeYIuqZoZoZoZXZXZXZXZoZoZoZoZoZoZoZoZoOzMVFsMVZoZoLtZohxigZoZoZoLrMVMVZoMVMVMVMVOzZoZoZoZoZoZoZoZoZoZoZoZoZXZXZXZXZXZXZoZoZoZoBdBSIOBdKWBSBSBSBSKWBdITBSBSBSBSBSKWZoZoZoZoZXZXZXZXZoZoZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFSeSeSeSeSeSeSeSeYISeSeSeSeSeuqZoUZZoZXZXZXZXZoZoZoZoZoZoZoZoMVOzMVLtMVMVMVMVMVMVMVMVMVMVMVMVMVMVMVOzJAMVOzZoZoZoZXZXZXZXZXZXZXZXZXZXZXZXZXZoZoZoZoZoZoBdBSBSBSBSBSBSBSBSBSBSBSFUBSBSBSBSBdBdZoZoZoZoZXZXZXZoZoZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFSeSeSeSeSeSeSeSeSeSeSeSeSeSeuqZoZoZoZoZXZXZXZoZoZoZoZoZoZXZXMVMVMVMVMVMVMVMVMVMVZoZoZoZoZoLtMVMVMVMVMVMVMVZoZoZXZXBdBdBdBdOXBdBdBdBdZoZoZoZoZoZoZoZoZoBdBSBSBSBSBSZoBSBSBSBSBSBSBSBSBSBSBSBdZoZoZoZoZXZXZXZoZoZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFSeSeSeSeSeYISeSeSeSeYISeSeSeuqZoZoZoZoZXZXZXZoZoZoZoZXZXZXZXMVZOMVZoLtZoZoMVMVMVQCZWZoLrZoMVMVMVMVZOMVMVZXZoZXZXZoBdvYvYvYBSuXUyWRBdZoZoZoZoZoZoZoZoZoBddwBSBSNQtIOZBSNQtIOZBSIOBdKWGBBSKWKWZoZoZoZoZXZXZXZoZoZoZoZoZoZoononqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFSeYISeSeSeSeSeSeSeSeSeSeSeSeuqZoZoZoZoZXZXZXZXZoZXZXZXZXZXZXMVOzMVZoLtFsZoMVMVMVLrZoZoLtMVMVTwLrOzOzMVZXZXZXZXZoZoBdtrBSBSBSBSBSgaBdZoZoZoZoZoZoZoZoZoBdKaBSBSBSBSBSBSBSBSBSBSBSKWvKBSBSBSKWZoZoZoZoZXZXZXZoZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFikuqqFSeSeSeSeYISeSeSeSeYISeuqZoZoZoZoZXZXZXZXZXZXZXZXZXZXZoZoOzMVMVZoZoMVMVMVMVMVMVMVMVMVOzOzOzZoQCZoZXZXZoZoZoZoBdaDBSBSBSBSBSOEBdZoZoZoZoZoZoZoZoZoBdwHBSBSNQtIOZBSNQtIOZBSBSBSBSBSBSBSKWZoZoZoZoZXZXZXZoZoZoZoqFZoonqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFZoZoqFqFqFSeSeSeSeSeSeSeSeuqZoZWZoZoZXZXZXZXZXZXZoZoZoZoLtZoQCdtdttccAdtdtdtdtdttccAdtdtZoZoZoZoZoZoZXZXZoZoZoZoBdBdBdBdBSBdBdBdBdZoZoZoZoZoZoZoqFqFBdRQBSBSBSBSBSBSBSBSBSBSBSLlBSBSBSBSBdZoZWZoZoZoZXZXZoZoZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFZoZoZoqFqFqFikuquququququqikZoZoZoZoZoZXZXZXZXZoZoUZZoZoZoZodtcAcAcAcABdBSMBBSBdcAcAcAcAdtZoZoZoZoZoZXZXZoZoZoBdSwDnhQTTBSOryUwZyUBdZoZoZoZoZoZoqFqFBdTSFUBSBSBSBSBSBSBSBSFUBSKWBSBSBSkMBdZoZoZoZoZoZXZXZoqFqFZoZoZoZoZoonqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFZoZoZoZoZoZoqFqFZoZoZoZoZoZoZoZoZoZoZoZoZXZXZXZXZoZoUZZoZoZodtcAcAcAcABdBSBSWRBSBSBdcAcAcAcAdtZoZoZoZXZXZXZoZoBdBSarBSBSBSBSBSBSBSmBBSBdZoZoZoZoqFqFqFBdBdBdBdBdBdBdYxYxxrBdBdBdBdBdBSBSBdBdZoZoZoZoZoZXZXZoqFZoZoZoZoZoZoZoononqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFZoZoZoZoZoZoqFqFqFZoZoZoZoZoZoZoZoZoZoZoZXZXZXZXZoZoZoZoZodtcAcAcAcABdBSWRBSWRBSBdcAcAcAcAdtZoZoZoZXZXZXZoBdBSBSPwBSBSBSBSBSBSBSPwBSBSBdZoZoZoqFqFgzgzgzgzgzgzgzNeNeNeNeNeWjgzqFqFpSpSZoZoZoqFqFZoqFZXZXZoZoZoZoZoZoZoZoZoZoononononqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZXZXZXZXZoZoZoZoKrcAcAcAcABdBSTNBSTNBSBdcAcAcAcAKrZoZoZoZXZXZoZoBdBSBSPwBSexPwLqkUexBSPwBSBSBdZoZoqFqFqFgzTEBTimORORgzNeXPQDHeNeWVgzqFZopSpSZoZoZoZoqFqFZoZXZoZoZoZoZoZoZoZoZoZoZoZoZoZoononqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFZoZoZoZoZoZoZoZoZoZoZWZoZoZoZoZoZoZoZoZoZoZXZXZXZXZoZoZoKrcAcAcAcAOXBSBSBSBSBSOXcAcAcAcAKrZoZoZoZXZXZoZoKWBSBSPwPwPwhzhzhzPwPwPwBSBSKWZoZoqFqFqFgzcaTvxaIYTvgzNeNeNeNeNeHNgzqFZopSpSZoZoZoqFqFZoZoZXZoJnKssqZanBKssqZanBKssqZaaxZoonqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFnsZoZonsnsnsZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZXZXZXZXZoZodtcAcAcAcABdMPMPBSMPMPBdcAcAcAcAdtZoZoZXZXZoZoZoBdBSBShzhzhzBSBSBShzhzhzBSBSBdZoZoZoZoqFgzcaTvTvTvTvVKNeNeNeNeNeNegzqFZopSpSZXZoZoZoZoZoZXZXZoyrgLgLgLgLgLgLgLgLgLgLgLrqZoonononqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFqFnsnsnsqFnsZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZXZXZXZoZodtdtBdOXBdBdBdBdBdBdBdBdBdBdBddtdtZoZoZXZXZoZoZoBdBSBSBSBSBSBSBSBSBSBSBSBSBSBdZoZoZoZoqFgzWGtVVBDpRtgzNeNeNeNegzgzgzqFZopSpSZXZXZoZoZoZXZXZXZoyrgLgLgLgLgLgLgLgLgLgLgLQHZoZoZoonqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFLDbqnsZgqFqFnsnsZoZoZoZoZoZoqFZoZoZoZWZoZoZoZoZoZXZXZXZoZodtBdBSAPBdLcjvzGBuIjBdzGwYBddtZoZoZoZXZXZoZoZoKWyuWRbzBSBShzmDhzBSBSyuWRbzKWZoZoZoZoqFgzgzgzgzgzgzgzgziVwkxrgzrUpXZoZopSpSZXZXZXZXZoZXZoZXZoXjgLgLgLgLgLgLgLgLgLgLgLZmZoZoZoonqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFnsnsnsZgnsqFqFnsnsZoZoZoZoZoqFqFqFZoZoZoZoZoZoZoZoZXZXZoZoZodtBSBSKWRiFaREljBSKWBSBSdtZoZoZoZXZXZoZoZoZoBdyuWRbzBSBShzLfhzBSBSyuWRbzBdZoZoZoZoqFqFqFqFqFqFqFqFpSpSpSpSpSpSODZoZopSpSZoZXZXZXZXZXZoZXZoQGgLDYzJgLgLgLgLgLzJDYgLdlZoZoonqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFnsnsnsnsnsZgqFqFqFnsnsZoZoZoZoZoZoqFZoZoZoZoZoZoZoZoZXZXZXZoZodteiBSOXBSBSBSBSBSOXBSnqdtZoZoZoZXZXZoZoZoZoBdyuWRbzBSBSBSBSBSBSBSyuWRbzBdZoZoZoZoZoZoqFqFqFqFpSpSpSpSpSpSpSpSODZoZopSpSZoZoZoZXZXZXZoZXZoDGgLgLgLgLgLgLgLgLgLgLgLPKZoZoonqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFnsnsnsnsnsnsqFqFqFqFnsZoZoZoZoZoZoqFqFZoZoZoZoZoZoZoZXZXZXZoZodtesBRBdltwGBSBSilBdQkpVdtZoZoZoZXZXZoZoZoZoZoBdBSBSBSBSBSBSBSBSBSBSBSBdZoZoZoZoZoZoZoZoZoZopSCorMzjpSCorMzjpSpSpSpSpSpSZoZoZoZoZXZXZoZXZoyrgLgLgLgLgLgLgLgLgLgLgLQHZoZoZoonqFqFqFqFqF
+qFqFqFqFqFqFqFnsnsnsnsnsnsnsZgqFqFqFnsZoZoZoZoZoZoZoZoZoqFqFZoZoZoZoZoZoZXZXZodtdtdtdtdtdtKrdtdtdtdtdtZoZoZoZXZXZoZoZoZoZoZoZoBdBSBSBSBSBSBSBSjzjzBdZoZoZoZoZoZoZoZoZoqFZXpSpSpSpSpSpSpSpSpSpSpSpSpSpSZoqFZoZoZoZXZXZXZoXjgLgLgLgLgLgLgLgLgLgLgLrhZoZoZoonqFqFqFqFqF
+qFqFqFqFqFqFqFqFnsnsnsnsnsnsnsnsqFqFnsnsZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZXZXZXZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZXZXZXZoZoZoZoZoZoZoBdBdKWOXBdOXKWBdBdZoZoZoZoZoZoZoZoqFqFZXZXDeCorMzjpSCorMzjpSODZoZoZoZoqFqFZoZoZoZoZXZXZoQGKjgLgLgLgLgLgLgLgLgLgLdlZoZoZoZoonqFqFqFqF
+qFqFqFqFqFqFqFnsnsnsnsqFqFnsZgnsqFqFqFnsnsnsZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZXZXZXZXZoZoZoZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZoZoZoZoZoZoZoZXZXZXZXZoZoZoZoZoZoZoZoZoZoZoZoZoZXZolFUeUepSpSpSUeUeUeRoZoZoZoZoqFZoZoZoZoZoZoZXZoDGgLgLgLgLgLgLgLgLgLgLgLPKZoZoZoZoonqFqFqFqF
+qFqFqFqFqFqFqFnsnsnsnsnsqFqFZgnsnsqFqFqFnsnsnsZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZXZXZXZXZXZXZoZoZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZXZXZoZoZoZoZoqFqFZoZoZoZoZoZoZoqFZoZoyrgLgLgLgLgLgLgLgLgLgLgLQHZoZoZoZoZoonqFqFqF
+qFqFqFqFqFqFqFqFZgnsnsnsnsqFnsnsnsnsqFqFqFqFnsnsZoZoZoZoZoZoZoZoZoZoZoZoqFqFZoZoZoZoZoZXZXZXZXZXZoZoZoZoZoZoZoZoZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZoZoZoZXZoZoZoZoZoZoZXZoZXZoZoZoZoqFZoZoZoZoZoZoZoZoqFZoZoXjgLgLgLgLgLgLgLgLgLgLgLrhZXZoZoZoZoonqFqFqF
+qFqFqFqFqFqFqFqFqFZgnsnsnsnsnsnsZgnsqFqFqFqFqFnsnsnsnsnsnsnsZoZoZoZoZoZoZoqFqFqFZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZoZXZoZXZoZoZoZoZoZoZoZoZWZoZoZoqFqFqFZXZoQGgLgLgLgLgLgLgLgLgLgLgLdlZXZoZoZoZoonqFqFqF
+qFqFqFqFqFqFqFqFqFqFnsZgnsnsnsnsnsnsnsnsqFqFqFqFqFqFqFqFqFnsnsnsZoZoZoZoZoZoZoZoZoZoZWZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZoZoZoZoZoZoZoZoZoZoZoqFqFqFqFZXZoDGgLgLgLgLgLgLgLgLgLgLgLPKZXZoZoZoZoZoonqFqF
+qFqFqFqFqFqFqFqFqFqFqFnsnsnsnsnsnsnsnsnsnsnsqFqFqFqFqFqFqFqFqFnsnsZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoqFqFqFZoZoZoZoZoZoZoZWZoZoZoZoZoZoZoZoZoZoZoZoZoZoZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZoZoZoZoZoZoZoZoZoZoqFqFqFqFZXZoyrgLgLgLgLgLgLgLgLgLgLgLIPZoZXZoZoZoZoonqFqF
+qFqFqFqFqFqFqFqFqFqFqFqFqFnsnsnsnsnsnsZgnsnsnsnsnsnsqFqFqFqFqFqFnsnsnsnsZoZoZoZoZoZoZoZoZoZoZoZoZoqFZoZoqFqFqFZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZXZoZoZoZoZoZoZoZoZoZXZXZoZoZXZXZXZXZXZXZoZoZoZoZoZoqFqFqFqFZXZoZoXjgLgLgLgLgLgLgLgLgLgLgLrhZoZXZoZoZoZoonqFqF
+qFqFqFqFqFqFqFqFqFqFqFqFqFnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsqFqFqFqFqFnsnsnsnsnsnsnsnsnsZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoqFZoonZoZoZoZoZoZoZoZoZXZXZoZoZoZoZoZoZoZoZoZoZXZXZXZoZXZXZXZXZXZXZXZXZXZXZXqFqFqFqFZXZoZoQGgLgLgLgLgLgLgLgLgLgLgLuFZoZXZoZoZoZoonqFqF
+qFqFqFqFqFqFqFqFqFqFqFqFqFqFnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsqFqFqFqFqFqFnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsZoZoZoZoZoZoZoZoqFqFqFqFZoZoZoZoZoZoZXZXZoZoZoZoZoZWZoZoZoZoZoBdOXBdZoZoZoZXZXZXZXZXZXZXZXZXZXZXZXZoZoZoDGgLgLgLgLgLgLgLgLgLgLgLQvZoZoZXZoZoZoonqFqF
+qFqFqFqFqFqFqFqFqFqFqFqFqFqFnsnsnsnsnsnsqFqFqFnsnsnsnsZgnsnsnsnsnsnsnsqFqFqFnsnsnsqFqFqFqFqFqFqFqFqFqFqFqFqFqFnsnsnsnsnsZoZoZoZoZoZoZoZoZoZoZoZoZoZXZXZXZoZoZoZoZoZoZoZoZoZoBdBSBSBSBdZoZoZoZoZoZXZXZXZXZXZXZXZXZoZXZoZoyrgLgLgLgLgLgLgLgLgLgLgLQHZoZoZXZoZoZoonqFqF
+qFqFqFqFqFqFqFqFqFqFqFqFqFqFqFnsnsnsnsnsnsqFqFqFqFnsnsnsnsnsnsnsnsnsnsnsnsnsnsZgnsnsnsqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFnsnsnsZoZoZoZoZoZoZoZoZoZoZoZoZXZoZoZoZoZoZoZoZoZoZoZoBdBSBSBSBdZoZoZoZoZoZoZoBdOXBdZoZoZoZXZoZoZoxHgLgLgLgLgLgLgLgLgLgLgLfEZoZoZXZoZoZoonqFqF
+qFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFnsnsnsnsnsnsqFqFqFqFnsZgnsnsZgnsnsnsnsnsnsnsZgnsnsnsnsnsnsnsqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFnsnsnsnsnsnsnsnsZoonononZXZXZXononononZoZoZoZoZoBdhsBSBSBSBSBdZoZoZoZoZoBdBSBSBSBdZoZoZXZXZoZoDGgLgLgLgLgLgLgLgLgLgLgLuFZoZoZXZoZoonqFqFqF
+qFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFnsnsnsnsnsnsnsnsqFqFnsnsnsnsZgZgnsnsnsnsnsnsSqnsnsnsnsnsnsnsnsqFqFqFqFqFqFqFqFqFqFqFnsnsnsnsnsqFqFqFqFqFqFqFqFqFZXZXnsqFqFqFqFqFZoZoZoZoKWBSBSBSBSWRKWZoZoZoZoZoBdBSBSBSBdZoZoZoZXZXZoDGgLgLgLgLgLgLgLgLgLgLgLhFZoZXZXZoZoonqFqFqF
+qFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFnsZgZgnsnsnsnsnsqFqFnsnsnsnsnsqFqFqFqFqFnsnsnsnsZgnsZgnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsZgZgqFqFqFqFqFqFqFqFqFdtababqFqFqFqFqFqFZoZoZoZoBdhsBSVdesWRBdZoZoZoZoBdhsBSBSBSBSBdZoZoZoZXZXSfXZDZZPpfXZDZZPpfXZDZZPseZoZXZoZoonqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFnsnsZgnsnsnsnsnsnsnsnsnsnsqFqFqFqFqFqFnsnsnsnsnsnsnsnsnsnsnsnsnsZgSqnsnsnsnsnsnsZgnsnsqFqFiexOrcSUqFqFqFqFdtVsVsqFdtqFqFqFqFqFZoZoZoZoBdBdWRBdBdZoZoZoZoZoKWBSBSBSBSWRKWZoZoZoZoZXZXZoZoZoZoZoZXZoZoZoZoZXZXZXZoZXZoonqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFnsnsnsZgnsnsnsnsnsnsnsnsqFqFqFqFnsnsnsnsnsnsnsnsnsqFqFqFqFqFnsnsnsnsnsnsnsqFqFnsnsqFMVMVVsVsvUnZJRJRYrKmeaVsyoUadtqFdtdtqFqFqFZoZoZoBdBdBdZoZoZoZoZoZoBdhsBSVdesWRBdZoZoZoZoZoZXZXZoZoZoZoZXZXZXZXZXZXZXZXZXZXonqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsqFqFnsnsqFqFqFnsnsnsnsnsqFqFqFqFnsnsnsnsMVMVMVMVvUxXjOjOjOzfmadtYnInJgNikxPGqFqFqFqFqFZoZoZoZoZoZoZoZoZoZoZoBdBdWRBdBdZoZoZoZoZoZoZoZoZXZXZXZXZXZXZoZoZoZoZoZoZXZoonqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFnsnsZgnsnsnsnsnsnsnsnsnsnsnsnsqFqFqFnsnsnsnsnsnsIrZrJNnsnsnsqFnsnsnsnsMVMVMVVsMVNXNXNXNXNXMVMVInInYzInInyomJdtqFqFqFqFqFZoZoZoZoZoZoZoZoZoZoBdBdBdZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoonqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFnsZgnsnsnsnsqFqFnsnsnsnsnsqFqFqFqFqFnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsMVMVqFdtVsVsMVMVVsMVVsVsMVKdgqCcyoInInyodtqFqFqFqFqFqFqFqFZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoZoonononqFqFqFqFqFqF
+qFZHyXRTkqDKeVxjTzTIdmAYqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFnsnsZgnsnsqFqFqFnsnsnsnsqFnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsnsMVqFqFqFMVMVVsVsMVdFdtUPInyoInInInInIndtqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFonononononononononononononqFqFqFqFqFqFqFqFqF
+qFsWgYgYgYgYgYgYbITIqFAYqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFnsZgnsnsnsqFnsnsnsnsnsnsnsnsnsnsnsnsqFqFZgnsnsZgZgZgnsnsqFqFqFqFqFqFdtinMVMVMVMVVsVsInInInIndfdtqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFWdZTtekHPlgYgYgYvNAYAYqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFnsnsnsnsnsnsZgnsnsnsnsnsnsnsnsnsnsnsnsqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFSJElyoyoInInInEadtdtqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFGvgYgYgYgYgTVyjPqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFnsnsnsZgnsZgnsnsnsnsnsnsnsnsnsnsqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFdtqFqFdtqFdtqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFOOGTMjXbgYgYgYgYqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFsWgYgYgYgYgYgYbIqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFmSqNHPOwWXgYgYHQqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
+"}
