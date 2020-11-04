@@ -141,12 +141,18 @@
 	soft_armor = list("melee" = 25, "bullet" = 20, "laser" = 20, "energy" = 20, "bomb" = 30, "bio" = 20, "rad" = 20, "fire" = 20, "acid" = 25)
 	flags_inventory = NOSLIPPING
 
+//Halo
+
+//UNSC Marine
+
 /obj/item/clothing/shoes/marine/unscmarine
 	name = "UNSC marine combat boots"
 	desc = "Standard issue combat boots for combat scenarios or combat situations."
 	soft_armor = list("melee" = 50, "bullet" = 55, "laser" = 55, "energy" = 55, "bomb" = 55, "bio" = 10, "rad" = 0, "fire" = 10, "acid" = 25)
 	icon_state = "unsc_marine"
 	item_state = "unsc_marine"
+
+//URF Innies
 
 /obj/item/clothing/shoes/marine/urf
 	name = "combat boots (brown)"
@@ -189,7 +195,38 @@
 	icon_state = "innie_warlord"
 	item_state = "innie_warlord"
 
-//gcpd
+/obj/item/clothing/shoes/marine/urf/blue/reno
+	name = "reinforced cowboy boots"
+	desc = "A pair of reinforced cowboy boots that provides minor protection. May protect against toe stubs."
+	icon_state = "innie_reno"
+	item_state = "innie_reno"
+
+//ODST
+
+/obj/item/clothing/shoes/marine/odst
+	name = "ODST armored combat boots"
+	desc = "Standard issue ODST armored combat boots for combat scenarios or combat situations."
+	soft_armor = list("melee" = 50, "bullet" = 55, "laser" = 55, "energy" = 55, "bomb" = 55, "bio" = 10, "rad" = 0, "fire" = 10, "acid" = 25)
+	icon_state = "odst_boots"
+	item_state = "odst_boots"
+
+/obj/item/clothing/shoes/marine/odst/loafe
+	name = "ODST (loafe) armored combat boots"
+	desc = "Standard issue ODST armored combat boots worn by the ODST 'Loafe'. For combat scenarios or combat situations."
+	soft_armor = list("melee" = 50, "bullet" = 55, "laser" = 55, "energy" = 55, "bomb" = 55, "bio" = 10, "rad" = 0, "fire" = 10, "acid" = 25)
+	icon_state = "odst_boots_loafe"
+	item_state = "odst_boots_loafe"
+
+//URF Commando
+
+/obj/item/clothing/shoes/marine/urfc
+	name = "URFC armored combat boots"
+	desc = "Standard issue URFC armored combat boots for combat scenarios or combat situations."
+	soft_armor = list("melee" = 50, "bullet" = 55, "laser" = 55, "energy" = 55, "bomb" = 55, "bio" = 10, "rad" = 0, "fire" = 10, "acid" = 25)
+	icon_state = "urfc_boots"
+	item_state = "urfc_boots"
+
+//GCPD
 
 /obj/item/clothing/shoes/marine/gcpd
 	name = "Colonial Police patrol boots"

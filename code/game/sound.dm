@@ -149,6 +149,8 @@
     'sound/music/brother.ogg',
     'sound/music/delune.ogg',
     'sound/music/sunday.ogg',
+    'sound/music/gloop.ogg',
+    'sound/music/cod.ogg',
     )
     if(!SSticker?.login_music)
         return FALSE

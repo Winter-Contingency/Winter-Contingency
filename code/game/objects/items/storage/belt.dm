@@ -42,7 +42,7 @@
 
 
 //============================//MARINE BELTS\\==================================\\
-//=======================================================================\\
+//=======================================================================
 
 
 /obj/item/storage/belt/utility
@@ -654,6 +654,16 @@
 	can_hold = list(
 		/obj/item/weapon/gun/revolver,
 		/obj/item/ammo_magazine/revolver
+		)
+
+/obj/item/storage/belt/gun/revolver/cowboy_holster
+	name = "\improper Classic western gunbelt"
+	desc = "A nice western cowboy gunbelt, it's been fitted to only hold the Colt Navy and loose ammo."
+	icon_state = "cowboy_holster"
+	item_state = "cowboy_holster"
+	can_hold = list(
+		/obj/item/weapon/gun/revolver/coltnavy,
+		/obj/item/ammo_magazine/handful
 		)
 
 /obj/item/storage/belt/gun/m44

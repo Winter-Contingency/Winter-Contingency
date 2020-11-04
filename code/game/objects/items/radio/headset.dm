@@ -10,7 +10,9 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	RADIO_CHANNEL_CHARLIE = RADIO_TOKEN_CHARLIE,
 	RADIO_CHANNEL_DELTA = RADIO_TOKEN_DELTA,
 	RADIO_CHANNEL_UNSC = RADIO_TOKEN_UNSC,
-	RADIO_CHANNEL_INNIE = RADIO_TOKEN_INNIE
+	RADIO_CHANNEL_ODST = RADIO_TOKEN_ODST,
+	RADIO_CHANNEL_INNIE = RADIO_TOKEN_INNIE,
+	RADIO_CHANNEL_URFC = RADIO_TOKEN_URFC,
 ))
 
 
@@ -557,13 +559,23 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	name = "\improper Echo Task Force headset"
 	keyslot = /obj/item/encryptionkey/echo
 
+
+//Halo Headsets
 /obj/item/radio/headset/unsc
 	name = "\improper UNSC Headset"
 	keyslot = /obj/item/encryptionkey/unsc
 
+/obj/item/radio/headset/odst
+	name = "\improper ODST Headset"
+	keyslot = /obj/item/encryptionkey/odst
+
 /obj/item/radio/headset/innie
 	name = "Insurrectionist Headset"
 	keyslot = /obj/item/encryptionkey/innie
+
+/obj/item/radio/headset/urfc
+	name = "URFC Headset"
+	keyslot = /obj/item/encryptionkey/urfc
 
 /obj/item/radio/headset/gcpd
 	name = "Colonial Police Headset"
