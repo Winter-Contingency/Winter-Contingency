@@ -151,6 +151,7 @@
     'sound/music/sunday.ogg',
     'sound/music/gloop.ogg',
     'sound/music/cod.ogg',
+    'sound/music/coolsong.ogg',
     )
     if(!SSticker?.login_music)
         return FALSE
