@@ -152,6 +152,9 @@
     'sound/music/gloop.ogg',
     'sound/music/cod.ogg',
     'sound/music/coolsong.ogg',
+    'sound/music/grillers.ogg',
+    'sound/music/engineergaming.ogg',
+    'sound/music/bordercrossing.ogg',
     )
     if(!SSticker?.login_music)
         return FALSE
