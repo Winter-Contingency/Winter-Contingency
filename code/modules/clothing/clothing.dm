@@ -88,7 +88,10 @@
 
 
 	/// Strength of the armor light used by [proc/set_light()]
-	var/light_strength = 5
+	light_power = 3
+	light_range = 4
+	light_system = MOVABLE_LIGHT
+	light_on = FALSE
 	sprite_sheets = list(
 	"Sangheili" = 'icons/mob/species/sangheili/suit.dmi',
 	)
@@ -115,11 +118,11 @@
 	This proc will toggle the light enabled or disabled on the armor, playing a sound and updating the action button for the user.
 */
 /obj/item/clothing/suit/proc/toggle_armor_light(mob/user)
-	COOLDOWN_START(src, COOLDOWN_ARMOR_LIGHT, 2.5 SECONDS)
+	TIMER_COOLDOWN_START(src, COOLDOWN_ARMOR_LIGHT, 2.5 SECONDS)
 	if(flags_armor_features & ARMOR_LAMP_ON)
-		set_light(0)
+		set_light_on(FALSE)
 	else
-		set_light(light_strength)
+		set_light_on(TRUE)
 	flags_armor_features ^= ARMOR_LAMP_ON
 	playsound(src, 'sound/items/flashlight.ogg', 15, TRUE)
 	update_icon(user)

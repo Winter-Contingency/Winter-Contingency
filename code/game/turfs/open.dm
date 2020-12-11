@@ -190,6 +190,9 @@
 	icon_state = "floor"
 	icon = 'icons/turf/shuttle.dmi'
 	allow_construction = FALSE
+	shoefootstep = FOOTSTEP_PLATING
+	barefootstep = FOOTSTEP_HARD
+	mediumxenofootstep = FOOTSTEP_PLATING
 
 
 /turf/open/shuttle/check_alien_construction(mob/living/builder, silent = FALSE, planned_building)
@@ -217,6 +220,10 @@
 
 /turf/open/shuttle/dropship/eight
 	icon_state = "rasputin8"
+
+/turf/open/shuttle/dropship/grating
+	icon = 'icons/turf/elevator.dmi'
+	icon_state = "floor_grating"
 
 //not really plating, just the look
 /turf/open/shuttle/plating
@@ -265,12 +272,12 @@
 	plane = FLOOR_PLANE
 	baseturfs = /turf/open/lavaland/lava
 
+
 /turf/open/lavaland/lava
 	name = "lava"
 	icon_state = "full"
-
-	light_range = 4
-	light_power = 0.75
+	light_range = 2
+	light_power = 1.4
 	light_color = LIGHT_COLOR_LAVA
 
 /turf/open/lavaland/lava/is_weedable()
@@ -284,6 +291,24 @@
 
 /turf/open/lavaland/lava/lpiece
 	icon_state = "lpiece"
+
+/turf/open/lavaland/lava/single/
+	icon_state = "single"
+
+/turf/open/lavaland/lava/single/intersection
+	icon_state = "single_intersection"
+
+/turf/open/lavaland/lava/single_intersection/direction
+	icon_state = "single_intersection_direction"
+
+/turf/open/lavaland/lava/single/middle
+	icon_state = "single_middle"
+
+/turf/open/lavaland/lava/single/end
+	icon_state = "single_end"
+
+/turf/open/lavaland/lava/single/corners
+	icon_state = "single_corners"
 
 /turf/open/lavaland/lava/New()
 	..()
@@ -347,6 +372,25 @@
 /turf/open/lavaland/basalt
 	name = "basalt"
 	icon_state = "basalt"
+	shoefootstep = FOOTSTEP_SAND
+	barefootstep = FOOTSTEP_SAND
+	mediumxenofootstep = FOOTSTEP_SAND
+
+/turf/open/lavaland/basalt/cave
+	name = "cave"
+	icon_state = "basalt_to_cave"
+
+/turf/open/lavaland/basalt/cave/corner
+	name = "cave"
+	icon_state = "basalt_to_cave_corner"
+
+/turf/open/lavaland/basalt/dirt
+	name = "dirt"
+	icon_state = "basalt_to_dirt"
+
+/turf/open/lavaland/basalt/dirt/corner
+	name = "dirt"
+	icon_state = "basalt_to_dirt_corner"
 
 /turf/open/lavaland/basalt/glowing
 	icon_state = "basaltglow"
@@ -357,9 +401,12 @@
 /turf/open/lavaland/catwalk
 	name = "catwalk"
 	icon_state = "lavacatwalk"
-	light_range = 4
-	light_power = 0.75
+	light_range = 1.4
+	light_power = 2
 	light_color = LIGHT_COLOR_LAVA
+	shoefootstep = FOOTSTEP_CATWALK
+	barefootstep = FOOTSTEP_CATWALK
+	mediumxenofootstep = FOOTSTEP_CATWALK
 
 /turf/open/lavaland/catwalk/built
 	var/deconstructing = FALSE

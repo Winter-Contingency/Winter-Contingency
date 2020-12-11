@@ -221,9 +221,6 @@
 // apparently called whenever an item is removed from a slot, container, or anything else.
 //the call happens after the item's potential loc change.
 /obj/item/proc/dropped(mob/user)
-	if(user?.client && zoom) //Dropped when disconnected, whoops
-		zoom(user, 11, 12)
-
 	SEND_SIGNAL(src, COMSIG_ITEM_DROPPED, user)
 
 	if(flags_item & DELONDROP)
@@ -345,6 +342,11 @@
 	if(!M)
 		return FALSE
 
+	if(CHECK_BITFIELD(flags_item, NODROP) && slot != SLOT_L_HAND && slot != SLOT_R_HAND) //No drops can only be equipped to a hand slot
+		if(slot == SLOT_L_HAND || slot == SLOT_R_HAND)
+			to_chat(M, "<span class='notice'>[src] is stuck to our hand!</span>")
+		return FALSE
+
 	if(ishuman(M))
 		//START HUMAN
 		var/mob/living/carbon/human/H = M
@@ -353,6 +355,10 @@
 			mob_equip = H.species.hud.equip_slots
 
 		if(H.species && !(slot in mob_equip))
+			return FALSE
+
+		if(issynth(H) && CHECK_BITFIELD(flags_item, SYNTH_RESTRICTED) && !CONFIG_GET(flag/allow_synthetic_gun_use))
+			to_chat(H, "<span class='warning'>Your programming prevents you from wearing this.</span>")
 			return FALSE
 
 		switch(slot)
@@ -671,15 +677,12 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 		to_chat(user, "<span class='warning'>Your vision is too obscured for you to look through \the [zoom_device].</span>")
 		return
 
-	if((!zoom && user.get_active_held_item() != src) && (!(flags_item & DOES_NOT_NEED_HANDS)))
-		to_chat(user, "<span class='warning'>You need to hold \the [zoom_device] to look through it.</span>")
-		return
-
 	if(zoom) //If we are zoomed out, reset that parameter.
 		user.visible_message("<span class='notice'>[user] looks up from [zoom_device].</span>",
 		"<span class='notice'>You look up from [zoom_device].</span>")
 		zoom = FALSE
-		COOLDOWN_START(user, COOLDOWN_ZOOM, 2 SECONDS)
+		onunzoom(user)
+		TIMER_COOLDOWN_START(user, COOLDOWN_ZOOM, 2 SECONDS)
 
 		if(user.interactee == src)
 			user.unset_interaction()
@@ -691,9 +694,9 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 			user.client.pixel_y = 0
 
 	else //Otherwise we want to zoom in.
-		if(COOLDOWN_CHECK(user, COOLDOWN_ZOOM)) //If we are spamming the zoom, cut it out
+		if(TIMER_COOLDOWN_CHECK(user, COOLDOWN_ZOOM)) //If we are spamming the zoom, cut it out
 			return
-		COOLDOWN_START(user, COOLDOWN_ZOOM, 2 SECONDS)
+		TIMER_COOLDOWN_START(user, COOLDOWN_ZOOM, 2 SECONDS)
 
 		if(user.client)
 			user.client.change_view(VIEW_NUM_TO_STRING(viewsize))
@@ -718,10 +721,19 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 		user.visible_message("<span class='notice'>[user] peers through \the [zoom_device].</span>",
 		"<span class='notice'>You peer through \the [zoom_device].</span>")
 		zoom = TRUE
+		onzoom(user)
 		if(user.interactee)
 			user.unset_interaction()
 		else if(!istype(src, /obj/item/attachable/scope))
 			user.set_interaction(src)
+
+/obj/item/proc/onzoom(mob/living/user)
+	RegisterSignal(user, list(COMSIG_MOVABLE_MOVED, COMSIG_CARBON_SWAPPED_HANDS), .proc/zoom)
+	RegisterSignal(src, list(COMSIG_ITEM_EQUIPPED, COMSIG_ITEM_DROPPED), .proc/zoom)
+
+/obj/item/proc/onunzoom(mob/living/user)
+	UnregisterSignal(user, list(COMSIG_MOVABLE_MOVED, COMSIG_CARBON_SWAPPED_HANDS))
+	UnregisterSignal(src, list(COMSIG_ITEM_EQUIPPED, COMSIG_ITEM_DROPPED, .proc/zoom))
 
 
 /obj/item/proc/eyecheck(mob/user)
@@ -865,7 +877,7 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 				sleep(2)
 			qdel(W)
 
-	if(isspaceturf(user.loc) || user.lastarea.has_gravity == 0)
+	if(isspaceturf(user.loc))
 		user.inertia_dir = get_dir(target, user)
 		step(user, user.inertia_dir)
 

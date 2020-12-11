@@ -16,7 +16,7 @@
 	buckle_lying = 90
 	throwpass = TRUE
 	resistance_flags = XENO_DAMAGEABLE
-	max_integrity = 100
+	max_integrity = 40
 	resistance_flags = XENO_DAMAGEABLE
 	hit_sound = 'sound/effects/metalhit.ogg'
 	var/buildstacktype = /obj/item/stack/sheet/metal
@@ -56,6 +56,10 @@ obj/structure/bed/Destroy()
 		density = FALSE
 	update_icon()
 
+	if(isliving(buckled_mob)) //Properly update whether we're lying or not
+		var/mob/living/unbuckled_target = buckled_mob
+		if(HAS_TRAIT(unbuckled_target, TRAIT_FLOORED))
+			unbuckled_target.set_lying_angle(pick(90, 270))
 
 //Unsafe proc
 /obj/structure/bed/proc/buckle_bodybag(obj/structure/closet/bodybag/B, mob/user)
@@ -437,6 +441,7 @@ GLOBAL_LIST_EMPTY(activated_medevac_stretchers)
 	RegisterSignal(src, COMSIG_MOVABLE_UNBUCKLE, .proc/on_mob_unbuckle)
 
 /obj/structure/bed/medevac_stretcher/proc/on_mob_unbuckle(datum/source, mob/living/buckled_mob, force = FALSE)
+	SIGNAL_HANDLER
 	UnregisterSignal(src, COMSIG_MOVABLE_UNBUCKLE)
 	deltimer(teleport_timer)
 	playsound(loc,'sound/machines/buzz-two.ogg', 25, FALSE)
@@ -462,6 +467,7 @@ GLOBAL_LIST_EMPTY(activated_medevac_stretchers)
 		visible_message("<span class='warning'>[src]'s bluespace engine aborts displacement, being unable to detect an appropriate evacuee.</span>")
 		return
 
+	UnregisterSignal(src, COMSIG_MOVABLE_UNBUCKLE)
 	visible_message("<span class='notice'><b>[M] vanishes in a flash of sparks as [src]'s bluespace engine generates its displacement field.</b></span>")
 	if(buckled_bodybag)
 		var/obj/structure/closet/bodybag/teleported_bodybag = buckled_bodybag

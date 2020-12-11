@@ -29,6 +29,7 @@
 	* TYPECONT: The typepath of the contents of the list
 	* COMPARE: The object to compare against, usualy the same as INPUT
 	* COMPARISON: The variable on the objects to compare
+	* COMPTYPE: How should the values be compared? Either COMPARE_KEY or COMPARE_VALUE.
 	*/
 #define BINARY_INSERT(INPUT, LIST, TYPECONT, COMPARE, COMPARISON, COMPTYPE) \
 	do {\
@@ -40,7 +41,7 @@
 			var/__BIN_LEFT = 1;\
 			var/__BIN_RIGHT = __BIN_CTTL;\
 			var/__BIN_MID = (__BIN_LEFT + __BIN_RIGHT) >> 1;\
-			var/##TYPECONT/__BIN_ITEM;\
+			var ##TYPECONT/__BIN_ITEM;\
 			while(__BIN_LEFT < __BIN_RIGHT) {\
 				__BIN_ITEM = COMPTYPE;\
 				if(__BIN_ITEM.##COMPARISON <= COMPARE.##COMPARISON) {\
@@ -176,12 +177,16 @@
 	return picked
 
 
-/proc/popleft(list/L)
-	if(!length(L))
-		return
+//Returns the top(last) element from the list and removes it from the list (typical stack function)
+/proc/pop(list/L)
+	if(L.len)
+		. = L[L.len]
+		L.len--
 
-	. = L[1]
-	L.Cut(1, 2)
+/proc/popleft(list/L)
+	if(L.len)
+		. = L[1]
+		L.Cut(1,2)
 
 
 //Returns the next element in parameter list after first appearance of parameter element. If it is the last element of the list or not present in list, returns first element.
