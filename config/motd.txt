@@ -1,4 +1,3 @@
-<h1>Welcome to Halo : Winter Contingency!</h1>
-
-<i>Suit up marines!.</i>
-<br><br>
+<h1>Welcome to <u>Halo: Winter Contingency!</u></h1>
+<p><em><a href="https://github.com/Winter-Contingency/Winter-Contingency%22%3E"> Halo: Winter Contingency</a></em> is running a modified version of <em><a href="https://github.com/tgstation/TerraGov-Marine-Corps%22%3E">TerraGov Marine Corps's code </a></em></p>
+<p>Remember: The first rule of gun safety is to have fun! <a href="&quot;https://discord.gg/q7P8Fsy5db&lt;/a%22%3E"> (please read our rules)</a></p>

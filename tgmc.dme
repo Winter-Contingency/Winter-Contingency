@@ -309,6 +309,7 @@
 #include "code\datums\gamemodes\extended.dm"
 #include "code\datums\gamemodes\game_mode.dm"
 #include "code\datums\gamemodes\infestation.dm"
+#include "code\datums\gamemodes\skirmish.dm"
 #include "code\datums\helper_datums\getrev.dm"
 #include "code\datums\jobs\access.dm"
 #include "code\datums\jobs\squads.dm"
