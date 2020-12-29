@@ -7,7 +7,7 @@
 	desc = "A rectangular metallic frame sitting on four legs with a back panel. Designed to fit the sitting position, more or less comfortably."
 	icon_state = "chair"
 	buckle_lying = 0
-	max_integrity = 100
+	max_integrity = 20
 	var/propelled = 0 //Check for fire-extinguisher-driven chairs
 
 
@@ -26,6 +26,10 @@
 
 /obj/structure/bed/chair/post_buckle_mob(mob/buckling_mob)
 	. = ..()
+	if(isliving(buckling_mob)) //Properly update whether we're lying or not; no more people lying on chairs; ridiculous
+		var/mob/living/buckled_target = buckling_mob
+		buckled_target.set_lying_angle(0)
+
 	handle_layer()
 
 /obj/structure/bed/chair/post_unbuckle_mob(mob/buckled_mob)
@@ -145,6 +149,12 @@
 
 /obj/structure/bed/chair/sofa/corner
 	icon_state = "sofacorner"
+
+
+/obj/structure/bed/chair/pew
+	name = "chapel pew"
+	desc = "An old fashioned wood pew."
+	icon_state = "pews"
 
 /obj/structure/bed/chair/office
 	anchored = FALSE

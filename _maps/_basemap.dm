@@ -10,7 +10,6 @@
 		#include "map_files\LV624\LV624.dmm"
 		#include "map_files\Prison_Station_FOP\Prison_Station_FOP.dmm"
 		#include "map_files\Theseus\TGS_Theseus.dmm"
-		#include "map_files\Tyson_Station\Tyson_Station.dmm"
 		#include "map_files\Vapor_Processing\Vapor_Processing.dmm"
 		#include "map_files\Sulaco\Sulaco.dmm"
 		#include "map_files\Pillar_of_Spring\TGS_Pillar_of_Spring.dmm"
@@ -22,7 +21,8 @@
 		#include "map_files\Lava_Outpost\LavaOutpost.dmm"
 		#include "map_files\TDMMapHalo\TDMMapHalo.dmm"
 		#include "map_files\Insurrectionist_Hideout\Insurrectionist_Hideout.dmm"
-		#ifdef TRAVISBUILDING
+		#include "map_files\Magmoor_Digsite_IV\Magmoor_Digsite_IV.dmm"
+		#ifdef CIBUILDING
 			#include "templates.dm"
 		#endif
 	#endif
