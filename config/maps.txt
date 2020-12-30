@@ -13,8 +13,8 @@ Format:
 endmap
 
 map halo_tdm
+default
 endmap
 
 map colony_olympus
-default
 endmap
