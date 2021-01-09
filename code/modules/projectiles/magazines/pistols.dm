@@ -235,7 +235,7 @@ It is a modified Beretta 93R, and can fire three round burst or single fire. Whe
 	default_ammo = /datum/ammo/bullet/magnum
 	caliber = "12.7x40mm"
 	icon_state = "magnum"
-	max_rounds = 12
+	max_rounds = 8
 	gun_type = /obj/item/weapon/gun/pistol/m6
 
 /obj/item/ammo_magazine/pistol/m6/AP
@@ -243,7 +243,7 @@ It is a modified Beretta 93R, and can fire three round burst or single fire. Whe
 	default_ammo = /datum/ammo/bullet/magnum/socom
 	caliber = "12.7x40mm"
 	icon_state = "socom"
-	max_rounds = 12
+	max_rounds = 8
 	gun_type = /obj/item/weapon/gun/pistol/m6/SOCOM
 
 /* /obj/item/ammo_magazine/pistol/handgonne

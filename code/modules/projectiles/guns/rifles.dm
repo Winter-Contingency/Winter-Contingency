@@ -1060,7 +1060,7 @@
 	fire_sound = "sound/halo/dmr_fire_new.wav"
 	dry_fire_sound = 'sound/weapons/guns/fire/m41a_empty.ogg'
 	unload_sound = 'sound/halo/dmr_reload_new.wav'
-	fire_delay = 0.8 SECONDS
+	fire_delay = 1 SECONDS
 	reload_sound = 'sound/halo/dmr_reload_new.wav'
 	current_mag = /obj/item/ammo_magazine/rifle/m392
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_LOAD_INTO_CHAMBER
@@ -1089,7 +1089,7 @@
 
 /obj/item/weapon/gun/rifle/srs99
 	name = "SRS99-AM Sniper Rifle"
-	desc = "initially an anti-materiel rifle, the SRS99 would transition to an anti-personel rifle as the Human-Covenant war carried on."
+	desc = "Initially an anti-materiel rifle, the SRS99 would transition to an anti-personel rifle as the Human-Covenant war carried on."
 	icon_state = "srs99"
 	item_state = "srs99"
 	fire_sound = 'sound/halo/SniperShotSoundEffect.ogg'
@@ -1097,7 +1097,7 @@
 	unload_sound = 'sound/halo/SniperRifleReloadSoundEffect.ogg'
 	reload_sound = 'sound/halo/SniperRifleReloadSoundEffect.ogg'
 	current_mag = /obj/item/ammo_magazine/rifle/srs99
-	fire_delay = 6 SECONDS
+	fire_delay = 1.5 SECONDS
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_AMMO_COUNTER|GUN_LOAD_INTO_CHAMBER
 	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO)
 	attachable_allowed = list(/obj/item/attachable/scope/unremovable/srs99)
@@ -1178,7 +1178,7 @@
 	unload_sound = 'sound/halo/SniperRifleReloadSoundEffect.ogg'
 	reload_sound = 'sound/halo/SniperRifleReloadSoundEffect.ogg'
 	current_mag = /obj/item/ammo_magazine/rifle/ssrs
-	fire_delay = 6 SECONDS
+	fire_delay = 1.5 SECONDS
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_AMMO_COUNTER|GUN_LOAD_INTO_CHAMBER
 	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO)
 	attachable_allowed = list(/obj/item/attachable/scope/unremovable/srs99)

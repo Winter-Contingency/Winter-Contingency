@@ -564,6 +564,7 @@ It is a modified Beretta 93R, and can fire three round burst or single fire. Whe
 	fire_sound = 'sound/halo/MagnumShotSoundEffect.ogg'
 	reload_sound = 'sound/halo/MagnumReloadSoundEffect.ogg'
 	current_mag = /obj/item/ammo_magazine/pistol/m6
+	fire_delay = 0.25 SECONDS
 
 /obj/item/weapon/gun/pistol/m6/m6b_officer
 	name = "M6B PDWS"

@@ -318,10 +318,10 @@
 obj/item/ammo_magazine/rifle/srs99
 	name = "SRS99 14.5mm Magazine"
 	desc = "A 14.5x114mm magazine for use in the SRS99 Sniper Rifle"
-	caliber = "14.5x144m"
+	caliber = "14.5x114m"
 	icon_state = "srs99"
 	w_class = WEIGHT_CLASS_NORMAL
-	default_ammo = /datum/ammo/bullet/rifle
+	default_ammo = /datum/ammo/bullet/SRS99
 	max_rounds = 4
 	gun_type = /obj/item/weapon/gun/rifle/srs99
 
