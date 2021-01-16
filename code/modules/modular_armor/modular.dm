@@ -495,15 +495,39 @@
 	item_state = "innie_harness_two"
 
 
-/obj/item/clothing/head/modular/marine/unscmarine
-	name = "UNSC Combat helmet"
-	desc = "A helmet for UNSC Marines. It can be equipped with a tactical visor that can be toggled."
+/obj/item/clothing/head/modular/marine/unsc
+	name = "CH525 combat helmet"
+	desc = "The CH525 is a reliable and robust helmet for UNSC Marines. It can be equipped with a tactical visor that can be toggled."
 	icon_state = "marine_helmet"
 	toggle_message = "You activate the tactical visor"
 	alt_toggle_message = "You deactive the tactical visor."
 	can_toggle = 1
 
-/obj/item/clothing/head/modular/marine/unscmarine/item_action_slot_check(mob/user, slot)
+/obj/item/clothing/head/modular/marine/unsc/medic
+	name = "CH525-MH combat helmet"
+	desc = "The CH525 is a reliable and robust helmet for UNSC Marines. This one has a special medical HUD that allows for its wearer to see certain vitals of a lifeform."
+	icon_state = "marine_medic_helmet"
+	//give visor medhud functionality for medic
+
+/obj/item/clothing/head/modular/marine/unsc/engineer
+	name = "CH525-S combat helmet"
+	desc = "The CH525 is a reliable and robust helmet for UNSC Marines. This one has a special welding shield that can be toggled."
+	icon_state = "marine_engi_helmet"
+	toggle_message = "You activate the tactical visor"
+	alt_toggle_message = "You deactive the tactical visor."
+	can_toggle = 1
+	//give engineer visor welder protection
+
+/obj/item/clothing/head/modular/marine/unsc/sl
+	name = "CH525-SO/R combat helmet"
+	desc = "The CH525 is a reliable and robust helmet for UNSC Marines. This one is for special operations and recon, and is equipped with an advanced binocular and rangefinding system."
+	icon_state = "marine_sl_helmet"
+	//give SL helmet binocular functionality
+
+
+
+
+/obj/item/clothing/head/modular/marine/unsc/item_action_slot_check(mob/user, slot)
 	if(!ishuman(user))
 		return FALSE
 	if(slot != SLOT_HEAD)

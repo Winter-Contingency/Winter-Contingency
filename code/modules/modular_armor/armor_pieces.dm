@@ -208,21 +208,42 @@
 //halo
 
 /obj/item/armor_module/armor/chest/unsc
-	name = "UNSC Marine chest plate"
-	desc = "Attachable chest plate for use with UNSC Marine armor."
+	name = "M52A attachable chest piece"
+	desc = "A reliable and robust ttachable chest plate for use with UNSC Marine armor."
 	icon_state = "marine_chest"
 	soft_armor = list("melee" = 17, "bullet" = 17, "laser" = 17, "energy" = 17, "bomb" = 20, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
 	slowdown = 0.25
 
+/obj/item/armor_module/armor/chest/unsc/medic
+	name = "M52A-M medic chest piece"
+	desc = "Attachable chest plate for use with UNSC Marine armor. This one has a large medical cross for easy identification."
+	icon_state = "marine_medic_chest"
+	soft_armor = list("melee" = 17, "bullet" = 17, "laser" = 17, "energy" = 17, "bomb" = 20, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
+	slowdown = 0.25
+
+/obj/item/armor_module/armor/chest/unsc/engineer
+	name = "M52A-E attachable chest piece"
+	desc = "Attachable chest plate for use with UNSC Marine armor. This one has extra storage pouches for engineering equipment."
+	icon_state = "marine_engi_chest"
+	soft_armor = list("melee" = 17, "bullet" = 17, "laser" = 17, "energy" = 17, "bomb" = 20, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
+	slowdown = 0.25
+
+/obj/item/armor_module/armor/chest/unsc/sl
+	name = "M52A-I attachable chest piece"
+	desc = "Attachable chest plate for use with UNSC Marine armor. This one has improved protection and is slowly being issued, starting with squad leaders."
+	icon_state = "marine_sl_chest"
+	soft_armor = list("melee" = 17, "bullet" = 17, "laser" = 17, "energy" = 17, "bomb" = 20, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
+	slowdown = 0.25
+
 /obj/item/armor_module/armor/arms/unsc
-	name = "UNSC Marine shoulder plates"
+	name = "Attachable marine shoulder plates"
 	desc = "Attachable shoulder plates for use with UNSC Marine armor."
 	icon_state = "marine_arms"
 	soft_armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 5, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
 	slowdown = 0.10
 
 /obj/item/armor_module/armor/legs/unsc
-	name = "UNSC Marine knee pads"
+	name = "Attachable GUNGNIR knee pads"
 	desc = "UNSC Marine knee pads for use with UNSC Marine armor."
 	icon_state = "marine_legs"
 	soft_armor = list("melee" = 8, "bullet" = 8, "laser" = 8, "energy" = 8, "bomb" = 8, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 9)
