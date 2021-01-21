@@ -1984,7 +1984,7 @@ GLOBAL_LIST_INIT(available_specialist_sets, list("Scout Set", "Sniper Set", "Dem
 						/obj/item/armor_module/armor/chest/unsc,
 						/obj/item/armor_module/armor/arms/unsc,
 						/obj/item/armor_module/armor/legs/unsc,
-						/obj/item/clothing/head/modular/marine/unscmarine)
+						/obj/item/clothing/head/modular/marine/unsc)
 
 //ODST Sets
 
