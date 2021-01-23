@@ -54,6 +54,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	//AI specific preferences
 	var/ai_name = "ARES v3.2"
 
+	//Halo specific preferences
+	var/unggoy_name = "Plup"
+	var/sangheili_name = "Upa 'Nraham"
+	var/kigyar_name = "Math"
+
 	//Character preferences
 	var/real_name = ""
 	var/random_name = FALSE
@@ -228,6 +233,15 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	dat += "<br>"
 	dat += "<b>AI name:</b>"
 	dat += "<a href='?_src_=prefs;preference=ai_name'>[ai_name]</a>"
+	dat += "<br>"
+	dat += "<b>Unggoy name:</b>"
+	dat += "<a href='?_src_=prefs;preference=unggoy_name'>[unggoy_name]</a>"
+	dat += "<br>"
+	dat += "<b>Sangheili name:</b>"
+	dat += "<a href='?_src_=prefs;preference=sangheili_name'>[sangheili_name]</a>"
+	dat += "<br>"
+	dat += "<b>Kig Yar name:</b>"
+	dat += "<a href='?_src_=prefs;preference=kigyar_name'>[kigyar_name]</a>"
 	dat += "<br><br>"
 
 
@@ -651,6 +665,39 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
 					return
 				ai_name = newname
+			
+		if("unggoy_name")
+			var/newname = input(user, "Choose your Unggoy name:", "Unggoy Name")
+			if(newname == "")
+				unggoy_name = "Plup"
+			else
+				newname = reject_bad_name(newname)
+				if(!newname)
+					to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
+					return
+				unggoy_name = newname
+		
+		if("sangheili_name")
+			var/newname = input(user, "Choose your Sangheili name:", "Sangheili Name")
+			if(newname == "")
+				sangheili_name = "Upa 'Nraham"
+			else
+				newname = reject_bad_name(newname)
+				if(!newname)
+					to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
+					return
+				sangheili_name = newname
+		
+		if("kigyar_name")
+			var/newname = input(user, "Choose your Kig Yar name:", "Kig Yar Name")
+			if(newname == "")
+				kigyar_name = "Math"
+			else
+				newname = reject_bad_name(newname)
+				if(!newname)
+					to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
+					return
+				kigyar_name = newname
 
 		if("name_real")
 			var/newname = input(user, "Choose your character's name:", "Character Name")

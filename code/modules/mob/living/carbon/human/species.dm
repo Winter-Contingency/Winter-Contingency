@@ -208,6 +208,42 @@
 				. = "Jeri"
 		to_chat(prefs.parent, "<span class='warning'>You forgot to set your synthetic name in your preferences. Please do so next time.</span>")
 
+/datum/species/covenant/unggoy/prefs_name(datum/preferences/prefs)
+	. = prefs.unggoy_name
+	if(!. || . == "Undefined")
+		switch(prefs.gender)
+			if(MALE)
+				. = "Plup"
+			if(FEMALE)
+				. = "Plup"
+			else
+				. = "Plup"
+		to_chat(prefs.parent, "<span class='warning'>You forgot to set your Unggoy name in your preferences. Please do so next time.</span>")
+
+/datum/species/covenant/sangheili/prefs_name(datum/preferences/prefs)
+	. = prefs.sangheili_name
+	if(!. || . == "Undefined")
+		switch(prefs.gender)
+			if(MALE)
+				. = "Upa 'Nraham"
+			if(FEMALE)
+				. = "Upa 'Nraham"
+			else
+				. = "Upa 'Nraham"
+		to_chat(prefs.parent, "<span class='warning'>You forgot to set your Sangheili name in your preferences. Please do so next time.</span>")
+
+/datum/species/covenant/kigyar/prefs_name(datum/preferences/prefs)
+	. = prefs.kigyar_name
+	if(!. || . == "Undefined")
+		switch(prefs.gender)
+			if(MALE)
+				. = "Math"
+			if(FEMALE)
+				. = "Math"
+			else
+				. = "Math"
+		to_chat(prefs.parent, "<span class='warning'>You forgot to set your Kig Yar name in your preferences. Please do so next time.</span>")
+
 //special things to change after we're no longer that species
 /datum/species/proc/post_species_loss(mob/living/carbon/human/H)
 	return

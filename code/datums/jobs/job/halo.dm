@@ -24,6 +24,7 @@
 	. = ..()
 	to_chat(M, {"\nYou are a marine in the esteemed United Nations Space Command. You enforce order and maintain peace across the galaxy."})
 
+
 /datum/job/unsc/marine/medic
 	title = "UNSC Combat Medic"
 	paygrade = "E3"
@@ -545,8 +546,8 @@
 	ears = /obj/item/radio/headset/urfc
 	back = /obj/item/storage/backpack/urfc_rifleman
 
-/*
 
+/*
 //temporarily disabled for now
 //Covenant
 
@@ -557,9 +558,11 @@
 
 /datum/job/covenant/sangheili/
 
+/datum/job/covenant/sangheili/get_special_name(client/preference_source)
+	return preference_source.prefs.sangheili_name
+
 /datum/job/covenant/sangheili/return_spawn_type(datum/preferences/prefs)
-	if(prefs && prefs.species == "Sangheili")
-		return /mob/living/carbon/human/species/covenant/sangheili
+	return /mob/living/carbon/human/species/covenant/sangheili
 
 
 /datum/job/covenant/sangheili/radio_help_message(mob/M)

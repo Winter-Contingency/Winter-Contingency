@@ -299,6 +299,10 @@
 	READ_FILE(S["xeno_name"], xeno_name)
 	READ_FILE(S["ai_name"], ai_name)
 
+	READ_FILE(S["unggoy_name"], unggoy_name)
+	READ_FILE(S["sangheili_name"], sangheili_name)
+	READ_FILE(S["kigyar_name"], kigyar_name)
+
 	READ_FILE(S["real_name"], real_name)
 	READ_FILE(S["random_name"], random_name)
 	READ_FILE(S["gender"], gender)
@@ -349,6 +353,10 @@
 	synthetic_type	= sanitize_inlist(synthetic_type, SYNTH_TYPES, initial(synthetic_type))
 	xeno_name		= reject_bad_name(xeno_name)
 	ai_name			= reject_bad_name(ai_name, TRUE)
+
+	unggoy_name		= reject_bad_name(unggoy_name)
+	sangheili_name	= reject_bad_name(sangheili_name)
+	kigyar_name		= reject_bad_name(kigyar_name)
 
 	real_name		= reject_bad_name(real_name)
 	random_name		= sanitize_integer(random_name, FALSE, TRUE, initial(random_name))
@@ -401,6 +409,15 @@
 		xeno_name = "Undefined"
 	if(!ai_name)
 		ai_name = "ARES v3.2"
+	
+	if(!unggoy_name)
+		unggoy_name = "Plup"
+	if(!sangheili_name)
+		sangheili_name = "Upa 'Nraham"
+	if(!kigyar_name)
+		kigyar_name = "Math"
+
+
 	if(!real_name)
 		real_name = GLOB.namepool[/datum/namepool].get_random_name(gender)
 
@@ -427,6 +444,10 @@
 	synthetic_type	= sanitize_inlist(synthetic_type, SYNTH_TYPES, initial(synthetic_type))
 	xeno_name		= reject_bad_name(xeno_name)
 	ai_name			= reject_bad_name(ai_name, TRUE)
+
+	unggoy_name		= reject_bad_name(unggoy_name)
+	sangheili_name	= reject_bad_name(sangheili_name)
+	kigyar_name		= reject_bad_name(kigyar_name)
 
 	real_name		= reject_bad_name(real_name)
 	random_name		= sanitize_integer(random_name, FALSE, TRUE, initial(random_name))
@@ -479,6 +500,10 @@
 	WRITE_FILE(S["synthetic_type"], synthetic_type)
 	WRITE_FILE(S["xeno_name"], xeno_name)
 	WRITE_FILE(S["ai_name"], ai_name)
+
+	WRITE_FILE(S["unggoy_name"], unggoy_name)
+	WRITE_FILE(S["sangheili_name"], sangheili_name)
+	WRITE_FILE(S["kigyar_name"], kigyar_name)
 
 	WRITE_FILE(S["real_name"], real_name)
 	WRITE_FILE(S["random_name"], random_name)
