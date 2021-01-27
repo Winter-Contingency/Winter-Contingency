@@ -324,12 +324,11 @@
 /obj/item/stack/medical/splint/covenant
 	name = "sealant mesh"
 	singular_name = "sealant mesh"
-	//icon_state = ""
+	icon_state = "sealant_mesh"
 	heal_brute = 20
 	heal_burn = 20
 	advanced = TRUE
 	delay_multiplier = 0.8
-	color = "#e61919"//remove it
 
 /obj/item/stack/medical/splint/covenant/check_limb(mob/living/carbon/M, mob/user, datum/limb/affecting)
 	if(affecting.limb_status & LIMB_SPLINTED)
