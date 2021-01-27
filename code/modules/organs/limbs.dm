@@ -1053,7 +1053,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 		to_chat(user, "<span class='warning'>This limb is already splinted!</span>")
 		return FALSE
 
-	var/delay = SKILL_TASK_AVERAGE - (1 SECONDS + user.skills.getRating("medical") * 5)
+	var/delay = (SKILL_TASK_AVERAGE - (1 SECONDS + user.skills.getRating("medical") * 5)) * S.delay_multiplier
 	var/text1 = "<span class='warning'>[user] finishes applying [S] to [target]'s [display_name].</span>"
 	var/text2 = "<span class='notice'>You finish applying [S] to [target]'s [display_name].</span>"
 
@@ -1069,6 +1069,11 @@ Note that amputating the affected organ does in fact remove the infection from t
 		user.visible_message(
 		"[text1]",
 		"[text2]")
+		if(S.heal_brute || S.heal_burn)
+			heal_limb_damage(S.heal_brute, S.heal_burn, updating_health = TRUE)
+			user.visible_message("<span class='notice'>[S] heal [target]'s [display_name].</span>")
+		if(S.advanced && !(limb_status & LIMB_BROKEN))
+			return TRUE
 		add_limb_flags(LIMB_SPLINTED)
 		return TRUE
 
