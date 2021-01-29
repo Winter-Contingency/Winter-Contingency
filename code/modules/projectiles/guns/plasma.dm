@@ -46,16 +46,17 @@
 	. = FALSE
 	update_overheat()
 	if(overheat_count > 0)
-		if(overheat_count >= overheat_limit)
+		if(overheat_count > overheat_limit)
 			. = TRUE
 			if(user)
 				to_chat(user, "<span class='warning'>[src] has overheated!.</span>")
+				to_chat(user, "<span class='notice'>You need to manually ventilated [src]!.</span>")
 		else
 			to_chat(user, "<span class='warning'>[src] is starting to overheat!</span>")
 
 
 /obj/item/weapon/gun/energy/lasgun/plasma/proc/update_overheat()
-	if(overheat_count > 0)
+	if(overheat_count <= overheat_limit && overheat_count > 0)
 		var/delta = world.time - overheat_time
 		if(delta > 0)
 			overheat_count -= delta/overheat_cooldown
@@ -75,8 +76,6 @@
 	if(overcharge)
 		overheat_count++
 		overheat_time = max(world.time + overheat_cooldown, overheat_time)
-		if(overheat_count > overheat_limit)
-			overheat_time += overheat_cooldown
 		update_delay()
 
 /obj/item/weapon/gun/energy/lasgun/plasma/unique_action(mob/user)
@@ -103,10 +102,13 @@
 	else
 		playsound(user, 'sound/weapons/emitter2.ogg', 5, 0, 2)
 		charge_cost = ENERGY_STANDARD_AMMO_COST
-		update_delay()
 		fire_sound = 'sound/weapons/guns/fire/laser.ogg'
 		to_chat(user, "[icon2html(src, user)] You [overcharge ? "<B>disable</b>" : "<B>enable</b>" ] [src]'s overcharge mode.")
 		overcharge = FALSE
+		if(is_overheat)
+			overheat_count = overheat_limit
+			to_chat(user, "[icon2html(src, user)] You you vent manually [src].")
+		update_delay()
 
 	//load_into_chamber()
 
