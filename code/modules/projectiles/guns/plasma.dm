@@ -69,7 +69,7 @@
 	if(overcharge)
 		fire_delay += 7
 	if(overheat_count > 0)
-		fire_delay += max(overheat_count - 1, 0) * 0.5
+		fire_delay += max(overheat_count - 1, 0) * 0.2
 
 /obj/item/weapon/gun/energy/lasgun/plasma/on_fire()
 	update_delay()
@@ -105,7 +105,7 @@
 		fire_sound = 'sound/weapons/guns/fire/laser.ogg'
 		to_chat(user, "[icon2html(src, user)] You [overcharge ? "<B>disable</b>" : "<B>enable</b>" ] [src]'s overcharge mode.")
 		overcharge = FALSE
-		if(is_overheat)
+		if(is_overheat())
 			overheat_count = overheat_limit
 			to_chat(user, "[icon2html(src, user)] You you vent manually [src].")
 		update_delay()
@@ -147,6 +147,7 @@
 	cell_type = /obj/item/cell/lasgun/plasma
 	flags_equip_slot = ITEM_SLOT_BELT
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ENERGY|GUN_AMMO_COUNTER
+	//gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO, GUN_FIREMODE_BURSTFIRE, GUN_FIREMODE_AUTOMATIC, GUN_FIREMODE_AUTOBURST)temp
 	overheat_limit = 30
 
 /obj/item/weapon/gun/energy/lasgun/plasma/repeater
@@ -158,8 +159,7 @@
 	fire_sound = 'sound/halo/plasrifle3burst.ogg'
 	ammo = /datum/ammo/energy/plasmarifle
 	cell_type = /obj/item/cell/lasgun/plasma/large
-	gun_firemode_list = list(GUN_FIREMODE_AUTOMATIC)
-	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO, )
+	//gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO, GUN_FIREMODE_AUTOMATIC)temp
 	flags_equip_slot = ITEM_SLOT_BELT
 	flags_gun_features = GUN_ENERGY|GUN_AMMO_COUNTER
 	overheat_limit = 45
