@@ -616,7 +616,7 @@ should be alright.
 
 /obj/item/weapon/gun/proc/do_toggle_firemode(mob/user, new_firemode)
 	if(flags_gun_features & GUN_BURST_FIRING)//can't toggle mid burst
-		return
+		return FALSE
 
 	if(!length(gun_firemode_list))
 		CRASH("[src] called do_toggle_firemode() with an empty gun_firemode_list")
@@ -638,7 +638,7 @@ should be alright.
 		user.update_action_buttons()
 
 	SEND_SIGNAL(src, COMSIG_GUN_FIREMODE_TOGGLE, gun_firemode, user.client)
-
+	return TRUE
 
 /obj/item/weapon/gun/proc/add_firemode(added_firemode, mob/user)
 	gun_firemode_list += added_firemode

@@ -80,7 +80,7 @@
 	//Energy Weapons
 	var/charge_cost		= 0						//how much energy is consumed per shot.
 	var/ammo_per_shot	= 1						//How much ammo consumed per shot; normally 1.
-	var/overcharge		= 0						//In overcharge mode?
+	var/overcharge		= FALSE						//In overcharge mode?
 	var/ammo_diff		= null					//what ammo to use for overcharge
 
 	//Attachments.
@@ -554,6 +554,10 @@ and you're good to go.
 		//									   \\
 		//						   			   \\
 //----------------------------------------------------------
+/obj/item/weapon/gun/proc/can_fire(mob/user)
+	return TRUE
+
+/obj/item/weapon/gun/proc/on_fire()
 
 /obj/item/weapon/gun/proc/Fire(atom/target, mob/living/user, params, reflex = 0, dual_wield)
 	set waitfor = 0
@@ -566,6 +570,11 @@ and you're good to go.
 
 	if(SEND_SIGNAL(src, COMSIG_GUN_FIRE, target, user) & COMPONENT_GUN_FIRED)
 		return
+
+	if(!can_fire(user))
+		return
+
+	on_fire()
 
 	var/turf/targloc = get_turf(target)
 
@@ -716,7 +725,7 @@ and you're good to go.
 		last_fired = world.time
 
 		if(!delete_bullet(projectile_to_fire))
-			qdel(projectile_to_fire)
+			projectile_to_fire.qdel_projectile()
 		reload_into_chamber(user) //Reload into the chamber if the gun supports it.
 		if(user) //Update dat HUD
 			var/obj/screen/ammo/A = user.hud_used.ammo //The ammo HUD
@@ -780,7 +789,7 @@ and you're good to go.
 
 	projectile_to_fire.play_damage_effect(user)
 	if(!delete_bullet(projectile_to_fire))
-		qdel(projectile_to_fire) //If this proc DIDN'T delete the bullet, we're going to do so here.
+		projectile_to_fire.qdel_projectile() //If this proc DIDN'T delete the bullet, we're going to do so here.
 
 	reload_into_chamber(user) //Reload the sucker.
 	ENABLE_BITFIELD(flags_gun_features, GUN_CAN_POINTBLANK)
@@ -867,6 +876,7 @@ and you're good to go.
 	projectile_to_fire.damage_falloff *= damage_falloff_mult
 	projectile_to_fire.projectile_speed += shell_speed_mod
 	projectile_to_fire.projectile_iff = gun_iff_signal
+
 
 
 /obj/item/weapon/gun/proc/setup_bullet_accuracy(obj/projectile/projectile_to_fire, mob/user, bullets_fired = 1, dual_wield = FALSE)
