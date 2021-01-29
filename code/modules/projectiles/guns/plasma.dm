@@ -60,7 +60,7 @@
 		if(delta > 0)
 			overheat_count -= delta/overheat_cooldown
 			overheat_count = max(0, overheat_count)
-			overheat_time = world.time + 5 SECONDS
+			overheat_time = world.time
 
 /obj/item/weapon/gun/energy/lasgun/plasma/proc/update_delay()
 	update_overheat()
@@ -68,13 +68,15 @@
 	if(overcharge)
 		fire_delay += 7
 	if(overheat_count > 0)
-		fire_delay += max(overheat_count - 1, 0) * 2.5
+		fire_delay += max(overheat_count - 1, 0) * 0.5
 
 /obj/item/weapon/gun/energy/lasgun/plasma/on_fire()
 	update_delay()
 	if(overcharge)
 		overheat_count++
-		overheat_time = world.time + 5 SECONDS
+		overheat_time = max(world.time + overheat_cooldown, overheat_time)
+		if(overheat_count > overheat_limit)
+			overheat_time += overheat_cooldown
 		update_delay()
 
 /obj/item/weapon/gun/energy/lasgun/plasma/unique_action(mob/user)
