@@ -554,9 +554,6 @@ and you're good to go.
 		//									   \\
 		//						   			   \\
 //----------------------------------------------------------
-/obj/item/weapon/gun/proc/can_fire(mob/user)
-	return TRUE
-
 /obj/item/weapon/gun/proc/on_fire()
 
 /obj/item/weapon/gun/proc/Fire(atom/target, mob/living/user, params, reflex = 0, dual_wield)
@@ -569,9 +566,6 @@ and you're good to go.
 		return
 
 	if(SEND_SIGNAL(src, COMSIG_GUN_FIRE, target, user) & COMPONENT_GUN_FIRED)
-		return
-
-	if(!can_fire(user))
 		return
 
 	on_fire()

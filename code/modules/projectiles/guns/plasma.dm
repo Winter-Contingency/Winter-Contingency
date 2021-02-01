@@ -24,7 +24,7 @@
 
 	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO)
 	var/overheat_time
-	var/overheat_cooldown = 5 SECONDS
+	var/overheat_cooldown = 20 SECONDS
 	var/overheat_count = 0
 	var/overheat_limit = 15
 
@@ -37,9 +37,9 @@
 	. = ..()
 	is_overheat(user)
 
-/obj/item/weapon/gun/energy/lasgun/plasma/can_fire()
+/obj/item/weapon/gun/energy/lasgun/plasma/able_to_fire(mob/user)
 	. = ..()
-	if(!. || is_overheat())
+	if(. && is_overheat(user))
 		return FALSE
 
 /obj/item/weapon/gun/energy/lasgun/plasma/proc/is_overheat(mob/user)
@@ -65,11 +65,11 @@
 
 /obj/item/weapon/gun/energy/lasgun/plasma/proc/update_delay()
 	update_overheat()
-	fire_delay = initial(fire_delay)
+	set_fire_delay(initial(fire_delay))
 	if(overcharge)
-		fire_delay += 7
+		modify_fire_delay(0,2)
 	if(overheat_count > 0)
-		fire_delay += max(overheat_count - 1, 0) * 0.2
+		modify_fire_delay(max(overheat_count - 1, 0) * 0.25)
 
 /obj/item/weapon/gun/energy/lasgun/plasma/on_fire()
 	update_delay()
@@ -147,7 +147,7 @@
 	cell_type = /obj/item/cell/lasgun/plasma
 	flags_equip_slot = ITEM_SLOT_BELT
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ENERGY|GUN_AMMO_COUNTER
-	//gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO, GUN_FIREMODE_BURSTFIRE, GUN_FIREMODE_AUTOMATIC, GUN_FIREMODE_AUTOBURST)temp
+	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO, GUN_FIREMODE_BURSTFIRE, GUN_FIREMODE_AUTOMATIC, GUN_FIREMODE_AUTOBURST)
 	overheat_limit = 30
 
 /obj/item/weapon/gun/energy/lasgun/plasma/repeater
@@ -159,7 +159,7 @@
 	fire_sound = 'sound/halo/plasrifle3burst.ogg'
 	ammo = /datum/ammo/energy/plasmarifle
 	cell_type = /obj/item/cell/lasgun/plasma/large
-	//gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO, GUN_FIREMODE_AUTOMATIC)temp
+	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO, GUN_FIREMODE_AUTOMATIC)
 	flags_equip_slot = ITEM_SLOT_BELT
 	flags_gun_features = GUN_ENERGY|GUN_AMMO_COUNTER
 	overheat_limit = 45

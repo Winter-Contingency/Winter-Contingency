@@ -16,7 +16,7 @@
 	var/shots_to_fire = 0
 	var/component_fire_mode
 	var/mouse_status = AUTOFIRE_MOUSEUP //This seems hacky but there can be two MouseDown() without a MouseUp() in between if the user holds click and uses alt+tab, printscreen or similar.
-
+	var/delay_modified = FALSE
 
 /datum/component/automatic_fire/Initialize(autofire_shot_delay, burstfire_shot_delay, shots_to_fire, firemode, parent_loc)
 	. = ..()
@@ -199,9 +199,8 @@
 
 	switch(component_fire_mode)
 		if(GUN_FIREMODE_AUTOMATIC)
-			if(!process_shot()) //First shot is processed instantly.
+			if(!process_shot(GUN_FIREMODE_AUTOMATIC)) //First shot is processed instantly.
 				return //If it fails, such as when the gun is empty, then there's no need to schedule a second shot.
-			auto_delay_timer = addtimer(CALLBACK(src, .proc/process_shot), autofire_shot_delay, TIMER_STOPPABLE|TIMER_LOOP)
 		if(GUN_FIREMODE_AUTOBURST)
 			process_burst()
 			if(autofire_stat != AUTOFIRE_STAT_FIRING)
@@ -279,7 +278,7 @@
 	mouse_parameters = params
 
 
-/datum/component/automatic_fire/proc/process_shot()
+/datum/component/automatic_fire/proc/process_shot(mode)
 	if(autofire_stat != AUTOFIRE_STAT_FIRING)
 		return
 	if(QDELETED(target) || get_turf(target) != target_loc) //Target moved or got destroyed since we last aimed.
@@ -292,6 +291,8 @@
 		return FALSE
 	shooter.face_atom(target)
 	if(SEND_SIGNAL(parent, COMSIG_AUTOFIRE_SHOT, target, shooter, mouse_parameters, ++shots_fired) & COMPONENT_AUTOFIRE_SHOT_SUCCESS)
+		if(mode == GUN_FIREMODE_AUTOMATIC)
+			auto_delay_timer = addtimer(CALLBACK(src, .proc/process_shot, GUN_FIREMODE_AUTOMATIC), autofire_shot_delay, TIMER_STOPPABLE)
 		return TRUE
 	stop_autofiring()
 	return FALSE
@@ -384,6 +385,7 @@
 	SEND_SIGNAL(shooter, COMSIG_MOB_GUN_AUTOFIRED, target, src)
 	var/obj/screen/ammo/A = shooter.hud_used.ammo
 	A.update_hud(shooter) //Ammo HUD.
+	on_fire()
 	return COMPONENT_AUTOFIRE_SHOT_SUCCESS //All is well, we can continue shooting.
 
 
