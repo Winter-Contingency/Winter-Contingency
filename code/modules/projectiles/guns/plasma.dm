@@ -79,7 +79,7 @@
 	if(overcharge)
 		modify_fire_delay(1)
 	if(overheat_count > 0)
-		modify_fire_delay(max(overheat_count - 1, 0) * 0.25)
+		modify_fire_delay(overheat_count * 0.25)
 
 /obj/item/weapon/gun/energy/lasgun/plasma/proc/can_overheat()
 	return TRUE
