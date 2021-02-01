@@ -56,7 +56,7 @@
 	. = FALSE
 	update_overheat()
 	if(overheat_count > 0)
-		if(overheat_count > overheat_limit)
+		if(overheat_count >= overheat_limit)
 			. = TRUE
 			if(user)
 				to_chat(user, "<span class='warning'>[src] has overheated!.</span>")
@@ -66,7 +66,7 @@
 
 
 /obj/item/weapon/gun/energy/lasgun/plasma/proc/update_overheat()
-	if(overheat_count <= overheat_limit && overheat_count > 0)
+	if(overheat_count < overheat_limit && overheat_count > 0)
 		var/delta = world.time - overheat_time
 		if(delta > 0)
 			overheat_count -= delta/overheat_cooldown
@@ -88,6 +88,8 @@
 	update_delay()
 	if(can_overheat())
 		overheat_count++
+		if(overcharge)
+			overheat_count += overheat_limit
 		overheat_time = max(world.time + overheat_cooldown, overheat_time)
 		update_delay()
 
