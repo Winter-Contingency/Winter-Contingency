@@ -26,7 +26,10 @@
 	var/overheat_time
 	var/overheat_cooldown = 20 SECONDS
 	var/overheat_count = 0
-	var/overheat_limit = 10
+	var/overheat_limit = 15
+
+/obj/item/weapon/gun/energy/lasgun/plasma/unique_action(mob/user)
+	return vend(user)
 
 /obj/item/weapon/gun/energy/lasgun/plasma/apply_gun_modifiers(obj/projectile/projectile_to_fire, atom/target)
 	. = ..()
@@ -41,6 +44,11 @@
 	. = ..()
 	if(. && is_overheat(user))
 		return FALSE
+
+/obj/item/weapon/gun/energy/lasgun/plasma/proc/vend(mob/user)
+	if(is_overheat())
+		overheat_count = overheat_limit * 0.8
+		to_chat(user, "[icon2html(src, user)] You you vent manually [src].")
 
 /obj/item/weapon/gun/energy/lasgun/plasma/proc/is_overheat(mob/user, from_examine)
 	. = FALSE
@@ -67,19 +75,19 @@
 	update_overheat()
 	set_fire_delay(initial(fire_delay))
 	if(overcharge)
-		modify_fire_delay(0,2)
+		modify_fire_delay(0,5)
 	if(overheat_count > 0)
-		modify_fire_delay(max(overheat_count - 1, 0) * 0.25)
+		modify_fire_delay(max(overheat_count - 1, 0) * 0.2)
+
+/obj/item/weapon/gun/energy/lasgun/plasma/proc/can_overheat()
+	return TRUE
 
 /obj/item/weapon/gun/energy/lasgun/plasma/on_fire()
 	update_delay()
-	if(overcharge)
+	if(can_overheat())
 		overheat_count++
 		overheat_time = max(world.time + overheat_cooldown, overheat_time)
 		update_delay()
-
-/obj/item/weapon/gun/energy/lasgun/plasma/unique_action(mob/user)
-	return toggle_chargemode(user)
 
 //Toggles Overcharge mode. Overcharge mode significantly increases damage and AP in exchange for doubled ammo usage and increased fire delay.
 /obj/item/weapon/gun/energy/lasgun/plasma/toggle_chargemode(mob/user)
@@ -105,9 +113,7 @@
 		fire_sound = 'sound/weapons/guns/fire/laser.ogg'
 		to_chat(user, "[icon2html(src, user)] You [overcharge ? "<B>disable</b>" : "<B>enable</b>" ] [src]'s overcharge mode.")
 		overcharge = FALSE
-		if(is_overheat())
-			overheat_count = overheat_limit * 0.8
-			to_chat(user, "[icon2html(src, user)] You you vent manually [src].")
+		vent(user)
 		update_delay()
 
 	//load_into_chamber()
@@ -129,7 +135,15 @@
 	cell_type = /obj/item/cell/lasgun/plasma
 	flags_equip_slot = ITEM_SLOT_BELT
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ENERGY|GUN_AMMO_COUNTER
-	overheat_limit = 10
+	overheat_limit = 15
+
+/obj/item/weapon/gun/energy/lasgun/plasma/pistol/can_overheat()
+	. = FALSE
+	if(overcharge)
+		. = TRUE
+
+/obj/item/weapon/gun/energy/lasgun/plasma/pistol/unique_action(mob/user)
+	return toggle_chargemode(user)
 
 /obj/item/weapon/gun/energy/lasgun/plasma/pistol/apply_gun_modifiers(obj/projectile/projectile_to_fire, atom/target)
 	. = ..()
@@ -148,7 +162,7 @@
 	flags_equip_slot = ITEM_SLOT_BELT
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ENERGY|GUN_AMMO_COUNTER
 	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO, GUN_FIREMODE_BURSTFIRE, GUN_FIREMODE_AUTOMATIC, GUN_FIREMODE_AUTOBURST)
-	overheat_limit = 15
+	overheat_limit = 25
 	burst_amount = 2
 
 /obj/item/weapon/gun/energy/lasgun/plasma/repeater
@@ -163,4 +177,4 @@
 	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO, GUN_FIREMODE_AUTOMATIC)
 	flags_equip_slot = ITEM_SLOT_BELT
 	flags_gun_features = GUN_ENERGY|GUN_AMMO_COUNTER
-	overheat_limit = 20
+	overheat_limit = 50
