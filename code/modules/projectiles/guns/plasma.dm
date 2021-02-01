@@ -93,8 +93,21 @@
 		overheat_time = max(world.time + overheat_cooldown, overheat_time)
 		update_delay()
 
+/obj/item/weapon/gun/energy/lasgun/plasma/pistol
+	name = "Type-25 Directed Energy Pistol"
+	desc = "A plasma pistol. Uses covenant energy cells."
+	icon_state = "plasmapistol"
+	item_state = "plasmapistol"
+	reload_sound = 'sound/halo/cov_carbine_reload.ogg'
+	fire_sound = 'sound/halo/haloplasmapistol.ogg'
+	ammo = /datum/ammo/energy/plasmapistol
+	cell_type = /obj/item/cell/lasgun/plasma
+	flags_equip_slot = ITEM_SLOT_BELT
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ENERGY|GUN_AMMO_COUNTER
+	overheat_limit = 10
+
 //Toggles Overcharge mode. Overcharge mode significantly increases damage and AP in exchange for doubled ammo usage and increased fire delay.
-/obj/item/weapon/gun/energy/lasgun/plasma/toggle_chargemode(mob/user)
+/obj/item/weapon/gun/energy/lasgun/plasma/pistol/toggle_chargemode(mob/user)
 	if(is_overheat())
 		vent(user)
 		update_delay()
@@ -129,19 +142,6 @@
 		A.update_hud(user)
 
 	return TRUE
-
-/obj/item/weapon/gun/energy/lasgun/plasma/pistol
-	name = "Type-25 Directed Energy Pistol"
-	desc = "A plasma pistol. Uses covenant energy cells."
-	icon_state = "plasmapistol"
-	item_state = "plasmapistol"
-	reload_sound = 'sound/halo/cov_carbine_reload.ogg'
-	fire_sound = 'sound/halo/haloplasmapistol.ogg'
-	ammo = /datum/ammo/energy/plasmapistol
-	cell_type = /obj/item/cell/lasgun/plasma
-	flags_equip_slot = ITEM_SLOT_BELT
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ENERGY|GUN_AMMO_COUNTER
-	overheat_limit = 10
 
 /obj/item/weapon/gun/energy/lasgun/plasma/pistol/unique_action(mob/user)
 	return toggle_chargemode(user)
