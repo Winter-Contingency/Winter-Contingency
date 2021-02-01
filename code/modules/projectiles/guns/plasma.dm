@@ -46,9 +46,11 @@
 		return FALSE
 
 /obj/item/weapon/gun/energy/lasgun/plasma/proc/vent(mob/user)
-	if(is_overheat())
-		overheat_count = overheat_limit * 0.8
-		to_chat(user, "[icon2html(src, user)] You you vent manually [src].")
+	to_chat(user, "<span class='notice'>Tou start to air [src].</span>")
+	if(!do_after(user, 10, TRUE, src))
+		return
+	overheat_count = 0
+	to_chat(user, "[icon2html(src, user)] You you vent manually [src].")
 
 /obj/item/weapon/gun/energy/lasgun/plasma/proc/is_overheat(mob/user, from_examine)
 	. = FALSE
