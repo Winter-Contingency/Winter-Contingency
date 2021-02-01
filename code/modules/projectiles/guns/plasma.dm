@@ -77,9 +77,9 @@
 	update_overheat()
 	set_fire_delay(initial(fire_delay))
 	if(overcharge)
-		modify_fire_delay(0,5)
+		modify_fire_delay(1)
 	if(overheat_count > 0)
-		modify_fire_delay(max(overheat_count - 1, 0) * 0.2)
+		modify_fire_delay(max(overheat_count - 1, 0) * 0.25)
 
 /obj/item/weapon/gun/energy/lasgun/plasma/proc/can_overheat()
 	return TRUE
@@ -140,11 +140,6 @@
 	flags_equip_slot = ITEM_SLOT_BELT
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ENERGY|GUN_AMMO_COUNTER
 	overheat_limit = 10
-
-/obj/item/weapon/gun/energy/lasgun/plasma/pistol/can_overheat()
-	. = FALSE
-	if(overcharge)
-		. = TRUE
 
 /obj/item/weapon/gun/energy/lasgun/plasma/pistol/unique_action(mob/user)
 	return toggle_chargemode(user)
