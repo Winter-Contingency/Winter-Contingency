@@ -21,12 +21,12 @@
 	accuracy_mult_unwielded = 0.6
 	scatter_unwielded = 80
 	damage_falloff_mult = 0.5
-
+	burst_delay = 1.5
 	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO)
 	var/overheat_time
 	var/overheat_cooldown = 20 SECONDS
 	var/overheat_count = 0
-	var/overheat_limit = 15
+	var/overheat_limit = 10
 
 /obj/item/weapon/gun/energy/lasgun/plasma/apply_gun_modifiers(obj/projectile/projectile_to_fire, atom/target)
 	. = ..()
@@ -35,14 +35,14 @@
 
 /obj/item/weapon/gun/energy/lasgun/plasma/examine(mob/user)
 	. = ..()
-	is_overheat(user)
+	is_overheat(user, TRUE)
 
 /obj/item/weapon/gun/energy/lasgun/plasma/able_to_fire(mob/user)
 	. = ..()
 	if(. && is_overheat(user))
 		return FALSE
 
-/obj/item/weapon/gun/energy/lasgun/plasma/proc/is_overheat(mob/user)
+/obj/item/weapon/gun/energy/lasgun/plasma/proc/is_overheat(mob/user, from_examine)
 	. = FALSE
 	update_overheat()
 	if(overheat_count > 0)
@@ -51,7 +51,7 @@
 			if(user)
 				to_chat(user, "<span class='warning'>[src] has overheated!.</span>")
 				to_chat(user, "<span class='notice'>You need to manually ventilated [src]!.</span>")
-		else
+		else if(from_examine)
 			to_chat(user, "<span class='warning'>[src] is starting to overheat!</span>")
 
 
@@ -106,7 +106,7 @@
 		to_chat(user, "[icon2html(src, user)] You [overcharge ? "<B>disable</b>" : "<B>enable</b>" ] [src]'s overcharge mode.")
 		overcharge = FALSE
 		if(is_overheat())
-			overheat_count = overheat_limit
+			overheat_count = overheat_limit * 0.8
 			to_chat(user, "[icon2html(src, user)] You you vent manually [src].")
 		update_delay()
 
@@ -129,7 +129,7 @@
 	cell_type = /obj/item/cell/lasgun/plasma
 	flags_equip_slot = ITEM_SLOT_BELT
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ENERGY|GUN_AMMO_COUNTER
-	overheat_limit = 15
+	overheat_limit = 10
 
 /obj/item/weapon/gun/energy/lasgun/plasma/pistol/apply_gun_modifiers(obj/projectile/projectile_to_fire, atom/target)
 	. = ..()
@@ -148,7 +148,8 @@
 	flags_equip_slot = ITEM_SLOT_BELT
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ENERGY|GUN_AMMO_COUNTER
 	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO, GUN_FIREMODE_BURSTFIRE, GUN_FIREMODE_AUTOMATIC, GUN_FIREMODE_AUTOBURST)
-	overheat_limit = 30
+	overheat_limit = 15
+	burst_amount = 2
 
 /obj/item/weapon/gun/energy/lasgun/plasma/repeater
 	name = "Type-51 Plasma Repeater"
@@ -162,5 +163,4 @@
 	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO, GUN_FIREMODE_AUTOMATIC)
 	flags_equip_slot = ITEM_SLOT_BELT
 	flags_gun_features = GUN_ENERGY|GUN_AMMO_COUNTER
-	overheat_limit = 45
-
+	overheat_limit = 20

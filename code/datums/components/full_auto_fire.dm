@@ -202,11 +202,9 @@
 			if(!process_shot(GUN_FIREMODE_AUTOMATIC)) //First shot is processed instantly.
 				return //If it fails, such as when the gun is empty, then there's no need to schedule a second shot.
 		if(GUN_FIREMODE_AUTOBURST)
-			process_burst()
+			process_burst(GUN_FIREMODE_AUTOBURST)
 			if(autofire_stat != AUTOFIRE_STAT_FIRING)
 				return //If process_burst() fails, it will stop autofiring. We don't want a timer added then.
-			var/burstfire_burst_delay = (burstfire_shot_delay * shots_to_fire) + (autofire_shot_delay * 3) //Delay between bursts, values taken from the maximum possible in non-auto burst mode.
-			auto_delay_timer = addtimer(CALLBACK(src, .proc/process_burst), burstfire_burst_delay, TIMER_STOPPABLE|TIMER_LOOP)
 		else
 			CRASH("start_autofiring() called with no valid component_fire_mode")
 
@@ -298,7 +296,7 @@
 	return FALSE
 
 
-/datum/component/automatic_fire/proc/process_burst()
+/datum/component/automatic_fire/proc/process_burst(mode)
 	set waitfor = FALSE
 	if(autofire_stat != AUTOFIRE_STAT_FIRING)
 		return
@@ -309,7 +307,9 @@
 		if(!process_shot())
 			return
 		stoplag(burstfire_shot_delay)
-
+	if(mode == GUN_FIREMODE_AUTOBURST)
+		var/burstfire_burst_delay = (burstfire_shot_delay * shots_to_fire) + (autofire_shot_delay * 3) //Delay between bursts, values taken from the maximum possible in non-auto burst mode.
+		auto_delay_timer = addtimer(CALLBACK(src, .proc/process_burst, GUN_FIREMODE_AUTOBURST), burstfire_burst_delay, TIMER_STOPPABLE)
 
 /datum/component/automatic_fire/proc/itemgun_equipped(datum/source, mob/shooter, slot)
 	SIGNAL_HANDLER
