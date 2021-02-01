@@ -29,7 +29,7 @@
 	var/overheat_limit = 15
 
 /obj/item/weapon/gun/energy/lasgun/plasma/unique_action(mob/user)
-	return vend(user)
+	return vent(user)
 
 /obj/item/weapon/gun/energy/lasgun/plasma/apply_gun_modifiers(obj/projectile/projectile_to_fire, atom/target)
 	. = ..()
@@ -45,7 +45,7 @@
 	if(. && is_overheat(user))
 		return FALSE
 
-/obj/item/weapon/gun/energy/lasgun/plasma/proc/vend(mob/user)
+/obj/item/weapon/gun/energy/lasgun/plasma/proc/vent(mob/user)
 	if(is_overheat())
 		overheat_count = overheat_limit * 0.8
 		to_chat(user, "[icon2html(src, user)] You you vent manually [src].")
