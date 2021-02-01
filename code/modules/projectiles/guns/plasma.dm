@@ -97,6 +97,7 @@
 /obj/item/weapon/gun/energy/lasgun/plasma/toggle_chargemode(mob/user)
 	if(is_overheat())
 		vent(user)
+		update_delay()
 		return
 	if(overcharge == FALSE)
 		if(!cell)
@@ -120,8 +121,6 @@
 		fire_sound = initial(fire_sound)
 		to_chat(user, "[icon2html(src, user)] You [overcharge ? "<B>disable</b>" : "<B>enable</b>" ] [src]'s overcharge mode.")
 		overcharge = FALSE
-		vent(user)
-		update_delay()
 
 	//load_into_chamber()
 
