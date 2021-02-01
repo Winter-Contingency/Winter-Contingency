@@ -114,7 +114,7 @@
 	else
 		playsound(user, 'sound/weapons/emitter2.ogg', 5, 0, 2)
 		charge_cost = ENERGY_STANDARD_AMMO_COST
-		fire_sound = 'sound/weapons/guns/fire/laser.ogg'
+		fire_sound = initial(fire_sound)
 		to_chat(user, "[icon2html(src, user)] You [overcharge ? "<B>disable</b>" : "<B>enable</b>" ] [src]'s overcharge mode.")
 		overcharge = FALSE
 		vent(user)
