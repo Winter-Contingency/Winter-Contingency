@@ -135,7 +135,7 @@
 	cell_type = /obj/item/cell/lasgun/plasma
 	flags_equip_slot = ITEM_SLOT_BELT
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ENERGY|GUN_AMMO_COUNTER
-	overheat_limit = 15
+	overheat_limit = 10
 
 /obj/item/weapon/gun/energy/lasgun/plasma/pistol/can_overheat()
 	. = FALSE
