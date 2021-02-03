@@ -1,4 +1,4 @@
-//covenant weapons
+at//covenant weapons
 /obj/item/weapon/gun/energy/lasgun/plasma //debug item, temporarily it's just a copy of /obj/item/weapon/gun/energy/lasgun
 	name = "\improper plasmagun"
 	desc = "A laser based firearm. Uses power cells."
@@ -46,11 +46,12 @@
 		return FALSE
 
 /obj/item/weapon/gun/energy/lasgun/plasma/proc/vent(mob/user)
-	to_chat(user, "<span class='notice'>Tou start to air [src].</span>")
+	to_chat(user, "<span class='notice'>You start to air [src].</span>")
 	if(!do_after(user, 10, TRUE, src))
 		return
 	overheat_count = 0
-	to_chat(user, "[icon2html(src, user)] You you vent manually [src].")
+	to_chat(user, "[icon2html(src, user)] You manually vent the [src].")
+	playsound(user, 'sound/halo/plasoverheat.wav', 15, 0, 2)
 
 /obj/item/weapon/gun/energy/lasgun/plasma/proc/is_overheat(mob/user, from_examine)
 	. = FALSE
@@ -60,7 +61,7 @@
 			. = TRUE
 			if(user)
 				to_chat(user, "<span class='warning'>[src] has overheated!.</span>")
-				to_chat(user, "<span class='notice'>You need to manually ventilated [src]!.</span>")
+				to_chat(user, "<span class='notice'>You need to manually vent (unique-action) the [src]!.</span>")
 		else if(from_examine)
 			to_chat(user, "<span class='warning'>[src] is starting to overheat!</span>")
 
@@ -99,7 +100,8 @@
 	icon_state = "plasmapistol"
 	item_state = "plasmapistol"
 	reload_sound = 'sound/halo/cov_carbine_reload.ogg'
-	fire_sound = 'sound/halo/haloplasmapistol.ogg'
+	fire_sound = 'sound/halo/plaspistolfire.wav'
+	muzzleflash_iconstate = "muzzle_green"
 	ammo = /datum/ammo/energy/plasmapistol
 	cell_type = /obj/item/cell/lasgun/plasma
 	flags_equip_slot = ITEM_SLOT_BELT
@@ -110,6 +112,7 @@
 /obj/item/weapon/gun/energy/lasgun/plasma/pistol/toggle_chargemode(mob/user)
 	if(is_overheat())
 		vent(user)
+		playsound(user, 'sound/weapons/emitter.ogg', 5, 0, 2)
 		update_delay()
 		return
 	if(overcharge == FALSE)
@@ -125,7 +128,7 @@
 		playsound(user, 'sound/weapons/emitter.ogg', 5, 0, 2)
 		charge_cost = ENERGY_OVERCHARGE_AMMO_COST
 		update_delay()
-		fire_sound = 'sound/weapons/guns/fire/laser3.ogg'
+		fire_sound = 'sound/halo/charge_fire_reach.wav'
 		to_chat(user, "[icon2html(src, user)] You [overcharge ? "<B>disable</b>" : "<B>enable</b>" ] [src]'s overcharge mode.")
 		overcharge = TRUE
 	else
@@ -157,7 +160,8 @@
 	icon_state = "plasmarifle"
 	item_state = "plasmarifle"
 	reload_sound = 'sound/halo/cov_carbine_reload.ogg'
-	fire_sound = 'sound/halo/plasrifle3burst.ogg'
+	fire_sound = 'sound/halo/plasriflefire.wav'
+	muzzleflash_iconstate = "muzzle_flash_pulse"
 	ammo = /datum/ammo/energy/plasmarifle
 	cell_type = /obj/item/cell/lasgun/plasma
 	flags_equip_slot = ITEM_SLOT_BELT
@@ -172,10 +176,11 @@
 	icon_state = "repeater"
 	item_state = "repeater"
 	reload_sound = 'sound/halo/cov_carbine_reload.ogg'
-	fire_sound = 'sound/halo/plasrifle3burst.ogg'
+	fire_sound = 'sound/halo/plasrepeaterfire.wav'
+	muzzleflash_iconstate = "muzzle_flash_pulse"
 	ammo = /datum/ammo/energy/plasmarifle
 	cell_type = /obj/item/cell/lasgun/plasma/large
 	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO, GUN_FIREMODE_AUTOMATIC)
 	flags_equip_slot = ITEM_SLOT_BELT
 	flags_gun_features = GUN_ENERGY|GUN_AMMO_COUNTER
-	overheat_limit = 50
+	overheat_limit = 40
