@@ -1,4 +1,4 @@
-at//covenant weapons
+//covenant weapons
 /obj/item/weapon/gun/energy/lasgun/plasma //debug item, temporarily it's just a copy of /obj/item/weapon/gun/energy/lasgun
 	name = "\improper plasmagun"
 	desc = "A laser based firearm. Uses power cells."
