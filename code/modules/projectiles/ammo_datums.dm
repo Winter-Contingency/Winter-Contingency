@@ -27,6 +27,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	var/damage_type 				= BRUTE 	// BRUTE, BURN, TOX, OXY, CLONE are the only things that should be in here
 	var/penetration					= 0 		// How much armor it ignores before calculations take place
 	var/shrapnel_chance 			= 0 		// The % chance it will imbed in a human
+	var/shrapnel_type = /obj/item/shard/shrapnel
 	var/shell_speed 				= 2 		// How fast the projectile moves
 	var/bonus_projectiles_type 					// Type path of the extra projectiles
 	var/bonus_projectiles_amount 	= 0 		// How many extra projectiles it shoots out. Works kind of like firing on burst, but all of the projectiles travel together
@@ -37,6 +38,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	var/flags_ammo_behavior = NONE
 	///Determines what color our bullet will be when it flies
 	var/bullet_color = COLOR_WHITE
+
 
 
 /datum/ammo/proc/do_at_max_range(obj/projectile/proj)
@@ -538,6 +540,21 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_INCENDIARY
 	damage = 35
 	sundering = 0 // incen doens't have sundering
+
+
+/datum/ammo/bullet/needles
+	name = "blamite needle"
+	icon_state = "needler"
+	hud_state = "needle"
+	flags_ammo_behavior = AMMO_BALLISTIC
+	damage = 20
+	damage_type = BRUTE
+	shrapnel_type = /obj/item/shard/shrapnel/blamite
+	shrapnel_chance = 100
+	var/blamite_limit = 6
+	var/explosion_range = 2
+
+/datum/ammo/bullet/needles/rifle
 
 
 /*
@@ -1155,6 +1172,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	armor_type = "energy"
 	accuracy = 20
 	bullet_color = COLOR_VIVID_RED
+	shrapnel_type = null
 
 /datum/ammo/energy/emitter //Damage is determined in emitter.dm
 	name = "emitter bolt"
@@ -1316,12 +1334,6 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	hud_state = "plasmapistol"
 	damage = 20
 
-/datum/ammo/energy/needles
-	name = "blamite needle"
-	icon_state = "needler"
-	hud_state = "needle"
-	flags_ammo_behavior = AMMO_BALLISTIC
-	damage = 20
 /*
 //================================================
 					Xeno Spits

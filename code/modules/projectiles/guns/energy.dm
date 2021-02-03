@@ -588,10 +588,11 @@
 	item_state = "needler"
 	fire_sound = 'sound/halo/needlerfire.ogg'
 	reload_sound = 'sound/halo/needlereload.ogg'
-	ammo = /datum/ammo/energy/needles
+	ammo = /datum/ammo/bullet/needles
 	cell_type = /obj/item/cell/lasgun/needles
 	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO, GUN_FIREMODE_AUTOMATIC)
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+
 
 /obj/item/weapon/gun/energy/lasgun/needler/rifle
 	name = "Type-31 Needle Rifle"
@@ -600,7 +601,5 @@
 	item_state = "needlerifle"
 	fire_sound = 'sound/halo/cov_needlerifle_fire.ogg'
 	reload_sound = 'sound/halo/cov_needlerifle_reload.ogg'
-	ammo = /datum/ammo/energy/needles
-	cell_type = /obj/item/cell/lasgun/needles
 	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO)
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	ammo = /datum/ammo/bullet/needles/rifle
