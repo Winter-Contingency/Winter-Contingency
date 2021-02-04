@@ -1309,12 +1309,14 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	icon_state = "plasmapistol"
 	hud_state = "plasmapistol"
 	damage = 20
+	bullet_color = COLOR_VIBRANT_LIME
 
 /datum/ammo/energy/plasmarifle
 	name = "blue plasma bolt"
 	icon_state = "plasmarifle"
 	hud_state = "plasmapistol"
 	damage = 20
+	bullet_color = COLOR_BRIGHT_BLUE
 
 /datum/ammo/energy/needles
 	name = "blamite needle"

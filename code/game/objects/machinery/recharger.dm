@@ -8,7 +8,7 @@
 	active_power_usage = 15000	//15 kW
 	var/obj/item/charging = null
 	var/percent_charge_complete = 0
-	var/list/allowed_devices = list(/obj/item/weapon/baton, /obj/item/cell, /obj/item/weapon/gun/energy/taser, /obj/item/defibrillator)
+	var/list/allowed_devices = list(/obj/item/weapon/baton, /obj/item/cell, /obj/item/weapon/gun/energy/taser, /obj/item/defibrillator, /obj/item/weapon/gun/energy/lasgun/plasma)
 
 /obj/machinery/recharger/attackby(obj/item/I, mob/user, params)
 	. = ..()
@@ -83,8 +83,8 @@ obj/machinery/recharger/process()
 		update_icon()
 	//This is an awful check. Holy cow.
 	else
-		if(istype(charging, /obj/item/weapon/gun/energy/taser))
-			var/obj/item/weapon/gun/energy/taser/E = charging
+		if(istype(charging, /obj/item/weapon/gun/energy))
+			var/obj/item/weapon/gun/energy/E = charging
 			if(!E.cell.fully_charged())
 				E.cell.give(active_power_usage*GLOB.CELLRATE)
 				percent_charge_complete = E.cell.percent()
