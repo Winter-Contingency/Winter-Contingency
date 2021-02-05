@@ -102,13 +102,17 @@
 	user.do_attack_animation(src, used_item = I)
 
 	var/power = I.force + round(I.force * 0.3 * user.skills.getRating("melee_weapons")) //30% bonus per melee level
-
-	switch(I.damtype)
-		if(BRUTE)
-			apply_damage(power, BRUTE, user.zone_selected, get_soft_armor("melee", user.zone_selected))
-		if(BURN)
-			if(apply_damage(power, BURN, user.zone_selected, get_soft_armor("fire", user.zone_selected)))
-				attack_message_local = "[attack_message_local] It burns!"
+	if(I.dual_damage)
+		apply_damage(power/2, BRUTE, user.zone_selected, get_soft_armor("melee", user.zone_selected))
+		if(apply_damage(power/2, BURN, user.zone_selected, get_soft_armor("fire", user.zone_selected)))
+			attack_message_local = "[attack_message_local] It burns!"
+	else
+		switch(I.damtype)
+			if(BRUTE)
+				apply_damage(power, BRUTE, user.zone_selected, get_soft_armor("melee", user.zone_selected))
+			if(BURN)
+				if(apply_damage(power, BURN, user.zone_selected, get_soft_armor("fire", user.zone_selected)))
+					attack_message_local = "[attack_message_local] It burns!"
 
 	visible_message("<span class='danger'>[attack_message]</span>",
 		"<span class='userdanger'>[attack_message_local]</span>", null, COMBAT_MESSAGE_RANGE)

@@ -6,7 +6,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	var/name 		= "generic bullet"
 	var/icon 		= 'icons/obj/items/projectiles.dmi'
 	var/icon_state 	= "bullet"
-	var/hud_state   = "unknown"  //Bullet type on the Ammo HUD
+	var/hud_state	= "unknown"  //Bullet type on the Ammo HUD
 	var/hud_state_empty = "unknown"
 	var/ping 		= "ping_b" //The icon that is displayed when the bullet bounces off something.
 	var/sound_hit //When it deals damage.
@@ -1163,7 +1163,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 
 /datum/ammo/energy
 	ping = "ping_s"
-	sound_hit 	 	= "energy_hit"
+	sound_hit		= "energy_hit"
 	sound_miss		= "energy_miss"
 	sound_bounce	= "energy_bounce"
 
@@ -1314,9 +1314,9 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 //================================================
 */
 /datum/ammo/energy/plasma
-    name = "plasma bolt"
-    icon_state = "pulse2"
-    hud_state = "plasma"
+	name = "plasma bolt"
+	icon_state = "pulse2"
+	hud_state = "plasma"
 
 /datum/ammo/energy/plasmapistol
 	name = "green plasma bolt"
@@ -1333,9 +1333,22 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	bullet_color = COLOR_BRIGHT_BLUE
 
 /datum/ammo/energy/plasma/concussion
-    name = "explosive plasma bolt"
-    icon_state = "concussion"
-    hud_state = "plasma"
+	name = "explosive plasma bolt"
+	icon_state = "concussion"
+	hud_state = "plasma"
+	damage = 15
+
+/datum/ammo/energy/plasma/concussion/on_hit_mob(mob/victim, obj/projectile/proj)
+	knockback(victim, proj)
+
+/datum/ammo/energy/plasma/concussion/do_at_max_range(obj/projectile/proj)
+	explosion(get_turf(proj), light_impact_range = 4, small_animation = TRUE)
+
+/datum/ammo/energy/plasma/concussion/on_hit_turf(turf/T, obj/projectile/proj)
+	explosion(get_turf(proj), light_impact_range = 4, small_animation = TRUE)
+
+/datum/ammo/energy/plasma/concussion/on_hit_obj(obj/O, obj/projectile/proj)
+	explosion(get_turf(O), light_impact_range = 4, small_animation = TRUE)
 
 /*
 //================================================
@@ -1483,7 +1496,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 /datum/ammo/xeno/acid
 	name = "acid spit"
 	icon_state = "xeno_acid"
-	sound_hit 	 = "acid_hit"
+	sound_hit 	= "acid_hit"
 	sound_bounce	= "acid_bounce"
 	damage_type = BURN
 	added_spit_delay = 5
@@ -1585,7 +1598,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 /datum/ammo/xeno/boiler_gas/corrosive
 	name = "glob of acid"
 	icon_state = "boiler_gas"
-	sound_hit 	 = "acid_hit"
+	sound_hit 	= "acid_hit"
 	sound_bounce	= "acid_bounce"
 	flags_ammo_behavior = AMMO_XENO|AMMO_SKIPS_ALIENS|AMMO_EXPLOSIVE
 	armor_type = "acid"
@@ -1617,7 +1630,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	name = "alloy spike"
 	ping = "ping_s"
 	icon_state = "MSpearFlight"
-	sound_hit 	 	= "alloy_hit"
+	sound_hit		= "alloy_hit"
 	sound_armor	 	= "alloy_armor"
 	sound_bounce	= "alloy_bounce"
 	armor_type = "bullet"
@@ -1761,7 +1774,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 //Halo
 
 //Rifles
-/datum/ammo/bullet/ma37       //for use in ma3, ma5b, and ma37
+/datum/ammo/bullet/ma37		//for use in ma3, ma5b, and ma37
 	name = "M118 7.62x51"
 	hud_state = "rifle"
 	hud_state_empty = "rifle_empty"

@@ -119,6 +119,7 @@
 	desc = "A covenant energy sword."
 	icon_state = "T1EW0"
 	base_sword_icon = "T1EW"
+	dual_damage = TRUE
 	var/last_launch
 
 /obj/item/weapon/energy/sword/covenant/afterattack(atom/target, mob/user, proximity_flag, params)
