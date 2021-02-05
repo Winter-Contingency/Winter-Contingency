@@ -156,8 +156,8 @@
 		return FALSE
 	var/list/blamites = target.get_embedded_objects(src.type)
 	if(blamites.len >= blamite_limit)
+		target.visible_message("<span class='danger'>The crystals combine together on [target], creating an outwards explosion!!</span>")
 		for(var/obj/item/shard/shrapnel/blamite/B in blamites)
-			target.visible_message("<span class='danger'>The crystals combine together on [target], creating an outwards explosion!!</span>")
 			B.unembed_ourself()
 		explosion(get_turf(target), 0, round(explosion_range/2), explosion_range)
 	else

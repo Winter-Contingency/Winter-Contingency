@@ -1339,16 +1339,16 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	damage = 15
 
 /datum/ammo/energy/plasma/concussion/on_hit_mob(mob/victim, obj/projectile/proj)
-	knockback(victim, proj)
+	staggerstun(victim, proj, slowdown = 2, knockback = 1)
 
 /datum/ammo/energy/plasma/concussion/do_at_max_range(obj/projectile/proj)
-	explosion(get_turf(proj), light_impact_range = 4, small_animation = TRUE)
+	explosion(get_turf(proj), light_impact_range = 3, small_animation = TRUE)
 
 /datum/ammo/energy/plasma/concussion/on_hit_turf(turf/T, obj/projectile/proj)
-	explosion(get_turf(proj), light_impact_range = 4, small_animation = TRUE)
+	explosion(get_turf(proj), light_impact_range = 3, small_animation = TRUE)
 
 /datum/ammo/energy/plasma/concussion/on_hit_obj(obj/O, obj/projectile/proj)
-	explosion(get_turf(O), light_impact_range = 4, small_animation = TRUE)
+	explosion(get_turf(O), light_impact_range = 3, small_animation = TRUE)
 
 /*
 //================================================
