@@ -88,7 +88,15 @@
 
 	var/proj_max_range = 30
 
+	var/emp_act = FALSE
 	var/shrapnel_type = /obj/item/shard/shrapnel
+
+/obj/projectile/proc/qdel_projectile()
+	if(emp_act)
+		empulse(get_turf(src), 0, 1)
+
+	if(!QDELETED(src))
+		qdel(src)
 
 /obj/projectile/Destroy()
 	STOP_PROCESSING(SSprojectiles, src)
@@ -274,12 +282,12 @@
 	var/first_move = min(projectile_speed, 1)
 	var/first_moves = projectile_speed
 	if(projectile_batch_move(first_move)) //Hit on first movement.
-		qdel(src)
+		qdel_projectile(src)
 		return
 	invisibility = 0 //Let there be light (visibility).
 	first_moves -= first_move
 	if(first_moves && projectile_batch_move(first_moves)) //First movement batch happens on the same tick.
-		qdel(src)
+		qdel_projectile(src)
 		return
 
 	set_light_color(ammo.bullet_color)
@@ -297,7 +305,7 @@
 		return //Slowpoke. Maybe next tick.
 
 	if(projectile_batch_move(required_moves))
-		qdel(src)
+		qdel_projectile(src)
 		return PROCESS_KILL
 
 	if(ammo.flags_ammo_behavior & AMMO_CHAINING)
