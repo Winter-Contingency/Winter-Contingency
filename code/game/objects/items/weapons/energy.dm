@@ -114,5 +114,19 @@
 	sword_color = "red"
 
 
+/obj/item/weapon/energy/sword/covenant
+	name = "covenant energy sword"
+	desc = "A covenant energy sword."
+	icon_state = "T1EW0"
+	base_sword_icon = "T1EW"
+	var/last_launch
 
-
+/obj/item/weapon/energy/sword/covenant/afterattack(atom/target, mob/user, proximity_flag, params)
+	if(!active || world.time < last_launch + 3 SECONDS)
+		return
+	if(isliving(target) && !user.Adjacent(target) && get_dist(target, user) < 4)
+		last_launch = world.time
+		user.throw_at(target, get_dist(target, user), 1, user)
+		spawn(3)
+			if(user.Adjacent(target))
+				attack(target, user)
