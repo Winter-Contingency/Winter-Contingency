@@ -1184,3 +1184,18 @@
 	attachable_allowed = list(/obj/item/attachable/scope/unremovable/srs99)
 	starting_attachment_types = list(/obj/item/attachable/scope/unremovable/srs99)
 
+//Covenant "rifles" - weapons that have code that will more closely relate to non plasma weapons.
+
+/obj/item/weapon/gun/rifle/concussion
+	name = "Type-50 Directed Energy Rifle/Heavy"
+	desc = "The Type-50 Directed Energy Rifle/Heavy, more commonly referred to as the Concussion Rifle, is a covenant infantry weapon used for suppression and direct damage. "
+	icon_state = "concussion"
+	item_state = "concussion"
+	fire_sound = 'sound/halo/concussionfire.wav'
+	dry_fire_sound = 'sound/weapons/guns/fire/m41a_empty.ogg'
+	unload_sound = 'sound/halo/SniperRifleReloadSoundEffect.ogg'
+	reload_sound = 'sound/halo/concussionreload.wav'
+	current_mag = /obj/item/ammo_magazine/rifle/concussion
+	fire_delay = 0.3 SECONDS
+	flags_gun_features = GUN_AMMO_COUNTER
+	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO)

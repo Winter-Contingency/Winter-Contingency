@@ -1290,19 +1290,15 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 
 	return ..()
 
-
+/*
+//================================================
+					Covenant Ammo
+//================================================
+*/
 /datum/ammo/energy/plasma
     name = "plasma bolt"
     icon_state = "pulse2"
     hud_state = "plasma"
-    armor_type = "laser"
-    shell_speed = 4
-    accurate_range = 15
-    damage = 40
-    penetration = 15
-    max_range = 30
-    accuracy_var_low = 3
-    accuracy_var_high = 3
 
 /datum/ammo/energy/plasmapistol
 	name = "green plasma bolt"
@@ -1324,6 +1320,11 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	hud_state = "needle"
 	flags_ammo_behavior = AMMO_BALLISTIC
 	damage = 20
+
+/datum/ammo/energy/plasma/concussion
+    name = "explosive plasma bolt"
+    icon_state = "concussion"
+    hud_state = "plasma"
 /*
 //================================================
 					Xeno Spits
