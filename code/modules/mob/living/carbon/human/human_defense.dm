@@ -195,8 +195,8 @@ Contains most of the procs that are called when a mob is attacked by something
 
 	user.do_attack_animation(src, used_item = I)
 	if(I.dual_damage)
-		apply_damage(damage/2, BRUTE, user.zone_selected, get_soft_armor("melee", user.zone_selected))
-		apply_damage(damage/2, BURN, user.zone_selected, get_soft_armor("fire", user.zone_selected))
+		apply_damage(damage/2, BRUTE, affecting, armor, weapon_sharp, weapon_edge)
+		apply_damage(damage/2, BURN, affecting, armor, weapon_sharp, weapon_edge)
 	else
 		apply_damage(damage, I.damtype, affecting, armor, weapon_sharp, weapon_edge)
 	UPDATEHEALTH(src)
