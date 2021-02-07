@@ -136,8 +136,8 @@
     var/songs = list(
     'sound/music/loopingsteps.ogg',
     'sound/music/pogo.ogg',
+    'sound/music/variationsorchestra.ogg'
     'sound/music/setyoufree.ogg',
-    'sound/music/bspmusic.ogg',
     'sound/music/dream.ogg',
     'sound/music/themall.ogg',
     'sound/music/sexmusic.ogg',
@@ -146,14 +146,12 @@
     'sound/music/space.ogg',
     'sound/music/legend.ogg',
     'sound/music/PAINKILLER.ogg',
+    'sound/music/sunkist.ogg',
     'sound/music/brother.ogg',
     'sound/music/delune.ogg',
     'sound/music/sunday.ogg',
-    'sound/music/gloop.ogg',
     'sound/music/cod.ogg',
     'sound/music/coolsong.ogg',
-    'sound/music/grillers.ogg',
-    'sound/music/engineergaming.ogg',
     'sound/music/bordercrossing.ogg',
     )
     if(!SSticker?.login_music)

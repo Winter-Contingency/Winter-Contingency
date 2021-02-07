@@ -384,7 +384,7 @@ obj/item/ammo_magazine/rifle/m739
 /obj/item/ammo_magazine/rifle/concussion
 	name = "Type-50 Directed Energy Rifle plasma cell"
 	desc = "A Covenant energy cell for use with the Type-50 Directed Energy Rifle, contains enough plasma for 6 consecutive shots."
-	icon_state = "concussion	"
+	icon_state = "concussion"
 	w_class = WEIGHT_CLASS_NORMAL
 	default_ammo = /datum/ammo/energy/plasma/concussion
 	max_rounds = 6

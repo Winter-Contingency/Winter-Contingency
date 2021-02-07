@@ -114,5 +114,49 @@
 	sword_color = "red"
 
 
+/obj/item/weapon/energy/sword/covenant
+	name = "Type-1 Energy Weapon/Sword"
+	desc = "The Type-1 Energy Weapon/Sword is a close-quarters weapon exclusively used by Sangheili. It is a weapon of great nobility, and only those who have earned it may use it."
+	icon_state = "energysword"
+	item_state = null
+	force = 10
+	sharp = 0
+	edge = 0
+	attack_verb = list("bashed", "thunked", "banged")
+	dual_damage = TRUE
+	var/last_launch
+
+/obj/item/weapon/energy/sword/covenant/attack_self(mob/user)
+	active = !active
+	if(active)
+		to_chat(user, "<span class='notice'>You ignite your [src].</span>")
+		playsound(user, 'sound/halo/energyswordready.wav', 25, 1)
+		force = 40
+		throwforce = 30
+		edge = 1
+		sharp = IS_SHARP_ITEM_ACCURATE
+		hitsound = 'sound/halo/energyswordhit.wav'
+		icon_state += "_on"
+		w_class = WEIGHT_CLASS_BULKY
+		attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+	else
+		to_chat(user, "<span class='notice'>The [src] can now be concealed.</span>")
+		playsound(user, 'sound/weapons/saberoff.ogg', 25, 1)
+		force = initial(force)
+		edge = 0
+		sharp = 0
+		hitsound = initial(hitsound)
+		icon_state = initial(icon_state)
+		w_class = initial(w_class)
+		attack_verb = initial(attack_verb)
 
 
+/obj/item/weapon/energy/sword/covenant/afterattack(atom/target, mob/user, proximity_flag, params)
+	if(!active || world.time < last_launch + 3 SECONDS)
+		return
+	if(isliving(target) && !user.Adjacent(target) && get_dist(target, user) < 4)
+		last_launch = world.time
+		user.throw_at(target, get_dist(target, user), 1, user)
+		spawn(3)
+			if(user.Adjacent(target))
+				attack(target, user)

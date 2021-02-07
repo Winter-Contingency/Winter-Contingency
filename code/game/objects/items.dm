@@ -11,6 +11,7 @@
 						//also useful for items with many icon_state values when you don't want to make an inhand sprite for each value.
 	var/force = 0
 	var/damtype = BRUTE
+	var/dual_damage = FALSE //splits the damage dealt in half and divides it between brute damage and burn damage.
 	var/attack_speed = 11
 	var/list/attack_verb //Used in attackby() to say how something was attacked "[x] has been [z.attack_verb] by [y] with [z]"
 

@@ -6,7 +6,6 @@
 	RegisterSignal(src, list(COMSIG_ITEM_DROPPED, COMSIG_MOVABLE_MOVED), .proc/embedded_on_move)
 	return TRUE
 
-
 /obj/item/proc/embedded_on_move(datum/source)
 	SIGNAL_HANDLER
 	unembed_ourself()
@@ -94,6 +93,14 @@
 	embedding.RegisterSignal(src, COMSIG_LIMB_DESTROYED, /obj/item/.proc/embedded_on_limb_destruction)
 	return TRUE
 
+/mob/living/proc/get_embedded_objects(of_type)
+	if(ispath(of_type))
+		return embedded_objects
+	var/list/shrapnels = list()
+	for(var/obj/O in embedded_objects)
+		if(istype(O, of_type))
+			shrapnels += O
+	return shrapnels
 
 /obj/item/proc/embedded_on_carrier_move(datum/source, atom/oldloc, direction, Forced)
 	SIGNAL_HANDLER_DOES_SLEEP

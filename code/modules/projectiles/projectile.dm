@@ -89,6 +89,7 @@
 	var/proj_max_range = 30
 
 	var/emp_act = FALSE
+	var/shrapnel_type = /obj/item/shard/shrapnel
 
 /obj/projectile/proc/qdel_projectile()
 	if(emp_act)
@@ -136,6 +137,7 @@
 	accuracy   *= rand(95 - ammo.accuracy_var_low, 105 + ammo.accuracy_var_high) * 0.01 //Rand only works with integers.
 	damage_falloff = ammo.damage_falloff
 	armor_type = ammo.armor_type
+	shrapnel_type = ammo.shrapnel_type
 
 //Target, firer, shot from. Ie the gun
 /obj/projectile/proc/fire_at(atom/target, atom/shooter, atom/source, range, speed, angle, recursivity)
@@ -875,7 +877,7 @@ So if we are on the 32th absolute pixel coordinate we are on tile 1, but if we a
 
 
 /mob/living/proc/embed_projectile_shrapnel(obj/projectile/proj)
-	var/obj/item/shard/shrapnel/shrap = new(get_turf(src), "[proj] shrapnel", " It looks like it was fired from [proj.shot_from ? proj.shot_from : "something unknown"].")
+	var/obj/item/shard/shrapnel/shrap = new proj.shrapnel_type(get_turf(src), "[proj] shrapnel", " It looks like it was fired from [proj.shot_from ? proj.shot_from : "something unknown"].", proj)
 	if(!shrap.embed_into(src, proj.def_zone, TRUE))
 		qdel(shrap)
 
@@ -885,7 +887,6 @@ So if we are on the 32th absolute pixel coordinate we are on tile 1, but if we a
 	if(affected_limb.limb_status & LIMB_DESTROYED)
 		return
 	return ..()
-
 
 /mob/living/proc/get_soft_armor(armor_type, proj_def_zone, proj_dir)
 	return soft_armor.getRating(armor_type)
@@ -924,7 +925,7 @@ So if we are on the 32th absolute pixel coordinate we are on tile 1, but if we a
 
 
 /mob/living/carbon/human/do_shrapnel_roll(obj/projectile/proj, damage)
-	return (proj.ammo.shrapnel_chance && prob(proj.ammo.shrapnel_chance + damage * 0.1))
+	return (proj.ammo.shrapnel_type && proj.ammo.shrapnel_chance && prob(proj.ammo.shrapnel_chance + damage * 0.1))
 
 
 //Turf handling.
