@@ -136,7 +136,7 @@
     var/songs = list(
     'sound/music/loopingsteps.ogg',
     'sound/music/pogo.ogg',
-    'sound/music/variationsorchestra.ogg'
+    'sound/music/variationsorchestra.ogg',
     'sound/music/setyoufree.ogg',
     'sound/music/dream.ogg',
     'sound/music/themall.ogg',
@@ -153,6 +153,7 @@
     'sound/music/cod.ogg',
     'sound/music/coolsong.ogg',
     'sound/music/bordercrossing.ogg',
+    'sound/music/fey.ogg',
     )
     if(!SSticker?.login_music)
         return FALSE
