@@ -154,6 +154,7 @@
     'sound/music/coolsong.ogg',
     'sound/music/bordercrossing.ogg',
     'sound/music/fey.ogg',
+    'sound/music/amongus.ogg',
     )
     if(!SSticker?.login_music)
         return FALSE
