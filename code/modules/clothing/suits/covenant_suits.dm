@@ -37,7 +37,6 @@
 	desc = "A harness designed specifically for Sangheili Minors."
 	icon_state = "minor_chest"
 	item_state = "minor_chest"
-	shield_force = 100
 
 /obj/item/clothing/suit/covenant/sangheili/ranger
 	name = "Ranger Sangheili Combat Harness"
