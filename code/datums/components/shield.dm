@@ -252,7 +252,7 @@
 	var/list/can_shield = list(COMBAT_MELEE_ATTACK, COMBAT_PROJ_ATTACK, COMBAT_TOUCH_ATTACK, COMBAT_EXPLOSION_ATTACK)
 	var/max_shield_integrity = 100
 	var/shield_integrity = 100
-	var/recharge_rate = 1 SECONDS
+	var/recharge_rate = 2 SECONDS
 	var/integrity_regen = 10 //per recharge_rate
 	var/recharge_cooldown = 10 SECONDS //after being hit
 	var/next_recharge = 0 //world.time based
@@ -389,9 +389,8 @@
 	can_shield = list(COMBAT_PROJ_ATTACK)
 	max_shield_integrity = 100
 	shield_integrity = 100
-	recharge_rate = 1 SECONDS
+	recharge_rate = 2 SECONDS
 	integrity_regen = 10 //per recharge_rate
-	recharge_cooldown = 5 SECONDS //after being hit
 	shield_overlay = "shield-blue"
 	recharge_overlay = "shield-blue"
 	margin_x = 0
