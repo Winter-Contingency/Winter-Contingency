@@ -719,7 +719,7 @@ and you're good to go.
 		last_fired = world.time
 
 		if(!delete_bullet(projectile_to_fire))
-			projectile_to_fire.qdel_projectile()
+			qdel(projectile_to_fire)
 		reload_into_chamber(user) //Reload into the chamber if the gun supports it.
 		if(user) //Update dat HUD
 			var/obj/screen/ammo/A = user.hud_used.ammo //The ammo HUD
@@ -783,8 +783,7 @@ and you're good to go.
 
 	projectile_to_fire.play_damage_effect(user)
 	if(!delete_bullet(projectile_to_fire))
-		projectile_to_fire.qdel_projectile() //If this proc DIDN'T delete the bullet, we're going to do so here.
-
+		qdel(projectile_to_fire)
 	reload_into_chamber(user) //Reload the sucker.
 	ENABLE_BITFIELD(flags_gun_features, GUN_CAN_POINTBLANK)
 

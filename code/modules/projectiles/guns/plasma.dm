@@ -107,6 +107,8 @@
 	flags_equip_slot = ITEM_SLOT_BELT
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ENERGY|GUN_AMMO_COUNTER
 	overheat_limit = 10
+	var/ammo_base = /datum/ammo/energy/plasmapistol
+	var/ammo_overcharge = /datum/ammo/energy/plasmapistol/overcharge
 
 //Toggles Overcharge mode. Overcharge mode significantly increases damage and AP in exchange for doubled ammo usage and increased fire delay.
 /obj/item/weapon/gun/energy/lasgun/plasma/pistol/toggle_chargemode(mob/user)
@@ -131,12 +133,14 @@
 		fire_sound = 'sound/halo/charge_fire_reach.wav'
 		to_chat(user, "[icon2html(src, user)] You [overcharge ? "<B>disable</b>" : "<B>enable</b>" ] [src]'s overcharge mode.")
 		overcharge = TRUE
+		ammo = GLOB.ammo_list[ammo_overcharge]
 	else
 		playsound(user, 'sound/weapons/emitter2.ogg', 5, 0, 2)
 		charge_cost = ENERGY_STANDARD_AMMO_COST
 		fire_sound = initial(fire_sound)
 		to_chat(user, "[icon2html(src, user)] You [overcharge ? "<B>disable</b>" : "<B>enable</b>" ] [src]'s overcharge mode.")
 		overcharge = FALSE
+		ammo = GLOB.ammo_list[ammo_base]
 
 	//load_into_chamber()
 
@@ -148,11 +152,6 @@
 
 /obj/item/weapon/gun/energy/lasgun/plasma/pistol/unique_action(mob/user)
 	return toggle_chargemode(user)
-
-/obj/item/weapon/gun/energy/lasgun/plasma/pistol/apply_gun_modifiers(obj/projectile/projectile_to_fire, atom/target)
-	. = ..()
-	if(overcharge && projectile_to_fire.ammo.flags_ammo_behavior & AMMO_ENERGY)
-		projectile_to_fire.emp_act = TRUE
 
 /obj/item/weapon/gun/energy/lasgun/plasma/rifle
 	name = "Type-25 Directed Energy Rifle"

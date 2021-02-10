@@ -1325,6 +1325,21 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	damage = 20
 	bullet_color = COLOR_VIBRANT_LIME
 
+/datum/ammo/energy/plasmapistol/overcharge
+
+/datum/ammo/energy/plasmapistol/overcharge/on_hit_mob(mob/M, obj/projectile/proj)
+	empulse(get_turf(M), 0, 1)
+
+/datum/ammo/energy/plasmapistol/overcharge/on_hit_obj(obj/O, obj/projectile/proj)
+	empulse(get_turf(O), 0, 1)
+
+/datum/ammo/energy/plasmapistol/overcharge/on_hit_turf(turf/T, obj/projectile/proj)
+	empulse(get_turf(T), 0, 1)
+
+/datum/ammo/energy/plasmapistol/overcharge/do_at_max_range(obj/projectile/proj)
+	empulse(get_turf(proj), 0, 1)
+
+
 /datum/ammo/energy/plasmarifle
 	name = "blue plasma bolt"
 	icon_state = "plasmarifle"
