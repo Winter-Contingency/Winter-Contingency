@@ -7,14 +7,14 @@
 	/// Flat-damage-reduction-based armor.
 	var/datum/armor/hard_armor
 	/// Percentage damage The shield intercepts.
-	var/datum/armor/cover
+	var/datum/armor/cover = list("melee" = 80, "bullet" = 100, "laser" = 100, "energy" = 100, "bomb" = 80, "bio" = 30, "rad" = 0, "fire" = 80, "acid" = 80)
 	var/shield_flags = NONE
 	var/slot_flags = SLOT_L_HAND|SLOT_R_HAND
 	var/layer = 50
 	var/active = TRUE
 
 
-/datum/component/shield/Initialize(shield_flags, shield_soft_armor, shield_hard_armor, shield_cover = list("melee" = 80, "bullet" = 100, "laser" = 100, "energy" = 100, "bomb" = 80, "bio" = 30, "rad" = 0, "fire" = 80, "acid" = 80))
+/datum/component/shield/Initialize(shield_flags, shield_soft_armor, shield_hard_armor, shield_cover = cover)
 	. = ..()
 	if(!isitem(parent))
 		return COMPONENT_INCOMPATIBLE
@@ -113,7 +113,7 @@
 				slot = SLOT_S_STORE
 	shield_equipped(parent, holder_mob, slot)
 
-/datum/component/shield/proc/toggle_shield/(datum/source, new_state)
+/datum/component/shield/proc/toggle_shield(datum/source, new_state)
 	SIGNAL_HANDLER
 	if(active == new_state)
 		return
@@ -242,23 +242,31 @@
 
 
 //Dune, Halo and energy shields.
-
 /datum/component/shield/overhealth
 	layer = 100
-	cover = list("melee" = 0, "bullet" = 80, "laser" = 100, "energy" = 100, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 80)
+	cover = list("melee" = 100, "bullet" = 100, "laser" = 100, "energy" = 100, "bomb" = 100, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100)
 	slot_flags = SLOT_WEAR_SUIT //For now it only activates while worn on a single place, meaning only one active at a time. Need to handle overlays properly to allow for stacking.
+	var/list/damagetype_to_integrity_multiplier = list("melee" = 1, "bullet" = 1, "laser" = 1, "energy" = 1, "bomb" = 1, "bio" = 1, "rad" = 1, "fire" = 1, "acid" = 1)//This multiplies the damage the shield takes depending on the type of damage taken.
+	var/list/attack_type_to_integrity_multiplier = list(COMBAT_MELEE_ATTACK = 2, COMBAT_PROJ_ATTACK = 1, COMBAT_TOUCH_ATTACK = 2, COMBAT_EXPLOSION_ATTACK = 4)
+	var/list/can_shield = list(COMBAT_MELEE_ATTACK, COMBAT_PROJ_ATTACK, COMBAT_TOUCH_ATTACK, COMBAT_EXPLOSION_ATTACK)
 	var/max_shield_integrity = 100
 	var/shield_integrity = 100
 	var/recharge_rate = 1 SECONDS
 	var/integrity_regen = 10 //per recharge_rate
-	var/recharge_cooldown = 5 SECONDS //after being hit
+	var/recharge_cooldown = 10 SECONDS //after being hit
 	var/next_recharge = 0 //world.time based
 	var/shield_overlay = "shield-blue"
 
-/datum/component/shield/overhealth/Initialize(shield_flags, shield_soft_armor, shield_hard_armor, shield_cover)
-	if(!issuit(parent))
-		return COMPONENT_INCOMPATIBLE
-	return ..()
+/datum/component/shield/overhealth/Initialize(shield_flags, shield_soft_armor, shield_hard_armor, shield_cover = cover)
+	return ..(shield_flags, shield_soft_armor, shield_hard_armor, shield_cover)
+
+/datum/component/shield/overhealth/RegisterWithParent()
+	. = ..()
+	RegisterSignal(parent, COMSIG_PARENT_EXAMINE, .proc/examine)
+
+/datum/component/shield/overhealth/proc/examine(datum/source, mob/user)
+	SIGNAL_HANDLER
+	to_chat(user, "<span class='notice'The shield of [parent] has [shield_integrity*100/max_shield_integrity]% energy.</span>")
 
 /datum/component/shield/overhealth/Destroy()
 	STOP_PROCESSING(SSprocessing, src)
@@ -271,19 +279,15 @@
 
 
 /datum/component/shield/overhealth/proc/overhealth_intercept_attack(attack_type, incoming_damage, damage_type, silent)
-	switch(attack_type)
-		if(COMBAT_TOUCH_ATTACK)
-			return incoming_damage
-		if(COMBAT_MELEE_ATTACK)
-			return incoming_damage //The slow blade penetrates.
-		if(COMBAT_PROJ_ATTACK)
-			var/absorbing_damage = incoming_damage * cover.getRating(damage_type) * 0.01
-			if(!absorbing_damage)
-				return incoming_damage //We are transparent to this kind of damage.
-			. = incoming_damage - absorbing_damage
-			absorbing_damage = max(0, absorbing_damage - hard_armor.getRating(damage_type))
-			absorbing_damage *= (100 - soft_armor.getRating(damage_type)) * 0.01
-			return wrap_up_attack(absorbing_damage, ., silent)
+	if(!(attack_type in can_shield))
+		return incoming_damage
+	var/absorbing_damage = incoming_damage * cover.getRating(damage_type) * 0.01
+	if(!absorbing_damage)
+		return incoming_damage //We are transparent to this kind of damage.
+	. = incoming_damage - absorbing_damage
+	absorbing_damage *= damagetype_to_integrity_multiplier[damage_type]
+	absorbing_damage *= attack_type_to_integrity_multiplier[attack_type]
+	return wrap_up_attack(absorbing_damage, ., silent)
 
 
 /datum/component/shield/overhealth/proc/wrap_up_attack(absorbing_damage, unabsorbed_damage, silent)
@@ -353,3 +357,14 @@
 	var/mob/living/carbon/human/affected_human = affected
 	affected_human.remove_overlay(OVERHEALTH_SHIELD_LAYER)
 	return ..()
+
+
+/datum/component/shield/overhealth/energy
+	cover = list("melee" = 0, "bullet" = 100, "laser" = 100, "energy" = 100, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 100)
+	can_shield = list(COMBAT_PROJ_ATTACK)
+	max_shield_integrity = 100
+	shield_integrity = 100
+	recharge_rate = 1 SECONDS
+	integrity_regen = 10 //per recharge_rate
+	recharge_cooldown = 5 SECONDS //after being hit
+	shield_overlay = "shield-blue"

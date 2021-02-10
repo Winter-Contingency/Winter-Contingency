@@ -1,6 +1,6 @@
 //halo//
 
-/obj/item/clothing/suit/covenant/
+/obj/item/clothing/suit/covenant
 
 
 //	var/list/species_allowed = list("Sangheili","Unggoy", "Kigyar")
@@ -26,6 +26,10 @@
 	shield_state = "shield-blue"
 	sprite_sheets = list("Sangheili" = 'icons/mob/species/sangheili/suit.dmi')
 //	species_allowed = "Sangheili"
+
+/obj/item/clothing/suit/covenant/sangheili/Initialize()
+	. = ..()
+	AddComponent(/datum/component/shield/overhealth)
 
 /obj/item/clothing/suit/covenant/sangheili/minor
 	name = "Minor Sangheili Combat Harness"

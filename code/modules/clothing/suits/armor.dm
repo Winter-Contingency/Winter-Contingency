@@ -211,7 +211,7 @@
 
 /obj/item/clothing/suit/armor/reactive/Initialize()
 	. = ..()
-	AddComponent(/datum/component/shield/overhealth)
+	AddComponent(/datum/component/shield/overhealth/energy)
 
 /obj/item/clothing/suit/armor/reactive/red
 	shield_state = "shield-red"
@@ -246,7 +246,7 @@
 
 /obj/item/clothing/suit/armor/sectoid/shield/Initialize()
 	. = ..()
-	AddComponent(/datum/component/shield/overhealth)
+	AddComponent(/datum/component/shield/overhealth/energy)
 
 
 //All of the armor below is mostly unused
