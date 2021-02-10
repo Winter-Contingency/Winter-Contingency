@@ -1,5 +1,4 @@
 /datum/component/shield
-	var/icon = 'icons/effects/effects.dmi'
 	var/mob/living/affected
 	var/datum/callback/intercept_damage_cb
 	var/datum/callback/transfer_damage_cb
@@ -247,7 +246,7 @@
 	layer = 100
 	cover = list("melee" = 100, "bullet" = 100, "laser" = 100, "energy" = 100, "bomb" = 100, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100)
 	slot_flags = SLOT_WEAR_SUIT //For now it only activates while worn on a single place, meaning only one active at a time. Need to handle overlays properly to allow for stacking.
-	icon = 'icons/effects/shield.dmi'
+	var/icon = 'icons/effects/shield.dmi'
 	var/list/damagetype_to_integrity_multiplier = list("melee" = 1, "bullet" = 1, "laser" = 1, "energy" = 1, "bomb" = 1, "bio" = 1, "rad" = 1, "fire" = 1, "acid" = 1)//This multiplies the damage the shield takes depending on the type of damage taken.
 	var/list/attack_type_to_integrity_multiplier = list(COMBAT_MELEE_ATTACK = 2, COMBAT_PROJ_ATTACK = 1, COMBAT_TOUCH_ATTACK = 2, COMBAT_EXPLOSION_ATTACK = 4)
 	var/list/can_shield = list(COMBAT_MELEE_ATTACK, COMBAT_PROJ_ATTACK, COMBAT_TOUCH_ATTACK, COMBAT_EXPLOSION_ATTACK)
@@ -257,9 +256,18 @@
 	var/integrity_regen = 10 //per recharge_rate
 	var/recharge_cooldown = 10 SECONDS //after being hit
 	var/next_recharge = 0 //world.time based
+	var/shiel_off = "null"
 	var/shield_overlay = "shield-blue"
+	var/recharge_overlay = "recharging"
+	var/margin_x = -3
 
-/datum/component/shield/overhealth/Initialize(shield_flags, shield_soft_armor, shield_hard_armor, shield_cover = cover)
+/datum/component/shield/overhealth/Initialize(shield_flags, shield_soft_armor, shield_hard_armor, shield_cover = cover, new_icon, new_shield_overlay, new_recharge_overlay)
+	if(new_icon)
+		icon = new_icon
+	if(new_shield_overlay)
+		shield_overlay = new_recharge_overlay
+	if(new_recharge_overlay)
+		recharge_overlay = new_recharge_overlay
 	return ..(shield_flags, shield_soft_armor, shield_hard_armor, shield_cover)
 
 /datum/component/shield/overhealth/RegisterWithParent()
@@ -327,10 +335,11 @@
 	shield_integrity = max(shield_integrity - amount, 0)
 	if(!shield_integrity)
 		deactivate_with_user()
-		playsound(get_turf(parent), 'sound/halo/EliteDown.ogg', 50, 1)
+		playsound(get_turf(parent), 'sound/halo/EliteDown.ogg', 75, 1)
 		return
 	if(!next_recharge)
 		START_PROCESSING(SSprocessing, src)
+	update_overlay(shield_overlay)
 	next_recharge = max(next_recharge, world.time + recharge_cooldown)
 
 
@@ -340,9 +349,9 @@
 	if(shield_integrity >= max_shield_integrity)
 		STOP_PROCESSING(SSprocessing, src)
 		next_recharge = 0
-		update_overlay("shield-blue")
+		update_overlay(shiel_off)
 		return
-	update_overlay("recharging")
+	update_overlay(recharge_overlay)
 	var/needs_activation = !shield_integrity
 	shield_integrity = min(shield_integrity + integrity_regen, max_shield_integrity)
 	next_recharge = max(next_recharge, world.time + recharge_rate)
@@ -351,7 +360,7 @@
 			activate_with_user()
 		else
 			active = TRUE
-		playsound(get_turf(parent), 'sound/halo/EliteLow.ogg', 50, 1)
+		playsound(get_turf(parent), 'sound/halo/EliteLow.ogg', 75, 1)
 	else
 		playsound(get_turf(parent), 'sound/halo/EliteRecharge.ogg', 50, 1)
 
@@ -359,8 +368,7 @@
 	. = ..()
 	if(!shield_integrity)
 		return
-	var/obj/item/clothing/suit/reactive_suit = parent
-	update_overlay(reactive_suit.shield_state)
+	update_overlay(shiel_off)
 
 /datum/component/shield/overhealth/deactivate_with_user()
 	var/mob/living/carbon/human/affected_human = affected
@@ -370,12 +378,13 @@
 /datum/component/shield/overhealth/proc/update_overlay(new_icon_state)
 	var/mob/living/carbon/human/affected_human = affected
 	affected_human.remove_overlay(OVERHEALTH_SHIELD_LAYER)
-
-	affected_human.overlays_standing[OVERHEALTH_SHIELD_LAYER] = list(mutable_appearance(icon, new_icon_state, affected.layer + 0.01))
+	var/mutable_appearance/MA = mutable_appearance(icon, new_icon_state, affected.layer + 0.01)
+	MA.pixel_x += margin_x
+	affected_human.overlays_standing[OVERHEALTH_SHIELD_LAYER] = list(MA)
 	affected_human.apply_overlay(OVERHEALTH_SHIELD_LAYER)
 
-
 /datum/component/shield/overhealth/energy
+	icon = 'icons/effects/effects.dmi'
 	cover = list("melee" = 0, "bullet" = 100, "laser" = 100, "energy" = 100, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 100)
 	can_shield = list(COMBAT_PROJ_ATTACK)
 	max_shield_integrity = 100
@@ -384,3 +393,5 @@
 	integrity_regen = 10 //per recharge_rate
 	recharge_cooldown = 5 SECONDS //after being hit
 	shield_overlay = "shield-blue"
+	recharge_overlay = "shield-blue"
+	margin_x = 0
