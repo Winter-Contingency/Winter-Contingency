@@ -25,17 +25,19 @@
 	blood_overlay_type = "suit"
 	shield_state = "shield-blue"
 	sprite_sheets = list("Sangheili" = 'icons/mob/species/sangheili/suit.dmi')
-//	species_allowed = "Sangheili"
+	var/shield_force = 250
+	//species_allowed = "Sangheili"
 
 /obj/item/clothing/suit/covenant/sangheili/Initialize()
 	. = ..()
-	AddComponent(/datum/component/shield/overhealth)
+	AddComponent(/datum/component/shield/overhealth,,,,,,,,shield_force)
 
 /obj/item/clothing/suit/covenant/sangheili/minor
 	name = "Minor Sangheili Combat Harness"
 	desc = "A harness designed specifically for Sangheili Minors."
 	icon_state = "minor_chest"
 	item_state = "minor_chest"
+	shield_force = 100
 
 /obj/item/clothing/suit/covenant/sangheili/ranger
 	name = "Ranger Sangheili Combat Harness"

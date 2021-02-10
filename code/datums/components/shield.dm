@@ -252,8 +252,7 @@
 	cover = list("melee" = 100, "bullet" = 100, "laser" = 100, "energy" = 100, "bomb" = 100, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100)
 	slot_flags = SLOT_WEAR_SUIT //For now it only activates while worn on a single place, meaning only one active at a time. Need to handle overlays properly to allow for stacking.
 	var/icon = 'icons/effects/shield.dmi'
-	var/list/damagetype_to_integrity_multiplier = list("melee" = 1, "bullet" = 1, "laser" = 1, "energy" = 1, "bomb" = 1, "bio" = 1, "rad" = 1, "fire" = 1, "acid" = 1)//This multiplies the damage the shield takes depending on the type of damage taken.
-	var/list/attack_type_to_integrity_multiplier = list(COMBAT_MELEE_ATTACK = 2, COMBAT_PROJ_ATTACK = 1, COMBAT_TOUCH_ATTACK = 2, COMBAT_EXPLOSION_ATTACK = 4)
+	var/list/damagetype_to_integrity_multiplier = list("melee" = 1, "bullet" = 1, "laser" = 1, "energy" = 1, "bomb" = 2, "bio" = 1, "rad" = 1, "fire" = 1, "acid" = 1)//This multiplies the damage the shield takes depending on the type of damage taken.
 	var/list/can_shield = list(COMBAT_MELEE_ATTACK, COMBAT_PROJ_ATTACK, COMBAT_TOUCH_ATTACK, COMBAT_EXPLOSION_ATTACK)
 	var/max_shield_integrity = 100
 	var/shield_integrity = 100
@@ -266,13 +265,15 @@
 	var/recharge_overlay = "recharging"
 	var/margin_x = -3
 
-/datum/component/shield/overhealth/Initialize(shield_flags, shield_soft_armor, shield_hard_armor, shield_cover = cover, new_icon, new_shield_overlay, new_recharge_overlay)
+/datum/component/shield/overhealth/Initialize(shield_flags, shield_soft_armor, shield_hard_armor, shield_cover = cover, new_icon, new_shield_overlay, new_recharge_overlay, new_force)
 	if(new_icon)
 		icon = new_icon
 	if(new_shield_overlay)
 		shield_overlay = new_recharge_overlay
 	if(new_recharge_overlay)
 		recharge_overlay = new_recharge_overlay
+	if(new_force)
+		shield_integrity = new_force
 	return ..(shield_flags, shield_soft_armor, shield_hard_armor, shield_cover)
 
 /datum/component/shield/overhealth/RegisterWithParent()
@@ -308,7 +309,6 @@
 		return incoming_damage //We are transparent to this kind of damage.
 	. = incoming_damage - absorbing_damage
 	absorbing_damage *= damagetype_to_integrity_multiplier[damage_type]
-	absorbing_damage *= attack_type_to_integrity_multiplier[attack_type]
 	return wrap_up_attack(absorbing_damage, ., silent)
 
 
@@ -344,6 +344,8 @@
 	if(!shield_integrity)
 		deactivate_with_user()
 		playsound(get_turf(parent), 'sound/halo/EliteDown.ogg', 75, 1)
+		if(affected)
+			affected.visible_message("<span class='notice'>[affected]'s energy shield collapses!</span>")
 		return
 	if(!next_recharge)
 		START_PROCESSING(SSprocessing, src)
@@ -367,6 +369,7 @@
 	if(needs_activation)
 		if(affected)
 			activate_with_user()
+			affected.visible_message("<span class='notice'>[affected]'s shield begins to hum as it regenerates strength.</span>")
 		else
 			active = TRUE
 		playsound(get_turf(parent), 'sound/halo/EliteRecharge.ogg', 75, 1)
