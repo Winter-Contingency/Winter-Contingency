@@ -274,3 +274,10 @@
 		. = shield_check.Invoke(attack_type, ., damage_type, silent)
 		if(!.)
 			break
+
+/mob/living/proc/has_overhealth_shield(damage_type)
+	var/list/affecting_shields = list()
+	SEND_SIGNAL(src, COMSIG_LIVING_SHIELDCALL, affecting_shields, damage_type, TRUE)
+	if(length(affecting_shields))
+		return TRUE
+	return FALSE

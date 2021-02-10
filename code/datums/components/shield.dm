@@ -174,9 +174,14 @@
 	deactivate_with_user()
 	affected = null
 
-/datum/component/shield/proc/on_attack_cb_shields_call(datum/source, list/affecting_shields, dam_type)
+/datum/component/shield/proc/can_simulate_attack()
+	return FALSE
+
+/datum/component/shield/proc/on_attack_cb_shields_call(datum/source, list/affecting_shields, dam_type, simulated = FALSE)
 	SIGNAL_HANDLER
 	if(cover.getRating(dam_type) <= 0)
+		return
+	if(simulated && !can_simulate_attack())
 		return
 	affecting_shields[intercept_damage_cb] = layer
 
@@ -252,7 +257,7 @@
 	var/list/can_shield = list(COMBAT_MELEE_ATTACK, COMBAT_PROJ_ATTACK, COMBAT_TOUCH_ATTACK, COMBAT_EXPLOSION_ATTACK)
 	var/max_shield_integrity = 100
 	var/shield_integrity = 100
-	var/recharge_rate = 2 SECONDS
+	var/recharge_rate = 1 SECONDS
 	var/integrity_regen = 10 //per recharge_rate
 	var/recharge_cooldown = 10 SECONDS //after being hit
 	var/next_recharge = 0 //world.time based
@@ -274,6 +279,9 @@
 	. = ..()
 	RegisterSignal(parent, COMSIG_PARENT_EXAMINE, .proc/examine)
 	RegisterSignal(parent, COMSIG_ATOM_EMP_ACT, .proc/on_emp)
+
+/datum/component/shield/overhealth/can_simulate_attack()
+	return TRUE
 
 /datum/component/shield/overhealth/proc/examine(datum/source, mob/user)
 	SIGNAL_HANDLER
@@ -341,7 +349,8 @@
 		START_PROCESSING(SSprocessing, src)
 	update_overlay(shield_overlay)
 	next_recharge = max(next_recharge, world.time + recharge_cooldown)
-
+	if(shield_integrity < max_shield_integrity * 0.25)
+		playsound(get_turf(parent), 'sound/halo/EliteLow.ogg', 75, 1)
 
 /datum/component/shield/overhealth/process()
 	if(world.time < next_recharge)
@@ -360,9 +369,7 @@
 			activate_with_user()
 		else
 			active = TRUE
-		playsound(get_turf(parent), 'sound/halo/EliteLow.ogg', 75, 1)
-	else
-		playsound(get_turf(parent), 'sound/halo/EliteRecharge.ogg', 50, 1)
+		playsound(get_turf(parent), 'sound/halo/EliteRecharge.ogg', 75, 1)
 
 /datum/component/shield/overhealth/activate_with_user()
 	. = ..()
@@ -389,8 +396,9 @@
 	can_shield = list(COMBAT_PROJ_ATTACK)
 	max_shield_integrity = 100
 	shield_integrity = 100
-	recharge_rate = 2 SECONDS
+	recharge_rate = 1 SECONDS
 	integrity_regen = 10 //per recharge_rate
+	recharge_cooldown = 5 SECONDS
 	shield_overlay = "shield-blue"
 	recharge_overlay = "shield-blue"
 	margin_x = 0
