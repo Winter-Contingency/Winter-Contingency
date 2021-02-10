@@ -266,7 +266,7 @@
 
 /datum/component/shield/overhealth/proc/examine(datum/source, mob/user)
 	SIGNAL_HANDLER
-	to_chat(user, "<span class='notice'The shield of [parent] has [shield_integrity*100/max_shield_integrity]% energy.</span>")
+	to_chat(user, "<span class='notice'>The shield of [parent] has [shield_integrity*100/max_shield_integrity]% energy.</span>")
 
 /datum/component/shield/overhealth/Destroy()
 	STOP_PROCESSING(SSprocessing, src)
