@@ -177,7 +177,7 @@ directive is properly returned.
 
 
 /atom/proc/emp_act(severity)
-	return
+	SEND_SIGNAL(src, COMSIG_ATOM_EMP_ACT, severity)
 
 
 /atom/proc/effect_smoke(obj/effect/particle_effect/smoke/S)
