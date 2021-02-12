@@ -37,33 +37,39 @@
 	desc = "A harness designed specifically for Sangheili Minors."
 	icon_state = "minor_chest"
 	item_state = "minor_chest"
+	shield_force = 300 // more indepth balancing will come later for these numbers
 
 /obj/item/clothing/suit/covenant/sangheili/ranger
 	name = "Ranger Sangheili Combat Harness"
 	desc = "A harness designed specifically for Sangheili Rangers."
 	icon_state = "ranger_chest"
 	item_state = "ranger_chest"
+	shield_force = 300
 
 /obj/item/clothing/suit/covenant/sangheili/officer
 	name = "Officer Sangheili Combat Harness"
 	desc = "A harness designed specifically for Sangheili Officers."
 	icon_state = "officer_chest"
 	item_state = "officer_chest"
+	shield_force = 350
 
 /obj/item/clothing/suit/covenant/sangheili/specops
 	name = "Special Ops Sangheili Combat Harness"
 	desc = "A harness designed specifically for Special Operations Sangheili."
 	icon_state = "specops_chest"
 	item_state = "specops_chest"
+	shield_force = 300
 
 /obj/item/clothing/suit/covenant/sangheili/ultra
 	name = "Ultra Sangheili Combat Harness"
 	desc = "A harness designed specifically for Sangheili Ultras."
 	icon_state = "ultra_chest"
 	item_state = "ultra_chest"
+	shield_force = 400
 
 /obj/item/clothing/suit/covenant/sangheili/general
 	name = "General Sangheili Combat Harness"
 	desc = "A harness designed specifically for Sangheili Generals."
 	icon_state = "general_chest"
 	item_state = "general_chest"
+	shield_force = 450
