@@ -284,7 +284,7 @@
 	max_rounds = 32
 	gun_type = /obj/item/weapon/gun/rifle/ma37
 
-/obj/item/ammo_magazine/rifle/ma5b
+/*/obj/item/ammo_magazine/rifle/ma5b
 	name = "MA5B ICWS Magazine"
 	desc = "A 7.62x51mm magazine for use in the MA5B ICWS"
 	caliber = "7.62x51mm"
@@ -292,7 +292,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	default_ammo = /datum/ammo/bullet/ma37
 	max_rounds = 60
-	gun_type = /obj/item/weapon/gun/rifle/ma5b
+	gun_type = /obj/item/weapon/gun/rifle/ma5b */
 
 /obj/item/ammo_magazine/rifle/m392
 	name = "M392 7.62mm FMJ AP Magazine"
@@ -304,7 +304,7 @@
 	max_rounds = 15
 	gun_type = /obj/item/weapon/gun/rifle/m392
 
-/obj/item/ammo_magazine/rifle/br55
+/*/obj/item/ammo_magazine/rifle/br55
 	name = "9.5mm BR55 HP-SX Magazine"
 	desc = "A 9.5x40mm magazine for use in the BR55 Service Rifle"
 	caliber = "9.5x40mm"
@@ -312,7 +312,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	default_ammo = /datum/ammo/bullet/br
 	max_rounds = 36
-	gun_type = /obj/item/weapon/gun/rifle/br55
+	gun_type = /obj/item/weapon/gun/rifle/br55*/
 
 obj/item/ammo_magazine/rifle/srs99
 	name = "SRS99 14.5mm Magazine"

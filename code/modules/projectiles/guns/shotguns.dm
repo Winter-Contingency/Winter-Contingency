@@ -822,15 +822,15 @@ can cause issues with ammo types getting mixed up during the burst.
 //Halo
 
 //M45
-/obj/item/weapon/gun/shotgun/pump/m45
+/obj/item/weapon/gun/shotgun/pump/m45 //broken idk how fix
 	name = "M45 Tactical Shotgun"
 	desc = "A shotgun actively in use within the UNSC."
 	flags_equip_slot = ITEM_SLOT_BACK
 	icon_state = "m45"
 	item_state = "m45"
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/pump/halo
-	fire_sound = 'sound/halo/Shotgun_Fire_New.wav'
-	reload_sound = 'sound/halo/Shotgun_Reload_New.wav'
+	fire_sound = 'sound/halo/m45fire.wav'
+	reload_sound = 'sound/halo/m45insert.wav'
 	pump_sound =  'sound/halo/Shotgun_Reload_Sound_Effect.ogg'
 	max_shells = 9
 	flags_item_map_variant = NONE
@@ -864,5 +864,4 @@ can cause issues with ammo types getting mixed up during the burst.
 	recoil = 2
 	recoil_unwielded = 4
 	aim_slowdown = 0.55
-	pump_delay = 12
 	caliber = "8g"

@@ -106,10 +106,9 @@ also doesn't really matter. You can only reload them with handfuls.
 
 /obj/item/ammo_magazine/internal/shotgun/pump/halo
 	name = "shotgun tube"
-	default_ammo = /datum/ammo/bullet/shotgun/halo
+	default_ammo = /datum/ammo/bullet/shotgun
 	caliber = "8g"
 	max_rounds = 8
-	chamber_closed = 1
 
 /obj/item/ammo_magazine/internal/shotgun/pump
 

@@ -1028,16 +1028,17 @@
 	desc = "The MA37 Individual Combat Weapon System, formally known as the Individual Combat Weapon System, Caliber 7.62 mm MA37 and the MA5 by the UNSC Marines and Navy, is a standard issue service rifle of the UNSC."
 	icon_state = "ma37"
 	item_state = "ma37"
-	fire_sound = "sound/halo/MA37_Fire_New.wav"
+	fire_sound = "sound/halo/ma37fire.wav"
 	dry_fire_sound = 'sound/weapons/guns/fire/m41a_empty.ogg'
-	unload_sound = 'sound/halo/MA37_Reload_New.wav'
-	reload_sound = 'sound/halo/MA37_Reload_New.wav'
+	unload_sound = 'sound/halo/ma37magout.ogg'
+	reload_sound = 'sound/halo/ma37magin.ogg'
+	cocked_sound = "sound/halo/ma37bolt.ogg"
 	current_mag = /obj/item/ammo_magazine/rifle/ma37
 	fire_delay = 0.2 SECONDS
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_LOAD_INTO_CHAMBER
 	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO, GUN_FIREMODE_AUTOMATIC)
 
-/obj/item/weapon/gun/rifle/ma5b
+/*/obj/item/weapon/gun/rifle/ma5b - currently not being used, nor does it fit the reach asthetic.
 	name = "MA5B ICWS"
 	desc = "An update of the MA37, this assault rifle features a 60 round magazine and other improvements."
 	icon_state = "ma5b"
@@ -1049,7 +1050,7 @@
 	current_mag = /obj/item/ammo_magazine/rifle/ma5b
 	fire_delay = 0.16 SECONDS
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_LOAD_INTO_CHAMBER
-	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO, GUN_FIREMODE_AUTOMATIC)
+	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO, GUN_FIREMODE_AUTOMATIC) */
 
 /obj/item/weapon/gun/rifle/m392
 	name = "M392 Designated Marksman Rifle"
@@ -1057,19 +1058,20 @@
 	icon = 'icons/Marine/gun64.dmi'
 	icon_state = "m392"
 	item_state = "m392"
-	fire_sound = "sound/halo/dmr_fire_new.wav"
+	fire_sound = "sound/halo/dmrfire.wav"
 	dry_fire_sound = 'sound/weapons/guns/fire/m41a_empty.ogg'
-	unload_sound = 'sound/halo/dmr_reload_new.wav'
-	fire_delay = 1 SECONDS
-	reload_sound = 'sound/halo/dmr_reload_new.wav'
+	unload_sound = 'sound/halo/dmrmagout.ogg'
+	reload_sound = 'sound/halo/dmrmagin.ogg'
+	cocked_sound = "sound/halo/dmrbolt.ogg"
 	current_mag = /obj/item/ammo_magazine/rifle/m392
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_LOAD_INTO_CHAMBER
 	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO)
 	attachable_allowed = list(/obj/item/attachable/scope/unremovable/m392,/obj/item/attachable/unremovable/m392barrel)
 	starting_attachment_types = list(/obj/item/attachable/scope/unremovable/m392,/obj/item/attachable/unremovable/m392barrel)
 	burst_amount = 1
+	fire_delay = 1 SECONDS
 
-/obj/item/weapon/gun/rifle/br55
+/*/obj/item/weapon/gun/rifle/br55 - currently not being used, nor does it fit the reach aesthetic, scopes bad.
 	name = "BR55 Service Rifle"
 	desc = "An experimental combat rifle on Reach, this gun fires 3 round bursts of 9.5x40mm bullets. The early versions suffered from recoil issues, but packed a large punch."
 	icon = 'icons/Marine/gun64.dmi'
@@ -1085,17 +1087,17 @@
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_LOAD_INTO_CHAMBER
 	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO, GUN_FIREMODE_BURSTFIRE)
 	attachable_allowed = list(/obj/item/attachable/scope/unremovable/br55)
-	starting_attachment_types = list(/obj/item/attachable/scope/unremovable/br55)
+	starting_attachment_types = list(/obj/item/attachable/scope/unremovable/br55)*/
 
 /obj/item/weapon/gun/rifle/srs99
 	name = "SRS99-AM Sniper Rifle"
 	desc = "Initially an anti-materiel rifle, the SRS99 would transition to an anti-personel rifle as the Human-Covenant war carried on."
 	icon_state = "srs99"
 	item_state = "srs99"
-	fire_sound = 'sound/halo/SniperShotSoundEffect.ogg'
+	fire_sound = 'sound/halo/sniperfire.wav'
 	dry_fire_sound = 'sound/weapons/guns/fire/m41a_empty.ogg'
-	unload_sound = 'sound/halo/SniperRifleReloadSoundEffect.ogg'
-	reload_sound = 'sound/halo/SniperRifleReloadSoundEffect.ogg'
+	unload_sound = 'sound/halo/snipermagout.ogg'
+	reload_sound = 'sound/halo/snipermagin.ogg'
 	current_mag = /obj/item/ammo_magazine/rifle/srs99
 	fire_delay = 1.5 SECONDS
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_AMMO_COUNTER|GUN_LOAD_INTO_CHAMBER
@@ -1108,7 +1110,7 @@
 	desc = "A high capacity light machine gun used in UNSC Marine and Army weapons squads. Suffers from some accuracy issues if fired while not deployed."
 	icon_state = "m739"
 	item_state = "m739"
-	fire_sound = 'sound/halo/Assault_Rifle_Fire_New.wav'
+	fire_sound = "NULL"
 	dry_fire_sound = 'sound/weapons/guns/fire/m41a_empty.ogg'
 	unload_sound = 'sound/halo/UNSC_Saw_Reload_Sound_Effect.ogg'
 	reload_sound = 'sound/halo/UNSC_Saw_Reload_Sound_Effect.ogg'
@@ -1126,10 +1128,11 @@
 	desc = "The old service rifle on the UNSC, eventually phased out in favor of the MA37. Now used widely by police and insurrectionst forces."
 	icon_state = "ma3"
 	item_state = "ma3"
-	fire_sound = "sound/halo/MA3firefix.ogg"
+	fire_sound = "sound/halo/ma3fire.ogg"
+	cocked_sound = "sound/halo/ma3bolt.ogg"
 	dry_fire_sound = 'sound/weapons/guns/fire/m41a_empty.ogg'
-	unload_sound = 'sound/weapons/guns/interact/t18_unload.ogg'
-	reload_sound = 'sound/halo/MA3reload.ogg'
+	unload_sound = 'sound/halo/ma3magout.ogg'
+	reload_sound = 'sound/halo/ma3magin.ogg'
 	force = 15
 	fire_delay = 0.2 SECONDS
 	current_mag = /obj/item/ammo_magazine/rifle/ma3
@@ -1142,10 +1145,10 @@
 	desc = "todo"
 	icon_state = "30cal"
 	item_state = "30cal"
-	fire_sound =  'sound/halo/Innie30calfirefix.ogg'
+	fire_sound =  "sound/halo/30calfire.ogg"
 	dry_fire_sound = 'sound/weapons/guns/fire/m41a_empty.ogg'
-	unload_sound = 'sound/halo/Innie30calreload.ogg'
-	reload_sound = 'sound/halo/Innie30calreload.ogg'
+	unload_sound = 'sound/weapons/guns/interact/T42_unload.ogg'
+	reload_sound = 'sound/weapons/guns/interact/T42_reload.ogg'
 	force = 15
 	current_mag = /obj/item/ammo_magazine/rifle/lmg30cal
 	fire_delay = 0.13 SECONDS
@@ -1158,7 +1161,7 @@
 	desc = "An old and experimental model of shotgun that has seen use in the hands of rebels and insurrectionist commandos."
 	icon_state = "kv32"
 	item_state = "kv32"
-	fire_sound = 'sound/halo/Shotgun_Shot_Sound_Effect.ogg'
+	fire_sound = 'sound/halo/kvfire.ogg'
 	dry_fire_sound = 'sound/weapons/guns/fire/m41a_empty.ogg'
 	unload_sound = 'sound/weapons/guns/interact/t18_unload.ogg'
 	reload_sound = 'sound/halo/Shotgun_Pump_Slide.ogg'
