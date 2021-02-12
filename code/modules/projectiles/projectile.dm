@@ -714,11 +714,11 @@ So if we are on the 32th absolute pixel coordinate we are on tile 1, but if we a
 /mob/living/do_projectile_hit(obj/projectile/proj)
 	proj.ammo.on_hit_mob(src, proj)
 	bullet_act(proj)
+
 /mob/living/carbon/do_projectile_hit(obj/projectile/proj)
 	. = ..()
-	if(!(species?.species_flags & NO_BLOOD) && proj.ammo.flags_ammo_behavior & AMMO_BALLISTIC)
+	if(!(species?.species_flags & NO_BLOOD) && (proj.ammo.flags_ammo_behavior & AMMO_BALLISTIC) && !has_overhealth_shield(proj.ammo.armor_type))
 		new /obj/effect/temp_visual/dir_setting/bloodsplatter(loc, proj.dir, get_blood_color())
-
 
 /mob/living/carbon/human/projectile_hit(obj/projectile/proj, cardinal_move, uncrossing)
 	if(get_target_lock(proj.projectile_iff))

@@ -146,6 +146,8 @@
 	to_chat(world, "DEBUG EX_ACT: armor: [armor * 100], b_loss: [b_loss], f_loss: [f_loss]")
 	#endif
 
+	b_loss = check_shields(COMBAT_EXPLOSION_ATTACK, b_loss, "bomb")
+	f_loss = check_shields(COMBAT_EXPLOSION_ATTACK, f_loss, "bomb")
 	take_overall_damage(b_loss, f_loss, armor * 100)
 	UPDATEHEALTH(src)
 
