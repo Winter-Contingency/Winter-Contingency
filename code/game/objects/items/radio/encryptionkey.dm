@@ -144,3 +144,7 @@
 /obj/item/encryptionkey/urfc
 	name = "\improper URFC encryption key"
 	channels = list(RADIO_CHANNEL_URFC = TRUE, RADIO_CHANNEL_INNIE = TRUE)
+
+/obj/item/encryptionkey/covenant
+	name = "Covenant encryption key"
+	channels = list(RADIO_CHANNEL_COVENANT = TRUE)

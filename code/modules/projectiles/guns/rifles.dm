@@ -1171,12 +1171,12 @@
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_LOAD_INTO_CHAMBER
 	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO)
 
-/obj/item/weapon/gun/rifle/ssrs
+/*/obj/item/weapon/gun/rifle/ssrs //will be replaced by gauss probably, commenting this out for now
 	name = "SSRS Modified Subsonic Sniper Rifle System"
 	desc = "The SSRS is a modified SRS pattern sniper rifle. It uses 12.7x55 subsonic rounds. "
 	icon_state = "mercsniper"
 	item_state = "mercsniper"
-	fire_sound = 'sound/halo/Magnum_SOCOM_Fire.wav' //placeholder, probably
+	fire_sound = 'sound/halo/sniperfire.wav' //placeholder, probably
 	dry_fire_sound = 'sound/weapons/guns/fire/m41a_empty.ogg'
 	unload_sound = 'sound/halo/SniperRifleReloadSoundEffect.ogg'
 	reload_sound = 'sound/halo/SniperRifleReloadSoundEffect.ogg'
@@ -1186,6 +1186,7 @@
 	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO)
 	attachable_allowed = list(/obj/item/attachable/scope/unremovable/srs99)
 	starting_attachment_types = list(/obj/item/attachable/scope/unremovable/srs99)
+	*/
 
 //Covenant "rifles" - weapons that have code that will more closely relate to non plasma weapons.
 
@@ -1196,7 +1197,6 @@
 	item_state = "concussion"
 	fire_sound = 'sound/halo/concussionfire.wav'
 	dry_fire_sound = 'sound/weapons/guns/fire/m41a_empty.ogg'
-	unload_sound = 'sound/halo/SniperRifleReloadSoundEffect.ogg'
 	reload_sound = 'sound/halo/concussionreload.wav'
 	current_mag = /obj/item/ammo_magazine/rifle/concussion
 	fire_delay = 0.3 SECONDS
