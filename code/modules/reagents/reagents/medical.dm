@@ -1120,6 +1120,11 @@
 	overdose_threshold = REAGENTS_OVERDOSE / 5
 	overdose_crit_threshold = REAGENTS_OVERDOSE_CRITICAL / 5
 
+/datum/reagent/medicine/biofoam/on_mob_delete(mob/living/L, metabolism)
+	for(var/datum/limb/X in H.limbs)
+		X.remove_limb_flags(LIMB_STABILIZED)
+	return ..()
+
 /datum/reagent/medicine/biofoam/on_mob_life(mob/living/L, metabolism)
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
@@ -1131,6 +1136,8 @@
 					X.update_damages()
 					if(X.update_icon())
 						X.owner.UpdateDamageIcon(1)
+
+			X.remove_limb_flags(LIMB_STABILIZED)
 			if(X.limb_status & LIMB_BROKEN)
 				X.add_limb_flags(LIMB_STABILIZED)
 
