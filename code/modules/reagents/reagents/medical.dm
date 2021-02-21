@@ -1115,6 +1115,7 @@
 	description = "A chemical that stabilizes bones and removes shrapnel from the body."
 	reagent_state = LIQUID
 	color = "#21801e"
+	custom_metabolism = REAGENTS_METABOLISM * 0.1
 
 /datum/reagent/medicine/biofoam/on_mob_add(mob/living/L, metabolism)
 	. = ..()
