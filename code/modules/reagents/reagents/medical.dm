@@ -1110,3 +1110,28 @@
 	color = "#66801e"
 	taste_description = "piss"
 
+/datum/reagent/medicine/biofoam
+	name = "Biofoam"
+	description = "A chemical that stabilizes bones and removes shrapnel from the body."
+	reagent_state = LIQUID
+	color = "#21801e"
+
+/datum/reagent/medicine/biofoam/on_mob_add(mob/living/L, metabolism)
+	. = ..()
+	var/list/shrapnels = L.get_embedded_objects(/obj/item/shard/shrapnel)
+	if(shrapnels.len)
+		for(var/obj/item/shard/shrapnel/S in shrapnels)
+			S.unembed_ourself()
+		to_chat(L, "<span class='notice'>The biofoam removes shrapnel from your body.</span>")
+
+/datum/reagent/medicine/biofoam/on_mob_life(mob/living/L, metabolism)
+	var/mob/living/carbon/human/H = L
+	for(var/datum/limb/X in H.limbs)
+		for(var/datum/wound/W in X.wounds)
+			if(W.internal)
+				W.damage = max(0, W.damage - (5*REM))
+				X.update_damages()
+				if (X.update_icon())
+					X.owner.UpdateDamageIcon(1)
+		X.add_limb_flags(LIMB_STABILIZED)
+	return ..()
