@@ -1119,6 +1119,7 @@
 	custom_metabolism = REAGENTS_METABOLISM * 0.05
 	overdose_threshold = REAGENTS_OVERDOSE / 5
 	overdose_crit_threshold = REAGENTS_OVERDOSE_CRITICAL / 5
+	scannable = TRUE
 
 /datum/reagent/medicine/biofoam/on_mob_delete(mob/living/L, metabolism)
 	if(ishuman(L))
