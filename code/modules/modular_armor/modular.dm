@@ -482,13 +482,13 @@
 	icon_state = "marine_under"
 	item_state = "marine_under"
 
-/obj/item/clothing/suit/modular/innie
+/obj/item/clothing/suit/modular/urf
 	name = "URF Body Armor Harness"
 	desc = "A barebones harness, it can mount and be improved with various pieces of armor and plating."
 	icon_state = "innie_harness"
 	item_state = "innie_harness"
 
-/obj/item/clothing/suit/modular/innie/two
+/obj/item/clothing/suit/modular/urf/alt
 	name = "URF Body Armor Harness"
 	desc = "A barebones harness, it can mount and be improved with various pieces of armor and plating."
 	icon_state = "innie_harness_two"

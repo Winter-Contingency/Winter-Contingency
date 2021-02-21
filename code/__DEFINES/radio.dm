@@ -57,6 +57,10 @@
 #define RADIO_KEY_URFC "x"
 #define RADIO_TOKEN_URFC ":x"
 
+#define RADIO_CHANNEL_COVENANT "BATTLENET"
+#define RADIO_KEY_URFC "c"
+#define RADIO_TOKEN_URFC ":c"
+
 
 #define RADIO_CHANNEL_COLONIST "Colonist"
 #define RADIO_CHANNEL_PMC "NT PMC"
@@ -115,6 +119,7 @@
 
 #define FREQ_UNSCCOMM 1475
 #define FREQ_INNIECOMM 1479
+#define FREQ_BATTLENET 1481
 
 
 #define MAX_FREQ 1489 // ------------------------------------------------------

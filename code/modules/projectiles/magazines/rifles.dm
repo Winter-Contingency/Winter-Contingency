@@ -369,7 +369,7 @@ obj/item/ammo_magazine/rifle/m739
 	max_rounds = 4
 	gun_type = /obj/item/weapon/gun/rifle/kv32
 
-/obj/item/ammo_magazine/rifle/ssrs
+/*/obj/item/ammo_magazine/rifle/ssrs
 	name = "Subsonic Sniper Rifle System Magazine"
 	desc = "A 12.7x55mm magazine containing subsonic cartridges."
 	caliber = "12.7x55mm"
@@ -378,6 +378,7 @@ obj/item/ammo_magazine/rifle/m739
 	default_ammo = /datum/ammo/bullet/rifle
 	max_rounds = 5
 	gun_type = /obj/item/weapon/gun/rifle/ssrs
+*/
 
 	//Covenant magazines
 

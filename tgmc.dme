@@ -324,6 +324,7 @@
 #include "code\datums\jobs\access.dm"
 #include "code\datums\jobs\squads.dm"
 #include "code\datums\jobs\job\clf.dm"
+#include "code\datums\jobs\job\covenant.dm"
 #include "code\datums\jobs\job\deathsquad.dm"
 #include "code\datums\jobs\job\freelancers.dm"
 #include "code\datums\jobs\job\halo.dm"

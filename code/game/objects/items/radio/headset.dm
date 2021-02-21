@@ -595,3 +595,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 /obj/item/radio/headset/gcpd
 	name = "Colonial Police Headset"
 	keyslot = /obj/item/encryptionkey/sec
+
+/obj/item/radio/headset/covenant
+	name = "Covenant Transmitter"
+	keyslot = /obj/item/encryptionkey/covenant
