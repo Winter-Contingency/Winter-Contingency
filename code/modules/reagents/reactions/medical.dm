@@ -184,8 +184,3 @@
 	name = "Biomass"
 	results = list(/datum/reagent/medicine/biomass/xeno = 10)
 	required_reagents = list(/datum/reagent/blood/xeno_blood = 10, /datum/reagent/medicine/biomass = 1)
-
-/datum/chemical_reaction/biofoam
-	name = "Biofoam"
-	results = list(/datum/reagent/medicine/biofoam = 1)
-	required_reagents = list(/datum/reagent/medicine/quickclot = 1, /datum/reagent/medicine/meralyne = 1)

@@ -19,6 +19,7 @@
 	var/inject_mode = HYPOSPRAY_INJECT_MODE_INJECT
 	var/core_name = "hypospray"
 	var/label = null
+	var/inject_delay = 0
 
 /obj/item/reagent_containers/hypospray/advanced
 	name = "advanced hypospray"
@@ -122,6 +123,9 @@
 				"<span class='warning'>You knock [user] to the ground before they could inject you!</span>", null, 5)
 			playsound(user.loc, 'sound/weapons/thudswoosh.ogg', 25, 1, 7)
 			return FALSE
+
+	if(inject_delay && !do_after(user, inject_delay, TRUE, A))
+		return
 
 	var/list/injected = list()
 	for(var/datum/reagent/R in reagents.reagent_list)

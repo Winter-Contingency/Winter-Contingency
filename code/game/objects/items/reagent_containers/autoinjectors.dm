@@ -225,7 +225,8 @@
 /obj/item/reagent_containers/hypospray/autoinjector/biofoam
 	name = "Biofoam autoinjector"
 	desc = "An auto-injector loaded with biofoam."
-	amount_per_transfer_from_this = 4
+	amount_per_transfer_from_this = 5
 	volume = 100
 	icon_state = "autoinjector-6"
 	list_reagents = list(/datum/reagent/medicine/biofoam = 100)
+	inject_delay = 2.5 SECONDS
