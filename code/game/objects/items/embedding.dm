@@ -94,7 +94,7 @@
 	return TRUE
 
 /mob/living/proc/get_embedded_objects(of_type)
-	if(ispath(of_type))
+	if(!ispath(of_type))
 		return embedded_objects
 	var/list/shrapnels = list()
 	for(var/obj/O in embedded_objects)

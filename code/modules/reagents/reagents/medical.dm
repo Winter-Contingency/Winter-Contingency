@@ -1110,3 +1110,60 @@
 	color = "#66801e"
 	taste_description = "piss"
 
+/datum/reagent/medicine/biofoam
+	name = "Biofoam"
+	description = "A chemical that stabilizes bones, remove internal bleeding and removes shrapnel from the body."
+	reagent_state = LIQUID
+	color = "#21801e"
+	can_synth = FALSE
+	custom_metabolism = REAGENTS_METABOLISM * 0.05
+	overdose_threshold = REAGENTS_OVERDOSE / 5
+	overdose_crit_threshold = REAGENTS_OVERDOSE_CRITICAL / 5
+	scannable = TRUE
+
+/datum/reagent/medicine/biofoam/on_mob_delete(mob/living/L, metabolism)
+	if(ishuman(L))
+		var/mob/living/carbon/human/H = L
+		for(var/datum/limb/X in H.limbs)
+			X.remove_limb_flags(LIMB_STABILIZED)
+	return ..()
+
+/datum/reagent/medicine/biofoam/on_mob_life(mob/living/L, metabolism)
+	if(ishuman(L))
+		var/mob/living/carbon/human/H = L
+
+		for(var/datum/limb/X in H.limbs)
+			for(var/datum/wound/W in X.wounds)
+				if(W.internal)
+					W.damage = max(0, W.damage - (4*REM))
+					X.update_damages()
+					if(X.update_icon())
+						X.owner.UpdateDamageIcon(1)
+
+			X.remove_limb_flags(LIMB_STABILIZED)
+			if(X.limb_status & LIMB_BROKEN)
+				X.add_limb_flags(LIMB_STABILIZED)
+
+		var/list/shrapnels = H.get_embedded_objects(/obj/item/shard/shrapnel)
+		if(shrapnels.len)
+			for(var/obj/item/shard/shrapnel/S in shrapnels)
+				S.unembed_ourself()
+			to_chat(L, "<span class='notice'>The biofoam removes shrapnel from your body.</span>")
+
+		for(var/datum/internal_organ/I in H.internal_organs)
+			if(I.damage)
+				I.heal_organ_damage(4*REM)
+
+	return ..()
+
+/datum/reagent/medicine/biofoam/overdose_process(mob/living/L, metabolism)
+	if(ishuman(L))
+		var/mob/living/carbon/human/H = L
+		for(var/datum/internal_organ/I in H.internal_organs)
+			I.take_damage(3*REM, TRUE)
+
+/datum/reagent/medicine/biofoam/overdose_crit_process(mob/living/L, metabolism)
+	if(ishuman(L))
+		var/mob/living/carbon/human/H = L
+		for(var/datum/internal_organ/I in H.internal_organs)
+			I.take_damage(6*REM, TRUE)

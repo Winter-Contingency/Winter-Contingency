@@ -206,7 +206,10 @@
 			if(o.limb_status & LIMB_SPLINTED)
 				msg += "<span class='warning'>[t_He] [t_has] a splint on [t_his] [o.display_name]!</span>\n"
 			if(o.limb_status & LIMB_STABILIZED)
-				msg += "<span class='warning'>[t_He] [t_has] a suit brace stabilizing [t_his] [o.display_name]!</span>\n"
+				if(reagents.has_reagent(/datum/reagent/medicine/biofoam))
+					msg += "<span class='warning'>The biofoam is stabilizing [t_his] [o.display_name]!</span>\n"
+				else
+					msg +=  "<span class='warning'>[t_He] [t_has] a suit brace stabilizing [t_his] [o.display_name]!</span>\n"
 
 	if(holo_card_color)
 		msg += "[t_He] has a [holo_card_color] holo card on [t_his] chest.\n"
