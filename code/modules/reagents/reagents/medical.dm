@@ -1167,3 +1167,30 @@
 		var/mob/living/carbon/human/H = L
 		for(var/datum/internal_organ/I in H.internal_organs)
 			I.take_damage(6*REM, TRUE)
+
+/datum/reagent/medicine/panacea
+	name = "Panacea"
+	description = "."
+	color = "#B865CC"
+	scannable = TRUE
+	overdose_threshold = REAGENTS_OVERDOSE
+	overdose_crit_threshold = REAGENTS_OVERDOSE_CRITICAL
+	custom_metabolism = REAGENTS_METABOLISM * 0.2
+
+/datum/reagent/medicine/panacea/on_mob_life(mob/living/L, metabolism)
+	L.adjustOxyLoss(-REM)
+	L.adjustToxLoss(-0.8*REM)
+	L.heal_limb_damage(1.6*REM, 1.6*REM)
+	L.adjustStaminaLoss(0.5*REM)
+	if(volume > 10)
+		L.reagent_pain_modifier -= PAIN_REDUCTION_LIGHT
+	if(volume > 20)
+		L.reagent_pain_modifier -= PAIN_REDUCTION_LIGHT
+	return ..()
+
+/datum/reagent/medicine/panacea/overdose_process(mob/living/L, metabolism)
+	L.jitter(5)
+	L.adjustBrainLoss(2*REM, TRUE)
+
+/datum/reagent/medicine/panacea/overdose_crit_process(mob/living/L, metabolism)
+	L.apply_damages(6*REM, 6*REM, 6*REM)
