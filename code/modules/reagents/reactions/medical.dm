@@ -188,4 +188,4 @@
 /datum/chemical_reaction/panacea
 	name = "Panacea"
 	results = list(/datum/reagent/medicine/panacea = 1)
-	required_reagents = list(/datum/reagent/medicine/tricordrazine = 1, /datum/reagent/medicine/kelotane = 1)
+	required_reagents = list(/datum/reagent/medicine/tricordrazine = 1, /datum/reagent/covenant_synth = 1)

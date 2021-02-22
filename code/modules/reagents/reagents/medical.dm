@@ -1170,8 +1170,8 @@
 
 /datum/reagent/medicine/panacea
 	name = "Panacea"
-	description = "."
-	color = "#B865CC"
+	description = "A reagent that slows down your body to prevent pain while healing different types of damage."
+	color = "#9e3fb6"
 	scannable = TRUE
 	overdose_threshold = REAGENTS_OVERDOSE
 	overdose_crit_threshold = REAGENTS_OVERDOSE_CRITICAL
@@ -1181,7 +1181,7 @@
 	L.adjustOxyLoss(-REM)
 	L.adjustToxLoss(-0.8*REM)
 	L.heal_limb_damage(1.6*REM, 1.6*REM)
-	L.adjustStaminaLoss(0.5*REM)
+	L.adjustStaminaLoss(0.8*REM)
 	if(volume > 10)
 		L.reagent_pain_modifier -= PAIN_REDUCTION_LIGHT
 	if(volume > 20)

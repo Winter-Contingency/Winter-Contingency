@@ -658,3 +658,8 @@
 /datum/reagent/sterilizine/on_mob_life(mob/living/L, metabolism)
 	L.adjustToxLoss(2*REM)
 	return ..()
+
+/datum/reagent/covenant_synth
+	name = "Covenant synthesizer"
+	description = "A chemical used in many covenant recipes."
+	color = "#9b0af0"
