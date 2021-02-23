@@ -184,3 +184,8 @@
 	name = "Biomass"
 	results = list(/datum/reagent/medicine/biomass/xeno = 10)
 	required_reagents = list(/datum/reagent/blood/xeno_blood = 10, /datum/reagent/medicine/biomass = 1)
+
+/datum/chemical_reaction/panacea
+	name = "Panacea"
+	results = list(/datum/reagent/medicine/panacea = 1)
+	required_reagents = list(/datum/reagent/medicine/tricordrazine = 1, /datum/reagent/covenant_synth = 1)
