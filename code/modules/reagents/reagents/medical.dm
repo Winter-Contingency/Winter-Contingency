@@ -1114,7 +1114,7 @@
 	name = "Biofoam"
 	description = "A chemical that stabilizes bones, remove internal bleeding and removes shrapnel from the body."
 	reagent_state = LIQUID
-	color = "#21801e"
+	color = "#c2bda7"
 	can_synth = FALSE
 	custom_metabolism = REAGENTS_METABOLISM * 0.05
 	overdose_threshold = REAGENTS_OVERDOSE / 5
@@ -1160,7 +1160,7 @@
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
 		for(var/datum/internal_organ/I in H.internal_organs)
-			I.take_damage(3*REM, TRUE)
+			I.take_damage(4*REM, TRUE)
 
 /datum/reagent/medicine/biofoam/overdose_crit_process(mob/living/L, metabolism)
 	if(ishuman(L))
@@ -1171,7 +1171,7 @@
 /datum/reagent/medicine/panacea
 	name = "Panacea"
 	description = "A reagent that slows down your body to prevent pain while healing different types of damage."
-	color = "#9e3fb6"
+	color = "#30a1b8"
 	scannable = TRUE
 	overdose_threshold = REAGENTS_OVERDOSE
 	overdose_crit_threshold = REAGENTS_OVERDOSE_CRITICAL

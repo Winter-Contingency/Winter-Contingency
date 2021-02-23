@@ -44,3 +44,9 @@
 	desc = "A helmet for a Sangheili Minor."
 	icon_state = "general_helm"
 	item_state = "general_helm"
+
+/obj/item/clothing/head/helmet/marine/kigyar
+	name = "Kig-Yar Combat Helmet"
+	desc = "A Kig-Yar helmet containing advanced equipment for reconnaissance and data collection."
+	icon_state = "kigyar"
+	item_state = "kigyar"

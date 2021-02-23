@@ -146,7 +146,6 @@
     'sound/music/space.ogg',
     'sound/music/legend.ogg',
     'sound/music/PAINKILLER.ogg',
-    'sound/music/sunkist.ogg',
     'sound/music/brother.ogg',
     'sound/music/delune.ogg',
     'sound/music/sunday.ogg',
@@ -154,7 +153,6 @@
     'sound/music/coolsong.ogg',
     'sound/music/bordercrossing.ogg',
     'sound/music/fey.ogg',
-    'sound/music/amongus.ogg',
     )
     if(!SSticker?.login_music)
         return FALSE

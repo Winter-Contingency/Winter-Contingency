@@ -223,18 +223,27 @@
 	list_reagents = list(/datum/reagent/medicine/hydrocodone = 100)
 
 /obj/item/reagent_containers/hypospray/autoinjector/biofoam
-	name = "Biofoam autoinjector"
-	desc = "An auto-injector loaded with biofoam."
+	name = "biofoam canister"
+	desc = "An autoinjector containing life-saving biofoam. Stitches damaged internal organs, repairs cut arteries, and holds broken bones in place. A large warning on the canister reads **DO NOT ADMINISTER MORE THAN ONE DOSE OF BIOFOAM TO PATIENT**"
 	amount_per_transfer_from_this = 5
-	volume = 100
-	icon_state = "autoinjector-6"
-	list_reagents = list(/datum/reagent/medicine/biofoam = 100)
+	volume = 25
+	icon_state = "biofoam"
+	list_reagents = list(/datum/reagent/medicine/biofoam = 25)
+	inject_delay = 2.5 SECONDS
+
+/obj/item/reagent_containers/hypospray/autoinjector/biofoam/small
+	name = "small biofoam canister"
+	desc = "An single-use canister containing life-saving biofoam. Stitches damaged internal organs, mends cut arteries, and holds broken bones in place. A large warning on the canister reads **DO NOT ADMINISTER MORE THAN ONE DOSE OF BIOFOAM TO PATIENT**"
+	amount_per_transfer_from_this = 5
+	volume = 5
+	icon_state = "biofoam_small"
+	list_reagents = list(/datum/reagent/medicine/biofoam = 5)
 	inject_delay = 2.5 SECONDS
 
 /obj/item/reagent_containers/hypospray/autoinjector/panacea
 	name = "Panacea autoinjector"
-	desc = "An auto-injector loaded with panacea."
+	desc = "A general healing and painkilling chemical used by Covenant forces. The painkilling chemicals within this injector inhibit advanced muscle movements, and result in a drowsy patient on most occasions."
 	amount_per_transfer_from_this = 5
-	volume = 100
+	volume = 15
 	icon_state = "autoinjector-7"
-	list_reagents = list(/datum/reagent/medicine/panacea = 100)
+	list_reagents = list(/datum/reagent/medicine/panacea = 15)

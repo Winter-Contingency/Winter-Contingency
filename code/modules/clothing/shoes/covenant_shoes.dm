@@ -46,3 +46,10 @@
 	desc = "A pair of greaves for Sangheili Generals."
 	icon_state = "general_legs"
 	item_state = "general_legs"
+
+/obj/item/clothing/shoes/covenant/kigyar
+	name = "Kig-Yar greaves"
+	desc = "A pair of greaves for Kig-Yar infantry.."
+	icon_state = "kigyar"
+	item_state = "kigyar"
+

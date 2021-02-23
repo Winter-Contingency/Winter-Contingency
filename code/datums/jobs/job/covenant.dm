@@ -96,7 +96,7 @@
 
 	id = /obj/item/card/id
 	ears = /obj/item/radio/headset/covenant
-	w_uniform = /obj/item/clothing/under/covenant/sangheili
+	w_uniform = /obj/item/clothing/under/sangheili
 	shoes = /obj/item/clothing/shoes/covenant/sangheili/minor
 	wear_suit = /obj/item/clothing/suit/covenant/sangheili/minor
 	gloves = /obj/item/clothing/gloves/covenant/sangheili/minor
@@ -109,7 +109,7 @@
 
 	id = /obj/item/card/id
 	ears = /obj/item/radio/headset/covenant
-	w_uniform = /obj/item/clothing/under/covenant/sangheili
+	w_uniform = /obj/item/clothing/under/sangheili
 	shoes = /obj/item/clothing/shoes/covenant/sangheili/ranger
 	wear_suit = /obj/item/clothing/suit/covenant/sangheili/ranger
 	gloves = /obj/item/clothing/gloves/covenant/sangheili/ranger
@@ -122,7 +122,7 @@
 
 	id = /obj/item/card/id
 	ears = /obj/item/radio/headset/covenant
-	w_uniform = /obj/item/clothing/under/covenant/sangheili
+	w_uniform = /obj/item/clothing/under/sangheili
 	shoes = /obj/item/clothing/shoes/covenant/sangheili/officer
 	wear_suit = /obj/item/clothing/suit/covenant/sangheili/officer
 	gloves = /obj/item/clothing/gloves/covenant/sangheili/officer
@@ -136,7 +136,7 @@
 
 	id = /obj/item/card/id
 	ears = /obj/item/radio/headset/covenant
-	w_uniform = /obj/item/clothing/under/covenant/sangheili
+	w_uniform = /obj/item/clothing/under/sangheili
 	shoes = /obj/item/clothing/shoes/covenant/sangheili/specops
 	wear_suit = /obj/item/clothing/suit/covenant/sangheili/specops
 	gloves = /obj/item/clothing/gloves/covenant/sangheili/specops
@@ -149,7 +149,7 @@
 
 	id = /obj/item/card/id
 	ears = /obj/item/radio/headset/covenant
-	w_uniform = /obj/item/clothing/under/covenant/sangheili
+	w_uniform = /obj/item/clothing/under/sangheili
 	shoes = /obj/item/clothing/shoes/covenant/sangheili/ultra
 	wear_suit = /obj/item/clothing/suit/covenant/sangheili/ultra
 	gloves = /obj/item/clothing/gloves/covenant/sangheili/ultra
@@ -163,10 +163,51 @@
 
 	id = /obj/item/card/id
 	ears = /obj/item/radio/headset/covenant
-	w_uniform = /obj/item/clothing/under/covenant/sangheili
+	w_uniform = /obj/item/clothing/under/sangheili
 	shoes = /obj/item/clothing/shoes/covenant/sangheili/general
 	wear_suit = /obj/item/clothing/suit/covenant/sangheili/general
 	gloves = /obj/item/clothing/gloves/covenant/sangheili/general
 	head = /obj/item/clothing/head/covenant/sangheili/general
 	suit_store = /obj/item/weapon/gun/energy/lasgun/plasma/rifle
 	r_store = /obj/item/weapon/energy/sword/covenant
+
+/datum/job/covenant/kigyar
+	selection_color = "#944FBD"
+	job_category = JOB_CAT_COVENANT
+	faction = FACTION_COVENANT
+
+/datum/job/covenant/kigyar
+
+/datum/job/covenant/kigyar/return_spawn_type(datum/preferences/prefs)
+	if(prefs && prefs.species == "Kig-Yar")
+		return /mob/living/carbon/human/species/covenant/sangheili
+
+
+/datum/job/covenant/kigyar/radio_help_message(mob/M)
+	. = ..()
+	to_chat(M, {"\nYou are a Kig-Yar within the offensive wing of the Covenant Empire. You are an expert in marksmanship, and excel with defensive tactics."})
+
+datum/job/covenant/kigyar
+	title = "Kig-Yar Trooper"
+	comm_title = "Kig.Minor"
+	access = list(ACCESS_COVENANT, ACCESS_COVENANT_SANGMINOR, ACCESS_MARINE_DROPSHIP)
+	minimal_access = list(ACCESS_COVENANT, ACCESS_COVENANT_KIGYAR, ACCESS_MARINE_DROPSHIP)
+	max_positions = -1 //infinite
+	supervisors = "Sangheili"
+	outfit = /datum/outfit/job/covenant/kigyar
+	display_order = JOB_DISPLAY_ORDER_COVENANT_KIGYAR
+	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST|JOB_FLAG_PROVIDES_SQUAD_HUD
+
+/datum/outfit/job/covenant/kigyar
+	name = "Kig-Yar Trooper"
+	jobtype = /datum/job/covenant/kigyar
+
+	id = /obj/item/card/id
+	ears = /obj/item/radio/headset/covenant
+	w_uniform = /obj/item/clothing/under/kigyar
+	shoes = /obj/item/clothing/shoes/covenant/kigyar
+	wear_suit = /obj/item/clothing/suit/kigyar
+	head = /obj/item/clothing/head/helmet/marine/kigyar
+
+
+

@@ -2,7 +2,6 @@
 
 /obj/item/clothing/suit/covenant
 
-
 //	var/list/species_allowed = list("Sangheili","Unggoy", "Kigyar")
 
 /obj/item/clothing/suit/covenant/sangheili
@@ -73,3 +72,10 @@
 	icon_state = "general_chest"
 	item_state = "general_chest"
 	shield_force = 450
+
+/obj/item/clothing/suit/kigyar
+	name = "Kig-Yar Combat Harness"
+	desc = "A tight fitting harness issued to Kig-Yar soldiers within the Covenant Empire."
+	icon_state = "kigyar"
+	item_state = "kigyar"
+

@@ -2,9 +2,12 @@
 
 
 
-/obj/item/clothing/under/covenant
-	name = "covenant undersuit"
+/obj/item/clothing/under/sangheili
+	name = "Sangheili undersuit"
+	desc = "A hearty, strong, and elegant undersuit given to Sangheili warriors within the Covenant Empire."
 	icon = 'icons/obj/clothing/covenant/sangheili.dmi'
+	icon_state = "sangheili_suit"
+	item_state = "sangheili_suit"
 	sprite_sheet_id = 1
 	flags_armor_protection = CHEST|GROIN|LEGS|ARMS
 	flags_cold_protection = CHEST|GROIN|LEGS|ARMS
@@ -27,8 +30,10 @@
 
 //	var/list/species_allowed = list("Sangheili","Unggoy", "Kigyar")
 
-/obj/item/clothing/under/covenant/sangheili
-	name = "Sangheili undersuit"
-	icon_state = "sangheili_suit"
-	item_state = "sangheili_suit"
-//	species_allowed = "Sangheili"
+/obj/item/clothing/under/kigyar
+	name = "Kig-Yar undersuit"
+	desc = "A basic undersuit, issued to Kig-Yar within the Covenat Empire."
+	siemens_coefficient = 0.9
+	icon_state = "kigyar_uniform"
+	soft_armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 5, "bio" = 5, "rad" = 5, "fire" = 5, "acid" = 5)
+	rollable_sleeves = TRUE
