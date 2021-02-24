@@ -915,3 +915,19 @@
 	max_storage_space = 21
 	max_w_class = 4
 	can_hold = list(/obj/item/ammo_magazine/rocket)
+
+/obj/item/storage/backpack/satchel/unggoy
+	name = "Methane tank (minor)"
+	desc = "A large and bulky tank that contains methane that Unggoy need to survive. Has a small pouch for storage."
+	icon_state = "unggoy_minor"
+	worn_accessible = TRUE
+	storage_slots = null
+	max_storage_space = 10
+
+/obj/item/storage/backpack/satchel/unggoy/major
+	name = "Methane tank (major)"
+	desc = "A large and bulky tank that contains methane that Unggoy need to survive. Has a small pouch for storage."
+	icon_state = "unggoy_major"
+	worn_accessible = TRUE
+	storage_slots = null
+	max_storage_space = 10

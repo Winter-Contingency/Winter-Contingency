@@ -1030,8 +1030,7 @@
 	icobase = 'icons/halo/mob/r_sangheili.dmi'
 	deform = 'icons/halo/mob/r_sangheili.dmi'
 	unarmed_type = /datum/unarmed_attack/punch/strong //stronger punches
-//	count_human = TRUE I think this has something to do with what clothing they can wear, but I'm unsure.
-
+	count_human = TRUE
 	speech_sounds = list('sound/halo/worting.ogg')
 	speech_chance = 20
 
@@ -1056,7 +1055,7 @@
 	icobase = 'icons/halo/mob/r_unggoy.dmi'
 	deform = 'icons/halo/mob/r_unggoy.dmi'
 	unarmed_type = /datum/unarmed_attack/punch
-//	count_human = TRUE
+	count_human = TRUE
 
 	eyes = "blank_eyes"
 	blood_color = "#40f5ef"
@@ -1067,8 +1066,8 @@
 	screams = list(MALE = "unggoyscream", FEMALE = "unggoyscream")
 	paincries = list(MALE = "unggoyscream", FEMALE = "unggoyscream")
 	goredcries = list(MALE = "unggoyscream", FEMALE = "unggoyscream")
-	gasps = list(MALE = "male_gasp", FEMALE = "female_gasp")
-	coughs = list(MALE = "male_cough", FEMALE = "female_cough")
+	gasps = list(MALE = "male_gasp", FEMALE = "male_gasp")
+	coughs = list(MALE = "male_cough", FEMALE = "male_cough")
 	burstscreams = list(MALE = "unggoyscream", FEMALE = "unggoyscream")
 
 
@@ -1079,7 +1078,7 @@
 	icobase = 'icons/halo/mob/r_kig-yar.dmi'
 	deform = 'icons/halo/mob/r_kig-yar.dmi'
 	unarmed_type = /datum/unarmed_attack/punch
-//	count_human = TRUE
+	count_human = TRUE
 
 	eyes = "blank_eyes"
 	blood_color = "#82B9D9"
@@ -1090,8 +1089,8 @@
 	screams = list(MALE = "kigscream", FEMALE = "kigscream")
 	paincries = list(MALE = "kigscream", FEMALE = "kigscream")
 	goredcries = list(MALE = "kigscream", FEMALE = "kigscream")
-	gasps = list(MALE = "male_gasp", FEMALE = "female_gasp")
-	coughs = list(MALE = "male_cough", FEMALE = "female_cough")
+	gasps = list(MALE = "male_gasp", FEMALE = "male_gasp")
+	coughs = list(MALE = "male_cough", FEMALE = "male_cough")
 	burstscreams = list(MALE = "kigscream", FEMALE = "kigscream")
 
 

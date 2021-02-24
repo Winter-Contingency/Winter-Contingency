@@ -37,3 +37,11 @@
 	icon_state = "kigyar_uniform"
 	soft_armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 5, "bio" = 5, "rad" = 5, "fire" = 5, "acid" = 5)
 	rollable_sleeves = TRUE
+
+/obj/item/clothing/under/unggoy
+	name = "Unggoy undersuit"
+	desc = "A cheap undersuit, issued to Unggoy within the Covenat Empire."
+	siemens_coefficient = 0.9
+	icon_state = "unggoy_uniform"
+	soft_armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 5, "bio" = 5, "rad" = 5, "fire" = 5, "acid" = 5)
+	rollable_sleeves = FALSE

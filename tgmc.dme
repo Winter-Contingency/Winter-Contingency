@@ -327,7 +327,7 @@
 #include "code\datums\jobs\job\covenant.dm"
 #include "code\datums\jobs\job\deathsquad.dm"
 #include "code\datums\jobs\job\freelancers.dm"
-#include "code\datums\jobs\job\halo.dm"
+#include "code\datums\jobs\job\halo_humans.dm"
 #include "code\datums\jobs\job\imperium.dm"
 #include "code\datums\jobs\job\job.dm"
 #include "code\datums\jobs\job\job_exp.dm"

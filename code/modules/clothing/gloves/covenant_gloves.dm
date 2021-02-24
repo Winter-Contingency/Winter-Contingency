@@ -53,3 +53,14 @@
 	desc = "Gauntlets for a Sangheili General."
 	icon_state = "general_gloves"
 	item_state = "general_gloves"
+
+/obj/item/clothing/gloves/covenant/unggoy //need to make this unremovable
+	name = "Armored Hands"
+	desc = "Coming from the harsh world of Balaho, Unggoy naturally developed tougher skin that is more resistant to the elements than other species."
+	icon_state = "unggoy"
+	item_state = "unggoy"
+
+/obj/item/clothing/gloves/covenant/unggoy/dropped(mob/user as mob)
+	. = ..()
+	if(isnull(src.gc_destroyed))
+		qdel(src)

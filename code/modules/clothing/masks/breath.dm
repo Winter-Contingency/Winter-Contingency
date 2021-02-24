@@ -57,6 +57,16 @@
 	flags_inventory = COVERMOUTH|ALLOWREBREATH
 	flags_inv_hide = HIDELOWHAIR
 
+/obj/item/clothing/mask/rebreather/unggoy
+	name = "Unggoy breath mask"
+	desc = "A close-fitting device that transfers methane to Unggoy bodies."
+	icon_state = "unggoy_rebreather"
+	item_state = "unggoy_rebreather"
+	w_class = WEIGHT_CLASS_SMALL
+	flags_armor_protection = 10
+	flags_inventory = COVERMOUTH|ALLOWREBREATH
+	flags_inv_hide = HIDELOWHAIR
+
 /obj/item/clothing/mask/rebreather/scarf
 	name = "heat absorbent coif"
 	desc = "A close-fitting cap that covers the top, back, and sides of the head. Can also be adjusted to cover the lower part of the face so it keeps the user warm in harsh conditions."

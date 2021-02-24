@@ -79,3 +79,20 @@
 	icon_state = "kigyar"
 	item_state = "kigyar"
 
+/obj/item/clothing/suit/unggoy
+	name = "Unggoy Combat Harness (minor)"
+	desc = "A loose and frail set of armor issued to Unggoy Minors."
+	icon_state = "unggoy_minor"
+	item_state = "unggoy_minor"
+
+/obj/item/clothing/suit/unggoy/minor
+	name = "Unggoy Combat Harness (minor)"
+	desc = "A loose and frail set of armor issued to Unggoy Minors."
+	icon_state = "unggoy_minor"
+	item_state = "unggoy_minor"
+
+/obj/item/clothing/suit/unggoy/major
+	name = "Unggoy Combat Harness (major)"
+	desc = "A loose and frail set of armor issued to Unggoy Majors."
+	icon_state = "unggoy_major"
+	item_state = "unggoy_major"
