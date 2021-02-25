@@ -43,7 +43,7 @@
 		round_finished = UNSC_VICTORY
 		return TRUE
 	if(unsc_tickets <= 0)
-		round_finished = INSURRECTION_VICTORY
+		round_finished = URF_VICTORY
 		return TRUE
 	return FALSE
 
@@ -60,7 +60,7 @@
 		if(UNSC_VICTORY)
 			S = sound(pick('sound/theme/neutral_hopeful1.ogg','sound/theme/neutral_hopeful2.ogg'), channel = CHANNEL_CINEMATIC)
 			F = "UNSC"
-		if(INSURRECTION_VICTORY)
+		if(URF_VICTORY)
 			S = sound(pick('sound/theme/neutral_hopeful1.ogg','sound/theme/neutral_hopeful2.ogg'), channel = CHANNEL_CINEMATIC)
 			F = "URF"
 
