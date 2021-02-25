@@ -50,7 +50,7 @@ var/list/obj/machinery/capbeacon/cps = list()
 		priority_announce("[H.faction] has captured the UNSC Navigational Beacon at [get_area(loc)].","UNSC Navigation System")
 		audible_message("<b>[H.faction] has captured the UNSC Navigational Beacon at [get_area(loc)]!<b>")
 		update_desc()
-		var/datum/game_mode/war/W = SSticker.mode
+		var/datum/game_mode/liberation/W = SSticker.mode
 		if(istype(W))
 			W.cap_tickets(src)
 	return 
