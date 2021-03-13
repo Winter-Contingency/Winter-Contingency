@@ -7,9 +7,12 @@ var/list/obj/machinery/capbeacon/cps = list()
 	desc = "A beacon used by the UNSC Navigational Beacon for navigational purposes. Hacking it with your tablet would benefit your team."
 	icon = 'icons/obj/machines/comm_tower.dmi'
 	icon_state = "comm_tower"
-	density = 1
-	anchored = 1
-	var/controlled_by	= null
+	density = TRUE
+	anchored = TRUE
+	var/time_to_hack = 200 // How much attackby() delay beacon will get//
+	var/capture_points = 5 // How much point faction will get upon capturing//
+	var/ppm = 8 // Points per minute, This can be less than 1 if you want less tickets//
+	var/controlled_by
 
 /obj/machinery/capbeacon/New()
 	..()
@@ -45,12 +48,12 @@ var/list/obj/machinery/capbeacon/cps = list()
 
 	priority_announce("[H.faction] has began capturing the UNSC Navigational Beacon at [get_area(loc)].","UNSC Navigation System")
 	audible_message("<b>[H.faction] has began capturing the UNSC Navigational Beacon [get_area(loc)]!<b>")
-	if(do_after(H, 200, 1, src))
+	if(do_after(H, time_to_hack, 1, src))
 		controlled_by = H.faction
 		priority_announce("[H.faction] has captured the UNSC Navigational Beacon at [get_area(loc)].","UNSC Navigation System")
 		audible_message("<b>[H.faction] has captured the UNSC Navigational Beacon at [get_area(loc)]!<b>")
 		update_desc()
 		var/datum/game_mode/liberation/W = SSticker.mode
 		if(istype(W))
-			W.cap_tickets(src)
-	return 
+			W.cap_tickets(controlled_by, capture_points)
+	return

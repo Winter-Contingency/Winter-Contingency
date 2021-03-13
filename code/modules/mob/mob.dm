@@ -48,6 +48,12 @@
 		stat("Current Map:", length(SSmapping.configs) ? SSmapping.configs[GROUND_MAP].map_name : "Loading...")
 		stat("Current Ship:", length(SSmapping.configs) ? SSmapping.configs[SHIP_MAP].map_name : "Loading...")
 
+		//I know i'm going to hell for this one//
+		var/datum/game_mode/war/W = SSticker.mode
+		if(istype(W))
+			stat(FACTION_INSURRECTION, round(W.insurrectionist_tickets))
+			stat(FACTION_UNSC, round(W.unsc_tickets))
+
 	if(statpanel("Game"))
 		if(client)
 			stat("Ping:", "[round(client.lastping, 1)]ms (Average: [round(client.avgping, 1)]ms)")
