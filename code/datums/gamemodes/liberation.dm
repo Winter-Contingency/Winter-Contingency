@@ -2,18 +2,6 @@
 #define UNSC_VICTORY "UNSC_VICTORY"
 #define INSURRECTIONIST_VICTORY "INSURRECTIONIST_VICTORY"
 
-//       from port         //
-//creds to tennessee
-// KOSMNAZ_VICTORY  TO UNSC_VICTORY
-// NATSF_VICTORY TO INSURRECTIONIST_VICTORY
-
-// FACTION_USSR to FACTION_UNSC
-// FACTION_NATSF to FACTION_INSURRECTION
-
-// kosmnaz_tickets to unsc_tickets
-// natsf_tickets to insurrectionist_tickets
-// --------------------------- //
-
 /datum/game_mode/liberation
 	name = "Liberation"
 	config_tag = "Liberation"
