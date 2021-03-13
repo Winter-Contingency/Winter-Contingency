@@ -31,17 +31,12 @@ var/list/obj/machinery/capbeacon/cps = list()
 	else
 		desc = "A beacon used by the UNSC Navigational Beacon for navigational purposes. Hacking it with your tablet would benefit your team. This one is not under anyone's control."
 
-
-/obj/machinery/capbeacon/attackby(obj/item/O, var/mob/living/carbon/human/H)
-	if(!istype(H))
-		to_chat(H, "<span class = 'warning'>You are not a human.</span>")
+/obj/machinery/capbeacon/attack_hand(mob/living/user)
+	. = ..()
+	if(!ishuman(user))
+		to_chat(user, "<span class = 'warning'>You are not a human.</span>")
 		return
-
-	var/obj/item/hud_tablet/T = O
-	if(!istype(T))
-		to_chat(H, "<span class = 'warning'>You need to use a tablet to interface with \the [src]</span>")
-		return
-
+	var/mob/living/carbon/human/H = user
 	if(controlled_by == H.faction)
 		to_chat(H, "<span class = 'notice'>[get_area(loc)] is already captured by your faction!</span>")
 		return
@@ -56,4 +51,3 @@ var/list/obj/machinery/capbeacon/cps = list()
 		var/datum/game_mode/liberation/W = SSticker.mode
 		if(istype(W))
 			W.cap_tickets(controlled_by, capture_points)
-	return
