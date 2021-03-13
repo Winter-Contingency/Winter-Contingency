@@ -49,7 +49,7 @@
 		stat("Current Ship:", length(SSmapping.configs) ? SSmapping.configs[SHIP_MAP].map_name : "Loading...")
 
 		//I know i'm going to hell for this one//
-		var/datum/game_mode/war/W = SSticker.mode
+		var/datum/game_mode/liberation/W = SSticker.mode
 		if(istype(W))
 			stat(FACTION_INSURRECTION, round(W.insurrectionist_tickets))
 			stat(FACTION_UNSC, round(W.unsc_tickets))
