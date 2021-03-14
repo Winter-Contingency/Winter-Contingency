@@ -68,25 +68,25 @@
 			winner = FACTION_UNSC
 			if(unsc_tickets / initial(unsc_tickets) >= 0.6)
 				win_condition = "OVERWHELMING VICTORY!"
-				S = sound(pick('sound/theme/neutral_hopeful1.ogg','sound/theme/neutral_hopeful2.ogg'), channel = CHANNEL_CINEMATIC)
+				S = sound(pick('sound/theme/unscvictory.ogg','sound/theme/unscvictory2.ogg'), channel = CHANNEL_CINEMATIC)
 			else if(unsc_tickets / initial(unsc_tickets) <= 0.4)
 				win_condition = "PHYRRIC VICTORY"
-				S = sound(pick('sound/theme/neutral_hopeful1.ogg','sound/theme/neutral_hopeful2.ogg'), channel = CHANNEL_CINEMATIC)
+				S = sound(pick('sound/theme/unscvictory.ogg','sound/theme/unscvictory2.ogg'), channel = CHANNEL_CINEMATIC)
 			else
 				win_condition = "VICTORY"
-				S = sound(pick('sound/theme/neutral_hopeful1.ogg','sound/theme/neutral_hopeful2.ogg'), channel = CHANNEL_CINEMATIC)
+				S = sound(pick('sound/theme/unscvictory.ogg','sound/theme/unscvictory2.ogg'), channel = CHANNEL_CINEMATIC)
 
 		if(INSURRECTIONIST_VICTORY)
 			winner = FACTION_INSURRECTION
 			if(insurrectionist_tickets / initial(insurrectionist_tickets) >= 0.6)
 				win_condition = "OVERWHELMING VICTORY!"
-				S = sound(pick('sound/theme/neutral_hopeful1.ogg','sound/theme/neutral_hopeful2.ogg'), channel = CHANNEL_CINEMATIC)
+				S = sound(pick('sound/theme/urfvictory.ogg','sound/theme/urfvictory2.ogg'), channel = CHANNEL_CINEMATIC)
 			else if(insurrectionist_tickets / initial(insurrectionist_tickets) <= 0.4)
 				win_condition = "PHYRRIC VICTORY"
-				S = sound(pick('sound/theme/neutral_hopeful1.ogg','sound/theme/neutral_hopeful2.ogg'), channel = CHANNEL_CINEMATIC)
+				S = sound(pick('sound/theme/urfvictory.ogg','sound/theme/urfvictory2.ogg'), channel = CHANNEL_CINEMATIC)
 			else
 				win_condition = "VICTORY"
-				S = sound(pick('sound/theme/neutral_hopeful1.ogg','sound/theme/neutral_hopeful2.ogg'), channel = CHANNEL_CINEMATIC)
+				S = sound(pick('sound/theme/urfvictory.ogg','sound/theme/urfvictory2.ogg'), channel = CHANNEL_CINEMATIC)
 
 	to_chat(world, "<span class='round_header'>|Round Complete|</span>")
 	to_chat(world, "<span class='round_body'>The [winner] is victorious.</span>")
