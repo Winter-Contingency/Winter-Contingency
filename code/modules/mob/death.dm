@@ -51,6 +51,9 @@
 	if(!QDELETED(src) && gibbing)
 		qdel(src)
 
+/mob/living/death()
+	. = ..()
+	SSticker.mode.on_mob_death(src)
 
 /mob/proc/on_death()
 	SHOULD_CALL_PARENT(TRUE) // no exceptions

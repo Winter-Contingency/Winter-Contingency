@@ -28,6 +28,8 @@
 /datum/game_mode/New()
 	initialize_emergency_calls()
 
+/datum/game_mode/proc/on_mob_death(mob/living/M)
+	return
 
 /datum/game_mode/proc/announce()
 	return TRUE
