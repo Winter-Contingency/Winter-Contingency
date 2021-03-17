@@ -345,7 +345,7 @@ Example config:
 		var/ct = initial(M.config_tag)
 		if(ct && ct == mode_name)
 			return new T
-	return new /datum/game_mode/extended()
+	return new /datum/game_mode/liberation()
 
 
 /datum/controller/configuration/proc/LoadChatFilter()
