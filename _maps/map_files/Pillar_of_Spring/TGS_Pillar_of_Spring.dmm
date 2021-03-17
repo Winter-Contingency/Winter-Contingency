@@ -53,10 +53,6 @@
 	dir = 8
 	},
 /area/mainship/hallways/hangar/droppod)
-"aj" = (
-/obj/structure/ship_ammo/rocket/banshee,
-/turf/open/floor/mainship/sterile/plain,
-/area/mainship/hallways/hangar)
 "ak" = (
 /obj/effect/decal/warning_stripes/thin{
 	dir = 4
@@ -143,10 +139,6 @@
 	},
 /turf/open/floor/mainship/mono,
 /area/mainship/hallways/hangar)
-"aC" = (
-/obj/structure/ship_ammo/minirocket,
-/turf/open/floor/mainship/sterile/plain,
-/area/mainship/hallways/hangar)
 "aD" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 1
@@ -161,10 +153,6 @@
 /turf/open/floor/mainship/cargo/arrow{
 	dir = 8
 	},
-/area/mainship/hallways/hangar)
-"aG" = (
-/obj/structure/ship_ammo/rocket/banshee,
-/turf/open/floor/mainship/sterile/plain,
 /area/mainship/hallways/hangar)
 "aH" = (
 /obj/structure/cable,
@@ -860,10 +848,6 @@
 /obj/machinery/body_scanconsole,
 /turf/open/floor/mainship/sterile/dark,
 /area/mainship/medical/lower_medical)
-"cA" = (
-/obj/structure/ship_ammo/rocket/banshee,
-/turf/open/floor/mainship/sterile/plain,
-/area/mainship/hallways/hangar)
 "cB" = (
 /turf/closed/wall/mainship/outer,
 /area/mainship/hallways/port_umbilical)
@@ -9683,10 +9667,6 @@
 	dir = 4
 	},
 /turf/open/floor/mainship/cargo,
-/area/mainship/hallways/hangar)
-"Gh" = (
-/obj/structure/ship_ammo/minirocket,
-/turf/open/floor/mainship/sterile/plain,
 /area/mainship/hallways/hangar)
 "Gi" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
