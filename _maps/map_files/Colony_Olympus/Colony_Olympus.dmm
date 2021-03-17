@@ -1363,10 +1363,6 @@
 	},
 /turf/open/floor/tile/dark,
 /area/prison/security)
-"mg" = (
-/obj/effect/landmark/weapon_spawn/halo_colony_weapon_spawn,
-/turf/open/floor/asteroid,
-/area/swordbase/ground/outdoors)
 "mh" = (
 /obj/item/reagent_containers/syringe/drugs,
 /turf/open/ground/grass,
@@ -1593,11 +1589,6 @@
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/open/ground/grass,
 /area/swordbase/ground/outdoors)
-"oz" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/weapon_spawn/halo_colony_weapon_spawn,
-/turf/open/floor/asteroid,
-/area/swordbase/ground/outdoors)
 "oH" = (
 /obj/item/stack/rods,
 /turf/open/floor/plating/asteroidplating,
@@ -1680,7 +1671,6 @@
 /obj/structure/bed/chair/wood/wings{
 	dir = 8
 	},
-/obj/effect/landmark/corpsespawner/colonist,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/plating/ground/dirt2,
 /area/swordbase/ground/outdoors)
@@ -1908,7 +1898,6 @@
 /obj/structure/bed/chair/wood/wings{
 	dir = 8
 	},
-/obj/effect/landmark/corpsespawner/colonist,
 /turf/open/ground/grass,
 /area/swordbase/ground/outdoors)
 "rn" = (
@@ -1983,10 +1972,6 @@
 /obj/effect/decal/warning_stripes,
 /turf/open/floor/plating,
 /area/swordbase/ground/outdoors)
-"sg" = (
-/obj/effect/landmark/start/job/halo_civ_doctor,
-/turf/open/floor/mainship/sterile/dark,
-/area/swordbase/ground/medsci)
 "sj" = (
 /obj/item/stack/rods,
 /turf/open/floor/tile/dark,
@@ -2557,10 +2542,6 @@
 /obj/machinery/chem_dispenser/soda,
 /turf/open/floor/wood,
 /area/ice_colony/surface/bar)
-"xa" = (
-/obj/effect/landmark/start/job/halo_civ_chef,
-/turf/open/floor/freezer,
-/area/swordbase/ground/kitchen)
 "xg" = (
 /turf/open/floor/carpet,
 /area/swordbase/ground/kitchen)
@@ -3717,12 +3698,6 @@
 /area/swordbase/ground/hydro)
 "HM" = (
 /obj/structure/closet/crate/ammo,
-/obj/item/weapon/gun/rifle/ma3{
-	current_mag = none
-	},
-/obj/item/weapon/gun/rifle/ma3{
-	current_mag = none
-	},
 /turf/open/floor,
 /area/swordbase/ground/inniecave)
 "HN" = (
@@ -4317,10 +4292,6 @@
 /obj/structure/mineral_door/wood,
 /turf/open/floor/plating/ground/dirt2,
 /area/swordbase/ground/outdoors)
-"MR" = (
-/obj/effect/landmark/corpsespawner/pmc,
-/turf/open/ground,
-/area/swordbase/ground/outdoors)
 "MS" = (
 /obj/structure/table/mainship,
 /obj/item/folder,
@@ -4396,9 +4367,6 @@
 /area/swordbase/ground/medsci)
 "Nz" = (
 /obj/structure/table,
-/obj/item/ammo_magazine/rifle/ma3,
-/obj/item/ammo_magazine/rifle/ma3,
-/obj/item/ammo_magazine/rifle/ma3,
 /obj/item/binoculars,
 /turf/open/floor/plating/ground/dirt2,
 /area/swordbase/ground/outdoors)
@@ -4895,10 +4863,6 @@
 	dir = 8
 	},
 /area/prison/security)
-"Sk" = (
-/obj/effect/landmark/weapon_spawn/halo_colony_weapon_spawn,
-/turf/open/ground,
-/area/swordbase/ground/outdoors)
 "Sq" = (
 /obj/structure/closet/crate/miningcar,
 /obj/item/stack/sheet/mineral/iron{
@@ -5572,10 +5536,6 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/prison/kitchen,
 /area/swordbase/ground/kitchen)
-"Yz" = (
-/obj/effect/landmark/start/job/halo_civ_colonist,
-/turf/open/floor/plating/asteroidfloor,
-/area/desert_dam/building/mining)
 "YC" = (
 /turf/closed/wall/r_wall,
 /area/prison/security/head)
@@ -10815,7 +10775,7 @@ RK
 RK
 ep
 hA
-sg
+RK
 RK
 ep
 Gx
@@ -13678,7 +13638,7 @@ VQ
 VQ
 VQ
 VQ
-mg
+de
 cZ
 eC
 VQ
@@ -14076,7 +14036,7 @@ VQ
 VQ
 bR
 de
-oz
+Zg
 de
 de
 VQ
@@ -16030,7 +15990,7 @@ VQ
 gJ
 lb
 Jg
-Yz
+Jd
 Cc
 Jd
 Jd
@@ -16928,7 +16888,7 @@ FU
 io
 gz
 im
-xa
+Tv
 Tv
 VB
 gz
@@ -16983,10 +16943,10 @@ VQ
 VQ
 VQ
 VQ
-MR
+jw
 PV
 Rm
-Sk
+jw
 VQ
 VQ
 VQ
@@ -17278,7 +17238,7 @@ ZX
 OX
 BS
 iI
-qa
+iI
 BS
 Vd
 yE

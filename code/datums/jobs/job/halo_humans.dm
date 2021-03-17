@@ -30,6 +30,7 @@
 	comm_title = "Med"
 	access = list(ACCESS_UNSC_MARINE, ACCESS_UNSC_MEDIC, ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_MEDPREP, ACCESS_MARINE_MEDBAY)
 	minimal_access = list(ACCESS_UNSC_MARINE, ACCESS_UNSC_MEDIC, ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_MEDPREP, ACCESS_MARINE_MEDBAY)
+	faction = FACTION_UNSC
 	max_positions = 6
 	supervisors = "squad leader"
 	outfit = /datum/outfit/job/unsc/medic
@@ -48,6 +49,7 @@
 	comm_title = "Engi"
 	access = list(ACCESS_UNSC_MARINE, ACCESS_UNSC_ENGINEER, ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_ENGPREP, ACCESS_MARINE_ENGINEERING)
 	minimal_access = list(ACCESS_UNSC_MARINE, ACCESS_UNSC_ENGINEER, ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_ENGPREP, ACCESS_MARINE_ENGINEERING)
+	faction = FACTION_UNSC
 	max_positions = 6
 	supervisors = "squad leader"
 	outfit = /datum/outfit/job/unsc/engineer
@@ -66,6 +68,7 @@
 	comm_title = "SL"
 	access = list(ACCESS_UNSC_MARINE, ACCESS_UNSC_LEADER)
 	minimal_access = list(ACCESS_UNSC_MARINE, ACCESS_UNSC_LEADER, ACCESS_MARINE_DROPSHIP)
+	faction = FACTION_UNSC
 	max_positions = 1
 	supervisors = "commanding officer"
 	display_order = JOB_DISPLAY_ORDER_UNSC_LEADER
@@ -293,6 +296,7 @@
 	comm_title = "Med"
 	access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_MEDIC)
 	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_MEDIC)
+	faction = FACTION_INSURRECTION
 	max_positions = 6
 	supervisors = "squad leader"
 	outfit = /datum/outfit/job/insurrection/medic
@@ -312,6 +316,7 @@
 	comm_title = "Engi"
 	access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
 	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
+	faction = FACTION_INSURRECTION
 	max_positions = 6
 	supervisors = "squad leader"
 	outfit = /datum/outfit/job/insurrection/engineer
@@ -330,6 +335,7 @@
 	comm_title = "Warlord"
 	access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_LEADER)
 	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_LEADER, ACCESS_MARINE_DROPSHIP)
+	faction = FACTION_INSURRECTION
 	max_positions = 1
 	supervisors = ""
 	display_order = JOB_DISPLAY_ORDER_INSURRECTIONIST_LEADER

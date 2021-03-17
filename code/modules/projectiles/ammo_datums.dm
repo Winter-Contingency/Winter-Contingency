@@ -1863,6 +1863,8 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 //Shotguns
 
 /datum/ammo/bullet/shotgun/halo
+	hud_state_empty = "shotgun_empty"
+	shell_speed = 2
 
 /datum/ammo/bullet/shotgun/halo/buckshot
 	name = "8 Gauge 000 Buckshot"
