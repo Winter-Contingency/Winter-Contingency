@@ -123,10 +123,10 @@
 	width = 11
 	height = 21
 
-	ignitionTime = 10 SECONDS
-	callTime = 38 SECONDS // same as old transit time with flight optimisation
-	rechargeTime = 2 MINUTES
-	prearrivalTime = 12 SECONDS
+	ignitionTime = 5 SECONDS
+	callTime = 10 SECONDS // same as old transit time with flight optimisation
+	rechargeTime = 3 SECONDS
+	prearrivalTime = 5 SECONDS
 
 	var/list/left_airlocks = list()
 	var/list/right_airlocks = list()

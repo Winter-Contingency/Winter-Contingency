@@ -16,7 +16,7 @@
 
 	var/distress_cancelled = FALSE
 
-	var/deploy_time_lock = 15 MINUTES
+	var/deploy_time_lock = 0 MINUTES
 
 	var/gamemode_start
 

@@ -40,6 +40,9 @@
 /obj/machinery/camera/autoname/mainship{
 	dir = 4
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/mainship/mono,
 /area/mainship/hallways/hangar)
 "au" = (
@@ -61,6 +64,12 @@
 /obj/structure/table/mainship,
 /turf/open/floor/mainship,
 /area/mainship/command/cic)
+"aW" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/mainship/mono,
+/area/mainship/hallways/hangar)
 "bb" = (
 /obj/effect/decal/warning_stripes/thin,
 /obj/machinery/landinglight/ds1/delayone,
@@ -84,11 +93,17 @@
 /obj/machinery/landinglight/ds1/delayone{
 	dir = 8
 	},
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/open/floor/mainship/mono,
 /area/mainship/hallways/hangar)
 "bn" = (
 /obj/effect/decal/warning_stripes/thin{
 	dir = 10
+	},
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/open/floor/mainship/mono,
 /area/mainship/hallways/hangar)
@@ -670,6 +685,9 @@
 /obj/effect/decal/warning_stripes/thin{
 	dir = 8
 	},
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/open/floor/mainship/mono,
 /area/mainship/hallways/hangar)
 "jX" = (
@@ -893,6 +911,7 @@
 /obj/effect/decal/warning_stripes/thin{
 	dir = 9
 	},
+/obj/machinery/light,
 /turf/open/floor/mainship/mono,
 /area/mainship/hallways/hangar)
 "mT" = (
@@ -1093,6 +1112,9 @@
 	},
 /obj/effect/decal/warning_stripes/thin{
 	dir = 8
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/open/floor/mainship/mono,
 /area/mainship/hallways/hangar)
@@ -1584,6 +1606,13 @@
 /obj/machinery/camera/autoname/mainship,
 /turf/open/floor/freezer,
 /area/mainship/living/cryo_cells)
+"GO" = (
+/obj/machinery/light{
+	dir = 8;
+	pixel_x = -6
+	},
+/turf/open/floor/mainship/mono,
+/area/mainship/hallways/hangar)
 "Ht" = (
 /turf/open/floor/mainship/green{
 	dir = 4
@@ -1604,6 +1633,18 @@
 "Ii" = (
 /turf/open/floor/mainship/tcomms,
 /area/mainship/command/telecomms)
+"Ix" = (
+/obj/effect/decal/warning_stripes/thin{
+	dir = 8
+	},
+/obj/machinery/landinglight/ds1{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/mainship/mono,
+/area/mainship/hallways/hangar)
 "IP" = (
 /obj/structure/toilet{
 	dir = 4
@@ -1676,10 +1717,21 @@
 "Nn" = (
 /turf/closed/wall/sulaco/unmeltable,
 /area/mainship/command/telecomms)
+"OP" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/mainship,
+/area/mainship/command/cic)
 "Pp" = (
 /obj/machinery/marine_selector/clothes/unsc/leader,
 /turf/open/floor/mainship,
 /area/mainship/squads/general)
+"PO" = (
+/obj/structure/table/mainship,
+/obj/machinery/computer/shuttle/shuttle_control/dropship1,
+/turf/open/floor/mainship/mono,
+/area/mainship/hallways/hangar)
 "QO" = (
 /obj/machinery/light{
 	dir = 8
@@ -1723,6 +1775,10 @@
 	dir = 10
 	},
 /area/mainship/living/cryo_cells)
+"Us" = (
+/obj/machinery/light,
+/turf/open/floor/mainship/mono,
+/area/mainship/hallways/hangar)
 "Ux" = (
 /turf/open/floor/mainship/green/corner,
 /area/mainship/squads/general)
@@ -3282,8 +3338,8 @@ ab
 gx
 aj
 fr
-aj
-aj
+OP
+eb
 hZ
 jq
 jq
@@ -3527,21 +3583,21 @@ cu
 lB
 lB
 lB
+GO
+lB
+lB
+lB
+GO
+PO
 lB
 lB
 lB
 lB
 lB
+GO
 lB
 lB
-lB
-lB
-lB
-lB
-lB
-lB
-lB
-lB
+GO
 lB
 lB
 mV
@@ -3587,6 +3643,7 @@ wm
 nf
 nf
 cu
+aW
 lB
 lB
 lB
@@ -3605,8 +3662,7 @@ lB
 lB
 lB
 lB
-lB
-lB
+Us
 mV
 Pp
 qY
@@ -3670,7 +3726,7 @@ ht
 qS
 vb
 xz
-lB
+Us
 mU
 mU
 mU
@@ -4412,7 +4468,7 @@ ch
 eo
 dg
 eW
-ch
+Ix
 gZ
 iN
 eW
