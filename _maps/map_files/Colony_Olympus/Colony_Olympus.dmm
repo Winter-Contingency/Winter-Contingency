@@ -145,6 +145,13 @@
 	},
 /turf/open/floor/prison/kitchen,
 /area/swordbase/ground/kitchen)
+"bm" = (
+/obj/structure/flora/rock/pile,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/asteroid,
+/area/desert_dam/interior/caves)
 "bq" = (
 /obj/structure/rack,
 /obj/item/tool/pickaxe/drill,
@@ -248,7 +255,7 @@
 /area/swordbase/ground/kitchen)
 "cd" = (
 /obj/structure/ladder{
-	id = 1
+	id = 2
 	},
 /turf/open/ground/grass,
 /area/swordbase/ground/inniecave)
@@ -2032,6 +2039,13 @@
 	},
 /turf/open/floor/mainship/sterile/dark,
 /area/swordbase/ground/medsci)
+"sD" = (
+/obj/structure/flora/rock/pile/alt,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/asteroid,
+/area/desert_dam/interior/caves)
 "sE" = (
 /obj/structure/rack,
 /obj/item/storage/box/beakers,
@@ -2373,11 +2387,9 @@
 	},
 /area/desert_dam/building/administration)
 "vI" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/tile/dark,
-/area/desert_dam/interior/caves)
+/obj/machinery/door/poddoor/gamemode,
+/turf/open/floor/plating,
+/area/swordbase/ground/outdoors)
 "vK" = (
 /obj/item/stack/sheet/metal,
 /turf/open/floor/tile/dark/red2{
@@ -4116,11 +4128,9 @@
 /turf/open/floor/wood,
 /area/ice_colony/surface/bar)
 "Li" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/asteroid,
-/area/desert_dam/interior/caves)
+/obj/structure/window/framed/mainship,
+/turf/open/floor/plating,
+/area/swordbase/ground/outdoors)
 "Ll" = (
 /turf/open/floor/plating/ground/dirt2,
 /area/swordbase/ground/kitchen)
@@ -4929,6 +4939,10 @@
 	dir = 8
 	},
 /area/prison/security)
+"Tf" = (
+/obj/machinery/door/poddoor/gamemode,
+/turf/open/floor/asteroid,
+/area/desert_dam/interior/caves)
 "Tj" = (
 /obj/structure/table/mainship,
 /turf/open/floor/tile/dark,
@@ -5489,7 +5503,7 @@
 /area/swordbase/ground/outdoors)
 "Ya" = (
 /obj/structure/ladder{
-	id = 2
+	id = 1
 	},
 /turf/open/ground/grass,
 /area/swordbase/ground/inniecave)
@@ -5646,7 +5660,9 @@
 /turf/open/floor/asteroidfloor,
 /area/swordbase/ground/engineering)
 "ZF" = (
-/obj/item/tool/pickaxe,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/asteroid,
 /area/desert_dam/interior/caves)
 "ZH" = (
@@ -8125,7 +8141,7 @@ pS
 CH
 CH
 CH
-JC
+Li
 CH
 Gx
 Gx
@@ -8257,7 +8273,7 @@ CH
 CH
 CH
 CH
-JC
+Li
 CH
 CH
 Gx
@@ -8389,7 +8405,7 @@ CH
 CH
 CH
 CH
-CH
+vI
 CH
 ZX
 Gx
@@ -8521,7 +8537,7 @@ CH
 CH
 CH
 CH
-CH
+vI
 CH
 ZX
 Gx
@@ -8653,7 +8669,7 @@ CH
 CH
 CH
 CH
-JC
+Li
 ZX
 ZX
 Gx
@@ -8785,7 +8801,7 @@ eB
 ns
 CH
 CH
-uq
+Li
 Gx
 ZX
 Gx
@@ -8915,8 +8931,8 @@ Aq
 sz
 Nd
 ns
-JC
-JC
+Li
+Li
 wC
 Gx
 ZX
@@ -9434,7 +9450,7 @@ Gx
 Gx
 pS
 pS
-Gx
+wC
 ns
 eB
 eB
@@ -9566,7 +9582,7 @@ Gx
 Gx
 pS
 pS
-CH
+vI
 CH
 CH
 CH
@@ -9698,7 +9714,7 @@ Gx
 Gx
 pS
 pS
-CH
+vI
 CH
 CH
 CH
@@ -9962,7 +9978,7 @@ on
 on
 Gx
 Gx
-JC
+Li
 CH
 CH
 CH
@@ -10094,7 +10110,7 @@ VQ
 VQ
 on
 Gx
-JC
+Li
 CH
 CH
 CH
@@ -21139,13 +21155,13 @@ ZX
 de
 qL
 XR
+nt
 Ep
-Ep
+nt
 tM
 tM
-tM
-tM
-tM
+nt
+nt
 rY
 qF
 "}
@@ -21271,12 +21287,12 @@ de
 de
 qL
 XR
-ZF
-EE
+nt
+bm
+FH
 XR
 XR
-XR
-FX
+sD
 XR
 rY
 qF
@@ -21403,7 +21419,7 @@ de
 XR
 XR
 XR
-XR
+Tf
 XR
 XR
 XR
@@ -21535,8 +21551,8 @@ qL
 XR
 XR
 XR
+Tf
 XR
-Li
 ow
 XR
 XR
@@ -21667,9 +21683,9 @@ qL
 XR
 XR
 FX
-Gg
-nt
-Ep
+Tf
+XR
+XR
 XR
 XR
 FX
@@ -21799,9 +21815,9 @@ HG
 XR
 XR
 XR
+Tf
 XR
-FH
-Ep
+XR
 XR
 XR
 XR
@@ -21931,8 +21947,8 @@ Ep
 LD
 FX
 XR
-XR
-XR
+nt
+ZF
 XR
 XR
 XR
@@ -22063,7 +22079,7 @@ Ep
 Ep
 Ep
 Ep
-XR
+nt
 XR
 FX
 XR
@@ -22325,8 +22341,8 @@ tM
 tM
 pz
 tM
-XR
-XR
+nt
+ZF
 XR
 XR
 XR
@@ -22589,7 +22605,7 @@ tM
 tM
 tM
 tM
-vI
+tM
 tM
 XR
 Ep
