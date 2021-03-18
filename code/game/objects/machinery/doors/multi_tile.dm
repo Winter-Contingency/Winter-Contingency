@@ -244,7 +244,7 @@
 	req_access = list(ACCESS_UNSC_MARINE)
 
 /obj/machinery/door/airlock/multi_tile/mainship/generic/innie
-	name = "\improper UNSC Airlock"
+	name = "\improper URF Airlock"
 	req_access = list(ACCESS_INSURRECTIONIST_SOLDIER)
 
 
