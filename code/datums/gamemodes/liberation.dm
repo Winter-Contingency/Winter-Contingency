@@ -21,10 +21,19 @@
 							/datum/job/insurrectionist/engineer = 6,
 							/datum/job/insurrectionist/leader = 1
 	)
+	//liberation_gamemode_delay = 5 MINUTES see configuration.dm
 
 /datum/game_mode/liberation/announce()
 	to_chat(world, "<b>The current game mode is Liberation!</b>")
+	to_chat(world, "<b>The war starts in [config.liberation_gamemode_delay] minutes.!</b>")
+
+/datum/game_mode/liberation/on_setup()
+	addtimer(CALLBACK(src, .proc/open_doors), config.liberation_gamemode_delay)
+
+/datum/game_mode/liberation/proc/open_doors()
 	to_chat(world, "<b>Assume DEFCON 1, prepare for all-out war!</b>")
+	for(var/obj/machinery/door/D in GLOB.gamemode_doors)
+		D.open()
 
 //Called when mob dies//
 /datum/game_mode/liberation/on_mob_death(mob/living/M)

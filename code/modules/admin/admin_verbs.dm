@@ -1224,3 +1224,20 @@
 	qdel(frommob)
 
 	return TRUE
+
+/datum/admins/proc/initialize_liberation()
+	set category = "Gamemode"
+	set name = "Initialize liberation"
+
+	if(!check_rights(R_ADMIN))
+		return
+
+	if(istype(SSticker.mode, /datum/game_mode/liberation))
+		var/datum/game_mode/liberation/L = SSticker.mode
+		L.open_doors()
+
+	else
+
+		to_chat(usr, "<span class='warning'>The Liberacion game mode is required.</span>")
+		for(var/obj/machinery/door/D in GLOB.gamemode_doors)
+			D.open()

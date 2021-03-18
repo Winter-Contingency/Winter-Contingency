@@ -18,6 +18,8 @@
 
 	var/deploy_time_lock = 15 MINUTES
 
+	var/gamemode_start
+
 //Distress call variables.
 	var/list/datum/emergency_call/all_calls = list() //initialized at round start and stores the datums.
 	var/datum/emergency_call/picked_call = null //Which distress call is currently active
@@ -76,8 +78,10 @@
 	reset_squads()
 	spawn_characters()
 	transfer_characters()
+	on_setup()
 	return TRUE
 
+/datum/game_mode/proc/on_setup()
 
 /datum/game_mode/proc/post_setup()
 	addtimer(CALLBACK(src, .proc/display_roundstart_logout_report), ROUNDSTART_LOGOUT_REPORT_TIME)
