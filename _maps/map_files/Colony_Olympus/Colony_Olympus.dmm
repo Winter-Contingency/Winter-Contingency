@@ -1386,9 +1386,11 @@
 /turf/open/floor/mainship/tcomms,
 /area/prison/telecomms)
 "mW" = (
-/obj/machinery/door/airlock/multi_tile/secure{
-	dir = 1;
-	max_integrity = 50000000
+/obj/machinery/door/airlock/multi_tile/mainship/generic/innie{
+	dir = 2;
+	icon = 'icons/obj/doors/Door2x1_secure.dmi';
+	max_integrity = 50000000;
+	openspeed = 34
 	},
 /turf/open/floor/asteroid,
 /area/swordbase/ground/inniecave)
@@ -1942,8 +1944,10 @@
 /turf/open/floor/plating/ground/desertdam/asphalt,
 /area/swordbase/ground/kitchen)
 "rY" = (
-/obj/machinery/door/airlock/multi_tile/secure{
-	max_integrity = 50000000
+/obj/machinery/door/airlock/multi_tile/mainship/generic/innie{
+	icon = 'icons/obj/doors/Door2x1_secure.dmi';
+	max_integrity = 50000000;
+	openspeed = 34
 	},
 /turf/open/floor/tile/dark,
 /area/desert_dam/interior/caves)
@@ -2511,9 +2515,11 @@
 /turf/closed/wall/mainship,
 /area/swordbase/ground/outdoors)
 "wF" = (
-/obj/machinery/door/airlock/multi_tile/secure{
-	dir = 1;
-	max_integrity = 50000000
+/obj/machinery/door/airlock/multi_tile/mainship/generic/innie{
+	dir = 2;
+	icon = 'icons/obj/doors/Door2x1_secure.dmi';
+	max_integrity = 50000000;
+	openspeed = 34
 	},
 /turf/open/floor/tile/dark,
 /area/desert_dam/interior/caves)
@@ -2738,6 +2744,15 @@
 	dir = 4
 	},
 /turf/open/ground/grass,
+/area/swordbase/ground/outdoors)
+"ys" = (
+/obj/machinery/door/poddoor/gamemode,
+/obj/machinery/door/airlock/multi_tile/mainship/generic/unsc{
+	icon = 'icons/obj/doors/Door2x1_secure.dmi';
+	max_integrity = 50000000;
+	openspeed = 34
+	},
+/turf/open/floor/plating,
 /area/swordbase/ground/outdoors)
 "yt" = (
 /obj/machinery/door/airlock/multi_tile/mainship/generic{
@@ -3629,9 +3644,11 @@
 	},
 /area/prison/security)
 "Gg" = (
-/obj/machinery/door/airlock/multi_tile/secure{
-	dir = 1;
-	max_integrity = 50000000
+/obj/machinery/door/airlock/multi_tile/mainship/generic/innie{
+	dir = 2;
+	icon = 'icons/obj/doors/Door2x1_secure.dmi';
+	max_integrity = 50000000;
+	openspeed = 34
 	},
 /turf/open/floor/asteroid,
 /area/desert_dam/interior/caves)
@@ -4231,7 +4248,7 @@
 /turf/open/floor/wood,
 /area/ice_colony/surface/bar)
 "Li" = (
-/obj/structure/window/framed/mainship,
+/obj/structure/window/framed/mainship/hull,
 /turf/open/floor/plating,
 /area/swordbase/ground/outdoors)
 "Ll" = (
@@ -4393,6 +4410,9 @@
 	},
 /turf/open/floor/mainship/sterile/dark,
 /area/swordbase/ground/medsci)
+"MD" = (
+/turf/closed/wall/mainship/outer,
+/area/swordbase/ground/outdoors)
 "MG" = (
 /obj/structure/flora/ausbushes/grassybush,
 /obj/machinery/light{
@@ -4596,6 +4616,9 @@
 /obj/item/storage/fancy/cigar,
 /turf/open/floor/wood,
 /area/ice_colony/surface/bar)
+"OG" = (
+/turf/closed/wall/mainship/outer,
+/area/prison/security/checkpoint)
 "OK" = (
 /obj/machinery/telecomms/bus/preset_one,
 /turf/open/floor/mainship/tcomms,
@@ -4941,6 +4964,10 @@
 	},
 /turf/open/floor/tile/dark,
 /area/desert_dam/interior/caves)
+"Ry" = (
+/obj/structure/window/framed/mainship/hull,
+/turf/open/floor/tile/dark,
+/area/prison/security/checkpoint)
 "RE" = (
 /obj/item/stack/sheet/metal,
 /turf/open/floor/tile/damaged/panel,
@@ -8222,7 +8249,7 @@ pS
 CH
 CH
 CH
-wC
+MD
 on
 on
 Gx
@@ -8618,7 +8645,7 @@ CH
 CH
 CH
 CH
-vI
+ys
 CH
 ZX
 Gx
@@ -9146,7 +9173,7 @@ Nd
 ns
 Li
 Li
-wC
+MD
 Gx
 ZX
 ZX
@@ -9663,14 +9690,14 @@ Gx
 Gx
 pS
 pS
-wC
-ns
-eB
-eB
-ns
-eB
-eB
-ns
+MD
+OG
+Ry
+Ry
+OG
+Ry
+Ry
+OG
 VQ
 VQ
 VQ
@@ -9795,7 +9822,7 @@ Gx
 Gx
 pS
 pS
-vI
+ys
 CH
 CH
 CH
@@ -10059,7 +10086,7 @@ Gx
 Gx
 Gx
 Gx
-wC
+MD
 CH
 CH
 CH
@@ -10455,7 +10482,7 @@ VQ
 VQ
 VQ
 on
-wC
+MD
 CH
 CH
 CH
