@@ -993,7 +993,7 @@
 	icon = 'icons/obj/machines/computer.dmi'
 	icon_state = "shuttle"
 	resistance_flags = UNACIDABLE|INDESTRUCTIBLE
-	req_one_access = list(ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_LEADER) // TLs can only operate the remote console
+	req_one_access = list(ACCESS_MARINE_DROPSHIP) // TLs can only operate the remote console
 	shuttleId = "alamo"
 	possible_destinations = "lz1;lz2;alamo;normandy"
 
@@ -1004,7 +1004,7 @@
 	icon = 'icons/obj/machines/computer.dmi'
 	icon_state = "shuttle"
 	resistance_flags = UNACIDABLE|INDESTRUCTIBLE
-	req_one_access = list(ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_LEADER)
+	req_one_access = list(ACCESS_MARINE_DROPSHIP)
 
 /obj/machinery/computer/shuttle/shuttle_control/canterbury
 	name = "\improper 'Canterbury' shuttle console"

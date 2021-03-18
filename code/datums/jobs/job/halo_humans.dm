@@ -66,8 +66,8 @@
 	title = "UNSC Squad Leader"
 	paygrade = "E6"
 	comm_title = "SL"
-	access = list(ACCESS_UNSC_MARINE, ACCESS_UNSC_LEADER)
-	minimal_access = list(ACCESS_UNSC_MARINE, ACCESS_UNSC_LEADER, ACCESS_MARINE_DROPSHIP)
+	access = list(ACCESS_UNSC_MARINE, ACCESS_UNSC_LEADER, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
+	minimal_access = list(ACCESS_UNSC_MARINE, ACCESS_UNSC_LEADER, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
 	faction = FACTION_UNSC
 	max_positions = 1
 	supervisors = "commanding officer"
