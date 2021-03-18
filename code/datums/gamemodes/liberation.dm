@@ -25,7 +25,7 @@
 
 /datum/game_mode/liberation/announce()
 	to_chat(world, "<b>The current game mode is Liberation!</b>")
-	to_chat(world, "<b>The war starts in [config.liberation_gamemode_delay] minutes.!</b>")
+	to_chat(world, "<b>The war starts in [config.liberation_gamemode_delay/(1 MINUTES)] minutes.!</b>")
 
 /datum/game_mode/liberation/on_setup()
 	addtimer(CALLBACK(src, .proc/open_doors), config.liberation_gamemode_delay)
