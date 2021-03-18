@@ -1339,7 +1339,9 @@
 /area/swordbase/ground/hydro)
 "mv" = (
 /obj/structure/ladder{
-	id = 1
+	height = 2;
+	icon_state = "ladderdown";
+	id = "right"
 	},
 /turf/open/floor/tile/dark,
 /area/desert_dam/interior/caves)
@@ -4058,7 +4060,9 @@
 /area/mainship/command/telecomms)
 "Ki" = (
 /obj/structure/ladder{
-	id = 2
+	height = 2;
+	icon_state = "ladderdown";
+	id = "left"
 	},
 /turf/open/ground/grass,
 /area/swordbase/ground/inniecave)
@@ -4818,7 +4822,9 @@
 /area/swordbase/ground/outdoors)
 "QW" = (
 /obj/structure/ladder{
-	id = 1
+	height = 2;
+	icon_state = "ladderdown";
+	id = "right"
 	},
 /turf/open/ground/grass,
 /area/swordbase/ground/inniecave)
@@ -4871,7 +4877,9 @@
 /area/swordbase/ground/kitchen)
 "Ru" = (
 /obj/structure/ladder{
-	id = 2
+	height = 2;
+	icon_state = "ladderdown";
+	id = "left"
 	},
 /turf/open/floor/tile/dark,
 /area/desert_dam/interior/caves)
@@ -24184,13 +24192,13 @@ VQ
 VQ
 VQ
 VQ
-VQ
+am
 am
 ao
 am
 ao
 am
-VQ
+am
 VQ
 am
 cd
@@ -26978,7 +26986,7 @@ ao
 ao
 am
 am
-VQ
+am
 VQ
 VQ
 VQ
@@ -28265,7 +28273,7 @@ VQ
 VQ
 VQ
 VQ
-VQ
+am
 am
 am
 am
@@ -28289,7 +28297,7 @@ am
 am
 am
 am
-VQ
+am
 VQ
 VQ
 VQ
@@ -28399,7 +28407,7 @@ VQ
 VQ
 VQ
 VQ
-VQ
+am
 am
 am
 pQ
@@ -28665,7 +28673,7 @@ VQ
 VQ
 VQ
 VQ
-VQ
+am
 am
 pQ
 cd
