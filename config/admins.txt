@@ -1,2 +1,6 @@
+emoats18 = Admin
 BurnedSweetPotato = Admin
-Emoats18 = Admin
+RealMAGNUM = Admin
+sonyxperia = Admin
+50RemAndCounting = Admin
+Ghostdex = Admin
