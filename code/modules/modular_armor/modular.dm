@@ -507,6 +507,7 @@
 	name = "CH525-MH combat helmet"
 	desc = "The CH525 is a reliable and robust helmet for UNSC Marines. This one has a special medical HUD that allows for its wearer to see certain vitals of a lifeform."
 	icon_state = "marine_medic_helmet"
+	can_toggle = 0
 	//give visor medhud functionality for medic
 
 /obj/item/clothing/head/modular/marine/unsc/engineer
@@ -515,13 +516,14 @@
 	icon_state = "marine_engi_helmet"
 	toggle_message = "You activate the tactical visor"
 	alt_toggle_message = "You deactive the tactical visor."
-	can_toggle = 1
+	can_toggle = 0
 	//give engineer visor welder protection
 
 /obj/item/clothing/head/modular/marine/unsc/sl
 	name = "CH525-SO/R combat helmet"
 	desc = "The CH525 is a reliable and robust helmet for UNSC Marines. This one is for special operations and recon, and is equipped with an advanced binocular and rangefinding system."
 	icon_state = "marine_sl_helmet"
+	can_toggle = 0
 	//give SL helmet binocular functionality
 
 

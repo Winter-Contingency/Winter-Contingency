@@ -1265,7 +1265,6 @@ GLOBAL_LIST_INIT(available_specialist_sets, list("Scout Set", "Sniper Set", "Dem
 	vendor_role = /datum/job/unsc/marine/basic
 	lock_flags = JOB_LOCK
 	listed_products = list(
-		/obj/item/storage/pouch/explosive = list(CAT_POU, "Explosive pouch", 15, "black"),
 		/obj/item/storage/pouch/magazine/large = list(CAT_POU, "Large magazine pouch", 15, "black"),
 		/obj/item/explosive/plastique = list(CAT_EXP, "Plastique explosive", 15, "black"),
 		/obj/item/explosive/grenade/frag/m9 = list(CAT_EXP, "M9 Grenade", 15, "black"),
@@ -1274,16 +1273,8 @@ GLOBAL_LIST_INIT(available_specialist_sets, list("Scout Set", "Sniper Set", "Dem
 		/obj/item/storage/firstaid/regular = list(CAT_MEDSUP, "Firstaid kit", 5, "black"),
 		/obj/item/storage/firstaid/adv = list(CAT_MEDSUP, "Advanced firstaid kit", 15, "orange"),
 		/obj/item/storage/pouch/autoinjector/advanced/full = list(CAT_MEDSUP, "Advanced Medical Injectors", 30, "orange"),
-		/obj/item/storage/pill_bottle/paracetamol = list(CAT_MEDSUP, "Paracetamol pills", 10, "black"),
-		/obj/item/storage/syringe_case/meralyne = list(CAT_MEDSUP, "syringe Case (120u Meralyne)", 10, "orange"),
-		/obj/item/storage/syringe_case/dermaline = list(CAT_MEDSUP, "syringe Case (120u Dermaline)", 10, "orange"),
-		/obj/item/storage/syringe_case/meraderm = list(CAT_MEDSUP, "syringe Case (120u Meraderm)", 10, "orange"),
-		/obj/item/storage/syringe_case/ironsugar = list(CAT_MEDSUP, "syringe Case (120u Ironsugar)", 5, "black"),
 		/obj/item/reagent_containers/hypospray/autoinjector/combat_advanced = list(CAT_MEDSUP, "Injector (Advanced)", 5, "orange"),
-		/obj/item/reagent_containers/hypospray/autoinjector/oxycodone = list(CAT_MEDSUP, "Injector (Oxycodone)", 5, "black"),
-		/obj/item/reagent_containers/hypospray/autoinjector/hypervene = list(CAT_MEDSUP, "Injector (Hypervene)", 5, "black"),
-		/obj/item/reagent_containers/hypospray/autoinjector/synaptizine = list(CAT_MEDSUP, "Injector (Synaptizine)", 5, "orange"),
-		/obj/item/reagent_containers/hypospray/autoinjector/neuraline = list(CAT_MEDSUP, "Injector (Neuraline)", 15, "orange"))
+		/obj/item/reagent_containers/hypospray/autoinjector/oxycodone = list(CAT_MEDSUP, "Injector (Oxycodone)", 5, "black"))
 
 //ODST Gear
 
@@ -1368,7 +1359,6 @@ GLOBAL_LIST_INIT(available_specialist_sets, list("Scout Set", "Sniper Set", "Dem
 	lock_flags = JOB_LOCK
 	vendor_role = /datum/job/insurrectionist/basic
 	listed_products = list(
-		/obj/item/storage/pouch/explosive = list(CAT_POU, "Explosive pouch", 15, "black"),
 		/obj/item/storage/pouch/magazine/large = list(CAT_POU, "Large magazine pouch", 15, "black"),
 		/obj/item/explosive/plastique = list(CAT_EXP, "Plastique explosive", 15, "black"),
 		/obj/item/explosive/grenade/frag/m9 = list(CAT_EXP, "M9 Grenade", 15, "black"),
@@ -1377,16 +1367,8 @@ GLOBAL_LIST_INIT(available_specialist_sets, list("Scout Set", "Sniper Set", "Dem
 		/obj/item/storage/firstaid/regular = list(CAT_MEDSUP, "Firstaid kit", 5, "black"),
 		/obj/item/storage/firstaid/adv = list(CAT_MEDSUP, "Advanced firstaid kit", 15, "orange"),
 		/obj/item/storage/pouch/autoinjector/advanced/full = list(CAT_MEDSUP, "Advanced Medical Injectors", 30, "orange"),
-		/obj/item/storage/pill_bottle/paracetamol = list(CAT_MEDSUP, "Paracetamol pills", 10, "black"),
-		/obj/item/storage/syringe_case/meralyne = list(CAT_MEDSUP, "syringe Case (120u Meralyne)", 10, "orange"),
-		/obj/item/storage/syringe_case/dermaline = list(CAT_MEDSUP, "syringe Case (120u Dermaline)", 10, "orange"),
-		/obj/item/storage/syringe_case/meraderm = list(CAT_MEDSUP, "syringe Case (120u Meraderm)", 10, "orange"),
-		/obj/item/storage/syringe_case/ironsugar = list(CAT_MEDSUP, "syringe Case (120u Ironsugar)", 5, "black"),
 		/obj/item/reagent_containers/hypospray/autoinjector/combat_advanced = list(CAT_MEDSUP, "Injector (Advanced)", 5, "orange"),
-		/obj/item/reagent_containers/hypospray/autoinjector/oxycodone = list(CAT_MEDSUP, "Injector (Oxycodone)", 5, "black"),
-		/obj/item/reagent_containers/hypospray/autoinjector/hypervene = list(CAT_MEDSUP, "Injector (Hypervene)", 5, "black"),
-		/obj/item/reagent_containers/hypospray/autoinjector/synaptizine = list(CAT_MEDSUP, "Injector (Synaptizine)", 5, "orange"),
-		/obj/item/reagent_containers/hypospray/autoinjector/neuraline = list(CAT_MEDSUP, "Injector (Neuraline)", 15, "orange"))
+		/obj/item/reagent_containers/hypospray/autoinjector/oxycodone = list(CAT_MEDSUP, "Injector (Oxycodone)", 5, "black"))
 
 
 
@@ -1905,6 +1887,7 @@ GLOBAL_LIST_INIT(available_specialist_sets, list("Scout Set", "Sniper Set", "Dem
 						/obj/item/healthanalyzer,
 						/obj/item/roller,
 						/obj/item/reagent_containers/hypospray/advanced/oxycodone,
+						/obj/item/reagent_containers/hypospray/autoinjector/biofoam,
 						/obj/item/clothing/glasses/hud/health)
 
 /obj/effect/essentials_set/unsc/engineer
@@ -1938,17 +1921,17 @@ GLOBAL_LIST_INIT(available_specialist_sets, list("Scout Set", "Sniper Set", "Dem
 
 /obj/effect/essentials_set/modular/unsc/engineer
 	spawned_gear_list = list(
-						/obj/item/armor_module/armor/chest/unsc,
+						/obj/item/armor_module/armor/chest/unsc/engineer,
 						/obj/item/armor_module/armor/arms/unsc,
 						/obj/item/armor_module/armor/legs/unsc,
-						/obj/item/clothing/head/modular/marine/unsc)
+						/obj/item/clothing/head/modular/marine/unsc/engineer)
 
 /obj/effect/essentials_set/modular/unsc/leader
 	spawned_gear_list = list(
-						/obj/item/armor_module/armor/chest/unsc,
+						/obj/item/armor_module/armor/chest/unsc/sl,
 						/obj/item/armor_module/armor/arms/unsc,
 						/obj/item/armor_module/armor/legs/unsc,
-						/obj/item/clothing/head/modular/marine/unsc)
+						/obj/item/clothing/head/modular/marine/unsc/sl)
 
 //ODST Sets
 
@@ -2039,6 +2022,7 @@ GLOBAL_LIST_INIT(available_specialist_sets, list("Scout Set", "Sniper Set", "Dem
 						/obj/item/healthanalyzer,
 						/obj/item/roller,
 						/obj/item/reagent_containers/hypospray/advanced/oxycodone,
+						/obj/item/reagent_containers/hypospray/autoinjector/biofoam,
 						/obj/item/clothing/glasses/hud/health)
 
 /obj/effect/essentials_set/urf/engineer

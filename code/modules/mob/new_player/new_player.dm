@@ -38,7 +38,7 @@
 		return
 
 	var/output = "<div align='center'>"
-	output += "<br><i>You are part of the <b>TerraGov Marine Corps</b>, a military branch of the TerraGov council.</i>"
+	output += "<br><i>You are playing <b>Winter Contingency</b>, a Halo themed TGMC downstream.</i>"
 	output +="<hr>"
 	output += "<p><a href='byond://?src=[REF(src)];lobby_choice=show_preferences'>Setup Character</A> | <a href='byond://?src=[REF(src)];lobby_choice=lore'>Background</A><br><br><a href='byond://?src=[REF(src)];lobby_choice=observe'>Observe</A></p>"
 	output +="<hr>"
@@ -55,7 +55,7 @@
 
 	output += "</div>"
 
-	var/datum/browser/popup = new(src, "playersetup", "<div align='center'>Welcome to TGMC[SSmapping?.configs ? " - [SSmapping.configs[SHIP_MAP].map_name]" : ""]</div>", 300, 375)
+	var/datum/browser/popup = new(src, "playersetup", "<div align='center'>Welcome to Winter Contingency[SSmapping?.configs ? " - [SSmapping.configs[SHIP_MAP].map_name]" : ""]</div>", 300, 375)
 	popup.set_window_options("can_close=0")
 	popup.set_content(output)
 	popup.open(FALSE)
@@ -242,11 +242,14 @@
 		if("lore")
 			ViewLore()
 
-		if("marines")
-			ViewMarines()
+		if("unsc")
+			ViewUNSC()
 
-		if("aliens")
-			ViewAliens()
+		if("urf")
+			ViewURF()
+
+		if("covenant")
+			ViewCOV()
 
 		if("SelectedJob")
 			if(!SSticker)
@@ -316,28 +319,37 @@
 
 /mob/new_player/proc/ViewLore()
 	var/output = "<div align='center'>"
-	output += "<a href='byond://?src=[REF(src)];lobby_choice=marines'>TerraGov Marine Corps</A><br><br><a href='byond://?src=[REF(src)];lobby_choice=aliens'>Xenomorph Hive</A>"
+	output += "<a href='byond://?src=[REF(src)];lobby_choice=unsc'>United Nations Space Command</A><br><br><a href='byond://?src=[REF(src)];lobby_choice=urf'>United Rebel Front</A><br><br><a href='byond://?src=[REF(src)];lobby_choice=covenant'>Covenant Empire</A>"
 	output += "</div>"
 
-	var/datum/browser/popup = new(src, "lore", "<div align='center'>Current Year: 2415</div>", 240, 300)
+	var/datum/browser/popup = new(src, "lore", "<div align='center'>Current Year: 2552</div>", 240, 300)
 	popup.set_content(output)
 	popup.open(FALSE)
 
-/mob/new_player/proc/ViewMarines()
+/mob/new_player/proc/ViewUNSC()
 	var/output = "<div align='center'>"
-	output += "<p><i>The <b>TerraGov Marine Corps'</b> mission is to enforce space law for the purpose of defending Terra's orbit as well as other solar colonies around the galaxy under the conflict of the Independent Colonial Confederation and the intelligent xenomorph threat. \nThe TGMC is composed by willing men and women from all kinds of social strata, hailing from all across the TerraGov systems. \nAs the vessel approaches to the ordered location on space, the cryostasis pods deactivate and awake you from your long-term stasis. Knowing that it's one of those days again, you hope that you'll make this out alive...</i></p>"
+	output += "<p><i>The <b>United Nations Space Command</b> is the military, exploratory, and scientific agency of the Unified Earth Government (Centralized civilian government of Earth). UNSC soldiers are trained, skilled, and ready to combat whatever threat opposes them...</i></p>"
 	output += "</div>"
 
-	var/datum/browser/popup = new(src, "marines", "<div align='center'>TerraGov Marine Corps</div>", 480, 280)
+	var/datum/browser/popup = new(src, "unsc", "<div align='center'>United Nations Space Command</div>", 480, 280)
 	popup.set_content(output)
 	popup.open(FALSE)
 
-/mob/new_player/proc/ViewAliens()
+/mob/new_player/proc/ViewURF()
 	var/output = "<div align='center'>"
-	output += "<p><i>Hailing from one of many unknown planets and other unlisted habitats, the <b>xenomorph threat</b> remains at large and still unclear. Extremely dangerous extraterrestrial lifeforms, part of the hive under the Queen Mother, had caught the TGMC and NT colonies off-guard during their discovery in 2414. \nThey are divided into castes, each with their specialized roles equivalent to a traditional squad member in a human force, thanks to the xenomorph's lifecycle. \nAfter days of ravaging the current area, a metal hive was sighted by the Queen Mother and transported you on the ground. With your intent to spread the hive is in motion, you and your fellow sisters get to work...</i></p>"
+	output += "<p><i>The <b>United Rebel Front</b> commonly referred to as Insurrectionists or 'innies' are a human faction of rebels who come from all backgrounds and walks of life. They are devoted to liberating all colonies from the tyrannical rule of the United Earth Government. They may not be the best trained, or organized, but the URF has proven themselves to be a substational threat to the United Earth Government...</i></p>"
 	output += "</div>"
 
-	var/datum/browser/popup = new(src, "aliens", "<div align='center'>Xenomorph Hive</div>", 480, 280)
+	var/datum/browser/popup = new(src, "urf", "<div align='center'>United Rebel Front</div>", 480, 280)
+	popup.set_content(output)
+	popup.open(FALSE)
+
+/mob/new_player/proc/ViewCOV()
+	var/output = "<div align='center'>"
+	output += "<p><i>The <b>Covenant Empire</b> is a political, military, and religious affiliation between many different alien races who wish nothing more than to fulfill “The Great Journey” and to seek paradise in the afterlife. The sheer existence of a single human can bring their entire civilization to and end, and humans have been declared as heretic beings who deserve nothing more than to be exterminated...</i></p>"
+	output += "</div>"
+
+	var/datum/browser/popup = new(src, "covenant", "<div align='center'>Covenant Empire</div>", 480, 280)
 	popup.set_content(output)
 	popup.open(FALSE)
 

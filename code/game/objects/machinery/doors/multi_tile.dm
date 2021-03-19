@@ -236,3 +236,15 @@
 	openspeed = 17
 	no_panel = TRUE
 	opacity = TRUE
+
+//Halo multi tile doors
+
+/obj/machinery/door/airlock/multi_tile/mainship/generic/unsc
+	name = "\improper UNSC Airlock"
+	req_access = list(ACCESS_UNSC_MARINE)
+
+/obj/machinery/door/airlock/multi_tile/mainship/generic/innie
+	name = "\improper URF Airlock"
+	req_access = list(ACCESS_INSURRECTIONIST_SOLDIER)
+
+

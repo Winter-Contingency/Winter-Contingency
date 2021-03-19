@@ -105,6 +105,11 @@ can cause issues with ammo types getting mixed up during the burst.
 	new_handful.generate_handful(selection, "8g", 5, 1, /obj/item/weapon/gun/shotgun)
 	return new_handful
 
+/obj/item/weapon/gun/shotgun/pump/m45/retrieve_shell(selection)
+	var/obj/item/ammo_magazine/handful/new_handful = new /obj/item/ammo_magazine/handful()
+	new_handful.generate_handful(selection, "8g", 5, 1, /obj/item/weapon/gun/shotgun)
+	return new_handful
+
 /obj/item/weapon/gun/shotgun/pump/bolt/retrieve_shell(selection)
 	var/obj/item/ammo_magazine/handful/new_handful = new /obj/item/ammo_magazine/handful()
 	new_handful.generate_handful(selection, "7.62x54mmR", 5, 1, /obj/item/weapon/gun/shotgun)
@@ -822,7 +827,7 @@ can cause issues with ammo types getting mixed up during the burst.
 //Halo
 
 //M45
-/obj/item/weapon/gun/shotgun/pump/m45 //broken idk how fix
+/obj/item/weapon/gun/shotgun/pump/m45 //should be fixed now
 	name = "M45 Tactical Shotgun"
 	desc = "A shotgun actively in use within the UNSC."
 	flags_equip_slot = ITEM_SLOT_BACK
@@ -834,14 +839,15 @@ can cause issues with ammo types getting mixed up during the burst.
 	pump_sound =  'sound/halo/Shotgun_Reload_Sound_Effect.ogg'
 	max_shells = 9
 	flags_item_map_variant = NONE
-	fire_delay = 1
-	accuracy_mult = 1
-	scatter = 10
-	recoil = 1.5
+	fire_delay = 16
+	accuracy_mult = 1.15
+	accuracy_mult_unwielded = 0.85
+	scatter = 20
+	scatter_unwielded = 40
+	recoil = 2
+	recoil_unwielded = 4
 	aim_slowdown = 0.55
-	pump_delay = 0.5
 	caliber = "8g"
-	flags_gun_features = GUN_WIELDED_FIRING_ONLY
 
 //M90
 /obj/item/weapon/gun/shotgun/pump/m90 //unused
@@ -865,3 +871,4 @@ can cause issues with ammo types getting mixed up during the burst.
 	recoil_unwielded = 4
 	aim_slowdown = 0.55
 	caliber = "8g"
+

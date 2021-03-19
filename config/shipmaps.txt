@@ -12,6 +12,6 @@ Format:
 	disabled (disables the map)
 endmap
 
-map insurrectionist_hideout
+map unsc_frigate_saratoga
 default
 endmap

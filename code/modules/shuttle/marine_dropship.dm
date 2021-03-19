@@ -123,10 +123,10 @@
 	width = 11
 	height = 21
 
-	ignitionTime = 10 SECONDS
-	callTime = 38 SECONDS // same as old transit time with flight optimisation
-	rechargeTime = 2 MINUTES
-	prearrivalTime = 12 SECONDS
+	ignitionTime = 5 SECONDS
+	callTime = 10 SECONDS // same as old transit time with flight optimisation
+	rechargeTime = 3 SECONDS
+	prearrivalTime = 5 SECONDS
 
 	var/list/left_airlocks = list()
 	var/list/right_airlocks = list()
@@ -993,7 +993,7 @@
 	icon = 'icons/obj/machines/computer.dmi'
 	icon_state = "shuttle"
 	resistance_flags = UNACIDABLE|INDESTRUCTIBLE
-	req_one_access = list(ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_LEADER) // TLs can only operate the remote console
+	req_one_access = list(ACCESS_MARINE_DROPSHIP) // TLs can only operate the remote console
 	shuttleId = "alamo"
 	possible_destinations = "lz1;lz2;alamo;normandy"
 
@@ -1004,7 +1004,7 @@
 	icon = 'icons/obj/machines/computer.dmi'
 	icon_state = "shuttle"
 	resistance_flags = UNACIDABLE|INDESTRUCTIBLE
-	req_one_access = list(ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_LEADER)
+	req_one_access = list(ACCESS_MARINE_DROPSHIP)
 
 /obj/machinery/computer/shuttle/shuttle_control/canterbury
 	name = "\improper 'Canterbury' shuttle console"

@@ -164,6 +164,32 @@
 			return "Civilian"
 		if(ACCESS_IFF_MARINE)
 			return "Crew Identification"
+			//unsc
+		if(ACCESS_UNSC_MARINE)
+			return "UNSC Marine Access"
+		if(ACCESS_UNSC_ENGINEER)
+			return "UNSC Marine Engineer Access"
+		if(ACCESS_UNSC_MEDIC)
+			return "UNSC Marine Medic Access"
+		if(ACCESS_UNSC_LEADER)
+			return "UNSC Marine SL Access"
+		if(ACCESS_ODST_RIFLEMAN)
+			return "ODST Rifleman Access"
+		if(ACCESS_ODST_MEDIC)
+			return "ODST Medic Access"
+		if(ACCESS_ODST_SNIPER)
+			return "ODST Sniper Access"
+		if(ACCESS_ODST_CQC)
+			return "ODST CQC Access"
+		if(ACCESS_ODST_ENGINEER)
+			return "ODST Engineer Access"
+		if(ACCESS_ODST_SQUADLEADER)
+			return "ODST SL Access"
+		if(ACCESS_ODST)
+			return "ODST Access"
+		//innies
+		if(ACCESS_INSURRECTIONIST_SOLDIER)
+			return "Insurrectionist Access"
 
 /proc/get_centcom_access_desc(A)
 	switch(A)
