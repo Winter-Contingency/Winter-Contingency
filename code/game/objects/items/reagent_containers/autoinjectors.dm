@@ -226,10 +226,11 @@
 	name = "biofoam canister"
 	desc = "An autoinjector containing life-saving biofoam. Stitches damaged internal organs, repairs cut arteries, and holds broken bones in place. A large warning on the canister reads **DO NOT ADMINISTER MORE THAN ONE DOSE OF BIOFOAM TO PATIENT**"
 	amount_per_transfer_from_this = 5
-	volume = 25
+	volume = 15
 	icon_state = "biofoam"
 	list_reagents = list(/datum/reagent/medicine/biofoam = 25)
 	inject_delay = 2.5 SECONDS
+	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/reagent_containers/hypospray/autoinjector/biofoam/small
 	name = "small biofoam canister"
@@ -239,6 +240,7 @@
 	icon_state = "biofoam_small"
 	list_reagents = list(/datum/reagent/medicine/biofoam = 5)
 	inject_delay = 2.5 SECONDS
+	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/reagent_containers/hypospray/autoinjector/panacea
 	name = "Panacea autoinjector"

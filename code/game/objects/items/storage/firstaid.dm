@@ -72,7 +72,7 @@
 	new /obj/item/reagent_containers/hypospray/autoinjector/tricordrazine(src)
 	new /obj/item/reagent_containers/hypospray/autoinjector/tramadol(src)
 	new /obj/item/stack/medical/splint(src)
-	new /obj/item/storage/pill_bottle/packet/russian_red(src)
+	new /obj/item/reagent_containers/hypospray/autoinjector/biofoam/small(src)
 
 
 /obj/item/storage/firstaid/toxin
@@ -122,6 +122,7 @@
 	new /obj/item/storage/pill_bottle/kelotane(src)
 	new /obj/item/storage/pill_bottle/tramadol(src)
 	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_containers/hypospray/autoinjector/biofoam(src)
 
 
 /obj/item/storage/firstaid/rad

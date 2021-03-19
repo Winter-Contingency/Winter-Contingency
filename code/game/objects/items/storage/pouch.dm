@@ -115,10 +115,11 @@
 
 /obj/item/storage/pouch/firstaid
 	name = "first-aid pouch"
-	desc = "Standard marine first-aid pouch. It can contain autoinjectors, ointments, and bandages."
+	desc = "Standard marine first-aid pouch. It can contain autoinjectors, various bandages, and a life-saving biofoam injector."
 	icon_state = "firstaid"
-	storage_slots = 5
+	storage_slots = 6
 	can_hold = list(
+		/obj/item/reagent_containers/hypospray/autoinjector/biofoam/small,
 		/obj/item/stack/medical/ointment,
 		/obj/item/reagent_containers/hypospray/autoinjector,
 		/obj/item/stack/medical/bruise_pack,
@@ -131,11 +132,12 @@
 
 /obj/item/storage/pouch/firstaid/full/Initialize()
 	. = ..()
-	new /obj/item/stack/medical/ointment (src)
 	new /obj/item/reagent_containers/hypospray/autoinjector/tramadol (src)
 	new /obj/item/storage/pill_bottle/packet/tricordrazine (src)
 	new /obj/item/stack/medical/bruise_pack (src)
+	new /obj/item/stack/medical/ointment (src)
 	new /obj/item/stack/medical/splint (src)
+	new /obj/item/reagent_containers/hypospray/autoinjector/biofoam/small (src)
 
 
 /obj/item/storage/pouch/firstaid/injectors
@@ -154,7 +156,7 @@
 	new /obj/item/reagent_containers/hypospray/autoinjector/combat (src)
 	new /obj/item/reagent_containers/hypospray/autoinjector/oxycodone (src)
 	new /obj/item/reagent_containers/hypospray/autoinjector/synaptizine_expired (src)
-
+	new /obj/item/reagent_containers/hypospray/autoinjector/biofoam/small (src)
 
 /obj/item/storage/pouch/firstaid/som
 	name = "mining first aid pouch"
