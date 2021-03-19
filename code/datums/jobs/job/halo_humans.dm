@@ -10,7 +10,7 @@
 	title = "UNSC Marine"
 	paygrade = "E2"
 	comm_title = "Mar"
-	access = list(ACCESS_UNSC_MARINE)
+	access = list(ACCESS_UNSC_MARINE, ACCESS_MARINE_DROPSHIP)
 	minimal_access = list(ACCESS_UNSC_MARINE, ACCESS_MARINE_DROPSHIP)
 	faction = FACTION_UNSC
 	max_positions = -1 //infinite
