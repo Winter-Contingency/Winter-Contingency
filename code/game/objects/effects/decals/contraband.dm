@@ -130,3 +130,34 @@ obj/structure/sign/poster/New(var/serial)
 	// Description suffix
 	var/desc=""
 	var/icon_state=""
+
+
+/obj/structure/sign/poster/urf
+	name = "URF Poster"
+	desc = "A shittily drawn poster that says 'KILL UNSC'. There is a cute cat drawn on it as well."
+	serial_number = "38"
+	anchored = TRUE
+
+/obj/structure/sign/poster/urf/patcleary
+	name = "URF Poster"
+	desc = "A shittily drawn poster that says 'I <3 Pat Cleary'. Whoever made this must love pat cleary!"
+	serial_number = "39"
+	anchored = TRUE
+
+/obj/structure/sign/poster/urf/frickunsc
+	name = "URF Poster"
+	desc = "A shittily drawn poster that says 'Frick UNSC!'. Whoever made this must not like the UNSC!"
+	serial_number = "40"
+	anchored = TRUE
+
+/obj/structure/sign/poster/urf/reno
+	name = "URF Poster"
+	desc = "A shittily drawn poster that has a picture of Reno on it! We love Reno!"
+	serial_number = "41"
+	anchored = TRUE
+
+/obj/structure/sign/poster/urf/major
+	name = "URF Poster"
+	desc = "A shittily drawn poster that says 'URF MAJOR'"
+	serial_number = "42"
+	anchored = TRUE

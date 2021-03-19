@@ -115,7 +115,7 @@
 		message_admins("Round finished: [MODE_GENERIC_DRAW_NUKE]") //ship blows, no one wins
 		round_finished = MODE_GENERIC_DRAW_NUKE
 		return TRUE
-	
+
 	if(round_stage == DISTRESS_MARINE_RETREAT)
 		message_admins("Round finished: [MODE_INFESTATION_X_MINOR]")
 		round_finished = MODE_INFESTATION_X_MINOR
@@ -262,7 +262,7 @@
 
 	output += "</div>"
 
-	var/datum/browser/popup = new(NP, "playersetup", "<div align='center'>Welcome to TGMC[SSmapping?.configs ? " - [SSmapping.configs[SHIP_MAP].map_name]" : ""]</div>", 300, 375)
+	var/datum/browser/popup = new(NP, "playersetup", "<div align='center'>Welcome to Winter Contingency[SSmapping?.configs ? " - [SSmapping.configs[SHIP_MAP].map_name]" : ""]</div>", 300, 375)
 	popup.set_window_options("can_close=0")
 	popup.set_content(output)
 	popup.open(FALSE)

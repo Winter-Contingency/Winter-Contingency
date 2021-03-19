@@ -297,11 +297,13 @@ GLOBAL_PROTECT(admin_verbs_default)
 	/datum/admins/proc/toggle_prayers,
 	/datum/admins/proc/mcdb,
 	/datum/admins/proc/check_fingerprints,
+	/datum/admins/proc/initialize_liberation,
 	/client/proc/private_message_panel,
 	/client/proc/private_message_context,
 	/client/proc/msay,
-	/client/proc/dsay
+	/client/proc/dsay,
 	)
+
 GLOBAL_LIST_INIT(admin_verbs_admin, world.AVadmin())
 GLOBAL_PROTECT(admin_verbs_admin)
 

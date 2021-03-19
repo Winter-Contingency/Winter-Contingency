@@ -1026,6 +1026,7 @@
 /obj/item/weapon/gun/rifle/ma37
 	name = "MA37 ICWS"
 	desc = "The MA37 Individual Combat Weapon System, formally known as the Individual Combat Weapon System, Caliber 7.62 mm MA37 and the MA5 by the UNSC Marines and Navy, is a standard issue service rifle of the UNSC."
+	icon = 'icons/Marine/gun64.dmi'
 	icon_state = "ma37"
 	item_state = "ma37"
 	fire_sound = "sound/halo/ma37fire.wav"

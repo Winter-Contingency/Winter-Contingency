@@ -26,7 +26,7 @@
 	supervisors = "Sangheili Officer, Sangheili Ultra, Sangheili General"
 	outfit = /datum/outfit/job/covenant/sangheili/minor
 	display_order = JOB_DISPLAY_ORDER_COVENANT_SANG_MINOR
-	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ADDTOMANIFEST
+	//job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ADDTOMANIFEST
 
 /datum/job/covenant/sangheili/officer
 	title = "Sangheili Officer"
@@ -38,7 +38,7 @@
 	display_order = JOB_DISPLAY_ORDER_COVENANT_SANG_OFFICER
 	outfit = /datum/outfit/job/covenant/sangheili/officer
 	skills_type = /datum/skills/SL
-	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ADDTOMANIFEST
+	//job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ADDTOMANIFEST
 
 /datum/job/covenant/sangheili/ultra
 	title = "Sangheili Ultra"
@@ -50,7 +50,7 @@
 	display_order = JOB_DISPLAY_ORDER_COVENANT_SANG_ULTRA
 	outfit = /datum/outfit/job/covenant/sangheili/ultra
 	skills_type = /datum/skills/SL
-	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ADDTOMANIFEST
+	//job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ADDTOMANIFEST
 
 /datum/job/covenant/sangheili/general
 	title = "Sangheili General"
@@ -62,7 +62,7 @@
 	display_order = JOB_DISPLAY_ORDER_COVENANT_SANG_GENERAL
 	outfit = /datum/outfit/job/covenant/sangheili/general
 	skills_type = /datum/skills/SL
-	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ADDTOMANIFEST
+	//job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ADDTOMANIFEST
 
 /datum/outfit/job/covenant/sangheili/minor
 	name = "Covenant - Sangheili Minor"
@@ -168,7 +168,7 @@
 	supervisors = "Sangheili"
 	outfit = /datum/outfit/job/covenant/kigyar
 	display_order = JOB_DISPLAY_ORDER_COVENANT_KIGYAR
-	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ADDTOMANIFEST
+	//job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ADDTOMANIFEST
 
 /datum/outfit/job/covenant/kigyar
 	name = "Covenant - Kig-Yar Trooper"
@@ -201,7 +201,7 @@
 	supervisors = "Sangheili"
 	outfit = /datum/outfit/job/covenant/unggoy
 	display_order = JOB_DISPLAY_ORDER_COVENANT_UNGGOY
-	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ADDTOMANIFEST
+	//job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ADDTOMANIFEST
 
 /datum/job/covenant/unggoy/major
 	title = "Unggoy Major"
@@ -212,7 +212,7 @@
 	supervisors = "Sangheili"
 	outfit = /datum/outfit/job/covenant/unggoy/major
 	display_order = JOB_DISPLAY_ORDER_COVENANT_UNGGOY
-	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ADDTOMANIFEST
+	//job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ADDTOMANIFEST
 
 /datum/outfit/job/covenant/unggoy
 	name = "Covenant - Unggoy Minor"

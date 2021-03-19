@@ -16,7 +16,9 @@
 
 	var/distress_cancelled = FALSE
 
-	var/deploy_time_lock = 15 MINUTES
+	var/deploy_time_lock = 0 MINUTES
+
+	var/gamemode_start
 
 //Distress call variables.
 	var/list/datum/emergency_call/all_calls = list() //initialized at round start and stores the datums.
@@ -76,8 +78,10 @@
 	reset_squads()
 	spawn_characters()
 	transfer_characters()
+	on_setup()
 	return TRUE
 
+/datum/game_mode/proc/on_setup()
 
 /datum/game_mode/proc/post_setup()
 	addtimer(CALLBACK(src, .proc/display_roundstart_logout_report), ROUNDSTART_LOGOUT_REPORT_TIME)
@@ -531,7 +535,7 @@ Sensors indicate [numXenosShip || "no"] unknown lifeform signature[numXenosShip 
 /datum/game_mode/proc/mode_new_player_panel(mob/new_player/NP)
 
 	var/output = "<div align='center'>"
-	output += "<br><i>You are part of the <b>TerraGov Marine Corps</b>, a military branch of the TerraGov council.</i>"
+	output += "<br><i>You are playing <b>Winter Contingency</b>, a Halo themed TGMC downstream.</i>"
 	output +="<hr>"
 	output += "<p><a href='byond://?src=[REF(NP)];lobby_choice=show_preferences'>Setup Character</A> | <a href='byond://?src=[REF(NP)];lobby_choice=lore'>Background</A><br><br><a href='byond://?src=[REF(NP)];lobby_choice=observe'>Observe</A></p>"
 	output +="<hr>"
@@ -547,7 +551,7 @@ Sensors indicate [numXenosShip || "no"] unknown lifeform signature[numXenosShip 
 
 	output += "</div>"
 
-	var/datum/browser/popup = new(NP, "playersetup", "<div align='center'>Welcome to TGMC[SSmapping?.configs ? " - [SSmapping.configs[SHIP_MAP].map_name]" : ""]</div>", 300, 375)
+	var/datum/browser/popup = new(NP, "playersetup", "<div align='center'>Welcome to Winter Contingency[SSmapping?.configs ? " - [SSmapping.configs[SHIP_MAP].map_name]" : ""]</div>", 300, 375)
 	popup.set_window_options("can_close=0")
 	popup.set_content(output)
 	popup.open(FALSE)

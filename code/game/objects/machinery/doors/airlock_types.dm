@@ -854,3 +854,15 @@
 	name = "\improper Research Dome"
 	icon_state = "door_locked"
 	locked = TRUE
+
+//Halo airlocks
+/obj/machinery/door/airlock/mainship/unsc
+	name = "\improper UNSC Airlock"
+	icon = 'icons/obj/doors/mainship/secdoor.dmi'
+	req_access = list(ACCESS_UNSC_MARINE)
+
+/obj/machinery/door/airlock/mainship/innie
+	name = "\improper URF Airlock"
+	icon = 'icons/obj/doors/mainship/secdoor.dmi'
+	req_access = list(ACCESS_INSURRECTIONIST_SOLDIER)
+
