@@ -7,8 +7,8 @@
 	config_tag = "Liberation"
 	required_players = 0
 	votable = TRUE
-	var/unsc_tickets = 50
-	var/insurrectionist_tickets = 50
+	var/unsc_tickets = 250
+	var/insurrectionist_tickets = 250
 	//var/list/factions = (FACTION_INSURRECTION, FACTION_UNSC)
 	valid_job_types = list(
 							/datum/job/unsc/marine/basic = -1,
