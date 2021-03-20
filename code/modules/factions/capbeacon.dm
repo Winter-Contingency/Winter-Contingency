@@ -13,6 +13,7 @@ var/list/obj/machinery/capbeacon/cps = list()
 	var/capture_points = 5 // How much point faction will get upon capturing//
 	var/ppm = 8 // Points per minute, This can be less than 1 if you want less tickets//
 	var/controlled_by
+	resistance_flags = RESIST_ALL
 
 /obj/machinery/capbeacon/New()
 	..()
