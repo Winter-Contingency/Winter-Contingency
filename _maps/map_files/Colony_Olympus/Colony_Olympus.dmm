@@ -23,7 +23,6 @@
 "bf" = (/obj/machinery/floodlight/landing,/obj/effect/decal/warning_stripes,/turf/open/floor/plating,/area/swordbase/ground/outdoors)
 "bi" = (/turf/open/floor/tile/dark,/area/prison/security)
 "bl" = (/obj/machinery/light/spot{dir = 8},/turf/open/floor/prison/kitchen,/area/swordbase/ground/kitchen)
-"bm" = (/obj/structure/flora/rock/pile,/obj/machinery/light{dir = 1},/turf/open/floor/asteroid,/area/desert_dam/interior/caves)
 "bq" = (/obj/structure/rack,/obj/item/tool/pickaxe/drill,/turf/open/floor/asteroid,/area/desert_dam/interior/caves)
 "bv" = (/obj/structure/table/woodentable,/turf/open/floor/wood,/area/swordbase/ground/kitchen)
 "bx" = (/obj/machinery/light,/turf/open/floor/tile/dark,/area/prison/security)
@@ -252,7 +251,6 @@
 "mX" = (/obj/item/trash/boonie,/turf/open/floor/tile/dark,/area/prison/security/checkpoint)
 "mZ" = (/obj/structure/table/reinforced,/obj/item/folder,/turf/open/floor/tile/dark/blue2{dir = 8},/area/desert_dam/building/administration)
 "na" = (/obj/structure/table/woodentable,/obj/item/tool/kitchen/tray,/turf/open/floor/wood,/area/ice_colony/surface/dorms)
-"ne" = (/obj/structure/flora/rock/pile/alt,/turf/open/floor/asteroid,/area/swordbase/ground/inniecave)
 "nh" = (/turf/open/floor/plating/ground/dirtgrassborder/corner{dir = 4},/area/swordbase/ground/outdoors)
 "ni" = (/obj/item/ammo_casing/bullet,/turf/open/ground/grass,/area/swordbase/ground/outdoors)
 "no" = (/turf/open/floor/plating/ground/dirtgrassborder/corner2{dir = 8},/area/swordbase/ground/outdoors)
@@ -266,7 +264,6 @@
 "nF" = (/obj/item/reagent_containers/food/drinks/bottle/whiskey,/turf/open/ground/grass,/area/swordbase/ground/outdoors)
 "nG" = (/obj/structure/rack,/obj/item/trash/tray,/turf/open/floor/tile/dark/red2{dir = 9},/area/prison/security)
 "nH" = (/turf/open/floor/plating/asteroidplating,/area/swordbase/ground/outdoors)
-"nJ" = (/obj/structure/flora/rock/alt,/turf/open/floor/asteroid,/area/swordbase/ground/inniecave)
 "nL" = (/obj/machinery/light/small{dir = 1},/obj/effect/decal/cleanable/dirt,/obj/structure/bed/chair/wood/wings{dir = 8},/turf/open/floor/wood,/area/prison/chapel)
 "nN" = (/turf/open/floor/plating/ground/dirtgrassborder{dir = 4},/area/swordbase/ground/outdoors)
 "nO" = (/obj/structure/fence,/turf/open/ground/grass,/area/swordbase/ground/hydro)
@@ -279,7 +276,6 @@
 "ol" = (/turf/open/floor/wood,/area/swordbase/ground/hydro)
 "on" = (/turf/closed/gm,/area/swordbase/ground/outdoors)
 "oq" = (/obj/structure/table/woodentable,/obj/item/tool/lighter/zippo,/obj/item/clothing/mask/cigarette/cigar{pixel_y = 7},/turf/open/floor/grime,/area/swordbase/ground/inniecave)
-"ow" = (/obj/structure/flora/rock/pile/alt2,/turf/open/floor/asteroid,/area/desert_dam/interior/caves)
 "oy" = (/obj/structure/flora/tree/jungle,/obj/structure/flora/ausbushes/fullgrass,/turf/open/ground/grass,/area/swordbase/ground/outdoors)
 "oH" = (/obj/item/stack/rods,/turf/open/floor/plating/asteroidplating,/area/swordbase/ground/outdoors)
 "oI" = (/turf/open/floor/plating/ground/dirtgrassborder/corner{dir = 8},/area/swordbase/ground/outdoors)
@@ -442,7 +438,6 @@
 "wt" = (/obj/structure/closet/l3closet/janitor,/turf/open/floor/plating/asteroidfloor,/area/swordbase/ground/janitor_closet)
 "wu" = (/obj/structure/table,/obj/item/storage/box/cups,/obj/machinery/light/spot{dir = 1},/turf/open/floor/wood,/area/swordbase/ground/kitchen)
 "wv" = (/obj/machinery/light/spot{dir = 1},/turf/open/floor/wood,/area/swordbase/ground/kitchen)
-"wx" = (/obj/structure/flora/rock/alt2,/turf/open/floor/asteroid,/area/swordbase/ground/inniecave)
 "wz" = (/obj/machinery/chem_dispenser,/turf/open/floor/asteroidfloor,/area/swordbase/ground/hydro)
 "wA" = (/obj/item/stack/sheet/metal,/turf/open/floor/asteroidfloor,/area/swordbase/ground/outdoors)
 "wC" = (/turf/closed/wall/mainship,/area/swordbase/ground/outdoors)
@@ -515,7 +510,6 @@
 "zW" = (/obj/machinery/light/spot{dir = 4},/turf/open/floor/tile/dark/blue2{dir = 4},/area/desert_dam/building/administration)
 "Aa" = (/obj/structure/table/woodentable,/obj/machinery/light/spot,/turf/open/floor/tile/dark/red2,/area/prison/security/head)
 "Ae" = (/obj/machinery/door/airlock/multi_tile/mainship/generic,/turf/open/floor/tile/dark2,/area/swordbase/ground/bridge)
-"Aj" = (/obj/structure/flora/rock/pile,/turf/open/floor/asteroid,/area/swordbase/ground/inniecave)
 "Ak" = (/turf/open/floor/tile/dark/red2/corner{dir = 1},/area/prison/security)
 "An" = (/obj/effect/decal/warning_stripes/thick{dir = 1},/obj/structure/ob_ammo/ob_fuel,/turf/open/floor/plating,/area/desert_dam/interior/caves)
 "Aq" = (/obj/structure/filingcabinet,/turf/open/floor/tile/dark,/area/prison/security/checkpoint)
@@ -606,7 +600,6 @@
 "EM" = (/turf/open/floor/tile/dark/red2{dir = 8},/area/prison/security/head)
 "EN" = (/obj/machinery/colony_floodlight,/turf/open/floor/plating/ground/dirt2,/area/swordbase/ground/outdoors)
 "EO" = (/turf/open/floor/tile/dark,/area/desert_dam/building/administration)
-"EP" = (/obj/structure/flora/rock/pile/alt2,/turf/open/floor/asteroid,/area/swordbase/ground/inniecave)
 "ER" = (/obj/structure/flora/ausbushes/leafybush,/turf/open/ground/grass,/area/swordbase/ground/outdoors)
 "ES" = (/obj/structure/table,/obj/machinery/microwave,/turf/open/floor/tile/dark/red2{dir = 8},/area/prison/security)
 "EX" = (/turf/open/floor/tile/dark,/area/swordbase/ground/outdoors)
@@ -630,7 +623,6 @@
 "FU" = (/obj/machinery/light/spot,/turf/open/floor/wood,/area/swordbase/ground/kitchen)
 "FV" = (/obj/structure/sign/safety/medical{pixel_y = 34},/turf/open/ground/grass,/area/swordbase/ground/outdoors)
 "FW" = (/obj/structure/bed/chair/office/light{dir = 8},/turf/open/floor/tile/dark/blue2/corner{dir = 8},/area/desert_dam/building/administration)
-"FX" = (/obj/structure/flora/rock/pile/alt,/turf/open/floor/asteroid,/area/desert_dam/interior/caves)
 "Gf" = (/obj/structure/table/reinforced,/obj/item/folder/red,/turf/open/floor/tile/dark/red2{dir = 8},/area/prison/security)
 "Gg" = (/obj/machinery/door/airlock/multi_tile/mainship/generic/innie{dir = 2; icon = 'icons/obj/doors/Door2x1_secure.dmi'; max_integrity = 50000000; openspeed = 34},/turf/open/floor/asteroid,/area/desert_dam/interior/caves)
 "Gj" = (/obj/structure/bed/chair/office/dark{dir = 8},/turf/open/floor/tile/dark/red2{dir = 4},/area/prison/security)
@@ -658,10 +650,8 @@
 "Hk" = (/obj/machinery/door/airlock/mainship/security/glass,/turf/open/floor/tile/dark,/area/swordbase/ground/armory)
 "Hp" = (/obj/structure/bed,/obj/machinery/light{dir = 4},/turf/open/floor/grime,/area/swordbase/ground/inniecave)
 "Hx" = (/obj/structure/bed/chair/office/light{dir = 8},/turf/open/floor/tile/dark,/area/desert_dam/building/administration)
-"Hy" = (/obj/structure/flora/rock/alt3,/turf/open/floor/asteroid,/area/swordbase/ground/inniecave)
 "Hz" = (/obj/effect/decal/warning_stripes/thin{dir = 8},/obj/machinery/landinglight/ds1/delayone{dir = 8},/turf/open/floor/plating,/area/swordbase/ground/outdoors)
 "HE" = (/obj/structure/table/reinforced,/obj/structure/paper_bin,/obj/item/tool/pen,/obj/machinery/door/window{dir = 8},/turf/open/floor/tile/dark,/area/desert_dam/building/administration)
-"HG" = (/obj/structure/flora/rock/alt,/turf/open/floor/asteroid,/area/desert_dam/interior/caves)
 "HI" = (/obj/structure/rack,/obj/item/ammo_magazine/pistol/m6,/obj/item/ammo_magazine/pistol/m6,/obj/item/ammo_magazine/pistol/m6,/obj/item/ammo_magazine/pistol/m6,/obj/item/ammo_magazine/pistol/m6,/obj/item/ammo_magazine/pistol/m6,/turf/open/floor/tile/dark/red2{dir = 8},/area/swordbase/ground/armory)
 "HJ" = (/obj/structure/jungle/vines,/turf/open/ground/river,/area/swordbase/ground/outdoors)
 "HK" = (/obj/structure/mineral_door/wood,/turf/open/floor/wood,/area/swordbase/ground/hydro)
@@ -675,7 +665,6 @@
 "HZ" = (/turf/open/floor/asteroidfloor,/area/swordbase/ground/outdoors)
 "Ia" = (/obj/structure/flora/ausbushes/fullgrass,/turf/open/ground/grass,/area/swordbase/ground/inniecave)
 "Ih" = (/obj/machinery/door/airlock/multi_tile/secure{dir = 1},/turf/open/floor/grime,/area/swordbase/ground/inniecave)
-"Ii" = (/obj/structure/flora/rock/pile/alt,/obj/machinery/light{dir = 8},/turf/open/floor/asteroid,/area/desert_dam/interior/caves)
 "Ij" = (/obj/structure/bookcase,/turf/open/floor/wood,/area/swordbase/ground/bridge)
 "Il" = (/turf/open/space/basic,/area/swordbase/ground/hydro)
 "In" = (/obj/structure/bed,/obj/item/bedsheet/brown,/obj/machinery/light/spot{dir = 1},/turf/open/floor/plating/asteroidfloor,/area/swordbase/ground/janitor_closet)
@@ -731,7 +720,6 @@
 "KL" = (/obj/structure/closet/crate/ammo,/turf/open/floor,/area/swordbase/ground/inniecave)
 "KM" = (/obj/structure/flora/ausbushes/fullgrass,/turf/open/ground/grass/grass2,/area/swordbase/ground/inniecave)
 "KO" = (/obj/machinery/light{dir = 1},/turf/open/floor/tile/dark/red2{dir = 1},/area/prison/security)
-"KP" = (/obj/structure/flora/rock,/obj/machinery/light{dir = 4},/turf/open/floor/asteroid,/area/swordbase/ground/inniecave)
 "KS" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/asteroid,/area/desert_dam/interior/caves)
 "KU" = (/obj/structure/bed/chair/wood/wings{dir = 4},/turf/open/floor/wood,/area/ice_colony/surface/bar)
 "KW" = (/obj/structure/window/framed/wood,/turf/open/floor/wood,/area/ice_colony/surface/dorms)
@@ -815,7 +803,6 @@
 "OM" = (/obj/machinery/light/spot{dir = 1},/turf/open/floor/asteroidfloor,/area/swordbase/ground/hydro)
 "ON" = (/obj/machinery/light/spot{dir = 8},/turf/open/floor/tile/dark/green2{dir = 8},/area/swordbase/ground/bridge)
 "OO" = (/obj/machinery/telecomms/processor/preset_one,/turf/open/floor/mainship/tcomms,/area/prison/telecomms)
-"OQ" = (/obj/structure/flora/rock/alt3,/turf/open/floor/asteroid,/area/desert_dam/interior/caves)
 "OR" = (/obj/structure/closet/secure_closet/freezer/fridge,/turf/open/floor/freezer,/area/swordbase/ground/kitchen)
 "OS" = (/obj/machinery/iv_drip,/obj/item/reagent_containers/blood/OMinus,/turf/open/floor/mainship/sterile/dark,/area/swordbase/ground/medsci)
 "OU" = (/turf/open/floor/tile/dark/green2{dir = 6},/area/swordbase/ground/bridge)
@@ -827,7 +814,6 @@
 "Ph" = (/obj/structure/table/reinforced,/obj/item/folder,/turf/open/floor/tile/dark/red2{dir = 5},/area/prison/security)
 "Pl" = (/obj/machinery/telecomms/server/presets/innie,/turf/open/floor/mainship/tcomms,/area/prison/telecomms)
 "Pm" = (/obj/effect/decal/remains/xeno,/turf/open/ground,/area/swordbase/ground/outdoors)
-"Pn" = (/obj/structure/flora/rock,/turf/open/floor/asteroid,/area/swordbase/ground/inniecave)
 "Po" = (/mob/living/simple_animal/chicken{name = "grob"},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating/ground/dirt2,/area/swordbase/ground/outdoors)
 "Pp" = (/obj/effect/decal/cleanable/dirt,/obj/structure/largecrate/random/barrel/green,/turf/open/floor/plating,/area/desert_dam/interior/caves)
 "Pt" = (/turf/open/floor/carpet,/area/swordbase/ground/inniecave)
@@ -1151,7 +1137,7 @@ qFVQVQVQVQVQVQVQVQXRXRXRKSXREpEpXRXRGxGxGxGxonVQVQVQonGxGxGxGxGxGxGxZXZXGxGxGxUW
 qFVQVQVQVQVQVQVQXRXRXRXRXRKSEpEpEpXRXRGxGxGxGxononVQonGxGxGxGxGxGxGxZXZXZXGxGxUWeieKedeKeKeKeKeKedeKnqNtGxGxGxZXZXGxLtGxGxXWKUPfnxCMCMCMCMCMCMCMKUPfnxXWGxGxGxGxGxGxVQVQVQVQpSpSpSpSpSpSpSpSODGxGxpSpSGxGxonGxGxGxGxGxZXGxGmGxonVQVQonVQonZoZXGxGxGxGxonVQVQVQVQVQVQVQqFVQVQVQVQVQVQamFhFhaosOpUpUpUpUpUaoFhFhaojcjcjcaohudpdpdprFtmrFrFdpuvdpdpdpjcaoamamVQqFqFqFqFqFqF
 qFVQVQVQVQVQVQVQXRXRXRQaXRXREpEpEpEpXRGxGxGxGxGxonVQVQonZoZoonGxGxGxZXZXZXGxGxUWBjqZEyltwGeKeKilEyQkpVNtGxGxGxZXAQGxGxGxGxXWXWCMCMCMCMCMCMCMCMCMCMCMXWXWQCGxGxGxGxGxGxGxGxDeCorMzjpSCocizjpSpSpSpSpSpSGxGxGxGxGxUZGxZXZXGxGxZoonVQVQVQVQVQonZoGxZXGxdLVQVQVQVQVQVQVQVQqFVQVQVQVQVQVQamFhuNuSpUpUpUpUpUaoamamjcvgdpdpdpvgdprFrFrFrFrFdpdpuvvOdpdpdpjcamamamVQqFqFqFqFqFqF
 qFVQVQVQVQVQVQXRXRXRXRXRXRXRKSEpEpEpXRGxGxGxGxGxGxononZohxonVQonGxGxGxGxZXZXGxUWUWUWUWUWUWKrUWUWUWUWUWGxGxGxZXZXZXGxGxQCGxGxXWXWCMCMCMCMMyCMCMjzjzXWXWGxGxGxGxGxGxGxGxVQZXDepSpSpSpSpSpSpSpSpSpSpSpSpSZXZXGmGxGxGxGxZXZXftGxVQonVQVQVQVQVQVQonGxZoECGxVQVQVQVQVQVQVQVQqFVQVQVQVQVQVQamFhpUpUpUvRwcpUpUamamaojcdpdpdprFrFrFdpdpdprFdptmdpqvaodpdpdprFwhaoamVQqFqFqFqFqFqF
-qFVQVQVQVQVQVQEpXRXRXRXRXRXRXRXREpEpXRXRGxGxGxGxGxGxGxGxZoonVQVQonGxGxGxZXZXZXGxGxGxGxGxGxGxGxGxGxGxGxGxGxGxZXZXZXGxGxGxGxGxGxGxdPXWMpJzXWJzMpXWXWGxGxGxGxUZGxGxGxVQVQZXZXDeCoxMzjpSCojIzjpSODGxGxononZoGxZXZXZXFjGxZXZXGxGxniVQVQVQVQVQVQVQonZoZXhxZoVQVQVQVQVQVQVQVQqFVQVQVQVQVQFhFhFhuNwrpUaoampUpUaocdamaohudpdprFvOdpdpcdqvdpdpwxdpqvamxydpdprFxIamamVQqFqFqFqFqFqF
+qFVQVQVQVQVQVQEpXRXRXRXRXRXRXRXREpEpXRXRGxGxGxGxGxGxGxGxZoonVQVQonGxGxGxZXZXZXGxGxGxGxGxGxGxGxGxGxGxGxGxGxGxZXZXZXGxGxGxGxGxGxGxdPXWMpJzXWJzMpXWXWGxGxGxGxUZGxGxGxVQVQZXZXDeCoxMzjpSCojIzjpSODGxGxononZoGxZXZXZXFjGxZXZXGxGxniVQVQVQVQVQVQVQonZoZXhxZoVQVQVQVQVQVQVQVQqFVQVQVQVQVQFhFhFhuNwrpUaoampUpUaocdamaohudpdprFvOdpdpcdqvdpdprFdpqvamxydpdprFxIamamVQqFqFqFqFqFqF
 qFVQVQVQVQVQVQXRXRXRXREpEpXRKSXREpEpEpXRXRXRGxGxGxGxGxGxGxGxononVQonZoGxGxZXZXZXZXGxGxGxZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXGxGxGxGxGxGxGxZXZXZXZXGxGxGxGxGxGxGxGxGxGxGxGxGxZXGxlFUeUeUepSpSUeUeUeRoGxononVQonZoZXGxZXZXZXZXZXZXrDWJononVQVQVQVQVQVQZohxZoEConVQVQVQVQVQVQVQqFVQVQVQVQFhFhamaoampUpUamampUpUaoaoamdpdpdpdpylaoqvqvamamqvdpdpdpdCcdamxyypyQamamamVQqFqFqFqFqFqF
 qFVQVQVQVQVQVQXRXRXRXRXREpEpKSXRXREpEpEpXRXRXRGxGxGxGxGxGxGxGxGxonZohxZoononAQAQZXZXZXZXZXGxGxAQAQZXZXZXZXZXGtZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXGxGxGxGxGxGxGxQCGxGxGxGxGxGxGxZXZXGxGxGxGxGxonVQVQonBUZXGxZXZXGxZXZXGxbMGxTlpkVQVQVQVQVQonGxECECGxonVQVQVQVQVQVQVQqFVQVQVQVQFhaozDzQzQpUpUaoaoBfpUBzrFdpdpdpdprFdpjcamamamamaohudpylaoamamamamamamamVQVQqFqFqFqFqFqF
 qFqFVQVQVQVQVQEpKSXRXRXRXREpXRXRXRXREpEpEpEpXRXRGxGxGxGxGxGxGxGxGxGxZoonVQVQononGxGxGxZXZXZXZXZXGxGxGxGxGxGxGxGxZXZXZXZXZXZXGtGtZXZXZXZXGtGtZXZXZXZXGtZXZXZXZXGxGxGxZXGxGxGxFjGxGxZXGxZXGxGxGxonVQononZoECGxZXZXGxGxZXZXZYWJhJrlononVQVQVQVQonGxECGxGxonVQVQVQVQVQVQVQqFVQVQVQVQFhamCgpUpUpUpUpUpUpUpUrFrFrFrFrFrFrFdpjcamcdcdamcddpdpdCcdamamcdcdamamVQVQVQqFqFqFqFqFqF
@@ -1159,24 +1145,24 @@ qFqFVQVQVQVQVQVQEpKSXRXRXRXRXRXRKSXREpEpEpEpEpXRXRXRXRXRXRXRGxGxGxGxGxGxonVQVQVQ
 qFqFqFVQVQVQVQVQVQEpXRKSXRXRXRXRXRXRXRXREpEpEpEpEpEpEpEpEpXRXRXRGxGxGxGxGxonononGxGxZWGxGxLtLtLtGxGxGxQCGxGxGxGxGxGxGxGxGxGxGxGxGxGxGxGxGxGxZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXGxFsGxGxZoGxZoZXZXZXGxonVQVQonGtGtZXZoVQVQVQVQVQVQVQVQonZoGxGxZXZoVQVQVQVQVQVQVQqFVQVQVQVQFhFhEgEjEkFrFxaorFrFrFrFrFrFrFrFrFqzaoamcdFzDVFSGrdpdpdpylaoDxDVGDcdamVQVQVQqFqFqFqFqFqF
 qFqFqFVQVQVQVQVQVQVQEpXRXRXRXRQaXRXRXRXRXRXREpEpEpEpEpEpEpEpEpXRXRGxGxGxGxGxGxGxGxGxGxGxGxGxGxGxGxGxVQVQVQGxGxGxGxGxGxGxZWGxGxGxGxQCGxGxGxGxGxGxGxGxGxZXZXZXZXGtZXZXZXZXZXZXZXZXZXZXZXZXFjFsGxGxQCGxZXGxGxGxonVQVQonZXZXGxonVQVQVQVQVQVQVQVQVQGxZXFjGxGxonVQVQVQVQVQVQqFVQVQVQVQVQFhFhFhFhFhFhFhFhFhFhdpdprFrFrFdpaoamamcdFzDVFzGrdpdprFdpdpdpDVHpaoamVQVQVQqFqFqFqFqFqF
 qFqFqFqFVQVQVQVQVQVQVQEpEpXRXRXRXRXRXRKSXRXRXRXRXRXREpEpEpEpEpEpXRXRXRXRGxGxGxGxGxGxGxGxGxGxGxGxGxVQZoZoVQVQVQhxhxZoZohxGxGxGxonGxGxGxGxGxGxGxGxGxGxGxZXGxGxGxGxGxGxGxGxGxZXZXGxGxZXZXZXZXZXZXGxGxZXZXZXGxonVQVQonZoZXGtZoVQVQVQVQVQVQVQVQVQonZoFsZXGxZoonVQVQVQVQVQVQqFqFqFqFqFqFqFFhamamamamamamamamdpdpdpdpdpdpcdamamamdpdpdpdpdpdpdpdpdpdpdpdCcdamVQVQVQqFqFqFqFqFqF
-qFqFqFqFqFVQVQVQVQVQVQVQEpXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXREpEpEpEpEpXRXRXRXRXRXRXRXRXRGxGxGxGxGxGxGxGxGxGxGxGxhxhxhxZohxhxonVQononononGxGxGxGxGxGxZXZXGxGxGxGxGxGxGxGxGxGxZXZXZXGxZXZXZXZXZXZXZXZXZXZXZXGxGxGxZoGxZXZXVQVQVQVQVQVQVQVQVQVQonGxZXGxGxZoonVQVQVQVQVQVQqFVQVQVQVQamamamamamamqzaoaohudpdpdpdpdpdpdpamamamcdFzDVFzGrrFHyHMDVDVDVHXtmamamVQVQVQqFqFqFqFqFqF
+qFqFqFqFqFVQVQVQVQVQVQVQEpXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXREpEpEpEpEpXRXRXRXRXRXRXRXRXRGxGxGxGxGxGxGxGxGxGxGxGxhxhxhxZohxhxonVQononononGxGxGxGxGxGxZXZXGxGxGxGxGxGxGxGxGxGxZXZXZXGxZXZXZXZXZXZXZXZXZXZXZXGxGxGxZoGxZXZXVQVQVQVQVQVQVQVQVQVQonGxZXGxGxZoonVQVQVQVQVQVQqFVQVQVQVQamamamamamamqzaoaohudpdpdpdpdpdpdpamamamcdFzDVFzGrrFrFHMDVDVDVHXtmamamVQVQVQqFqFqFqFqFqF
 qFqFqFqFqFqFVQVQVQVQVQVQEpEpXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXREpEpEpEpEpEpXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRGxGxGxGxGxGxGxonVQVQVQVQonGxGxGxGxGxZXZXGxGxGxGxGxZWGxGxGxGxGxBdOXBdGxGxGxZXZXZXZXZXZXZXZXZXZXZXZXZXZXZoonVQVQVQVQVQVQVQVQonZoGxZXGxGxZoVQVQVQVQVQVQVQqFVQVQcdamcdcdcdcdamdpdpdpdpdpdpdpdpaohuqzaoamamamamFzDVFzGrrFrFGrHYFzDVHXamamamVQVQVQqFqFqFqFqFqF
 qFqFqFqFqFqFqFVQVQVQVQVQVQEpXRXRXRXRXRXREpEpEpXRXRXRXRKSXRXRXRXRXRXRXREpEpEpXRXRXREpEpEpEpEpEpEpEpEpEpEpEpEpEpXRXRXRXRdeGxGxGxGxononononZoGxGxGxGxZXZXZXGxGxGxGxGxGxGxGxGxGxBdBSBSBSBdGxGxGxGxGxZXZXZXZXZXGxZXZXftERZXZXZoononVQVQVQVQVQonZXZXZXZXZXGxonVQqFqFqFqFVQVQqFVQamamdCIatmdCdCcddpdpIhdpdpdpvOamampUpUIWJGaoamamcdvOdpdpdpdpdOaoamcdcdamamamVQVQVQqFqFqFqFqFqF
 qFqFqFqFqFqFqFqFVQVQVQVQVQEpEpXRXRXRXRXRXREpEpEpEpXRXRXRXRXRXRXRXRXRXRXRXRXRXRKSXRXRXREpEpEpEpEpEpEpEpEpEpEpEpEpEpEpEpXRXRXRGxGxGxGxGxZoZoZoGxGxGxGxZXGxGxGxGxGxGxGxGxGxGxQCBdBSBSBSBdQCGxGmGxFsFsGxGmGxGxGxGxERFsGxZXZXGxZoZoonononVQonNzZXZXumumonVQonqFqXqXqFVQVQVQqFVQamdCtmdCdCdCdCdCrFdpaodpdpdpaoampUpUpUpUpUKLaoamamaoamamcddpcdamamamamamamVQVQVQVQqFqFqFqFqFqF
-qFqFqFqFqFqFqFqFqFqFVQVQVQVQEpEpXRXRXRXRXRXREpEpEpEpXRKSXRXRKSXRXRXRXRXRXRXRKSXRXRXRXRXRXRXREpEpEpEpEpEpEpEpEpEpEpEpEpEpEpXRXRXRXRXRXRXRhconononGxZXZXZXGxononononGxGxGxGxBdhsBSBSBSBSBdGxGxGxGxGxFsGxGxGxZoZoZoGxGxGxECZXGxGxZoZoZXZXSYZXZXZXZXGxVQVQqFqXqXqXqXqFVQVQqFVQamcdtmIadCdCdCKMdCKPaoLpdpaoaoMapUpUpUpUpUpUpUamamamamaoaoMgaoaoamamamamamVQVQVQVQqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFVQVQVQVQEpEpXRXRXRXRXRXREpEpEpEpXRKSXRXRKSXRXRXRXRXRXRXRKSXRXRXRXRXRXRXREpEpEpEpEpEpEpEpEpEpEpEpEpEpEpXRXRXRXRXRXRXRhconononGxZXZXZXGxononononGxGxGxGxBdhsBSBSBSBSBdGxGxGxGxGxFsGxGxGxZoZoZoGxGxGxECZXGxGxZoZoZXZXSYZXZXZXZXGxVQVQqFqXqXqXqXqFVQVQqFVQamcdtmIadCdCdCKMdCylaoLpdpaoaoMapUpUpUpUpUpUpUamamamamaoaoMgaoaoamamamamamVQVQVQVQqFqFqFqFqFqF
 qFqFqFqFqFqFqFqFqFqFqFqFVQVQVQEpEpXRXRXRXRXRXRXRXREpEpXRXRXRXRKSKSXRXRXRXRXRXRSqXRXRXRXRXRXRXRXREpEpEpEpEpEpEpEpEpEpEpXRXRXRXRXREpEpEpEpVQVQVQVQVQZXZXdeVQVQVQVQVQonGxGxGxKWBSBSBSBSWRKWGxGxGxGxonononononononononZoGxZXftZXZXZXGxZXZXSYZXZXZXZXdeVQVQqXqXqXqXqXqXqFVQqFVQamamcddCdCkAaoMudCrFMGdpdpFhMWpUpUNhpUpUNhpUaoamamamaoNudpdpdpNuaoamamamVQVQVQVQVQqFqFqFqFqFqF
 qFqFqFqFqFqFqFqFqFqFqFqFqFVQVQVQEpEpXRKSKSXRXRXRXRXREpEpXRXRQaXRXREpEpEpEpEpXRXRXRXRKSXRKSXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRKSKSEpVQVQVQVQVQVQVQVQNtababVQVQVQVQVQVQonGxGxGxBdhsBSVdesWRBdGxGxononVQVQVQVQVQVQVQVQVQZoZoGxERZXZXGxZXZXZXZXZXZXZXcncnEpVQqXqXqXqXqXqXqXVQqFVQVQamcddCIadCtmIadCrFdpdpdpFhpUpUpUNDNYzQzQaoamamamaoPtdpPtdpPtdpPtaoamVQVQVQVQVQVQqFqFqFqFqFqF
-qFqFqFqFqFqFqFqFqFqFqFqFqFVQVQVQVQEpEpXRXRKSXRXRXRXRXRXRXRXRXRXREpEpEpEpEpEpXRXRXRXRXRXRXRXRXRXRXRXRXRKSSqXRXRXRXRXRXRKSXRXREpEpiexOrcSUgJgJgJgJlbVsVslblbgJVQVQVQVQononGxGxBdBdvzBdBdZoGxGxonVQVQVQVQVQVQVQVQVQVQVQVQZoGxGxZXZXZXZXZXZXZXdedededeHGEpqXqXqXqXqXqXqXVQqFVQVQamamcdtmdCdCdCdCdCrFrFFhFhamaoPDpUpUpUQoaoamamamaoQwdpdpdpdpdpQwaoamVQVQVQVQVQVQqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFqFqFqFVQVQVQVQEpEpXRXRKSXRXRXRXRXRXRXRXRXRXREpEpEpEpEpEpXRXRXRXRXRXRXRXRXRXRXRXRXRKSSqXRXRXRXRXRXRKSXRXREpEpiexOrcSUgJgJgJgJlbVsVslblbgJVQVQVQVQononGxGxBdBdvzBdBdZoGxGxonVQVQVQVQVQVQVQVQVQVQVQVQZoGxGxZXZXZXZXZXZXZXdedededeXREpqXqXqXqXqXqXqXVQqFVQVQamamcdtmdCdCdCdCdCrFrFFhFhamaoPDpUpUpUQoaoamamamaoQwdpdpdpdpdpQwaoamVQVQVQVQVQVQqFqFqFqFqFqF
 qFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFVQVQVQEpEpXRXRXRKSXRXRXRXRXRXRXRXREpEpEpEpXRXRXRXRQaXRXRXRXREpEpEpEpEpXRXRXRXRXRXRXREpEpLeLeEpArArVsVsvUnZJRJRYrKmeaVsyoUalbgJlblbVQVQonGxGxGxBdBdBdhxhxZoonVQVQVQVQVQVQVQVQVQVQVQVQVQononZXGxGxZXZXSYZXcncnXRXRXRXRLDqXqXqXqXqXqXqXVQqFVQVQVQamamdCtmdCdCdCtmdCcdFhamamaopUpUpUpUpUNYaoamamaoRcdpPtdpPtdpRLaoamVQVQVQVQVQVQqFqFqFqFqFqF
-qFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFVQEpEpXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXREpEpXRXREpEpEpXRXRXRXRXREpEpEpEpLeLeLeLeArArArArvUxXjOjOjOzfmalbYnJdJgNikxPGgJgJVQononGxZoZoZohxhxhxonVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQGxZXGxERZXSYVQdedeXRXRXRXRFXqXEpqXqXqXqXqXVQqFVQVQVQVQamcddCdCdCdCIadCcdFhVQamaoShTbTxpUTGamamamamaoQwdpdpdpdpdpQwaoamVQVQVQVQVQVQqFqFqFqFqFqF
-qFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFVQVQEpEpEpEpEpEpXRXRKSXRXRXRXRXRXRXRXRXRXRXRXREpEpEpXRXRXRXRXRXRIrZrJNXRXRXREpLeLeLeLeArArArVsArNXNXNXNXNXArArJdJdJdJdJdCWmJlbVQVQVQononZoZoZohxonVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQononVQonqFqXqXqXXRXRFXXRqXqXbqZFXRqXqXqXVQqFVQVQVQVQamamcddCUFtmIacdFhFhVQamaoaoaoaoUJaoaoaoamamaoPtdpPtdpPtdpPtaoamVQVQVQVQVQVQqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFVQEpEpXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXREpEpXRXREpEpEpXRXRXRXRXREpEpEpEpLeLeLeLeArArArArvUxXjOjOjOzfmalbYnJdJgNikxPGgJgJVQononGxZoZoZohxhxhxonVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQGxZXGxERZXSYVQdedeXRXRXRXRXRqXEpqXqXqXqXqXVQqFVQVQVQVQamcddCdCdCdCIadCcdFhVQamaoShTbTxpUTGamamamamaoQwdpdpdpdpdpQwaoamVQVQVQVQVQVQqFqFqFqFqFqF
+qFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFVQVQEpEpEpEpEpEpXRXRKSXRXRXRXRXRXRXRXRXRXRXRXREpEpEpXRXRXRXRXRXRIrZrJNXRXRXREpLeLeLeLeArArArVsArNXNXNXNXNXArArJdJdJdJdJdCWmJlbVQVQVQononZoZoZohxonVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQononVQonqFqXqXqXXRXRXRXRqXqXbqZFXRqXqXqXVQqFVQVQVQVQamamcddCUFtmIacdFhFhVQamaoaoaoaoUJaoaoaoamamaoPtdpPtdpPtdpPtaoamVQVQVQVQVQVQqFqFqFqFqFqF
 qFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFVQVQVQVQVQEpEpEpXRKSXRXRXRXREpEpXRXRXRXRXREpEpEpEpEpXRXRXRXRXRXRXRXRXRXRXRLeLeLeLeArArVQlbVsVsArArVsArVsVsArKdgqCcCWJdJdCWlbVQVQVQVQVQononononVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQqFqFqFqXqXqXqXntTfTfTfTfntntXRXRXRXRntFhFhFhFhFhFhaoFhaoIatmaodCcdFhFhVQVQamamaoaoUSVaVDaoaoamamaoQwdpdpdpdpdpQwaoamVQVQVQVQVQVQqFqFqFqFqFqF
-qFZHyXRTkqDKeVxjTzTIdmAYqFqFqFqFqFqFqFqFqFqFqFVQVQVQVQEpEpEpXRXRKSXRXREpEpEpXRXRXRXREpXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRLeLeLeArVQVQVQArArVsVsArdFlbUPJdCWJdJdJdJdJdlbgJVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQqFVQEpqXEpEpEpbmXRXRXRXRZFXRXRFXXRXRXRPnamaoFhsvrFrFrFrFrFdCIacdFhFhVQVQVQVQamaoVEVaVaVaVJaoamamamaodpWbWoXedpaoamamVQVQVQVQVQVQqFqFqFqFqFqF
-qFsWgYgYgYgYgYgYbITIbaNaqFqFqFqFqFqFqFqFqFqFqFqFqFqFVQVQVQEpEpEpXRKSXRXRXREpXRXRXRXRXRXRXRXRXRXRXRXREpEpKSXRXRKSKSKSXRXREpEpVQVQVQVQlbinArArArArVsVsJdJdJdJddflbgJgJVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQqFqXqXEpnttMXRXRXRowXRXRXRGgXRXRXRXRrFnerFrFwxrFrFEPrFmWrFrFrFnJFhVQVQVQVQVQamaoXFVaVaVaYaaoamVQamaovOdpdpdpvOaoamamVQVQVQVQVQVQqFqFqFqFqFqF
+qFZHyXRTkqDKeVxjTzTIdmAYqFqFqFqFqFqFqFqFqFqFqFVQVQVQVQEpEpEpXRXRKSXRXREpEpEpXRXRXRXREpXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRLeLeLeArVQVQVQArArVsVsArdFlbUPJdCWJdJdJdJdJdlbgJVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQqFVQEpqXEpEpEpZFXRXRXRXRZFXRXRXRXRXRXRrFamaoFhsvrFrFrFrFrFdCIacdFhFhVQVQVQVQamaoVEVaVaVaVJaoamamamaodpWbWoXedpaoamamVQVQVQVQVQVQqFqFqFqFqFqF
+qFsWgYgYgYgYgYgYbITIbaNaqFqFqFqFqFqFqFqFqFqFqFqFqFqFVQVQVQEpEpEpXRKSXRXRXREpXRXRXRXRXRXRXRXRXRXRXRXREpEpKSXRXRKSKSKSXRXREpEpVQVQVQVQlbinArArArArVsVsJdJdJdJddflbgJgJVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQqFqXqXEpnttMXRXRXRXRXRXRXRGgXRXRXRXRrFrFrFrFrFrFrFrFrFmWrFrFrFrFFhVQVQVQVQVQamaoXFVaVaVaYaaoamVQamaovOdpdpdpvOaoamamVQVQVQVQVQVQqFqFqFqFqFqF
 qFWdZTtekHPlgYgYgYvNQxvQqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFVQVQVQVQEpEpXRXRXRXRXRXRKSXRXRXRXRXRXRXRXRXRXRXRXREpEpEpEpEpEpEpEpEpVQVQVQVQVQVQgJSJElCWCWJdJdJdEalblbgJgJVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQqFqXqXEpEpXRXRXRXRXRXRXRXRXRXRXRXRrFrFrFrFrFrFrFrFrFrFrFrFrFQBFhFhVQVQVQVQVQamaoXFVaVaVaYuaoamVQamamaodpdpdpaoamamVQVQVQVQVQVQVQqFqFqFqFqFqF
-qFGvgYgYgYgYgTVyjPqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFVQVQVQVQEpEpEpEpEpXRXRXRKSXRKSXRXRXRXRXRXRXRXRXRXREpVQVQVQVQVQVQVQVQVQVQVQVQVQVQgJlbgJgJlbgJlbgJgJVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQqFqFqXqXEpXRXRXRXRXRXRXRXRGgVRXRXRrFrFrFEPrFrFrFrFrFrFmWrFFhFhFhVQVQVQVQVQVQamaoaoZiZnZMaoaoamVQVQamamaoaoaoamamVQVQVQVQVQVQVQVQqFqFqFqFqFqF
-qFOOGTMjXbgYgYgYgYqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFVQVQVQVQEpEpEpEpEpEpEpEpEpEpEpEpEpEpEpEpEpEpEpVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQqFqFqFqXqXntIiXRXRXRFXXRntntntqXwxrFrFrFrFrFrFAjrFrFHyaoFhFhVQVQVQVQVQVQVQVQamFhaoaoaoaoaoamamVQVQVQamamamamamVQVQVQVQVQVQVQVQVQqFqFqFqFqFqF
-qFsWgYgYgYgYgYgYbIqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQqFqFqFqFqXqXqXOQowntqXqXqXqXqXFhFhFhaoFhFhaoFhFhFhFhFhFhVQVQVQVQVQVQVQVQVQVQVQFhFhFhFhFhFhFhVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQqFqFqFqFqFqF
+qFGvgYgYgYgYgTVyjPqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFVQVQVQVQEpEpEpEpEpXRXRXRKSXRKSXRXRXRXRXRXRXRXRXRXREpVQVQVQVQVQVQVQVQVQVQVQVQVQVQgJlbgJgJlbgJlbgJgJVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQqFqFqXqXEpXRXRXRXRXRXRXRXRGgVRXRXRrFrFrFrFrFrFrFrFrFrFmWrFFhFhFhVQVQVQVQVQVQamaoaoZiZnZMaoaoamVQVQamamaoaoaoamamVQVQVQVQVQVQVQVQqFqFqFqFqFqF
+qFOOGTMjXbgYgYgYgYqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFVQVQVQVQEpEpEpEpEpEpEpEpEpEpEpEpEpEpEpEpEpEpEpVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQqFqFqFqXqXnttMXRXRXRXRXRntntntqXrFrFrFrFrFrFrFrFrFrFrFaoFhFhVQVQVQVQVQVQVQVQamFhaoaoaoaoaoamamVQVQVQamamamamamVQVQVQVQVQVQVQVQVQqFqFqFqFqFqF
+qFsWgYgYgYgYgYgYbIqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQqFqFqFqFqXqXqXXRXRntqXqXqXqXqXFhFhFhaoFhFhaoFhFhFhFhFhFhVQVQVQVQVQVQVQVQVQVQVQFhFhFhFhFhFhFhVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQqFqFqFqFqFqF
 qFmSqNHPOwWXgYgYHQqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQqFqFqFqFqFqXqXqXqXqXqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQVQqFqFqFqFqFqF
 qFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqFqF
 "}
