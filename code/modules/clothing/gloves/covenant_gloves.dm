@@ -1,6 +1,6 @@
 //Halo//
 
-/obj/item/clothing/gloves/covenant/
+/obj/item/clothing/gloves/covenant
 
 
 //	var/list/species_allowed = list("Sangheili","Unggoy", "Kigyar")

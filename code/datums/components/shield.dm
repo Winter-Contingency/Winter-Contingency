@@ -185,7 +185,7 @@
 		return
 	affecting_shields[intercept_damage_cb] = layer
 
-/datum/component/shield/proc/item_intercept_attack(attack_type, incoming_damage, damage_type, silent)
+/datum/component/shield/proc/item_intercept_attack(attack_type, incoming_damage, damage_type, silent, attack_dir)
 	var/obj/item/parent_item = parent
 	var/status_cover_modifier = 1
 
@@ -264,6 +264,9 @@
 	var/shield_overlay = "shield-blue"
 	var/recharge_overlay = "recharging"
 	var/margin_x = -3
+	var/is_directional_shield = FALSE
+	var/prob_lateral_block = 25 //for directional shields
+	//var/block_for_dir = list(NORTH = 100, NORTHEAST = 100, NORTHWEST = 100, SOUTH = 100, SOUTHEAST = 100, SOUTHWEST = 100, EAST = 100, WEST = 100)
 
 /datum/component/shield/overhealth/Initialize(shield_flags, shield_soft_armor, shield_hard_armor, shield_cover = cover, new_icon, new_shield_overlay, new_recharge_overlay, new_force)
 	if(new_icon)
@@ -301,9 +304,19 @@
 	transfer_damage_cb = CALLBACK(src, .proc/transfer_damage_to_overhealth)
 
 
-/datum/component/shield/overhealth/proc/overhealth_intercept_attack(attack_type, incoming_damage, damage_type, silent)
+/datum/component/shield/overhealth/proc/overhealth_intercept_attack(attack_type, incoming_damage, damage_type, silent, attack_dir)
+	to_chat(world, "el escudo intercepta el daño")
 	if(!(attack_type in can_shield))
 		return incoming_damage
+
+	if(is_directional_shield)
+		if(attack_dir in reverse_nearby_direction(affected.dir))
+			to_chat(world, "el escudo recibe un daño de un adireccion al revez")
+			return incoming_damage
+		else if(!(attack_dir in nearby_direction(affected.dir)) && !(prob(prob_lateral_block)))
+			to_chat(world, "el escudo recibe un daño lateral pero no lo bloquea")
+			return incoming_damage
+		to_chat(world, "el escudo direccional aplica el resto del codigo")
 	var/absorbing_damage = incoming_damage * cover.getRating(damage_type) * 0.01
 	if(!absorbing_damage)
 		return incoming_damage //We are transparent to this kind of damage.
@@ -404,4 +417,14 @@
 	recharge_cooldown = 5 SECONDS
 	shield_overlay = "shield-blue"
 	recharge_overlay = "shield-blue"
+	margin_x = 0
+
+/datum/component/shield/overhealth/directional
+	icon = 'icons/effects/effects.dmi'
+	shield_overlay = "ring_shield"
+	recharge_overlay = "ring_shield"
+	slot_flags = SLOT_L_HAND|SLOT_R_HAND
+	cover = list("melee" = 0, "bullet" = 100, "laser" = 100, "energy" = 100, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 100)
+	can_shield = list(COMBAT_PROJ_ATTACK)
+	is_directional_shield = TRUE
 	margin_x = 0
