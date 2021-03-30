@@ -1,6 +1,6 @@
 //Halo//
 
-/obj/item/clothing/gloves/covenant/
+/obj/item/clothing/gloves/covenant
 
 
 //	var/list/species_allowed = list("Sangheili","Unggoy", "Kigyar")
@@ -64,3 +64,11 @@
 	. = ..()
 	if(isnull(src.gc_destroyed))
 		qdel(src)
+
+/obj/item/clothing/gloves/covenant/hidden_sword
+	icon_state = "unggoy"
+	item_state = "unggoy"
+	actions_types = list(/datum/action/item_action/call_item/sword)
+
+/obj/item/clothing/gloves/covenant/hidden_sword/item_action_slot_check(mob/user, slot)
+	return flags_equip_slot & slotdefine2slotbit(slot)
