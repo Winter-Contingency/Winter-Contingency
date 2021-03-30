@@ -1910,28 +1910,32 @@ GLOBAL_LIST_INIT(available_specialist_sets, list("Scout Set", "Sniper Set", "Dem
 						/obj/item/armor_module/armor/chest/unsc,
 						/obj/item/armor_module/armor/arms/unsc,
 						/obj/item/armor_module/armor/legs/unsc,
-						/obj/item/clothing/head/modular/marine/unsc)
+						/obj/item/clothing/head/modular/marine/unsc,
+						/obj/item/tool/crowbar)
 
 /obj/effect/essentials_set/modular/unsc/medic
 	spawned_gear_list = list(
 						/obj/item/armor_module/armor/chest/unsc/medic,
 						/obj/item/armor_module/armor/arms/unsc,
 						/obj/item/armor_module/armor/legs/unsc,
-						/obj/item/clothing/head/modular/marine/unsc/medic)
+						/obj/item/clothing/head/modular/marine/unsc/medic,
+						/obj/item/tool/crowbar)
 
 /obj/effect/essentials_set/modular/unsc/engineer
 	spawned_gear_list = list(
 						/obj/item/armor_module/armor/chest/unsc/engineer,
 						/obj/item/armor_module/armor/arms/unsc,
 						/obj/item/armor_module/armor/legs/unsc,
-						/obj/item/clothing/head/modular/marine/unsc/engineer)
+						/obj/item/clothing/head/modular/marine/unsc/engineer,
+						/obj/item/tool/crowbar)
 
 /obj/effect/essentials_set/modular/unsc/leader
 	spawned_gear_list = list(
 						/obj/item/armor_module/armor/chest/unsc/sl,
 						/obj/item/armor_module/armor/arms/unsc,
 						/obj/item/armor_module/armor/legs/unsc,
-						/obj/item/clothing/head/modular/marine/unsc/sl)
+						/obj/item/clothing/head/modular/marine/unsc/sl,
+						/obj/item/tool/crowbar)
 
 //ODST Sets
 
@@ -2000,13 +2004,15 @@ GLOBAL_LIST_INIT(available_specialist_sets, list("Scout Set", "Sniper Set", "Dem
 	spawned_gear_list = list(
 						/obj/item/armor_module/armor/chest/urf,
 						/obj/item/armor_module/armor/arms/urf,
-						/obj/item/armor_module/armor/legs/urf)
+						/obj/item/armor_module/armor/legs/urf,
+						/obj/item/tool/crowbar)
 
 /obj/effect/essentials_set/modular/urf/heavy
 	spawned_gear_list = list(
 						/obj/item/armor_module/armor/chest/urf,
-						/obj/item/armor_module/armor/arms/urf,
-						/obj/item/armor_module/armor/legs/urf)
+						/obj/item/armor_module/armor/arms/urf/heavy,
+						/obj/item/armor_module/armor/legs/urf/heavy,
+						/obj/item/tool/crowbar)
 
 /obj/effect/essentials_set/urf/medic
 	spawned_gear_list = list(

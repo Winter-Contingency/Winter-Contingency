@@ -256,14 +256,14 @@
 	desc = "Attachable chest plate for use with armors."
 	icon_state = "urf_armor_black"
 	soft_armor = list("melee" = 17, "bullet" = 17, "laser" = 17, "energy" = 17, "bomb" = 20, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
-	slowdown = 0.20
+	slowdown = 0.25
 
 /obj/item/armor_module/armor/chest/urf/alt
 	name = "URF Body Armor Plate"
 	desc = "Attachable chest plate for use with armors."
 	icon_state = "urf_armor_black_two"
 	soft_armor = list("melee" = 17, "bullet" = 17, "laser" = 17, "energy" = 17, "bomb" = 20, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
-	slowdown = 0.20
+	slowdown = 0.25
 
 /obj/item/armor_module/armor/arms/urf
 	name = "URF Shoulder pad"
