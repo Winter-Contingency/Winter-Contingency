@@ -16,7 +16,11 @@
 	flags_armor_protection = HANDS
 	soft_armor = list("melee" = 15, "bullet" = 20, "laser" = 15, "energy" = 20, "bomb" = 20, "bio" = 10, "rad" = 10, "fire" = 20, "acid" = 20)
 	sprite_sheets = list("Sangheili" = 'icons/mob/species/sangheili/gloves.dmi')
+	actions_types = list(/datum/action/item_action/call_item/sword)
 //	species_allowed = "Sangheili"
+
+/obj/item/clothing/gloves/covenant/sangheili/item_action_slot_check(mob/user, slot)
+	return flags_equip_slot & slotdefine2slotbit(slot)
 
 /obj/item/clothing/gloves/covenant/sangheili/minor
 	name = "Minor Gauntlets"
@@ -64,11 +68,3 @@
 	. = ..()
 	if(isnull(src.gc_destroyed))
 		qdel(src)
-
-/obj/item/clothing/gloves/covenant/hidden_sword
-	icon_state = "unggoy"
-	item_state = "unggoy"
-	actions_types = list(/datum/action/item_action/call_item/sword)
-
-/obj/item/clothing/gloves/covenant/hidden_sword/item_action_slot_check(mob/user, slot)
-	return flags_equip_slot & slotdefine2slotbit(slot)
