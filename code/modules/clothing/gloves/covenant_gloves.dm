@@ -60,7 +60,7 @@
 	icon_state = "unggoy"
 	item_state = "unggoy"
 
-/obj/item/clothing/gloves/covenant/unggoy/dropped(mob/user as mob)
-	. = ..()
-	if(isnull(src.gc_destroyed))
-		qdel(src)
+/obj/item/clothing/gloves/covenant/unggoy/equipped(mob/user, slot)
+	if(slot == SLOT_GLOVES)
+		flags_item |= NODROP
+	return ..()
