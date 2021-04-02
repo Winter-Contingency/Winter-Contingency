@@ -13,6 +13,7 @@
 	var/layer = 50
 	var/active = TRUE
 	var/is_directional_shield = FALSE
+	var/prob_lateral_block = 25 //for directional shields
 
 /datum/component/shield/Initialize(shield_flags, shield_soft_armor, shield_hard_armor, shield_cover = cover)
 	. = ..()
@@ -52,6 +53,8 @@
 		cover = getArmor()
 		stack_trace("Invalid type found in cover during /datum/component/shield Initialize()")
 
+/datum/component/shield/directional
+	is_directional_shield = TRUE
 
 /datum/component/shield/Destroy()
 	shield_detatch_from_user()
@@ -123,6 +126,10 @@
 		RegisterSignal(parent, COMSIG_ITEM_DROPPED, .proc/shield_dropped)
 		if(affected)
 			activate_with_user()
+		else
+			var/obj/item/parent_item = parent
+			if(ismob(parent_item.loc))
+				shield_init(parent_item.loc)
 		return
 	if(affected)
 		deactivate_with_user()
@@ -221,7 +228,7 @@
 			if(transfer_damage_cb)
 				return transfer_damage_cb.Invoke(absorbing_damage, ., silent)
 
-/datum/component/shield/proc/item_pure_block_chance(attack_type, incoming_damage, damage_type, silent)
+/datum/component/shield/proc/item_pure_block_chance(attack_type, incoming_damage, damage_type, silent, attack_dir)
 	switch(attack_type)
 		if(COMBAT_TOUCH_ATTACK)
 			if(!prob(cover.getRating(damage_type)))
@@ -230,7 +237,7 @@
 			incoming_damage *= (100 - soft_armor.getRating(damage_type)) * 0.01
 			return prob(50 - round(incoming_damage / 3))
 		if(COMBAT_MELEE_ATTACK, COMBAT_PROJ_ATTACK)
-			if(prob(cover.getRating(damage_type)))
+			if(can_block_from_dir(attack_dir) && prob(cover.getRating(damage_type)))
 				return 0 //Blocked
 			return incoming_damage //Went through.
 
@@ -245,6 +252,13 @@
 		to_chat(affected, "<span class='avoidharm'>\The [parent_item.name] [. ? "softens" : "soaks"] the damage!</span>")
 	parent_item.take_damage(incoming_damage, armour_penetration = 100)
 
+/datum/component/shield/proc/can_block_from_dir(from_dir)
+	. = TRUE
+	if(is_directional_shield)
+		if(from_dir in reverse_nearby_direction(affected.dir))
+			return FALSE
+		else if(!(from_dir in nearby_direction(affected.dir)) && !(prob(prob_lateral_block)))
+			return FALSE
 
 //Dune, Halo and energy shields.
 /datum/component/shield/overhealth
@@ -265,7 +279,6 @@
 	var/recharge_overlay = "recharging"
 	var/margin_x = -3
 	is_directional_shield = FALSE
-	var/prob_lateral_block = 25 //for directional shields
 	//var/block_for_dir = list(NORTH = 100, NORTHEAST = 100, NORTHWEST = 100, SOUTH = 100, SOUTHEAST = 100, SOUTHWEST = 100, EAST = 100, WEST = 100)
 
 /datum/component/shield/overhealth/Initialize(shield_flags, shield_soft_armor, shield_hard_armor, shield_cover = cover, new_icon, new_shield_overlay, new_recharge_overlay, new_force)
@@ -308,15 +321,8 @@
 	to_chat(world, "el escudo intercepta el daño")
 	if(!(attack_type in can_shield))
 		return incoming_damage
-
-	if(is_directional_shield)
-		if(attack_dir in reverse_nearby_direction(affected.dir))
-			to_chat(world, "el escudo recibe un daño de un adireccion al revez")
-			return incoming_damage
-		else if(!(attack_dir in nearby_direction(affected.dir)) && !(prob(prob_lateral_block)))
-			to_chat(world, "el escudo recibe un daño lateral pero no lo bloquea")
-			return incoming_damage
-		to_chat(world, "el escudo direccional aplica el resto del codigo")
+	if(!can_block_from_dir(attack_dir))
+		return incoming_damage
 	var/absorbing_damage = incoming_damage * cover.getRating(damage_type) * 0.01
 	if(!absorbing_damage)
 		return incoming_damage //We are transparent to this kind of damage.

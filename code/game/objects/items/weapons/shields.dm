@@ -185,4 +185,4 @@
 /obj/item/weapon/shield/energy/directional
 
 /obj/item/weapon/shield/energy/directional/set_shield()
-	AddComponent(/datum/component/shield, SHIELD_TOGGLE|SHIELD_PURE_BLOCKING)
+	AddComponent(/datum/component/shield/directional, SHIELD_TOGGLE|SHIELD_PURE_BLOCKING)
