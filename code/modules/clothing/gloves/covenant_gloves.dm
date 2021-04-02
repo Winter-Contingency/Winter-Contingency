@@ -63,6 +63,7 @@
 	desc = "Coming from the harsh world of Balaho, Unggoy naturally developed tougher skin that is more resistant to the elements than other species."
 	icon_state = "unggoy"
 	item_state = "unggoy"
+	flags_item = DELONDROP
 
 /obj/item/clothing/gloves/covenant/unggoy/equipped(mob/user, slot)
 	if(slot == SLOT_GLOVES)
