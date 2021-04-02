@@ -160,3 +160,6 @@
 
 /datum/action/item_action/call_item/sword/on_materialize(mob/user)
 	materialized.attack_self(owner)
+
+/datum/action/item_action/call_item/shield
+	item_type = /obj/item/weapon/shield/energy/directional

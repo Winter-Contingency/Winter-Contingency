@@ -181,3 +181,8 @@
 		playsound(user, 'sound/weapons/saberoff.ogg', 25, TRUE)
 		to_chat(user, "<span class='notice'>[src] can now be concealed.</span>")
 	add_fingerprint(user, "turned [active ? "on" : "off"]")
+
+/obj/item/weapon/shield/energy/directional
+
+/obj/item/weapon/shield/energy/directional/set_shield()
+	AddComponent(/datum/component/shield, SHIELD_TOGGLE|SHIELD_PURE_BLOCKING)

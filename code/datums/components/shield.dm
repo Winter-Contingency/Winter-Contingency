@@ -12,7 +12,7 @@
 	var/slot_flags = SLOT_L_HAND|SLOT_R_HAND
 	var/layer = 50
 	var/active = TRUE
-
+	var/is_directional_shield = FALSE
 
 /datum/component/shield/Initialize(shield_flags, shield_soft_armor, shield_hard_armor, shield_cover = cover)
 	. = ..()
@@ -264,7 +264,7 @@
 	var/shield_overlay = "shield-blue"
 	var/recharge_overlay = "recharging"
 	var/margin_x = -3
-	var/is_directional_shield = FALSE
+	is_directional_shield = FALSE
 	var/prob_lateral_block = 25 //for directional shields
 	//var/block_for_dir = list(NORTH = 100, NORTHEAST = 100, NORTHWEST = 100, SOUTH = 100, SOUTHEAST = 100, SOUTHWEST = 100, EAST = 100, WEST = 100)
 
