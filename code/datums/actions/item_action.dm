@@ -90,3 +90,73 @@
 /datum/action/item_action/aim_mode/action_activate()
 	var/obj/item/weapon/gun/I = target
 	I.toggle_auto_aim_mode(owner)
+
+/datum/action/item_action/call_item
+	name = "invoke item"
+	desc = "Materializes an item"
+	action_icon_state = "default"
+	var/active_icon = "default"
+	var/item_type
+	var/obj/item/materialized
+	var/item_hidden = TRUE
+
+/datum/action/item_action/call_item/New(Target)
+	..()
+	create_item()
+	name = "invoke [materialized]"
+	button.name = name
+	RegisterSignal(target, COMSIG_ITEM_DROPPED, .proc/on_drop)
+
+/datum/action/item_action/call_item/action_activate()
+	. = ..()
+	switch_item()
+
+/datum/action/item_action/call_item/proc/on_materialize()
+
+/datum/action/item_action/call_item/proc/switch_item()
+	if(QDELETED(materialized))
+		create_item()
+		item_hidden = TRUE
+
+	if(item_hidden)
+		materialize()
+	else
+		owner.UnEquip(materialized, TRUE)
+
+/datum/action/item_action/call_item/proc/create_item()
+	materialized = new item_type
+	materialized.flags_item |= DELONDROP
+	RegisterSignal(materialized, COMSIG_ITEM_DROPPED, .proc/on_materialized_drop, TRUE)
+
+/datum/action/item_action/call_item/proc/on_materialized_drop(datum/source, mob/living/user)
+	hidden_item()
+
+/datum/action/item_action/call_item/proc/on_drop(datum/source, mob/living/user)
+	user.UnEquip(materialized, TRUE)
+
+/datum/action/item_action/call_item/proc/hidden_item(mob/living/user)
+	if(QDELETED(materialized))
+		create_item()
+	else
+		if(user)
+			user.doUnEquip(materialized)
+		materialized.moveToNullspace()
+	item_hidden = TRUE
+	action_icon_state = initial(action_icon_state)
+
+/datum/action/item_action/call_item/proc/materialize()
+	if(QDELETED(materialized))
+		create_item()
+	item_hidden = FALSE
+	action_icon_state = active_icon
+	if(owner.put_in_hands(materialized))
+		on_materialize(owner)
+		owner.update_inv_l_hand()
+		owner.update_inv_r_hand()
+		to_chat(owner, "<span class='notice'>[target] the boy materializes [materialized].</span>")
+
+/datum/action/item_action/call_item/sword
+	item_type = /obj/item/weapon/energy/sword/covenant
+
+/datum/action/item_action/call_item/sword/on_materialize(mob/user)
+	materialized.attack_self(owner)
