@@ -112,6 +112,8 @@
 	embedded_into = null //Should have been removed by temporarilyRemoveItemFromInventory, but let's play it safe.
 	return ..()
 
+/obj/item/proc/can_active_action_button(mob/user)
+	return TRUE
 
 /obj/item/proc/update_item_state(mob/user)
 	item_state = "[initial(icon_state)][flags_item & WIELDED ? "_w" : ""]"

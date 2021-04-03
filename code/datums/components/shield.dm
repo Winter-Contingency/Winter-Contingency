@@ -238,6 +238,7 @@
 			return prob(50 - round(incoming_damage / 3))
 		if(COMBAT_MELEE_ATTACK, COMBAT_PROJ_ATTACK)
 			if(can_block_from_dir(attack_dir) && prob(cover.getRating(damage_type)))
+				SEND_SIGNAL(parent, COMSIG_ATOM_ON_BLOCK_SHIELD)
 				return 0 //Blocked
 			return incoming_damage //Went through.
 

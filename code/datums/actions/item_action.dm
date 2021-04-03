@@ -99,6 +99,7 @@
 	var/item_type
 	var/obj/item/materialized
 	var/item_hidden = TRUE
+	var/can_active = TRUE
 
 /datum/action/item_action/call_item/New(Target)
 	..()
@@ -106,6 +107,7 @@
 	name = "invoke [materialized]"
 	button.name = name
 	RegisterSignal(target, COMSIG_ITEM_DROPPED, .proc/on_drop)
+	RegisterSignal(target, COMSIG_ATOM_EMP_ACT, .proc/on_emp)
 
 /datum/action/item_action/call_item/action_activate()
 	. = ..()
@@ -113,7 +115,12 @@
 
 /datum/action/item_action/call_item/proc/on_materialize()
 
+/datum/action/item_action/call_item/proc/on_hidden()
+
 /datum/action/item_action/call_item/proc/switch_item()
+	if(!holder_item.can_active_action_button(owner))
+		return
+
 	if(QDELETED(materialized))
 		create_item()
 		item_hidden = TRUE
@@ -122,6 +129,11 @@
 		materialize()
 	else
 		owner.UnEquip(materialized, TRUE)
+
+/datum/action/item_action/call_item/proc/on_emp()
+	if(materialized && ismob(materialized.loc))
+		var/mob/user = materialized.loc
+		user.UnEquip(materialized, TRUE)
 
 /datum/action/item_action/call_item/proc/create_item()
 	materialized = new item_type
@@ -143,6 +155,8 @@
 		materialized.moveToNullspace()
 	item_hidden = TRUE
 	action_icon_state = initial(action_icon_state)
+	on_hidden()
+
 
 /datum/action/item_action/call_item/proc/materialize()
 	if(QDELETED(materialized))
@@ -166,3 +180,9 @@
 
 /datum/action/item_action/call_item/shield/on_materialize(mob/user)
 	materialized.attack_self(owner)
+	holder_item.active = TRUE
+	target.update_icon()
+
+/datum/action/item_action/call_item/shield/on_hidden()
+	holder_item.active = FALSE
+	target.update_icon()
