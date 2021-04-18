@@ -1050,6 +1050,25 @@ GLOBAL_LIST_INIT(common_tools, typecacheof(list(
 		if(NORTHWEST)
 			. = list(SOUTHEAST, SOUTH, EAST)
 
+/proc/nearby_direction(direction)
+	switch(direction)
+		if(SOUTH)
+			. = list(SOUTH, SOUTHEAST, SOUTHWEST)
+		if(SOUTHWEST)
+			. = list(SOUTHWEST, SOUTH, WEST)
+		if(WEST)
+			. = list(WEST, SOUTHWEST, NORTHWEST)
+		if(NORTHWEST)
+			. = list(NORTHWEST, NORTH, WEST)
+		if(NORTH)
+			. = list(NORTH, NORTHEAST, NORTHWEST)
+		if(NORTHEAST)
+			. = list(NORTHEAST, NORTH, EAST)
+		if(EAST)
+			. = list(EAST, NORTHEAST, SOUTHEAST)
+		if(SOUTHEAST)
+			. = list(SOUTHEAST, SOUTH, EAST)
+
 
 /*
 Checks if that loc and dir has a item on the wall

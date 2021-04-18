@@ -162,22 +162,62 @@
 	throw_range = 4
 	w_class = WEIGHT_CLASS_SMALL
 	attack_verb = list("shoved", "bashed")
+	var/base_icon = "eshield"
 	var/on_force = 10
+	var/recent_damage = FALSE
+
+/obj/item/weapon/shield/energy/update_icon()
+	. = ..()
+	if(active)
+		if(recent_damage)
+			icon_state = "[base_icon]2"
+		else
+			icon_state = "[base_icon]1"
+	else
+		icon_state = "[base_icon]"
+
+	if(ismob(loc))
+		var/mob/M = loc
+		M.update_inv_l_hand()
+		M.update_inv_r_hand()
+
 
 /obj/item/weapon/shield/energy/set_shield()
 	AddComponent(/datum/component/shield, SHIELD_TOGGLE|SHIELD_PURE_BLOCKING)
+	RegisterSignal(src, COMSIG_ATOM_ON_BLOCK_SHIELD, .proc/on_block)
+
+/obj/item/weapon/shield/energy/proc/on_block()
+	recent_damage = TRUE
+	update_icon()
+	addtimer(CALLBACK(src, .proc/renew), 5 SECONDS)
+
+/obj/item/weapon/shield/energy/proc/renew()
+	recent_damage = FALSE
+	update_icon()
 
 /obj/item/weapon/shield/energy/attack_self(mob/living/user)
 	toggle_active()
-	icon_state = "eshield[active]"
 	if(active)
-		force = on_force
-		w_class = WEIGHT_CLASS_BULKY
-		playsound(user, 'sound/weapons/saberon.ogg', 25, TRUE)
-		to_chat(user, "<span class='notice'>[src] is now active.</span>")
+		activate(user)
 	else
-		force = initial(force)
-		w_class = WEIGHT_CLASS_TINY
-		playsound(user, 'sound/weapons/saberoff.ogg', 25, TRUE)
-		to_chat(user, "<span class='notice'>[src] can now be concealed.</span>")
+		deactivate(user)
 	add_fingerprint(user, "turned [active ? "on" : "off"]")
+	update_icon()
+
+/obj/item/weapon/shield/energy/proc/activate(mob/user)
+	force = on_force
+	w_class = WEIGHT_CLASS_BULKY
+	playsound(user, 'sound/weapons/saberon.ogg', 25, TRUE)
+	to_chat(user, "<span class='notice'>[src] is now active.</span>")
+
+/obj/item/weapon/shield/energy/proc/deactivate(mob/user)
+	force = initial(force)
+	w_class = WEIGHT_CLASS_TINY
+	playsound(user, 'sound/weapons/saberoff.ogg', 25, TRUE)
+	to_chat(user, "<span class='notice'>[src] can now be concealed.</span>")
+
+/obj/item/weapon/shield/energy/directional
+
+/obj/item/weapon/shield/energy/directional/set_shield()
+	AddComponent(/datum/component/shield/directional, SHIELD_TOGGLE|SHIELD_PURE_BLOCKING)
+	RegisterSignal(src, COMSIG_ATOM_ON_BLOCK_SHIELD, .proc/on_block)

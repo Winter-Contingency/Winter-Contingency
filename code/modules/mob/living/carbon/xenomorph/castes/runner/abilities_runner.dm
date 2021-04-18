@@ -102,7 +102,7 @@
 	var/mob/living/carbon/xenomorph/X = owner
 	if(ishuman(M) && (M.dir in reverse_nearby_direction(X.dir)))
 		var/mob/living/carbon/human/H = M
-		if(!H.check_shields(COMBAT_TOUCH_ATTACK, 30, "melee"))
+		if(!H.check_shields(COMBAT_TOUCH_ATTACK, 30, "melee", FALSE, get_dir(target, src)))
 			X.Paralyze(6 SECONDS)
 			X.set_throwing(FALSE) //Reset throwing manually.
 			return COMPONENT_KEEP_THROWING

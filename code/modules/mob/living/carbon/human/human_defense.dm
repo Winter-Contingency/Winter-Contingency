@@ -161,7 +161,7 @@ Contains most of the procs that are called when a mob is attacked by something
 
 	var/damage = I.force + round(I.force * 0.3 * user.skills.getRating("melee_weapons")) //30% bonus per melee level
 	if(user != src)
-		damage = check_shields(COMBAT_MELEE_ATTACK, damage, "melee")
+		damage = check_shields(COMBAT_MELEE_ATTACK, damage, "melee", FALSE, get_dir(src, I))
 		if(!damage)
 			log_combat(user, src, "attacked", I, "(FAILED: shield blocked) (INTENT: [uppertext(user.a_intent)]) (DAMTYE: [uppertext(I.damtype)])")
 			return TRUE
@@ -308,7 +308,7 @@ Contains most of the procs that are called when a mob is attacked by something
 		return
 
 	if(thrown_item.thrower != src)
-		throw_damage = check_shields(COMBAT_MELEE_ATTACK, throw_damage, "melee")
+		throw_damage = check_shields(COMBAT_MELEE_ATTACK, throw_damage, "melee", FALSE, get_dir(src, thrown_item))
 		if(!throw_damage)
 			thrown_item.throwing = FALSE // Hit the shield.
 			visible_message("<span class='danger'>[src] deflects \the [thrown_item]!</span>")
