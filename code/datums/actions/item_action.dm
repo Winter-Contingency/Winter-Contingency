@@ -1,20 +1,24 @@
 
 /datum/action/item_action
-	name = "Use item"
-	var/obj/item/holder_item //the item that has this action in its list of actions. Is not necessarily the target
-							//e.g. gun attachment action: target = attachment, holder = gun.
+	name = ""
+	/**
+	 *the item that has this action in its list of actions. Is not necessarily the target
+	 * e.g. gun attachment action: target = attachment, holder = gun.
+	 */
+	var/obj/item/holder_item
 
 /datum/action/item_action/New(Target, obj/item/holder)
 	. = ..()
 	if(!holder)
 		holder = target
 	holder_item = holder
-	holder_item.actions += src
-	name = "Use [target]"
+	LAZYADD(holder_item.actions, src)
+	if(!name)
+		name = "Use [target]"
 	button.name = name
 
 /datum/action/item_action/Destroy()
-	holder_item.actions -= src
+	LAZYREMOVE(holder_item.actions, src)
 	holder_item = null
 	return ..()
 
@@ -83,106 +87,51 @@
 	button.vis_contents += current_action_vis_obj
 	action_firemode = holder_gun.gun_firemode
 
+/datum/action/item_action/aim_mode
+	name = "Take Aim"
+
+/datum/action/item_action/aim_mode/give_action(mob/M)
+	. = ..()
+	RegisterSignal(M, COMSIG_KB_AIMMODE, .proc/action_activate)
+
+/datum/action/item_action/aim_mode/remove_action(mob/M)
+	UnregisterSignal(M, COMSIG_KB_AIMMODE, .proc/action_activate)
+	return ..()
+
 /datum/action/item_action/aim_mode/update_button_icon()
 	button.overlays.Cut()
-	button.overlays += image('icons/mob/actions.dmi', null, "sniper_zoom", ABOVE_HUD_LAYER)
+	button.overlays += image('icons/mob/actions.dmi', null, "aim_mode", ABOVE_HUD_LAYER)
 
 /datum/action/item_action/aim_mode/action_activate()
 	var/obj/item/weapon/gun/I = target
 	I.toggle_auto_aim_mode(owner)
 
-/datum/action/item_action/call_item
-	name = "invoke item"
-	desc = "Materializes an item"
-	action_icon_state = "default"
-	var/active_icon = "default"
-	var/item_type
-	var/obj/item/materialized
-	var/item_hidden = TRUE
-	var/can_active = TRUE
 
-/datum/action/item_action/call_item/New(Target)
-	..()
-	create_item()
-	name = "invoke [materialized]"
-	button.name = name
-	RegisterSignal(target, COMSIG_ITEM_DROPPED, .proc/on_drop)
-	RegisterSignal(target, COMSIG_ATOM_EMP_ACT, .proc/on_emp)
+/datum/action/item_action/toggle_hydro
+	/// This references the TL84 flamer
+	var/obj/item/weapon/gun/flamer/marinestandard/holder_flamer
 
-/datum/action/item_action/call_item/action_activate()
+/datum/action/item_action/toggle_hydro/New()
 	. = ..()
-	switch_item()
+	holder_flamer = holder_item
+	RegisterSignal(holder_flamer, COMSIG_ITEM_HYDRO_CANNON_TOGGLED, .proc/update_toggle_button_icon)
 
-/datum/action/item_action/call_item/proc/on_materialize()
+/datum/action/item_action/toggle_hydro/action_activate()
+	. = ..()
+	holder_flamer.unique_action(owner)
 
-/datum/action/item_action/call_item/proc/on_hidden()
-
-/datum/action/item_action/call_item/proc/switch_item()
-	if(!holder_item.can_active_action_button(owner))
+/datum/action/item_action/toggle_hydro/update_button_icon()
+	button.overlays.Cut()
+	if (holder_flamer.hydro_active)
+		button.overlays += image('icons/mob/actions.dmi', null, "TL_84_Water", ABOVE_HUD_LAYER)
 		return
+	button.overlays += image('icons/mob/actions.dmi', null, "TL_84_Flame", ABOVE_HUD_LAYER)
 
-	if(QDELETED(materialized))
-		create_item()
-		item_hidden = TRUE
+///Signal handler for when the hydro cannon is activated
+/datum/action/item_action/toggle_hydro/proc/update_toggle_button_icon()
+	SIGNAL_HANDLER
+	update_button_icon()
 
-	if(item_hidden)
-		materialize()
-	else
-		owner.UnEquip(materialized, TRUE)
-
-/datum/action/item_action/call_item/proc/on_emp()
-	if(materialized && ismob(materialized.loc))
-		var/mob/user = materialized.loc
-		user.UnEquip(materialized, TRUE)
-
-/datum/action/item_action/call_item/proc/create_item()
-	materialized = new item_type
-	materialized.flags_item |= DELONDROP
-	RegisterSignal(materialized, COMSIG_ITEM_DROPPED, .proc/on_materialized_drop, TRUE)
-
-/datum/action/item_action/call_item/proc/on_materialized_drop(datum/source, mob/living/user)
-	hidden_item()
-
-/datum/action/item_action/call_item/proc/on_drop(datum/source, mob/living/user)
-	user.UnEquip(materialized, TRUE)
-
-/datum/action/item_action/call_item/proc/hidden_item(mob/living/user)
-	if(QDELETED(materialized))
-		create_item()
-	else
-		if(user)
-			user.doUnEquip(materialized)
-		materialized.moveToNullspace()
-	item_hidden = TRUE
-	action_icon_state = initial(action_icon_state)
-	on_hidden()
-
-
-/datum/action/item_action/call_item/proc/materialize()
-	if(QDELETED(materialized))
-		create_item()
-	item_hidden = FALSE
-	action_icon_state = active_icon
-	if(owner.put_in_hands(materialized))
-		on_materialize(owner)
-		owner.update_inv_l_hand()
-		owner.update_inv_r_hand()
-		to_chat(owner, "<span class='notice'>[target] the boy materializes [materialized].</span>")
-
-/datum/action/item_action/call_item/sword
-	item_type = /obj/item/weapon/energy/sword/covenant
-
-/datum/action/item_action/call_item/sword/on_materialize(mob/user)
-	materialized.attack_self(owner)
-
-/datum/action/item_action/call_item/shield
-	item_type = /obj/item/weapon/shield/energy/directional
-
-/datum/action/item_action/call_item/shield/on_materialize(mob/user)
-	materialized.attack_self(owner)
-	holder_item.active = TRUE
-	target.update_icon()
-
-/datum/action/item_action/call_item/shield/on_hidden()
-	holder_item.active = FALSE
-	target.update_icon()
+/datum/action/item_action/toggle_hydro/Destroy()
+	holder_flamer=null
+	return ..()

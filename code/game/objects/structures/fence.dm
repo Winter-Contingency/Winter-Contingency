@@ -8,6 +8,7 @@
 	layer = WINDOW_LAYER
 	max_integrity = 100
 	resistance_flags = XENO_DAMAGEABLE
+	minimap_color = MINIMAP_FENCE
 	var/cut = FALSE //Cut fences can be passed through
 	var/junction = 0 //Because everything is terrible, I'm making this a fence-level var
 	var/basestate = "fence"
@@ -131,7 +132,7 @@
 
 /obj/structure/fence/Move()
 	var/ini_dir = dir
-	..()
+	. = ..()
 	setDir(ini_dir)
 
 //This proc is used to update the icons of nearby windows.

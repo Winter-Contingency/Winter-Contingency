@@ -2,6 +2,20 @@
 // might be worth adapting the bugs into a feature and using these
 // subtypes as a basis for non-common-speaking alien foreigners. ~ Z
 
+/mob/living/carbon/human/species/monkey
+	race = "Monkey"
+
+/mob/living/carbon/human/species/monkey/farwa
+	race = "Farwa"
+
+/mob/living/carbon/human/species/monkey/naera
+	race = "Naera"
+
+/mob/living/carbon/human/species/monkey/stok
+	race = "Stok"
+
+/mob/living/carbon/human/species/monkey/yiren
+	race = "Yiren"
 
 /mob/living/carbon/human/species/skrell
 	race = "Skrell"
@@ -67,26 +81,5 @@
 /mob/living/carbon/human/species/vatborn
 	race = "Vatborn"
 
-
-//Halo//
-
-/mob/living/carbon/human/species/covenant/sangheili
-	race = "Sangheili"
-
-/datum/species/covenant/sangheili/handle_post_spawn(mob/living/carbon/human/H)
-	. = ..()
-	H.h_style = "Bald"
-
-/mob/living/carbon/human/species/covenant/unggoy
-	race = "Unggoy"
-
-/datum/species/covenant/unggoy/handle_post_spawn(mob/living/carbon/human/H)
-	. = ..()
-	H.h_style = "Bald"
-
-/mob/living/carbon/human/species/covenant/kigyar
-	race = "Kig Yar"
-
-/datum/species/covenant/kigyar/handle_post_spawn(mob/living/carbon/human/H)
-	. = ..()
-	H.h_style = "Bald"
+/mob/living/carbon/human/species/skeleton
+	race = "Skeleton"

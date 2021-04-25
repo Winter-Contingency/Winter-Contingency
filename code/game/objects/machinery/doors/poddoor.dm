@@ -34,7 +34,6 @@
 		if("closing")
 			flick("pdoorc1", src)
 	playsound(loc, 'sound/machines/blastdoor.ogg', 25)
-	return
 
 /obj/machinery/door/poddoor/open
 	density = FALSE
@@ -226,10 +225,23 @@
 /obj/machinery/door/poddoor/timed_late/containment
 	name = "Containment shutters"
 	desc = "Safety shutters triggered by some kind of lockdown event."
-	resistance_flags = UNACIDABLE|INDESTRUCTIBLE
+	resistance_flags = RESIST_ALL
 	open_layer = UNDER_TURF_LAYER //No longer needs to be interacted with.
 	closed_layer = ABOVE_WINDOW_LAYER //Higher than usual, this is only around on the start of the round.
 
+
+/obj/machinery/door/poddoor/timed_late/containment/landing_zone/Initialize(mapload)
+	. = ..()
+	if(mapload)
+		var/area/ourarea = get_area(src)
+		ENABLE_BITFIELD(ourarea.flags_area, DISALLOW_WEEDING)
+		ENABLE_BITFIELD(ourarea.flags_area, NEAR_FOB)
+
+
+/obj/machinery/door/poddoor/timed_late/containment/landing_zone/open()
+	. = ..()
+	var/area/ourarea = get_area(src)
+	DISABLE_BITFIELD(ourarea.flags_area, DISALLOW_WEEDING)
 
 /obj/machinery/door/poddoor/timed_late/containment/landing_zone
 	id = "landing_zone"
@@ -237,13 +249,3 @@
 
 /obj/machinery/door/poddoor/timed_late/containment/landing_zone/lz2
 	id = "landing_zone_2"
-
-GLOBAL_LIST_EMPTY(gamemode_doors)
-
-/obj/machinery/door/poddoor/gamemode
-	resistance_flags = UNACIDABLE|INDESTRUCTIBLE
-	soft_armor = list("melee" = 100, "bullet" = 100, "laser" = 100, "energy" = 100, "bomb" = 100, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100)
-
-/obj/machinery/door/poddoor/gamemode/Initialize()
-	. = ..()
-	GLOB.gamemode_doors |= src

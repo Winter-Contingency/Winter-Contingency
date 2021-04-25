@@ -115,7 +115,7 @@ a.popt {text-decoration: none;}
 .centradio				{color: #5C5C8A;}
 .airadio				{color: #FF00FF;}
 
-.secradio				{color: #A30000;}
+.casradio				{color: #A30000;}
 .engradio				{color: #A66300;}
 .medradio				{color: #008160;}
 .sciradio				{color: #993399;}
@@ -125,9 +125,6 @@ a.popt {text-decoration: none;}
 .bravoradio				{color: #C68610;}
 .charlieradio			{color: #AA55AA;}
 .deltaradio				{color: #007FCF;}
-
-.unscradio			{color: #ad9734}
-.innieradio				{color: #852a15}
 
 .binarysay    			{color: #20c20e; background-color: #000000; display: block;}
 .binarysay a  			{color: #00ff00;}

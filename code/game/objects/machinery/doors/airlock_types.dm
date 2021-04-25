@@ -543,6 +543,11 @@
 /obj/machinery/door/airlock/mainship/generic/pilot/quarters
 	name = "\improper Pilot's Quarters"
 
+/obj/machinery/door/airlock/mainship/generic/ert
+	name = "\improper Airlock"
+	icon = 'icons/obj/doors/mainship/personaldoor.dmi'
+	interaction_flags = INTERACT_MACHINE_NOSILICON //go away naughty AI
+
 /obj/machinery/door/airlock/mainship/marine
 	name = "\improper Airlock"
 	icon = 'icons/obj/doors/mainship/prepdoor.dmi'
@@ -854,15 +859,3 @@
 	name = "\improper Research Dome"
 	icon_state = "door_locked"
 	locked = TRUE
-
-//Halo airlocks
-/obj/machinery/door/airlock/mainship/unsc
-	name = "\improper UNSC Airlock"
-	icon = 'icons/obj/doors/mainship/secdoor.dmi'
-	req_access = list(ACCESS_UNSC_MARINE)
-
-/obj/machinery/door/airlock/mainship/innie
-	name = "\improper URF Airlock"
-	icon = 'icons/obj/doors/mainship/secdoor.dmi'
-	req_access = list(ACCESS_INSURRECTIONIST_SOLDIER)
-

@@ -100,16 +100,6 @@ can cause issues with ammo types getting mixed up during the burst.
 	new_handful.generate_handful(selection, "12g", 5, 1, /obj/item/weapon/gun/shotgun)
 	return new_handful
 
-/obj/item/weapon/gun/shotgun/pump/m90/retrieve_shell(selection)
-	var/obj/item/ammo_magazine/handful/new_handful = new /obj/item/ammo_magazine/handful()
-	new_handful.generate_handful(selection, "8g", 5, 1, /obj/item/weapon/gun/shotgun)
-	return new_handful
-
-/obj/item/weapon/gun/shotgun/pump/m45/retrieve_shell(selection)
-	var/obj/item/ammo_magazine/handful/new_handful = new /obj/item/ammo_magazine/handful()
-	new_handful.generate_handful(selection, "8g", 5, 1, /obj/item/weapon/gun/shotgun)
-	return new_handful
-
 /obj/item/weapon/gun/shotgun/pump/bolt/retrieve_shell(selection)
 	var/obj/item/ammo_magazine/handful/new_handful = new /obj/item/ammo_magazine/handful()
 	new_handful.generate_handful(selection, "7.62x54mmR", 5, 1, /obj/item/weapon/gun/shotgun)
@@ -306,7 +296,6 @@ can cause issues with ammo types getting mixed up during the burst.
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 21,"rail_x" = 15, "rail_y" = 22, "under_x" = 21, "under_y" = 16, "stock_x" = 21, "stock_y" = 16)
 
 	fire_delay = 2
-	burst_amount = 2
 	burst_delay = 2
 	accuracy_mult = 1.15
 	accuracy_mult_unwielded = 0.85
@@ -482,7 +471,6 @@ can cause issues with ammo types getting mixed up during the burst.
 		/obj/item/attachable/stock/shotgun,
 	)
 
-	flags_item_map_variant = (ITEM_JUNGLE_VARIANT|ITEM_ICE_VARIANT)
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 10, "rail_y" = 21, "under_x" = 20, "under_y" = 14, "stock_x" = 20, "stock_y" = 14)
 
 	fire_delay = 20
@@ -575,10 +563,11 @@ can cause issues with ammo types getting mixed up during the burst.
 	return ..()
 
 //-------------------------------------------------------
-//Based off of the Benelli M3
+//A shotgun, how quaint.
 /obj/item/weapon/gun/shotgun/pump/cmb
 	name = "\improper Paladin-12 pump shotgun"
-	desc = "A nine-round pump action shotgun. A sporterized version of a classic shotgun used for hunting, home defence and police work, modified and used by Nanotrasen security."
+	desc = "A nine-round pump action shotgun. A shotgun used for hunting, home defence and police work, many versions of it exist and are used by just about anyone."
+	icon = 'icons/Marine/gun64.dmi'
 	icon_state = "pal12"
 	item_state = "pal12"
 	fire_sound = 'sound/weapons/guns/fire/shotgun_cmb.ogg'
@@ -594,7 +583,10 @@ can cause issues with ammo types getting mixed up during the burst.
 		/obj/item/attachable/magnetic_harness,
 	)
 	flags_item_map_variant = NONE
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 14, "rail_y" = 19, "under_x" = 19, "under_y" = 14, "stock_x" = 19, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 38, "muzzle_y" = 19,"rail_x" = 14, "rail_y" = 19, "under_x" = 37, "under_y" = 16, "stock_x" = 15, "stock_y" = 14)
+	starting_attachment_types = list(
+		/obj/item/attachable/stock/irremoveable/pal12,
+	)
 
 	fire_delay = 15
 	damage_mult = 0.75
@@ -612,9 +604,9 @@ can cause issues with ammo types getting mixed up during the burst.
 /obj/item/weapon/gun/shotgun/pump/bolt
 	name = "\improper Mosin Nagant rifle"
 	desc = "A mosin nagant rifle, even just looking at it you can feel the cosmoline already. Commonly known by its slang, \"Moist Nugget\", by downbrained colonists and outlaws."
+	icon = 'icons/Marine/gun64.dmi'
 	icon_state = "mosin"
-	item_state = "mosin" //thank you Alterist
-	pump_animation = "mosin_pump"
+	item_state = "mosin"
 	fire_sound = 'sound/weapons/guns/fire/mosin.ogg'
 	dry_fire_sound = 'sound/weapons/guns/fire/sniper_empty.ogg'
 	reload_sound = 'sound/weapons/guns/interact/mosin_reload.ogg'
@@ -630,25 +622,25 @@ can cause issues with ammo types getting mixed up during the burst.
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/bayonetknife,
 		/obj/item/attachable/scope,
+		/obj/item/attachable/scope/mosin,
 		/obj/item/attachable/scope/marine,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/bayonet,
 	)
 	flags_item_map_variant = NONE
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_AMMO_COUNTER
-	attachable_offset = list("muzzle_x" = 50, "muzzle_y" = 21,"rail_x" = 8, "rail_y" = 21, "under_x" = 37, "under_y" = 16, "stock_x" = 20, "stock_y" = 14)
+	attachable_offset = list("muzzle_x" = 37, "muzzle_y" = 18,"rail_x" = 14, "rail_y" = 19, "under_x" = 19, "under_y" = 14, "stock_x" = 15, "stock_y" = 12)
 	starting_attachment_types = list(
-		/obj/item/attachable/scope,
-		/obj/item/attachable/mosinbarrel,
+		/obj/item/attachable/scope/mosin,
 		/obj/item/attachable/stock/mosin,
 	)
 	actions_types = list(/datum/action/item_action/aim_mode)
 	aim_fire_delay = 1
 
 	fire_delay = 17.5
-	accuracy_mult = 1.4
+	accuracy_mult = 1.45
 	accuracy_mult_unwielded = 0.7
-	scatter = -10
+	scatter = -25
 	scatter_unwielded = 40
 	recoil = 0
 	recoil_unwielded = 4
@@ -680,7 +672,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	name = "lever action rifle"
 	desc = "A .44 magnum lever action rifle with side loading port. It has a low fire rate, but it packs quite a punch in hunting."
 	icon_state = "mares_leg"
-	item_state = "mares_leg" //With thanks to D4n0w4r https://youtu.be/PV4uWGGb4xM
+	item_state = "mbx900"
 	fire_sound = 'sound/weapons/guns/fire/leveraction.ogg'//I like how this one sounds.
 	dry_fire_sound = 'sound/weapons/guns/fire/sniper_empty.ogg'
 	reload_sound = 'sound/weapons/guns/interact/mosin_reload.ogg'
@@ -730,7 +722,7 @@ can cause issues with ammo types getting mixed up during the burst.
 
 /obj/item/weapon/gun/shotgun/pump/lever/mbx900
 	name = "\improper MBX-900 lever action shotgun"
-	desc = "A .410 bore lever action shotgun that fires as fast as you can operate the lever. An adopted shotgun in the wake of the SX-16 automatic shotgun replacing the MIC ZX-76 assault shotgun for use in standard-issue TGMC specialist inventory. Now it's fielded in lesser numbers and in requisitions due to its devastating and extremely reliable design."
+	desc = "A .410 bore lever action shotgun that fires nearly as fast as you can operate the lever. Renowed due to its devastating and extremely reliable design."
 	icon_state = "mbx900"
 	item_state = "mbx900"
 	fire_sound = 'sound/weapons/guns/fire/shotgun_light.ogg'//I like how this one sounds.
@@ -767,9 +759,9 @@ can cause issues with ammo types getting mixed up during the burst.
 
 	flags_item_map_variant = NONE
 
-	fire_delay = 6
+	fire_delay = 0.6 SECONDS
 	accuracy_mult = 1.4
-	pump_delay = 2
+	pump_delay = 0.2 SECONDS
 
 //------------------------------------------------------
 //T-35 Pump shotgun
@@ -821,54 +813,3 @@ can cause issues with ammo types getting mixed up during the burst.
 /obj/item/weapon/gun/shotgun/pump/t35/nonstandard
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/pump/buckshot
 	starting_attachment_types = list(/obj/item/attachable/stock/t35stock, /obj/item/attachable/angledgrip, /obj/item/attachable/magnetic_harness)
-
-
-
-//Halo
-
-//M45
-/obj/item/weapon/gun/shotgun/pump/m45 //should be fixed now
-	name = "M45 Tactical Shotgun"
-	desc = "A shotgun actively in use within the UNSC."
-	flags_equip_slot = ITEM_SLOT_BACK
-	icon_state = "m45"
-	item_state = "m45"
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/pump/halo
-	fire_sound = 'sound/halo/m45fire.wav'
-	reload_sound = 'sound/halo/m45insert.wav'
-	pump_sound =  'sound/halo/Shotgun_Reload_Sound_Effect.ogg'
-	max_shells = 9
-	flags_item_map_variant = NONE
-	fire_delay = 16
-	accuracy_mult = 1.15
-	accuracy_mult_unwielded = 0.85
-	scatter = 20
-	scatter_unwielded = 40
-	recoil = 2
-	recoil_unwielded = 4
-	aim_slowdown = 0.55
-	caliber = "8g"
-
-//M90
-/obj/item/weapon/gun/shotgun/pump/m90 //unused
-	name = "M90 CAWS"
-	desc = "The M90 shotgun, utilized by the UNSCDF. Loads 8 gauge shells. "
-	flags_equip_slot = ITEM_SLOT_BACK
-	icon_state = "m90"
-	item_state = "m90"
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/pump/halo
-	fire_sound = 'sound/halo/Shotgun_Fire_New.wav'
-	reload_sound = 'sound/halo/Shotgun_Reload_New.wav'
-	pump_sound =  'sound/halo/Shotgun_Reload_Sound_Effect.ogg'
-	max_shells = 9
-	flags_item_map_variant = NONE
-	fire_delay = 16
-	accuracy_mult = 1.15
-	accuracy_mult_unwielded = 0.85
-	scatter = 20
-	scatter_unwielded = 40
-	recoil = 2
-	recoil_unwielded = 4
-	aim_slowdown = 0.55
-	caliber = "8g"
-

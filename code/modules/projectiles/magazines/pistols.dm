@@ -7,11 +7,33 @@
 	desc = "A pistol magazine."
 	caliber = "9x19mm Parabellum"
 	icon_state = "tp14"
-	max_rounds = 14
+	max_rounds = 21
 	w_class = WEIGHT_CLASS_SMALL
 	default_ammo = /datum/ammo/bullet/pistol
 	gun_type = /obj/item/weapon/gun/pistol/standard_pistol
 
+/obj/item/ammo_magazine/box9mm
+	name = "packet of 9mm"
+	desc = "A packet containing 70 rounds of 9mm."
+	caliber = "9x19mm Parabellum"
+	icon_state = "box_9mm"
+	current_rounds = 70
+	max_rounds = 70
+	w_class = WEIGHT_CLASS_SMALL
+	default_ammo = /datum/ammo/bullet/pistol
+
+//-------------------------------------------------------
+//TX-7 Plasma Pistol
+/obj/item/ammo_magazine/pistol/plasma_pistol
+	name = "\improper TX-7 plasma cell"
+	desc = "An energy cell for the TX-7 plasma pistol."
+	caliber = "Ionized Plasma Bolt"
+	icon_state = "tx7"
+	max_rounds = 10
+	w_class = WEIGHT_CLASS_SMALL
+	default_ammo = /datum/ammo/energy/plasma_pistol
+	gun_type = /obj/item/weapon/gun/pistol/plasma_pistol
+	flags_magazine = NONE
 
 //-------------------------------------------------------
 //RT-3 PISTOL
@@ -58,8 +80,8 @@
 	gun_type = /obj/item/weapon/gun/pistol/m1911
 
 /obj/item/ammo_magazine/acp
-	name = "box of .45 ACP"
-	icon_state = "box45" //With thanks to Eris
+	name = "packet of .45 ACP"
+	icon_state = "box_45acp"
 	default_ammo = /datum/ammo/bullet/pistol/heavy
 	caliber = ".45 ACP"
 	current_rounds = 50
@@ -74,36 +96,28 @@
 	default_ammo = /datum/ammo/bullet/pistol/heavy
 	caliber = ".45 ACP"
 	icon_state = ".45"
-	max_rounds = 11
+	max_rounds = 14
 	gun_type = /obj/item/weapon/gun/pistol/standard_heavypistol
 
 
 //-------------------------------------------------------
 //Beretta 92FS, the gun McClane carries around in Die Hard. Very similar to the service pistol, all around.
 
-/obj/item/ammo_magazine/pistol/b92fs
-	name = "\improper Beretta 92FS magazine (9mm)"
+/obj/item/ammo_magazine/pistol/g22
+	name = "\improper G-22 magazine (9mm)"
 	caliber = "9x19mm Parabellum"
-	icon_state = "beretta"
+	icon_state = "g22"
 	max_rounds = 15
 	default_ammo = /datum/ammo/bullet/pistol
-	gun_type = /obj/item/weapon/gun/pistol/b92fs
+	gun_type = /obj/item/weapon/gun/pistol/g22
 
-/obj/item/ammo_magazine/pistol/b93r
-	name = "\improper Beretta 93R magazine (9mm)"
-	caliber = "9x19mm Parabellum"
-	icon_state = "beretta"
-	max_rounds = 20
-	default_ammo = /datum/ammo/bullet/pistol
-	gun_type = /obj/item/weapon/gun/pistol/b92fs/raffica
-
-/obj/item/ammo_magazine/pistol/b92fstranq
-	name = "\improper M9 tranq magazine (9mm)"
+/obj/item/ammo_magazine/pistol/g22tranq
+	name = "\improper G22 tranq magazine (9mm)"
 	caliber = "9x19mm tranquilizer"
-	icon_state = "beretta"
+	icon_state = "g22"
 	max_rounds = 12
 	default_ammo = /datum/ammo/bullet/pistol/tranq
-	gun_type = /obj/item/weapon/gun/pistol/b92fs/M9
+	gun_type = /obj/item/weapon/gun/pistol/g22/tranq
 
 
 //-------------------------------------------------------
@@ -226,31 +240,3 @@ It is a modified Beretta 93R, and can fire three round burst or single fire. Whe
 	icon_state = "c70"
 	max_rounds = 300
 	gun_type = /obj/item/weapon/gun/pistol/chimp
-
-
-//Halo//
-
-/obj/item/ammo_magazine/pistol/m6
-	name = "M6 Pattern Magazine"
-	default_ammo = /datum/ammo/bullet/magnum
-	caliber = "12.7x40mm"
-	icon_state = "magnum"
-	max_rounds = 8
-	gun_type = /obj/item/weapon/gun/pistol/m6
-
-/obj/item/ammo_magazine/pistol/m6/AP
-	name = "M6 "
-	default_ammo = /datum/ammo/bullet/magnum/socom
-	caliber = "12.7x40mm"
-	icon_state = "socom"
-	max_rounds = 8
-	gun_type = /obj/item/weapon/gun/pistol/m6/SOCOM
-
-/* /obj/item/ammo_magazine/pistol/handgonne
-	name = "Handgonne Shell"
-	desc = "The legendary Handgonne, rumored to be the weapon used by Reno to defeat 8 ODSTs before firing the gun."
-	default_ammo = /datum/ammo/bullet/pistol/ap
-	caliber = "14.5mm"
-	icon_state = "handgonne"
-	max_rounds = 1
-	gun_type = /obj/item/weapon/gun/pistol/handgonne */ // sent to gay baby jail for being hard to code in

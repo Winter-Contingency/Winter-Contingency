@@ -126,6 +126,8 @@ GLOBAL_LIST_EMPTY(helmetmarkings_sl)
 	if(istype(headset))
 		headset.set_frequency(radio_freq)
 		headset.recalculateChannels()
+		headset.remove_minimap()
+		headset.add_minimap()
 		if(headset.sl_direction && H != squad_leader)
 			SSdirection.start_tracking(tracking_id, H)
 
@@ -142,7 +144,7 @@ GLOBAL_LIST_EMPTY(helmetmarkings_sl)
 
 	marines_list += H
 	H.assigned_squad = src
-	H.hud_set_squad()
+	H.hud_set_job()
 	H.update_action_buttons()
 	H.update_inv_head()
 	H.update_inv_wear_suit()
@@ -191,7 +193,7 @@ GLOBAL_LIST_EMPTY(helmetmarkings_sl)
 	marines_list -= H
 
 	H.assigned_squad = null
-	H.hud_set_squad()
+	H.hud_set_job()
 	H.update_action_buttons()
 	H.update_inv_head()
 	H.update_inv_wear_suit()
@@ -223,7 +225,7 @@ GLOBAL_LIST_EMPTY(helmetmarkings_sl)
 	var/mob/living/carbon/human/H = squad_leader
 	squad_leader = null
 	H.update_action_buttons()
-	H.hud_set_squad()
+	H.hud_set_job()
 	H.update_inv_head()
 	H.update_inv_wear_suit()
 
@@ -238,7 +240,7 @@ GLOBAL_LIST_EMPTY(helmetmarkings_sl)
 
 	//Handle aSL skill level and radio
 	if(!ismarineleaderjob(squad_leader.job))
-		squad_leader.skills = squad_leader.skills.setRating(leadership = SKILL_LEAD_TRAINED)
+		squad_leader.skills = squad_leader.skills.setRating(leadership = SKILL_LEAD_EXPERT)
 		squad_leader.comm_title = "aSL"
 		var/obj/item/card/id/ID = squad_leader.get_idcard()
 		if(istype(ID))
@@ -250,7 +252,7 @@ GLOBAL_LIST_EMPTY(helmetmarkings_sl)
 		R.secure_radio_connections[RADIO_CHANNEL_COMMAND] = add_radio(R, GLOB.radiochannels[RADIO_CHANNEL_COMMAND])
 		R.use_command = TRUE
 
-	squad_leader.hud_set_squad()
+	squad_leader.hud_set_job()
 	squad_leader.update_action_buttons()
 	squad_leader.update_inv_head()
 	squad_leader.update_inv_wear_suit()

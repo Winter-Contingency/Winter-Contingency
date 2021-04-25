@@ -275,10 +275,10 @@
 /turf/open/floor/tile/red/yellowfull,
 /area/tdome/tdomeadmin)
 "bu" = (
-/turf/open/floor/mainship/cargo/arrow{
-	dir = 8
+/turf/closed/wall/mainship/outer{
+	name = "reinforced hull"
 	},
-/area/centcom/supply)
+/area/space)
 "bv" = (
 /obj/item/tool/wrench,
 /turf/open/floor/tile/red/yellowfull,
@@ -393,17 +393,16 @@
 /turf/open/space/basic,
 /area/centcom)
 "cA" = (
-/turf/open/floor/mainship/cargo/arrow{
-	dir = 4
+/turf/open/floor/plating/plating_catwalk,
+/area/centcom)
+"cB" = (
+/turf/closed/wall/mainship/outer{
+	name = "reinforced hull"
 	},
 /area/centcom/supply)
-"cB" = (
-/turf/open/floor/plating/plating_catwalk,
-/area/centcom/supply)
 "cC" = (
-/obj/machinery/computer/supplycomp,
-/turf/open/floor/plating/plating_catwalk,
-/area/centcom/supply)
+/turf/open/floor/mainship/stripesquare,
+/area/centcom)
 "cD" = (
 /turf/open/floor/mainship/cargo/arrow{
 	dir = 8
@@ -2297,15 +2296,15 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
 aa
 aa
 aa
@@ -2350,13 +2349,13 @@ aa
 aa
 aa
 dX
-dX
-dX
-dX
-dX
-dX
-dX
-dX
+cA
+cC
+cC
+cD
+cC
+cC
+cF
 dX
 aa
 aa
@@ -2402,13 +2401,13 @@ aa
 aa
 aa
 dX
-cB
 in
+ej
+ej
+ej
+ej
+ej
 in
-bu
-in
-in
-cC
 dX
 aa
 aa

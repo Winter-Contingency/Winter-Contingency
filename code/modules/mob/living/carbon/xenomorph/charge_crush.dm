@@ -17,6 +17,7 @@
 	action_icon_state = "ready_charge"
 	mechanics_text = "Toggles the movement-based charge on and off."
 	keybind_signal = COMSIG_XENOABILITY_TOGGLE_CHARGE
+	use_state_flags = XACT_USE_LYING
 	var/charge_type = CHARGE_CRUSH
 	var/next_move_limit = 0
 	var/turf/lastturf = null
@@ -477,8 +478,7 @@
 	charger.visible_message("<span class='danger'>The barbed wire slices into [charger]!</span>",
 	"<span class='danger'>The barbed wire slices into you!</span>", null, 5)
 	charger.Paralyze(0.5 SECONDS)
-	charger.apply_damage(RAZORWIRE_BASE_DAMAGE * RAZORWIRE_MIN_DAMAGE_MULT_MED, BRUTE, ran_zone(), 0, TRUE) //Armor is being ignored here.
-	UPDATEHEALTH(charger)
+	charger.apply_damage(RAZORWIRE_BASE_DAMAGE * RAZORWIRE_MIN_DAMAGE_MULT_MED, BRUTE, ran_zone(), 0, TRUE, updating_health = TRUE) //Armor is being ignored here.
 	playsound(src, 'sound/effects/barbed_wire_movement.ogg', 25, 1)
 	update_icon()
 	return PRECRUSH_ENTANGLED //Let's return this so that the charger may enter the turf in where it's entangled, if it survived the wounds without gibbing.
@@ -549,7 +549,7 @@
 		if(CHARGE_BULL_GORE)
 			if(world.time > charge_datum.next_special_attack)
 				charge_datum.next_special_attack = world.time + 2 SECONDS
-				INVOKE_ASYNC(src, /atom/.proc/attack_alien, charger,  0, BODY_ZONE_CHEST, FALSE, FALSE, FALSE, INTENT_HARM) //Free gore attack.
+				attack_alien_harm(charger, 0, BODY_ZONE_CHEST, FALSE, TRUE, TRUE) //Free gore attack.
 				emote_gored()
 				var/turf/destination = get_step(loc, charger.dir)
 				if(destination)

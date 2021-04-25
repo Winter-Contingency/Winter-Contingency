@@ -128,6 +128,8 @@
 
 //Mobs on Fire
 /mob/living/proc/IgniteMob()
+	if(status_flags & GODMODE) //Invulnerable mobs don't get ignited
+		return FALSE
 	if(!CHECK_BITFIELD(datum_flags, DF_ISPROCESSING))
 		return FALSE
 	if(fire_stacks > 0 && !on_fire)
@@ -149,8 +151,9 @@
 		return
 	var/fire_light = min(fire_stacks,5)
 	if(fire_light > fire_luminosity) // light up xenos if new light source thats bigger hits them
-		set_light_range(fire_light) //update range
-		set_light_color(LIGHT_COLOR_LAVA)
+		if(fire_light < light_range)
+			set_light_range(fire_light) //update range
+		set_light_color(BlendRGB(light_color, LIGHT_COLOR_LAVA))
 		fire_luminosity = fire_light
 		set_light_on(TRUE) //And activate it
 	var/obj/item/clothing/mask/facehugger/F = get_active_held_item()
@@ -185,6 +188,8 @@
 	return
 
 /mob/living/proc/adjust_fire_stacks(add_fire_stacks) //Adjusting the amount of fire_stacks we have on person
+	if(status_flags & GODMODE) //Invulnerable mobs don't get fire stacks
+		return
 	fire_stacks = clamp(fire_stacks + add_fire_stacks, -20, 20)
 	if(on_fire && fire_stacks <= 0)
 		ExtinguishMob()
@@ -234,8 +239,6 @@
 		if(CHECK_BITFIELD(S.smoke_traits, SMOKE_CAMO))
 			smokecloak_off()
 		return
-	if(CHECK_BITFIELD(S.smoke_traits, SMOKE_CAMO))
-		smokecloak_on()
 	if(smoke_delay)
 		return FALSE
 	if(CHECK_BITFIELD(S.smoke_traits, SMOKE_XENO) && (stat == DEAD || isnestedhost(src)))
@@ -248,7 +251,9 @@
 	smoke_delay = FALSE
 
 /mob/living/proc/smoke_contact(obj/effect/particle_effect/smoke/S)
-	var/protection = max(1 - get_permeability_protection() * S.bio_protection)
+	var/protection = max(1 - get_permeability_protection() * S.bio_protection, 0)
+	if(CHECK_BITFIELD(S.smoke_traits, SMOKE_EXTINGUISH))
+		ExtinguishMob()
 	if(CHECK_BITFIELD(S.smoke_traits, SMOKE_BLISTERING))
 		adjustFireLoss(15 * protection)
 		to_chat(src, "<span class='danger'>It feels as if you've been dumped into an open fire!</span>")
@@ -260,7 +265,7 @@
 		S.reagents?.reaction(src, TOUCH, S.fraction)
 	return protection
 
-/mob/living/proc/check_shields(attack_type, damage, damage_type = "melee", silent, attack_from_dir)
+/mob/living/proc/check_shields(attack_type, damage, damage_type = "melee", silent)
 	if(!damage)
 		stack_trace("check_shields called without a damage value")
 		return 0
@@ -271,13 +276,6 @@
 		sortTim(affecting_shields, /proc/cmp_numeric_dsc, associative = TRUE)
 	for(var/shield in affecting_shields)
 		var/datum/callback/shield_check = shield
-		. = shield_check.Invoke(attack_type, ., damage_type, silent, attack_from_dir)
+		. = shield_check.Invoke(attack_type, ., damage_type, silent)
 		if(!.)
 			break
-
-/mob/living/proc/has_overhealth_shield(damage_type)
-	var/list/affecting_shields = list()
-	SEND_SIGNAL(src, COMSIG_LIVING_SHIELDCALL, affecting_shields, damage_type, TRUE)
-	if(length(affecting_shields))
-		return TRUE
-	return FALSE

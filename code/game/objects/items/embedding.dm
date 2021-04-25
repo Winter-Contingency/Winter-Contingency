@@ -6,6 +6,7 @@
 	RegisterSignal(src, list(COMSIG_ITEM_DROPPED, COMSIG_MOVABLE_MOVED), .proc/embedded_on_move)
 	return TRUE
 
+
 /obj/item/proc/embedded_on_move(datum/source)
 	SIGNAL_HANDLER
 	unembed_ourself()
@@ -93,14 +94,6 @@
 	embedding.RegisterSignal(src, COMSIG_LIMB_DESTROYED, /obj/item/.proc/embedded_on_limb_destruction)
 	return TRUE
 
-/mob/living/proc/get_embedded_objects(of_type)
-	if(!ispath(of_type))
-		return embedded_objects
-	var/list/shrapnels = list()
-	for(var/obj/O in embedded_objects)
-		if(istype(O, of_type))
-			shrapnels += O
-	return shrapnels
 
 /obj/item/proc/embedded_on_carrier_move(datum/source, atom/oldloc, direction, Forced)
 	SIGNAL_HANDLER_DOES_SLEEP
@@ -164,7 +157,7 @@
 
 	user.next_move = world.time + 2 SECONDS
 
-	if(user.action_busy)
+	if(user.do_actions)
 		return
 
 	if(user.stat != CONSCIOUS)
@@ -190,7 +183,7 @@
 	if(!length(valid_objects))
 		CRASH("yank_out_object called for empty valid_objects, lenght of embedded_objects is [length(embedded_objects)]")
 
-	var/obj/item/selection = input("What do you want to yank out?", "Embedded objects") in valid_objects
+	var/obj/item/selection = tgui_input_list(user, "What do you want to yank out?", "Embedded objects", valid_objects)
 
 	if(user.get_active_held_item())
 		to_chat(user, "<span class='warning'>You need an empty hand for this!</span>")

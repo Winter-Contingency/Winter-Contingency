@@ -48,12 +48,6 @@
 		stat("Current Map:", length(SSmapping.configs) ? SSmapping.configs[GROUND_MAP].map_name : "Loading...")
 		stat("Current Ship:", length(SSmapping.configs) ? SSmapping.configs[SHIP_MAP].map_name : "Loading...")
 
-		//I know i'm going to hell for this one//
-		var/datum/game_mode/liberation/W = SSticker.mode
-		if(istype(W))
-			stat(FACTION_INSURRECTION, round(W.insurrectionist_tickets))
-			stat(FACTION_UNSC, round(W.unsc_tickets))
-
 	if(statpanel("Game"))
 		if(client)
 			stat("Ping:", "[round(client.lastping, 1)]ms (Average: [round(client.avgping, 1)]ms)")
@@ -273,10 +267,10 @@
 //This is a SAFE proc. Use this instead of equip_to_splot()!
 //set del_on_fail to have it delete W if it fails to equip
 //unset redraw_mob to prevent the mob from being redrawn at the end.
-/mob/proc/equip_to_slot_if_possible(obj/item/W, slot, ignore_delay = TRUE, del_on_fail = FALSE, warning = TRUE, redraw_mob = TRUE, permanent = FALSE)
+/mob/proc/equip_to_slot_if_possible(obj/item/W, slot, ignore_delay = TRUE, del_on_fail = FALSE, warning = TRUE, redraw_mob = TRUE, permanent = FALSE, override_nodrop = FALSE)
 	if(!istype(W))
 		return FALSE
-	if(!W.mob_can_equip(src, slot, warning))
+	if(!W.mob_can_equip(src, slot, warning, override_nodrop))
 		if(del_on_fail)
 			qdel(W)
 			return FALSE
@@ -309,8 +303,8 @@
 	return
 
 ///This is just a commonly used configuration for the equip_to_slot_if_possible() proc, used to equip people when the rounds starts and when events happen and such.
-/mob/proc/equip_to_slot_or_del(obj/item/W, slot, permanent = FALSE)
-	return equip_to_slot_if_possible(W, slot, TRUE, TRUE, FALSE, FALSE, permanent)
+/mob/proc/equip_to_slot_or_del(obj/item/W, slot, permanent = FALSE, override_nodrop = FALSE)
+	return equip_to_slot_if_possible(W, slot, TRUE, TRUE, FALSE, FALSE, permanent, override_nodrop)
 
 
 /mob/proc/equip_to_appropriate_slot(obj/item/W, ignore_delay = TRUE)
@@ -453,7 +447,7 @@
 
 
 /mob/living/start_pulling(atom/movable/AM, suppress_message = FALSE)
-	if(QDELETED(AM) || QDELETED(usr) || src == AM || !isturf(loc) || !Adjacent(AM))	//if there's no person pulling OR the person is pulling themself OR the object being pulled is inside something: abort!
+	if(QDELETED(AM) || QDELETED(usr) || src == AM || !isturf(loc) || !Adjacent(AM) || status_flags & INCORPOREAL)	//if there's no person pulling OR the person is pulling themself OR the object being pulled is inside something: abort!
 		return FALSE
 
 	if(!AM.can_be_pulled(src))
@@ -597,11 +591,11 @@
 
 
 /proc/is_species(A, species_datum)
-	. = FALSE
 	if(ishuman(A))
 		var/mob/living/carbon/human/H = A
 		if(istype(H.species, species_datum))
-			. = TRUE
+			return TRUE
+	return FALSE
 
 /mob/proc/get_species()
 	return ""
@@ -868,7 +862,7 @@
 	if(grab_state == GRAB_PASSIVE)
 		remove_movespeed_modifier(MOVESPEED_ID_MOB_GRAB_STATE)
 	else if(. == GRAB_PASSIVE)
-		add_movespeed_modifier(MOVESPEED_ID_MOB_GRAB_STATE, TRUE, 100, NONE, TRUE, grab_state * 3)
+		add_movespeed_modifier(MOVESPEED_ID_MOB_GRAB_STATE, TRUE, 100, NONE, TRUE, BASE_GRAB_SLOWDOWN) //We cap this at 3 so we don't get utterly insane slowdowns for neck and other grabs.
 
 /mob/set_throwing(new_throwing)
 	. = ..()

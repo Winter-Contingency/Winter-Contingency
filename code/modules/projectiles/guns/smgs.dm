@@ -75,12 +75,14 @@
 	accuracy_mult = 1.5
 	accuracy_mult_unwielded = 0.85
 	recoil_unwielded = 0
-	scatter = 15
-	fire_delay = 0.15 SECONDS
-	scatter_unwielded = 0 //Made to be used one handed.
+	scatter = 0
+	fire_delay = 0.2 SECONDS
+	scatter_unwielded = 10 //Made to be used one handed.
 	aim_slowdown = 0.15
 	burst_amount = 5
 	movement_acc_penalty_mult = 0
+	upper_akimbo_accuracy = 5
+	lower_akimbo_accuracy = 3
 
 //-------------------------------------------------------
 // War is hell. Not glorious.
@@ -96,6 +98,8 @@
 	flags_equip_slot = ITEM_SLOT_BACK
 	wield_delay = 0.5 SECONDS
 	force = 20
+	aim_speed_modifier = 0.4
+	aim_fire_delay = 0.2 SECONDS
 	current_mag = /obj/item/ammo_magazine/smg/standard_smg
 	type_of_casings = null
 	attachable_allowed = list(
@@ -117,7 +121,7 @@
 	accuracy_mult = 1.15
 	accuracy_mult_unwielded = 0.8
 	scatter = 0
-	fire_delay = 0.165 SECONDS
+	fire_delay = 0.15 SECONDS
 	scatter_unwielded = 30
 	aim_slowdown = 0.25
 	burst_amount = 0
@@ -200,6 +204,9 @@
 	aim_slowdown = 0.4
 	scatter = 10
 
+/obj/item/weapon/gun/smg/m25/elite/pmc
+	starting_attachment_types = list(/obj/item/attachable/magnetic_harness)
+
 
 //-------------------------------------------------------
 //MP27, based on the grease gun
@@ -256,17 +263,13 @@
 	fire_delay = 0.15 SECONDS
 	aim_slowdown = 0.3
 
-
-/obj/item/weapon/gun/smg/skorpion/upp
-	icon_state = "skorpion_u"
-	item_state = "skorpion_u"
-
 //-------------------------------------------------------
 //PPSH //Based on the PPSh-41.
 
 /obj/item/weapon/gun/smg/ppsh
 	name = "\improper PPSh-17b submachinegun"
 	desc = "A replica of a 20th century USSR model submachinegun that many terrorist organizations had copied all over the years. Despite its small-hitting firepower, its reliablity, extreme longevity and high firepower rate proves useful for the hands of the user."
+	icon = 'icons/Marine/gun64.dmi'
 	icon_state = "ppsh"
 	item_state = "ppsh"
 	caliber = "7.62x25mm" //codex
@@ -285,7 +288,10 @@
 	)
 
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_LOAD_INTO_CHAMBER|GUN_AMMO_COUNTER
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 15, "rail_y" = 19, "under_x" = 26, "under_y" = 15, "stock_x" = 26, "stock_y" = 15)
+	attachable_offset = list("muzzle_x" = 38, "muzzle_y" = 19,"rail_x" = 13, "rail_y" = 21, "under_x" = 26, "under_y" = 15, "stock_x" = 19, "stock_y" = 13)
+	starting_attachment_types = list(
+		/obj/item/attachable/stock/irremoveable/ppsh,
+	)
 
 	fire_delay = 0.125 SECONDS
 	burst_amount = 6
@@ -321,33 +327,3 @@
 	scatter_unwielded = 60
 	aim_slowdown = 0.15
 	wield_delay = 0.5 SECONDS
-
-//Halo//
-
-/obj/item/weapon/gun/smg/m7
-	name = "M7 Submachine Gun"
-	desc = "A personal defense weapon used extensively by UNSC security forces in close quarters areas."
-	fire_sound = 'sound/halo/SMG_Mini_Burst_Sound_Effect.ogg'
-	unload_sound = 'sound/halo/SMG_Reload_New.wav'
-	reload_sound = 'sound/halo/SMG_Reload_New.wav'
-	icon_state = "m7"
-	item_state = "m7"
-	fire_delay = 0.2 SECONDS
-	flags_equip_slot = ITEM_SLOT_BACK | ITEM_SLOT_BELT
-	current_mag = /obj/item/ammo_magazine/smg/m7
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_LOAD_INTO_CHAMBER
-	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO, GUN_FIREMODE_AUTOMATIC)
-
-/obj/item/weapon/gun/smg/m7/m7s
-	name = "M7S Submachine Gun"
-	desc = "The signature weapon of UNSC Special Forces, features in inbuilt suppressor and improved weapon ergonomics."
-	fire_sound = 'sound/halo/SMG_SOCOM_Fire.wav'
-	unload_sound = 'sound/halo/SMG_Reload_New.wav'
-	reload_sound = 'sound/halo/SMG_Reload_New.wav'
-	icon_state = "m7s"
-	item_state = "m7s"
-	fire_delay = 0.2 SECONDS
-	flags_equip_slot = ITEM_SLOT_BACK | ITEM_SLOT_BELT
-	current_mag = /obj/item/ammo_magazine/smg/m7
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_LOAD_INTO_CHAMBER
-	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO, GUN_FIREMODE_AUTOMATIC)

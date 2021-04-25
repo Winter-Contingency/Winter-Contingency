@@ -14,6 +14,9 @@
 		to_chat(user, "<span class='warning'>\The [src] cannot be applied to [M]!</span>")
 		return TRUE
 
+	if(M.status_flags & INCORPOREAL || user.status_flags & INCORPOREAL) //Incorporeal beings cannot attack or be attacked
+		return TRUE
+
 	if(!ishuman(user))
 		to_chat(user, "<span class='warning'>You don't have the dexterity to do this!</span>")
 		return TRUE
@@ -275,37 +278,30 @@
 	icon_state = "splint"
 	amount = 5
 	max_amount = 5
-	var/advanced = FALSE
-	var/delay_multiplier = 1
 
-/obj/item/stack/medical/splint/proc/check_limb(mob/living/carbon/M, mob/user, datum/limb/affecting)
-	if(!(affecting.name in list("l_arm", "r_arm", "l_leg", "r_leg", "r_hand", "l_hand", "r_foot", "l_foot", "chest", "groin", "head")))
-		to_chat(user, "<span class='warning'>You can't apply a splint there!</span>")
-		return
-
-	var/limb = affecting.display_name
-	if(affecting.limb_status & LIMB_DESTROYED)
-		to_chat(user, "<span class='warning'>[user == M ? "You don't" : "[M] doesn't"] have \a [limb]!</span>")
-		return
-
-	if(affecting.limb_status & LIMB_SPLINTED)
-		to_chat(user, "<span class='warning'>[user == M ? "Your" : "[M]'s"] [limb] is already splinted!</span>")
-		return
-	return TRUE
 
 /obj/item/stack/medical/splint/attack(mob/living/carbon/M, mob/user)
 	. = ..()
 	if(. == TRUE)
 		return TRUE
 
-	if(user.action_busy)
+	if(user.do_actions)
 		return
 
 	if(ishuman(M))
 		var/datum/limb/affecting = .
 		var/limb = affecting.display_name
 
-		if(!check_limb(M, user, affecting))
+		if(!(affecting.name in list("l_arm", "r_arm", "l_leg", "r_leg", "r_hand", "l_hand", "r_foot", "l_foot", "chest", "groin", "head")))
+			to_chat(user, "<span class='warning'>You can't apply a splint there!</span>")
+			return
+
+		if(affecting.limb_status & LIMB_DESTROYED)
+			to_chat(user, "<span class='warning'>[user == M ? "You don't" : "[M] doesn't"] have \a [limb]!</span>")
+			return
+
+		if(affecting.limb_status & LIMB_SPLINTED)
+			to_chat(user, "<span class='warning'>[user == M ? "Your" : "[M]'s"] [limb] is already splinted!</span>")
 			return
 
 		if(M != user)
@@ -320,17 +316,3 @@
 
 		if(affecting.apply_splints(src, user, M)) // Referenced in external organ helpers.
 			use(1)
-
-/obj/item/stack/medical/splint/covenant
-	name = "sealant mesh"
-	singular_name = "sealant mesh"
-	icon_state = "sealant_mesh"
-	heal_brute = 20
-	heal_burn = 20
-	advanced = TRUE
-	delay_multiplier = 0.8
-
-/obj/item/stack/medical/splint/covenant/check_limb(mob/living/carbon/M, mob/user, datum/limb/affecting)
-	if(affecting.limb_status & LIMB_SPLINTED)
-		affecting.remove_limb_flags(LIMB_SPLINTED)
-	. = ..()

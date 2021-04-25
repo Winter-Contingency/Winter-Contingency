@@ -67,7 +67,7 @@ obj/structure/sign/poster/New(var/serial)
 	if(ruined)
 		return
 	var/temp_loc = user.loc
-	switch(alert("Do I want to rip the poster from the wall?","You think...","Yes","No"))
+	switch(tgui_alert(user, "Do I want to rip the poster from the wall?", "You think...", list("Yes","No")))
 		if("Yes")
 			if(user.loc != temp_loc)
 				return
@@ -122,7 +122,6 @@ obj/structure/sign/poster/New(var/serial)
 		to_chat(user, "<span class='notice'>You place the poster!</span>")
 	else
 		D.roll_and_drop(temp_loc)
-	return
 
 /datum/poster
 	// Name suffix. Poster - [name]
@@ -130,34 +129,3 @@ obj/structure/sign/poster/New(var/serial)
 	// Description suffix
 	var/desc=""
 	var/icon_state=""
-
-
-/obj/structure/sign/poster/urf
-	name = "URF Poster"
-	desc = "A shittily drawn poster that says 'KILL UNSC'. There is a cute cat drawn on it as well."
-	serial_number = "38"
-	anchored = TRUE
-
-/obj/structure/sign/poster/urf/patcleary
-	name = "URF Poster"
-	desc = "A shittily drawn poster that says 'I <3 Pat Cleary'. Whoever made this must love pat cleary!"
-	serial_number = "39"
-	anchored = TRUE
-
-/obj/structure/sign/poster/urf/frickunsc
-	name = "URF Poster"
-	desc = "A shittily drawn poster that says 'Frick UNSC!'. Whoever made this must not like the UNSC!"
-	serial_number = "40"
-	anchored = TRUE
-
-/obj/structure/sign/poster/urf/reno
-	name = "URF Poster"
-	desc = "A shittily drawn poster that has a picture of Reno on it! We love Reno!"
-	serial_number = "41"
-	anchored = TRUE
-
-/obj/structure/sign/poster/urf/major
-	name = "URF Poster"
-	desc = "A shittily drawn poster that says 'URF MAJOR'"
-	serial_number = "42"
-	anchored = TRUE

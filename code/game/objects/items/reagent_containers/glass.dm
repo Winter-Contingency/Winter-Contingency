@@ -295,5 +295,3 @@
 	else
 		icon_state = "janibucket"
 
-/obj/item/reagent_containers/glass/beaker/covenant_synth
-	list_reagents = list(/datum/reagent/covenant_synth = 60)

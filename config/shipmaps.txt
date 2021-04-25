@@ -12,6 +12,19 @@ Format:
 	disabled (disables the map)
 endmap
 
-map unsc_frigate_saratoga
-default
+map debugdalus
+	default
+	voteweight 0
+endmap
+
+map theseus
+endmap
+
+map pillar_of_spring
+endmap
+
+map risingstar
+endmap
+
+map sulaco
 endmap

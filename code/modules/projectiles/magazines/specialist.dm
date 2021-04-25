@@ -3,26 +3,26 @@
 //Keyword rifles. They are subtype of rifles, but still contained here as a specialist weapon.
 
 /obj/item/ammo_magazine/sniper
-	name = "\improper M42A marksman magazine (10x28mm)"
-	desc = "A magazine of sniper rifle ammo."
+	name = "\improper T-26 magazine (10x28mm)"
+	desc = "A magazine of antimaterial rifle ammo."
 	caliber = "10x28mm"
-	icon_state = "m42a"
+	icon_state = "t26"
 	w_class = WEIGHT_CLASS_NORMAL
 	max_rounds = 15
 	default_ammo = /datum/ammo/bullet/sniper
-	gun_type = /obj/item/weapon/gun/rifle/sniper/M42A
+	gun_type = /obj/item/weapon/gun/rifle/sniper/antimaterial
 	reload_delay = 3
 
 
 /obj/item/ammo_magazine/sniper/incendiary
-	name = "\improper M42A incendiary magazine (10x28mm)"
+	name = "\improper T-26 incendiary magazine (10x28mm)"
 	default_ammo = /datum/ammo/bullet/sniper/incendiary
-	icon_state = "m42a_inc"
+	icon_state = "t26_inc"
 
 /obj/item/ammo_magazine/sniper/flak
-	name = "\improper M42A flak magazine (10x28mm)"
+	name = "\improper T-26 flak magazine (10x28mm)"
 	default_ammo = /datum/ammo/bullet/sniper/flak
-	icon_state = "m42a_flak"
+	icon_state = "t26_flak"
 
 
 //M42C magazine
@@ -49,42 +49,31 @@
 
 
 
-//M4RA magazines
+//tx8 magazines
 
-/obj/item/ammo_magazine/rifle/m4ra
-	name = "\improper A19 high velocity magazine (10x28mm)"
-	desc = "A magazine of A19 high velocity rounds for use in the T-45 battle rifle. The T-45 battle rifle is the only gun that can chamber these rounds."
-	icon_state = "m4ra"
+/obj/item/ammo_magazine/rifle/tx8
+	name = "\improper high velocity magazine (10x28mm)"
+	desc = "A magazine of overpressuered high velocity rounds for use in the TX-8 battle rifle. The TX-8 battle rifle is the only gun that can chamber these rounds."
+	icon_state = "tx8"
 	caliber = "10x28mm caseless"
-	default_ammo = /datum/ammo/bullet/rifle/m4ra
-	max_rounds = 20
-	gun_type = /obj/item/weapon/gun/rifle/m4ra
+	default_ammo = /datum/ammo/bullet/rifle/tx8
+	max_rounds = 25
+	gun_type = /obj/item/weapon/gun/rifle/tx8
 
-/obj/item/ammo_magazine/rifle/m4ra/incendiary
-	name = "\improper A19 high velocity incendiary magazine (10x28mm)"
-	desc = "A magazine of A19 high velocity incendiary rounds for use in the T-45 battle rifle. The T-45 battle rifle is the only gun that can chamber these rounds."
+/obj/item/ammo_magazine/rifle/tx8/incendiary
+	name = "\improper high velocity incendiary magazine (10x28mm)"
+	desc = "A magazine of overpressuered high velocity incendiary rounds for use in the TX-8 battle rifle. The TX-8 battle rifle is the only gun that can chamber these rounds."
 	caliber = "10x28mm caseless"
-	icon_state = "m4ra_incendiary"
-	default_ammo = /datum/ammo/bullet/rifle/m4ra/incendiary
-	max_rounds = 20
-	gun_type = /obj/item/weapon/gun/rifle/m4ra
+	icon_state = "tx8_incend"
+	default_ammo = /datum/ammo/bullet/rifle/tx8/incendiary
+	gun_type = /obj/item/weapon/gun/rifle/tx8
 
-/obj/item/ammo_magazine/rifle/m4ra/impact
-	name = "\improper A19 high velocity impact magazine (10x28mm)"
-	desc = "A magazine of A19 high velocity impact rounds for use in the T-45 battle rifle. The T-45 battle rifle is the only gun that can chamber these rounds."
-	icon_state = "m4ra_impact"
-	default_ammo = /datum/ammo/bullet/rifle/m4ra/impact
-	max_rounds = 20
-	gun_type = /obj/item/weapon/gun/rifle/m4ra
-
-obj/item/ammo_magazine/rifle/m4ra/smart
-	name = "\improper A19 high velocity smart magazine (10x28mm)"
-	desc = "A magazine of A19 high velocity smart rounds for use in the T-45 battle rifle. The T-45 battle rifle is the only gun that can chamber these rounds."
-	icon_state = "m4ra_iff"
-	default_ammo = /datum/ammo/bullet/rifle/m4ra/smart
-	max_rounds = 20
-	gun_type = /obj/item/weapon/gun/rifle/m4ra
-
+/obj/item/ammo_magazine/rifle/tx8/impact
+	name = "\improper high velocity impact magazine (10x28mm)"
+	desc = "A magazine of overpressuered high velocity impact rounds for use in the TX-8 battle rifle. The TX-8 battle rifle is the only gun that can chamber these rounds."
+	icon_state = "tx8_impact"
+	default_ammo = /datum/ammo/bullet/rifle/tx8/impact
+	gun_type = /obj/item/weapon/gun/rifle/tx8
 
 //-------------------------------------------------------
 //SMARTGUN
@@ -220,6 +209,31 @@ obj/item/ammo_magazine/rifle/m4ra/smart
 	current_rounds = 0
 	reload_delay = 30
 
+
+//-------------------------------------------------------
+//one use rpg
+
+/obj/item/ammo_magazine/rocket/oneuse
+	name = "\improper 68mm high-explosive shell"
+	desc = "A rocket used to reload a one use rocket once returned to an armory."
+	caliber = "rocket"
+	icon_state = "rocket"
+	w_class = WEIGHT_CLASS_BULKY
+	max_rounds = 1
+	default_ammo = /datum/ammo/rocket/oneuse
+	gun_type = /obj/item/weapon/gun/launcher/rocket/oneuse
+	flags_magazine = NONE
+	reload_delay = 30
+
+/obj/item/ammo_magazine/internal/launcher/rocket/oneuse
+	name = "\improper 67mm internal tube"
+	desc = "The internal tube of a one use rpg."
+	caliber = "rocket"
+	default_ammo = /datum/ammo/rocket/recoilless
+	max_rounds = 1
+	current_rounds = 0
+	reload_delay = 30
+
 //-------------------------------------------------------
 //M5 RPG'S MEAN FUCKING COUSIN
 
@@ -253,51 +267,15 @@ obj/item/ammo_magazine/rifle/m4ra/smart
 	w_class = WEIGHT_CLASS_NORMAL
 	gun_type = /obj/item/weapon/gun/minigun
 
+// railgun
 
-//Halo
-
-
-/obj/item/ammo_magazine/m41spnkr
-	name = "102mm SPNKR rocket"
-	desc = "A rocket tube M41 SPNKR."
-	caliber = "rocket"
-	icon_state = "m41spnkr"
-	w_class = WEIGHT_CLASS_NORMAL
-	max_rounds = 2
-	default_ammo = /datum/ammo/rocket/m41spnkr
-	gun_type = /obj/item/weapon/gun/launcher/rocket/m41spnkr
-	flags_magazine = NONE
-	reload_delay = 60
-
-	attack_self(mob/user)
-		if(current_rounds <= 0)
-			to_chat(user, "<span class='notice'>You begin taking apart the empty tube frame...</span>")
-			if(do_after(user, 10, TRUE, src))
-				user.visible_message("[user] deconstructs the rocket tube frame.","<span class='notice'>You take apart the empty frame.</span>")
-				var/obj/item/stack/sheet/metal/M = new(get_turf(user))
-				M.amount = 2
-				user.drop_held_item()
-				qdel(src)
-		else
-			to_chat(user, "Not with a missile inside!")
-
-	update_icon()
-		overlays.Cut()
-		if(current_rounds <= 0)
-			name = "empty SPNKR frame"
-			desc = "A spent rocket rube. Activate it to deconstruct it and receive some materials."
-			icon_state = type == /obj/item/ammo_magazine/m41spnkr? "m41spnkr_e" : "m41spnkr_e"
-
-
-/obj/item/ammo_magazine/rocket/m26
-	name = "M26 Pattern Rocket Tube"
-	desc = "A rocket tube for the ACL-55. This one is a high explosive rocket."
-	caliber = "rocket"
-	icon_state = "m26_exp"
-	w_class = WEIGHT_CLASS_NORMAL
+/obj/item/ammo_magazine/railgun
+	name = "railgun canister (rail projectile)"
+	desc = "A canister holding a projectile to be used inside a railgun."
+	caliber = "rail projectile"
+	icon_state = "railgun"
+	default_ammo = /datum/ammo/bullet/railgun
 	max_rounds = 1
-	default_ammo = /datum/ammo/rocket/m26
-	gun_type = /obj/item/weapon/gun/launcher/rocket/acl55
-	flags_magazine = NONE
-	reload_delay = 60
-
+	reload_delay = 20 //Hard to reload.
+	w_class = WEIGHT_CLASS_NORMAL
+	gun_type = /obj/item/weapon/gun/rifle/railgun

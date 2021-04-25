@@ -127,7 +127,7 @@ They're all essentially identical when it comes to getting the job done.
 		return
 
 	var/obj/item/ammo_magazine/handful/new_handful = new /obj/item/ammo_magazine/handful()
-	var/MR = (caliber in list("12g", "7.62x54mmR", ".410", "8g")) ? 5 : 8
+	var/MR = (caliber in list("12g", "7.62x54mmR", ".410")) ? 5 : 8
 	R = transfer_amount ? min(current_rounds, transfer_amount) : min(current_rounds, MR)
 	new_handful.generate_handful(default_ammo, caliber, MR, R, gun_type)
 	current_rounds -= R
@@ -173,7 +173,7 @@ They're all essentially identical when it comes to getting the job done.
 
 /*
 Handfuls are generated dynamically and they are never actually loaded into the item.
-What they do instead is refill the magazine with ammo, and sometimes save what sort of
+What they do instead is refill the magazine with ammo and sometime save what sort of
 ammo they are in order to use later. The internal magazine for the gun really does the
 brunt of the work. This is also far, far better than generating individual items for
 bullets/shells. ~N
@@ -221,7 +221,7 @@ If it is the same and the other stack isn't full, transfer an amount (default 1)
 
 	name = "handful of [ammo_name + (ammo_name == "shotgun buckshot"? " ":"s ") + "([new_caliber])"]"
 	switch(new_caliber)
-		if("12g",".410","8g")
+		if("12g",".410")
 			icon_state = ammo_name
 		if("7.62x54mmR")
 			icon_state = "mosin bullet"

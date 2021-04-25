@@ -18,6 +18,7 @@ tools/MapDaemon/logs/*.txt
 #Visual studio stuff
 *.vscode/*
 !/.vscode/extensions.json
+!/.vscode/settings.json
 
 tools/BalanceTool/raw.json
 
@@ -29,11 +30,3 @@ tools/BalanceTool/raw.json
 dmdoc/*
 
 tools/UnstandardnessTestForDM/UnstandardnessTestForDM/obj/x86/Debug/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttributes.cs
-config/admins.txt
-config/config.txt
-config/dbconfig.txt
-tgmc.dme
-tgmc.dme
-config/dbconfig.txt
-config/config.txt
-config/admins.txt

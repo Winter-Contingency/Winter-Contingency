@@ -206,10 +206,7 @@
 			if(o.limb_status & LIMB_SPLINTED)
 				msg += "<span class='warning'>[t_He] [t_has] a splint on [t_his] [o.display_name]!</span>\n"
 			if(o.limb_status & LIMB_STABILIZED)
-				if(reagents.has_reagent(/datum/reagent/medicine/biofoam))
-					msg += "<span class='warning'>The biofoam is stabilizing [t_his] [o.display_name]!</span>\n"
-				else
-					msg +=  "<span class='warning'>[t_He] [t_has] a suit brace stabilizing [t_his] [o.display_name]!</span>\n"
+				msg += "<span class='warning'>[t_He] [t_has] a suit brace stabilizing [t_his] [o.display_name]!</span>\n"
 
 	if(holo_card_color)
 		msg += "[t_He] has a [holo_card_color] holo card on [t_his] chest.\n"
@@ -224,7 +221,7 @@
 		msg += "<span class='warning'>[t_He] [t_is]n't responding to anything around [t_him] and seems to be asleep.</span>\n"
 		if((stat == DEAD || health < get_crit_threshold()) && distance <= 3)
 			msg += "<span class='warning'>[t_He] does not appear to be breathing.</span>\n"
-			if(undefibbable && distance <= 1)
+			if(HAS_TRAIT(src, TRAIT_UNDEFIBBABLE) && distance <= 1)
 				msg += "<span class='deadsay'>[t_He] [t_has] gone cold.</span>\n"
 		if(ishuman(user) && !user.stat && Adjacent(user))
 			user.visible_message("<b>[user]</b> checks [src]'s pulse.", "You check [src]'s pulse.", null, 4)
@@ -244,7 +241,8 @@
 
 	if((!species.has_organ["brain"] || has_brain()) && stat != DEAD)
 		if(!key)
-			msg += "<span class='deadsay'>[t_He] [t_is] fast asleep. It doesn't look like they are waking up anytime soon.</span>\n"
+			if(species.is_sentient)
+				msg += "<span class='deadsay'>[t_He] [t_is] fast asleep. It doesn't look like they are waking up anytime soon.</span>\n"
 		else if(!client)
 			msg += "[t_He] [t_has] suddenly fallen asleep.\n"
 
@@ -532,6 +530,9 @@
 
 
 	msg += "[flavor_text]<br>"
+
+	if(has_status_effect(STATUS_EFFECT_ADMINSLEEP))
+		msg += "<span class='highdanger'><B>This player has been slept by staff.</B>\n</span>"
 
 	msg += "*---------*</span>"
 

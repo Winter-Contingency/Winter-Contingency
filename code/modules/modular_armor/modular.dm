@@ -15,9 +15,11 @@
 	icon = 'icons/mob/modular/modular_armor.dmi'
 	icon_state = "underarmor_icon"
 	item_state = "underarmor"
+	item_state_worn = TRUE
+	item_icons = list(slot_wear_suit_str = 'icons/mob/modular/modular_armor.dmi')
 	flags_atom = CONDUCT
 	flags_armor_protection = CHEST|GROIN|ARMS|LEGS|FEET|HANDS
-	flags_item = SYNTH_RESTRICTED
+	flags_item = SYNTH_RESTRICTED|IMPEDE_JETPACK
 	/// What is allowed to be equipped in suit storage
 	allowed = list(
 		/obj/item/weapon/gun,
@@ -26,6 +28,7 @@
 		/obj/item/weapon/claymore,
 		/obj/item/storage/belt/gun,
 		/obj/item/storage/belt/knifepouch,
+		/obj/item/weapon/twohanded,
 	)
 	flags_equip_slot = ITEM_SLOT_OCLOTHING
 	w_class = WEIGHT_CLASS_BULKY
@@ -74,6 +77,20 @@
 	QDEL_NULL(storage)
 	return ..()
 
+/obj/item/clothing/suit/modular/apply_custom(image/standing)
+	if(slot_chest)
+		standing.overlays += image(slot_chest.icon, ITEM_STATE_IF_SET(slot_chest))
+	if(slot_arms)
+		standing.overlays += image(slot_arms.icon, ITEM_STATE_IF_SET(slot_arms))
+	if(slot_legs)
+		standing.overlays += image(slot_legs.icon, ITEM_STATE_IF_SET(slot_legs))
+	for(var/mod in installed_modules)
+		var/obj/item/armor_module/module = mod
+		standing.overlays += image(module.icon, ITEM_STATE_IF_SET(module))
+	if(installed_storage)
+		standing.overlays += image(installed_storage.icon, ITEM_STATE_IF_SET(installed_storage))
+
+
 /obj/item/clothing/suit/modular/mob_can_equip(mob/user, slot, warning)
 	if(slot == SLOT_WEAR_SUIT && ishuman(user))
 		var/mob/living/carbon/human/H = user
@@ -95,7 +112,7 @@
 	var/mob/living/carbon/human/H = user
 	if(H.wear_suit != src)
 		return
-	toggle_armor_light(user)
+	turn_light(user, !light_on)
 	return TRUE
 
 
@@ -175,7 +192,7 @@
 	if(.)
 		return
 
-	if(user.action_busy)
+	if(user.do_actions)
 		return FALSE
 
 	if(!LAZYLEN(installed_modules))
@@ -190,7 +207,7 @@
 	if(LAZYLEN(installed_modules) == 1) // Single item (just take it)
 		attachment = installed_modules[1]
 	else if(LAZYLEN(installed_modules) > 1) // Multi item, ask which piece
-		attachment = input(user, "Which module would you like to remove", "Remove module") as null|anything in installed_modules
+		attachment = tgui_input_list(user, "Which module would you like to remove", "Remove module", installed_modules)
 	if(!attachment)
 		return TRUE
 
@@ -207,7 +224,7 @@
 	if(.)
 		return
 
-	if(user.action_busy)
+	if(user.do_actions)
 		return FALSE
 
 	if(ismob(loc) && (user.r_hand != src && user.l_hand != src))
@@ -230,7 +247,7 @@
 	if(length(armor_slots) == 1) // Single item (just take it)
 		armor_slot = armor_slots[1]
 	else if(length(armor_slots) > 1) // Multi item, ask which piece
-		armor_slot = input(user, "Which armor piece would you like to remove", "Remove armor piece") as null|anything in armor_slots
+		armor_slot = tgui_input_list(user, "Which armor piece would you like to remove", "Remove armor piece", armor_slots)
 	if(!armor_slot)
 		return TRUE
 
@@ -246,7 +263,7 @@
 	if(.)
 		return
 
-	if(user.action_busy)
+	if(user.do_actions)
 		return FALSE
 
 	if(!installed_storage)
@@ -309,13 +326,14 @@
 /obj/item/clothing/head/modular
 	name = "Jaeger Pattern Helmet"
 	desc = "Usually paired with the Jaeger Combat Exoskeleton. Can mount utility functions on the helmet hard points."
-	icon = 'icons/mob/modular/modular_armor.dmi'
+	icon = 'icons/mob/modular/modular_helmet_icon.dmi'
 	icon_state = "medium_helmet"
+	item_icons = list(slot_head_str = 'icons/mob/modular/modular_helmet.dmi')
 	flags_armor_protection = HEAD
 	flags_armor_features = ARMOR_NO_DECAP
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS
-	allowed = list()
+	allowed = null
 	flags_equip_slot = ITEM_SLOT_HEAD
 	w_class = WEIGHT_CLASS_NORMAL
 
@@ -328,13 +346,6 @@
 
 	/// How long it takes to attach or detach to this item
 	var/equip_delay = 3 SECONDS
-
-
-/obj/item/clothing/head/modular/Initialize()
-	. = ..()
-	// Removes the _icon from the end of the icon_state
-	icon_state = "[initial(icon_state)]_icon"
-	item_state = initial(icon_state)
 
 
 /obj/item/clothing/head/modular/attackby(obj/item/I, mob/user, params)
@@ -351,15 +362,14 @@
 		return TRUE
 	paint.uses--
 
-	var/new_color = input(user, "Pick a color", "Pick color", "") in list(
+	var/new_color = tgui_input_list(user, "Pick a color", "Pick color", list(
 		"black", "snow", "desert", "gray", "brown", "red", "blue", "yellow", "green", "aqua", "purple", "orange"
-	)
+	))
 
 	if(!do_after(user, 1 SECONDS, TRUE, src, BUSY_ICON_GENERIC))
 		return TRUE
 
-	icon_state = "[initial(icon_state)]_[new_color]_icon"
-	item_state = "[initial(icon_state)]_[new_color]"
+	icon_state = "[initial(icon_state)]_[new_color]"
 
 	return TRUE
 
@@ -367,7 +377,6 @@
 /obj/item/clothing/head/modular/Destroy()
 	QDEL_NULL(installed_module)
 	return ..()
-
 
 /obj/item/clothing/head/modular/item_action_slot_check(mob/user, slot)
 	if(!ishuman(user))
@@ -401,7 +410,7 @@
 	if(.)
 		return
 
-	if(user.action_busy)
+	if(user.do_actions)
 		return FALSE
 
 	if(!installed_module)
@@ -421,6 +430,10 @@
 	. = ..()
 	if(installed_module)
 		. += image(installed_module.icon, installed_module.item_state)
+
+/obj/item/clothing/head/modular/apply_custom(image/standing)
+	if(installed_module)
+		standing.overlays += image(installed_module.icon, ITEM_STATE_IF_SET(installed_module))
 
 
 /obj/item/clothing/head/modular/get_mechanics_info()
@@ -443,7 +456,7 @@
 			to_chat(user,"<span class='warning'>There is already an installed module.</span>")
 		return FALSE
 
-	if(user.action_busy)
+	if(user.do_actions)
 		return FALSE
 
 	if(!do_after(user, equip_delay, TRUE, user, BUSY_ICON_GENERIC))
@@ -474,81 +487,27 @@
 	desc = "Usually paired with the Jaeger Combat Exoskeleton. Can mount utility functions on the helmet hard points. Has Assault markings."
 	icon_state = "assault_helmet"
 
-//halo
+/obj/item/clothing/head/modular/marine/eva
+	name = "Jaeger Pattern EVA Helmet"
+	desc = "Usually paired with the Jaeger Combat Exoskeleton. Can mount utility functions on the helmet hard points. Has EVA markings."
+	icon_state = "eva_helmet"
 
-/obj/item/clothing/suit/modular/unscmarine
-	name = "UNSC Marine chest rig"
-	desc = "A barebones UNSC Marine chest rig. It can mount and be improved with various pieces of armor and plating."
-	icon_state = "marine_under"
-	item_state = "marine_under"
+/obj/item/clothing/head/modular/marine/eva/skull
+	name = "Jaeger Pattern EVA Skull Helmet"
+	desc = "Usually paired with the Jaeger Combat Exoskeleton. Can mount utility functions on the helmet hard points. Has EVA markings and a skull on the visor."
+	icon_state = "eva_skull_helmet"
 
-/obj/item/clothing/suit/modular/urf
-	name = "URF Body Armor Harness"
-	desc = "A barebones harness, it can mount and be improved with various pieces of armor and plating."
-	icon_state = "innie_harness"
-	item_state = "innie_harness"
+/obj/item/clothing/head/modular/marine/eod
+	name = "Jaeger Pattern EOD Helmet"
+	desc = "Usually paired with the Jaeger Combat Exoskeleton. Can mount utility functions on the helmet hard points. Has EOD markings"
+	icon_state = "eod_helmet"
 
-/obj/item/clothing/suit/modular/urf/alt
-	name = "URF Body Armor Harness"
-	desc = "A barebones harness, it can mount and be improved with various pieces of armor and plating."
-	icon_state = "innie_harness_two"
-	item_state = "innie_harness_two"
+/obj/item/clothing/head/modular/marine/scout
+	name = "Jaeger Pattern Scout Helmet"
+	desc = "Usually paired with the Jaeger Combat Exoskeleton. Can mount utility functions on the helmet hard points. Has Scout markings"
+	icon_state = "scout_helmet"
 
-
-/obj/item/clothing/head/modular/marine/unsc
-	name = "CH525 combat helmet"
-	desc = "The CH525 is a reliable and robust helmet for UNSC Marines. It can be equipped with a tactical visor that can be toggled."
-	icon_state = "marine_helmet"
-	toggle_message = "You activate the tactical visor"
-	alt_toggle_message = "You deactive the tactical visor."
-	can_toggle = 1
-
-/obj/item/clothing/head/modular/marine/unsc/medic
-	name = "CH525-MH combat helmet"
-	desc = "The CH525 is a reliable and robust helmet for UNSC Marines. This one has a special medical HUD that allows for its wearer to see certain vitals of a lifeform."
-	icon_state = "marine_medic_helmet"
-	can_toggle = 0
-	//give visor medhud functionality for medic
-
-/obj/item/clothing/head/modular/marine/unsc/engineer
-	name = "CH525-S combat helmet"
-	desc = "The CH525 is a reliable and robust helmet for UNSC Marines. This one has a special welding shield that can be toggled."
-	icon_state = "marine_engi_helmet"
-	toggle_message = "You activate the tactical visor"
-	alt_toggle_message = "You deactive the tactical visor."
-	can_toggle = 0
-	//give engineer visor welder protection
-
-/obj/item/clothing/head/modular/marine/unsc/sl
-	name = "CH525-SO/R combat helmet"
-	desc = "The CH525 is a reliable and robust helmet for UNSC Marines. This one is for special operations and recon, and is equipped with an advanced binocular and rangefinding system."
-	icon_state = "marine_sl_helmet"
-	can_toggle = 0
-	//give SL helmet binocular functionality
-
-
-
-
-/obj/item/clothing/head/modular/marine/unsc/item_action_slot_check(mob/user, slot)
-	if(!ishuman(user))
-		return FALSE
-	if(slot != SLOT_HEAD)
-		return FALSE
-	if(!isnull(installed_module) && installed_module.module_type != ARMOR_MODULE_TOGGLE)
-		return FALSE
-	return TRUE //only give action button when armor is worn.
-
-
-/obj/item/clothing/head/modular/attack_self(mob/user)
-	if(!can_toggle || user.incapacitated())
-		return
-
-	if(world.time < cooldown + toggle_cooldown)
-		return
-
-	cooldown = world.time
-	up = !up
-	icon_state = "[initial(icon_state)][up ? "_visor" : ""]_icon"
-	item_state = "[initial(icon_state)][up ? "_visor" : ""]"
-	to_chat(user, "<span class='notice'>[up ? alt_toggle_message : toggle_message] </span>")
-	user.update_inv_head()
+/obj/item/clothing/head/modular/marine/infantry
+	name = "Jaeger Pattern Infantry-Open Helmet"
+	desc = "Usually paired with the Jaeger Combat Exoskeleton. Can mount utility functions on the helmet hard points. Has Infantry markings and no visor."
+	icon_state = "infantryopen_helmet"

@@ -16,7 +16,7 @@
 	icon_state = "welding"
 	item_state = "welding"
 	materials = list(/datum/material/metal = 3000, /datum/material/glass = 1000)
-	up = FALSE
+	var/up = FALSE
 	soft_armor = list("melee" = 10, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 	flags_atom = CONDUCT
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
@@ -110,11 +110,12 @@
 		src.damtype = "fire"
 		src.icon_state = "cake1"
 		START_PROCESSING(SSobj, src)
-	else
-		src.force = null
-		src.damtype = "brute"
-		src.icon_state = "cake0"
-	return
+		return
+
+	force = null
+	damtype = "brute"
+	icon_state = "cake0"
+
 
 
 /*

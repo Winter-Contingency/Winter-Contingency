@@ -49,7 +49,7 @@
 		return
 	update_icon()
 
-/obj/item/reagent_containers/syringe/attack_paw(mob/living/carbon/monkey/user)
+/obj/item/reagent_containers/syringe/attack_paw(mob/living/carbon/human/user)
 	return attack_hand()
 
 /obj/item/reagent_containers/syringe/attackby(obj/item/I, mob/user, params)
@@ -238,7 +238,7 @@
 		var/hit_area = affecting.display_name
 
 		var/mob/living/carbon/human/H = target
-		if((user != target) && !H.check_shields(COMBAT_TOUCH_ATTACK, 14, "melee", FALSE, get_dir(target, src)))
+		if((user != target) && !H.check_shields(COMBAT_TOUCH_ATTACK, 14, "melee"))
 			return
 
 		if (target != user && prob(target.getarmor(target_zone, "melee")))
@@ -335,7 +335,6 @@
 				if (reagents.total_volume >= reagents.maximum_volume && mode==SYRINGE_INJECT)
 					mode = SYRINGE_DRAW
 					update_icon()
-	return
 
 
 /obj/item/reagent_containers/syringe/ld50_syringe/update_icon()

@@ -4,7 +4,7 @@
 	icon_state = "breath"
 	item_state = "breath"
 	flags_inventory = COVERMOUTH|ALLOWINTERNALS
-	flags_armor_protection = 0
+	flags_armor_protection = NONE
 	w_class = WEIGHT_CLASS_SMALL
 	gas_transfer_coefficient = 0.10
 	permeability_coefficient = 0.50
@@ -53,17 +53,7 @@
 	icon_state = "rebreather"
 	item_state = "rebreather"
 	w_class = WEIGHT_CLASS_SMALL
-	flags_armor_protection = 0
-	flags_inventory = COVERMOUTH|ALLOWREBREATH
-	flags_inv_hide = HIDELOWHAIR
-
-/obj/item/clothing/mask/rebreather/unggoy
-	name = "Unggoy breath mask"
-	desc = "A close-fitting device that transfers methane to Unggoy bodies."
-	icon_state = "unggoy_rebreather"
-	item_state = "unggoy_rebreather"
-	w_class = WEIGHT_CLASS_SMALL
-	flags_armor_protection = 10
+	flags_armor_protection = NONE
 	flags_inventory = COVERMOUTH|ALLOWREBREATH
 	flags_inv_hide = HIDELOWHAIR
 
@@ -161,9 +151,3 @@
 	desc = "A colored, resilient, and insulating cloth to cover your face from the elements. This one is colored Blueberry Blue."
 	icon_state = "delta_bandanna"
 	item_state = "delta_bandanna"
-
-/obj/item/clothing/mask/bandanna/traditional
-	name = "facewraps"
-	desc = "A facewrap to protect your face from the elemets. (You can use the adjust-bandanna verb to move it)"
-	icon_state = "warlord"
-	item_state = "warlord"

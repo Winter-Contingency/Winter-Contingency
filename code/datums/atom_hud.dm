@@ -16,7 +16,7 @@ GLOBAL_LIST_INIT(huds, list(
 	DATA_HUD_SQUAD = new /datum/atom_hud/squad,
 	DATA_HUD_ORDER = new /datum/atom_hud/order,
 	DATA_HUD_MEDICAL_PAIN = new /datum/atom_hud/medical/pain,
-	DATA_HUD_XENO_TUNNELS = new /datum/atom_hud/xeno_tunnels,
+	DATA_HUD_XENO_TACTICAL = new /datum/atom_hud/xeno_tactical,
 	))
 
 
@@ -56,8 +56,10 @@ GLOBAL_LIST_INIT(huds, list(
 
 
 /datum/atom_hud/proc/remove_from_hud(atom/A)
+	SIGNAL_HANDLER
 	if(!A)
 		return FALSE
+	UnregisterSignal(A, COMSIG_PARENT_QDELETING)
 	for(var/u in hudusers)
 		var/mob/M = u
 		remove_from_single_hud(M, A)
@@ -101,6 +103,8 @@ GLOBAL_LIST_INIT(huds, list(
 	if(!A || (A in hudatoms))
 		return FALSE
 	hudatoms |= A
+	if(istype(A, /obj/effect/temp_visual))
+		RegisterSignal(A, COMSIG_PARENT_QDELETING, .proc/remove_from_hud)
 	for(var/u in hudusers)
 		var/mob/M = u
 		if(!queued_to_see[M])

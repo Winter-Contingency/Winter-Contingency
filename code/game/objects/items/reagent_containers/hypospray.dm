@@ -3,7 +3,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 /obj/item/reagent_containers/hypospray
-	name = "hypospray"
+	name = "Hypospray"
 	desc = "The hypospray is a sterile, air-needle reusable autoinjector for rapid administration of drugs to patients with customizable dosages."
 	icon = 'icons/obj/items/syringe.dmi'
 	item_state = "hypo"
@@ -19,16 +19,15 @@
 	var/inject_mode = HYPOSPRAY_INJECT_MODE_INJECT
 	var/core_name = "hypospray"
 	var/label = null
-	var/inject_delay = 0
 
 /obj/item/reagent_containers/hypospray/advanced
-	name = "advanced hypospray"
+	name = "Advanced hypospray"
 	desc = "The hypospray is a sterile, air-needle reusable autoinjector for rapid administration of drugs to patients with customizable dosages. Comes complete with an internal reagent analyzer and digital labeler. Handy."
 	core_name = "hypospray"
 
 
 /obj/item/reagent_containers/hypospray/proc/empty(mob/user)
-	if(alert(user, "Are you sure you want to empty [src]?", "Flush [src]:", "Yes", "No") != "Yes")
+	if(tgui_alert(user, "Are you sure you want to empty [src]?", "Flush [src]:", list("Yes", "No")) != "Yes")
 		return
 	if(isturf(user.loc))
 		to_chat(user, "<span class='notice'>You flush the contents of [src].</span>")
@@ -46,6 +45,25 @@
 
 
 /obj/item/reagent_containers/hypospray/afterattack(atom/A, mob/living/user)
+	if(istype(A, /obj/item/storage/pill_bottle)) //this should only run if its a pillbottle
+		if(reagents.total_volume >= volume)
+			to_chat(user, "<span class='warning'>[src] is full.</span>")
+			return  //early returning if its full
+
+		if(!A.contents.len)
+			return //early returning if its empty
+		var/obj/item/pill = A.contents[1]
+
+		if((pill.reagents.total_volume + reagents.total_volume) > volume)
+			to_chat(user, "<span class='warning'>[src] cannot hold that much more.</span>")
+			return // so it doesnt let people have hypos more filled than their volume
+		pill.reagents.trans_to(src, pill.reagents.total_volume)
+
+		to_chat(user, "<span class='notice'>You dissolve pill inside [A] in [src].</span>")
+		A.contents -= pill
+		qdel(pill)
+		return
+
 	if(!A.reagents)
 		return
 	if(!istype(user))
@@ -123,9 +141,6 @@
 				"<span class='warning'>You knock [user] to the ground before they could inject you!</span>", null, 5)
 			playsound(user.loc, 'sound/weapons/thudswoosh.ogg', 25, 1, 7)
 			return FALSE
-
-	if(inject_delay && !do_after(user, inject_delay, TRUE, A))
-		return
 
 	var/list/injected = list()
 	for(var/datum/reagent/R in reagents.reagent_list)
@@ -243,7 +258,7 @@
 		label(usr)
 
 	else if(href_list["set_transfer"])
-		var/N = input("Amount per transfer from this:", "[src]") as null|anything in list(1, 3, 5, 10, 15)
+		var/N = tgui_input_list(usr, "Amount per transfer from this:", "[src]", list(1, 3, 5, 10, 15))
 		if(!N)
 			return
 
@@ -272,6 +287,60 @@
 /obj/item/reagent_containers/hypospray/advanced/oxycodone
 	list_reagents = list(/datum/reagent/medicine/oxycodone = 60)
 
+/obj/item/reagent_containers/hypospray/advanced/combat
+	name = "Combat hypospray"
+	desc = "A hypospray loaded with several doses of advanced healing and painkilling chemicals. Intended for use in active combat."
+	list_reagents = list(
+		/datum/reagent/medicine/bicaridine = 20,
+		/datum/reagent/medicine/kelotane = 20,
+		/datum/reagent/medicine/tramadol = 20,
+	)
+
+/obj/item/reagent_containers/hypospray/advanced/combat_advanced
+	name = "Advanced combat hypospray"
+	desc = "A hypospray loaded with several doses of advanced healing and painkilling chemicals. Intended for use in active combat."
+	list_reagents = list(
+		/datum/reagent/medicine/meralyne = 20,
+		/datum/reagent/medicine/dermaline = 20,
+		/datum/reagent/medicine/oxycodone = 20,
+	)
+
+/obj/item/reagent_containers/hypospray/advanced/meraderm
+	name = "Meraderm hypospray"
+	desc = "A hypospray loaded with meralyne and dermaline."
+	list_reagents = list(
+		/datum/reagent/medicine/meralyne = 30,
+		/datum/reagent/medicine/dermaline = 30,
+	)
+
+/obj/item/reagent_containers/hypospray/advanced/meralyne
+	name = "Meralyne hypospray"
+	desc = "A hypospray loaded with meralyne."
+	list_reagents = list(
+		/datum/reagent/medicine/meralyne = 60,
+	)
+
+/obj/item/reagent_containers/hypospray/advanced/dermaline
+	name = "Dermaline hypospray"
+	desc = "A hypospray loaded with dermaline."
+	list_reagents = list(
+		/datum/reagent/medicine/dermaline = 60,
+	)
+
+/obj/item/reagent_containers/hypospray/advanced/ironsugar
+	name = "Ironsugar hypospray"
+	desc = "A hypospray loaded with ironsugar."
+	list_reagents = list(
+		/datum/reagent/iron = 30,
+		/datum/reagent/consumable/sugar = 30,
+	)
+
+/obj/item/reagent_containers/hypospray/advanced/tricordrazine
+	name = "Tricordrazine hypospray"
+	desc = "A hypospray loaded with tricordrazine."
+	list_reagents = list(
+		/datum/reagent/medicine/tricordrazine = 60,
+	)
 
 /obj/item/reagent_containers/hypospray/advanced/update_icon()
 	. = ..()
@@ -315,3 +384,9 @@
 					dat += "\n \t <b>Unknown:</b> [R.volume]|[percent]% <b>Amount per dose:</b> [dose]</br>"
 		if(dat)
 			to_chat(user, "<span class = 'notice'>[src]'s reagent display shows the following contents: [dat.Join(" ")]</span>")
+
+/obj/item/reagent_containers/hypospray/advanced/big
+	name = "Advanced big hypospray"
+	desc = "The hypospray is a sterile, air-needle reusable autoinjector for rapid administration of drugs to patients with customizable dosages. Comes complete with an internal reagent analyzer and digital labeler. Handy. This one is a 120 unit version."
+	core_name = "hypospray"
+	volume = 120

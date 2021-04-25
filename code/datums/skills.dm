@@ -247,16 +247,6 @@ engineer, construction, leadership, medical, surgery, pilot, police, powerloader
 	pistols = SKILL_PISTOLS_TRAINED
 	police = SKILL_POLICE_MP
 
-//Halo
-
-/datum/skills/civilian/survivor/gcpd
-	name = "Survivor Colonial Police"
-	cqc = SKILL_CQC_MP
-	firearms = SKILL_FIREARMS_DEFAULT
-	melee_weapons = SKILL_MELEE_DEFAULT
-	pistols = SKILL_PISTOLS_TRAINED
-	police = SKILL_POLICE_MP
-
 /datum/skills/civilian/survivor/prisoner
 	name = "Survivor Prisoner"
 	cqc = SKILL_CQC_DEFAULT
@@ -305,6 +295,10 @@ engineer, construction, leadership, medical, surgery, pilot, police, powerloader
 	surgery = SKILL_SURGERY_EXPERT
 	melee_weapons = SKILL_MELEE_WEAK
 	police = SKILL_POLICE_MP
+
+/datum/skills/ai
+	name = "AI"
+	engineer = SKILL_ENGINEER_MASTER
 
 /datum/skills/synthetic
 	name = SYNTHETIC
@@ -420,7 +414,7 @@ engineer, construction, leadership, medical, surgery, pilot, police, powerloader
 	cqc = SKILL_CQC_TRAINED
 	construction = SKILL_CONSTRUCTION_PLASTEEL
 	engineer = SKILL_ENGINEER_PLASTEEL
-	leadership = SKILL_LEAD_TRAINED
+	leadership = SKILL_LEAD_EXPERT
 	medical = SKILL_MEDICAL_NOVICE
 	surgery = SKILL_SURGERY_AMATEUR
 
@@ -569,13 +563,6 @@ engineer, construction, leadership, medical, surgery, pilot, police, powerloader
 	medical = SKILL_MEDICAL_NOVICE
 	surgery = SKILL_SURGERY_AMATEUR
 	melee_weapons = SKILL_MELEE_SUPER
-
-/datum/skills/tank_crew
-	name = "Tank Crew"
-	large_vehicle = SKILL_LARGE_VEHICLE_TRAINED
-	powerloader = SKILL_POWERLOADER_DABBLING
-	leadership = SKILL_LEAD_TRAINED
-	engineer = SKILL_ENGINEER_METAL
 
 /datum/skills/spatial_agent
 	name = "Spatial Agent"

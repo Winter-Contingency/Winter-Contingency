@@ -71,18 +71,10 @@
 
 //a very literal box of ammunition.
 /obj/item/ammo_magazine/magnum
-	name = "box of .44 magnum"
-	icon_state = "box45" //Maybe change this
+	name = "packet of .44 magnum"
+	icon_state = "box_44mag" //Maybe change this
 	default_ammo = /datum/ammo/bullet/revolver
 	caliber = ".44"
-	current_rounds = 50
-	max_rounds = 50
-
-/obj/item/ammo_magazine/coltammo
-	name = "box of .357 magnum"
-	icon_state = "box45" //Maybe change this
-	default_ammo = /datum/ammo/bullet/revolver
-	caliber = ".357"
 	current_rounds = 50
 	max_rounds = 50
 
@@ -144,12 +136,4 @@
 	default_ammo = /datum/ammo/bullet/revolver/small
 	caliber = ".357"
 	gun_type = /obj/item/weapon/gun/revolver/cmb
-
-//-------------------------------------------------------
-//COLT NAVY REVOLVER //
-
-/obj/item/ammo_magazine/internal/revolver/coltnavy
-	caliber = ".357"
-	max_rounds = 6
-	gun_type = /obj/item/weapon/gun/revolver/coltnavy
 

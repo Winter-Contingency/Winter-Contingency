@@ -190,6 +190,10 @@ Voting
 
 /datum/config_entry/flag/allow_vote_mode
 
+/datum/config_entry/flag/allow_vote_groundmap
+
+/datum/config_entry/flag/allow_vote_shipmap
+
 /datum/config_entry/flag/default_no_vote
 
 /datum/config_entry/flag/no_dead_vote
@@ -205,6 +209,11 @@ Voting
 /datum/config_entry/number/vote_period  // length of voting period (deciseconds, default 1 minute)
 	config_entry_value = 600
 	integer = FALSE
+	min_val = 0
+
+/datum/config_entry/number/maximum_clients_for_gamemode_vote
+	config_entry_value = 40
+	integer = TRUE
 	min_val = 0
 
 /*

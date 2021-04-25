@@ -1,6 +1,8 @@
 #define DROPPOD_READY 1
 #define DROPPOD_ACTIVE 2
 #define DROPPOD_LANDED 3
+GLOBAL_LIST_INIT(blocked_droppod_tiles, typecacheof(list(/turf/open/space/transit, /turf/open/space, /turf/open/ground/empty, /turf/open/beach/sea, /turf/open/lavaland/lava))) // Don't drop at these tiles.
+
 ///Marine steel rain style drop pods, very cool!
 /obj/structure/droppod
 	name = "TGMC Zeus orbital drop pod"
@@ -23,6 +25,8 @@
 	var/launch_time = 10 SECONDS
 	var/launch_allowed = TRUE
 	var/datum/turf_reservation/reserved_area
+	///after the pod finishes it's travelhow long it spends falling
+	var/falltime = 0.6 SECONDS
 
 /obj/structure/droppod/Initialize()
 	. = ..()
@@ -42,7 +46,8 @@
 	GLOB.droppod_list -= src
 
 /obj/structure/droppod/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
-	if(..())
+	. = ..()
+	if(.)
 		return
 	switch(action)
 		if("set_x_target")
@@ -76,11 +81,10 @@
 	return data
 
 
-/obj/structure/droppod/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, \
-							datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state)
-	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
+/obj/structure/droppod/ui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
 	if (!ui)
-		ui = new(user, src, ui_key, "Droppod", "[name]", 450, 250, master_ui, state)
+		ui = new(user, src, "Droppod", "[name]")
 		ui.open()
 
 /obj/structure/droppod/attack_hand(mob/living/user)
@@ -110,19 +114,22 @@
 /obj/structure/droppod/proc/checklanding(mob/user)
 	var/turf/target = locate(target_x, target_y, 2)
 	if(target.density)
-		to_chat(user, "<span class='warning'>Dense Landing zone detected. Invalid area.</span>")
+		to_chat(user, "<span class='warning'>Dense landing zone detected. Invalid area.</span>")
 		return FALSE
-	if(isspaceturf(target))
-		to_chat(user, "<span class='warning'>Location outside mission parameters. Invalid area.</span>")
+	if(is_type_in_typecache(target, GLOB.blocked_droppod_tiles))
+		to_chat(user, "<span class='warning'>Extremely lethal hazard detected on the target location. Invalid area.</span>")
 		return FALSE
 	var/area/targetarea = get_area(target)
+	if(targetarea.flags_area & NO_DROPPOD) // Thou shall not pass!
+		to_chat(user, "<span class='warning'>Location outside mission parameters. Invalid area.</span>")
+		return FALSE
 	if(!targetarea.outside)
 		to_chat(user, "<span class='warning'>Cannot launch pod at a roofed area.</span>")
 		return FALSE
 	for(var/x in target.contents)
 		var/atom/object = x
 		if(object.density)
-			to_chat(user, "<span class='warning'>Dense object detected in target location.</span>")
+			to_chat(user, "<span class='warning'>Dense object detected in target location. Invalid area.</span>")
 			return FALSE
 	to_chat(user, "<span class='notice'>Valid area confirmed!</span>")
 	return TRUE
@@ -180,12 +187,22 @@
 				to_chat(occupant, "<span class='warning'>[icon2html(src,occupant)] RECALCULATION FAILED!</span>")
 				targetturf = locate(target_x, target_y,2)
 			break
-	deadchat_broadcast(" has landed at [get_area(targetturf)]!", src, occupant)
-	explosion(targetturf,-1,-1,1,-1)
+
 	forceMove(targetturf)
+	pixel_y = 500
+	animate(src, pixel_y = initial(pixel_y), time = falltime, easing = LINEAR_EASING)
+	addtimer(CALLBACK(src, .proc/dodrop, targetturf, user), falltime)
+
+///Do the stuff when it "hits the ground"
+/obj/structure/droppod/proc/dodrop(turf/targetturf, mob/user)
+	deadchat_broadcast(" has landed at [get_area(targetturf)]!", src, occupant)
+	explosion(targetturf,-1,-1,2,-1)
 	playsound(targetturf, 'sound/effects/droppod_impact.ogg', 100)
 	QDEL_NULL(reserved_area)
-	sleep(7)//Dramatic effect
+	addtimer(CALLBACK(src, .proc/completedrop, user), 7) //dramatic effect
+
+///completes everything after a dramatic effect
+/obj/structure/droppod/proc/completedrop(mob/user)
 	icon_state = "singlepod_open"
 	drop_state = DROPPOD_LANDED
 	exitpod(user)

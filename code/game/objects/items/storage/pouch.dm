@@ -57,6 +57,7 @@
 	. = ..()
 	new /obj/item/binoculars/tactical(src)
 	new /obj/item/megaphone(src)
+	new /obj/item/pinpointer/pool(src)
 
 
 /obj/item/storage/pouch/general/som
@@ -115,11 +116,10 @@
 
 /obj/item/storage/pouch/firstaid
 	name = "first-aid pouch"
-	desc = "Standard marine first-aid pouch. It can contain autoinjectors, various bandages, and a life-saving biofoam injector."
+	desc = "Standard marine first-aid pouch. It can contain autoinjectors, ointments, and bandages."
 	icon_state = "firstaid"
-	storage_slots = 6
+	storage_slots = 5
 	can_hold = list(
-		/obj/item/reagent_containers/hypospray/autoinjector/biofoam/small,
 		/obj/item/stack/medical/ointment,
 		/obj/item/reagent_containers/hypospray/autoinjector,
 		/obj/item/stack/medical/bruise_pack,
@@ -132,12 +132,11 @@
 
 /obj/item/storage/pouch/firstaid/full/Initialize()
 	. = ..()
+	new /obj/item/stack/medical/ointment (src)
 	new /obj/item/reagent_containers/hypospray/autoinjector/tramadol (src)
 	new /obj/item/storage/pill_bottle/packet/tricordrazine (src)
 	new /obj/item/stack/medical/bruise_pack (src)
-	new /obj/item/stack/medical/ointment (src)
 	new /obj/item/stack/medical/splint (src)
-	new /obj/item/reagent_containers/hypospray/autoinjector/biofoam/small (src)
 
 
 /obj/item/storage/pouch/firstaid/injectors
@@ -156,7 +155,7 @@
 	new /obj/item/reagent_containers/hypospray/autoinjector/combat (src)
 	new /obj/item/reagent_containers/hypospray/autoinjector/oxycodone (src)
 	new /obj/item/reagent_containers/hypospray/autoinjector/synaptizine_expired (src)
-	new /obj/item/reagent_containers/hypospray/autoinjector/biofoam/small (src)
+
 
 /obj/item/storage/pouch/firstaid/som
 	name = "mining first aid pouch"
@@ -233,8 +232,8 @@
 	icon_state = "large_ammo_mag"
 	storage_slots = 3
 
-/obj/item/storage/pouch/magazine/large/m4rafull
-	fill_type = /obj/item/ammo_magazine/rifle/m4ra
+/obj/item/storage/pouch/magazine/large/tx8full
+	fill_type = /obj/item/ammo_magazine/rifle/tx8
 	fill_number = 3
 
 /obj/item/storage/pouch/magazine/large/t19full
@@ -447,6 +446,28 @@
 	max_storage_space = 10
 	can_hold = list(/obj/item/reagent_containers/syringe)
 
+/obj/item/storage/pouch/hypospray
+	name = "hypospray pouch"
+	desc = "It can contain hyposprays and autoinjectors."
+	icon_state = "syringe"
+	storage_slots = 3 //2 less than injectors yet more flexible options
+	can_hold = list(/obj/item/reagent_containers/hypospray)
+
+
+/obj/item/storage/pouch/hypospray/corps
+	name = "Corps hypospray pouch"
+	desc = "It can contain hyposprays and autoinjectors, this one has a Terragov corpsman logo on its back."
+	icon_state = "syringe"
+	storage_slots = 4 //1 extra for corps
+	can_hold = list(/obj/item/reagent_containers/hypospray)
+
+/obj/item/storage/pouch/hypospray/corps/full/Initialize()   //literally the same stuff as the other pouch but instead of 4 combat AUTO injectors get 1 hypo of the mix
+	. = ..()
+	new /obj/item/reagent_containers/hypospray/advanced/combat_advanced(src)
+	new /obj/item/reagent_containers/hypospray/autoinjector/synaptizine (src)
+	new /obj/item/reagent_containers/hypospray/autoinjector/quickclotplus(src)
+	new /obj/item/reagent_containers/hypospray/autoinjector/peridaxon_plus(src)
+
 // It really fits here more, but essentially a medkit in your pouch
 
 /obj/item/storage/pouch/medkit
@@ -472,12 +493,12 @@
 /obj/item/storage/pouch/medkit/full/Initialize()
 	. = ..()
 	new /obj/item/healthanalyzer(src)
-	new /obj/item/stack/medical/bruise_pack(src)
-	new /obj/item/stack/medical/ointment(src)
-	new /obj/item/reagent_containers/hypospray/autoinjector/tricordrazine(src)
-	new /obj/item/reagent_containers/hypospray/autoinjector/tramadol(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/splint(src)
-	new /obj/item/storage/syringe_case/regular(src)
+	new /obj/item/stack/medical/splint(src)
 
 /obj/item/storage/pouch/medkit/equippedcorpsman/Initialize()
 	. = ..()
@@ -600,7 +621,7 @@
 /obj/item/storage/pouch/construction
 	name = "construction pouch"
 	desc = "It's designed to hold construction materials - glass/metal sheets, metal rods, barbed wire, cable coil, and empty sandbags. It also has a hook for an entrenching tool."
-	storage_slots = 3
+	storage_slots = 4
 	max_w_class = 3
 	icon_state = "construction"
 	can_hold = list(
@@ -610,6 +631,7 @@
 		/obj/item/stack/cable_coil,
 		/obj/item/tool/shovel/etool,
 		/obj/item/stack/sandbags_empty,
+		/obj/item/stack/sandbags,
 	)
 
 /obj/item/storage/pouch/construction/full/Initialize()

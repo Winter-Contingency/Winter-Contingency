@@ -40,9 +40,9 @@
 
 
 /datum/action/xeno_action/proc/keybind_activation()
-	SIGNAL_HANDLER_DOES_SLEEP
+	SIGNAL_HANDLER
 	if(can_use_action())
-		action_activate()
+		INVOKE_ASYNC(src, .proc/action_activate)
 	return COMSIG_KB_ACTIVATED
 
 /datum/action/xeno_action/proc/on_xeno_upgrade()
@@ -94,7 +94,7 @@
 			to_chat(owner, "<span class='warning'>We can't do this here!</span>")
 		return FALSE
 
-	if(!(flags_to_check & XACT_USE_BUSY) && X.action_busy)
+	if(!(flags_to_check & XACT_USE_BUSY) && X.do_actions)
 		if(!silent)
 			to_chat(owner, "<span class='warning'>We're busy doing something right now!</span>")
 		return FALSE
@@ -136,9 +136,11 @@
 	return cooldown_timer
 
 
-/datum/action/xeno_action/proc/add_cooldown()
+/datum/action/xeno_action/proc/add_cooldown(cooldown_override = 0)
 	SIGNAL_HANDLER
 	var/cooldown_length = get_cooldown()
+	if(cooldown_override)
+		cooldown_length = cooldown_override
 	if(cooldown_id || !cooldown_length) // stop doubling up or waiting on zero
 		return
 	last_use = world.time
@@ -170,10 +172,16 @@
 
 
 /datum/action/xeno_action/activable
+	///Alternative keybind signal, that will always select the ability, even ignoring keybind flag
+	var/alternate_keybind_signal
 
 /datum/action/xeno_action/activable/New()
 	. = ..()
 
+/datum/action/xeno_action/activable/give_action(mob/living/L)
+	. = ..()
+	if(alternate_keybind_signal)
+		RegisterSignal(L, alternate_keybind_signal, .proc/select_action)
 
 /datum/action/xeno_action/activable/Destroy()
 	var/mob/living/carbon/xenomorph/X = owner
@@ -181,6 +189,18 @@
 		deselect()
 	return ..()
 
+///Wrapper proc to activate the action and not having sleep issues
+/datum/action/xeno_action/activable/proc/select_action()
+	SIGNAL_HANDLER
+	INVOKE_ASYNC(src, .proc/action_activate)
+
+/datum/action/xeno_action/activable/action_activate()
+	var/mob/living/carbon/xenomorph/X = owner
+	if(X.selected_ability == src)
+		return
+	if(X.selected_ability)
+		X.selected_ability.deselect()
+	select()
 
 /datum/action/xeno_action/activable/keybind_activation()
 	. = COMSIG_KB_ACTIVATED
@@ -207,10 +227,10 @@
 /datum/action/xeno_action/activable/action_activate()
 	var/mob/living/carbon/xenomorph/X = owner
 	if(X.selected_ability == src)
-		to_chat(X, "You will no longer use [ability_name] with [X.middle_mouse_toggle ? "middle-click" :"shift-click"].")
+		to_chat(X, "You will no longer use [ability_name] with [(X.client.prefs.toggles_gameplay & MIDDLESHIFTCLICKING) ? "middle-click" :"shift-click"].")
 		deselect()
 	else
-		to_chat(X, "You will now use [ability_name] with [X.middle_mouse_toggle ? "middle-click" :"shift-click"].")
+		to_chat(X, "You will now use [ability_name] with [(X.client.prefs.toggles_gameplay & MIDDLESHIFTCLICKING) ? "middle-click" :"shift-click"].")
 		if(X.selected_ability)
 			X.selected_ability.deselect()
 		select()
@@ -223,7 +243,7 @@
 	return ..()
 
 
-//the thing to do when the selected action ability is selected and triggered by middle_click
+///the thing to do when the selected action ability is selected and triggered by middle_click
 /datum/action/xeno_action/activable/proc/use_ability(atom/A)
 	return
 

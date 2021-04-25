@@ -1,6 +1,7 @@
 /*
 	Datum-based species. Should make for much cleaner and easier to maintain species code.
 */
+///TODO SPLIT THIS INTO MULTIPLE FILES
 
 /datum/species
 
@@ -12,7 +13,6 @@
 	var/prone_icon                                       // If set, draws this from icobase when mob is prone.
 	var/eyes = "eyes_s"                                  // Icon for eyes.
 
-	var/primitive                              // Lesser form, if any (ie. monkey for humans)
 	var/tail                                   // Name of tail image in species effects icon file.
 	var/datum/unarmed_attack/unarmed           // For empty hand harm-intent attack
 	var/datum/unarmed_attack/secondary_unarmed // For empty hand harm-intent attack if the first fails.
@@ -31,7 +31,6 @@
 	var/list/speech_chance
 	var/has_fine_manipulation = TRUE // Can use small items.
 	var/insulated                 // Immune to electrocution and glass shards to the feet.
-	var/show_paygrade = FALSE
 	var/count_human = FALSE // Does this count as a human?
 
 	// Some species-specific gibbing data.
@@ -67,6 +66,9 @@
 
 	var/brute_mod = null    // Physical damage reduction/malus.
 	var/burn_mod = null     // Burn damage reduction/malus.
+
+	///Whether this mob will tell when the user has logged out
+	var/is_sentient = TRUE
 
 	var/species_flags  = NONE       // Various specific features.
 
@@ -109,6 +111,7 @@
 
 	var/datum/namepool/namepool = /datum/namepool
 	var/special_death_message = "You have perished." // Special death message that gets overwritten if possible.
+	var/joinable_roundstart = FALSE
 
 /datum/species/New()
 	if(hud_type)
@@ -162,6 +165,12 @@
 	if(H.zone_selected == "head")
 		H.visible_message("<span class='notice'>[H] pats [target] on the head.</span>", \
 					"<span class='notice'>You pat [target] on the head.</span>", null, 4)
+	else if(H.zone_selected == "l_hand" && CONFIG_GET(flag/fun_allowed))
+		H.visible_message("<span class='notice'>[H] holds [target] 's left hand.</span>", \
+					"<span class='notice'>You hold [target]'s left hand.</span>", null, 4)
+	else if (H.zone_selected == "r_hand" && CONFIG_GET(flag/fun_allowed))
+		H.visible_message("<span class='notice'>[H] holds [target] 's right hand.</span>", \
+					"<span class='notice'>You hold [target]'s right hand.</span>", null, 4)
 	else
 		H.visible_message("<span class='notice'>[H] hugs [target] to make [target.p_them()] feel better!</span>", \
 					"<span class='notice'>You hug [target] to make [target.p_them()] feel better!</span>", null, 4)
@@ -208,6 +217,9 @@
 				. = "Jeri"
 		to_chat(prefs.parent, "<span class='warning'>You forgot to set your synthetic name in your preferences. Please do so next time.</span>")
 
+/datum/species/proc/on_species_gain(mob/living/carbon/human/H, /datum/species/old_species)
+	return
+
 //special things to change after we're no longer that species
 /datum/species/proc/post_species_loss(mob/living/carbon/human/H)
 	return
@@ -228,6 +240,11 @@
 	add_inherent_verbs(H)
 
 /datum/species/proc/handle_death(mob/living/carbon/human/H) //Handles any species-specific death events.
+
+//TODO KILL ME
+///Snowflake proc for monkeys so they can call attackpaw
+/datum/species/proc/spec_unarmedattack(mob/living/carbon/human/user, mob/living/carbon/human/target)
+	return FALSE
 
 //Only used by horrors at the moment. Only triggers if the mob is alive and not dead.
 /datum/species/proc/handle_unique_behavior(mob/living/carbon/human/H)
@@ -283,10 +300,8 @@
 /datum/species/human
 	name = "Human"
 	name_plural = "Humans"
-	primitive = /mob/living/carbon/monkey
 	unarmed_type = /datum/unarmed_attack/punch
 	species_flags = HAS_SKIN_TONE|HAS_LIPS|HAS_UNDERWEAR
-	show_paygrade = TRUE
 	count_human = TRUE
 
 	screams = list(MALE = "male_scream", FEMALE = "female_scream")
@@ -297,6 +312,7 @@
 	burstscreams = list(MALE = "male_preburst", FEMALE = "female_preburst")
 	warcries = list(MALE = "male_warcry", FEMALE = "female_warcry")
 	special_death_message = "<big>You have perished.</big><br><small>But it is not the end of you yet... if you still have your body or an unbursted corpse, wait until somebody can resurrect you...</small>"
+	joinable_roundstart = TRUE
 
 	//If you wanted to add a species-level ability:
 	/*abilities = list(/client/proc/test_ability)*/
@@ -304,6 +320,8 @@
 /datum/species/human/vatborn
 	name = "Vatborn"
 	name_plural = "Vatborns"
+	icobase = 'icons/mob/human_races/r_vatborn.dmi'
+	deform = 'icons/mob/human_races/r_vatborn.dmi'
 
 	namepool = /datum/namepool/vatborn
 
@@ -321,17 +339,20 @@
 	heat_level_1 = 390
 	heat_level_2 = 480
 	heat_level_3 = 1100
+	joinable_roundstart = FALSE
 
 /datum/species/human/vatgrown
 	name = "Vat-Grown Human"
 	name_plural = "Vat-Grown Humans"
-	species_flags = HAS_SKIN_TONE
+	icobase = 'icons/mob/human_races/r_vatgrown.dmi'
+	deform = 'icons/mob/human_races/r_vatgrown.dmi'
 	brute_mod = 1.05
 	burn_mod = 1.05
 	slowdown = 1.05
+	joinable_roundstart = FALSE
 
 /datum/species/human/vatgrown/random_name(gender)
-	. = "CS-[gender == FEMALE ? "F": "M"]-[rand(111,999)]"
+	return "CS-[gender == FEMALE ? "F": "M"]-[rand(111,999)]"
 
 /datum/species/human/vatgrown/handle_post_spawn(mob/living/carbon/human/H)
 	. = ..()
@@ -362,6 +383,93 @@
 /datum/species/human/vatgrown/early/proc/handle_age(mob/living/carbon/human/H)
 	H.set_species("Vat-Grown Human")
 
+
+//todo: wound overlays are strange for monkeys and should likely use icon adding instead
+//im not about to cram in that refactor with a carbon -> species refactor though
+/datum/species/monkey
+	name = "Monkey"
+	name_plural = "Monkeys"
+	icobase = 'icons/mob/human_races/r_monkey.dmi'
+	deform = 'icons/mob/human_races/r_monkey.dmi'
+	species_flags = HAS_NO_HAIR|NO_STAMINA|CAN_VENTCRAWL|DETACHABLE_HEAD
+	reagent_tag = IS_MONKEY
+	eyes = "blank_eyes"
+	tail = "monkeytail" //todo
+	speech_verb_override = "chimpers"
+	unarmed_type = /datum/unarmed_attack/bite/strong
+	secondary_unarmed_type = /datum/unarmed_attack/punch/strong
+	joinable_roundstart = FALSE
+	has_fine_manipulation = TRUE //monki gun
+	death_message = "lets out a faint chimper as it collapses and stops moving..."
+	dusted_anim = "dust-m"
+	gibbed_anim = "gibbed-m"
+	is_sentient = FALSE
+
+/datum/species/monkey/handle_unique_behavior(mob/living/carbon/human/H)
+	if(!H.client && H.stat == CONSCIOUS)
+		if(prob(33) && H.canmove && !H.buckled && isturf(H.loc) && !H.pulledby) //won't move if being pulled
+			step(H, pick(GLOB.cardinals))
+
+		if(prob(1))
+			H.emote(pick("scratch","jump","roll","tail"))
+
+/datum/species/monkey/on_species_gain(mob/living/carbon/human/H, datum/species/old_species)
+	. = ..()
+	H.flags_pass |= PASSTABLE
+
+/datum/species/monkey/spec_unarmedattack(mob/living/carbon/human/user, atom/target)
+	if(!iscarbon(target))
+		target.attack_paw(user)
+		return TRUE
+	var/mob/living/carbon/victim = target
+	if(prob(25))
+		victim.visible_message("<span class='danger'>[user]'s bite misses [victim]!</span>",
+			"<span class='danger'>You avoid [user]'s bite!</span>", "<span class='hear'>You hear jaws snapping shut!</span>")
+		to_chat(user, "<span class='danger'>Your bite misses [victim]!</span>")
+		return TRUE
+	victim.take_overall_damage(rand(10, 20), updating_health = TRUE)
+	victim.visible_message("<span class='danger'>[name] bites [victim]!</span>",
+		"<span class='userdanger'>[name] bites you!</span>", "<span class='hear'>You hear a chomp!</span>")
+	to_chat(user, "<span class='danger'>You bite [victim]!</span>")
+	target.attack_paw(user)
+	return TRUE
+
+/datum/species/monkey/random_name(gender,unique,lastname)
+	return "[lowertext(name)] ([rand(1,999)])"
+
+/datum/species/monkey/tajara
+	name = "Farwa"
+	icobase = 'icons/mob/human_races/r_farwa.dmi'
+	deform = 'icons/mob/human_races/r_farwa.dmi'
+	speech_verb_override = "mews"
+	tail = null
+
+/datum/species/monkey/skrell
+	name = "Naera"
+	icobase = 'icons/mob/human_races/r_naera.dmi'
+	deform = 'icons/mob/human_races/r_naera.dmi'
+	speech_verb_override = "squiks"
+	tail = null
+
+/datum/species/monkey/unathi
+	name = "Stok"
+	icobase = 'icons/mob/human_races/r_stok.dmi'
+	deform = 'icons/mob/human_races/r_stok.dmi'
+	speech_verb_override = "hisses"
+	tail = null
+
+/datum/species/monkey/yiren
+	name = "Yiren"
+	icobase = 'icons/mob/human_races/r_yiren.dmi'
+	deform = 'icons/mob/human_races/r_yiren.dmi'
+	speech_verb_override = "grumbles"
+	tail = null
+	cold_level_1 = ICE_COLONY_TEMPERATURE - 20
+	cold_level_2 = ICE_COLONY_TEMPERATURE - 40
+	cold_level_3 = ICE_COLONY_TEMPERATURE - 80
+
+
+
 //Various horrors that spawn in and haunt the living.
 /datum/species/human/spook
 	name = "Horror"
@@ -388,6 +496,7 @@
 	cold_level_1 = 100
 	cold_level_2 = 50
 	cold_level_3 = 20
+	joinable_roundstart = FALSE
 
 //To show them we mean business.
 /datum/species/human/spook/handle_unique_behavior(mob/living/carbon/human/H)
@@ -409,7 +518,6 @@
 	tail = "sogtail"
 	unarmed_type = /datum/unarmed_attack/claws
 	secondary_unarmed_type = /datum/unarmed_attack/bite/strong
-	primitive = /mob/living/carbon/monkey/unathi
 	taste_sensitivity = TASTE_SENSITIVE
 	gluttonous = 1
 
@@ -445,8 +553,6 @@
 	heat_level_2 = 380 //Default 400
 	heat_level_3 = 800 //Default 1000
 
-	primitive = /mob/living/carbon/monkey/tajara
-
 	species_flags = HAS_LIPS|HAS_UNDERWEAR|HAS_SKIN_COLOR
 
 	flesh_color = "#AFA59E"
@@ -458,7 +564,6 @@
 	icobase = 'icons/mob/human_races/r_skrell.dmi'
 	deform = 'icons/mob/human_races/r_def_skrell.dmi'
 	default_language_holder = /datum/language_holder/skrell
-	primitive = /mob/living/carbon/monkey/skrell
 	unarmed_type = /datum/unarmed_attack/punch
 
 	species_flags = HAS_LIPS|HAS_UNDERWEAR|HAS_SKIN_COLOR
@@ -475,7 +580,6 @@
 	default_language_holder = /datum/language_holder/moth
 	eyes = "blank_eyes"
 	speech_verb_override = "flutters"
-	show_paygrade = TRUE
 	count_human = TRUE
 
 	species_flags = HAS_LIPS|HAS_NO_HAIR
@@ -535,7 +639,6 @@
 	default_language_holder = /datum/language_holder/sectoid
 	eyes = "blank_eyes"
 	speech_verb_override = "transmits"
-	show_paygrade = TRUE
 	count_human = TRUE
 
 	species_flags = HAS_NO_HAIR|NO_BREATHE|NO_POISON|NO_PAIN|USES_ALIEN_WEAPONS|NO_DAMAGE_OVERLAY
@@ -676,7 +779,6 @@
 	deform = 'icons/mob/human_races/r_skeleton.dmi'
 	unarmed_type = /datum/unarmed_attack/punch
 	speech_verb_override = "rattles"
-	show_paygrade = TRUE
 	count_human = TRUE
 
 	species_flags = NO_BREATHE|NO_SCAN|NO_BLOOD|NO_POISON|NO_CHEM_METABOLIZATION|DETACHABLE_HEAD // Where we're going, we don't NEED underwear.
@@ -752,11 +854,9 @@
 	default_language_holder = /datum/language_holder/synthetic
 	unarmed_type = /datum/unarmed_attack/punch
 	rarity_value = 1.5
-	slowdown = 1.3 //Slower than later synths
-	total_health = 200 //But more durable
-	insulated = 1
-	brute_mod = 0.60 //previous comment
-	burn_mod = 0.90 //previous comment
+	total_health = 125
+	brute_mod = 0.70
+	burn_mod = 0.70
 
 	cold_level_1 = -1
 	cold_level_2 = -1
@@ -799,7 +899,7 @@
 	return ..()
 
 
-/mob/living/carbon/human/proc/reset_jitteriness()
+/mob/living/carbon/human/proc/reset_jitteriness() //todo kill this
 	jitteriness = 0
 
 
@@ -808,16 +908,15 @@
 /datum/species/proc/can_shred(mob/living/carbon/human/H)
 
 	if(H.a_intent != INTENT_HARM)
-		return 0
+		return FALSE
 
 	if(unarmed.is_usable(H))
 		if(unarmed.shredding)
-			return 1
+			return TRUE
 	else if(secondary_unarmed.is_usable(H))
 		if(secondary_unarmed.shredding)
-			return 1
-
-	return 0
+			return TRUE
+	return FALSE
 
 //Species unarmed attacks
 /datum/unarmed_attack
@@ -831,18 +930,17 @@
 
 /datum/unarmed_attack/proc/is_usable(mob/living/carbon/human/user)
 	if(user.restrained())
-		return 0
+		return FALSE
 
 	// Check if they have a functioning hand.
 	var/datum/limb/E = user.get_limb("l_hand")
 	if(E && !(E.limb_status & LIMB_DESTROYED))
-		return 1
+		return TRUE
 
 	E = user.get_limb("r_hand")
 	if(E && !(E.limb_status & LIMB_DESTROYED))
-		return 1
-
-	return 0
+		return TRUE
+	return FALSE
 
 /datum/unarmed_attack/bite
 	attack_verb = list("bite") // 'x has biteed y', needs work.
@@ -854,8 +952,8 @@
 
 /datum/unarmed_attack/bite/is_usable(mob/living/carbon/human/user)
 	if (user.wear_mask && istype(user.wear_mask, /obj/item/clothing/mask/muzzle))
-		return 0
-	return 1
+		return FALSE
+	return TRUE
 
 /datum/unarmed_attack/punch
 	attack_verb = list("punch")
@@ -960,7 +1058,7 @@
 		return 0
 
 	if(victim.protection_aura)
-		damage = round(damage * ((15 - victim.protection_aura) / 15))
+		damage = round(damage * ((10 - victim.protection_aura) / 10))
 
 	var/datum/limb/organ = null
 	if(isorgan(def_zone))
@@ -1012,87 +1110,3 @@
 	if(updating_health)
 		victim.updatehealth()
 	return damage
-
-
-
-
-
-//halo//
-
-/datum/species/covenant
-//	default_language_holder = /datum/language_holder/vox No covenant languages coded yet
-
-
-
-/datum/species/covenant/sangheili
-	name = "Sangheili"
-	name_plural = "Sangheili"
-	icobase = 'icons/halo/mob/r_sangheili.dmi'
-	deform = 'icons/halo/mob/r_sangheili.dmi'
-	unarmed_type = /datum/unarmed_attack/punch/strong //stronger punches
-	count_human = TRUE
-	speech_sounds = list('sound/halo/worting.ogg')
-	speech_chance = 20
-
-	eyes = "blank_eyes"
-	blood_color = "#5D1A66"
-	flesh_color = "#403D40"
-	icon_template = 'icons/halo/mob/r_sangheili.dmi'
-
-
-	screams = list(MALE = "sangheiliscream", FEMALE = "sangheiliscream")
-	paincries = list(MALE = "sangheiliscream", FEMALE = "sangheiliscream")
-	goredcries = list(MALE = "sangheiliscream", FEMALE = "sangheiliscream")
-	gasps = list(MALE = "male_gasp", FEMALE = "female_gasp")
-	coughs = list(MALE = "male_cough", FEMALE = "female_cough")
-	burstscreams = list(MALE = "sangheiliscream", FEMALE = "sangheiliscream")
-
-
-
-/datum/species/covenant/unggoy
-	name = "Unggoy"
-	name_plural = "Unggoy"
-	icobase = 'icons/halo/mob/r_unggoy.dmi'
-	deform = 'icons/halo/mob/r_unggoy.dmi'
-	unarmed_type = /datum/unarmed_attack/punch
-	count_human = TRUE
-
-	eyes = "blank_eyes"
-	blood_color = "#40f5ef"
-	flesh_color = "#4A3859"
-	icon_template = 'icons/halo/mob/r_unggoy.dmi'
-
-
-	screams = list(MALE = "unggoyscream", FEMALE = "unggoyscream")
-	paincries = list(MALE = "unggoyscream", FEMALE = "unggoyscream")
-	goredcries = list(MALE = "unggoyscream", FEMALE = "unggoyscream")
-	gasps = list(MALE = "male_gasp", FEMALE = "male_gasp")
-	coughs = list(MALE = "male_cough", FEMALE = "male_cough")
-	burstscreams = list(MALE = "unggoyscream", FEMALE = "unggoyscream")
-
-
-
-/datum/species/covenant/kigyar
-	name = "Kig Yar"
-	name_plural = "Kig Yar"
-	icobase = 'icons/halo/mob/r_kig-yar.dmi'
-	deform = 'icons/halo/mob/r_kig-yar.dmi'
-	unarmed_type = /datum/unarmed_attack/punch
-	count_human = TRUE
-
-	eyes = "blank_eyes"
-	blood_color = "#82B9D9"
-	flesh_color = "#4A3859"
-	icon_template = 'icons/halo/mob/r_kig-yar.dmi'
-
-
-	screams = list(MALE = "kigscream", FEMALE = "kigscream")
-	paincries = list(MALE = "kigscream", FEMALE = "kigscream")
-	goredcries = list(MALE = "kigscream", FEMALE = "kigscream")
-	gasps = list(MALE = "male_gasp", FEMALE = "male_gasp")
-	coughs = list(MALE = "male_cough", FEMALE = "male_cough")
-	burstscreams = list(MALE = "kigscream", FEMALE = "kigscream")
-
-
-
-

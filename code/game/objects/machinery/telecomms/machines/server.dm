@@ -118,26 +118,16 @@
 	autolinkers = list("engineering")
 
 
-/obj/machinery/telecomms/server/presets/security
-	id = "Police Server"
-	freq_listening = list(FREQ_POLICE)
-	autolinkers = list("police")
+/obj/machinery/telecomms/server/presets/cas
+	id = "Fire Support Server"
+	freq_listening = list(FREQ_CAS)
+	autolinkers = list("firesupport")
 
 
 /obj/machinery/telecomms/server/presets/common
 	id = "Common Server"
 	freq_listening = list(FREQ_PMC, FREQ_COLONIST, FREQ_USL, FREQ_DEATHSQUAD, FREQ_IMPERIAL, FREQ_SOM, FREQ_SECTOID, FREQ_ECHO)
 	autolinkers = list("common", "ert")
-
-/obj/machinery/telecomms/server/presets/unsc
-	id = "UNSC Server"
-	freq_listening = list(FREQ_UNSCCOMM)
-	autolinkers = list("unsc")
-
-/obj/machinery/telecomms/server/presets/innie
-	id = "Insurrectionist Server"
-	freq_listening = list(FREQ_INNIECOMM)
-	autolinkers = list("innie")
 
 
 //Common and other radio frequencies for people to freely use

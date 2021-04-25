@@ -102,7 +102,10 @@ SUBSYSTEM_DEF(job)
 		JobDebug("Successfuly assigned marine role to a squad. Player: [player.key], Job: [job.title], Squad: [player.assigned_squad]")
 	if(!latejoin)
 		unassigned -= player
-	job.occupy_job_positions(1)
+	if(job.job_category != JOB_CAT_XENO && !GLOB.joined_player_list.Find(player.ckey))
+		SSpoints.add_psy_points(XENO_HIVE_NORMAL, SILO_PRICE / 15)
+		SSpoints.supply_points += SUPPLY_POINT_MARINE_SPAWN
+	job.occupy_job_positions(1, GLOB.joined_player_list.Find(player.ckey))
 	player.assigned_role = job
 	JobDebug("Player: [player] is now Job: [job.title], JCP:[job.current_positions], JPL:[job.total_positions]")
 	return TRUE
@@ -126,7 +129,6 @@ SUBSYSTEM_DEF(job)
 		player.assigned_squad = null
 	SetupOccupations()
 	unassigned.Cut()
-	return
 
 
 /** Proc DivideOccupations
@@ -334,19 +336,7 @@ SUBSYSTEM_DEF(job)
 		return
 	if(length(GLOB.latejoin))
 		SendToAtom(M, pick(GLOB.latejoin))
-		message_admins(assigned_role.faction)
 		return
-	if(assigned_role && length(GLOB.latejoin_unsc))
-		if(assigned_role.job_category == JOB_CAT_UNSC)
-			message_admins(assigned_role.faction)
-			SendToAtom(M, pick(GLOB.latejoin_unsc))
-			return
-	if(assigned_role && length(GLOB.latejoin_innie))
-		if(assigned_role.job_category == JOB_CAT_INSURRECTION)
-			message_admins(assigned_role.faction)
-			SendToAtom(M, pick(GLOB.latejoin_innie))
-			return
-
 	message_admins("Unable to send mob [M] to late join!")
 	CRASH("Unable to send mob [M] to late join!")
 

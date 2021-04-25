@@ -7,7 +7,7 @@
 	var/cap_color = "cargo"
 	var/flipped = 0
 	siemens_coefficient = 0.9
-	flags_armor_protection = 0
+	flags_armor_protection = NONE
 
 /obj/item/clothing/head/soft/dropped()
 	icon_state = "[cap_color]soft"
@@ -96,15 +96,6 @@
 
 
 
-//gcpd
-
-/obj/item/clothing/head/soft/gcpd
-	name = "Colonial Police cap"
-	desc = "A nice looking hat with the CPD logo on it."
-	icon_state = "gcpdsoft"
-	cap_color = "gcpd"
-
-
 //marine cap
 
 /obj/item/clothing/head/soft/marine
@@ -139,4 +130,3 @@
 	name = "marine police sergeant cap"
 	icon_state = "greensoft"
 	cap_color = "green"
-

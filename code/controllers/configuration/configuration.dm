@@ -21,8 +21,6 @@
 
 	var/static/regex/ic_filter_regex
 
-	var/liberation_gamemode_delay = 3 MINUTES //default
-
 /datum/controller/configuration/proc/admin_reload()
 	if(IsAdminAdvancedProcCall())
 		return
@@ -54,7 +52,6 @@
 	LoadMOTD()
 	LoadPolicy()
 	LoadChatFilter()
-	loadGamemodesPreferences()
 
 	if(Master)
 		Master.OnConfigLoad()
@@ -348,7 +345,7 @@ Example config:
 		var/ct = initial(M.config_tag)
 		if(ct && ct == mode_name)
 			return new T
-	return new /datum/game_mode/liberation()
+	return new /datum/game_mode/extended()
 
 
 /datum/controller/configuration/proc/LoadChatFilter()
@@ -368,46 +365,7 @@ Example config:
 
 	ic_filter_regex = in_character_filter.len ? regex("\\b([jointext(in_character_filter, "|")])\\b", "i") : null
 
-	syncChatRegexes()
 
 //Message admins when you can.
 /datum/controller/configuration/proc/DelayedMessageAdmins(text)
 	addtimer(CALLBACK(GLOBAL_PROC, /proc/message_admins, text), 1, TIMER_UNIQUE)
-
-
-/datum/controller/configuration/proc/loadGamemodesPreferences() //the type can also be game_options, in which case it uses a different switch. not making it separate to not copypaste code - Urist
-	var/filename = "[directory]/gamemode_preferences.txt"
-
-	if(!fexists(filename))
-		return
-
-	var/list/Lines = file2list(filename)
-
-	for(var/t in Lines)
-		if(!t)	continue
-
-		t = trim(t)
-		if(length(t) == 0)
-			continue
-		else if(copytext(t, 1, 2) == "#")
-			continue
-
-		var/pos = findtext(t, " ")
-		var/name
-		var/value
-
-		if(pos)
-			name = lowertext(copytext(t, 1, pos))
-			value = copytext(t, pos + 1)
-		else
-			name = lowertext(t)
-
-		if(!name)
-			continue
-
-		switch(name)
-
-			if("liberation_gamemode_delay")
-				config.liberation_gamemode_delay = text2num(value) MINUTES
-				to_chat(world, "el delay del modo de juego es: [config.liberation_gamemode_delay]")
-				to_chat(world, "log enviado de la config")

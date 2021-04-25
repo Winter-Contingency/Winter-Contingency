@@ -4,17 +4,16 @@
 	icon_state = "muzzle"
 	item_state = "muzzle"
 	flags_inventory = COVERMOUTH
-	flags_armor_protection = 0
+	flags_armor_protection = NONE
 	w_class = WEIGHT_CLASS_SMALL
 	gas_transfer_coefficient = 0.90
 
 //Monkeys can not take the muzzle off of themself! Call PETA!
-/obj/item/clothing/mask/muzzle/attack_paw(mob/living/carbon/monkey/user)
+/obj/item/clothing/mask/muzzle/attack_paw(mob/living/carbon/human/user)
 	if (src == user.wear_mask)
 		return
-	else
-		..()
-	return
+	return ..()
+
 
 
 /obj/item/clothing/mask/surgical
@@ -24,7 +23,7 @@
 	item_state = "sterile"
 	w_class = WEIGHT_CLASS_SMALL
 	flags_inventory = COVERMOUTH
-	flags_armor_protection = 0
+	flags_armor_protection = NONE
 	gas_transfer_coefficient = 0.90
 	permeability_coefficient = 0.01
 	soft_armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 25, "rad" = 0, "fire" = 0, "acid" = 0)
@@ -34,14 +33,14 @@
 	desc = "Warning: moustache is fake."
 	icon_state = "fake-moustache"
 	flags_inv_hide = HIDEFACE
-	flags_armor_protection = 0
+	flags_armor_protection = NONE
 
 /obj/item/clothing/mask/snorkel
 	name = "Snorkel"
 	desc = "For the Swimming Savant."
 	icon_state = "snorkel"
 	flags_inv_hide = HIDEFACE
-	flags_armor_protection = 0
+	flags_armor_protection = NONE
 
 //scarves (fit in in mask slot)
 
@@ -146,12 +145,3 @@
 	desc = "Worn by robust fighters who are willing to do anything to win."
 	icon_state = "luchar"
 	item_state = "luchar"
-
-//gcpd
-
-/obj/item/clothing/mask/balaclava/gcpd
-	name = "Colonial Police balaclava"
-	desc = "Designed to both hide identities and keep your face comfy and warm."
-	icon_state = "gcpd_mask"
-	item_state = "gcpd_mask"
-	w_class = WEIGHT_CLASS_SMALL

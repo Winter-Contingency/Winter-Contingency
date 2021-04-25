@@ -6,7 +6,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	var/name 		= "generic bullet"
 	var/icon 		= 'icons/obj/items/projectiles.dmi'
 	var/icon_state 	= "bullet"
-	var/hud_state	= "unknown"  //Bullet type on the Ammo HUD
+	var/hud_state   = "unknown"  //Bullet type on the Ammo HUD
 	var/hud_state_empty = "unknown"
 	var/ping 		= "ping_b" //The icon that is displayed when the bullet bounces off something.
 	var/sound_hit //When it deals damage.
@@ -27,7 +27,6 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	var/damage_type 				= BRUTE 	// BRUTE, BURN, TOX, OXY, CLONE are the only things that should be in here
 	var/penetration					= 0 		// How much armor it ignores before calculations take place
 	var/shrapnel_chance 			= 0 		// The % chance it will imbed in a human
-	var/shrapnel_type = /obj/item/shard/shrapnel
 	var/shell_speed 				= 2 		// How fast the projectile moves
 	var/bonus_projectiles_type 					// Type path of the extra projectiles
 	var/bonus_projectiles_amount 	= 0 		// How many extra projectiles it shoots out. Works kind of like firing on burst, but all of the projectiles travel together
@@ -38,7 +37,6 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	var/flags_ammo_behavior = NONE
 	///Determines what color our bullet will be when it flies
 	var/bullet_color = COLOR_WHITE
-
 
 
 /datum/ammo/proc/do_at_max_range(obj/projectile/proj)
@@ -76,7 +74,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 				to_chat(target, "<span class='highdanger'>The blast knocks you off your feet!</span>")
 		step_away(victim, proj)
 
-/datum/ammo/proc/staggerstun(mob/victim, obj/projectile/proj, max_range = 5, stun = 0, weaken = 0, stagger = 0, slowdown = 0, knockback = 0, shake = TRUE, soft_size_threshold = 3, hard_size_threshold = 2)
+/datum/ammo/proc/staggerstun(mob/victim, obj/projectile/proj, max_range = 5, stun = 0, weaken = 0, stagger = 0, slowdown = 0, knockback = 0, shake = 1, soft_size_threshold = 3, hard_size_threshold = 2)
 	if(!victim || victim == proj.firer)
 		CRASH("staggerstun called [victim ? "without a mob target" : "while the mob target was the firer"]")
 	if(!isliving(victim))
@@ -150,9 +148,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 		victim.visible_message("<span class='danger'>[victim] is hit by backlash from \a [proj.name]!</span>",
 			"[isxeno(victim)?"<span class='xenodanger'>We":"<span class='highdanger'>You"] are hit by backlash from \a </b>[proj.name]</b>!</span>")
 		var/armor_block = victim.run_armor_check(null, proj.ammo.armor_type)
-		victim.apply_damage(proj.damage * 0.1, proj.ammo.damage_type, null, armor_block)
-		UPDATEHEALTH(victim)
-
+		victim.apply_damage(proj.damage * 0.1, proj.ammo.damage_type, null, armor_block, updating_health = TRUE)
 
 /datum/ammo/proc/fire_bonus_projectiles(obj/projectile/main_proj, atom/shooter, atom/source, range, speed, angle)
 	for(var/i = 1 to bonus_projectiles_amount) //Want to run this for the number of bonus projectiles.
@@ -160,7 +156,8 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 		if(bonus_projectiles_type)
 			new_proj.generate_bullet(GLOB.ammo_list[bonus_projectiles_type])
 			var/obj/item/weapon/gun/g = source
-			new_proj.damage *= g.damage_mult //Bonus or reduced damage based on damage modifiers on the gun.
+			if(source) //Check for the source so we don't runtime if we have bonus projectiles from a non-gun source like a Spitter
+				new_proj.damage *= g.damage_mult //Bonus or reduced damage based on damage modifiers on the gun.
 		else //If no bonus type is defined then the extra projectiles are the same as the main one.
 			new_proj.generate_bullet(src)
 		new_proj.accuracy = round(new_proj.accuracy * main_proj.accuracy/initial(main_proj.accuracy)) //if the gun changes the accuracy of the main projectile, it also affects the bonus ones.
@@ -236,10 +233,11 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 /datum/ammo/bullet/pistol/tiny/ap
 	name = "light pistol bullet"
 	hud_state = "pistol_lightap"
-	damage = 15
+	damage = 22.5
 	penetration = 15 //So it can actually hurt something.
 	accurate_range = 5
 	sundering = 0.5
+	damage_falloff = 1.5
 
 
 /datum/ammo/bullet/pistol/tranq
@@ -306,10 +304,10 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	damage = 15
 
 
-/datum/ammo/bullet/pistol/mankey/on_hit_mob(mob/M,obj/projectile/P)
-	if(P && P.loc && !M.stat && !istype(M,/mob/living/carbon/monkey))
+/datum/ammo/bullet/pistol/mankey/on_hit_mob(mob/M, obj/projectile/P)
+	if(!M.stat && !ismonkey(M))
 		P.visible_message("<span class='danger'>The [src] chimpers furiously!</span>")
-		new /mob/living/carbon/monkey(P.loc)
+		new /mob/living/carbon/human/species/monkey(P.loc)
 
 /*
 //================================================
@@ -327,7 +325,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	sundering = 3
 
 /datum/ammo/bullet/revolver/on_hit_mob(mob/M,obj/projectile/P)
-	staggerstun(M, P, stagger = 1, slowdown = 0.5, knockback = 1)
+	staggerstun(M, P, stagger = 1, slowdown = 0.5, knockback = 1, shake = 0.5)
 
 /datum/ammo/bullet/revolver/small
 	name = "small revolver bullet"
@@ -458,6 +456,13 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	penetration = 30
 	sundering = 3
 
+/datum/ammo/bullet/rifle/hv
+	name = "high-velocity rifle bullet"
+	hud_state = "hivelo"
+	damage = 20
+	penetration = 10
+	sundering = 1
+
 /datum/ammo/bullet/rifle/incendiary
 	name = "incendiary rifle bullet"
 	hud_state = "rifle_fire"
@@ -472,7 +477,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	damage = 20
 	penetration = 10
 
-/datum/ammo/bullet/rifle/m4ra
+/datum/ammo/bullet/rifle/tx8
 	name = "A19 high velocity bullet"
 	hud_state = "hivelo"
 	hud_state_empty = "hivelo_empty"
@@ -484,8 +489,8 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	penetration = 20
 	sundering = 10
 
-/datum/ammo/bullet/rifle/m4ra/incendiary
-	name = "A19 high velocity incendiary bullet"
+/datum/ammo/bullet/rifle/tx8/incendiary
+	name = "high velocity incendiary bullet"
 	hud_state = "hivelo_fire"
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_INCENDIARY|AMMO_SUNDERING
 	damage = 25
@@ -493,24 +498,16 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	penetration = 20
 	sundering = 2.5
 
-/datum/ammo/bullet/rifle/m4ra/impact
-	name = "A19 high velocity impact bullet"
+/datum/ammo/bullet/rifle/tx8/impact
+	name = "high velocity impact bullet"
 	hud_state = "hivelo_impact"
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_SUNDERING
 	damage = 25
 	penetration = 45
 	sundering = 5
 
-/datum/ammo/bullet/rifle/m4ra/impact/on_hit_mob(mob/M, obj/projectile/P)
+/datum/ammo/bullet/rifle/tx8/impact/on_hit_mob(mob/M, obj/projectile/P)
 	staggerstun(M, P, max_range = 40, stagger = 2, slowdown = 3.5, knockback = 1)
-
-/datum/ammo/bullet/rifle/m4ra/smart
-	name = "A19 high velocity smart bullet"
-	hud_state = "hivelo_iff"
-	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_SUNDERING
-	damage = 30
-	penetration = 20
-	sundering = 3
 
 /datum/ammo/bullet/rifle/ak47
 	name = "heavy rifle bullet"
@@ -528,6 +525,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_SUNDERING
 	accurate_range_min = 0
 	accurate_range = 30
+	max_range = 40
 	damage = 65
 	scatter = -15
 	penetration = 15
@@ -540,21 +538,6 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_INCENDIARY
 	damage = 35
 	sundering = 0 // incen doens't have sundering
-
-
-/datum/ammo/bullet/needles
-	name = "blamite needle"
-	icon_state = "needler"
-	hud_state = "needle"
-	flags_ammo_behavior = AMMO_BALLISTIC
-	damage = 20
-	damage_type = BRUTE
-	shrapnel_type = /obj/item/shard/shrapnel/blamite
-	shrapnel_chance = 100
-	var/blamite_limit = 6
-	var/explosion_range = 2
-
-/datum/ammo/bullet/needles/rifle
 
 
 /*
@@ -578,6 +561,8 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	penetration = 40
 	sundering = 7
 
+/datum/ammo/bullet/shotgun/slug/on_hit_mob(mob/M,obj/projectile/P)
+	staggerstun(M, P, weaken = 1, stagger = 2, knockback = 1, slowdown = 2)
 
 
 /datum/ammo/bullet/shotgun/beanbag
@@ -665,6 +650,10 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	damage_falloff = 4
 	penetration = 0
 
+
+/datum/ammo/bullet/shotgun/buckshot/on_hit_mob(mob/M,obj/projectile/P)
+	staggerstun(M, P, weaken = 1, stagger = 1, knockback = 2, slowdown = 0.5, max_range = 3)
+
 /datum/ammo/bullet/shotgun/spread
 	name = "additional buckshot"
 	icon_state = "buckshot"
@@ -673,7 +662,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	accuracy_var_high = 9
 	accurate_range = 3
 	max_range = 10
-	damage = 30
+	damage = 40
 	damage_falloff = 4
 	penetration = 0
 
@@ -823,6 +812,19 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 /datum/ammo/bullet/shotgun/mbx900_tracker/on_hit_mob(mob/living/victim, obj/projectile/proj)
 	victim.AddComponent(/datum/component/dripping, DRIP_ON_TIME, 40 SECONDS, 2 SECONDS)
 
+/datum/ammo/bullet/shotgun/tracker
+	name = "shotgun tracker shell"
+	icon_state = "shotgun_slug"
+	hud_state = "shotgun_flechette"
+	shell_speed = 4
+	max_range = 30
+	damage = 5
+	penetration = 100
+
+/datum/ammo/bullet/shotgun/tracker/on_hit_mob(mob/living/victim, obj/projectile/proj)
+	victim.AddComponent(/datum/component/dripping, DRIP_ON_TIME, 40 SECONDS, 2 SECONDS)
+
+
 /*
 //================================================
 					Sniper Ammo
@@ -878,8 +880,8 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	hud_state = "sniper_supersonic"
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_SUNDERING
 	accuracy = 40
-	damage = 150
-	sundering = 75
+	damage = 100
+	sundering = 50
 
 /datum/ammo/bullet/sniper/pfc
 	name = "high caliber rifle bullet"
@@ -952,7 +954,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 /datum/ammo/bullet/turret
 	name = "autocannon bullet"
 	icon_state 	= "redbullet" //Red bullets to indicate friendly fire restriction
-	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_SUNDERING
+	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_SUNDERING|AMMO_SENTRY
 	accurate_range = 10
 	accuracy_var_low = 3
 	accuracy_var_high = 3
@@ -1001,6 +1003,21 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	penetration = 15
 	shrapnel_chance = 25
 	sundering = 2.5
+
+/datum/ammo/bullet/railgun
+	name = "railgun round"
+	hud_state = "alloy_spike"
+	icon_state 	= "blue_bullet"
+	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_SUNDERING
+	shell_speed = 4
+	max_range = 12
+	damage = 100
+	penetration = 70
+	sundering = 70
+	bullet_color = COLOR_PULSE_BLUE
+
+/datum/ammo/bullet/railgun/on_hit_mob(mob/M,obj/projectile/P)
+	staggerstun(M, P, weaken = 1, stagger = 3, slowdown = 2, knockback = 4)
 
 /*
 //================================================
@@ -1155,6 +1172,12 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 /datum/ammo/rocket/recoilless/light/drop_nade(turf/T)
 	explosion(T, 0, 1, 8, 5)
 
+/datum/ammo/rocket/oneuse
+	name = "explosive rocket"
+	damage = 100
+	penetration = 100
+	sundering = 100
+
 /*
 //================================================
 					Energy Ammo
@@ -1163,7 +1186,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 
 /datum/ammo/energy
 	ping = "ping_s"
-	sound_hit		= "energy_hit"
+	sound_hit 	 	= "energy_hit"
 	sound_miss		= "energy_miss"
 	sound_bounce	= "energy_bounce"
 
@@ -1171,8 +1194,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	flags_ammo_behavior = AMMO_ENERGY
 	armor_type = "energy"
 	accuracy = 20
-	bullet_color = COLOR_VIVID_RED
-	shrapnel_type = null
+	bullet_color = COLOR_LASER_RED
 
 /datum/ammo/energy/emitter //Damage is determined in emitter.dm
 	name = "emitter bolt"
@@ -1180,19 +1202,22 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	flags_ammo_behavior = AMMO_ENERGY|AMMO_IGNORE_ARMOR
 	accurate_range = 10
 	max_range = 10
+	bullet_color = COLOR_VIBRANT_LIME
 
 /datum/ammo/energy/taser
 	name = "taser bolt"
 	icon_state = "stun"
 	hud_state = "taser"
 	hud_state_empty = "battery_empty"
-	damage = 120
-	penetration = 0
+	damage = 10
+	penetration = 100
 	damage_type = STAMINA
-	flags_ammo_behavior = AMMO_ENERGY
+	flags_ammo_behavior = AMMO_ENERGY|AMMO_SKIPS_ALIENS
 	max_range = 15
 	accurate_range = 10
 	bullet_color = COLOR_VIVID_YELLOW
+/datum/ammo/energy/taser/on_hit_mob(mob/M,obj/projectile/P)
+	staggerstun(M, P, stun = 10)
 
 /datum/ammo/energy/tesla
 	name = "energy ball"
@@ -1200,8 +1225,21 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	hud_state = "taser"
 	hud_state_empty = "battery_empty"
 	flags_ammo_behavior = AMMO_ENERGY|AMMO_CHAINING
+	shell_speed = 0.1
 	damage = 20
 	penetration = 20
+	bullet_color = COLOR_TESLA_BLUE
+
+
+/datum/ammo/energy/droidblast
+	name = "energetic plasma bolt"
+	icon_state = "pulse2"
+	hud_state = "pulse"
+	damage = 45
+	max_range = 40
+	penetration = 50
+	sundering = 20
+	bullet_color = COLOR_PULSE_BLUE
 
 /datum/ammo/energy/lasgun
 	name = "laser bolt"
@@ -1223,7 +1261,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 
 /datum/ammo/energy/lasgun/M43/overcharge
 	name = "overcharged laser bolt"
-	icon_state = "heavylaser"
+	icon_state = "overchargedlaser"
 	hud_state = "laser_sniper"
 	damage = 40
 	max_range = 40
@@ -1232,7 +1270,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 
 /datum/ammo/energy/lasgun/M43/heat
 	name = "microwave heat bolt"
-	icon_state = "heavylaser"
+	icon_state = "microwavelaser"
 	hud_state = "laser_heat"
 	damage = 12 //requires mod with -0.15 multiplier should math out to 10
 	penetration = 100 // It's a laser that burns the skin! The fire stacks go threw anyway.
@@ -1241,7 +1279,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 
 /datum/ammo/energy/lasgun/M43/blast
 	name = "wide range laser blast"
-	icon_state = "heavylaser"
+	icon_state = "heavylaser2"
 	hud_state = "laser_spread"
 	bonus_projectiles_type = /datum/ammo/energy/lasgun/M43/spread
 	bonus_projectiles_amount = 2
@@ -1269,11 +1307,12 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 
 /datum/ammo/energy/lasgun/M43/disabler
 	name = "disabler bolt"
+	icon_state = "disablershot"
 	hud_state = "laser_disabler"
 	damage = 45
 	penetration = 0
 	damage_type = STAMINA
-	bullet_color = COLOR_BLUE
+	bullet_color = COLOR_DISABLER_BLUE
 
 /datum/ammo/energy/lasgun/M43/disabler/on_hit_mob(mob/M,obj/projectile/P)
 	staggerstun(M, P, stagger = 0.5, slowdown = 0.75)
@@ -1286,16 +1325,17 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	max_range = 40
 	penetration = 100
 	sundering = 100
-	bullet_color = COLOR_BLUE
+	bullet_color = COLOR_PULSE_BLUE
 
 /datum/ammo/energy/lasgun/M43/practice
 	name = "practice laser bolt"
-	icon_state = "laser"
-	hud_state = "laser"
+	icon_state = "disablershot"
+	hud_state = "laser_disabler"
 	damage = 45
 	penetration = 0
 	damage_type = STAMINA
 	flags_ammo_behavior = AMMO_ENERGY
+	bullet_color = COLOR_DISABLER_BLUE
 
 /datum/ammo/energy/lasgun/M43/practice/on_hit_mob(mob/living/carbon/C, obj/projectile/P)
 	if(!istype(C) || C.stat == DEAD || C.issamexenohive(P.firer) )
@@ -1308,62 +1348,52 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 
 	return ..()
 
-/*
-//================================================
-					Covenant Ammo
-//================================================
-*/
+
 /datum/ammo/energy/plasma
 	name = "plasma bolt"
 	icon_state = "pulse2"
 	hud_state = "plasma"
+	armor_type = "laser"
+	shell_speed = 4
+	accurate_range = 15
+	damage = 40
+	penetration = 15
+	max_range = 30
+	accuracy_var_low = 3
+	accuracy_var_high = 3
 
-/datum/ammo/energy/plasmapistol
-	name = "green plasma bolt"
-	icon_state = "plasmapistol"
-	hud_state = "plasmapistol"
-	damage = 20
+/datum/ammo/energy/plasma_pistol
+	name = "ionized plasma bolt"
+	icon_state = "overchargedlaser"
+	hud_state = "laser_sniper"
+	damage = 40
+	max_range = 40
+	penetration = 5
+	shell_speed = 1.5
+	flags_ammo_behavior = AMMO_ENERGY|AMMO_INCENDIARY|AMMO_EXPLOSIVE
 	bullet_color = COLOR_VIBRANT_LIME
 
-/datum/ammo/energy/plasmapistol/overcharge
+	///Fire burn time
+	var/heat = 12 
+	///Fire damage
+	var/burn_damage = 9
+	///Fire color
+	var/fire_color = "green" 
 
-/datum/ammo/energy/plasmapistol/overcharge/on_hit_mob(mob/M, obj/projectile/proj)
-	empulse(get_turf(M), 0, 1)
+/datum/ammo/energy/plasma_pistol/on_hit_turf(turf/T, obj/projectile/proj)
+	T.ignite(heat, burn_damage, fire_color)
 
-/datum/ammo/energy/plasmapistol/overcharge/on_hit_obj(obj/O, obj/projectile/proj)
-	empulse(get_turf(O), 0, 1)
+/datum/ammo/energy/plasma_pistol/on_hit_mob(mob/M, obj/projectile/proj)
+	var/turf/T = get_turf(M)
+	if(!T)
+		T = get_turf(proj)
+	T.ignite(heat, burn_damage, fire_color)
 
-/datum/ammo/energy/plasmapistol/overcharge/on_hit_turf(turf/T, obj/projectile/proj)
-	empulse(get_turf(T), 0, 1)
-
-/datum/ammo/energy/plasmapistol/overcharge/do_at_max_range(obj/projectile/proj)
-	empulse(get_turf(proj), 0, 1)
-
-
-/datum/ammo/energy/plasmarifle
-	name = "blue plasma bolt"
-	icon_state = "plasmarifle"
-	hud_state = "plasmapistol"
-	damage = 20
-	bullet_color = COLOR_BRIGHT_BLUE
-
-/datum/ammo/energy/plasma/concussion
-	name = "explosive plasma bolt"
-	icon_state = "concussion"
-	hud_state = "plasma"
-	damage = 15
-
-/datum/ammo/energy/plasma/concussion/on_hit_mob(mob/victim, obj/projectile/proj)
-	staggerstun(victim, proj, slowdown = 2, knockback = 1)
-
-/datum/ammo/energy/plasma/concussion/do_at_max_range(obj/projectile/proj)
-	explosion(get_turf(proj), light_impact_range = 3, small_animation = TRUE)
-
-/datum/ammo/energy/plasma/concussion/on_hit_turf(turf/T, obj/projectile/proj)
-	explosion(get_turf(proj), light_impact_range = 3, small_animation = TRUE)
-
-/datum/ammo/energy/plasma/concussion/on_hit_obj(obj/O, obj/projectile/proj)
-	explosion(get_turf(O), light_impact_range = 3, small_animation = TRUE)
+/datum/ammo/energy/plasma_pistol/on_hit_obj(obj/O, obj/projectile/proj)
+	var/turf/T = get_turf(O)
+	if(!T)
+		T = get_turf(proj)
+	T.ignite(heat, burn_damage, fire_color)
 
 /*
 //================================================
@@ -1385,10 +1415,22 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	accuracy_var_low = 3
 	accuracy_var_high = 3
 	bullet_color = COLOR_LIME
+	///List of reagents transferred upon spit impact if any
+	var/list/datum/reagent/spit_reagents
+	///Amount of reagents transferred upon spit impact if any
+	var/reagent_transfer_amount
+	///Amount of stagger stacks imposed on impact if any
+	var/stagger_stacks
+	///Amount of slowdown stacks imposed on impact if any
+	var/slowdown_stacks
+	///These define the reagent transfer strength of the smoke caused by the spit, if any, and its aoe
+	var/datum/effect_system/smoke_spread/xeno/smoke_system
+	var/smoke_strength
+	var/smoke_range
 
 /datum/ammo/xeno/toxin
 	name = "neurotoxic spit"
-	flags_ammo_behavior = AMMO_XENO
+	flags_ammo_behavior = AMMO_XENO|AMMO_EXPLOSIVE|AMMO_SKIPS_ALIENS
 	spit_cost = 50
 	added_spit_delay = 5
 	damage_type = STAMINA
@@ -1396,59 +1438,125 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	max_range = 10
 	accuracy_var_low = 3
 	accuracy_var_high = 3
-	damage = 45
+	damage = 30
+	stagger_stacks = 1
+	slowdown_stacks = 1
+	smoke_strength = 0.5
+	smoke_range = 0
+	reagent_transfer_amount = 6.5
+
+///Set up the list of reagents the spit transfers upon impact
+/datum/ammo/xeno/toxin/proc/set_reagents()
+	spit_reagents = list(/datum/reagent/toxin/xeno_neurotoxin/light = reagent_transfer_amount)
 
 /datum/ammo/xeno/toxin/on_hit_mob(mob/living/carbon/C, obj/projectile/P)
+	drop_neuro_smoke(get_turf(C))
+
 	if(!istype(C) || C.stat == DEAD || C.issamexenohive(P.firer) )
 		return
 
 	if(isnestedhost(C))
 		return
 
-	staggerstun(C, P, stagger = 1, slowdown = 1) //Staggers and slows down briefly
+	C.adjust_stagger(stagger_stacks) //stagger briefly; useful for support
+	C.add_slowdown(slowdown_stacks) //slow em down
+
+	set_reagents()
+	var/armor_block = (1 - C.run_armor_check(BODY_ZONE_CHEST, armor_type) * 0.01) //Check the target's armor mod; default to chest
+	for(var/reagent_id in spit_reagents) //modify by armor
+		spit_reagents[reagent_id] *= armor_block
+
+	C.reagents.add_reagent_list(spit_reagents) //transfer reagents
 
 	return ..()
 
+/datum/ammo/xeno/toxin/on_hit_obj(obj/O,obj/projectile/P)
+	var/turf/T = get_turf(O)
+	if(!T)
+		T = get_turf(P)
+
+	if(O.density && !(O.flags_atom & ON_BORDER))
+		T = get_turf(get_step(T, turn(P.dir, 180))) //If the object is dense and not a border object like barricades, we instead drop in the location just prior to the target
+
+	drop_neuro_smoke(T)
+
+/datum/ammo/xeno/toxin/on_hit_turf(turf/T,obj/projectile/P)
+	if(!T)
+		T = get_turf(P)
+
+	if(isclosedturf(T))
+		T = get_turf(get_step(T, turn(P.dir, 180))) //If the turf is closed, we instead drop in the location just prior to the turf
+
+	drop_neuro_smoke(T)
+
+/datum/ammo/xeno/toxin/do_at_max_range(obj/projectile/P)
+	drop_neuro_smoke(get_turf(P))
+
+/datum/ammo/xeno/toxin/set_smoke()
+	smoke_system = new /datum/effect_system/smoke_spread/xeno/neuro/light()
+
+/datum/ammo/xeno/toxin/proc/drop_neuro_smoke(turf/T)
+	if(T.density)
+		return
+
+	set_smoke()
+	smoke_system.strength = smoke_strength
+	smoke_system.set_up(smoke_range, T)
+	smoke_system.start()
+
 /datum/ammo/xeno/toxin/upgrade1
-	damage = 50
+	smoke_strength = 0.55
+	reagent_transfer_amount = 7
 
 /datum/ammo/xeno/toxin/upgrade2
-	damage = 55
+	smoke_strength = 0.6
+	reagent_transfer_amount = 7.5
 
 /datum/ammo/xeno/toxin/upgrade3
-	damage = 60
+	smoke_strength = 0.65
+	reagent_transfer_amount = 8
 
 
 /datum/ammo/xeno/toxin/medium //Queen
 	name = "neurotoxic spatter"
 	added_spit_delay = 10
 	spit_cost = 75
-	damage = 55
+	damage = 35
+	smoke_strength = 0.6
+	reagent_transfer_amount = 7.5
 
 /datum/ammo/xeno/toxin/medium/upgrade1
-	damage = 60
+	smoke_strength = 0.65
+	reagent_transfer_amount = 8
 
 /datum/ammo/xeno/toxin/medium/upgrade2
-	damage = 65
+	smoke_strength = 0.7
+	reagent_transfer_amount = 8.5
 
 /datum/ammo/xeno/toxin/medium/upgrade3
-	damage = 70
+	smoke_strength = 0.75
+	reagent_transfer_amount = 9
 
 
 /datum/ammo/xeno/toxin/heavy //Praetorian
 	name = "neurotoxic splash"
 	added_spit_delay = 15
 	spit_cost = 100
-	damage = 60
+	damage = 40
+	smoke_strength = 0.65
+	reagent_transfer_amount = 8.5
 
 /datum/ammo/xeno/toxin/heavy/upgrade1
-	damage = 65
+	smoke_strength = 0.7
+	reagent_transfer_amount = 9
 
 /datum/ammo/xeno/toxin/heavy/upgrade2
-	damage = 70
+	smoke_strength = 0.75
+	reagent_transfer_amount = 9.5
 
 /datum/ammo/xeno/toxin/heavy/upgrade3
-	damage = 75
+	smoke_strength = 0.8
+	reagent_transfer_amount = 10
 
 
 /datum/ammo/xeno/sticky
@@ -1464,6 +1572,8 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	damage = 20 //minor; this is mostly just to provide confirmation of a hit
 	max_range = 40
 	bullet_color = COLOR_PURPLE
+	stagger_stacks = 2
+	slowdown_stacks = 3
 
 
 /datum/ammo/xeno/sticky/on_hit_mob(mob/M,obj/projectile/P)
@@ -1472,8 +1582,8 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 		var/mob/living/carbon/C = M
 		if(C.issamexenohive(P.firer))
 			return
-		C.adjust_stagger(2) //stagger briefly; useful for support
-		C.add_slowdown(3) //slow em down
+		C.adjust_stagger(stagger_stacks) //stagger briefly; useful for support
+		C.add_slowdown(slowdown_stacks) //slow em down
 
 
 /datum/ammo/xeno/sticky/on_hit_obj(obj/O,obj/projectile/P)
@@ -1511,7 +1621,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 /datum/ammo/xeno/acid
 	name = "acid spit"
 	icon_state = "xeno_acid"
-	sound_hit 	= "acid_hit"
+	sound_hit 	 = "acid_hit"
 	sound_bounce	= "acid_bounce"
 	damage_type = BURN
 	added_spit_delay = 5
@@ -1521,6 +1631,10 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	damage = 18
 	max_range = 8
 	bullet_color = COLOR_PALE_GREEN_GRAY
+	///Duration of the acid puddles
+	var/puddle_duration = 1 SECONDS //Lasts 1-3 seconds
+	///Damage dealt by acid puddles
+	var/puddle_acid_damage = XENO_DEFAULT_ACID_PUDDLE_DAMAGE
 
 /datum/ammo/xeno/acid/on_shield_block(mob/victim, obj/projectile/proj)
 	airburst(victim, proj)
@@ -1534,6 +1648,10 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	added_spit_delay = 8
 	spit_cost = 75
 	damage = 30
+
+/datum/ammo/xeno/acid/heavy/turret
+	damage = 20
+	name = "acid turret splash"
 
 /datum/ammo/xeno/acid/heavy/on_hit_mob(mob/M,obj/projectile/P)
 	var/turf/T = get_turf(M)
@@ -1564,28 +1682,64 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 /datum/ammo/xeno/acid/heavy/do_at_max_range(obj/projectile/P)
 	drop_nade(get_turf(P))
 
-/datum/ammo/xeno/acid/drop_nade(turf/T) //Leaves behind a short lived acid pool; lasts for 1-3 seconds.
+
+/datum/ammo/xeno/acid/drop_nade(turf/T) //Leaves behind an acid pool; defaults to 1-3 seconds.
 	if(T.density)
 		return
-	new /obj/effect/xenomorph/spray(T, 10)
+
+	new /obj/effect/xenomorph/spray(T, puddle_duration, puddle_acid_damage)
+
+
+///For the Spitter's Scatterspit ability
+/datum/ammo/xeno/acid/heavy/scatter
+	damage = 15
+	flags_ammo_behavior = AMMO_XENO|AMMO_EXPLOSIVE|AMMO_SKIPS_ALIENS
+	bonus_projectiles_type = /datum/ammo/xeno/acid/heavy/scatter
+	bonus_projectiles_amount = 5
+	bonus_projectiles_scatter = 10
+	max_range = 8
+	puddle_duration = 2 SECONDS //Lasts 2-4 seconds
 
 /datum/ammo/xeno/boiler_gas
 	name = "glob of gas"
 	icon_state = "boiler_gas2"
 	ping = "ping_x"
 	flags_ammo_behavior = AMMO_XENO|AMMO_SKIPS_ALIENS|AMMO_EXPLOSIVE
-	var/datum/effect_system/smoke_spread/xeno/smoke_system
 	var/danger_message = "<span class='danger'>A glob of acid lands with a splat and explodes into noxious fumes!</span>"
 	armor_type = "bio"
 	accuracy_var_high = 10
 	max_range = 30
+	damage = 50
+	damage_type = STAMINA
+	penetration = 40
 	bullet_color = BOILER_LUMINOSITY_AMMO_NEUROTOXIN_COLOR
+	reagent_transfer_amount = 30
+
+///Set up the list of reagents the spit transfers upon impact
+/datum/ammo/xeno/boiler_gas/proc/set_reagents()
+	spit_reagents = list(/datum/reagent/toxin/xeno_neurotoxin = reagent_transfer_amount)
+
 
 /datum/ammo/xeno/boiler_gas/on_hit_mob(mob/living/victim, obj/projectile/proj)
 	drop_nade(get_turf(proj), proj.firer)
-	victim.Paralyze(2.1 SECONDS)
+
+	if(!istype(victim) || victim.stat == DEAD || victim.issamexenohive(proj.firer))
+		return
+
+	victim.Paralyze(0.5 SECONDS)
 	victim.blur_eyes(11)
 	victim.adjustDrowsyness(12)
+
+	if(!iscarbon(victim))
+		return
+
+	var/mob/living/carbon/carbon_victim = victim
+	set_reagents()
+	var/armor_block = (1 - carbon_victim.run_armor_check(BODY_ZONE_CHEST, armor_type) * 0.01) //Check the target's armor mod; default to chest
+	for(var/reagent_id in spit_reagents) //modify by armor
+		spit_reagents[reagent_id] *= armor_block
+
+	carbon_victim.reagents.add_reagent_list(spit_reagents) //transfer reagents
 
 /datum/ammo/xeno/boiler_gas/on_hit_obj(obj/O, obj/projectile/P)
 	drop_nade(get_turf(P), P.firer)
@@ -1613,7 +1767,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 /datum/ammo/xeno/boiler_gas/corrosive
 	name = "glob of acid"
 	icon_state = "boiler_gas"
-	sound_hit 	= "acid_hit"
+	sound_hit 	 = "acid_hit"
 	sound_bounce	= "acid_bounce"
 	flags_ammo_behavior = AMMO_XENO|AMMO_SKIPS_ALIENS|AMMO_EXPLOSIVE
 	armor_type = "acid"
@@ -1645,7 +1799,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	name = "alloy spike"
 	ping = "ping_s"
 	icon_state = "MSpearFlight"
-	sound_hit		= "alloy_hit"
+	sound_hit 	 	= "alloy_hit"
 	sound_armor	 	= "alloy_armor"
 	sound_bounce	= "alloy_bounce"
 	armor_type = "bullet"
@@ -1662,7 +1816,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	hud_state = "flame"
 	hud_state_empty = "flame_empty"
 	damage_type = BURN
-	flags_ammo_behavior = AMMO_INCENDIARY|AMMO_IGNORE_ARMOR
+	flags_ammo_behavior = AMMO_INCENDIARY|AMMO_IGNORE_ARMOR|AMMO_FLAME
 	armor_type = "fire"
 	max_range = 6
 	damage = 50
@@ -1708,6 +1862,10 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	burntime = 40
 	fire_delay = 35
 	bullet_color = COLOR_NAVY
+
+/datum/ammo/water
+	name = "water"
+	hud_state = "water"
 
 /datum/ammo/flare
 	name = "flare"
@@ -1784,202 +1942,3 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	name = "smoke grenade shell"
 	nade_type = /obj/item/explosive/grenade/smokebomb
 	icon_state = "smoke_shell"
-
-
-//Halo
-
-//Rifles
-/datum/ammo/bullet/ma37		//for use in ma3, ma5b, and ma37
-	name = "M118 7.62x51"
-	hud_state = "rifle"
-	hud_state_empty = "rifle_empty"
-	flags_ammo_behavior = AMMO_BALLISTIC
-	damage = 24 //on automatic this is a 2.5s ttk assuming all bullets hit point blank
-	accurate_range = 9
-	damage_falloff = 0
-
-/datum/ammo/bullet/ma37/ap  //dmr
-	name = "M118 7.62x51 FMJ AP"
-	damage = 30
-	accurate_range = "30"
-	accurate_range_min = "4"
-	penetration = 50
-	damage_falloff = 0
-
-/datum/ammo/bullet/br
-	name = "9.5x40mm M634 Experimental HP SAP"
-	hud_state = "rifle"
-	hud_state_empty = "rifle_empty"
-	flags_ammo_behavior = AMMO_BALLISTIC
-	damage = 35
-	accurate_range = 15
-	damage_falloff = 1
-	accuracy_var_low = 7 // big as fuck bullets, hard to control
-	accuracy_var_high = 7
-
-
-
-
-//SMG
-
-/datum/ammo/bullet/halosmg
-	name = "5x23mm M443 Caseless Full Metal Jacket"
-	damage = 30
-	hud_state = "smg"
-	hud_state_empty = "smg_empty"
-	flags_ammo_behavior = AMMO_BALLISTIC
-	accurate_range = 6
-	damage_falloff = 1.5
-
-//Pistol
-
-/datum/ammo/bullet/magnum
-	name = "12.7 12.7x40mm M225 SAP HE"
-	damage = 30
-	flags_ammo_behavior = AMMO_BALLISTIC
-	hud_state = "pistol_heavy"
-	hud_state_empty = "pistol_empty"
-	accurate_range = 6
-	damage_falloff = 0
-
-/datum/ammo/bullet/magnum/socom
-	name = "12.7x40mm M225 SAP HP" // for use in m6s
-
-/datum/ammo/bullet/Handgonne //unused
-	name = "14.5x40mm Experimental AP"
-	damage = 50 // more damage because its 1 shot lol
-	flags_ammo_behavior = AMMO_BALLISTIC
-	hud_state = "pistol_heavy"
-	hud_state_empty = "pistol_empty"
-	accurate_range = 6 // intentionally not accurace at long range
-	damage_falloff = 4 // not for use at long range, its not a sniper
-
-/datum/ammo/bullet/Handgonne/on_hit_mob(mob/M, obj/projectile/P) //handgonne knockback
-		staggerstun(M, P, weaken = 1, stagger = 1, knockback = 2, slowdown = 0.5, max_range = 6)
-
-
-
-
-//Shotguns
-
-/datum/ammo/bullet/shotgun/halo
-	hud_state_empty = "shotgun_empty"
-	shell_speed = 2
-
-/datum/ammo/bullet/shotgun/halo/buckshot
-	name = "8 Gauge 000 Buckshot"
-	icon_state = "buckshot"
-	hud_state = "shotgun_buckshot"
-	flags_ammo_behavior = AMMO_BALLISTIC
-	bonus_projectiles_type = /datum/ammo/bullet/shotgun/spread/halo
-	bonus_projectiles_amount = 2
-	bonus_projectiles_scatter = 2
-	shell_speed = 2
-	accurate_range = 15
-	max_range = 15
-	damage = 40
-	damage_falloff = 3
-	penetration = 0
-
-/datum/ammo/bullet/shotgun/spread/halo
-	name = "additional buckshot"
-	icon_state = "buckshot"
-	shell_speed = 2
-	accurate_range = 15
-	max_range = 15
-	damage = 40
-	damage_falloff = 3
-	penetration = 0
-
-/datum/ammo/bullet/shotgun/halo/slug //unused, unbalanced
-	name = "8 Gauge Sabot Slug"
-	icon_state = "shotgun_slug"
-	hud_state = "shotgun_slug"
-	flags_ammo_behavior = AMMO_BALLISTIC
-	shell_speed = 3
-	max_range = 15
-	damage = 65
-	penetration = 40
-	damage_falloff = 3
-
-/datum/ammo/bullet/shotgun/buckshot/kv32
-	name = "16 Gauge Experimental Buckshot"
-	icon_state = "buckshot"
-	hud_state = "shotgun_buckshot"
-	flags_ammo_behavior = AMMO_BALLISTIC
-	bonus_projectiles_type = /datum/ammo/bullet/shotgun/spread/halo/kv32
-	bonus_projectiles_amount = 4
-	bonus_projectiles_scatter = 10
-	accuracy_var_low = 9
-	accuracy_var_high = 9
-	accurate_range = 5
-	max_range = 10
-	damage = 25
-	damage_falloff = 3
-	penetration = 0
-
-//special kv32 spread
-/datum/ammo/bullet/shotgun/spread/halo/kv32 //needs remaking/rebalancing before use
-	name = "additional buckshot"
-	icon_state = "buckshot"
-	shell_speed = 2
-	accurate_range = 15
-	max_range = 15
-	damage = 40
-	damage_falloff = 3
-	penetration = 0
-
-//Sniper
-/datum/ammo/bullet/SRS99
-	name = "14.5x114mm High Velocity Armor Piercing"
-	hud_state = "sniper"
-	hud_state_empty = "sniper_empty"
-	damage_falloff = 0
-	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_SNIPER
-	accurate_range_min = 6
-	shell_speed = 4
-	accurate_range = "40"
-	accurate_range_min = "6"
-	max_range = 40
-	scatter = -20
-	damage = 60
-	penetration = 80
-	sundering = 0
-
-//Special
-
-/datum/ammo/rocket/m41spnkr
-	name = "M41 SPNKR Rocket"
-	hud_state = "rocket_he"
-
-/datum/ammo/rocket/m26
-	name = "M26 high explosive rocket"
-	icon_state = "m26_exp"
-	hud_state = "rocket_he"
-	hud_state_empty = "rocket_empty"
-	ping = null //no bounce off.
-	sound_bounce	= "rocket_bounce"
-	flags_ammo_behavior = AMMO_EXPLOSIVE|AMMO_ROCKET|AMMO_SUNDERING
-	armor_type = "bomb"
-	damage_falloff = 0
-	shell_speed = 2
-	accuracy = 40
-	accurate_range = 20
-	max_range = 30
-	damage = 200
-	penetration = 100
-	sundering = 100
-
-/datum/ammo/rocket/m26/incendiary
-	name = "M26 incendiary rocket"
-	icon_state = "m26_inc"
-	hud_state = "rocket_fire"
-	flags_ammo_behavior = AMMO_ROCKET|AMMO_INCENDIARY|AMMO_EXPLOSIVE|AMMO_SUNDERING
-	armor_type = "fire"
-	damage_type = BURN
-	accuracy_var_low = 7
-	accurate_range = 15
-	damage = 200
-	penetration = 75
-	max_range = 20
-	sundering = 100

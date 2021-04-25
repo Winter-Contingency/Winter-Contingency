@@ -65,7 +65,7 @@
 	soft_armor = list("melee" = 80, "bullet" = 60, "laser" = 50, "energy" = 10, "bomb" = 25, "bio" = 10, "rad" = 0, "fire" = 10, "acid" = 10)
 	flags_inventory = COVEREYES
 	flags_inv_hide = HIDEEARS
-	flags_armor_protection = 0
+	flags_armor_protection = NONE
 	siemens_coefficient = 0.8
 	flags_item = SYNTH_RESTRICTED
 
@@ -82,7 +82,7 @@
 	icon_state = "policehelm"
 	flags_inventory = NONE
 	flags_inv_hide = NONE
-	flags_armor_protection = 0
+	flags_armor_protection = NONE
 
 /obj/item/clothing/head/helmet/hop
 	name = "crew resource's hat"
@@ -90,7 +90,7 @@
 	icon_state = "hopcap"
 	flags_inventory = NONE
 	flags_inv_hide = NONE
-	flags_armor_protection = 0
+	flags_armor_protection = NONE
 
 /obj/item/clothing/head/helmet/formalcaptain
 	name = "parade hat"
@@ -98,7 +98,7 @@
 	icon_state = "officercap"
 	flags_inventory = NONE
 	flags_inv_hide = NONE
-	flags_armor_protection = 0
+	flags_armor_protection = NONE
 
 /obj/item/clothing/head/helmet/swat
 	name = "\improper SWAT helmet"
@@ -183,19 +183,22 @@
 
 
 
-//===========================//MARINES HELMETS\\=================================\\
-//=======================================================================
+/*===========================MARINES HELMETS=================================
+=======================================================================*/
 
 
 /obj/item/clothing/head/helmet/marine
 	name = "\improper M10 pattern marine helmet"
 	desc = "A standard M10 Pattern Helmet. It reads on the label, 'The difference between an open-casket and closed-casket funeral. Wear on head for best results.'."
 	icon = 'icons/obj/clothing/cm_hats.dmi'
-	sprite_sheet_id = 1
+	item_icons = list(
+		slot_head_str = 'icons/mob/head_1.dmi',
+		slot_l_hand_str = 'icons/mob/items_lefthand_1.dmi',
+		slot_r_hand_str = 'icons/mob/items_righthand_1.dmi',)
 	icon_state = "helmet"
 	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 50)
 	max_integrity = 5
-	var/helmet_overlays[]
+	var/list/helmet_overlays
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS
 	var/flags_marine_helmet = HELMET_GARB_OVERLAY|HELMET_DAMAGE_OVERLAY|HELMET_STORE_GARB
@@ -216,7 +219,9 @@
 						/obj/item/reagent_containers/food/snacks/enrg_bar = "helmet_snack_eat",
 						/obj/item/reagent_containers/food/snacks/packaged_burrito = "helmet_snack_burrito",
 						/obj/item/clothing/glasses/mgoggles = "goggles",
-						/obj/item/clothing/glasses/mgoggles/prescription = "goggles")
+						/obj/item/clothing/glasses/mgoggles/prescription = "goggles",
+						/obj/item/clothing/glasses/hud/medgoggles = "goggles",
+						/obj/item/clothing/glasses/hud/medgoggles/prescription = "goggles")
 
 /obj/item/storage/internal/marinehelmet
 	storage_slots = 2
@@ -280,6 +285,14 @@
 		var/mob/M = loc
 		M.update_inv_head()
 
+/obj/item/clothing/head/helmet/marine/apply_custom(image/standing)
+	var/image/I
+	for(var/i in helmet_overlays)
+		I = helmet_overlays[i]
+		if(I)
+			I = image('icons/mob/helmet_garb.dmi',src,I.icon_state)
+			standing.overlays += I
+
 
 /obj/item/clothing/head/helmet/marine/proc/add_hugger_damage() //This is called in XenoFacehuggers.dm to first add the overlay and set the var.
 	if(flags_marine_helmet & HELMET_DAMAGE_OVERLAY && !(flags_marine_helmet & HELMET_IS_DAMAGED))
@@ -318,7 +331,7 @@
 	name = "\improper B18 helmet"
 	desc = "The B18 Helmet that goes along with the B18 Defensive Armor. It's heavy, reinforced, and protects more of the face."
 	icon_state = "minigunner_helmet"
-	soft_armor = list("melee" = 65, "bullet" = 80, "laser" = 75, "energy" = 65, "bomb" = 70, "bio" = 65, "rad" = 15, "fire" = 65, "acid" = 65)
+	soft_armor = list("melee" = 75, "bullet" = 80, "laser" = 75, "energy" = 65, "bomb" = 70, "bio" = 65, "rad" = 15, "fire" = 65, "acid" = 65)
 	flags_inv_hide = HIDEALLHAIR|HIDEEARS
 	flags_item = SYNTH_RESTRICTED
 	resistance_flags = UNACIDABLE
@@ -329,7 +342,7 @@
 	name = "\improper B17 helmet"
 	desc = "A heavy duty helmet created to complement the B17 marine armor. Practically explosive proof. Unless you stand next to a nuke or something like that."
 	icon_state = "grenadier_helmet"
-	soft_armor = list("melee" = 60, "bullet" = 70, "laser" = 60, "energy" = 65, "bomb" = 100, "bio" = 60, "rad" = 15, "fire" = 65, "acid" = 60)
+	soft_armor = list("melee" = 75, "bullet" = 70, "laser" = 60, "energy" = 65, "bomb" = 100, "bio" = 60, "rad" = 15, "fire" = 65, "acid" = 60)
 	flags_inv_hide = HIDEALLHAIR|HIDEEARS
 	max_heat_protection_temperature = HEAVYARMOR_MAX_HEAT_PROTECTION_TEMPERATURE
 	resistance_flags = UNACIDABLE
@@ -371,7 +384,7 @@
 	name = "\improper M30 tactical helmet"
 	desc = "The M30 tactical helmet has an left eyepiece filter used to filter tactical data. It is used by pilots in the TGN. This one is in gunmetal blue."
 	icon_state = "helmetp2"
-	soft_armor = list("melee" = 65, "bullet" = 65, "laser" = 35, "energy" = 45, "bomb" = 30, "bio" = 45, "rad" = 15, "fire" = 45, "acid" = 45)
+	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 50)
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROTECTION_TEMPERATURE
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
@@ -396,8 +409,8 @@ obj/item/clothing/head/helmet/marine/pilot/green
 	flags_marine_helmet = NONE
 	flags_item_map_variant = (ITEM_ICE_VARIANT)
 
-//=============================//PMCS\\==================================\\
-//=======================================================================
+/*=============================PMCS==================================
+=======================================================================*/
 
 /obj/item/clothing/head/helmet/marine/veteran
 	flags_item = SYNTH_RESTRICTED
@@ -453,7 +466,7 @@ obj/item/clothing/head/helmet/marine/pilot/green
 /*==========================DISTRESS=================================
 =======================================================================*/
 
-//=========================//Imperium\\==================================
+/*=========================Imperium==================================*/
 
 /obj/item/clothing/head/helmet/marine/imperial
 	name = "\improper Imperial Guard flak helmet"
@@ -531,7 +544,10 @@ obj/item/clothing/head/helmet/marine/pilot/green
 	name = "\improper UM4 helmet"
 	desc = "A skirted helmet designed for use with the UM/UH system."
 	icon = 'icons/obj/clothing/cm_hats.dmi'
-	sprite_sheet_id = 1
+	item_icons = list(
+		slot_head_str = 'icons/mob/head_1.dmi',
+		slot_l_hand_str = 'icons/mob/items_lefthand_1.dmi',
+		slot_r_hand_str = 'icons/mob/items_righthand_1.dmi',)
 	icon_state = "upp_helmet1"
 	flags_item = SYNTH_RESTRICTED
 	soft_armor = list("melee" = 70, "bullet" = 55, "laser" = 40, "energy" = 35, "bomb" = 35, "bio" = 5, "rad" = 5, "fire" = 35, "acid" = 35)
@@ -540,7 +556,10 @@ obj/item/clothing/head/helmet/marine/pilot/green
 /obj/item/clothing/head/helmet/UPP/heavy
 	name = "\improper UH7 helmet"
 	icon = 'icons/obj/clothing/cm_hats.dmi'
-	sprite_sheet_id = 1
+	item_icons = list(
+		slot_head_str = 'icons/mob/head_1.dmi',
+		slot_l_hand_str = 'icons/mob/items_lefthand_1.dmi',
+		slot_r_hand_str = 'icons/mob/items_righthand_1.dmi',)
 	icon_state = "upp_helmet_heavy"
 	soft_armor = list("melee" = 90, "bullet" = 85, "laser" = 60, "energy" = 65, "bomb" = 85, "bio" = 5, "rad" = 5, "fire" = 65, "acid" = 65)
 	resistance_flags = UNACIDABLE
@@ -554,7 +573,10 @@ obj/item/clothing/head/helmet/marine/pilot/green
 	name = "specialist head-rag"
 	desc = "A hat worn by heavy-weapons operators to block sweat."
 	icon = 'icons/obj/clothing/cm_hats.dmi'
-	sprite_sheet_id = 1
+	item_icons = list(
+		slot_head_str = 'icons/mob/head_1.dmi',
+		slot_l_hand_str = 'icons/mob/items_lefthand_1.dmi',
+		slot_r_hand_str = 'icons/mob/items_righthand_1.dmi',)
 	icon_state = "spec"
 	soft_armor = list("melee" = 35, "bullet" = 35, "laser" = 35, "energy" = 15, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 15, "acid" = 15)
 	flags_inventory = BLOCKSHARPOBJ
@@ -564,7 +586,10 @@ obj/item/clothing/head/helmet/marine/pilot/green
 	name = "durag"
 	desc = "Good for keeping sweat out of your eyes"
 	icon = 'icons/obj/clothing/cm_hats.dmi'
-	sprite_sheet_id = 1
+	item_icons = list(
+		slot_head_str = 'icons/mob/head_1.dmi',
+		slot_l_hand_str = 'icons/mob/items_lefthand_1.dmi',
+		slot_r_hand_str = 'icons/mob/items_righthand_1.dmi',)
 	icon_state = "durag"
 	soft_armor = list("melee" = 35, "bullet" = 35, "laser" = 35, "energy" = 15, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 15, "acid" = 15)
 	flags_inventory = BLOCKSHARPOBJ
@@ -575,8 +600,8 @@ obj/item/clothing/head/helmet/marine/pilot/green
 	desc = "A cowl worn to conceal the face of a marksman in the jungle."
 	icon_state = "duragm"
 
-//===========================//HELGHAST - MERCENARY\\================================\\
-//=====================================================================
+/*===========================HELGHAST - MERCENARY================================
+=====================================================================*/
 
 /obj/item/clothing/head/helmet/marine/veteran/mercenary
 	name = "\improper K12 ceramic helmet"
@@ -640,287 +665,3 @@ obj/item/clothing/head/helmet/marine/pilot/green
 	flags_item = NODROP|DELONDROP
 	soft_armor = list("melee" = 65, "bullet" = 60, "laser" = 30, "energy" = 20, "bomb" = 25, "bio" = 40, "rad" = 0, "fire" = 20, "acid" = 20)
 	anti_hug = 5
-
-
-//Halo//
-
-/obj/item/clothing/head/helmet/marine/urf
-	name = "P1-M combat helmet"
-	desc = "A general purpose URF combat helmet."
-	icon_state = "urf_helmet_brown"
-	item_state = "urf_helmet_brown"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-
-/obj/item/clothing/head/helmet/marine/urf/black
-	name = "P1-M combat helmet (black)"
-	desc = "A general purpose URF combat helmet."
-	icon_state = "urf_helmet_black"
-	item_state = "urf_helmet_black"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-
-/obj/item/clothing/head/helmet/marine/urf/black/engie
-	name = "P2-M combat helmet (black)"
-	desc = "A general purpose URF combat helmet."
-	icon_state = "urf_helmet_black_heavy"
-	item_state = "urf_helmet_black_heavy"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-
-/obj/item/clothing/head/helmet/marine/urf/black/sl
-	name = "P3-M combat helmet (black)"
-	desc = "A general purpose URF combat helmet."
-	icon_state = "urf_helmet_black_sl"
-	item_state = "urf_helmet_black_sl"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-
-/obj/item/clothing/head/helmet/marine/urf/black/medic
-	name = "P1-M medic helmet (black)"
-	desc = "A general purpose URF combat helmet."
-	icon_state = "urf_helmet_black_medic"
-	item_state = "urf_helmet_black_medic"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-
-/obj/item/clothing/head/helmet/marine/urf/green
-	name = "P1-M combat helmet (green)"
-	desc = "A general purpose URF combat helmet."
-	icon_state = "urf_helmet_green"
-	item_state = "urf_helmet_green"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-
-/obj/item/clothing/head/helmet/marine/urf/white
-	name = "P1-M combat helmet (green)"
-	desc = "A general purpose URF combat helmet."
-	icon_state = "urf_helmet_white"
-	item_state = "urf_helmet_white"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-
-/obj/item/clothing/head/helmet/marine/urf/blue
-	name = "P1-M combat helmet (blue)"
-	desc = "A general purpose URF combat helmet."
-	icon_state = "urf_helmet_blue"
-	item_state = "urf_helmet_blue"
-	soft_armor = list("melee" = 53, "bullet" = 53, "laser" = 53, "energy" = 25, "bomb" = 15, "bio" = 50, "rad" = 5, "fire" = 25, "acid" = 45)
-
-/obj/item/clothing/head/helmet/marine/urf/blue/traditional
-	name = "Armored Headwear"
-	desc = "A piece of traditonal headwear, many insurrectionist warlords favor this over regular clothing."
-	icon_state = "innie_warlord"
-	item_state = "innie_warlord"
-
-//ODST//
-
-/obj/item/clothing/head/helmet/marine/odst
-	name = "ODST helmet (standard)"
-	desc = "A general purpose ODST helmet."
-	icon_state = "odst_helmet"
-	item_state = "odst_helmet"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
-
-
-/obj/item/clothing/head/helmet/marine/odst/sl
-	name = "ODST helmet (squad leader)"
-	desc = "A general purpose ODST SL helmet."
-	icon_state = "odst_sl_helmet"
-	item_state = "odst_sl_helmet"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
-
-
-/obj/item/clothing/head/helmet/marine/odst/engi
-	name = "ODST helmet (engineer)"
-	desc = "A general purpose ODST Engineer helmet."
-	icon_state = "odst_engi_helmet"
-	item_state = "odst_engi_helmet"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
-
-
-/obj/item/clothing/head/helmet/marine/odst/gungnir
-	name = "ODST helmet (GUNGNIR)"
-	desc = "A general purpose ODST GUNGNIR helmet."
-	icon_state = "odst_gungnir_helmet"
-	item_state = "odst_gungnir_helmet"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
-
-
-/obj/item/clothing/head/helmet/marine/odst/recon
-	name = "ODST helmet (recon)"
-	desc = "A general purpose ODST Recon helmet."
-	icon_state = "odst_recon_helmet"
-	item_state = "odst_recon_helmet"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
-
-
-/obj/item/clothing/head/helmet/marine/odst/medic
-	name = "ODST helmet (medic)"
-	desc = "A general purpose ODST Medic helmet."
-	icon_state = "odst_medic_helmet"
-	item_state = "odst_medic_helmet"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
-
-
-/obj/item/clothing/head/helmet/marine/odst/sniper
-	name = "ODST helmet (sniper)"
-	desc = "A general purpose ODST Sniper helmet."
-	icon_state = "odst_sniper_helmet"
-	item_state = "odst_sniper_helmet"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
-
-
-/obj/item/clothing/head/helmet/marine/odst/cqc
-	name = "ODST helmet (cqc)"
-	desc = "A general purpose ODST CQC helmet."
-	icon_state = "odst_cqc_helmet"
-	item_state = "odst_cqc_helmet"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
-
-/obj/item/clothing/head/helmet/marine/odst/loafe
-	name = "ODST helmet (loafe)"
-	desc = "A general purpose ODST helmet, worn by the ODST 'Loafe'."
-	icon_state = "odst_helmet_loafe"
-	item_state = "odst_helmet_loafe"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
-
-//URFC
-
-/obj/item/clothing/head/helmet/marine/urfc
-	name = "URFC helmet (rifleman)"
-	desc = "A general purpose URFC rifleman helmet."
-	icon_state = "urfc_rifleman_helmet"
-	item_state = "urfc_rifleman_helmet"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
-
-
-/obj/item/clothing/head/helmet/marine/urfc/sl
-	name = "URFC helmet (sl)"
-	desc = "A general purpose URFC squad leader helmet."
-	icon_state = "urfc_sl_helmet"
-	item_state = "urfc_sl_helmet"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
-
-
-/obj/item/clothing/head/helmet/marine/urfc/medic
-	name = "URFC helmet (medic)"
-	desc = "A general purpose URFC medic helmet."
-	icon_state = "urfc_medic_helmet"
-	item_state = "urfc_medic_helmet"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
-
-
-/obj/item/clothing/head/helmet/marine/urfc/engineer
-	name = "URFC helmet (engineer)"
-	desc = "A general purpose URFC Engineer helmet."
-	icon_state = "urfc_engi_helmet"
-	item_state = "urfc_engi_helmet"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
-
-
-/obj/item/clothing/head/helmet/marine/urfc/commander
-	name = "URFC helmet (commander)"
-	desc = "A general purpose URFC commander helmet."
-	icon_state = "urfc_commander_helmet"
-	item_state = "urfc_commander_helmet"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
-
-
-/obj/item/clothing/head/helmet/marine/urfc/sniper
-	name = "URFC helmet (sniper)"
-	desc = "A general purpose URFC sniper helmet."
-	icon_state = "urfc_sniper_helmet"
-	item_state = "urfc_sniper_helmet"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
-
-
-/obj/item/clothing/head/helmet/marine/urfc/sniper
-	name = "URFC helmet (engineer)"
-	desc = "A general purpose URFC engineer helmet."
-	icon_state = "urfc_engi_helmet"
-	item_state = "urfc_engi_helmet"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
-
-
-/obj/item/clothing/head/helmet/marine/urfc/socks
-	name = "URFC helmet (socks)"
-	desc = "A general purpose URFC helmet, worn by the URF commando 'Socks'."
-	icon_state = "urfc_socks_helmet"
-	item_state = "urfc_socks_helmet"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
-
-
-/obj/item/clothing/head/helmet/marine/urfc/pantas
-	name = "URFC helmet (pantas)"
-	desc = "A general purpose URFC pantas helmet, worn by the URF commando 'Pantas'."
-	icon_state = "urfc_pantas_helmet"
-	item_state = "urfc_pantas_helmet"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
-
-
-/obj/item/clothing/head/helmet/marine/urfc/cqb
-	name = "URFC helmet (cqb)"
-	desc = "A general purpose URFC cqb helmet."
-	icon_state = "urfc_cqb_helmet"
-	item_state = "urfc_cqb_helmet"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
-
-//GCPD//
-
-/obj/item/clothing/head/helmet/marine/gcpd
-	name = "PD-M combat helmet"
-	desc = "A Colonial Police combat helmet."
-	icon_state = "gcpd_helmet"
-	item_state = "gcpd_helmet"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-
-/obj/item/clothing/head/helmet/marine/gcpd/visor
-	name = "PD-V combat helmet"
-	desc = "A Colonial Police combat helmet, this one has a visor."
-	icon_state = "gcpd_helmet_visor"
-	item_state = "gcpd_helmet_visor"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
-
-
-/obj/item/clothing/head/helmet/marine/gcpd/goggles
-	name = "PD-V combat helmet"
-	desc = "A Colonial Police combat helmet, this one has a pair of goggles."
-	icon_state = "gcpd_helmet_g"
-	item_state = "gcpd_helmet_g"
-	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 12, "bio" = 50, "rad" = 5, "fire" = 22, "acid" = 45)
-
-
-

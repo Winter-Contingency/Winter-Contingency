@@ -58,7 +58,7 @@
 	list_reagents = list(
 		/datum/reagent/medicine/meralyne = 5,
 		/datum/reagent/medicine/dermaline = 5,
-		/datum/reagent/medicine/oxycodone = 5,
+		/datum/reagent/medicine/tramadol = 5,
 	)
 
 /obj/item/reagent_containers/hypospray/autoinjector/quickclot
@@ -141,7 +141,7 @@
 	amount_per_transfer_from_this = 12
 	volume = 36
 	icon_state = "autoinjector-8" //TEMP
-	list_reagents = list(/datum/reagent/medicine/hypervene = 36)
+	list_reagents = list(/datum/reagent/hypervene = 36)
 
 /obj/item/reagent_containers/hypospray/autoinjector/hyperzine
 	name = "hyperzine autoinjector"
@@ -173,7 +173,7 @@
 	icon_state = "autoinjector-1"
 	list_reagents = list(
 		/datum/reagent/medicine/synaptizine = 3,
-		/datum/reagent/medicine/arithrazine = 6,
+		/datum/reagent/medicine/hyronalin = 6,
 	)
 
 /obj/item/reagent_containers/hypospray/autoinjector/synaptizine_expired
@@ -184,7 +184,7 @@
 	icon_state = "autoinjector-1"
 	list_reagents = list(
 		/datum/reagent/medicine/synaptizine = 3,
-		/datum/reagent/medicine/arithrazine = 3,
+		/datum/reagent/medicine/hyronalin = 3,
 	)
 
 /obj/item/reagent_containers/hypospray/autoinjector/neuraline
@@ -203,7 +203,7 @@
 	icon_state = "autoinjector-8"
 	list_reagents = list(
 		/datum/reagent/medicine/peridaxon_plus = 3,
-		/datum/reagent/medicine/arithrazine = 6,
+		/datum/reagent/medicine/hyronalin = 6,
 	)
 
 /obj/item/reagent_containers/hypospray/autoinjector/roulettium
@@ -221,31 +221,3 @@
 	volume = 100
 	icon_state = "autoinjector-6"
 	list_reagents = list(/datum/reagent/medicine/hydrocodone = 100)
-
-/obj/item/reagent_containers/hypospray/autoinjector/biofoam
-	name = "biofoam canister"
-	desc = "An autoinjector containing life-saving biofoam. Stitches damaged internal organs, repairs cut arteries, and holds broken bones in place. A large warning on the canister reads **DO NOT ADMINISTER MORE THAN ONE DOSE OF BIOFOAM TO PATIENT**"
-	amount_per_transfer_from_this = 5
-	volume = 15
-	icon_state = "biofoam"
-	list_reagents = list(/datum/reagent/medicine/biofoam = 25)
-	inject_delay = 2.5 SECONDS
-	w_class = WEIGHT_CLASS_NORMAL
-
-/obj/item/reagent_containers/hypospray/autoinjector/biofoam/small
-	name = "small biofoam canister"
-	desc = "An single-use canister containing life-saving biofoam. Stitches damaged internal organs, mends cut arteries, and holds broken bones in place. A large warning on the canister reads **DO NOT ADMINISTER MORE THAN ONE DOSE OF BIOFOAM TO PATIENT**"
-	amount_per_transfer_from_this = 5
-	volume = 5
-	icon_state = "biofoam_small"
-	list_reagents = list(/datum/reagent/medicine/biofoam = 5)
-	inject_delay = 2.5 SECONDS
-	w_class = WEIGHT_CLASS_SMALL
-
-/obj/item/reagent_containers/hypospray/autoinjector/panacea
-	name = "Panacea autoinjector"
-	desc = "A general healing and painkilling chemical used by Covenant forces. The painkilling chemicals within this injector inhibit advanced muscle movements, and result in a drowsy patient on most occasions."
-	amount_per_transfer_from_this = 5
-	volume = 15
-	icon_state = "autoinjector-7"
-	list_reagents = list(/datum/reagent/medicine/panacea = 15)

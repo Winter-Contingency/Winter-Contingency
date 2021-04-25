@@ -6,6 +6,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	tool_behaviour = TOOL_FULTON
 	resistance_flags = UNACIDABLE|INDESTRUCTIBLE
+	///Reference to the balloon vis obj effect
 	var/atom/movable/vis_obj/fulton_baloon/baloon
 	var/obj/effect/fulton_extraction_holder/holder_obj
 
@@ -35,7 +36,7 @@
 
 
 /obj/item/fulton_extraction_pack/proc/do_checks(atom/movable/spirited_away, mob/user)
-	if(user.action_busy)
+	if(user.do_actions)
 		return FALSE
 	if(active)
 		to_chat(user, "<span class='warning'>The fulton device is not yet ready to extract again. Wait a moment.</span>")
@@ -82,7 +83,7 @@
 	animate(pixel_z = 10, time = 1 SECONDS)
 	animate(pixel_z = 15, time = 1 SECONDS)
 	animate(pixel_z = 10, time = 1 SECONDS)
-	animate(pixel_z = 480, time = 1 SECONDS)
+	animate(pixel_z = SCREEN_PIXEL_SIZE, time = 1 SECONDS)
 
 
 /obj/item/fulton_extraction_pack/proc/cleanup_extraction()
@@ -186,7 +187,7 @@
 	if(care_about_anchored && movable_target.anchored)
 		to_chat(user, "<span class='warning'>[target] is anchored, it cannot be extracted!</span>")
 		return FALSE
-	if(do_after_time && (user.action_busy || !do_after(user, do_after_time, TRUE, target)))
+	if(do_after_time && (user.do_actions || !do_after(user, do_after_time, TRUE, target)))
 		return
 	if(require_living_to_be_dead && isliving(target))
 		var/mob/living/living_target = target

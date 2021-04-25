@@ -6,6 +6,7 @@
 	icon = 'icons/obj/clothing/belts.dmi'
 	icon_state = "utilitybelt"
 	item_state = "utility"
+	item_state_worn = TRUE
 	flags_equip_slot = ITEM_SLOT_BELT
 	attack_verb = list("whipped", "lashed", "disciplined")
 	w_class = WEIGHT_CLASS_BULKY
@@ -41,8 +42,8 @@
 
 
 
-//============================//MARINE BELTS\\==================================\\
-//=======================================================================
+/*============================//MARINE BELTS\\==================================
+=======================================================================*/
 
 
 /obj/item/storage/belt/utility
@@ -87,7 +88,7 @@
 
 /obj/item/storage/belt/medical
 	name = "\improper M276 pattern medical storage rig"
-	desc = "The M276 is the standard load-bearing equipment of the UNSC. It consists of a modular belt with various clips. This version is a less common configuration, designed to transport medical supplies, and light ammunitions."
+	desc = "The M276 is the standard load-bearing equipment of the TGMC. It consists of a modular belt with various clips. This version is a less common configuration, designed to transport medical supplies, and light ammunitions."
 	icon_state = "medicalbelt"
 	item_state = "medical"
 	storage_slots = 14 //can hold 2 "rows" of very limited medical equipment and ammo.
@@ -110,7 +111,10 @@
 		/obj/item/clothing/gloves/latex,
 		/obj/item/storage/syringe_case,
 		/obj/item/ammo_magazine/pistol,
-		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/smg/m25,
+		/obj/item/ammo_magazine/smg/standard_smg,
+		/obj/item/ammo_magazine/smg/standard_machinepistol,
+		/obj/item/ammo_magazine/revolver,
 		/obj/item/ammo_magazine/handful,
 		/obj/item/flashlight/flare,
 		/obj/item/explosive/grenade/flare,
@@ -299,7 +303,7 @@
 
 /obj/item/storage/belt/marine
 	name = "\improper M276 pattern ammo load rig"
-	desc = "The M276 is the standard load-bearing equipment of the UNSC. It consists of a modular belt with various clips. This version is the standard variant designed for bulk ammunition-carrying operations."
+	desc = "The M276 is the standard load-bearing equipment of the TGMC. It consists of a modular belt with various clips. This version is the standard variant designed for bulk ammunition-carrying operations."
 	icon_state = "marinebelt"
 	item_state = "marinebelt"
 	w_class = WEIGHT_CLASS_BULKY
@@ -347,7 +351,7 @@
 	new /obj/item/ammo_magazine/smg/standard_smg(src)
 	new /obj/item/ammo_magazine/smg/standard_smg(src)
 
-/obj/item/storage/belt/marine/m42a/Initialize()
+/obj/item/storage/belt/marine/antimaterial/Initialize()
 	. = ..()
 	new /obj/item/ammo_magazine/sniper/flak(src)
 	new /obj/item/ammo_magazine/sniper/flak(src)
@@ -355,13 +359,13 @@
 	new /obj/item/ammo_magazine/sniper/incendiary(src)
 	new /obj/item/ammo_magazine/sniper(src)
 
-/obj/item/storage/belt/marine/m4ra/Initialize()
+/obj/item/storage/belt/marine/tx8/Initialize()
 	. = ..()
-	new /obj/item/ammo_magazine/rifle/m4ra/impact(src)
-	new /obj/item/ammo_magazine/rifle/m4ra/impact(src)
-	new /obj/item/ammo_magazine/rifle/m4ra/incendiary(src)
-	new /obj/item/ammo_magazine/rifle/m4ra/incendiary(src)
-	new /obj/item/ammo_magazine/rifle/m4ra(src)
+	new /obj/item/ammo_magazine/rifle/tx8/impact(src)
+	new /obj/item/ammo_magazine/rifle/tx8/impact(src)
+	new /obj/item/ammo_magazine/rifle/tx8/incendiary(src)
+	new /obj/item/ammo_magazine/rifle/tx8/incendiary(src)
+	new /obj/item/ammo_magazine/rifle/tx8(src)
 
 /obj/item/storage/belt/marine/upp
 	name = "\improper Type 41 pattern load rig"
@@ -615,7 +619,32 @@
 			return FALSE
 	return TRUE
 
-/obj/item/storage/belt/gun/m4a3
+//This deliniates between belt/gun/pistol and belt/gun/revolver
+/obj/item/storage/belt/gun/pistol
+	name = "generic pistol belt"
+	desc = "A pistol belt that is not a revolver belt"
+	icon_state = "m4a3_holster"
+	item_state = "m4a3_holster"
+
+/obj/item/storage/belt/gun/pistol/attackby_alternate(obj/item/I, mob/user, params)
+	if(!istype(I, /obj/item/weapon/gun/pistol))
+		return ..()
+	var/obj/item/weapon/gun/pistol/gun = I
+	for(var/obj/item/ammo_magazine/mag in contents) 
+		if(!istype(gun, mag.gun_type))
+			continue
+		if(user.l_hand && user.r_hand || gun.current_mag)
+			gun.tactical_reload(mag, user)
+		else 
+			gun.reload(user, mag)
+		orient2hud()
+		return
+
+/obj/item/storage/belt/gun/pistol/examine(mob/user, distance, infix, suffix)
+	. = ..()
+	to_chat(user, "<span class='notice'>To perform a reload with the amunition inside, disable right click and right click on the belt with an empty pistol.</span>")
+
+/obj/item/storage/belt/gun/pistol/m4a3
 	name = "\improper M4A3 holster rig"
 	desc = "The M4A3 is a common holster belt. It consists of a modular belt with various clips. This version has a holster assembly that allows one to carry a handgun. It also contains side pouches that can store 9mm or .45 magazines."
 	can_hold = list(
@@ -623,7 +652,7 @@
 		/obj/item/ammo_magazine/pistol,
 	)
 
-/obj/item/storage/belt/gun/m4a3/full/Initialize()
+/obj/item/storage/belt/gun/pistol/m4a3/full/Initialize()
 	. = ..()
 	var/obj/item/weapon/gun/new_gun = new /obj/item/weapon/gun/pistol/rt3(src)
 	new /obj/item/ammo_magazine/pistol/ap(src)
@@ -634,7 +663,7 @@
 	new /obj/item/ammo_magazine/pistol/extended(src)
 	new_gun.on_enter_storage(src)
 
-/obj/item/storage/belt/gun/m4a3/officer/Initialize()
+/obj/item/storage/belt/gun/pistol/m4a3/officer/Initialize()
 	. = ..()
 	var/obj/item/weapon/gun/new_gun = new /obj/item/weapon/gun/pistol/rt3(src)
 	new /obj/item/ammo_magazine/pistol/hp(src)
@@ -645,43 +674,49 @@
 	new /obj/item/ammo_magazine/pistol/ap(src)
 	new_gun.on_enter_storage(src)
 
-/obj/item/storage/belt/gun/m4a3/fieldcommander/Initialize()
+/obj/item/storage/belt/gun/pistol/m4a3/fieldcommander/Initialize()
 	. = ..()
 	var/obj/item/weapon/gun/new_gun = new /obj/item/weapon/gun/pistol/m1911/custom(src)
 	new /obj/item/ammo_magazine/pistol/m1911(src)
 	new /obj/item/ammo_magazine/pistol/m1911(src)
 	new /obj/item/ammo_magazine/pistol/m1911(src)
 	new /obj/item/ammo_magazine/pistol/m1911(src)
+	new /obj/item/ammo_magazine/pistol/m1911(src)
+	new /obj/item/ammo_magazine/pistol/m1911(src)
 	new_gun.on_enter_storage(src)
 
-/obj/item/storage/belt/gun/m4a3/vp70/Initialize()
+/obj/item/storage/belt/gun/pistol/m4a3/vp70/Initialize()
 	. = ..()
 	var/obj/item/weapon/gun/new_gun = new /obj/item/weapon/gun/pistol/vp70(src)
 	new /obj/item/ammo_magazine/pistol/vp70(src)
 	new /obj/item/ammo_magazine/pistol/vp70(src)
 	new /obj/item/ammo_magazine/pistol/vp70(src)
 	new /obj/item/ammo_magazine/pistol/vp70(src)
+	new /obj/item/ammo_magazine/pistol/vp70(src)
+	new /obj/item/ammo_magazine/pistol/vp70(src)
 	new_gun.on_enter_storage(src)
 
-/obj/item/storage/belt/gun/m4a3/vp78/Initialize()
+/obj/item/storage/belt/gun/pistol/m4a3/vp78/Initialize()
 	. = ..()
 	var/obj/item/weapon/gun/new_gun = new /obj/item/weapon/gun/pistol/vp78(src)
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new_gun.on_enter_storage(src)
 
 
-/obj/item/storage/belt/gun/m4a3/som
+/obj/item/storage/belt/gun/pistol/m4a3/som
 	name = "\improper S19 holster rig"
 	desc = "A belt with origins to old colony security holster rigs."
 	icon_state = "som_belt_pistol"
 	item_state = "som_belt_pistol"
 
-/obj/item/storage/belt/gun/stand
-	name = "\improper M6A3 pattern M6 holster rig"
-	desc = "The M6A3 is the standard load-bearing equipment of the UNSC. It consists of a modular belt with various clips. This version has a holster assembly that allows one to carry the M6D comfortably secure. It also contains side pouches that can store pistol magazines."
+/obj/item/storage/belt/gun/pistol/stand
+	name = "\improper M276 pattern M4A3 holster rig"
+	desc = "The M276 is the standard load-bearing equipment of the TGMC. It consists of a modular belt with various clips. This version has a holster assembly that allows one to carry the M4A3 comfortably secure. It also contains side pouches that can store 9mm or .45 magazines."
 	can_hold = list(
 		/obj/item/weapon/gun/pistol,
 		/obj/item/ammo_magazine/pistol,
@@ -702,16 +737,6 @@
 		/obj/item/weapon/gun/revolver,
 		/obj/item/ammo_magazine/revolver,
 	)
-
-/obj/item/storage/belt/gun/revolver/cowboy_holster
-	name = "\improper Classic western gunbelt"
-	desc = "A nice western cowboy gunbelt, it's been fitted to only hold the Colt Navy and loose ammo."
-	icon_state = "cowboy_holster"
-	item_state = "cowboy_holster"
-	can_hold = list(
-		/obj/item/weapon/gun/revolver/coltnavy,
-		/obj/item/ammo_magazine/handful
-		)
 
 /obj/item/storage/belt/gun/m44
 	name = "\improper M276 pattern M44 holster rig"
@@ -796,7 +821,7 @@
 
 /obj/item/storage/belt/gun/korovin/standard/Initialize()
 	. = ..()
-	var/obj/item/weapon/gun/new_gun = new /obj/item/weapon/gun/pistol/c99/upp(src)
+	var/obj/item/weapon/gun/new_gun = new /obj/item/weapon/gun/pistol/c99(src)
 	new /obj/item/ammo_magazine/pistol/c99(src)
 	new /obj/item/ammo_magazine/pistol/c99(src)
 	new /obj/item/ammo_magazine/pistol/c99(src)
@@ -807,7 +832,7 @@
 
 /obj/item/storage/belt/gun/korovin/tranq/Initialize()
 	. = ..()
-	var/obj/item/weapon/gun/new_gun = new /obj/item/weapon/gun/pistol/c99/upp/tranq(src)
+	var/obj/item/weapon/gun/new_gun = new /obj/item/weapon/gun/pistol/c99/tranq(src)
 	new /obj/item/ammo_magazine/pistol/c99t(src)
 	new /obj/item/ammo_magazine/pistol/c99t(src)
 	new /obj/item/ammo_magazine/pistol/c99t(src)
@@ -836,4 +861,3 @@
 	var/obj/item/weapon/gun/new_gun = new /obj/item/weapon/gun/shotgun/double/marine(src)
 	new /obj/item/ammo_magazine/shotgun(src)
 	new_gun.on_enter_storage(src)
-

@@ -74,7 +74,9 @@
 		return ..()
 
 	var/mob/living/M = AM
-	if(M.status_flags & INCORPOREAL)
+	if(M.status_flags & INCORPOREAL)  //Flying over shards doesn't break them 
+		return ..()
+	if (CHECK_MULTIPLE_BITFIELDS(M.flags_pass, HOVERING))
 		return ..()
 
 	playsound(loc, 'sound/effects/glass_step.ogg', 25, TRUE)
@@ -112,7 +114,7 @@
 	embedding = list("embedded_flags" = EMBEDDEED_DEL_ON_HOLDER_DEL, "embed_chance" = 0, "embedded_fall_chance" = 0)
 
 
-/obj/item/shard/shrapnel/Initialize(mapload, new_name, new_desc, obj/projectile/proj)
+/obj/item/shard/shrapnel/Initialize(mapload, new_name, new_desc)
 	. = ..()
 	if(!isnull(new_name))
 		name = new_name
@@ -127,39 +129,3 @@
 	throwforce = 15
 	icon_state = "phoron"
 	source_sheet_type = /obj/item/stack/sheet/glass/phoronglass
-
-/obj/item/shard/blamite
-	name = "blamite shard"
-	desc = "A shard of blamite glass. Considerably tougher then normal glass shards."
-	icon_state = "blamite"
-	force = 8
-	throwforce = 15
-	source_sheet_type = null
-	color = "#951DFF"
-
-/obj/item/shard/shrapnel/blamite
-	name = "blamite shard"
-	desc = "Its a blamite shrapnel"
-	icon_state = "blamite"
-	var/blamite_limit = 6
-	var/explosion_range = 2
-
-/obj/item/shard/shrapnel/blamite/Initialize(mapload, new_name, new_desc, obj/projectile/proj)
-	. = ..()
-	if(proj && istype(proj.ammo, /datum/ammo/bullet/needles))
-		var/datum/ammo/bullet/needles/N = proj.ammo
-		blamite_limit = N.blamite_limit
-		explosion_range = N.explosion_range
-
-/obj/item/shard/shrapnel/blamite/embed_into(mob/living/target, target_zone, silent)
-	if(!..())
-		return FALSE
-	var/list/blamites = target.get_embedded_objects(src.type)
-	if(blamites.len >= blamite_limit)
-		target.visible_message("<span class='danger'>The crystals combine together on [target], creating an outwards explosion!!</span>")
-		for(var/obj/item/shard/shrapnel/blamite/B in blamites)
-			B.unembed_ourself()
-		explosion(get_turf(target), 0, round(explosion_range/2), explosion_range)
-	else
-		. = TRUE
-

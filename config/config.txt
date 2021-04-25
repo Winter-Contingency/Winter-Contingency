@@ -5,16 +5,16 @@ $include dbconfig.txt
 $include resources.txt
 
 ## Server name: This appears at the top of the screen in-game.
-SERVER_NAME Halo : Winter Contingency
+SERVER_NAME Something
 
 ## Hosted by name for unix platforms.
-HOSTEDBY emoats18
+HOSTEDBY yournamehere
 
 ## The title of the main window.
-TITLE Halo : Winter Contingency
+TITLE Change Me
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
-HUB
+#HUB
 
 ## Optional URL for faster resource downloading.
 #RESOURCE_URL url
@@ -49,9 +49,9 @@ PROTECT_LEGACY_RANKS
 #FORUMURL
 #WIKIURL
 #RULESURL
-DISCORDURL https://discord.gg/8h6PUVt
+#DISCORDURL
 #DONATIONURL
-GITHUBURL https://github.com/Winter-Contingency/Winter-Contingency
+#GITHUBURL
 #BANAPPEALS
 
 ## Uncomment to enable global ban DB using the provided URL. The API should expect to receive a ckey at the end of the URL.
@@ -190,3 +190,6 @@ GUEST_BAN
 
 ## Comment this out to disable checking for the cid randomizer dll. (disabled if database isn't enabled or connected)
 CHECK_RANDOMIZER
+
+##Set this number to the maximum number of players you want, after which game mode votes cannot be started
+MAXIMUM_CLIENTS_FOR_GAMEMODE_VOTE 40

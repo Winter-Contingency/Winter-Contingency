@@ -4,33 +4,25 @@
 	required_players = 0
 	votable = FALSE
 
-//we need seperate gamemodes for urf/covvies
 	valid_job_types = list(
-		/datum/job/unsc/marine/basic = -1,
-		/datum/job/unsc/marine/medic = 6,
-		/datum/job/unsc/marine/engineer = 6,
-		/datum/job/unsc/marine/leader = 1,
-		/datum/job/insurrectionist/basic = -1,
-		/datum/job/insurrectionist/medic = 6,
-		/datum/job/insurrectionist/engineer = 6,
-		/datum/job/insurrectionist/leader = 1,
-		/datum/job/gcpd/chief = 1,
-		/datum/job/gcpd/cop = 3,
-		/datum/job/civ/mayor = 1,
-		/datum/job/civ/colonist = 4,
-		/datum/job/civ/doctor = 1,
-		/datum/job/civ/chef = 1,
-		/datum/job/civ/chaplain = 1,
-		/datum/job/civ/farmer = 1,
-		/datum/job/civ/janitor = 1
-		/*
-		/datum/job/covenant/sangheili/minor = -1,
-		/datum/job/covenant/sangheili/ranger = -1,
-		/datum/job/covenant/sangheili/officer = -1,
-		/datum/job/covenant/sangheili/specops = -1,
-		/datum/job/covenant/sangheili/ultra = -1,
-		/datum/job/covenant/sangheili/general = -1
-		*/
+		/datum/job/terragov/command/captain = 1,
+		/datum/job/terragov/command/fieldcommander = 1,
+		/datum/job/terragov/command/staffofficer = 4,
+		/datum/job/terragov/command/pilot = 2,
+		/datum/job/terragov/engineering/chief = 1,
+		/datum/job/terragov/engineering/tech = 1,
+		/datum/job/terragov/requisitions/officer = 1,
+		/datum/job/terragov/medical/professor = 1,
+		/datum/job/terragov/medical/medicalofficer = 6,
+		/datum/job/terragov/medical/researcher = 2,
+		/datum/job/terragov/civilian/liaison = 1,
+		/datum/job/terragov/silicon/synthetic = 1,
+		/datum/job/terragov/silicon/ai = 1,
+		/datum/job/terragov/squad/engineer = 8,
+		/datum/job/terragov/squad/corpsman = 8,
+		/datum/job/terragov/squad/smartgunner = 4,
+		/datum/job/terragov/squad/leader = 4,
+		/datum/job/terragov/squad/standard = -1
 	)
 
 /datum/game_mode/extended/announce()
@@ -53,5 +45,3 @@
 
 	announce_medal_awards()
 	announce_round_stats()
-
-
