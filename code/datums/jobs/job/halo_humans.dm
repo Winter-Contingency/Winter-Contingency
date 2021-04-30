@@ -14,7 +14,7 @@
 	minimal_access = list(ACCESS_UNSC_MARINE, ACCESS_MARINE_DROPSHIP)
 	faction = FACTION_UNSC
 	max_positions = -1 //infinite
-	supervisors = "squad leader"
+	supervisors = "UNSC Squad Leader"
 	outfit = /datum/outfit/job/unsc
 	display_order = JOB_DISPLAY_ORDER_UNSC_MARINE
 	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST|JOB_FLAG_PROVIDES_SQUAD_HUD
@@ -32,7 +32,7 @@
 	minimal_access = list(ACCESS_UNSC_MARINE, ACCESS_UNSC_MEDIC, ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_MEDPREP, ACCESS_MARINE_MEDBAY)
 	faction = FACTION_UNSC
 	max_positions = 6
-	supervisors = "squad leader"
+	supervisors = "UNSC Squad Leader"
 	outfit = /datum/outfit/job/unsc/medic
 	skills_type = /datum/skills/combat_medic
 	display_order = JOB_DISPLAY_ORDER_UNSC_MEDIC
@@ -51,11 +51,11 @@
 	minimal_access = list(ACCESS_UNSC_MARINE, ACCESS_UNSC_ENGINEER, ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_ENGPREP, ACCESS_MARINE_ENGINEERING)
 	faction = FACTION_UNSC
 	max_positions = 6
-	supervisors = "squad leader"
+	supervisors = "UNSC Squad Leader"
 	outfit = /datum/outfit/job/unsc/engineer
 	skills_type = /datum/skills/combat_engineer
 	display_order = JOB_DISPLAY_ORDER_UNSC_ENGINEER
-	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST|JOB_FLAG_PROVIDES_SQUAD_HUD
+	//job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST|JOB_FLAG_PROVIDES_SQUAD_HUD
 
 /datum/job/unsc/marine/engineer/radio_help_message(mob/M)
 	. = ..()
@@ -97,12 +97,14 @@
 	ears = /obj/item/radio/headset/unsc
 	back = /obj/item/storage/backpack/marine/corpsman
 
+
 /datum/outfit/job/unsc/engineer
 	name = "UNSC Combat Engineer"
 	jobtype = /datum/job/unsc/marine/engineer
 	id = /obj/item/card/id/dogtag
 	ears = /obj/item/radio/headset/unsc
 	back = /obj/item/storage/backpack/marine/engineerpack
+
 
 /datum/outfit/job/unsc/leader
 	name = "UNSC Squad Leader"
@@ -117,23 +119,24 @@
 	selection_color = "#3e6e38"
 	job_category = JOB_CAT_ODST
 
-/datum/job/unsc/odst/rifleman
-	title = "ODST Rifleman"
-	paygrade = "E2"
-	comm_title = "ODST-RFL"
-	access = list(ACCESS_UNSC_MARINE, ACCESS_ODST, ACCESS_ODST_RIFLEMAN, ACCESS_MARINE_DROPSHIP)
-	minimal_access = list(ACCESS_UNSC_MARINE, ACCESS_ODST, ACCESS_ODST_RIFLEMAN, ACCESS_MARINE_DROPSHIP)
+/datum/job/unsc/odst/specialist
+	title = "ODST Specialist"
+	paygrade = "E3"
+	comm_title = "ODST"
+	access = list(ACCESS_ODST, ACCESS_UNSC_MARINE, ACCESS_UNSC_ENGINEER, ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_ENGPREP, ACCESS_MARINE_ENGINEERING)
+	minimal_access = list(ACCESS_ODST, ACCESS_UNSC_MARINE, ACCESS_UNSC_ENGINEER, ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_ENGPREP, ACCESS_MARINE_ENGINEERING)
 	faction = FACTION_UNSC
 	max_positions = 1
-	supervisors = "ODST Squad Leader"
-	outfit = /datum/outfit/job/odst/rifleman
+	supervisors = "UNSC Squad Leader"
+	outfit = /datum/outfit/job/odst/specialist
+	skills_type = /datum/skills/halo_spec
 	display_order = JOB_DISPLAY_ORDER_ODST_RIFLEMAN
-	//job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST|JOB_FLAG_PROVIDES_SQUAD_HUD
+	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST|JOB_FLAG_PROVIDES_SQUAD_HUD
 
 /datum/job/unsc/odst/rifleman/radio_help_message(mob/M)
 	. = ..()
-	to_chat(M, {"\nYou are a ODST Medic in the esteemed United Nations Space Command. You enforce order and maintain peace across the galaxy."})
-
+	to_chat(M, {"\nYou are a ODST Specialist in the esteemed United Nations Space Command. You enforce order and maintain peace across the galaxy."})
+/*
 /datum/job/unsc/odst/engineer
 	title = "ODST Engineer"
 	paygrade = "E3"
@@ -219,18 +222,19 @@
 /datum/job/unsc/odst/sl/radio_help_message(mob/M)
 	. = ..()
 	to_chat(M, {"\nYou are a ODST Squad Leader in the esteemed United Nations Space Command. You command the rest of the ODSTs."})
-
+*/
 
 
 //ODST outfits
 
-/datum/outfit/job/odst/rifleman
-	name = "ODST Rifleman"
-	jobtype = /datum/job/unsc/odst/rifleman
+/datum/outfit/job/odst/specialist
+	name = "ODST Specialist"
+	jobtype = /datum/job/unsc/odst/specialist
 	id = /obj/item/card/id/dogtag
 	ears = /obj/item/radio/headset/odst
 	back = /obj/item/storage/backpack/odst
 
+/*
 /datum/outfit/job/odst/sniper
 	name = "ODST Sniper"
 	jobtype = /datum/job/unsc/odst/sniper
@@ -265,6 +269,7 @@
 	id = /obj/item/card/id/dogtag
 	ears = /obj/item/radio/headset/odst
 	back = /obj/item/storage/backpack/odst/sl
+*/
 
 //Innies
 
@@ -280,7 +285,7 @@
 	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER)
 	faction = FACTION_INSURRECTION
 	max_positions = -1 //infinite
-	supervisors = "squad leader"
+	supervisors = "Insurrectionist Warlord"
 	outfit = /datum/outfit/job/insurrection
 	display_order = JOB_DISPLAY_ORDER_INSURRECTIONIST
 	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST
@@ -298,7 +303,7 @@
 	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_MEDIC)
 	faction = FACTION_INSURRECTION
 	max_positions = 6
-	supervisors = "squad leader"
+	supervisors = "Insurrectionist Warlord"
 	outfit = /datum/outfit/job/insurrection/medic
 	skills_type = /datum/skills/combat_medic
 	display_order = JOB_DISPLAY_ORDER_INSURRECTIONIST_MEDIC
@@ -318,15 +323,16 @@
 	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
 	faction = FACTION_INSURRECTION
 	max_positions = 6
-	supervisors = "squad leader"
+	supervisors = "Insurrectionist Warlord"
 	outfit = /datum/outfit/job/insurrection/engineer
 	skills_type = /datum/skills/combat_engineer
 	display_order = JOB_DISPLAY_ORDER_INSURRECTIONIST_ENGINEER
-	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST
+	//job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST
 
 /datum/job/insurrectionist/engineer/radio_help_message(mob/M)
 	. = ..()
 	to_chat(M, {"\nYou are a crafty insurrectionist sapper. Help your brothers by using explosives and constructing barricades."})
+
 
 
 /datum/job/insurrectionist/leader
@@ -334,7 +340,7 @@
 	paygrade = "INSL"
 	comm_title = "Warlord"
 	access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_LEADER)
-	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_LEADER, ACCESS_MARINE_DROPSHIP)
+	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_LEADER)
 	faction = FACTION_INSURRECTION
 	max_positions = 1
 	supervisors = ""
@@ -384,24 +390,26 @@
 
 /datum/job/insurrectionist/commando/
 	selection_color = "#ba3838"
-	job_category = JOB_CAT_URFC
+	job_category = JOB_CAT_INSURRECTION
 
-/datum/job/insurrectionist/commando/rifleman
-	title = "URF Commando Rifleman"
+/datum/job/insurrectionist/commando/specialist
+	title = "URF Commando Specialist"
 	paygrade = "URFC"
-	comm_title = "URFC-RFL"
-	access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER, ACCESS_URFC_RIFLEMAN)
-	minimal_access = list(ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER, ACCESS_URFC_RIFLEMAN)
+	comm_title = "URFC"
+	access = list(ACCESS_URFC_RIFLEMAN ,ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
+	minimal_access = list(ACCESS_URFC_RIFLEMAN, ACCESS_INSURRECTIONIST_SOLDIER, ACCESS_INSURRECTIONIST_ENGINEER)
+	faction = FACTION_INSURRECTION
 	max_positions = 2
-	supervisors = "URFC Commander"
-	outfit = /datum/outfit/job/insurrection/commando/rifleman
+	supervisors = "Insurrectionist Warlord"
+	outfit = /datum/outfit/job/insurrection/commando/specialist
 	display_order = JOB_DISPLAY_ORDER_URFC_RIFLEMAN
-	//job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST
+	skills_type = /datum/skills/halo_spec
+	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST
 
 /datum/job/insurrectionist/engineer/radio_help_message(mob/M)
 	. = ..()
-	to_chat(M, {"\nYou are a United Rebel Front Commando rifleman. An elite soldier of the URF, do what your commander says."})
-
+	to_chat(M, {"\nYou are a United Rebel Front Commando Specialist. An elite soldier of the URF, do what your commander says."})
+/*
 /datum/job/insurrectionist/commando/commander
 	title = "URF Commando Commader"
 	paygrade = "URFC-C"
@@ -499,16 +507,18 @@
 /datum/job/insurrectionist/commando/sl/radio_help_message(mob/M)
 	. = ..()
 	to_chat(M, {"\nYou are a United Rebel Front Commando squad leader. An elite soldier of the URF, do what your commander says."})
+*/
 
 //URFC Outfits
 
-/datum/outfit/job/insurrection/commando/rifleman
-	name = "URFC Rifleman"
-	jobtype = /datum/job/insurrectionist/commando/rifleman
+/datum/outfit/job/insurrection/commando/specialist
+	name = "URFC Specialist"
+	jobtype = /datum/job/insurrectionist/commando/specialist
 	id = /obj/item/card/id/dogtag
 	ears = /obj/item/radio/headset/urfc
 	back = /obj/item/storage/backpack/urfc_rifleman
 
+/*
 /datum/outfit/job/insurrection/commando/enigneer
 	name = "URFC Engineer"
 	jobtype = /datum/job/insurrectionist/commando/engineer
@@ -550,6 +560,7 @@
 	id = /obj/item/card/id/dogtag
 	ears = /obj/item/radio/headset/urfc
 	back = /obj/item/storage/backpack/urfc_rifleman
+*/
 
 //GCPD
 
@@ -583,7 +594,7 @@
 	jobtype = /datum/job/gcpd/cop
 
 	w_uniform = /obj/item/clothing/under/marine/gcpd
-	wear_suit = /obj/item/clothing/suit/storage/marine/gcpd_l
+	wear_suit = /obj/item/clothing/suit/storage/halo/gcpd_l
 	glasses = /obj/item/clothing/glasses/hud/security/gcpd
 	ears = /obj/item/radio/headset/gcpd
 	shoes = /obj/item/clothing/shoes/marine/gcpd
@@ -611,11 +622,11 @@
 	jobtype = /datum/job/gcpd/chief
 
 	w_uniform = /obj/item/clothing/under/marine/gcpd
-	wear_suit = /obj/item/clothing/suit/storage/marine/gcpd
+	wear_suit = /obj/item/clothing/suit/storage/halo/gcpd
 	glasses = /obj/item/clothing/glasses/hud/security/gcpd
 	ears = /obj/item/radio/headset/gcpd
 	shoes = /obj/item/clothing/shoes/marine/gcpd
-	head = /obj/item/clothing/head/helmet/marine/gcpd
+	head = /obj/item/clothing/head/helmet/halo/gcpd
 	gloves = /obj/item/clothing/gloves/marine/gcpd
 	back = /obj/item/storage/backpack/satchel/gcpd
 	belt = /obj/item/storage/belt/security

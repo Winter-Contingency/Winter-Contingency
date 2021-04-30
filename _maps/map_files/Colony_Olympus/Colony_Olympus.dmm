@@ -52,7 +52,7 @@
 "cI" = (/obj/machinery/light/spot{dir = 1},/turf/open/floor/tile/dark/red2{dir = 5},/area/prison/security)
 "cK" = (/obj/structure/curtain/black,/obj/structure/window/framed/colony,/turf/open/floor/wood,/area/prison/chapel)
 "cN" = (/turf/open/floor/tile/dark/red2,/area/swordbase/ground/armory)
-"cO" = (/obj/structure/rack,/obj/item/clothing/head/helmet/marine/gcpd/goggles,/turf/open/floor/tile/dark/red2{dir = 4},/area/prison/security)
+"cO" = (/obj/structure/rack,/obj/item/clothing/head/helmet/halo/gcpd/goggles,/turf/open/floor/tile/dark/red2{dir = 4},/area/prison/security)
 "cQ" = (/obj/structure/rack,/obj/item/clothing/head/welding,/obj/item/tool/weldingtool,/obj/machinery/light/spot{dir = 4},/turf/open/floor/asteroidfloor,/area/swordbase/ground/engineering)
 "cT" = (/obj/structure/filingcabinet/filingcabinet,/turf/open/floor/tile/dark/blue2/corner{dir = 1},/area/desert_dam/building/administration)
 "cX" = (/obj/structure/filingcabinet/filingcabinet,/obj/machinery/light/spot{dir = 8},/turf/open/floor/tile/dark/blue2{dir = 4},/area/desert_dam/building/administration)
@@ -167,7 +167,7 @@
 "jc" = (/obj/machinery/vending/innieGuns,/turf/open/floor/asteroid,/area/swordbase/ground/inniecave)
 "jh" = (/obj/structure/bed,/obj/effect/landmark/start/job/urf_leader,/turf/open/floor/grime,/area/swordbase/ground/inniecave)
 "jm" = (/obj/machinery/power/geothermal,/obj/structure/rack,/turf/open/floor/asteroidfloor,/area/swordbase/ground/engineering)
-"js" = (/obj/structure/closet/crate/ammo{name = "stolen goods"},/obj/item/weapon/gun/pistol/m6/m6b_security,/obj/item/weapon/gun/pistol/m6/m6b_security,/obj/item/clothing/head/helmet/marine/gcpd,/obj/item/clothing/head/helmet/marine/gcpd,/obj/item/clothing/suit/storage/marine/gcpd,/obj/item/clothing/under/marine/gcpd,/turf/open/floor/plating/ground/dirt2,/area/swordbase/ground/outdoors)
+"js" = (/obj/structure/closet/crate/ammo{name = "stolen goods"},/obj/item/weapon/gun/pistol/m6/m6b_security,/obj/item/weapon/gun/pistol/m6/m6b_security,/obj/item/clothing/head/helmet/halo/gcpd,/obj/item/clothing/head/helmet/halo/gcpd,/obj/item/clothing/suit/storage/halo/gcpd,/obj/item/clothing/under/marine/gcpd,/turf/open/floor/plating/ground/dirt2,/area/swordbase/ground/outdoors)
 "jt" = (/obj/structure/bed/chair/wood/wings{dir = 8},/turf/open/floor/wood,/area/prison/chapel)
 "jv" = (/obj/structure/table/holotable/wood,/obj/item/folder/blue,/turf/open/floor/wood,/area/swordbase/ground/bridge)
 "jw" = (/turf/open/ground,/area/swordbase/ground/outdoors)
@@ -320,6 +320,7 @@
 "qw" = (/obj/machinery/light/spot{dir = 1},/turf/open/floor/wood,/area/swordbase/ground/hydro)
 "qy" = (/obj/structure/filingcabinet/filingcabinet,/turf/open/floor/tile/dark/blue2/corner{dir = 8},/area/desert_dam/building/administration)
 "qz" = (/obj/machinery/light{dir = 4},/turf/open/floor/grime,/area/swordbase/ground/inniecave)
+"qA" = (/obj/structure/bed,/obj/effect/landmark/start/job/urf_commando,/turf/open/floor/grime,/area/swordbase/ground/inniecave)
 "qB" = (/obj/item/reagent_containers/glass/bucket/janibucket,/turf/open/floor/plating/asteroidfloor,/area/swordbase/ground/janitor_closet)
 "qC" = (/obj/structure/table/reinforced,/obj/item/defibrillator/civi,/turf/open/floor,/area/swordbase/ground/inniecave)
 "qF" = (/turf/closed/wall/indestructible/mineral,/area/swordbase/ground/outdoors)
@@ -458,7 +459,6 @@
 "xp" = (/obj/machinery/light/spot,/turf/open/floor/tile/dark/red2{dir = 10},/area/prison/security)
 "xq" = (/turf/open/floor/tile/dark/green2{dir = 5},/area/swordbase/ground/bridge)
 "xr" = (/obj/structure/table/reinforced,/obj/item/reagent_containers/food/condiment/saltshaker{pixel_x = 4; pixel_y = 4},/obj/item/reagent_containers/food/condiment/peppermill{pixel_x = -5; pixel_y = 6},/turf/open/floor/prison/kitchen,/area/swordbase/ground/kitchen)
-"xy" = (/obj/machinery/marine_selector/clothes/insurrection/engineer,/turf/open/floor/asteroid,/area/swordbase/ground/inniecave)
 "xG" = (/obj/structure/bed/fancy,/obj/item/bedsheet/hos,/turf/open/floor/tile/dark/red2{dir = 5},/area/prison/security/head)
 "xH" = (/obj/effect/decal/warning_stripes/thin{dir = 1},/obj/effect/decal/warning_stripes/thin{dir = 4},/obj/machinery/landinglight/ds1/delayone{dir = 4},/turf/open/ground/grass,/area/swordbase/ground/outdoors)
 "xI" = (/obj/structure/rack,/obj/item/stack/sheet/metal/large_stack,/obj/item/stack/sheet/metal/large_stack,/obj/item/stack/sheet/metal/large_stack,/turf/open/floor/asteroid,/area/swordbase/ground/inniecave)
@@ -469,13 +469,13 @@
 "xY" = (/obj/structure/table/woodentable,/turf/open/floor/tile/dark,/area/prison/security/head)
 "yc" = (/turf/open/floor/tile/dark/green2/corner{dir = 4},/area/swordbase/ground/bridge)
 "ye" = (/obj/structure/table/mainship,/obj/machinery/computer/shuttle/shuttle_control/dropship1,/turf/open/floor/tile/dark,/area/prison/security/checkpoint)
-"yf" = (/obj/structure/rack,/obj/item/clothing/head/helmet/marine/gcpd/goggles{pixel_x = 8},/obj/item/clothing/head/helmet/marine/gcpd/visor{pixel_x = -8},/obj/item/ammo_casing/bullet,/turf/open/floor/tile/dark/red2{dir = 8},/area/swordbase/ground/armory)
+"yf" = (/obj/structure/rack,/obj/item/clothing/head/helmet/halo/gcpd/goggles{pixel_x = 8},/obj/item/clothing/head/helmet/halo/gcpd/visor{pixel_x = -8},/obj/item/ammo_casing/bullet,/turf/open/floor/tile/dark/red2{dir = 8},/area/swordbase/ground/armory)
 "yg" = (/obj/structure/bed/chair/office/dark{dir = 8},/turf/open/floor/tile/dark/red2{dir = 4},/area/prison/security/head)
 "yk" = (/obj/structure/bed/chair/office/light{dir = 4},/turf/open/floor/carpet,/area/swordbase/ground/kitchen)
 "yl" = (/obj/machinery/light{dir = 4},/turf/open/floor/asteroid,/area/swordbase/ground/inniecave)
 "ym" = (/obj/structure/table/woodentable,/obj/item/reagent_containers/food/drinks/coffee,/turf/open/floor/carpet,/area/swordbase/ground/kitchen)
 "yo" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/power/apc{pixel_y = 14},/turf/open/floor/plating/asteroidfloor,/area/desert_dam/building/mining)
-"yp" = (/obj/machinery/marine_selector/clothes/insurrection/engineer,/turf/open/ground/grass,/area/swordbase/ground/inniecave)
+"yp" = (/obj/machinery/marine_selector/clothes/insurrection/urfc,/turf/open/floor/grime,/area/swordbase/ground/inniecave)
 "yq" = (/obj/structure/table/reinforced,/obj/item/tool/kitchen/tray,/turf/open/floor/wood,/area/swordbase/ground/hydro)
 "yr" = (/obj/effect/decal/warning_stripes/thin{dir = 4},/obj/machinery/landinglight/ds1{dir = 4},/turf/open/ground/grass,/area/swordbase/ground/outdoors)
 "ys" = (/obj/machinery/door/poddoor/gamemode,/obj/machinery/door/airlock/multi_tile/mainship/generic/unsc{icon = 'icons/obj/doors/Door2x1_secure.dmi'; max_integrity = 50000000; openspeed = 34},/turf/open/floor/plating,/area/swordbase/ground/outdoors)
@@ -571,7 +571,6 @@
 "Dn" = (/obj/structure/table/reinforced,/obj/machinery/microwave,/turf/open/floor/wood,/area/ice_colony/surface/bar)
 "Dp" = (/obj/structure/rack,/obj/item/tool/kitchen/knife/butcher,/turf/open/floor/freezer,/area/swordbase/ground/kitchen)
 "Dv" = (/obj/structure/table/reinforced,/obj/machinery/reagentgrinder,/turf/open/floor/tile/dark,/area/prison/security)
-"Dx" = (/obj/structure/bed,/obj/effect/landmark/start/job/urf_engineer,/turf/open/floor/grime,/area/swordbase/ground/inniecave)
 "DD" = (/obj/structure/bed/chair/office/light{dir = 1},/turf/open/floor/carpet,/area/swordbase/ground/kitchen)
 "DG" = (/obj/effect/decal/warning_stripes/thin{dir = 4},/obj/machinery/landinglight/ds1/delaythree{dir = 4},/turf/open/ground/grass,/area/swordbase/ground/outdoors)
 "DH" = (/obj/machinery/light/spot{dir = 8},/turf/open/floor/tile/dark/blue2{dir = 8},/area/desert_dam/building/administration)
@@ -1137,12 +1136,12 @@ qFVQVQVQVQVQVQVQVQXRXRXRKSXREpEpXRXRGxGxGxGxonVQVQVQonGxGxGxGxGxGxGxZXZXGxGxGxUW
 qFVQVQVQVQVQVQVQXRXRXRXRXRKSEpEpEpXRXRGxGxGxGxononVQonGxGxGxGxGxGxGxZXZXZXGxGxUWeieKedeKeKeKeKeKedeKnqNtGxGxGxZXZXGxLtGxGxXWKUPfnxCMCMCMCMCMCMCMKUPfnxXWGxGxGxGxGxGxVQVQVQVQpSpSpSpSpSpSpSpSODGxGxpSpSGxGxonGxGxGxGxGxZXGxGmGxonVQVQonVQonZoZXGxGxGxGxonVQVQVQVQVQVQVQqFVQVQVQVQVQVQamFhFhaosOpUpUpUpUpUaoFhFhaojcjcjcaohudpdpdprFtmrFrFdpuvdpdpdpjcaoamamVQqFqFqFqFqFqF
 qFVQVQVQVQVQVQVQXRXRXRQaXRXREpEpEpEpXRGxGxGxGxGxonVQVQonZoZoonGxGxGxZXZXZXGxGxUWBjqZEyltwGeKeKilEyQkpVNtGxGxGxZXAQGxGxGxGxXWXWCMCMCMCMCMCMCMCMCMCMCMXWXWQCGxGxGxGxGxGxGxGxDeCorMzjpSCocizjpSpSpSpSpSpSGxGxGxGxGxUZGxZXZXGxGxZoonVQVQVQVQVQonZoGxZXGxdLVQVQVQVQVQVQVQVQqFVQVQVQVQVQVQamFhuNuSpUpUpUpUpUaoamamjcvgdpdpdpvgdprFrFrFrFrFdpdpuvvOdpdpdpjcamamamVQqFqFqFqFqFqF
 qFVQVQVQVQVQVQXRXRXRXRXRXRXRKSEpEpEpXRGxGxGxGxGxGxononZohxonVQonGxGxGxGxZXZXGxUWUWUWUWUWUWKrUWUWUWUWUWGxGxGxZXZXZXGxGxQCGxGxXWXWCMCMCMCMMyCMCMjzjzXWXWGxGxGxGxGxGxGxGxVQZXDepSpSpSpSpSpSpSpSpSpSpSpSpSZXZXGmGxGxGxGxZXZXftGxVQonVQVQVQVQVQVQonGxZoECGxVQVQVQVQVQVQVQVQqFVQVQVQVQVQVQamFhpUpUpUvRwcpUpUamamaojcdpdpdprFrFrFdpdpdprFdptmdpqvaodpdpdprFwhaoamVQqFqFqFqFqFqF
-qFVQVQVQVQVQVQEpXRXRXRXRXRXRXRXREpEpXRXRGxGxGxGxGxGxGxGxZoonVQVQonGxGxGxZXZXZXGxGxGxGxGxGxGxGxGxGxGxGxGxGxGxZXZXZXGxGxGxGxGxGxGxdPXWMpJzXWJzMpXWXWGxGxGxGxUZGxGxGxVQVQZXZXDeCoxMzjpSCojIzjpSODGxGxononZoGxZXZXZXFjGxZXZXGxGxniVQVQVQVQVQVQVQonZoZXhxZoVQVQVQVQVQVQVQVQqFVQVQVQVQVQFhFhFhuNwrpUaoampUpUaocdamaohudpdprFvOdpdpcdqvdpdprFdpqvamxydpdprFxIamamVQqFqFqFqFqFqF
-qFVQVQVQVQVQVQXRXRXRXREpEpXRKSXREpEpEpXRXRXRGxGxGxGxGxGxGxGxononVQonZoGxGxZXZXZXZXGxGxGxZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXGxGxGxGxGxGxGxZXZXZXZXGxGxGxGxGxGxGxGxGxGxGxGxGxZXGxlFUeUeUepSpSUeUeUeRoGxononVQonZoZXGxZXZXZXZXZXZXrDWJononVQVQVQVQVQVQZohxZoEConVQVQVQVQVQVQVQqFVQVQVQVQFhFhamaoampUpUamampUpUaoaoamdpdpdpdpylaoqvqvamamqvdpdpdpdCcdamxyypyQamamamVQqFqFqFqFqFqF
+qFVQVQVQVQVQVQEpXRXRXRXRXRXRXRXREpEpXRXRGxGxGxGxGxGxGxGxZoonVQVQonGxGxGxZXZXZXGxGxGxGxGxGxGxGxGxGxGxGxGxGxGxZXZXZXGxGxGxGxGxGxGxdPXWMpJzXWJzMpXWXWGxGxGxGxUZGxGxGxVQVQZXZXDeCoxMzjpSCojIzjpSODGxGxononZoGxZXZXZXFjGxZXZXGxGxniVQVQVQVQVQVQVQonZoZXhxZoVQVQVQVQVQVQVQVQqFVQVQVQVQVQFhFhFhuNwrpUaoampUpUaocdamaohudpdprFvOdpdpcdqvdpdprFdpqvamypdpdprFxIamamVQqFqFqFqFqFqF
+qFVQVQVQVQVQVQXRXRXRXREpEpXRKSXREpEpEpXRXRXRGxGxGxGxGxGxGxGxononVQonZoGxGxZXZXZXZXGxGxGxZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXGxGxGxGxGxGxGxZXZXZXZXGxGxGxGxGxGxGxGxGxGxGxGxGxZXGxlFUeUeUepSpSUeUeUeRoGxononVQonZoZXGxZXZXZXZXZXZXrDWJononVQVQVQVQVQVQZohxZoEConVQVQVQVQVQVQVQqFVQVQVQVQFhFhamaoampUpUamampUpUaoaoamdpdpdpdpylaoqvqvamamqvdpdpdpdCcdamypypyQamamamVQqFqFqFqFqFqF
 qFVQVQVQVQVQVQXRXRXRXRXREpEpKSXRXREpEpEpXRXRXRGxGxGxGxGxGxGxGxGxonZohxZoononAQAQZXZXZXZXZXGxGxAQAQZXZXZXZXZXGtZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXGxGxGxGxGxGxGxQCGxGxGxGxGxGxGxZXZXGxGxGxGxGxonVQVQonBUZXGxZXZXGxZXZXGxbMGxTlpkVQVQVQVQVQonGxECECGxonVQVQVQVQVQVQVQqFVQVQVQVQFhaozDzQzQpUpUaoaoBfpUBzrFdpdpdpdprFdpjcamamamamaohudpylaoamamamamamamamVQVQqFqFqFqFqFqF
 qFqFVQVQVQVQVQEpKSXRXRXRXREpXRXRXRXREpEpEpEpXRXRGxGxGxGxGxGxGxGxGxGxZoonVQVQononGxGxGxZXZXZXZXZXGxGxGxGxGxGxGxGxZXZXZXZXZXZXGtGtZXZXZXZXGtGtZXZXZXZXGtZXZXZXZXGxGxGxZXGxGxGxFjGxGxZXGxZXGxGxGxonVQononZoECGxZXZXGxGxZXZXZYWJhJrlononVQVQVQVQonGxECGxGxonVQVQVQVQVQVQVQqFVQVQVQVQFhamCgpUpUpUpUpUpUpUpUrFrFrFrFrFrFrFdpjcamcdcdamcddpdpdCcdamamcdcdamamVQVQVQqFqFqFqFqFqF
-qFqFVQVQVQVQVQVQEpKSXRXRXRXRXRXRKSXREpEpEpEpEpXRXRXRXRXRXRXRGxGxGxGxGxGxonVQVQVQonGxGxGxGxGxGxGxLtGxGxGxGxGxGxGxGxZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXGxZXGxZXGxGxGxGxonononZoZXZXZXGxonononZXZXGxZYTlonVQVQVQVQVQVQonZoGxZXERonVQVQVQVQVQVQVQqFVQVQVQVQFhaoChpUpUpUpUpUpUrFrFrFrFrFrFrFrFrFdpcdamCEtmaocddpdprFcdamDxDVDWamamVQVQVQqFqFqFqFqFqF
-qFqFqFVQVQVQVQVQVQEpXRKSXRXRXRXRXRXRXRXREpEpEpEpEpEpEpEpEpXRXRXRGxGxGxGxGxonononGxGxZWGxGxLtLtLtGxGxGxQCGxGxGxGxGxGxGxGxGxGxGxGxGxGxGxGxGxGxZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXGxFsGxGxZoGxZoZXZXZXGxonVQVQonGtGtZXZoVQVQVQVQVQVQVQVQonZoGxGxZXZoVQVQVQVQVQVQVQqFVQVQVQVQFhFhEgEjEkFrFxaorFrFrFrFrFrFrFrFrFqzaoamcdFzDVFSGrdpdpdpylaoDxDVGDcdamVQVQVQqFqFqFqFqFqF
+qFqFVQVQVQVQVQVQEpKSXRXRXRXRXRXRKSXREpEpEpEpEpXRXRXRXRXRXRXRGxGxGxGxGxGxonVQVQVQonGxGxGxGxGxGxGxLtGxGxGxGxGxGxGxGxZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXGxZXGxZXGxGxGxGxonononZoZXZXZXGxonononZXZXGxZYTlonVQVQVQVQVQVQonZoGxZXERonVQVQVQVQVQVQVQqFVQVQVQVQFhaoChpUpUpUpUpUpUrFrFrFrFrFrFrFrFrFdpcdamCEtmaocddpdprFcdamqADVDWamamVQVQVQqFqFqFqFqFqF
+qFqFqFVQVQVQVQVQVQEpXRKSXRXRXRXRXRXRXRXREpEpEpEpEpEpEpEpEpXRXRXRGxGxGxGxGxonononGxGxZWGxGxLtLtLtGxGxGxQCGxGxGxGxGxGxGxGxGxGxGxGxGxGxGxGxGxGxZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXZXGxFsGxGxZoGxZoZXZXZXGxonVQVQonGtGtZXZoVQVQVQVQVQVQVQVQonZoGxGxZXZoVQVQVQVQVQVQVQqFVQVQVQVQFhFhEgEjEkFrFxaorFrFrFrFrFrFrFrFrFqzaoamcdFzDVFSGrdpdpdpylaoqADVGDcdamVQVQVQqFqFqFqFqFqF
 qFqFqFVQVQVQVQVQVQVQEpXRXRXRXRQaXRXRXRXRXRXREpEpEpEpEpEpEpEpEpXRXRGxGxGxGxGxGxGxGxGxGxGxGxGxGxGxGxGxVQVQVQGxGxGxGxGxGxGxZWGxGxGxGxQCGxGxGxGxGxGxGxGxGxZXZXZXZXGtZXZXZXZXZXZXZXZXZXZXZXZXFjFsGxGxQCGxZXGxGxGxonVQVQonZXZXGxonVQVQVQVQVQVQVQVQVQGxZXFjGxGxonVQVQVQVQVQVQqFVQVQVQVQVQFhFhFhFhFhFhFhFhFhFhdpdprFrFrFdpaoamamcdFzDVFzGrdpdprFdpdpdpDVHpaoamVQVQVQqFqFqFqFqFqF
 qFqFqFqFVQVQVQVQVQVQVQEpEpXRXRXRXRXRXRKSXRXRXRXRXRXREpEpEpEpEpEpXRXRXRXRGxGxGxGxGxGxGxGxGxGxGxGxGxVQZoZoVQVQVQhxhxZoZohxGxGxGxonGxGxGxGxGxGxGxGxGxGxGxZXGxGxGxGxGxGxGxGxGxZXZXGxGxZXZXZXZXZXZXGxGxZXZXZXGxonVQVQonZoZXGtZoVQVQVQVQVQVQVQVQVQonZoFsZXGxZoonVQVQVQVQVQVQqFqFqFqFqFqFqFFhamamamamamamamamdpdpdpdpdpdpcdamamamdpdpdpdpdpdpdpdpdpdpdpdCcdamVQVQVQqFqFqFqFqFqF
 qFqFqFqFqFVQVQVQVQVQVQVQEpXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXREpEpEpEpEpXRXRXRXRXRXRXRXRXRGxGxGxGxGxGxGxGxGxGxGxGxhxhxhxZohxhxonVQononononGxGxGxGxGxGxZXZXGxGxGxGxGxGxGxGxGxGxZXZXZXGxZXZXZXZXZXZXZXZXZXZXZXGxGxGxZoGxZXZXVQVQVQVQVQVQVQVQVQVQonGxZXGxGxZoonVQVQVQVQVQVQqFVQVQVQVQamamamamamamqzaoaohudpdpdpdpdpdpdpamamamcdFzDVFzGrrFrFHMDVDVDVHXtmamamVQVQVQqFqFqFqFqFqF

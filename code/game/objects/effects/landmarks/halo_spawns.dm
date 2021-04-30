@@ -22,6 +22,11 @@
 	job = /datum/job/unsc/marine/basic
 	jobspawn_override = TRUE
 
+/obj/effect/landmark/start/job/unsc_odst
+	icon_state = "Eng"
+	job = /datum/job/unsc/odst/specialist
+	jobspawn_override = TRUE
+
 //Covenant//
 
 /obj/effect/landmark/start/job/covenant/
@@ -78,6 +83,11 @@
 /obj/effect/landmark/start/job/urf_insurrectionist
 	icon_state = "IO"
 	job = /datum/job/insurrectionist/basic
+	jobspawn_override = TRUE
+
+/obj/effect/landmark/start/job/urf_commando
+	icon_state = "CSE"
+	job = /datum/job/insurrectionist/commando/specialist
 	jobspawn_override = TRUE
 
 //GCPD//

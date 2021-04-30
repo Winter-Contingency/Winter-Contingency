@@ -13,19 +13,19 @@
 	valid_job_types = list(
 							/datum/job/unsc/marine/basic = -1,
 							/datum/job/unsc/marine/medic = 6,
-							/datum/job/unsc/marine/engineer = 6,
+							/datum/job/unsc/odst/specialist = 6,
 							/datum/job/unsc/marine/leader = 1,
 
 							/datum/job/insurrectionist/basic = -1,
 							/datum/job/insurrectionist/medic = 6,
-							/datum/job/insurrectionist/engineer = 6,
+							/datum/job/insurrectionist/commando/specialist = 6,
 							/datum/job/insurrectionist/leader = 1
 	)
 	//liberation_gamemode_delay = 5 MINUTES see configuration.dm
 
 /datum/game_mode/liberation/announce()
 	to_chat(world, "<b>The current game mode is Liberation!</b>")
-	to_chat(world, "<b>The war starts in [config.liberation_gamemode_delay/(1 MINUTES)] minutes.!</b>")
+	to_chat(world, "<b>The war starts in [config.liberation_gamemode_delay/(1 MINUTES)] minutes!</b>")
 
 /datum/game_mode/liberation/on_setup()
 	addtimer(CALLBACK(src, .proc/open_doors), config.liberation_gamemode_delay)
