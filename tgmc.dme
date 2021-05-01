@@ -1528,6 +1528,7 @@
 #include "code\modules\surgery\robolimbs.dm"
 #include "code\modules\surgery\surgery.dm"
 #include "code\modules\tgs\includes.dm"
+#include "code\modules\tgs\tgs.dm"
 #include "code\modules\tgui\external.dm"
 #include "code\modules\tgui\states.dm"
 #include "code\modules\tgui\subsystem.dm"
