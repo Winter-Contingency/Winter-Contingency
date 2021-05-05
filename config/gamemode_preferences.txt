@@ -1,2 +1,5 @@
 ## liberation gamemode delay in minutes
 LIBERATION_GAMEMODE_DELAY 5
+
+## advantage in players for one faction over the other.
+MAXIMUM_PLAYER_ADVENTAGE 1

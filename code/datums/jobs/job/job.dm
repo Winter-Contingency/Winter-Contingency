@@ -310,3 +310,11 @@ GLOBAL_PROTECT(exp_specialmap)
 
 /datum/job/proc/handle_special_preview(client/parent)
 	return FALSE
+
+/proc/get_players_in_faction(faction_)
+	var/total_positions
+	for(var/mob/living/carbon/human/H in GLOB.alive_human_list)
+		if(H.faction == faction_)
+			total_positions++
+	to_chat(world, "<span class='warning'>los cargos totales en [faction_] es [total_positions]</span>")
+	return total_positions

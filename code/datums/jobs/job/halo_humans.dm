@@ -2,9 +2,17 @@
 
 //UNSC
 
-/datum/job/unsc/marine/
+/datum/job/unsc/marine
 	selection_color = "#57994e"
 	job_category = JOB_CAT_UNSC
+	faction = FACTION_UNSC
+
+/datum/job/unsc/marine/special_check_latejoin(client/C)
+	if(!..())
+		return FALSE
+	if(get_players_in_faction(FACTION_UNSC) - get_players_in_faction(FACTION_INSURRECTION) >= config.maximum_player_adventage)
+		return FALSE
+	return TRUE
 
 /datum/job/unsc/marine/basic
 	title = "UNSC Marine"
@@ -271,6 +279,14 @@
 /datum/job/insurrectionist
 	selection_color = "#ff5757"
 	job_category = JOB_CAT_INSURRECTION
+	faction = FACTION_INSURRECTION
+
+/datum/job/insurrectionist/special_check_latejoin(client/C)
+	if(!..())
+		return FALSE
+	if(get_players_in_faction(FACTION_INSURRECTION) - get_players_in_faction(FACTION_UNSC) >= config.maximum_player_adventage)
+		return FALSE
+	return TRUE
 
 /datum/job/insurrectionist/basic
 	title = "Insurrectionist Fighter"
