@@ -316,5 +316,4 @@ GLOBAL_PROTECT(exp_specialmap)
 	for(var/mob/living/carbon/human/H in GLOB.alive_human_list)
 		if(H.faction == faction_)
 			total_positions++
-	to_chat(world, "<span class='warning'>los cargos totales en [faction_] es [total_positions]</span>")
 	return total_positions
