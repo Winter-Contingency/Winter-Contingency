@@ -1,12 +1,7 @@
 ---
 name: Bug report
 about: Create a report to help reproduce and fix the issue
-title: ''
-labels: ''
-assignees: ''
-
 ---
-
 <!-- Write **BELOW** The Headers and **ABOVE** The comments else it may not be viewable -->
 
 ## Testmerges:
