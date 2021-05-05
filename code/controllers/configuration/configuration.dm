@@ -22,6 +22,7 @@
 	var/static/regex/ic_filter_regex
 
 	var/liberation_gamemode_delay = 3 MINUTES //default
+	var/maximum_player_adventage = 2
 
 /datum/controller/configuration/proc/admin_reload()
 	if(IsAdminAdvancedProcCall())
@@ -409,5 +410,5 @@ Example config:
 
 			if("liberation_gamemode_delay")
 				config.liberation_gamemode_delay = text2num(value) MINUTES
-				to_chat(world, "el delay del modo de juego es: [config.liberation_gamemode_delay]")
-				to_chat(world, "log enviado de la config")
+			if("maximum_player_adventage")
+				config.maximum_player_adventage = text2num(value)
